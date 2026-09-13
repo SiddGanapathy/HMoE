@@ -1,0 +1,34 @@
+{
+  "0": {
+    "basicblocks": 19,
+    "calls": "1 1 1 1",
+    "file": "moe.cpp",
+    "fileloc": 163,
+    "instructions": 166,
+    "loads": {
+      "L": 5,
+      "T": 4
+    },
+    "name": "graph_moe",
+    "stores": {
+      "L": 6,
+      "T": 2
+    },
+    "total_instructions": 538
+  },
+  "1": {
+    "basicblocks": 15,
+    "calls": "",
+    "file": "moe.cpp",
+    "fileloc": 37,
+    "instructions": 93,
+    "loads": {
+      "L": 12
+    },
+    "name": "expert_engine",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 93
+  }
+}

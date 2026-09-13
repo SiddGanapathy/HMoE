@@ -1,0 +1,440 @@
+
+
+================================================================
+== Vitis HLS Report for 'mlp_head482'
+================================================================
+* Date:           Sun Sep 13 11:38:59 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        HLS_OutputMoE_Run8
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p_CIV-figd2104-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.028 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     4702|     4702|  47.020 us|  47.020 us|  4702|  4702|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_576_1  |     4544|     4544|       142|          -|          -|    32|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 16
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 11 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 2 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.36>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [src/moe.cpp:576]   --->   Operation 17 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%empty = alloca i32 1"   --->   Operation 18 'alloca' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%empty_705 = alloca i32 1"   --->   Operation 19 'alloca' 'empty_705' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%empty_706 = alloca i32 1"   --->   Operation 20 'alloca' 'empty_706' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%empty_707 = alloca i32 1"   --->   Operation 21 'alloca' 'empty_707' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%empty_708 = alloca i32 1"   --->   Operation 22 'alloca' 'empty_708' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%empty_709 = alloca i32 1"   --->   Operation 23 'alloca' 'empty_709' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%empty_710 = alloca i32 1"   --->   Operation 24 'alloca' 'empty_710' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%empty_711 = alloca i32 1"   --->   Operation 25 'alloca' 'empty_711' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%empty_712 = alloca i32 1"   --->   Operation 26 'alloca' 'empty_712' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%empty_713 = alloca i32 1"   --->   Operation 27 'alloca' 'empty_713' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%empty_714 = alloca i32 1"   --->   Operation 28 'alloca' 'empty_714' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%empty_715 = alloca i32 1"   --->   Operation 29 'alloca' 'empty_715' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%empty_716 = alloca i32 1"   --->   Operation 30 'alloca' 'empty_716' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%empty_717 = alloca i32 1"   --->   Operation 31 'alloca' 'empty_717' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%empty_718 = alloca i32 1"   --->   Operation 32 'alloca' 'empty_718' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%empty_719 = alloca i32 1"   --->   Operation 33 'alloca' 'empty_719' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%empty_720 = alloca i32 1"   --->   Operation 34 'alloca' 'empty_720' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%empty_721 = alloca i32 1"   --->   Operation 35 'alloca' 'empty_721' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%empty_722 = alloca i32 1"   --->   Operation 36 'alloca' 'empty_722' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%empty_723 = alloca i32 1"   --->   Operation 37 'alloca' 'empty_723' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%empty_724 = alloca i32 1"   --->   Operation 38 'alloca' 'empty_724' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%empty_725 = alloca i32 1"   --->   Operation 39 'alloca' 'empty_725' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%empty_726 = alloca i32 1"   --->   Operation 40 'alloca' 'empty_726' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%empty_727 = alloca i32 1"   --->   Operation 41 'alloca' 'empty_727' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%empty_728 = alloca i32 1"   --->   Operation 42 'alloca' 'empty_728' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%empty_729 = alloca i32 1"   --->   Operation 43 'alloca' 'empty_729' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%empty_730 = alloca i32 1"   --->   Operation 44 'alloca' 'empty_730' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%empty_731 = alloca i32 1"   --->   Operation 45 'alloca' 'empty_731' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%empty_732 = alloca i32 1"   --->   Operation 46 'alloca' 'empty_732' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%empty_733 = alloca i32 1"   --->   Operation 47 'alloca' 'empty_733' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%empty_734 = alloca i32 1"   --->   Operation 48 'alloca' 'empty_734' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%empty_735 = alloca i32 1"   --->   Operation 49 'alloca' 'empty_735' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%output_loc = alloca i64 1"   --->   Operation 50 'alloca' 'output_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%p_loc63 = alloca i64 1"   --->   Operation 51 'alloca' 'p_loc63' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%p_loc62 = alloca i64 1"   --->   Operation 52 'alloca' 'p_loc62' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%p_loc61 = alloca i64 1"   --->   Operation 53 'alloca' 'p_loc61' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%p_loc60 = alloca i64 1"   --->   Operation 54 'alloca' 'p_loc60' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%p_loc59 = alloca i64 1"   --->   Operation 55 'alloca' 'p_loc59' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%p_loc58 = alloca i64 1"   --->   Operation 56 'alloca' 'p_loc58' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%p_loc57 = alloca i64 1"   --->   Operation 57 'alloca' 'p_loc57' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%p_loc56 = alloca i64 1"   --->   Operation 58 'alloca' 'p_loc56' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%p_loc55 = alloca i64 1"   --->   Operation 59 'alloca' 'p_loc55' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%p_loc54 = alloca i64 1"   --->   Operation 60 'alloca' 'p_loc54' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%p_loc53 = alloca i64 1"   --->   Operation 61 'alloca' 'p_loc53' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%p_loc52 = alloca i64 1"   --->   Operation 62 'alloca' 'p_loc52' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%p_loc51 = alloca i64 1"   --->   Operation 63 'alloca' 'p_loc51' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%p_loc50 = alloca i64 1"   --->   Operation 64 'alloca' 'p_loc50' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%p_loc49 = alloca i64 1"   --->   Operation 65 'alloca' 'p_loc49' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%p_loc = alloca i64 1"   --->   Operation 66 'alloca' 'p_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%acc_013_loc = alloca i64 1"   --->   Operation 67 'alloca' 'acc_013_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%specbindport_ln0 = specbindport void @_ssdm_op_SpecBindPort, i32 %input_r, i32 1, void @p_str"   --->   Operation 68 'specbindport' 'specbindport_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i32 %input_r, void @p_str"   --->   Operation 69 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %input_r, void @empty_1, i32 0, i32 0, void @empty_2, i32 4294967295, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 70 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%l3 = alloca i64 1" [src/moe.cpp:573]   --->   Operation 71 'alloca' 'l3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.36ns)   --->   "%store_ln576 = store i6 0, i6 %i" [src/moe.cpp:576]   --->   Operation 72 'store' 'store_ln576' <Predicate = true> <Delay = 0.36>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%br_ln576 = br void %VITIS_LOOP_579_2" [src/moe.cpp:576]   --->   Operation 73 'br' 'br_ln576' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.02>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%i_3 = load i6 %i" [src/moe.cpp:576]   --->   Operation 74 'load' 'i_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%trunc_ln576 = trunc i6 %i_3" [src/moe.cpp:576]   --->   Operation 75 'trunc' 'trunc_ln576' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.64ns)   --->   "%icmp_ln576 = icmp_eq  i6 %i_3, i6 32" [src/moe.cpp:576]   --->   Operation 76 'icmp' 'icmp_ln576' <Predicate = true> <Delay = 0.64> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 77 [1/1] (0.64ns)   --->   "%add_ln576 = add i6 %i_3, i6 1" [src/moe.cpp:576]   --->   Operation 77 'add' 'add_ln576' <Predicate = true> <Delay = 0.64> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%br_ln576 = br i1 %icmp_ln576, void %VITIS_LOOP_579_2.split, void %VITIS_LOOP_589_4.preheader" [src/moe.cpp:576]   --->   Operation 78 'br' 'br_ln576' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 79 [1/1] (0.00ns)   --->   "%zext_ln576 = zext i6 %i_3" [src/moe.cpp:576]   --->   Operation 79 'zext' 'zext_ln576' <Predicate = (!icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%e1_lut_b0_addr = getelementptr i32 %e1_lut_b0, i64 0, i64 %zext_ln576" [src/moe.cpp:577]   --->   Operation 80 'getelementptr' 'e1_lut_b0_addr' <Predicate = (!icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 81 [2/2] (1.02ns)   --->   "%acc = load i5 %e1_lut_b0_addr" [src/moe.cpp:577]   --->   Operation 81 'load' 'acc' <Predicate = (!icmp_ln576)> <Delay = 1.02> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.02> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 32> <ROM>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%p_load117 = load i32 %empty"   --->   Operation 82 'load' 'p_load117' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%p_load116 = load i32 %empty_705"   --->   Operation 83 'load' 'p_load116' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%p_load115 = load i32 %empty_706"   --->   Operation 84 'load' 'p_load115' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "%p_load114 = load i32 %empty_707"   --->   Operation 85 'load' 'p_load114' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%p_load113 = load i32 %empty_708"   --->   Operation 86 'load' 'p_load113' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "%p_load112 = load i32 %empty_709"   --->   Operation 87 'load' 'p_load112' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 88 [1/1] (0.00ns)   --->   "%p_load111 = load i32 %empty_710"   --->   Operation 88 'load' 'p_load111' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 89 [1/1] (0.00ns)   --->   "%p_load110 = load i32 %empty_711"   --->   Operation 89 'load' 'p_load110' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 90 [1/1] (0.00ns)   --->   "%p_load109 = load i32 %empty_712"   --->   Operation 90 'load' 'p_load109' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%p_load108 = load i32 %empty_713"   --->   Operation 91 'load' 'p_load108' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%p_load107 = load i32 %empty_714"   --->   Operation 92 'load' 'p_load107' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 93 [1/1] (0.00ns)   --->   "%p_load106 = load i32 %empty_715"   --->   Operation 93 'load' 'p_load106' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%p_load105 = load i32 %empty_716"   --->   Operation 94 'load' 'p_load105' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "%p_load104 = load i32 %empty_717"   --->   Operation 95 'load' 'p_load104' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "%p_load103 = load i32 %empty_718"   --->   Operation 96 'load' 'p_load103' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 97 [1/1] (0.00ns)   --->   "%p_load102 = load i32 %empty_719"   --->   Operation 97 'load' 'p_load102' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%p_load101 = load i32 %empty_720"   --->   Operation 98 'load' 'p_load101' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 99 [1/1] (0.00ns)   --->   "%p_load100 = load i32 %empty_721"   --->   Operation 99 'load' 'p_load100' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%p_load99 = load i32 %empty_722"   --->   Operation 100 'load' 'p_load99' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 101 [1/1] (0.00ns)   --->   "%p_load98 = load i32 %empty_723"   --->   Operation 101 'load' 'p_load98' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%p_load97 = load i32 %empty_724"   --->   Operation 102 'load' 'p_load97' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%p_load96 = load i32 %empty_725"   --->   Operation 103 'load' 'p_load96' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 104 [1/1] (0.00ns)   --->   "%p_load95 = load i32 %empty_726"   --->   Operation 104 'load' 'p_load95' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 105 [1/1] (0.00ns)   --->   "%p_load94 = load i32 %empty_727"   --->   Operation 105 'load' 'p_load94' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 106 [1/1] (0.00ns)   --->   "%p_load93 = load i32 %empty_728"   --->   Operation 106 'load' 'p_load93' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%p_load92 = load i32 %empty_729"   --->   Operation 107 'load' 'p_load92' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 108 [1/1] (0.00ns)   --->   "%p_load91 = load i32 %empty_730"   --->   Operation 108 'load' 'p_load91' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 109 [1/1] (0.00ns)   --->   "%p_load90 = load i32 %empty_731"   --->   Operation 109 'load' 'p_load90' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 110 [1/1] (0.00ns)   --->   "%p_load89 = load i32 %empty_732"   --->   Operation 110 'load' 'p_load89' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 111 [1/1] (0.00ns)   --->   "%p_load88 = load i32 %empty_733"   --->   Operation 111 'load' 'p_load88' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 112 [1/1] (0.00ns)   --->   "%p_load87 = load i32 %empty_734"   --->   Operation 112 'load' 'p_load87' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 113 [1/1] (0.00ns)   --->   "%p_load = load i32 %empty_735"   --->   Operation 113 'load' 'p_load' <Predicate = (icmp_ln576)> <Delay = 0.00>
+ST_2 : Operation 114 [2/2] (0.00ns)   --->   "%call_ln0 = call void @mlp_head482_Pipeline_VITIS_LOOP_586_3, i32 %p_load89, i32 %p_load88, i32 %p_load87, i32 %p_load, i32 %p_load117, i32 %p_load116, i32 %p_load115, i32 %p_load114, i32 %p_load113, i32 %p_load112, i32 %p_load111, i32 %p_load110, i32 %p_load109, i32 %p_load108, i32 %p_load107, i32 %p_load106, i32 %p_load105, i32 %p_load104, i32 %p_load103, i32 %p_load102, i32 %p_load101, i32 %p_load100, i32 %p_load99, i32 %p_load98, i32 %p_load97, i32 %p_load96, i32 %p_load95, i32 %p_load94, i32 %p_load93, i32 %p_load92, i32 %p_load91, i32 %p_load90, i32 %p_loc, i32 %p_loc49, i32 %p_loc50, i32 %p_loc51, i32 %p_loc52, i32 %p_loc53, i32 %p_loc54, i32 %p_loc55, i32 %p_loc56, i32 %p_loc57, i32 %p_loc58, i32 %p_loc59, i32 %p_loc60, i32 %p_loc61, i32 %p_loc62, i32 %p_loc63, i32 %e1_lut_b1, i32 %p_ZL9e1_lut_w1_0, i32 %p_ZL9e1_lut_w1_1, i32 %p_ZL9e1_lut_w1_2, i32 %p_ZL9e1_lut_w1_3, i32 %p_ZL9e1_lut_w1_4, i32 %p_ZL9e1_lut_w1_5, i32 %p_ZL9e1_lut_w1_6, i32 %p_ZL9e1_lut_w1_7, i32 %p_ZL9e1_lut_w1_8, i32 %p_ZL9e1_lut_w1_9, i32 %p_ZL9e1_lut_w1_10, i32 %p_ZL9e1_lut_w1_11, i32 %p_ZL9e1_lut_w1_12, i32 %p_ZL9e1_lut_w1_13, i32 %p_ZL9e1_lut_w1_14, i32 %p_ZL9e1_lut_w1_15, i32 %p_ZL9e1_lut_w1_16, i32 %p_ZL9e1_lut_w1_17, i32 %p_ZL9e1_lut_w1_18, i32 %p_ZL9e1_lut_w1_19, i32 %p_ZL9e1_lut_w1_20, i32 %p_ZL9e1_lut_w1_21, i32 %p_ZL9e1_lut_w1_22, i32 %p_ZL9e1_lut_w1_23, i32 %p_ZL9e1_lut_w1_24, i32 %p_ZL9e1_lut_w1_25, i32 %p_ZL9e1_lut_w1_26, i32 %p_ZL9e1_lut_w1_27, i32 %p_ZL9e1_lut_w1_28, i32 %p_ZL9e1_lut_w1_29, i32 %p_ZL9e1_lut_w1_30, i32 %p_ZL9e1_lut_w1_31"   --->   Operation 114 'call' 'call_ln0' <Predicate = (icmp_ln576)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 2.73>
+ST_3 : Operation 115 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i12 @_ssdm_op_BitConcatenate.i12.i5.i7, i5 %trunc_ln576, i7 0" [src/moe.cpp:580]   --->   Operation 115 'bitconcatenate' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 116 [1/2] (1.02ns)   --->   "%acc = load i5 %e1_lut_b0_addr" [src/moe.cpp:577]   --->   Operation 116 'load' 'acc' <Predicate = true> <Delay = 1.02> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.02> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 32> <ROM>
+ST_3 : Operation 117 [2/2] (1.70ns)   --->   "%call_ln577 = call void @mlp_head482_Pipeline_VITIS_LOOP_579_2, i32 %acc, i12 %tmp_s, i32 %input_r, i32 %acc_013_loc, i32 %e1_lut_w0" [src/moe.cpp:577]   --->   Operation 117 'call' 'call_ln577' <Predicate = true> <Delay = 1.70> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 118 [1/2] (0.00ns)   --->   "%call_ln577 = call void @mlp_head482_Pipeline_VITIS_LOOP_579_2, i32 %acc, i12 %tmp_s, i32 %input_r, i32 %acc_013_loc, i32 %e1_lut_w0" [src/moe.cpp:577]   --->   Operation 118 'call' 'call_ln577' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 6.28>
+ST_5 : Operation 119 [1/1] (0.00ns)   --->   "%acc_013_loc_load = load i32 %acc_013_loc"   --->   Operation 119 'load' 'acc_013_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 120 [4/4] (6.28ns)   --->   "%tmp_1 = fexp i32 @llvm.exp.f32, i32 %acc_013_loc_load" [src/moe.cpp:548->src/moe.cpp:582]   --->   Operation 120 'fexp' 'tmp_1' <Predicate = true> <Delay = 6.28> <CoreInst = "FExp_fulldsp">   --->   Core 23 'FExp_fulldsp' <Latency = 3> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 6.28>
+ST_6 : Operation 121 [3/4] (6.28ns)   --->   "%tmp_1 = fexp i32 @llvm.exp.f32, i32 %acc_013_loc_load" [src/moe.cpp:548->src/moe.cpp:582]   --->   Operation 121 'fexp' 'tmp_1' <Predicate = true> <Delay = 6.28> <CoreInst = "FExp_fulldsp">   --->   Core 23 'FExp_fulldsp' <Latency = 3> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.28>
+ST_7 : Operation 122 [2/4] (6.28ns)   --->   "%tmp_1 = fexp i32 @llvm.exp.f32, i32 %acc_013_loc_load" [src/moe.cpp:548->src/moe.cpp:582]   --->   Operation 122 'fexp' 'tmp_1' <Predicate = true> <Delay = 6.28> <CoreInst = "FExp_fulldsp">   --->   Core 23 'FExp_fulldsp' <Latency = 3> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.28>
+ST_8 : Operation 123 [1/4] (6.28ns)   --->   "%tmp_1 = fexp i32 @llvm.exp.f32, i32 %acc_013_loc_load" [src/moe.cpp:548->src/moe.cpp:582]   --->   Operation 123 'fexp' 'tmp_1' <Predicate = true> <Delay = 6.28> <CoreInst = "FExp_fulldsp">   --->   Core 23 'FExp_fulldsp' <Latency = 3> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.04>
+ST_9 : Operation 124 [2/2] (6.04ns)   --->   "%sub_i = fadd i32 %tmp_1, i32 -1" [src/moe.cpp:548->src/moe.cpp:582]   --->   Operation 124 'fadd' 'sub_i' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.02>
+ST_10 : Operation 125 [1/1] (0.00ns)   --->   "%speclooptripcount_ln576 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 32, i64 32, i64 32" [src/moe.cpp:576]   --->   Operation 125 'speclooptripcount' 'speclooptripcount_ln576' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 126 [1/1] (0.00ns)   --->   "%specloopname_ln576 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9" [src/moe.cpp:576]   --->   Operation 126 'specloopname' 'specloopname_ln576' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 127 [1/1] (0.00ns)   --->   "%bitcast_ln545 = bitcast i32 %acc_013_loc_load" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 127 'bitcast' 'bitcast_ln545' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 128 [1/1] (0.00ns)   --->   "%tmp_4 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln545, i32 23, i32 30" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 128 'partselect' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 129 [1/1] (0.00ns)   --->   "%trunc_ln545 = trunc i32 %bitcast_ln545" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 129 'trunc' 'trunc_ln545' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 130 [1/1] (0.65ns)   --->   "%icmp_ln545 = icmp_ne  i8 %tmp_4, i8 255" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 130 'icmp' 'icmp_ln545' <Predicate = true> <Delay = 0.65> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 131 [1/1] (0.75ns)   --->   "%icmp_ln545_5 = icmp_eq  i23 %trunc_ln545, i23 0" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 131 'icmp' 'icmp_ln545_5' <Predicate = true> <Delay = 0.75> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 132 [1/1] (0.00ns) (grouped into LUT with out node l1)   --->   "%or_ln545 = or i1 %icmp_ln545_5, i1 %icmp_ln545" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 132 'or' 'or_ln545' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.11> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 133 [1/1] (6.81ns)   --->   "%tmp_5 = fcmp_oge  i32 %acc_013_loc_load, i32 0" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 133 'fcmp' 'tmp_5' <Predicate = true> <Delay = 6.81> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 0> <II = 1> <Delay = 6.81> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 134 [1/1] (0.00ns) (grouped into LUT with out node l1)   --->   "%and_ln545 = and i1 %or_ln545, i1 %tmp_5" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 134 'and' 'and_ln545' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.11> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 135 [1/2] (6.04ns)   --->   "%sub_i = fadd i32 %tmp_1, i32 -1" [src/moe.cpp:548->src/moe.cpp:582]   --->   Operation 135 'fadd' 'sub_i' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 136 [1/1] (0.21ns) (out node of the LUT)   --->   "%l1 = select i1 %and_ln545, i32 %acc_013_loc_load, i32 %sub_i" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 136 'select' 'l1' <Predicate = true> <Delay = 0.21> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 137 [1/1] (0.67ns)   --->   "%switch_ln582 = switch i5 %trunc_ln576, void %arrayidx12.case.31, i5 0, void %arrayidx12.case.0, i5 1, void %arrayidx12.case.1, i5 2, void %arrayidx12.case.2, i5 3, void %arrayidx12.case.3, i5 4, void %VITIS_LOOP_579_2.split.arrayidx12.exit_crit_edge, i5 5, void %arrayidx12.case.5, i5 6, void %arrayidx12.case.6, i5 7, void %arrayidx12.case.7, i5 8, void %arrayidx12.case.8, i5 9, void %arrayidx12.case.9, i5 10, void %arrayidx12.case.10, i5 11, void %arrayidx12.case.11, i5 12, void %arrayidx12.case.12, i5 13, void %arrayidx12.case.13, i5 14, void %arrayidx12.case.14, i5 15, void %arrayidx12.case.15, i5 16, void %arrayidx12.case.16, i5 17, void %arrayidx12.case.17, i5 18, void %arrayidx12.case.18, i5 19, void %arrayidx12.case.19, i5 20, void %arrayidx12.case.20, i5 21, void %arrayidx12.case.21, i5 22, void %arrayidx12.case.22, i5 23, void %arrayidx12.case.23, i5 24, void %arrayidx12.case.24, i5 25, void %arrayidx12.case.25, i5 26, void %arrayidx12.case.26, i5 27, void %arrayidx12.case.27, i5 28, void %arrayidx12.case.28, i5 29, void %arrayidx12.case.29, i5 30, void %arrayidx12.case.30" [src/moe.cpp:582]   --->   Operation 137 'switch' 'switch_ln582' <Predicate = true> <Delay = 0.67>
+ST_10 : Operation 138 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_730" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 138 'store' 'store_ln545' <Predicate = (trunc_ln576 == 30)> <Delay = 0.00>
+ST_10 : Operation 139 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 139 'br' 'br_ln582' <Predicate = (trunc_ln576 == 30)> <Delay = 0.00>
+ST_10 : Operation 140 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_729" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 140 'store' 'store_ln545' <Predicate = (trunc_ln576 == 29)> <Delay = 0.00>
+ST_10 : Operation 141 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 141 'br' 'br_ln582' <Predicate = (trunc_ln576 == 29)> <Delay = 0.00>
+ST_10 : Operation 142 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_728" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 142 'store' 'store_ln545' <Predicate = (trunc_ln576 == 28)> <Delay = 0.00>
+ST_10 : Operation 143 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 143 'br' 'br_ln582' <Predicate = (trunc_ln576 == 28)> <Delay = 0.00>
+ST_10 : Operation 144 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_727" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 144 'store' 'store_ln545' <Predicate = (trunc_ln576 == 27)> <Delay = 0.00>
+ST_10 : Operation 145 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 145 'br' 'br_ln582' <Predicate = (trunc_ln576 == 27)> <Delay = 0.00>
+ST_10 : Operation 146 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_726" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 146 'store' 'store_ln545' <Predicate = (trunc_ln576 == 26)> <Delay = 0.00>
+ST_10 : Operation 147 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 147 'br' 'br_ln582' <Predicate = (trunc_ln576 == 26)> <Delay = 0.00>
+ST_10 : Operation 148 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_725" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 148 'store' 'store_ln545' <Predicate = (trunc_ln576 == 25)> <Delay = 0.00>
+ST_10 : Operation 149 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 149 'br' 'br_ln582' <Predicate = (trunc_ln576 == 25)> <Delay = 0.00>
+ST_10 : Operation 150 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_724" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 150 'store' 'store_ln545' <Predicate = (trunc_ln576 == 24)> <Delay = 0.00>
+ST_10 : Operation 151 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 151 'br' 'br_ln582' <Predicate = (trunc_ln576 == 24)> <Delay = 0.00>
+ST_10 : Operation 152 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_723" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 152 'store' 'store_ln545' <Predicate = (trunc_ln576 == 23)> <Delay = 0.00>
+ST_10 : Operation 153 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 153 'br' 'br_ln582' <Predicate = (trunc_ln576 == 23)> <Delay = 0.00>
+ST_10 : Operation 154 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_722" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 154 'store' 'store_ln545' <Predicate = (trunc_ln576 == 22)> <Delay = 0.00>
+ST_10 : Operation 155 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 155 'br' 'br_ln582' <Predicate = (trunc_ln576 == 22)> <Delay = 0.00>
+ST_10 : Operation 156 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_721" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 156 'store' 'store_ln545' <Predicate = (trunc_ln576 == 21)> <Delay = 0.00>
+ST_10 : Operation 157 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 157 'br' 'br_ln582' <Predicate = (trunc_ln576 == 21)> <Delay = 0.00>
+ST_10 : Operation 158 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_720" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 158 'store' 'store_ln545' <Predicate = (trunc_ln576 == 20)> <Delay = 0.00>
+ST_10 : Operation 159 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 159 'br' 'br_ln582' <Predicate = (trunc_ln576 == 20)> <Delay = 0.00>
+ST_10 : Operation 160 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_719" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 160 'store' 'store_ln545' <Predicate = (trunc_ln576 == 19)> <Delay = 0.00>
+ST_10 : Operation 161 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 161 'br' 'br_ln582' <Predicate = (trunc_ln576 == 19)> <Delay = 0.00>
+ST_10 : Operation 162 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_718" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 162 'store' 'store_ln545' <Predicate = (trunc_ln576 == 18)> <Delay = 0.00>
+ST_10 : Operation 163 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 163 'br' 'br_ln582' <Predicate = (trunc_ln576 == 18)> <Delay = 0.00>
+ST_10 : Operation 164 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_717" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 164 'store' 'store_ln545' <Predicate = (trunc_ln576 == 17)> <Delay = 0.00>
+ST_10 : Operation 165 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 165 'br' 'br_ln582' <Predicate = (trunc_ln576 == 17)> <Delay = 0.00>
+ST_10 : Operation 166 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_716" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 166 'store' 'store_ln545' <Predicate = (trunc_ln576 == 16)> <Delay = 0.00>
+ST_10 : Operation 167 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 167 'br' 'br_ln582' <Predicate = (trunc_ln576 == 16)> <Delay = 0.00>
+ST_10 : Operation 168 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_715" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 168 'store' 'store_ln545' <Predicate = (trunc_ln576 == 15)> <Delay = 0.00>
+ST_10 : Operation 169 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 169 'br' 'br_ln582' <Predicate = (trunc_ln576 == 15)> <Delay = 0.00>
+ST_10 : Operation 170 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_714" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 170 'store' 'store_ln545' <Predicate = (trunc_ln576 == 14)> <Delay = 0.00>
+ST_10 : Operation 171 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 171 'br' 'br_ln582' <Predicate = (trunc_ln576 == 14)> <Delay = 0.00>
+ST_10 : Operation 172 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_713" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 172 'store' 'store_ln545' <Predicate = (trunc_ln576 == 13)> <Delay = 0.00>
+ST_10 : Operation 173 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 173 'br' 'br_ln582' <Predicate = (trunc_ln576 == 13)> <Delay = 0.00>
+ST_10 : Operation 174 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_712" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 174 'store' 'store_ln545' <Predicate = (trunc_ln576 == 12)> <Delay = 0.00>
+ST_10 : Operation 175 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 175 'br' 'br_ln582' <Predicate = (trunc_ln576 == 12)> <Delay = 0.00>
+ST_10 : Operation 176 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_711" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 176 'store' 'store_ln545' <Predicate = (trunc_ln576 == 11)> <Delay = 0.00>
+ST_10 : Operation 177 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 177 'br' 'br_ln582' <Predicate = (trunc_ln576 == 11)> <Delay = 0.00>
+ST_10 : Operation 178 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_710" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 178 'store' 'store_ln545' <Predicate = (trunc_ln576 == 10)> <Delay = 0.00>
+ST_10 : Operation 179 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 179 'br' 'br_ln582' <Predicate = (trunc_ln576 == 10)> <Delay = 0.00>
+ST_10 : Operation 180 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_709" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 180 'store' 'store_ln545' <Predicate = (trunc_ln576 == 9)> <Delay = 0.00>
+ST_10 : Operation 181 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 181 'br' 'br_ln582' <Predicate = (trunc_ln576 == 9)> <Delay = 0.00>
+ST_10 : Operation 182 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_708" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 182 'store' 'store_ln545' <Predicate = (trunc_ln576 == 8)> <Delay = 0.00>
+ST_10 : Operation 183 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 183 'br' 'br_ln582' <Predicate = (trunc_ln576 == 8)> <Delay = 0.00>
+ST_10 : Operation 184 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_707" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 184 'store' 'store_ln545' <Predicate = (trunc_ln576 == 7)> <Delay = 0.00>
+ST_10 : Operation 185 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 185 'br' 'br_ln582' <Predicate = (trunc_ln576 == 7)> <Delay = 0.00>
+ST_10 : Operation 186 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_706" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 186 'store' 'store_ln545' <Predicate = (trunc_ln576 == 6)> <Delay = 0.00>
+ST_10 : Operation 187 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 187 'br' 'br_ln582' <Predicate = (trunc_ln576 == 6)> <Delay = 0.00>
+ST_10 : Operation 188 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_705" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 188 'store' 'store_ln545' <Predicate = (trunc_ln576 == 5)> <Delay = 0.00>
+ST_10 : Operation 189 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 189 'br' 'br_ln582' <Predicate = (trunc_ln576 == 5)> <Delay = 0.00>
+ST_10 : Operation 190 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 190 'store' 'store_ln545' <Predicate = (trunc_ln576 == 4)> <Delay = 0.00>
+ST_10 : Operation 191 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 191 'br' 'br_ln582' <Predicate = (trunc_ln576 == 4)> <Delay = 0.00>
+ST_10 : Operation 192 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_735" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 192 'store' 'store_ln545' <Predicate = (trunc_ln576 == 3)> <Delay = 0.00>
+ST_10 : Operation 193 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 193 'br' 'br_ln582' <Predicate = (trunc_ln576 == 3)> <Delay = 0.00>
+ST_10 : Operation 194 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_734" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 194 'store' 'store_ln545' <Predicate = (trunc_ln576 == 2)> <Delay = 0.00>
+ST_10 : Operation 195 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 195 'br' 'br_ln582' <Predicate = (trunc_ln576 == 2)> <Delay = 0.00>
+ST_10 : Operation 196 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_733" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 196 'store' 'store_ln545' <Predicate = (trunc_ln576 == 1)> <Delay = 0.00>
+ST_10 : Operation 197 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 197 'br' 'br_ln582' <Predicate = (trunc_ln576 == 1)> <Delay = 0.00>
+ST_10 : Operation 198 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_732" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 198 'store' 'store_ln545' <Predicate = (trunc_ln576 == 0)> <Delay = 0.00>
+ST_10 : Operation 199 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 199 'br' 'br_ln582' <Predicate = (trunc_ln576 == 0)> <Delay = 0.00>
+ST_10 : Operation 200 [1/1] (0.00ns)   --->   "%store_ln545 = store i32 %l1, i32 %empty_731" [src/moe.cpp:545->src/moe.cpp:582]   --->   Operation 200 'store' 'store_ln545' <Predicate = (trunc_ln576 == 31)> <Delay = 0.00>
+ST_10 : Operation 201 [1/1] (0.00ns)   --->   "%br_ln582 = br void %arrayidx12.exit" [src/moe.cpp:582]   --->   Operation 201 'br' 'br_ln582' <Predicate = (trunc_ln576 == 31)> <Delay = 0.00>
+ST_10 : Operation 202 [1/1] (0.36ns)   --->   "%store_ln576 = store i6 %add_ln576, i6 %i" [src/moe.cpp:576]   --->   Operation 202 'store' 'store_ln576' <Predicate = true> <Delay = 0.36>
+ST_10 : Operation 203 [1/1] (0.00ns)   --->   "%br_ln576 = br void %VITIS_LOOP_579_2" [src/moe.cpp:576]   --->   Operation 203 'br' 'br_ln576' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 2> <Delay = 0.00>
+ST_11 : Operation 204 [1/2] (0.00ns)   --->   "%call_ln0 = call void @mlp_head482_Pipeline_VITIS_LOOP_586_3, i32 %p_load89, i32 %p_load88, i32 %p_load87, i32 %p_load, i32 %p_load117, i32 %p_load116, i32 %p_load115, i32 %p_load114, i32 %p_load113, i32 %p_load112, i32 %p_load111, i32 %p_load110, i32 %p_load109, i32 %p_load108, i32 %p_load107, i32 %p_load106, i32 %p_load105, i32 %p_load104, i32 %p_load103, i32 %p_load102, i32 %p_load101, i32 %p_load100, i32 %p_load99, i32 %p_load98, i32 %p_load97, i32 %p_load96, i32 %p_load95, i32 %p_load94, i32 %p_load93, i32 %p_load92, i32 %p_load91, i32 %p_load90, i32 %p_loc, i32 %p_loc49, i32 %p_loc50, i32 %p_loc51, i32 %p_loc52, i32 %p_loc53, i32 %p_loc54, i32 %p_loc55, i32 %p_loc56, i32 %p_loc57, i32 %p_loc58, i32 %p_loc59, i32 %p_loc60, i32 %p_loc61, i32 %p_loc62, i32 %p_loc63, i32 %e1_lut_b1, i32 %p_ZL9e1_lut_w1_0, i32 %p_ZL9e1_lut_w1_1, i32 %p_ZL9e1_lut_w1_2, i32 %p_ZL9e1_lut_w1_3, i32 %p_ZL9e1_lut_w1_4, i32 %p_ZL9e1_lut_w1_5, i32 %p_ZL9e1_lut_w1_6, i32 %p_ZL9e1_lut_w1_7, i32 %p_ZL9e1_lut_w1_8, i32 %p_ZL9e1_lut_w1_9, i32 %p_ZL9e1_lut_w1_10, i32 %p_ZL9e1_lut_w1_11, i32 %p_ZL9e1_lut_w1_12, i32 %p_ZL9e1_lut_w1_13, i32 %p_ZL9e1_lut_w1_14, i32 %p_ZL9e1_lut_w1_15, i32 %p_ZL9e1_lut_w1_16, i32 %p_ZL9e1_lut_w1_17, i32 %p_ZL9e1_lut_w1_18, i32 %p_ZL9e1_lut_w1_19, i32 %p_ZL9e1_lut_w1_20, i32 %p_ZL9e1_lut_w1_21, i32 %p_ZL9e1_lut_w1_22, i32 %p_ZL9e1_lut_w1_23, i32 %p_ZL9e1_lut_w1_24, i32 %p_ZL9e1_lut_w1_25, i32 %p_ZL9e1_lut_w1_26, i32 %p_ZL9e1_lut_w1_27, i32 %p_ZL9e1_lut_w1_28, i32 %p_ZL9e1_lut_w1_29, i32 %p_ZL9e1_lut_w1_30, i32 %p_ZL9e1_lut_w1_31"   --->   Operation 204 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 3> <Delay = 0.00>
+ST_12 : Operation 205 [1/1] (0.00ns)   --->   "%p_loc_load = load i32 %p_loc"   --->   Operation 205 'load' 'p_loc_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 206 [1/1] (0.00ns)   --->   "%p_loc49_load = load i32 %p_loc49"   --->   Operation 206 'load' 'p_loc49_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 207 [1/1] (0.00ns)   --->   "%p_loc50_load = load i32 %p_loc50"   --->   Operation 207 'load' 'p_loc50_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 208 [1/1] (0.00ns)   --->   "%p_loc51_load = load i32 %p_loc51"   --->   Operation 208 'load' 'p_loc51_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 209 [1/1] (0.00ns)   --->   "%p_loc52_load = load i32 %p_loc52"   --->   Operation 209 'load' 'p_loc52_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 210 [1/1] (0.00ns)   --->   "%p_loc53_load = load i32 %p_loc53"   --->   Operation 210 'load' 'p_loc53_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 211 [1/1] (0.00ns)   --->   "%p_loc54_load = load i32 %p_loc54"   --->   Operation 211 'load' 'p_loc54_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 212 [1/1] (0.00ns)   --->   "%p_loc55_load = load i32 %p_loc55"   --->   Operation 212 'load' 'p_loc55_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 213 [1/1] (0.00ns)   --->   "%p_loc56_load = load i32 %p_loc56"   --->   Operation 213 'load' 'p_loc56_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 214 [1/1] (0.00ns)   --->   "%p_loc57_load = load i32 %p_loc57"   --->   Operation 214 'load' 'p_loc57_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 215 [1/1] (0.00ns)   --->   "%p_loc58_load = load i32 %p_loc58"   --->   Operation 215 'load' 'p_loc58_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 216 [1/1] (0.00ns)   --->   "%p_loc59_load = load i32 %p_loc59"   --->   Operation 216 'load' 'p_loc59_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 217 [1/1] (0.00ns)   --->   "%p_loc60_load = load i32 %p_loc60"   --->   Operation 217 'load' 'p_loc60_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 218 [1/1] (0.00ns)   --->   "%p_loc61_load = load i32 %p_loc61"   --->   Operation 218 'load' 'p_loc61_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 219 [1/1] (0.00ns)   --->   "%p_loc62_load = load i32 %p_loc62"   --->   Operation 219 'load' 'p_loc62_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 220 [1/1] (0.00ns)   --->   "%p_loc63_load = load i32 %p_loc63"   --->   Operation 220 'load' 'p_loc63_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 221 [2/2] (0.00ns)   --->   "%call_ln0 = call void @mlp_head482_Pipeline_VITIS_LOOP_596_5, i32 %p_loc63_load, i32 %p_loc62_load, i32 %p_loc61_load, i32 %p_loc60_load, i32 %p_loc59_load, i32 %p_loc58_load, i32 %p_loc57_load, i32 %p_loc56_load, i32 %p_loc55_load, i32 %p_loc54_load, i32 %p_loc53_load, i32 %p_loc52_load, i32 %p_loc51_load, i32 %p_loc50_load, i32 %p_loc49_load, i32 %p_loc_load, i32 %l3, i32 %e1_lut_b2, i32 %p_ZL9e1_lut_w2_0, i32 %p_ZL9e1_lut_w2_1, i32 %p_ZL9e1_lut_w2_2, i32 %p_ZL9e1_lut_w2_3, i32 %p_ZL9e1_lut_w2_4, i32 %p_ZL9e1_lut_w2_5, i32 %p_ZL9e1_lut_w2_6, i32 %p_ZL9e1_lut_w2_7, i32 %p_ZL9e1_lut_w2_8, i32 %p_ZL9e1_lut_w2_9, i32 %p_ZL9e1_lut_w2_10, i32 %p_ZL9e1_lut_w2_11, i32 %p_ZL9e1_lut_w2_12, i32 %p_ZL9e1_lut_w2_13, i32 %p_ZL9e1_lut_w2_14, i32 %p_ZL9e1_lut_w2_15"   --->   Operation 221 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 4> <Delay = 0.00>
+ST_13 : Operation 222 [1/2] (0.00ns)   --->   "%call_ln0 = call void @mlp_head482_Pipeline_VITIS_LOOP_596_5, i32 %p_loc63_load, i32 %p_loc62_load, i32 %p_loc61_load, i32 %p_loc60_load, i32 %p_loc59_load, i32 %p_loc58_load, i32 %p_loc57_load, i32 %p_loc56_load, i32 %p_loc55_load, i32 %p_loc54_load, i32 %p_loc53_load, i32 %p_loc52_load, i32 %p_loc51_load, i32 %p_loc50_load, i32 %p_loc49_load, i32 %p_loc_load, i32 %l3, i32 %e1_lut_b2, i32 %p_ZL9e1_lut_w2_0, i32 %p_ZL9e1_lut_w2_1, i32 %p_ZL9e1_lut_w2_2, i32 %p_ZL9e1_lut_w2_3, i32 %p_ZL9e1_lut_w2_4, i32 %p_ZL9e1_lut_w2_5, i32 %p_ZL9e1_lut_w2_6, i32 %p_ZL9e1_lut_w2_7, i32 %p_ZL9e1_lut_w2_8, i32 %p_ZL9e1_lut_w2_9, i32 %p_ZL9e1_lut_w2_10, i32 %p_ZL9e1_lut_w2_11, i32 %p_ZL9e1_lut_w2_12, i32 %p_ZL9e1_lut_w2_13, i32 %p_ZL9e1_lut_w2_14, i32 %p_ZL9e1_lut_w2_15"   --->   Operation 222 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 5> <Delay = 0.00>
+ST_14 : Operation 223 [2/2] (0.00ns)   --->   "%call_ln0 = call void @mlp_head482_Pipeline_VITIS_LOOP_608_7, i32 %l3, i32 %output_loc, i32 %e1_lut_w3_0"   --->   Operation 223 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 6> <Delay = 0.00>
+ST_15 : Operation 224 [1/2] (0.00ns)   --->   "%call_ln0 = call void @mlp_head482_Pipeline_VITIS_LOOP_608_7, i32 %l3, i32 %output_loc, i32 %e1_lut_w3_0"   --->   Operation 224 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 7> <Delay = 0.00>
+ST_16 : Operation 225 [1/1] (0.00ns)   --->   "%output_loc_load = load i32 %output_loc"   --->   Operation 225 'load' 'output_loc_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 226 [1/1] (0.00ns)   --->   "%ret_ln611 = ret i32 %output_loc_load" [src/moe.cpp:611]   --->   Operation 226 'ret' 'ret_ln611' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 0.362ns
+The critical path consists of the following:
+	'alloca' operation 6 bit ('i', src/moe.cpp:576) [55]  (0.000 ns)
+	'store' operation 0 bit ('store_ln576', src/moe.cpp:576) of constant 0 on local variable 'i', src/moe.cpp:576 [110]  (0.362 ns)
+
+ <State 2>: 1.025ns
+The critical path consists of the following:
+	'load' operation 6 bit ('i', src/moe.cpp:576) on local variable 'i', src/moe.cpp:576 [113]  (0.000 ns)
+	'getelementptr' operation 5 bit ('e1_lut_b0_addr', src/moe.cpp:577) [123]  (0.000 ns)
+	'load' operation 32 bit ('acc', src/moe.cpp:577) on array 'e1_lut_b0' [124]  (1.025 ns)
+
+ <State 3>: 2.734ns
+The critical path consists of the following:
+	'load' operation 32 bit ('acc', src/moe.cpp:577) on array 'e1_lut_b0' [124]  (1.025 ns)
+	'call' operation 0 bit ('call_ln577', src/moe.cpp:577) to 'mlp_head482_Pipeline_VITIS_LOOP_579_2' [125]  (1.709 ns)
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+ <State 5>: 6.282ns
+The critical path consists of the following:
+	'load' operation 32 bit ('acc_013_loc_load') on local variable 'acc_013_loc' [126]  (0.000 ns)
+	'fexp' operation 32 bit ('tmp_1', src/moe.cpp:548->src/moe.cpp:582) [135]  (6.282 ns)
+
+ <State 6>: 6.282ns
+The critical path consists of the following:
+	'fexp' operation 32 bit ('tmp_1', src/moe.cpp:548->src/moe.cpp:582) [135]  (6.282 ns)
+
+ <State 7>: 6.282ns
+The critical path consists of the following:
+	'fexp' operation 32 bit ('tmp_1', src/moe.cpp:548->src/moe.cpp:582) [135]  (6.282 ns)
+
+ <State 8>: 6.282ns
+The critical path consists of the following:
+	'fexp' operation 32 bit ('tmp_1', src/moe.cpp:548->src/moe.cpp:582) [135]  (6.282 ns)
+
+ <State 9>: 6.047ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('sub_i', src/moe.cpp:548->src/moe.cpp:582) [136]  (6.047 ns)
+
+ <State 10>: 7.028ns
+The critical path consists of the following:
+	'fcmp' operation 1 bit ('tmp_5', src/moe.cpp:545->src/moe.cpp:582) [133]  (6.815 ns)
+	'and' operation 1 bit ('and_ln545', src/moe.cpp:545->src/moe.cpp:582) [134]  (0.000 ns)
+	'select' operation 32 bit ('l1', src/moe.cpp:545->src/moe.cpp:582) [137]  (0.213 ns)
+	'store' operation 0 bit ('store_ln545', src/moe.cpp:545->src/moe.cpp:582) of variable 'l1', src/moe.cpp:545->src/moe.cpp:582 on local variable 'empty_732' [230]  (0.000 ns)
+
+ <State 11>: 0.000ns
+The critical path consists of the following:
+
+ <State 12>: 0.000ns
+The critical path consists of the following:
+
+ <State 13>: 0.000ns
+The critical path consists of the following:
+
+ <State 14>: 0.000ns
+The critical path consists of the following:
+
+ <State 15>: 0.000ns
+The critical path consists of the following:
+
+ <State 16>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

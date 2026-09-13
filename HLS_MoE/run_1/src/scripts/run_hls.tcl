@@ -1,0 +1,18 @@
+open_project -reset project/HLS_HMoE
+
+set_top moe
+
+add_files -cflags "-Isrc" src/moe.cpp
+add_files src/moe.h
+add_files -tb -cflags "-Isrc" tb/moe_tb.cpp
+
+open_solution -reset solution1
+
+set_part xcvu13p_civ-figd2104-3-e
+
+create_clock -period 10 -name default
+
+csim_design
+csynth_design
+
+exit

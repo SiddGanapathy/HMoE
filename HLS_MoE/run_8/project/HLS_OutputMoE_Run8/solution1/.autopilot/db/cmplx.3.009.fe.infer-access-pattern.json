@@ -1,0 +1,74 @@
+{
+  "0": {
+    "basicblocks": 13,
+    "calls": "4",
+    "file": "moe.cpp",
+    "fileloc": 862,
+    "instructions": 93,
+    "loads": {
+      "G": 2,
+      "L": 7,
+      "T": 6
+    },
+    "name": "output_moe",
+    "stores": {
+      "L": 1,
+      "T": 3
+    },
+    "total_instructions": 8078
+  },
+  "1": {
+    "basicblocks": 8,
+    "calls": "3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3",
+    "file": "moe.cpp",
+    "fileloc": 618,
+    "instructions": 53,
+    "name": "expert",
+    "stores": {
+      "L": 20
+    },
+    "total_instructions": 1993
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "1 1",
+    "file": "moe.cpp",
+    "fileloc": 826,
+    "instructions": 5,
+    "name": "expert_engine_B",
+    "total_instructions": 3991
+  },
+  "3": {
+    "basicblocks": 15,
+    "calls": "",
+    "file": "moe.cpp",
+    "fileloc": 555,
+    "instructions": 97,
+    "loads": {
+      "L": 12
+    },
+    "name": "mlp_head",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 97
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "5 2",
+    "file": "moe.cpp",
+    "fileloc": 845,
+    "instructions": 3,
+    "name": "run_parallel_engines",
+    "total_instructions": 7985
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "1 1",
+    "file": "moe.cpp",
+    "fileloc": 811,
+    "instructions": 5,
+    "name": "expert_engine_A",
+    "total_instructions": 3991
+  }
+}

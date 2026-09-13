@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'graph_moe'" level="0">
+<item name = "Date">Sat Sep 12 20:19:18 2026
+</item>
+<item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
+<item name = "Project">HLS_GraphMoE_Run6</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu13p_CIV-figd2104-3-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.285 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">55972, 55972, 0.560 ms, 0.560 ms, 55973, 55973, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_graph_moe_Pipeline_VITIS_LOOP_408_1_VITIS_LOOP_412_2_fu_204">graph_moe_Pipeline_VITIS_LOOP_408_1_VITIS_LOOP_412_2, 517, 517, 5.170 us, 5.170 us, 517, 517, no</column>
+<column name="grp_graph_moe_Pipeline_VITIS_LOOP_428_3_fu_216">graph_moe_Pipeline_VITIS_LOOP_428_3, 7, 7, 70.000 ns, 70.000 ns, 7, 7, no</column>
+<column name="grp_run_parallel_engines_fu_223">run_parallel_engines, 55402, 55402, 0.554 ms, 0.554 ms, 55403, 55403, dataflow</column>
+<column name="grp_graph_moe_Pipeline_VITIS_LOOP_437_4_fu_297">graph_moe_Pipeline_VITIS_LOOP_437_4, 13, 13, 0.130 us, 0.130 us, 13, 13, no</column>
+<column name="grp_graph_moe_Pipeline_VITIS_LOOP_443_5_fu_305">graph_moe_Pipeline_VITIS_LOOP_443_5, 11, 11, 0.110 us, 0.110 us, 11, 11, no</column>
+<column name="grp_graph_moe_Pipeline_VITIS_LOOP_515_6_fu_313">graph_moe_Pipeline_VITIS_LOOP_515_6, 16, 16, 0.160 us, 0.160 us, 16, 16, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

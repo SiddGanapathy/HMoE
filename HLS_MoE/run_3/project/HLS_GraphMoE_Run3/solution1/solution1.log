@@ -1,0 +1,473 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu13p_civ-figd2104-3-e 
+INFO: [HLS 200-1611] Setting target device to 'xcvu13p_CIV-figd2104-3-e'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.93 seconds. CPU system time: 0.31 seconds. Elapsed time: 1.2 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.26 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.29 seconds; current allocated memory: 282.422 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/moe.cpp' ... 
+WARNING: [HLS 207-5539] 'factor' in '#pragma HLS array_partition' is ignored (src/moe.cpp:162:54)
+WARNING: [HLS 207-5539] 'factor' in '#pragma HLS array_partition' is ignored (src/moe.cpp:163:54)
+WARNING: [HLS 207-5539] 'factor' in '#pragma HLS array_partition' is ignored (src/moe.cpp:164:54)
+WARNING: [HLS 207-5539] 'factor' in '#pragma HLS array_partition' is ignored (src/moe.cpp:177:65)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.18 seconds. CPU system time: 0.66 seconds. Elapsed time: 1.88 seconds; current allocated memory: 285.293 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 399 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,505 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,146 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,114 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,102 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,956 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,575 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,575 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,575 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,581 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,568 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,568 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,568 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,568 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,071 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,089 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-131] Inlining function 'elu(float)' into 'graph_moe(float const*, float const (*) [128], float const*, float const (*) [5][32][128], float const (*) [5][32], float const (*) [5][16][32], float const (*) [5][16], float const (*) [5][8][16], float const (*) [5][8], float const (*) [5][1][8], float const (*) [5][1], float*, float*)' (src/moe.cpp:231:28)
+INFO: [HLS 214-131] Inlining function 'elu(float)' into 'graph_moe(float const*, float const (*) [128], float const*, float const (*) [5][32][128], float const (*) [5][32], float const (*) [5][16][32], float const (*) [5][16], float const (*) [5][8][16], float const (*) [5][8], float const (*) [5][1][8], float const (*) [5][1], float*, float*)' (src/moe.cpp:252:28)
+INFO: [HLS 214-131] Inlining function 'elu(float)' into 'graph_moe(float const*, float const (*) [128], float const*, float const (*) [5][32][128], float const (*) [5][32], float const (*) [5][16][32], float const (*) [5][16], float const (*) [5][8][16], float const (*) [5][8], float const (*) [5][1][8], float const (*) [5][1], float*, float*)' (src/moe.cpp:273:28)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_318_16' is marked as complete unroll implied by the pipeline pragma (src/moe.cpp:318:28)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_226_9' is marked as complete unroll implied by the pipeline pragma (src/moe.cpp:226:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_247_11' is marked as complete unroll implied by the pipeline pragma (src/moe.cpp:247:36)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_268_13' is marked as complete unroll implied by the pipeline pragma (src/moe.cpp:268:36)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_318_16' (src/moe.cpp:318:28) in function 'graph_moe' completely with a factor of 4 (src/moe.cpp:35:0)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_201_6' (src/moe.cpp:201:20) in function 'graph_moe' partially with a factor of 2 (src/moe.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_226_9' (src/moe.cpp:226:35) in function 'graph_moe' completely with a factor of 128 (src/moe.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_247_11' (src/moe.cpp:247:36) in function 'graph_moe' completely with a factor of 32 (src/moe.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_268_13' (src/moe.cpp:268:36) in function 'graph_moe' completely with a factor of 16 (src/moe.cpp:35:0)
+INFO: [HLS 214-248] Applying array_partition to 'l1': Complete partitioning on dimension 1. (src/moe.cpp:149:11)
+INFO: [HLS 214-248] Applying array_partition to 'l2': Complete partitioning on dimension 1. (src/moe.cpp:150:11)
+INFO: [HLS 214-248] Applying array_partition to 'l3': Complete partitioning on dimension 1. (src/moe.cpp:151:11)
+INFO: [HLS 214-248] Applying array_partition to 'expert_output': Complete partitioning on dimension 1. (src/moe.cpp:175:8)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 6.12 seconds. CPU system time: 0.54 seconds. Elapsed time: 7.37 seconds; current allocated memory: 286.844 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 286.844 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.43 seconds. CPU system time: 0 seconds. Elapsed time: 0.43 seconds; current allocated memory: 293.031 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 295.461 MB.
+INFO: [XFORM 203-102] Automatically partitioning small array 'logits' (src/moe.cpp:59) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'logits' (src/moe.cpp:59) in dimension 1 completely.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1.6 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.62 seconds; current allocated memory: 325.168 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_61_1' (src/moe.cpp:61:22) in function 'graph_moe' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.94 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.99 seconds; current allocated memory: 456.891 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'graph_moe' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe_Pipeline_VITIS_LOOP_65_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_65_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_65_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 458.441 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 458.441 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe_Pipeline_VITIS_LOOP_82_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_82_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_82_3'
+WARNING: [HLS 200-871] Estimated clock period (7.502 ns) exceeds the target (target clock period: 10.000 ns, clock uncertainty: 2.700 ns, effective delay budget: 7.300 ns).
+WARNING: [HLS 200-1016] The critical path in module 'graph_moe_Pipeline_VITIS_LOOP_82_3' consists of the following:
+	'load' operation 32 bit ('max_logit_1_load_1', src/moe.cpp:86) on local variable 'max_logit', src/moe.cpp:80 [20]  (0.000 ns)
+	'fcmp' operation 1 bit ('tmp_2', src/moe.cpp:86) [41]  (6.815 ns)
+	'and' operation 1 bit ('and_ln86', src/moe.cpp:86) [42]  (0.000 ns)
+	'and' operation 1 bit ('and_ln86_1', src/moe.cpp:86) [43]  (0.112 ns)
+	'select' operation 32 bit ('max_logit', src/moe.cpp:86) [44]  (0.213 ns)
+	'store' operation 0 bit ('max_logit_1_write_ln80', src/moe.cpp:80) of variable 'max_logit', src/moe.cpp:86 on local variable 'max_logit', src/moe.cpp:80 [47]  (0.362 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 458.891 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 458.891 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe_Pipeline_VITIS_LOOP_93_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_93_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'VITIS_LOOP_93_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 459.258 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 459.258 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe_Pipeline_VITIS_LOOP_102_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_102_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'VITIS_LOOP_102_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 459.582 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 459.582 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe_Pipeline_VITIS_LOOP_220_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_220_8'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_220_8' (loop 'VITIS_LOOP_220_8'): Unable to schedule 'load' operation 32 bit ('w1_load_1', src/moe.cpp:228) on array 'w1' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'w1'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_220_8' (loop 'VITIS_LOOP_220_8'): Unable to schedule 'load' operation 32 bit ('w1_load_3', src/moe.cpp:228) on array 'w1' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'w1'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_220_8' (loop 'VITIS_LOOP_220_8'): Unable to schedule 'load' operation 32 bit ('w1_load_5', src/moe.cpp:228) on array 'w1' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'w1'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_220_8' (loop 'VITIS_LOOP_220_8'): Unable to schedule 'load' operation 32 bit ('w1_load_7', src/moe.cpp:228) on array 'w1' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'w1'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_220_8' (loop 'VITIS_LOOP_220_8'): Unable to schedule 'load' operation 32 bit ('w1_load_69', src/moe.cpp:228) on array 'w1' due to limited memory ports (II = 35). Please consider using a memory core with more ports or partitioning the array 'w1'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_220_8' (loop 'VITIS_LOOP_220_8'): Unable to schedule 'load' operation 32 bit ('w1_load_101', src/moe.cpp:228) on array 'w1' due to limited memory ports (II = 51). Please consider using a memory core with more ports or partitioning the array 'w1'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_220_8' (loop 'VITIS_LOOP_220_8'): Unable to schedule 'load' operation 32 bit ('w1_load_117', src/moe.cpp:228) on array 'w1' due to limited memory ports (II = 59). Please consider using a memory core with more ports or partitioning the array 'w1'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_220_8' (loop 'VITIS_LOOP_220_8'): Unable to schedule 'load' operation 32 bit ('w1_load_125', src/moe.cpp:228) on array 'w1' due to limited memory ports (II = 63). Please consider using a memory core with more ports or partitioning the array 'w1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 64, Depth = 266, loop 'VITIS_LOOP_220_8'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.23 seconds; current allocated memory: 468.008 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 468.008 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe_Pipeline_VITIS_LOOP_241_10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_241_10'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_241_10' (loop 'VITIS_LOOP_241_10'): Unable to schedule 'load' operation 32 bit ('w2_load_1', src/moe.cpp:249) on array 'w2' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'w2'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_241_10' (loop 'VITIS_LOOP_241_10'): Unable to schedule 'load' operation 32 bit ('w2_load_3', src/moe.cpp:249) on array 'w2' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'w2'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_241_10' (loop 'VITIS_LOOP_241_10'): Unable to schedule 'load' operation 32 bit ('w2_load_5', src/moe.cpp:249) on array 'w2' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'w2'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_241_10' (loop 'VITIS_LOOP_241_10'): Unable to schedule 'load' operation 32 bit ('w2_load_7', src/moe.cpp:249) on array 'w2' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'w2'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_241_10' (loop 'VITIS_LOOP_241_10'): Unable to schedule 'load' operation 32 bit ('w2_load_21', src/moe.cpp:249) on array 'w2' due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array 'w2'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_241_10' (loop 'VITIS_LOOP_241_10'): Unable to schedule 'load' operation 32 bit ('w2_load_29', src/moe.cpp:249) on array 'w2' due to limited memory ports (II = 15). Please consider using a memory core with more ports or partitioning the array 'w2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 16, Depth = 74, loop 'VITIS_LOOP_241_10'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.39 seconds; current allocated memory: 470.582 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 470.582 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe_Pipeline_VITIS_LOOP_262_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_262_12'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_262_12' (loop 'VITIS_LOOP_262_12'): Unable to schedule 'load' operation 32 bit ('w3_load_1', src/moe.cpp:270) on array 'w3' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'w3'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_262_12' (loop 'VITIS_LOOP_262_12'): Unable to schedule 'load' operation 32 bit ('w3_load_3', src/moe.cpp:270) on array 'w3' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'w3'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_262_12' (loop 'VITIS_LOOP_262_12'): Unable to schedule 'load' operation 32 bit ('w3_load_5', src/moe.cpp:270) on array 'w3' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'w3'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_262_12' (loop 'VITIS_LOOP_262_12'): Unable to schedule 'load' operation 32 bit ('w3_load_7', src/moe.cpp:270) on array 'w3' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'w3'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_262_12' (loop 'VITIS_LOOP_262_12'): Unable to schedule 'load' operation 32 bit ('w3_load_13', src/moe.cpp:270) on array 'w3' due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array 'w3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 8, Depth = 42, loop 'VITIS_LOOP_262_12'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 471.922 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 471.922 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe_Pipeline_VITIS_LOOP_287_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_287_14'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_287_14'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 472.484 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 472.484 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe_Pipeline_VITIS_LOOP_220_81' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_220_8'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_220_81' (loop 'VITIS_LOOP_220_8'): Unable to schedule 'load' operation 32 bit ('w1_load_1', src/moe.cpp:228) on array 'w1' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'w1'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_220_81' (loop 'VITIS_LOOP_220_8'): Unable to schedule 'load' operation 32 bit ('w1_load_3', src/moe.cpp:228) on array 'w1' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'w1'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_220_81' (loop 'VITIS_LOOP_220_8'): Unable to schedule 'load' operation 32 bit ('w1_load_5', src/moe.cpp:228) on array 'w1' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'w1'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_220_81' (loop 'VITIS_LOOP_220_8'): Unable to schedule 'load' operation 32 bit ('w1_load_7', src/moe.cpp:228) on array 'w1' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'w1'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_220_81' (loop 'VITIS_LOOP_220_8'): Unable to schedule 'load' operation 32 bit ('w1_load_69', src/moe.cpp:228) on array 'w1' due to limited memory ports (II = 35). Please consider using a memory core with more ports or partitioning the array 'w1'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_220_81' (loop 'VITIS_LOOP_220_8'): Unable to schedule 'load' operation 32 bit ('w1_load_101', src/moe.cpp:228) on array 'w1' due to limited memory ports (II = 51). Please consider using a memory core with more ports or partitioning the array 'w1'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_220_81' (loop 'VITIS_LOOP_220_8'): Unable to schedule 'load' operation 32 bit ('w1_load_117', src/moe.cpp:228) on array 'w1' due to limited memory ports (II = 59). Please consider using a memory core with more ports or partitioning the array 'w1'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_220_81' (loop 'VITIS_LOOP_220_8'): Unable to schedule 'load' operation 32 bit ('w1_load_125', src/moe.cpp:228) on array 'w1' due to limited memory ports (II = 63). Please consider using a memory core with more ports or partitioning the array 'w1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 64, Depth = 266, loop 'VITIS_LOOP_220_8'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.2 seconds; current allocated memory: 479.879 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 479.984 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe_Pipeline_VITIS_LOOP_241_102' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_241_10'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_241_102' (loop 'VITIS_LOOP_241_10'): Unable to schedule 'load' operation 32 bit ('w2_load_1', src/moe.cpp:249) on array 'w2' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'w2'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_241_102' (loop 'VITIS_LOOP_241_10'): Unable to schedule 'load' operation 32 bit ('w2_load_3', src/moe.cpp:249) on array 'w2' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'w2'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_241_102' (loop 'VITIS_LOOP_241_10'): Unable to schedule 'load' operation 32 bit ('w2_load_5', src/moe.cpp:249) on array 'w2' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'w2'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_241_102' (loop 'VITIS_LOOP_241_10'): Unable to schedule 'load' operation 32 bit ('w2_load_7', src/moe.cpp:249) on array 'w2' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'w2'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_241_102' (loop 'VITIS_LOOP_241_10'): Unable to schedule 'load' operation 32 bit ('w2_load_21', src/moe.cpp:249) on array 'w2' due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array 'w2'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_241_102' (loop 'VITIS_LOOP_241_10'): Unable to schedule 'load' operation 32 bit ('w2_load_29', src/moe.cpp:249) on array 'w2' due to limited memory ports (II = 15). Please consider using a memory core with more ports or partitioning the array 'w2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 16, Depth = 74, loop 'VITIS_LOOP_241_10'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.38 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.38 seconds; current allocated memory: 483.406 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 483.406 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe_Pipeline_VITIS_LOOP_262_123' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_262_12'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_262_123' (loop 'VITIS_LOOP_262_12'): Unable to schedule 'load' operation 32 bit ('w3_load_1', src/moe.cpp:270) on array 'w3' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'w3'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_262_123' (loop 'VITIS_LOOP_262_12'): Unable to schedule 'load' operation 32 bit ('w3_load_3', src/moe.cpp:270) on array 'w3' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'w3'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_262_123' (loop 'VITIS_LOOP_262_12'): Unable to schedule 'load' operation 32 bit ('w3_load_5', src/moe.cpp:270) on array 'w3' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'w3'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_262_123' (loop 'VITIS_LOOP_262_12'): Unable to schedule 'load' operation 32 bit ('w3_load_7', src/moe.cpp:270) on array 'w3' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'w3'.
+WARNING: [HLS 200-885] The II Violation in module 'graph_moe_Pipeline_VITIS_LOOP_262_123' (loop 'VITIS_LOOP_262_12'): Unable to schedule 'load' operation 32 bit ('w3_load_13', src/moe.cpp:270) on array 'w3' due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array 'w3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 8, Depth = 42, loop 'VITIS_LOOP_262_12'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 484.824 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 484.824 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe_Pipeline_VITIS_LOOP_287_144' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_287_14'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_287_14'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 485.441 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 485.441 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe_Pipeline_VITIS_LOOP_312_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_312_15'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 11, loop 'VITIS_LOOP_312_15'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 485.914 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 485.914 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.47 seconds; current allocated memory: 497.258 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 497.258 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe_Pipeline_VITIS_LOOP_65_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'graph_moe_Pipeline_VITIS_LOOP_65_2' pipeline 'VITIS_LOOP_65_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe_Pipeline_VITIS_LOOP_65_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 497.258 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe_Pipeline_VITIS_LOOP_82_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'graph_moe_Pipeline_VITIS_LOOP_82_3' pipeline 'VITIS_LOOP_82_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_1_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe_Pipeline_VITIS_LOOP_82_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 497.258 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe_Pipeline_VITIS_LOOP_93_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'graph_moe_Pipeline_VITIS_LOOP_93_4' pipeline 'VITIS_LOOP_93_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_4_2_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe_Pipeline_VITIS_LOOP_93_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 497.258 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe_Pipeline_VITIS_LOOP_102_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'graph_moe_Pipeline_VITIS_LOOP_102_5' pipeline 'VITIS_LOOP_102_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe_Pipeline_VITIS_LOOP_102_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 497.305 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe_Pipeline_VITIS_LOOP_220_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'graph_moe_Pipeline_VITIS_LOOP_220_8' pipeline 'VITIS_LOOP_220_8' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_1_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe_Pipeline_VITIS_LOOP_220_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 506.379 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe_Pipeline_VITIS_LOOP_241_10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'graph_moe_Pipeline_VITIS_LOOP_241_10' pipeline 'VITIS_LOOP_241_10' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_1_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe_Pipeline_VITIS_LOOP_241_10'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.42 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.47 seconds; current allocated memory: 525.723 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe_Pipeline_VITIS_LOOP_262_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'graph_moe_Pipeline_VITIS_LOOP_262_12' pipeline 'VITIS_LOOP_262_12' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_1_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe_Pipeline_VITIS_LOOP_262_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 531.055 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe_Pipeline_VITIS_LOOP_287_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'graph_moe_Pipeline_VITIS_LOOP_287_14' pipeline 'VITIS_LOOP_287_14' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe_Pipeline_VITIS_LOOP_287_14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 534.281 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe_Pipeline_VITIS_LOOP_220_81' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'graph_moe_Pipeline_VITIS_LOOP_220_81' pipeline 'VITIS_LOOP_220_8' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_1_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe_Pipeline_VITIS_LOOP_220_81'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 543.480 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe_Pipeline_VITIS_LOOP_241_102' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'graph_moe_Pipeline_VITIS_LOOP_241_102' pipeline 'VITIS_LOOP_241_10' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_1_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe_Pipeline_VITIS_LOOP_241_102'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.41 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.47 seconds; current allocated memory: 562.598 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe_Pipeline_VITIS_LOOP_262_123' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'graph_moe_Pipeline_VITIS_LOOP_262_123' pipeline 'VITIS_LOOP_262_12' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_1_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe_Pipeline_VITIS_LOOP_262_123'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 568.094 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe_Pipeline_VITIS_LOOP_287_144' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'graph_moe_Pipeline_VITIS_LOOP_287_144' pipeline 'VITIS_LOOP_287_14' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe_Pipeline_VITIS_LOOP_287_144'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 571.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe_Pipeline_VITIS_LOOP_312_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'graph_moe_Pipeline_VITIS_LOOP_312_15' pipeline 'VITIS_LOOP_312_15' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe_Pipeline_VITIS_LOOP_312_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 572.680 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/input_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/gate_weight' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/gate_bias' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/w1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/b1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/w2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/b2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/w3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/b3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/w4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/b4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/gates' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'graph_moe' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe'.
+INFO: [RTMG 210-278] Implementing memory 'graph_moe_l1_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'graph_moe_l2_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'graph_moe_l3_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'graph_moe_expert_output_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 582.609 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.59 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.62 seconds; current allocated memory: 601.176 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.03 seconds; current allocated memory: 610.258 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for graph_moe.
+INFO: [VLOG 209-307] Generating Verilog RTL for graph_moe.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 133.30 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 24.11 seconds. CPU system time: 1.6 seconds. Elapsed time: 26.58 seconds; current allocated memory: 328.965 MB.

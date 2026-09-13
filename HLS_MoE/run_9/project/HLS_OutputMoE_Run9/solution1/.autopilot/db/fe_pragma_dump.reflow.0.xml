@@ -1,0 +1,10 @@
+<pragmas>
+<pragma file="src/moe.cpp" line="1061" pragmaType="interface" parentfunction="output_moe" mode="ap_ctrl_hs" port="return" name=""/>
+<pragma file="src/moe.cpp" line="1067" pragmaType="array_partition" parentfunction="output_moe" dim="1" factor="0" mode="complete" dynamic="0" variable="logits"/>
+<pragma file="src/moe.cpp" line="1068" pragmaType="array_partition" parentfunction="output_moe" dim="1" factor="0" mode="complete" dynamic="0" variable="gates"/>
+<pragma file="src/moe.cpp" line="1069" pragmaType="array_partition" parentfunction="output_moe" dim="1" factor="0" mode="complete" dynamic="0" variable="output"/>
+<pragma file="src/moe.cpp" line="907" pragmaType="inline" parentfunction="expert_engine" off="1" region="0" recursive="0"/>
+<pragma file="src/moe.cpp" line="714" pragmaType="array_partition" parentfunction="generic_mlp_head" dim="1" factor="0" mode="complete" dynamic="0" variable="l1"/>
+<pragma file="src/moe.cpp" line="715" pragmaType="array_partition" parentfunction="generic_mlp_head" dim="1" factor="0" mode="complete" dynamic="0" variable="l2"/>
+<pragma file="src/moe.cpp" line="716" pragmaType="array_partition" parentfunction="generic_mlp_head" dim="1" factor="0" mode="complete" dynamic="0" variable="l3"/>
+</pragmas>

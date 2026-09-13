@@ -1,0 +1,64 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">,  13988, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll,  11296, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,   8770, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,   7724, user inline pragmas are applied</column>
+            <column name="">(4) simplification,   7676, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition,   7755, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,   7755, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate ,   7755, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,   7755, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,   8078, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification,   7595, loop and instruction simplification</column>
+            <column name="">(2) parallelization,  28715, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition, 136075 *, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,  33355, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering,  33290, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,  34838, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="output_moe" col1="moe.cpp:862" col2="13988" col3="7676" col4="8078" col5="33355" col6="34838">
+                    <row id="6" col0="run_parallel_engines" col1="moe.cpp:845" col2="13833" col3="7585" col4="7985" col5="32305" col6="33749">
+                        <row id="1" col0="expert_engine_A" col1="moe.cpp:811" col2="6913" col3="3789" col4="3991" col5="16151" col6="16872">
+                            <row id="3" col0="expert" col1="moe.cpp:618" col2="6906" col2_disp="6,906 (2 calls)" col3="3784" col3_disp="3,784 (2 calls)" col4="3986" col4_disp="3,986 (2 calls)" col5="16146" col5_disp="16,146 (2 calls)" col6="16866" col6_disp="16,866 (2 calls)">
+                                <row id="4" col0="mlp_head" col1="moe.cpp:555" col2="6760" col2_disp="6,760 (40 calls)" col3="3680" col3_disp="3,680 (40 calls)" col4="3880" col4_disp="3,880 (40 calls)" col5="16040" col5_disp="16,040 (40 calls)" col6="16760" col6_disp="16,760 (40 calls)">
+                                    <row id="5" col0="elu" col1="moe.cpp:543" col2="960" col2_disp="  960 (120 calls)" col3="" col4="" col5="" col6=""/>
+                                </row>
+                            </row>
+                        </row>
+                        <row id="2" col0="expert_engine_B" col1="moe.cpp:826" col2="6913" col3="3789" col4="3991" col5="16151" col6="16872">
+                            <row id="3" col0="expert" col1="moe.cpp:618" col2="6906" col2_disp="6,906 (2 calls)" col3="3784" col3_disp="3,784 (2 calls)" col4="3986" col4_disp="3,986 (2 calls)" col5="16146" col5_disp="16,146 (2 calls)" col6="16866" col6_disp="16,866 (2 calls)">
+                                <row id="4" col0="mlp_head" col1="moe.cpp:555" col2="6760" col2_disp="6,760 (40 calls)" col3="3680" col3_disp="3,680 (40 calls)" col4="3880" col4_disp="3,880 (40 calls)" col5="16040" col5_disp="16,040 (40 calls)" col6="16760" col6_disp="16,760 (40 calls)">
+                                    <row id="5" col0="elu" col1="moe.cpp:543" col2="960" col2_disp="  960 (120 calls)" col3="" col4="" col5="" col6=""/>
+                                </row>
+                            </row>
+                        </row>
+                    </row>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

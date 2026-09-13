@@ -1,0 +1,28 @@
+{
+  "0": {
+    "basicblocks": 99,
+    "calls": "1 1 1",
+    "file": "moe.cpp",
+    "fileloc": 15,
+    "instructions": 367,
+    "loads": {
+      "L": 8,
+      "T": 15
+    },
+    "name": "graph_moe",
+    "stores": {
+      "L": 5,
+      "T": 3
+    },
+    "total_instructions": 399
+  },
+  "1": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "moe.cpp",
+    "fileloc": 4,
+    "instructions": 8,
+    "name": "elu",
+    "total_instructions": 10
+  }
+}

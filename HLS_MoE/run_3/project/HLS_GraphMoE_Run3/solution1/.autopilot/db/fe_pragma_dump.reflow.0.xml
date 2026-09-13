@@ -1,0 +1,31 @@
+<pragmas>
+<pragma file="src/moe.cpp" line="314" pragmaType="pipeline" parentfunction="graph_moe" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/moe.cpp" line="203" pragmaType="unroll" parentfunction="graph_moe" factor="2" skip_exit_check="0"/>
+<pragma file="src/moe.cpp" line="222" pragmaType="pipeline" parentfunction="graph_moe" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/moe.cpp" line="243" pragmaType="pipeline" parentfunction="graph_moe" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/moe.cpp" line="264" pragmaType="pipeline" parentfunction="graph_moe" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/moe.cpp" line="289" pragmaType="pipeline" parentfunction="graph_moe" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/moe.cpp" line="104" pragmaType="pipeline" parentfunction="graph_moe" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/moe.cpp" line="95" pragmaType="pipeline" parentfunction="graph_moe" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/moe.cpp" line="84" pragmaType="pipeline" parentfunction="graph_moe" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/moe.cpp" line="67" pragmaType="pipeline" parentfunction="graph_moe" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/moe.cpp" line="36" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="input" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="37" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="gate_weight" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="38" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="gate_bias" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="40" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="w1" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="41" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="b1" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="42" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="w2" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="43" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="b2" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="44" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="w3" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="45" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="b3" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="46" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="w4" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="47" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="b4" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="49" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="output" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="50" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="gates" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="52" pragmaType="interface" parentfunction="graph_moe" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/moe.cpp" line="162" pragmaType="array_partition" parentfunction="graph_moe" dim="1" factor="0" mode="complete" dynamic="0" variable="l1"/>
+<pragma file="src/moe.cpp" line="163" pragmaType="array_partition" parentfunction="graph_moe" dim="1" factor="0" mode="complete" dynamic="0" variable="l2"/>
+<pragma file="src/moe.cpp" line="164" pragmaType="array_partition" parentfunction="graph_moe" dim="1" factor="0" mode="complete" dynamic="0" variable="l3"/>
+<pragma file="src/moe.cpp" line="177" pragmaType="array_partition" parentfunction="graph_moe" dim="1" factor="0" mode="complete" dynamic="0" variable="expert_output"/>
+<pragma file="src/moe.cpp" line="6" pragmaType="inline" parentfunction="elu" off="0" region="0" recursive="0"/>
+</pragmas>

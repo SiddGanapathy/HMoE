@@ -1,0 +1,339 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu13p_civ-figd2104-3-e 
+INFO: [HLS 200-1611] Setting target device to 'xcvu13p_CIV-figd2104-3-e'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.93 seconds. CPU system time: 0.33 seconds. Elapsed time: 1.23 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.24 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.28 seconds; current allocated memory: 282.453 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/moe.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.24 seconds. CPU system time: 0.68 seconds. Elapsed time: 1.91 seconds; current allocated memory: 285.012 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 999 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 748 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 558 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 521 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 521 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 538 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 538 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 538 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 538 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 558 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 538 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 549 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 549 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 549 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 563 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 691 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-131] Inlining function 'elu(float)' into 'expert_engine(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)' (src/moe.cpp:78:17)
+INFO: [HLS 214-131] Inlining function 'elu(float)' into 'expert_engine(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)' (src/moe.cpp:120:17)
+INFO: [HLS 214-131] Inlining function 'elu(float)' into 'expert_engine(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)' (src/moe.cpp:99:17)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_243_3> at src/moe.cpp:243:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_253_4> at src/moe.cpp:253:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_260_5> at src/moe.cpp:260:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_430_8> at src/moe.cpp:430:23 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_434_9' is marked as complete unroll implied by the pipeline pragma (src/moe.cpp:434:27)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_434_9' (src/moe.cpp:434:27) in function 'graph_moe' completely with a factor of 4 (src/moe.cpp:184:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.78 seconds. CPU system time: 0.53 seconds. Elapsed time: 7.31 seconds; current allocated memory: 286.441 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 286.441 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 286.988 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 287.121 MB.
+INFO: [XFORM 203-102] Partitioning array 'expert_output' (src/moe.cpp:304) in dimension 1 automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 'logits' (src/moe.cpp:218) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'exp_logits' (src/moe.cpp:250) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'logits' (src/moe.cpp:218) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'exp_logits' (src/moe.cpp:250) in dimension 1 completely.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 309.832 MB.
+INFO: [HLS 200-2060] Failed to convert nested loops 'VITIS_LOOP_66_1'(src/moe.cpp:66:22) and 'VITIS_LOOP_70_2'(src/moe.cpp:70:26) in function 'expert_engine' into perfectly nested loops.
+INFO: [HLS 200-2060] Failed to convert nested loops 'VITIS_LOOP_88_3'(src/moe.cpp:88:22) and 'VITIS_LOOP_92_4'(src/moe.cpp:92:26) in function 'expert_engine' into perfectly nested loops.
+INFO: [HLS 200-2060] Failed to convert nested loops 'VITIS_LOOP_109_5'(src/moe.cpp:109:23) and 'VITIS_LOOP_113_6'(src/moe.cpp:113:27) in function 'expert_engine' into perfectly nested loops.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_220_1' (src/moe.cpp:220:23) in function 'graph_moe' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_66_1' (src/moe.cpp:66:22) in function 'expert_engine' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_88_3' (src/moe.cpp:88:22) in function 'expert_engine' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_109_5' (src/moe.cpp:109:23) in function 'expert_engine' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.11 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.13 seconds; current allocated memory: 399.512 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'graph_moe' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe_Pipeline_VITIS_LOOP_224_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_224_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_224_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.07 seconds; current allocated memory: 400.969 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 400.969 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe_Pipeline_VITIS_LOOP_243_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_243_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_243_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 401.520 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 401.520 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe_Pipeline_VITIS_LOOP_253_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_253_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'VITIS_LOOP_253_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 401.957 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 401.957 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe_Pipeline_VITIS_LOOP_260_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_260_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'VITIS_LOOP_260_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 402.367 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 402.367 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'expert_engine_Pipeline_VITIS_LOOP_70_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_70_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_70_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 402.719 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 402.719 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'expert_engine_Pipeline_VITIS_LOOP_92_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_92_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_92_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 403.008 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 403.008 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'expert_engine_Pipeline_VITIS_LOOP_113_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_113_6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_113_6'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 403.367 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 403.367 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'expert_engine_Pipeline_VITIS_LOOP_134_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_134_7'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_134_7'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 403.711 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 403.711 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'expert_engine' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 404.844 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 404.844 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe_Pipeline_VITIS_LOOP_430_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_430_8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 11, loop 'VITIS_LOOP_430_8'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 405.633 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 405.633 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'graph_moe' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 406.648 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 406.648 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe_Pipeline_VITIS_LOOP_224_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'graph_moe_Pipeline_VITIS_LOOP_224_2' pipeline 'VITIS_LOOP_224_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe_Pipeline_VITIS_LOOP_224_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 406.672 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe_Pipeline_VITIS_LOOP_243_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'graph_moe_Pipeline_VITIS_LOOP_243_3' pipeline 'VITIS_LOOP_243_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_1_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe_Pipeline_VITIS_LOOP_243_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 407.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe_Pipeline_VITIS_LOOP_253_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'graph_moe_Pipeline_VITIS_LOOP_253_4' pipeline 'VITIS_LOOP_253_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_4_2_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe_Pipeline_VITIS_LOOP_253_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 409.238 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe_Pipeline_VITIS_LOOP_260_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'graph_moe_Pipeline_VITIS_LOOP_260_5' pipeline 'VITIS_LOOP_260_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_4_2_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe_Pipeline_VITIS_LOOP_260_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 410.480 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'expert_engine_Pipeline_VITIS_LOOP_70_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'expert_engine_Pipeline_VITIS_LOOP_70_2' pipeline 'VITIS_LOOP_70_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'expert_engine_Pipeline_VITIS_LOOP_70_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 411.457 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'expert_engine_Pipeline_VITIS_LOOP_92_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'expert_engine_Pipeline_VITIS_LOOP_92_4' pipeline 'VITIS_LOOP_92_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'expert_engine_Pipeline_VITIS_LOOP_92_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 412.461 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'expert_engine_Pipeline_VITIS_LOOP_113_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'expert_engine_Pipeline_VITIS_LOOP_113_6' pipeline 'VITIS_LOOP_113_6' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'expert_engine_Pipeline_VITIS_LOOP_113_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 413.461 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'expert_engine_Pipeline_VITIS_LOOP_134_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'expert_engine_Pipeline_VITIS_LOOP_134_7' pipeline 'VITIS_LOOP_134_7' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'expert_engine_Pipeline_VITIS_LOOP_134_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 414.477 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'expert_engine' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_1_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'expert_engine'.
+INFO: [RTMG 210-278] Implementing memory 'graph_moe_expert_engine_l1_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'graph_moe_expert_engine_l2_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'graph_moe_expert_engine_l3_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 416.828 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe_Pipeline_VITIS_LOOP_430_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'graph_moe_Pipeline_VITIS_LOOP_430_8' pipeline 'VITIS_LOOP_430_8' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe_Pipeline_VITIS_LOOP_430_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 420.363 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'graph_moe' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/input_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/gate_weight' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/gate_bias' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/w1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/b1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/w2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/b2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/w3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/b3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/w4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/b4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'graph_moe/gates' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'graph_moe' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'graph_moe'.
+INFO: [RTMG 210-278] Implementing memory 'graph_moe_expert_output_0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 422.949 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.23 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.25 seconds; current allocated memory: 427.734 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.62 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.64 seconds; current allocated memory: 434.898 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for graph_moe.
+INFO: [VLOG 209-307] Generating Verilog RTL for graph_moe.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.27 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 6.64 seconds. CPU system time: 1.43 seconds. Elapsed time: 12.11 seconds; current allocated memory: 153.195 MB.

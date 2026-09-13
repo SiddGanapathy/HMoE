@@ -1,0 +1,22 @@
+<pragmas>
+<pragma file="src/moe.cpp" line="144" pragmaType="pipeline" parentfunction="graph_moe" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/moe.cpp" line="109" pragmaType="pipeline" parentfunction="graph_moe" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/moe.cpp" line="121" pragmaType="pipeline" parentfunction="graph_moe" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/moe.cpp" line="133" pragmaType="pipeline" parentfunction="graph_moe" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/moe.cpp" line="57" pragmaType="pipeline" parentfunction="graph_moe" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/moe.cpp" line="31" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="input" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="32" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="gate_weight" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="33" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="gate_bias" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="34" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="w1" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="35" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="b1" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="36" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="w2" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="37" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="b2" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="38" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="w3" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="39" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="b3" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="40" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="w4" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="41" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="b4" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="42" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="output" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="43" pragmaType="interface" parentfunction="graph_moe" mode="ap_memory" port="gates" storage_type="-1" impl="-1" latency="-1" name="" depth="-1"/>
+<pragma file="src/moe.cpp" line="45" pragmaType="interface" parentfunction="graph_moe" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/moe.cpp" line="6" pragmaType="inline" parentfunction="elu" off="0" region="0" recursive="0"/>
+</pragmas>

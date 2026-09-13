@@ -1,0 +1,13 @@
+src/moe.cpp:162:54: warning: 'factor' in '#pragma HLS array_partition' is ignored [-Wextra-tokens]
+#pragma HLS ARRAY_PARTITION variable=l1 dim=1 factor=2
+                                                     ^
+src/moe.cpp:163:54: warning: 'factor' in '#pragma HLS array_partition' is ignored [-Wextra-tokens]
+#pragma HLS ARRAY_PARTITION variable=l2 dim=1 factor=2
+                                                     ^
+src/moe.cpp:164:54: warning: 'factor' in '#pragma HLS array_partition' is ignored [-Wextra-tokens]
+#pragma HLS ARRAY_PARTITION variable=l3 dim=1 factor=2
+                                                     ^
+src/moe.cpp:177:65: warning: 'factor' in '#pragma HLS array_partition' is ignored [-Wextra-tokens]
+#pragma HLS ARRAY_PARTITION variable=expert_output dim=1 factor=2
+                                                                ^
+4 warnings generated.

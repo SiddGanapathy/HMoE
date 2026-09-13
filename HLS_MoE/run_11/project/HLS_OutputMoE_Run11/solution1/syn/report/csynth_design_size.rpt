@@ -1,0 +1,60 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             |  3,731       | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  |  3,068       | user unroll pragmas are applied                                                        |
+|               | (2) simplification          |  2,418       | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  |  2,143       | user inline pragmas are applied                                                        |
+|               | (4) simplification          |  2,143       | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         |  6,878       | user array partition pragmas are applied                                               |
+|               | (2) simplification          |  5,464       | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  |  5,464       | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           |  5,401       | apply array reshape pragmas                                                            |
+|               | (5) access patterns         |  6,613       | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification     |  5,361       | loop and instruction simplification                                                    |
+|               | (2) parallelization         |  8,725       | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         | 34,404       | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          |  9,692       | simplification of design after performance transformations                             |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
+|               | (1) lowering                |  9,740       | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           | 10,152       | high level synthesis optimizations                                                     |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++-------------------------+--------------+------------------+-----------------+------------------+------------------+------------------+
+| Function                | Location     | Compile/Link     | Unroll/Inline   | Array/Struct     | Performance      | HW Transforms    |
++-------------------------+--------------+------------------+-----------------+------------------+------------------+------------------+
+| + output_moe            | moe.cpp:1041 | 3,731            | 2,143           | 6,613            | 9,692            | 10,152           |
+|  + run_parallel_engines | moe.cpp:1016 | 3,586            | 2,061           | 6,465            | 8,585            | 8,989            |
+|   + expert_engine_A     | moe.cpp:902  | 1,759            |  981            | 3,181            | 4,241            | 4,442            |
+|    + generic_expert     | moe.cpp:790  | 1,752 (2 calls)  |                 |                  |                  |                  |
+|     + generic_mlp_head  | moe.cpp:692  | 1,730 (10 calls) |                 |                  |                  |                  |
+|        elu              | moe.cpp:543  |  240 (30 calls)  |                 |                  |                  |                  |
+|      generic_mlp_head   | moe.cpp:692  |                  |  960 (10 calls) | 3,160 (10 calls) | 4,220 (10 calls) | 4,420 (10 calls) |
+|   + expert_engine_B     | moe.cpp:959  | 1,759            |  981            | 3,181            | 4,241            | 4,442            |
+|    + generic_expert     | moe.cpp:790  | 1,752 (2 calls)  |                 |                  |                  |                  |
+|     + generic_mlp_head  | moe.cpp:692  | 1,730 (10 calls) |                 |                  |                  |                  |
+|        elu              | moe.cpp:543  |  240 (30 calls)  |                 |                  |                  |                  |
+|      generic_mlp_head   | moe.cpp:692  |                  |  960 (10 calls) | 3,160 (10 calls) | 4,220 (10 calls) | 4,420 (10 calls) |
++-------------------------+--------------+------------------+-----------------+------------------+------------------+------------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

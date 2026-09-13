@@ -1,0 +1,602 @@
+
+
+================================================================
+== Synthesis Summary Report of 'graph_moe'
+================================================================
++ General Information: 
+    * Date:           Sat Sep 12 20:19:20 2026
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        HLS_GraphMoE_Run6
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu13p_CIV-figd2104-3-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----------+------------+-------------+-----+
+    |                         Modules                         | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |          |            |             |     |
+    |                         & Loops                         | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |    DSP   |     FF     |     LUT     | URAM|
+    +---------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----------+------------+-------------+-----+
+    |+ graph_moe                                              |     -|  0.01|    55972|  5.597e+05|         -|    55973|     -|        no|  4 (~0%)|  51 (~0%)|  7427 (~0%)|  11142 (~0%)|    -|
+    | + graph_moe_Pipeline_VITIS_LOOP_408_1_VITIS_LOOP_412_2  |     -|  0.35|      517|  5.170e+03|         -|      517|     -|        no|        -|         -|   299 (~0%)|    316 (~0%)|    -|
+    |  o VITIS_LOOP_408_1_VITIS_LOOP_412_2                    |     -|  7.30|      515|  5.150e+03|         5|        1|   512|       yes|        -|         -|           -|            -|    -|
+    | + graph_moe_Pipeline_VITIS_LOOP_428_3                   |     -|  0.16|        7|     70.000|         -|        7|     -|        no|        -|         -|   108 (~0%)|    208 (~0%)|    -|
+    |  o VITIS_LOOP_428_3                                     |     -|  7.30|        5|     50.000|         4|        1|     3|       yes|        -|         -|           -|            -|    -|
+    | + run_parallel_engines*                                 |     -|  0.01|    55402|  5.540e+05|         -|    55403|     -|  dataflow|  4 (~0%)|  24 (~0%)|  4540 (~0%)|   7682 (~0%)|    -|
+    |  + expert_engine                                        |     -|  0.01|    55402|  5.540e+05|         -|    55402|     -|        no|  2 (~0%)|  12 (~0%)|  2269 (~0%)|   3824 (~0%)|    -|
+    |   o VITIS_LOOP_57_1                                     |     -|  7.30|    27700|  2.770e+05|      5540|        -|     5|        no|        -|         -|           -|            -|    -|
+    |    + expert_engine_Pipeline_VITIS_LOOP_108_8            |     -|  0.89|       13|    130.000|         -|       13|     -|        no|        -|         -|   142 (~0%)|    125 (~0%)|    -|
+    |     o VITIS_LOOP_108_8                                  |     -|  7.30|       11|    110.000|         5|        1|     8|       yes|        -|         -|           -|            -|    -|
+    |    o VITIS_LOOP_64_2                                    |     -|  7.30|     4544|  4.544e+04|       142|        -|    32|        no|        -|         -|           -|            -|    -|
+    |     + expert_engine_Pipeline_VITIS_LOOP_68_3            |     -|  0.89|      133|  1.330e+03|         -|      133|     -|        no|        -|         -|   146 (~0%)|    141 (~0%)|    -|
+    |      o VITIS_LOOP_68_3                                  |     -|  7.30|      131|  1.310e+03|         5|        1|   128|       yes|        -|         -|           -|            -|    -|
+    |    o VITIS_LOOP_78_4                                    |     -|  7.30|      736|  7.360e+03|        46|        -|    16|        no|        -|         -|           -|            -|    -|
+    |     + expert_engine_Pipeline_VITIS_LOOP_82_5            |     -|  0.89|       37|    370.000|         -|       37|     -|        no|        -|         -|   144 (~0%)|    134 (~0%)|    -|
+    |      o VITIS_LOOP_82_5                                  |     -|  7.30|       35|    350.000|         5|        1|    32|       yes|        -|         -|           -|            -|    -|
+    |    o VITIS_LOOP_92_6                                    |     -|  7.30|      240|  2.400e+03|        30|        -|     8|        no|        -|         -|           -|            -|    -|
+    |     + expert_engine_Pipeline_VITIS_LOOP_96_7            |     -|  0.89|       21|    210.000|         -|       21|     -|        no|        -|         -|   143 (~0%)|    130 (~0%)|    -|
+    |      o VITIS_LOOP_96_7                                  |     -|  7.30|       19|    190.000|         5|        1|    16|       yes|        -|         -|           -|            -|    -|
+    |   o VITIS_LOOP_122_9                                    |     -|  7.30|    27700|  2.770e+05|      5540|        -|     5|        no|        -|         -|           -|            -|    -|
+    |    + expert_engine_Pipeline_VITIS_LOOP_173_16           |     -|  0.89|       13|    130.000|         -|       13|     -|        no|        -|         -|   142 (~0%)|    125 (~0%)|    -|
+    |     o VITIS_LOOP_173_16                                 |     -|  7.30|       11|    110.000|         5|        1|     8|       yes|        -|         -|           -|            -|    -|
+    |    o VITIS_LOOP_129_10                                  |     -|  7.30|     4544|  4.544e+04|       142|        -|    32|        no|        -|         -|           -|            -|    -|
+    |     + expert_engine_Pipeline_VITIS_LOOP_133_11          |     -|  0.89|      133|  1.330e+03|         -|      133|     -|        no|        -|         -|   146 (~0%)|    141 (~0%)|    -|
+    |      o VITIS_LOOP_133_11                                |     -|  7.30|      131|  1.310e+03|         5|        1|   128|       yes|        -|         -|           -|            -|    -|
+    |    o VITIS_LOOP_143_12                                  |     -|  7.30|      736|  7.360e+03|        46|        -|    16|        no|        -|         -|           -|            -|    -|
+    |     + expert_engine_Pipeline_VITIS_LOOP_147_13          |     -|  0.89|       37|    370.000|         -|       37|     -|        no|        -|         -|   144 (~0%)|    134 (~0%)|    -|
+    |      o VITIS_LOOP_147_13                                |     -|  7.30|       35|    350.000|         5|        1|    32|       yes|        -|         -|           -|            -|    -|
+    |    o VITIS_LOOP_157_14                                  |     -|  7.30|      240|  2.400e+03|        30|        -|     8|        no|        -|         -|           -|            -|    -|
+    |     + expert_engine_Pipeline_VITIS_LOOP_161_15          |     -|  0.89|       21|    210.000|         -|       21|     -|        no|        -|         -|   143 (~0%)|    130 (~0%)|    -|
+    |      o VITIS_LOOP_161_15                                |     -|  7.30|       19|    190.000|         5|        1|    16|       yes|        -|         -|           -|            -|    -|
+    |  + expert_engine_1                                      |     -|  0.01|    55402|  5.540e+05|         -|    55402|     -|        no|  2 (~0%)|  12 (~0%)|  2269 (~0%)|   3824 (~0%)|    -|
+    |   o VITIS_LOOP_57_1                                     |     -|  7.30|    27700|  2.770e+05|      5540|        -|     5|        no|        -|         -|           -|            -|    -|
+    |    + expert_engine_1_Pipeline_VITIS_LOOP_108_8          |     -|  0.89|       13|    130.000|         -|       13|     -|        no|        -|         -|   142 (~0%)|    125 (~0%)|    -|
+    |     o VITIS_LOOP_108_8                                  |     -|  7.30|       11|    110.000|         5|        1|     8|       yes|        -|         -|           -|            -|    -|
+    |    o VITIS_LOOP_64_2                                    |     -|  7.30|     4544|  4.544e+04|       142|        -|    32|        no|        -|         -|           -|            -|    -|
+    |     + expert_engine_1_Pipeline_VITIS_LOOP_68_3          |     -|  0.89|      133|  1.330e+03|         -|      133|     -|        no|        -|         -|   146 (~0%)|    141 (~0%)|    -|
+    |      o VITIS_LOOP_68_3                                  |     -|  7.30|      131|  1.310e+03|         5|        1|   128|       yes|        -|         -|           -|            -|    -|
+    |    o VITIS_LOOP_78_4                                    |     -|  7.30|      736|  7.360e+03|        46|        -|    16|        no|        -|         -|           -|            -|    -|
+    |     + expert_engine_1_Pipeline_VITIS_LOOP_82_5          |     -|  0.89|       37|    370.000|         -|       37|     -|        no|        -|         -|   144 (~0%)|    134 (~0%)|    -|
+    |      o VITIS_LOOP_82_5                                  |     -|  7.30|       35|    350.000|         5|        1|    32|       yes|        -|         -|           -|            -|    -|
+    |    o VITIS_LOOP_92_6                                    |     -|  7.30|      240|  2.400e+03|        30|        -|     8|        no|        -|         -|           -|            -|    -|
+    |     + expert_engine_1_Pipeline_VITIS_LOOP_96_7          |     -|  0.89|       21|    210.000|         -|       21|     -|        no|        -|         -|   143 (~0%)|    130 (~0%)|    -|
+    |      o VITIS_LOOP_96_7                                  |     -|  7.30|       19|    190.000|         5|        1|    16|       yes|        -|         -|           -|            -|    -|
+    |   o VITIS_LOOP_122_9                                    |     -|  7.30|    27700|  2.770e+05|      5540|        -|     5|        no|        -|         -|           -|            -|    -|
+    |    + expert_engine_1_Pipeline_VITIS_LOOP_173_16         |     -|  0.89|       13|    130.000|         -|       13|     -|        no|        -|         -|   142 (~0%)|    125 (~0%)|    -|
+    |     o VITIS_LOOP_173_16                                 |     -|  7.30|       11|    110.000|         5|        1|     8|       yes|        -|         -|           -|            -|    -|
+    |    o VITIS_LOOP_129_10                                  |     -|  7.30|     4544|  4.544e+04|       142|        -|    32|        no|        -|         -|           -|            -|    -|
+    |     + expert_engine_1_Pipeline_VITIS_LOOP_133_11        |     -|  0.89|      133|  1.330e+03|         -|      133|     -|        no|        -|         -|   146 (~0%)|    141 (~0%)|    -|
+    |      o VITIS_LOOP_133_11                                |     -|  7.30|      131|  1.310e+03|         5|        1|   128|       yes|        -|         -|           -|            -|    -|
+    |    o VITIS_LOOP_143_12                                  |     -|  7.30|      736|  7.360e+03|        46|        -|    16|        no|        -|         -|           -|            -|    -|
+    |     + expert_engine_1_Pipeline_VITIS_LOOP_147_13        |     -|  0.89|       37|    370.000|         -|       37|     -|        no|        -|         -|   144 (~0%)|    134 (~0%)|    -|
+    |      o VITIS_LOOP_147_13                                |     -|  7.30|       35|    350.000|         5|        1|    32|       yes|        -|         -|           -|            -|    -|
+    |    o VITIS_LOOP_157_14                                  |     -|  7.30|      240|  2.400e+03|        30|        -|     8|        no|        -|         -|           -|            -|    -|
+    |     + expert_engine_1_Pipeline_VITIS_LOOP_161_15        |     -|  0.89|       21|    210.000|         -|       21|     -|        no|        -|         -|   143 (~0%)|    130 (~0%)|    -|
+    |      o VITIS_LOOP_161_15                                |     -|  7.30|       19|    190.000|         5|        1|    16|       yes|        -|         -|           -|            -|    -|
+    | + graph_moe_Pipeline_VITIS_LOOP_437_4                   |     -|  0.48|       13|    130.000|         -|       13|     -|        no|        -|   7 (~0%)|   388 (~0%)|    879 (~0%)|    -|
+    |  o VITIS_LOOP_437_4                                     |     -|  7.30|       11|    110.000|         9|        1|     4|       yes|        -|         -|           -|            -|    -|
+    | + graph_moe_Pipeline_VITIS_LOOP_443_5                   |     -|  0.49|       11|    110.000|         -|       11|     -|        no|        -|         -|    83 (~0%)|     92 (~0%)|    -|
+    |  o VITIS_LOOP_443_5                                     |     -|  7.30|        9|     90.000|         7|        1|     4|       yes|        -|         -|           -|            -|    -|
+    | + graph_moe_Pipeline_VITIS_LOOP_515_6                   |     -|  0.71|       16|    160.000|         -|       16|     -|        no|        -|  13 (~0%)|  1053 (~0%)|    790 (~0%)|    -|
+    |  o VITIS_LOOP_515_6                                     |     -|  7.30|       14|    140.000|        11|        1|     5|       yes|        -|         -|           -|            -|    -|
+    +---------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----------+------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+
+| Interface     | Data Width | Address Width |
++---------------+------------+---------------+
+| s_axi_control | 32         | 4             |
++---------------+------------+---------------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AP_MEMORY
++----------------------+-----------+----------+
+| Port                 | Direction | Bitwidth |
++----------------------+-----------+----------+
+| b1_0_address0        | out       | 8        |
+| b1_0_q0              | in        | 32       |
+| b1_1_address0        | out       | 8        |
+| b1_1_q0              | in        | 32       |
+| b1_2_address0        | out       | 8        |
+| b1_2_q0              | in        | 32       |
+| b1_3_address0        | out       | 8        |
+| b1_3_q0              | in        | 32       |
+| b2_0_address0        | out       | 7        |
+| b2_0_q0              | in        | 32       |
+| b2_1_address0        | out       | 7        |
+| b2_1_q0              | in        | 32       |
+| b2_2_address0        | out       | 7        |
+| b2_2_q0              | in        | 32       |
+| b2_3_address0        | out       | 7        |
+| b2_3_q0              | in        | 32       |
+| b3_0_address0        | out       | 6        |
+| b3_0_q0              | in        | 32       |
+| b3_1_address0        | out       | 6        |
+| b3_1_q0              | in        | 32       |
+| b3_2_address0        | out       | 6        |
+| b3_2_q0              | in        | 32       |
+| b3_3_address0        | out       | 6        |
+| b3_3_q0              | in        | 32       |
+| b4_0_address0        | out       | 3        |
+| b4_0_q0              | in        | 32       |
+| b4_1_address0        | out       | 3        |
+| b4_1_q0              | in        | 32       |
+| b4_2_address0        | out       | 3        |
+| b4_2_q0              | in        | 32       |
+| b4_3_address0        | out       | 3        |
+| b4_3_q0              | in        | 32       |
+| gate_bias_address0   | out       | 2        |
+| gate_bias_q0         | in        | 32       |
+| gate_weight_address0 | out       | 9        |
+| gate_weight_q0       | in        | 32       |
+| gates_address0       | out       | 2        |
+| gates_address1       | out       | 2        |
+| gates_d0             | out       | 32       |
+| gates_q0             | in        | 32       |
+| gates_q1             | in        | 32       |
+| input_r_address0     | out       | 7        |
+| input_r_address1     | out       | 7        |
+| input_r_q0           | in        | 32       |
+| input_r_q1           | in        | 32       |
+| output_r_address0    | out       | 3        |
+| output_r_d0          | out       | 32       |
+| w1_0_address0        | out       | 15       |
+| w1_0_q0              | in        | 32       |
+| w1_1_address0        | out       | 15       |
+| w1_1_q0              | in        | 32       |
+| w1_2_address0        | out       | 15       |
+| w1_2_q0              | in        | 32       |
+| w1_3_address0        | out       | 15       |
+| w1_3_q0              | in        | 32       |
+| w2_0_address0        | out       | 12       |
+| w2_0_q0              | in        | 32       |
+| w2_1_address0        | out       | 12       |
+| w2_1_q0              | in        | 32       |
+| w2_2_address0        | out       | 12       |
+| w2_2_q0              | in        | 32       |
+| w2_3_address0        | out       | 12       |
+| w2_3_q0              | in        | 32       |
+| w3_0_address0        | out       | 10       |
+| w3_0_q0              | in        | 32       |
+| w3_1_address0        | out       | 10       |
+| w3_1_q0              | in        | 32       |
+| w3_2_address0        | out       | 10       |
+| w3_2_q0              | in        | 32       |
+| w3_3_address0        | out       | 10       |
+| w3_3_q0              | in        | 32       |
+| w4_0_address0        | out       | 6        |
+| w4_0_q0              | in        | 32       |
+| w4_1_address0        | out       | 6        |
+| w4_1_q0              | in        | 32       |
+| w4_2_address0        | out       | 6        |
+| w4_2_q0              | in        | 32       |
+| w4_3_address0        | out       | 6        |
+| w4_3_q0              | in        | 32       |
++----------------------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-------------+-----------+---------------+
+| Argument    | Direction | Datatype      |
++-------------+-----------+---------------+
+| input       | in        | float const * |
+| gate_weight | in        | float const * |
+| gate_bias   | in        | float const * |
+| w1_0        | in        | float const * |
+| b1_0        | in        | float const * |
+| w2_0        | in        | float const * |
+| b2_0        | in        | float const * |
+| w3_0        | in        | float const * |
+| b3_0        | in        | float const * |
+| w4_0        | in        | float const * |
+| b4_0        | in        | float const * |
+| w1_2        | in        | float const * |
+| b1_2        | in        | float const * |
+| w2_2        | in        | float const * |
+| b2_2        | in        | float const * |
+| w3_2        | in        | float const * |
+| b3_2        | in        | float const * |
+| w4_2        | in        | float const * |
+| b4_2        | in        | float const * |
+| w1_1        | in        | float const * |
+| b1_1        | in        | float const * |
+| w2_1        | in        | float const * |
+| b2_1        | in        | float const * |
+| w3_1        | in        | float const * |
+| b3_1        | in        | float const * |
+| w4_1        | in        | float const * |
+| b4_1        | in        | float const * |
+| w1_3        | in        | float const * |
+| b1_3        | in        | float const * |
+| w2_3        | in        | float const * |
+| b2_3        | in        | float const * |
+| w3_3        | in        | float const * |
+| b3_3        | in        | float const * |
+| w4_3        | in        | float const * |
+| b4_3        | in        | float const * |
+| output      | out       | float*        |
+| gates       | inout     | float*        |
++-------------+-----------+---------------+
+
+* SW-to-HW Mapping
++-------------+----------------------+---------+----------+
+| Argument    | HW Interface         | HW Type | HW Usage |
++-------------+----------------------+---------+----------+
+| input       | input_r_address0     | port    | offset   |
+| input       | input_r_ce0          | port    |          |
+| input       | input_r_q0           | port    |          |
+| input       | input_r_address1     | port    | offset   |
+| input       | input_r_ce1          | port    |          |
+| input       | input_r_q1           | port    |          |
+| gate_weight | gate_weight_address0 | port    | offset   |
+| gate_weight | gate_weight_ce0      | port    |          |
+| gate_weight | gate_weight_q0       | port    |          |
+| gate_bias   | gate_bias_address0   | port    | offset   |
+| gate_bias   | gate_bias_ce0        | port    |          |
+| gate_bias   | gate_bias_q0         | port    |          |
+| w1_0        | w1_0_address0        | port    | offset   |
+| w1_0        | w1_0_ce0             | port    |          |
+| w1_0        | w1_0_q0              | port    |          |
+| b1_0        | b1_0_address0        | port    | offset   |
+| b1_0        | b1_0_ce0             | port    |          |
+| b1_0        | b1_0_q0              | port    |          |
+| w2_0        | w2_0_address0        | port    | offset   |
+| w2_0        | w2_0_ce0             | port    |          |
+| w2_0        | w2_0_q0              | port    |          |
+| b2_0        | b2_0_address0        | port    | offset   |
+| b2_0        | b2_0_ce0             | port    |          |
+| b2_0        | b2_0_q0              | port    |          |
+| w3_0        | w3_0_address0        | port    | offset   |
+| w3_0        | w3_0_ce0             | port    |          |
+| w3_0        | w3_0_q0              | port    |          |
+| b3_0        | b3_0_address0        | port    | offset   |
+| b3_0        | b3_0_ce0             | port    |          |
+| b3_0        | b3_0_q0              | port    |          |
+| w4_0        | w4_0_address0        | port    | offset   |
+| w4_0        | w4_0_ce0             | port    |          |
+| w4_0        | w4_0_q0              | port    |          |
+| b4_0        | b4_0_address0        | port    | offset   |
+| b4_0        | b4_0_ce0             | port    |          |
+| b4_0        | b4_0_q0              | port    |          |
+| w1_2        | w1_2_address0        | port    | offset   |
+| w1_2        | w1_2_ce0             | port    |          |
+| w1_2        | w1_2_q0              | port    |          |
+| b1_2        | b1_2_address0        | port    | offset   |
+| b1_2        | b1_2_ce0             | port    |          |
+| b1_2        | b1_2_q0              | port    |          |
+| w2_2        | w2_2_address0        | port    | offset   |
+| w2_2        | w2_2_ce0             | port    |          |
+| w2_2        | w2_2_q0              | port    |          |
+| b2_2        | b2_2_address0        | port    | offset   |
+| b2_2        | b2_2_ce0             | port    |          |
+| b2_2        | b2_2_q0              | port    |          |
+| w3_2        | w3_2_address0        | port    | offset   |
+| w3_2        | w3_2_ce0             | port    |          |
+| w3_2        | w3_2_q0              | port    |          |
+| b3_2        | b3_2_address0        | port    | offset   |
+| b3_2        | b3_2_ce0             | port    |          |
+| b3_2        | b3_2_q0              | port    |          |
+| w4_2        | w4_2_address0        | port    | offset   |
+| w4_2        | w4_2_ce0             | port    |          |
+| w4_2        | w4_2_q0              | port    |          |
+| b4_2        | b4_2_address0        | port    | offset   |
+| b4_2        | b4_2_ce0             | port    |          |
+| b4_2        | b4_2_q0              | port    |          |
+| w1_1        | w1_1_address0        | port    | offset   |
+| w1_1        | w1_1_ce0             | port    |          |
+| w1_1        | w1_1_q0              | port    |          |
+| b1_1        | b1_1_address0        | port    | offset   |
+| b1_1        | b1_1_ce0             | port    |          |
+| b1_1        | b1_1_q0              | port    |          |
+| w2_1        | w2_1_address0        | port    | offset   |
+| w2_1        | w2_1_ce0             | port    |          |
+| w2_1        | w2_1_q0              | port    |          |
+| b2_1        | b2_1_address0        | port    | offset   |
+| b2_1        | b2_1_ce0             | port    |          |
+| b2_1        | b2_1_q0              | port    |          |
+| w3_1        | w3_1_address0        | port    | offset   |
+| w3_1        | w3_1_ce0             | port    |          |
+| w3_1        | w3_1_q0              | port    |          |
+| b3_1        | b3_1_address0        | port    | offset   |
+| b3_1        | b3_1_ce0             | port    |          |
+| b3_1        | b3_1_q0              | port    |          |
+| w4_1        | w4_1_address0        | port    | offset   |
+| w4_1        | w4_1_ce0             | port    |          |
+| w4_1        | w4_1_q0              | port    |          |
+| b4_1        | b4_1_address0        | port    | offset   |
+| b4_1        | b4_1_ce0             | port    |          |
+| b4_1        | b4_1_q0              | port    |          |
+| w1_3        | w1_3_address0        | port    | offset   |
+| w1_3        | w1_3_ce0             | port    |          |
+| w1_3        | w1_3_q0              | port    |          |
+| b1_3        | b1_3_address0        | port    | offset   |
+| b1_3        | b1_3_ce0             | port    |          |
+| b1_3        | b1_3_q0              | port    |          |
+| w2_3        | w2_3_address0        | port    | offset   |
+| w2_3        | w2_3_ce0             | port    |          |
+| w2_3        | w2_3_q0              | port    |          |
+| b2_3        | b2_3_address0        | port    | offset   |
+| b2_3        | b2_3_ce0             | port    |          |
+| b2_3        | b2_3_q0              | port    |          |
+| w3_3        | w3_3_address0        | port    | offset   |
+| w3_3        | w3_3_ce0             | port    |          |
+| w3_3        | w3_3_q0              | port    |          |
+| b3_3        | b3_3_address0        | port    | offset   |
+| b3_3        | b3_3_ce0             | port    |          |
+| b3_3        | b3_3_q0              | port    |          |
+| w4_3        | w4_3_address0        | port    | offset   |
+| w4_3        | w4_3_ce0             | port    |          |
+| w4_3        | w4_3_q0              | port    |          |
+| b4_3        | b4_3_address0        | port    | offset   |
+| b4_3        | b4_3_ce0             | port    |          |
+| b4_3        | b4_3_q0              | port    |          |
+| output      | output_r_address0    | port    | offset   |
+| output      | output_r_ce0         | port    |          |
+| output      | output_r_we0         | port    |          |
+| output      | output_r_d0          | port    |          |
+| gates       | gates_address0       | port    | offset   |
+| gates       | gates_ce0            | port    |          |
+| gates       | gates_we0            | port    |          |
+| gates       | gates_d0             | port    |          |
+| gates       | gates_q0             | port    |          |
+| gates       | gates_address1       | port    | offset   |
+| gates       | gates_ce1            | port    |          |
+| gates       | gates_q1             | port    |          |
++-------------+----------------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------------------------------+-----+--------+-------------+------+---------+---------+
+| Name                                                    | DSP | Pragma | Variable    | Op   | Impl    | Latency |
++---------------------------------------------------------+-----+--------+-------------+------+---------+---------+
+| + graph_moe                                             | 51  |        |             |      |         |         |
+|  + graph_moe_Pipeline_VITIS_LOOP_408_1_VITIS_LOOP_412_2 | 0   |        |             |      |         |         |
+|    add_ln408_1_fu_167_p2                                |     |        | add_ln408_1 | add  | fabric  | 0       |
+|    add_ln408_fu_179_p2                                  |     |        | add_ln408   | add  | fabric  | 0       |
+|    add_ln415_fu_234_p2                                  |     |        | add_ln415   | add  | fabric  | 0       |
+|    add_ln412_fu_245_p2                                  |     |        | add_ln412   | add  | fabric  | 0       |
+|  + graph_moe_Pipeline_VITIS_LOOP_428_3                  | 0   |        |             |      |         |         |
+|    add_ln428_fu_106_p2                                  |     |        | add_ln428   | add  | fabric  | 0       |
+|  + run_parallel_engines                                 | 24  |        |             |      |         |         |
+|   + expert_engine                                       | 12  |        |             |      |         |         |
+|     add_ln57_fu_612_p2                                  |     |        | add_ln57    | add  | fabric  | 0       |
+|     add_ln64_fu_657_p2                                  |     |        | add_ln64    | add  | fabric  | 0       |
+|     add_ln71_fu_667_p2                                  |     |        | add_ln71    | add  | fabric  | 0       |
+|     fexp_32ns_32ns_32_4_full_dsp_1_U83                  | 7   |        | tmp         | fexp | fulldsp | 3       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U81                  | 2   |        | sub_i       | fadd | fulldsp | 1       |
+|     add_ln78_fu_753_p2                                  |     |        | add_ln78    | add  | fabric  | 0       |
+|     add_ln85_fu_763_p2                                  |     |        | add_ln85    | add  | fabric  | 0       |
+|     fexp_32ns_32ns_32_4_full_dsp_1_U83                  | 7   |        | tmp_7       | fexp | fulldsp | 3       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U81                  | 2   |        | sub_i7      | fadd | fulldsp | 1       |
+|     add_ln92_fu_849_p2                                  |     |        | add_ln92    | add  | fabric  | 0       |
+|     add_ln99_fu_859_p2                                  |     |        | add_ln99    | add  | fabric  | 0       |
+|     fexp_32ns_32ns_32_4_full_dsp_1_U83                  | 7   |        | tmp_9       | fexp | fulldsp | 3       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U81                  | 2   |        | sub_i9      | fadd | fulldsp | 1       |
+|     add_ln122_fu_961_p2                                 |     |        | add_ln122   | add  | fabric  | 0       |
+|     add_ln129_fu_1001_p2                                |     |        | add_ln129   | add  | fabric  | 0       |
+|     add_ln136_fu_1011_p2                                |     |        | add_ln136   | add  | fabric  | 0       |
+|     fexp_32ns_32ns_32_4_full_dsp_1_U83                  | 7   |        | tmp_6       | fexp | fulldsp | 3       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U81                  | 2   |        | sub_i6      | fadd | fulldsp | 1       |
+|     add_ln143_fu_1097_p2                                |     |        | add_ln143   | add  | fabric  | 0       |
+|     add_ln150_fu_1107_p2                                |     |        | add_ln150   | add  | fabric  | 0       |
+|     fexp_32ns_32ns_32_4_full_dsp_1_U83                  | 7   |        | tmp_8       | fexp | fulldsp | 3       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U81                  | 2   |        | sub_i8      | fadd | fulldsp | 1       |
+|     add_ln157_fu_1193_p2                                |     |        | add_ln157   | add  | fabric  | 0       |
+|     add_ln164_fu_1203_p2                                |     |        | add_ln164   | add  | fabric  | 0       |
+|     fexp_32ns_32ns_32_4_full_dsp_1_U83                  | 7   |        | tmp_s       | fexp | fulldsp | 3       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U81                  | 2   |        | sub_i1      | fadd | fulldsp | 1       |
+|    + expert_engine_Pipeline_VITIS_LOOP_68_3             | 0   |        |             |      |         |         |
+|      add_ln68_fu_132_p2                                 |     |        | add_ln68    | add  | fabric  | 0       |
+|      add_ln71_fu_147_p2                                 |     |        | add_ln71    | add  | fabric  | 0       |
+|    + expert_engine_Pipeline_VITIS_LOOP_82_5             | 0   |        |             |      |         |         |
+|      add_ln82_fu_127_p2                                 |     |        | add_ln82    | add  | fabric  | 0       |
+|      add_ln85_fu_142_p2                                 |     |        | add_ln85    | add  | fabric  | 0       |
+|    + expert_engine_Pipeline_VITIS_LOOP_96_7             | 0   |        |             |      |         |         |
+|      add_ln96_fu_127_p2                                 |     |        | add_ln96    | add  | fabric  | 0       |
+|      add_ln99_fu_142_p2                                 |     |        | add_ln99    | add  | fabric  | 0       |
+|    + expert_engine_Pipeline_VITIS_LOOP_108_8            | 0   |        |             |      |         |         |
+|      add_ln108_fu_127_p2                                |     |        | add_ln108   | add  | fabric  | 0       |
+|      add_ln111_fu_142_p2                                |     |        | add_ln111   | add  | fabric  | 0       |
+|    + expert_engine_Pipeline_VITIS_LOOP_133_11           | 0   |        |             |      |         |         |
+|      add_ln133_fu_132_p2                                |     |        | add_ln133   | add  | fabric  | 0       |
+|      add_ln136_fu_147_p2                                |     |        | add_ln136   | add  | fabric  | 0       |
+|    + expert_engine_Pipeline_VITIS_LOOP_147_13           | 0   |        |             |      |         |         |
+|      add_ln147_fu_127_p2                                |     |        | add_ln147   | add  | fabric  | 0       |
+|      add_ln150_fu_142_p2                                |     |        | add_ln150   | add  | fabric  | 0       |
+|    + expert_engine_Pipeline_VITIS_LOOP_161_15           | 0   |        |             |      |         |         |
+|      add_ln161_fu_127_p2                                |     |        | add_ln161   | add  | fabric  | 0       |
+|      add_ln164_fu_142_p2                                |     |        | add_ln164   | add  | fabric  | 0       |
+|    + expert_engine_Pipeline_VITIS_LOOP_173_16           | 0   |        |             |      |         |         |
+|      add_ln173_fu_127_p2                                |     |        | add_ln173   | add  | fabric  | 0       |
+|      add_ln176_fu_142_p2                                |     |        | add_ln176   | add  | fabric  | 0       |
+|   + expert_engine_1                                     | 12  |        |             |      |         |         |
+|     add_ln57_fu_612_p2                                  |     |        | add_ln57    | add  | fabric  | 0       |
+|     add_ln64_fu_657_p2                                  |     |        | add_ln64    | add  | fabric  | 0       |
+|     add_ln71_fu_667_p2                                  |     |        | add_ln71    | add  | fabric  | 0       |
+|     fexp_32ns_32ns_32_4_full_dsp_1_U165                 | 7   |        | tmp         | fexp | fulldsp | 3       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U163                 | 2   |        | sub_i       | fadd | fulldsp | 1       |
+|     add_ln78_fu_753_p2                                  |     |        | add_ln78    | add  | fabric  | 0       |
+|     add_ln85_fu_763_p2                                  |     |        | add_ln85    | add  | fabric  | 0       |
+|     fexp_32ns_32ns_32_4_full_dsp_1_U165                 | 7   |        | tmp_2       | fexp | fulldsp | 3       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U163                 | 2   |        | sub_i2      | fadd | fulldsp | 1       |
+|     add_ln92_fu_849_p2                                  |     |        | add_ln92    | add  | fabric  | 0       |
+|     add_ln99_fu_859_p2                                  |     |        | add_ln99    | add  | fabric  | 0       |
+|     fexp_32ns_32ns_32_4_full_dsp_1_U165                 | 7   |        | tmp_4       | fexp | fulldsp | 3       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U163                 | 2   |        | sub_i4      | fadd | fulldsp | 1       |
+|     add_ln122_fu_961_p2                                 |     |        | add_ln122   | add  | fabric  | 0       |
+|     add_ln129_fu_1001_p2                                |     |        | add_ln129   | add  | fabric  | 0       |
+|     add_ln136_fu_1011_p2                                |     |        | add_ln136   | add  | fabric  | 0       |
+|     fexp_32ns_32ns_32_4_full_dsp_1_U165                 | 7   |        | tmp_1       | fexp | fulldsp | 3       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U163                 | 2   |        | sub_i1      | fadd | fulldsp | 1       |
+|     add_ln143_fu_1097_p2                                |     |        | add_ln143   | add  | fabric  | 0       |
+|     add_ln150_fu_1107_p2                                |     |        | add_ln150   | add  | fabric  | 0       |
+|     fexp_32ns_32ns_32_4_full_dsp_1_U165                 | 7   |        | tmp_3       | fexp | fulldsp | 3       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U163                 | 2   |        | sub_i3      | fadd | fulldsp | 1       |
+|     add_ln157_fu_1193_p2                                |     |        | add_ln157   | add  | fabric  | 0       |
+|     add_ln164_fu_1203_p2                                |     |        | add_ln164   | add  | fabric  | 0       |
+|     fexp_32ns_32ns_32_4_full_dsp_1_U165                 | 7   |        | tmp_5       | fexp | fulldsp | 3       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U163                 | 2   |        | sub_i5      | fadd | fulldsp | 1       |
+|    + expert_engine_1_Pipeline_VITIS_LOOP_68_3           | 0   |        |             |      |         |         |
+|      add_ln68_fu_136_p2                                 |     |        | add_ln68    | add  | fabric  | 0       |
+|      add_ln71_fu_151_p2                                 |     |        | add_ln71    | add  | fabric  | 0       |
+|    + expert_engine_1_Pipeline_VITIS_LOOP_82_5           | 0   |        |             |      |         |         |
+|      add_ln82_fu_127_p2                                 |     |        | add_ln82    | add  | fabric  | 0       |
+|      add_ln85_fu_142_p2                                 |     |        | add_ln85    | add  | fabric  | 0       |
+|    + expert_engine_1_Pipeline_VITIS_LOOP_96_7           | 0   |        |             |      |         |         |
+|      add_ln96_fu_127_p2                                 |     |        | add_ln96    | add  | fabric  | 0       |
+|      add_ln99_fu_142_p2                                 |     |        | add_ln99    | add  | fabric  | 0       |
+|    + expert_engine_1_Pipeline_VITIS_LOOP_108_8          | 0   |        |             |      |         |         |
+|      add_ln108_fu_127_p2                                |     |        | add_ln108   | add  | fabric  | 0       |
+|      add_ln111_fu_142_p2                                |     |        | add_ln111   | add  | fabric  | 0       |
+|    + expert_engine_1_Pipeline_VITIS_LOOP_133_11         | 0   |        |             |      |         |         |
+|      add_ln133_fu_136_p2                                |     |        | add_ln133   | add  | fabric  | 0       |
+|      add_ln136_fu_151_p2                                |     |        | add_ln136   | add  | fabric  | 0       |
+|    + expert_engine_1_Pipeline_VITIS_LOOP_147_13         | 0   |        |             |      |         |         |
+|      add_ln147_fu_127_p2                                |     |        | add_ln147   | add  | fabric  | 0       |
+|      add_ln150_fu_142_p2                                |     |        | add_ln150   | add  | fabric  | 0       |
+|    + expert_engine_1_Pipeline_VITIS_LOOP_161_15         | 0   |        |             |      |         |         |
+|      add_ln161_fu_127_p2                                |     |        | add_ln161   | add  | fabric  | 0       |
+|      add_ln164_fu_142_p2                                |     |        | add_ln164   | add  | fabric  | 0       |
+|    + expert_engine_1_Pipeline_VITIS_LOOP_173_16         | 0   |        |             |      |         |         |
+|      add_ln173_fu_127_p2                                |     |        | add_ln173   | add  | fabric  | 0       |
+|      add_ln176_fu_142_p2                                |     |        | add_ln176   | add  | fabric  | 0       |
+|  + graph_moe_Pipeline_VITIS_LOOP_437_4                  | 7   |        |             |      |         |         |
+|    add_ln437_fu_123_p2                                  |     |        | add_ln437   | add  | fabric  | 0       |
+|    fexp_32ns_32ns_32_4_full_dsp_1_U14                   | 7   |        | tmp         | fexp | fulldsp | 3       |
+|  + graph_moe_Pipeline_VITIS_LOOP_443_5                  | 0   |        |             |      |         |         |
+|    add_ln443_fu_93_p2                                   |     |        | add_ln443   | add  | fabric  | 0       |
+|    fdiv_32ns_32ns_32_6_no_dsp_1_U20                     |     |        | div         | fdiv | fabric  | 5       |
+|  + graph_moe_Pipeline_VITIS_LOOP_515_6                  | 13  |        |             |      |         |         |
+|    add_ln515_fu_196_p2                                  |     |        | add_ln515   | add  | fabric  | 0       |
+|    fmul_32ns_32ns_32_2_max_dsp_1_U228                   | 3   |        | mul2        | fmul | maxdsp  | 1       |
+|    fmul_32ns_32ns_32_2_max_dsp_1_U229                   | 3   |        | mul3        | fmul | maxdsp  | 1       |
+|    fadd_32ns_32ns_32_2_full_dsp_1_U225                  | 2   |        | sum_2       | fadd | fulldsp | 1       |
+|    fmul_32ns_32ns_32_2_max_dsp_1_U230                   | 3   |        | mul4        | fmul | maxdsp  | 1       |
+|    fadd_32ns_32ns_32_2_full_dsp_1_U226                  | 2   |        | sum_3       | fadd | fulldsp | 1       |
++---------------------------------------------------------+-----+--------+-------------+------+---------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-------------------------+--------------+-----------+------+------+--------+------------+------+---------+------------------+
+| Name                    | Usage        | Type      | BRAM | URAM | Pragma | Variable   | Impl | Latency | Bitwidth, Depth, |
+|                         |              |           |      |      |        |            |      |         | Banks            |
++-------------------------+--------------+-----------+------+------+--------+------------+------+---------+------------------+
+| + graph_moe             |              |           | 4    | 0    |        |            |      |         |                  |
+|   control_s_axi_U       | interface    | s_axilite |      |      |        |            |      |         |                  |
+|   logits_U              | ram_1p array |           |      |      |        | logits     | auto | 1       | 32, 4, 1         |
+|   exp_logits_U          | ram_1p array |           |      |      |        | exp_logits | auto | 1       | 32, 4, 1         |
+|   outA_0_U              | ram_1p array |           |      |      |        | outA_0     | auto | 1       | 32, 5, 1         |
+|   outA_1_U              | ram_1p array |           |      |      |        | outA_1     | auto | 1       | 32, 5, 1         |
+|   outB_0_U              | ram_1p array |           |      |      |        | outB_0     | auto | 1       | 32, 5, 1         |
+|   outB_1_U              | ram_1p array |           |      |      |        | outB_1     | auto | 1       | 32, 5, 1         |
+|  + run_parallel_engines |              |           | 4    | 0    |        |            |      |         |                  |
+|   + expert_engine       |              |           | 2    | 0    |        |            |      |         |                  |
+|     l1_U                | ram_1p array |           | 1    |      |        | l1         | auto | 1       | 32, 32, 1        |
+|     l2_U                | ram_1p array |           |      |      |        | l2         | auto | 1       | 32, 16, 1        |
+|     l3_U                | ram_1p array |           |      |      |        | l3         | auto | 1       | 32, 8, 1         |
+|     l1_2_U              | ram_1p array |           | 1    |      |        | l1_2       | auto | 1       | 32, 32, 1        |
+|     l2_2_U              | ram_1p array |           |      |      |        | l2_2       | auto | 1       | 32, 16, 1        |
+|     l3_2_U              | ram_1p array |           |      |      |        | l3_2       | auto | 1       | 32, 8, 1         |
+|   + expert_engine_1     |              |           | 2    | 0    |        |            |      |         |                  |
+|     l1_U                | ram_1p array |           | 1    |      |        | l1         | auto | 1       | 32, 32, 1        |
+|     l2_U                | ram_1p array |           |      |      |        | l2         | auto | 1       | 32, 16, 1        |
+|     l3_U                | ram_1p array |           |      |      |        | l3         | auto | 1       | 32, 8, 1         |
+|     l1_1_U              | ram_1p array |           | 1    |      |        | l1_1       | auto | 1       | 32, 32, 1        |
+|     l2_1_U              | ram_1p array |           |      |      |        | l2_1       | auto | 1       | 32, 16, 1        |
+|     l3_1_U              | ram_1p array |           |      |      |        | l3_1       | auto | 1       | 32, 8, 1         |
++-------------------------+--------------+-----------+------+------+--------+------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+---------------------------------+-------------------------------------------+
+| Type      | Options                         | Location                                  |
++-----------+---------------------------------+-------------------------------------------+
+| inline    |                                 | src/moe.cpp:7 in elu                      |
+| inline    | off                             | src/moe.cpp:50 in expert_engine           |
+| pipeline  | II=1                            | src/moe.cpp:70 in expert_engine           |
+| pipeline  | II=1                            | src/moe.cpp:84 in expert_engine           |
+| pipeline  | II=1                            | src/moe.cpp:98 in expert_engine           |
+| pipeline  | II=1                            | src/moe.cpp:110 in expert_engine          |
+| pipeline  | II=1                            | src/moe.cpp:135 in expert_engine          |
+| pipeline  | II=1                            | src/moe.cpp:149 in expert_engine          |
+| pipeline  | II=1                            | src/moe.cpp:163 in expert_engine          |
+| pipeline  | II=1                            | src/moe.cpp:175 in expert_engine          |
+| dataflow  |                                 | src/moe.cpp:246 in run_parallel_engines   |
+| interface | mode=ap_memory port=input       | src/moe.cpp:353 in graph_moe, input       |
+| interface | mode=ap_memory port=gate_weight | src/moe.cpp:355 in graph_moe, gate_weight |
+| interface | mode=ap_memory port=gate_bias   | src/moe.cpp:356 in graph_moe, gate_bias   |
+| interface | mode=ap_memory port=w1_0        | src/moe.cpp:358 in graph_moe, w1_0        |
+| interface | mode=ap_memory port=b1_0        | src/moe.cpp:359 in graph_moe, b1_0        |
+| interface | mode=ap_memory port=w2_0        | src/moe.cpp:360 in graph_moe, w2_0        |
+| interface | mode=ap_memory port=b2_0        | src/moe.cpp:361 in graph_moe, b2_0        |
+| interface | mode=ap_memory port=w3_0        | src/moe.cpp:362 in graph_moe, w3_0        |
+| interface | mode=ap_memory port=b3_0        | src/moe.cpp:363 in graph_moe, b3_0        |
+| interface | mode=ap_memory port=w4_0        | src/moe.cpp:364 in graph_moe, w4_0        |
+| interface | mode=ap_memory port=b4_0        | src/moe.cpp:365 in graph_moe, b4_0        |
+| interface | mode=ap_memory port=w1_2        | src/moe.cpp:367 in graph_moe, w1_2        |
+| interface | mode=ap_memory port=b1_2        | src/moe.cpp:368 in graph_moe, b1_2        |
+| interface | mode=ap_memory port=w2_2        | src/moe.cpp:369 in graph_moe, w2_2        |
+| interface | mode=ap_memory port=b2_2        | src/moe.cpp:370 in graph_moe, b2_2        |
+| interface | mode=ap_memory port=w3_2        | src/moe.cpp:371 in graph_moe, w3_2        |
+| interface | mode=ap_memory port=b3_2        | src/moe.cpp:372 in graph_moe, b3_2        |
+| interface | mode=ap_memory port=w4_2        | src/moe.cpp:373 in graph_moe, w4_2        |
+| interface | mode=ap_memory port=b4_2        | src/moe.cpp:374 in graph_moe, b4_2        |
+| interface | mode=ap_memory port=w1_1        | src/moe.cpp:376 in graph_moe, w1_1        |
+| interface | mode=ap_memory port=b1_1        | src/moe.cpp:377 in graph_moe, b1_1        |
+| interface | mode=ap_memory port=w2_1        | src/moe.cpp:378 in graph_moe, w2_1        |
+| interface | mode=ap_memory port=b2_1        | src/moe.cpp:379 in graph_moe, b2_1        |
+| interface | mode=ap_memory port=w3_1        | src/moe.cpp:380 in graph_moe, w3_1        |
+| interface | mode=ap_memory port=b3_1        | src/moe.cpp:381 in graph_moe, b3_1        |
+| interface | mode=ap_memory port=w4_1        | src/moe.cpp:382 in graph_moe, w4_1        |
+| interface | mode=ap_memory port=b4_1        | src/moe.cpp:383 in graph_moe, b4_1        |
+| interface | mode=ap_memory port=w1_3        | src/moe.cpp:385 in graph_moe, w1_3        |
+| interface | mode=ap_memory port=b1_3        | src/moe.cpp:386 in graph_moe, b1_3        |
+| interface | mode=ap_memory port=w2_3        | src/moe.cpp:387 in graph_moe, w2_3        |
+| interface | mode=ap_memory port=b2_3        | src/moe.cpp:388 in graph_moe, b2_3        |
+| interface | mode=ap_memory port=w3_3        | src/moe.cpp:389 in graph_moe, w3_3        |
+| interface | mode=ap_memory port=b3_3        | src/moe.cpp:390 in graph_moe, b3_3        |
+| interface | mode=ap_memory port=w4_3        | src/moe.cpp:391 in graph_moe, w4_3        |
+| interface | mode=ap_memory port=b4_3        | src/moe.cpp:392 in graph_moe, b4_3        |
+| interface | mode=ap_memory port=output      | src/moe.cpp:394 in graph_moe, output      |
+| interface | mode=ap_memory port=gates       | src/moe.cpp:395 in graph_moe, gates       |
+| interface | mode=s_axilite port=return      | src/moe.cpp:397 in graph_moe, return      |
+| pipeline  | II=1                            | src/moe.cpp:414 in graph_moe              |
+| pipeline  | II=1                            | src/moe.cpp:517 in graph_moe              |
++-----------+---------------------------------+-------------------------------------------+
+
+

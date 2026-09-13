@@ -1,0 +1,43 @@
+{
+  "0": {
+    "basicblocks": 33,
+    "calls": "1",
+    "file": "moe.cpp",
+    "fileloc": 1055,
+    "instructions": 1135,
+    "loads": {
+      "G": 2,
+      "L": 4,
+      "T": 5
+    },
+    "name": "output_moe",
+    "stores": {
+      "T": 13
+    },
+    "total_instructions": 9636
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2",
+    "file": "moe.cpp",
+    "fileloc": 901,
+    "instructions": 41,
+    "name": "expert_engine",
+    "total_instructions": 8501
+  },
+  "2": {
+    "basicblocks": 67,
+    "calls": "",
+    "file": "moe.cpp",
+    "fileloc": 692,
+    "instructions": 423,
+    "loads": {
+      "L": 54
+    },
+    "name": "generic_mlp_head",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 423
+  }
+}

@@ -1,0 +1,179 @@
+
+
+================================================================
+== Vitis HLS Report for 'run_parallel_engines'
+================================================================
+* Date:           Sun Sep 13 11:40:33 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        HLS_OutputMoE_Run8
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p_CIV-figd2104-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.028 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+----------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
+    +---------+---------+----------+----------+-------+-------+----------+
+    |    47041|    47041|  0.470 ms|  0.470 ms|  47042|  47042|  dataflow|
+    +---------+---------+----------+----------+-------+-------+----------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------+-----------------+---------+---------+----------+----------+-------+-------+---------+
+        |                    |                 |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+        |      Instance      |      Module     |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+        +--------------------+-----------------+---------+---------+----------+----------+-------+-------+---------+
+        |expert_engine_A_U0  |expert_engine_A  |    47041|    47041|  0.470 ms|  0.470 ms|  47041|  47041|       no|
+        |expert_engine_B_U0  |expert_engine_B  |    47041|    47041|  0.470 ms|  0.470 ms|  47041|  47041|       no|
+        +--------------------+-----------------+---------+---------+----------+----------+-------+-------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       16|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |      180|    338|   170708|   116354|     0|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        -|       18|     -|
+|Register             |        -|      -|        2|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |      180|    338|   170710|   116388|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |       13|     11|       19|       26|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        3|      2|        4|        6|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +--------------------+-----------------+---------+-----+-------+-------+-----+
+    |      Instance      |      Module     | BRAM_18K| DSP |   FF  |  LUT  | URAM|
+    +--------------------+-----------------+---------+-----+-------+-------+-----+
+    |expert_engine_A_U0  |expert_engine_A  |       90|  169|  85354|  58177|    0|
+    |expert_engine_B_U0  |expert_engine_B  |       90|  169|  85354|  58177|    0|
+    +--------------------+-----------------+---------+-----+-------+-------+-----+
+    |Total               |                 |      180|  338| 170708| 116354|    0|
+    +--------------------+-----------------+---------+-----+-------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------+----------+----+---+----+------------+------------+
+    |            Variable Name            | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------+----------+----+---+----+------------+------------+
+    |ap_idle                              |       and|   0|  0|   2|           1|           1|
+    |ap_sync_continue                     |       and|   0|  0|   2|           1|           1|
+    |ap_sync_done                         |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                        |       and|   0|  0|   2|           1|           1|
+    |expert_engine_A_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |expert_engine_B_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |ap_sync_expert_engine_A_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_expert_engine_B_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    +-------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                |          |   0|  0|  16|           8|           8|
+    +-------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |                   Name                  | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_expert_engine_A_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_expert_engine_B_U0_ap_ready  |   9|          2|    1|          2|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |Total                                    |  18|          4|    2|          4|
+    +-----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------+---+----+-----+-----------+
+    |                   Name                  | FF| LUT| Bits| Const Bits|
+    +-----------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_expert_engine_A_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_expert_engine_B_U0_ap_ready  |  1|   0|    1|          0|
+    +-----------------------------------------+---+----+-----+-----------+
+    |Total                                    |  2|   0|    2|          0|
+    +-----------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+----------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++-------------------+-----+-----+------------+----------------------+--------------+
+|input_r_address0   |  out|    7|   ap_memory|               input_r|         array|
+|input_r_ce0        |  out|    1|   ap_memory|               input_r|         array|
+|input_r_d0         |  out|   32|   ap_memory|               input_r|         array|
+|input_r_q0         |   in|   32|   ap_memory|               input_r|         array|
+|input_r_we0        |  out|    1|   ap_memory|               input_r|         array|
+|input_r_address1   |  out|    7|   ap_memory|               input_r|         array|
+|input_r_ce1        |  out|    1|   ap_memory|               input_r|         array|
+|input_r_d1         |  out|   32|   ap_memory|               input_r|         array|
+|input_r_q1         |   in|   32|   ap_memory|               input_r|         array|
+|input_r_we1        |  out|    1|   ap_memory|               input_r|         array|
+|output_A_address0  |  out|    4|   ap_memory|              output_A|         array|
+|output_A_ce0       |  out|    1|   ap_memory|              output_A|         array|
+|output_A_d0        |  out|   32|   ap_memory|              output_A|         array|
+|output_A_q0        |   in|   32|   ap_memory|              output_A|         array|
+|output_A_we0       |  out|    1|   ap_memory|              output_A|         array|
+|output_A_address1  |  out|    4|   ap_memory|              output_A|         array|
+|output_A_ce1       |  out|    1|   ap_memory|              output_A|         array|
+|output_A_d1        |  out|   32|   ap_memory|              output_A|         array|
+|output_A_q1        |   in|   32|   ap_memory|              output_A|         array|
+|output_A_we1       |  out|    1|   ap_memory|              output_A|         array|
+|output_B_address0  |  out|    4|   ap_memory|              output_B|         array|
+|output_B_ce0       |  out|    1|   ap_memory|              output_B|         array|
+|output_B_d0        |  out|   32|   ap_memory|              output_B|         array|
+|output_B_q0        |   in|   32|   ap_memory|              output_B|         array|
+|output_B_we0       |  out|    1|   ap_memory|              output_B|         array|
+|output_B_address1  |  out|    4|   ap_memory|              output_B|         array|
+|output_B_ce1       |  out|    1|   ap_memory|              output_B|         array|
+|output_B_d1        |  out|   32|   ap_memory|              output_B|         array|
+|output_B_q1        |   in|   32|   ap_memory|              output_B|         array|
+|output_B_we1       |  out|    1|   ap_memory|              output_B|         array|
+|ap_clk             |   in|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
+|ap_continue        |   in|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
++-------------------+-----+-----+------------+----------------------+--------------+
+

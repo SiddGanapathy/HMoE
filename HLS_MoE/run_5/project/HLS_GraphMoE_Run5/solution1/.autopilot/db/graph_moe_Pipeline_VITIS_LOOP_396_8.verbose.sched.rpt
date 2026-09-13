@@ -1,0 +1,248 @@
+
+
+================================================================
+== Vitis HLS Report for 'graph_moe_Pipeline_VITIS_LOOP_396_8'
+================================================================
+* Date:           Sat Sep 12 19:34:00 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        HLS_GraphMoE_Run5
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p_CIV-figd2104-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.589 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       16|       16|  0.160 us|  0.160 us|   16|   16|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_396_8  |       14|       14|        11|          1|          1|     5|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 11
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 11, States = { 1 2 3 4 5 6 7 8 9 10 11 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.24>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%obj = alloca i32 1" [src/moe.cpp:396]   --->   Operation 14 'alloca' 'obj' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %output_r, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%tmp = read i32 @_ssdm_op_Read.ap_auto.float, i32 %empty"   --->   Operation 16 'read' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_1 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %empty_33"   --->   Operation 17 'read' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_2 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %empty_32"   --->   Operation 18 'read' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%tmp_3 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %empty_31"   --->   Operation 19 'read' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.36ns)   --->   "%store_ln396 = store i3 0, i3 %obj" [src/moe.cpp:396]   --->   Operation 20 'store' 'store_ln396' <Predicate = true> <Delay = 0.36>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc246"   --->   Operation 21 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%obj_1 = load i3 %obj" [src/moe.cpp:396]   --->   Operation 22 'load' 'obj_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.52ns)   --->   "%icmp_ln396 = icmp_eq  i3 %obj_1, i3 5" [src/moe.cpp:396]   --->   Operation 23 'icmp' 'icmp_ln396' <Predicate = true> <Delay = 0.52> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.52ns)   --->   "%add_ln396 = add i3 %obj_1, i3 1" [src/moe.cpp:396]   --->   Operation 24 'add' 'add_ln396' <Predicate = true> <Delay = 0.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%br_ln396 = br i1 %icmp_ln396, void %for.inc246.split, void %for.end248.exitStub" [src/moe.cpp:396]   --->   Operation 25 'br' 'br_ln396' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%zext_ln396 = zext i3 %obj_1" [src/moe.cpp:396]   --->   Operation 26 'zext' 'zext_ln396' <Predicate = (!icmp_ln396)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%expert_output_addr = getelementptr i32 %expert_output, i64 0, i64 %zext_ln396" [src/moe.cpp:400]   --->   Operation 27 'getelementptr' 'expert_output_addr' <Predicate = (!icmp_ln396)> <Delay = 0.00>
+ST_1 : Operation 28 [2/2] (0.54ns)   --->   "%expert_output_load = load i3 %expert_output_addr" [src/moe.cpp:400]   --->   Operation 28 'load' 'expert_output_load' <Predicate = (!icmp_ln396)> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_1 : Operation 29 [1/1] (0.36ns)   --->   "%store_ln396 = store i3 %add_ln396, i3 %obj" [src/moe.cpp:396]   --->   Operation 29 'store' 'store_ln396' <Predicate = (!icmp_ln396)> <Delay = 0.36>
+
+State 2 <SV = 1> <Delay = 4.42>
+ST_2 : Operation 30 [1/2] (0.54ns)   --->   "%expert_output_load = load i3 %expert_output_addr" [src/moe.cpp:400]   --->   Operation 30 'load' 'expert_output_load' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_2 : Operation 31 [2/2] (3.88ns)   --->   "%mul1 = fmul i32 %tmp_3, i32 %expert_output_load" [src/moe.cpp:400]   --->   Operation 31 'fmul' 'mul1' <Predicate = true> <Delay = 3.88> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 3.88> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 3.88>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%expert_output_1_addr = getelementptr i32 %expert_output_1, i64 0, i64 %zext_ln396" [src/moe.cpp:400]   --->   Operation 32 'getelementptr' 'expert_output_1_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 33 [1/2] (3.88ns)   --->   "%mul1 = fmul i32 %tmp_3, i32 %expert_output_load" [src/moe.cpp:400]   --->   Operation 33 'fmul' 'mul1' <Predicate = true> <Delay = 3.88> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 3.88> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 34 [2/2] (0.54ns)   --->   "%expert_output_1_load = load i3 %expert_output_1_addr" [src/moe.cpp:401]   --->   Operation 34 'load' 'expert_output_1_load' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 4 <SV = 3> <Delay = 6.04>
+ST_4 : Operation 35 [2/2] (6.04ns)   --->   "%sum = fadd i32 %mul1, i32 0" [src/moe.cpp:400]   --->   Operation 35 'fadd' 'sum' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 36 [1/2] (0.54ns)   --->   "%expert_output_1_load = load i3 %expert_output_1_addr" [src/moe.cpp:401]   --->   Operation 36 'load' 'expert_output_1_load' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_4 : Operation 37 [2/2] (3.88ns)   --->   "%mul2 = fmul i32 %tmp_2, i32 %expert_output_1_load" [src/moe.cpp:401]   --->   Operation 37 'fmul' 'mul2' <Predicate = true> <Delay = 3.88> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 3.88> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.04>
+ST_5 : Operation 38 [1/1] (0.00ns)   --->   "%expert_output_2_addr = getelementptr i32 %expert_output_2, i64 0, i64 %zext_ln396" [src/moe.cpp:400]   --->   Operation 38 'getelementptr' 'expert_output_2_addr' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 39 [1/2] (6.04ns)   --->   "%sum = fadd i32 %mul1, i32 0" [src/moe.cpp:400]   --->   Operation 39 'fadd' 'sum' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 40 [1/2] (3.88ns)   --->   "%mul2 = fmul i32 %tmp_2, i32 %expert_output_1_load" [src/moe.cpp:401]   --->   Operation 40 'fmul' 'mul2' <Predicate = true> <Delay = 3.88> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 3.88> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 41 [2/2] (0.54ns)   --->   "%expert_output_2_load = load i3 %expert_output_2_addr" [src/moe.cpp:402]   --->   Operation 41 'load' 'expert_output_2_load' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 6 <SV = 5> <Delay = 6.04>
+ST_6 : Operation 42 [2/2] (6.04ns)   --->   "%sum_1 = fadd i32 %sum, i32 %mul2" [src/moe.cpp:401]   --->   Operation 42 'fadd' 'sum_1' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 43 [1/2] (0.54ns)   --->   "%expert_output_2_load = load i3 %expert_output_2_addr" [src/moe.cpp:402]   --->   Operation 43 'load' 'expert_output_2_load' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_6 : Operation 44 [2/2] (3.88ns)   --->   "%mul3 = fmul i32 %tmp_1, i32 %expert_output_2_load" [src/moe.cpp:402]   --->   Operation 44 'fmul' 'mul3' <Predicate = true> <Delay = 3.88> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 3.88> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.04>
+ST_7 : Operation 45 [1/1] (0.00ns)   --->   "%expert_output_3_addr = getelementptr i32 %expert_output_3, i64 0, i64 %zext_ln396" [src/moe.cpp:400]   --->   Operation 45 'getelementptr' 'expert_output_3_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 46 [1/2] (6.04ns)   --->   "%sum_1 = fadd i32 %sum, i32 %mul2" [src/moe.cpp:401]   --->   Operation 46 'fadd' 'sum_1' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 47 [1/2] (3.88ns)   --->   "%mul3 = fmul i32 %tmp_1, i32 %expert_output_2_load" [src/moe.cpp:402]   --->   Operation 47 'fmul' 'mul3' <Predicate = true> <Delay = 3.88> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 3.88> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 48 [2/2] (0.54ns)   --->   "%expert_output_3_load = load i3 %expert_output_3_addr" [src/moe.cpp:403]   --->   Operation 48 'load' 'expert_output_3_load' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 8 <SV = 7> <Delay = 6.04>
+ST_8 : Operation 49 [2/2] (6.04ns)   --->   "%sum_2 = fadd i32 %sum_1, i32 %mul3" [src/moe.cpp:402]   --->   Operation 49 'fadd' 'sum_2' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 50 [1/2] (0.54ns)   --->   "%expert_output_3_load = load i3 %expert_output_3_addr" [src/moe.cpp:403]   --->   Operation 50 'load' 'expert_output_3_load' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_8 : Operation 51 [2/2] (3.88ns)   --->   "%mul4 = fmul i32 %tmp, i32 %expert_output_3_load" [src/moe.cpp:403]   --->   Operation 51 'fmul' 'mul4' <Predicate = true> <Delay = 3.88> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 3.88> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.04>
+ST_9 : Operation 52 [1/2] (6.04ns)   --->   "%sum_2 = fadd i32 %sum_1, i32 %mul3" [src/moe.cpp:402]   --->   Operation 52 'fadd' 'sum_2' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 53 [1/2] (3.88ns)   --->   "%mul4 = fmul i32 %tmp, i32 %expert_output_3_load" [src/moe.cpp:403]   --->   Operation 53 'fmul' 'mul4' <Predicate = true> <Delay = 3.88> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 3.88> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 6.04>
+ST_10 : Operation 54 [2/2] (6.04ns)   --->   "%sum_3 = fadd i32 %sum_2, i32 %mul4" [src/moe.cpp:403]   --->   Operation 54 'fadd' 'sum_3' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 63 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 63 'ret' 'ret_ln0' <Predicate = (icmp_ln396)> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 6.58>
+ST_11 : Operation 55 [1/1] (0.00ns)   --->   "%specpipeline_ln396 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [src/moe.cpp:396]   --->   Operation 55 'specpipeline' 'specpipeline_ln396' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 56 [1/1] (0.00ns)   --->   "%speclooptripcount_ln396 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 5, i64 5, i64 5" [src/moe.cpp:396]   --->   Operation 56 'speclooptripcount' 'speclooptripcount_ln396' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 57 [1/1] (0.00ns)   --->   "%specloopname_ln396 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [src/moe.cpp:396]   --->   Operation 57 'specloopname' 'specloopname_ln396' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 58 [1/2] (6.04ns)   --->   "%sum_3 = fadd i32 %sum_2, i32 %mul4" [src/moe.cpp:403]   --->   Operation 58 'fadd' 'sum_3' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 59 [1/1] (0.00ns)   --->   "%bitcast_ln405 = bitcast i32 %sum_3" [src/moe.cpp:405]   --->   Operation 59 'bitcast' 'bitcast_ln405' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 60 [1/1] (0.00ns)   --->   "%output_r_addr = getelementptr i32 %output_r, i64 0, i64 %zext_ln396" [src/moe.cpp:405]   --->   Operation 60 'getelementptr' 'output_r_addr' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 61 [1/1] (0.54ns)   --->   "%store_ln405 = store i32 %bitcast_ln405, i3 %output_r_addr" [src/moe.cpp:405]   --->   Operation 61 'store' 'store_ln405' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_11 : Operation 62 [1/1] (0.00ns)   --->   "%br_ln396 = br void %for.inc246" [src/moe.cpp:396]   --->   Operation 62 'br' 'br_ln396' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.248ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln396', src/moe.cpp:396) of constant 0 on local variable 'obj', src/moe.cpp:396 [16]  (0.362 ns)
+	'load' operation 3 bit ('obj', src/moe.cpp:396) on local variable 'obj', src/moe.cpp:396 [19]  (0.000 ns)
+	'add' operation 3 bit ('add_ln396', src/moe.cpp:396) [21]  (0.524 ns)
+	'store' operation 0 bit ('store_ln396', src/moe.cpp:396) of variable 'add_ln396', src/moe.cpp:396 on local variable 'obj', src/moe.cpp:396 [47]  (0.362 ns)
+
+ <State 2>: 4.423ns
+The critical path consists of the following:
+	'load' operation 32 bit ('expert_output_load', src/moe.cpp:400) on array 'expert_output' [32]  (0.542 ns)
+	'fmul' operation 32 bit ('mul1', src/moe.cpp:400) [33]  (3.881 ns)
+
+ <State 3>: 3.881ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul1', src/moe.cpp:400) [33]  (3.881 ns)
+
+ <State 4>: 6.047ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('sum', src/moe.cpp:400) [34]  (6.047 ns)
+
+ <State 5>: 6.047ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('sum', src/moe.cpp:400) [34]  (6.047 ns)
+
+ <State 6>: 6.047ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('sum', src/moe.cpp:401) [37]  (6.047 ns)
+
+ <State 7>: 6.047ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('sum', src/moe.cpp:401) [37]  (6.047 ns)
+
+ <State 8>: 6.047ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('sum', src/moe.cpp:402) [40]  (6.047 ns)
+
+ <State 9>: 6.047ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('sum', src/moe.cpp:402) [40]  (6.047 ns)
+
+ <State 10>: 6.047ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('sum', src/moe.cpp:403) [43]  (6.047 ns)
+
+ <State 11>: 6.589ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('sum', src/moe.cpp:403) [43]  (6.047 ns)
+	'store' operation 0 bit ('store_ln405', src/moe.cpp:405) of variable 'bitcast_ln405', src/moe.cpp:405 on array 'output_r' [46]  (0.542 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

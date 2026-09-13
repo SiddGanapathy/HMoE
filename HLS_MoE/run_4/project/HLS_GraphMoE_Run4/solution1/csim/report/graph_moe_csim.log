@@ -1,0 +1,23 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../tb/moe_tb.cpp in debug mode
+   Compiling ../../../../../src/moe.cpp in debug mode
+   Generating csim.exe
+Gates:
+gate[0] = 0.231834
+gate[1] = 0.243545
+gate[2] = 0.255848
+gate[3] = 0.268772
+
+Gate sum = 1
+
+Outputs:
+output[0] = 0.0256239
+output[1] = 0.0256239
+output[2] = 0.0256239
+output[3] = 0.0256239
+output[4] = 0.0256239
+
+PASS
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,80 @@
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6742:5: warning: Added loop label VITIS_LOOP_61_1:   [xilinx-label-all-loops]
+    for (int e = 0; e < 4; e++)
+    ^~~
+    VITIS_LOOP_61_1: 
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6742:5: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6746:9: warning: Added loop label VITIS_LOOP_65_2:   [xilinx-label-all-loops]
+        for (int i = 0; i < 128; i++)
+        ^~~
+        VITIS_LOOP_65_2: 
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6746:9: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6763:5: warning: Added loop label VITIS_LOOP_82_3:   [xilinx-label-all-loops]
+    for (int e = 1; e < 4; e++)
+    ^~~
+    VITIS_LOOP_82_3: 
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6763:5: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6774:5: warning: Added loop label VITIS_LOOP_93_4:   [xilinx-label-all-loops]
+    for (int e = 0; e < 4; e++)
+    ^~~
+    VITIS_LOOP_93_4: 
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6774:5: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6783:5: warning: Added loop label VITIS_LOOP_102_5:   [xilinx-label-all-loops]
+    for (int e = 0; e < 4; e++)
+    ^~~
+    VITIS_LOOP_102_5: 
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6783:5: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6802:2: warning: Added loop label VITIS_LOOP_201_6:   [xilinx-label-all-loops]
+ for (int e = 0; e < 4; e++)
+ ^~~
+ VITIS_LOOP_201_6: 
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6802:2: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6811:2: warning: Added loop label VITIS_LOOP_210_7:   [xilinx-label-all-loops]
+ for (int obj = 0; obj < 5; obj++)
+ ^~~
+ VITIS_LOOP_210_7: 
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6811:2: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6814:13: warning: Added loop label VITIS_LOOP_220_8:   [xilinx-label-all-loops]
+            for (int i = 0; i < 32; i++)
+            ^~~
+            VITIS_LOOP_220_8: 
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6814:13: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6820:17: warning: Added loop label VITIS_LOOP_226_9:   [xilinx-label-all-loops]
+                for (int j = 0; j < 128; j++)
+                ^~~
+                VITIS_LOOP_226_9: 
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6820:17: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6828:13: warning: Added loop label VITIS_LOOP_241_10:   [xilinx-label-all-loops]
+            for (int i = 0; i < 16; i++)
+            ^~~
+            VITIS_LOOP_241_10: 
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6828:13: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6834:17: warning: Added loop label VITIS_LOOP_247_11:   [xilinx-label-all-loops]
+                for (int j = 0; j < 32; j++)
+                ^~~
+                VITIS_LOOP_247_11: 
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6834:17: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6842:13: warning: Added loop label VITIS_LOOP_262_12:   [xilinx-label-all-loops]
+            for (int i = 0; i < 8; i++)
+            ^~~
+            VITIS_LOOP_262_12: 
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6842:13: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6848:17: warning: Added loop label VITIS_LOOP_268_13:   [xilinx-label-all-loops]
+                for (int j = 0; j < 16; j++)
+                ^~~
+                VITIS_LOOP_268_13: 
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6848:17: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6858:13: warning: Added loop label VITIS_LOOP_287_14:   [xilinx-label-all-loops]
+            for (int j = 0; j < 8; j++)
+            ^~~
+            VITIS_LOOP_287_14: 
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6858:13: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6869:5: warning: Added loop label VITIS_LOOP_312_15:   [xilinx-label-all-loops]
+    for (int obj = 0; obj < 5; obj++)
+    ^~~
+    VITIS_LOOP_312_15: 
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6869:5: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6875:9: warning: Added loop label VITIS_LOOP_318_16:   [xilinx-label-all-loops]
+        for (int e = 0; e < 4; e++)
+        ^~~
+        VITIS_LOOP_318_16: 
+/home/simics/HMoE/HLS_HMoE/run_3/project/HLS_GraphMoE_Run3/solution1/.autopilot/db/moe.pp.0.cpp:6875:9: note: FIX-IT applied suggested code changes

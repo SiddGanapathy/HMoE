@@ -1,0 +1,15 @@
+<pragmas>
+<pragma file="src/moe.cpp" line="963" pragmaType="inline" parentfunction="expert_engine_B" off="1" region="0" recursive="0"/>
+<pragma file="src/moe.cpp" line="714" pragmaType="array_partition" parentfunction="generic_mlp_head" dim="1" factor="0" mode="complete" dynamic="0" variable="l1"/>
+<pragma file="src/moe.cpp" line="715" pragmaType="array_partition" parentfunction="generic_mlp_head" dim="1" factor="0" mode="complete" dynamic="0" variable="l2"/>
+<pragma file="src/moe.cpp" line="716" pragmaType="array_partition" parentfunction="generic_mlp_head" dim="1" factor="0" mode="complete" dynamic="0" variable="l3"/>
+<pragma file="src/moe.cpp" line="1020" pragmaType="dataflow" parentfunction="run_parallel_engines" disable_start_propagation="0"/>
+<pragma file="src/moe.cpp" line="1032" pragmaType="unroll" parentfunction="run_parallel_engines" factor="-1" skip_exit_check="0"/>
+<pragma file="src/moe.cpp" line="1025" pragmaType="array_partition" parentfunction="run_parallel_engines" dim="2" factor="0" mode="complete" dynamic="0" variable="a_out"/>
+<pragma file="src/moe.cpp" line="1026" pragmaType="array_partition" parentfunction="run_parallel_engines" dim="2" factor="0" mode="complete" dynamic="0" variable="b_out"/>
+<pragma file="src/moe.cpp" line="906" pragmaType="inline" parentfunction="expert_engine_A" off="1" region="0" recursive="0"/>
+<pragma file="src/moe.cpp" line="1047" pragmaType="interface" parentfunction="output_moe" mode="ap_ctrl_hs" port="return" name=""/>
+<pragma file="src/moe.cpp" line="1053" pragmaType="array_partition" parentfunction="output_moe" dim="1" factor="0" mode="complete" dynamic="0" variable="logits"/>
+<pragma file="src/moe.cpp" line="1054" pragmaType="array_partition" parentfunction="output_moe" dim="1" factor="0" mode="complete" dynamic="0" variable="gates"/>
+<pragma file="src/moe.cpp" line="1055" pragmaType="array_partition" parentfunction="output_moe" dim="1" factor="0" mode="complete" dynamic="0" variable="output"/>
+</pragmas>

@@ -1,0 +1,821 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+  **** SW Build 4023990 on Oct 11 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /home/simics/HMoE/Vitis_HLS/2023.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/home/simics/HMoE/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'simics' on host 'cie-n2' (Linux_x86_64 version 6.8.0-138-generic) on Sun Sep 13 12:48:11 IST 2026
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/simics/HMoE/HLS_HMoE/run_9'
+INFO: [HLS 200-2053] The vitis_hls executable is being deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'scripts/run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project project/HLS_OutputMoE_Run9 
+INFO: [HLS 200-10] Creating and opening project '/home/simics/HMoE/HLS_HMoE/run_9/project/HLS_OutputMoE_Run9'.
+INFO: [HLS 200-1510] Running: set_top output_moe 
+INFO: [HLS 200-1510] Running: add_files src/moe.cpp 
+INFO: [HLS 200-10] Adding design file 'src/moe.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/moe.h 
+INFO: [HLS 200-10] Adding design file 'src/moe.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb/moe_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'tb/moe_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/home/simics/HMoE/HLS_HMoE/run_9/project/HLS_OutputMoE_Run9/solution1'.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu13p_CIV-figd2104-3-e 
+INFO: [HLS 200-1611] Setting target device to 'xcvu13p_CIV-figd2104-3-e'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../tb/moe_tb.cpp in debug mode
+   Compiling ../../../../../src/moe.cpp in debug mode
+../../../../../src/moe.cpp: In function ‘void expert_engine_A(const data_t*, data_t (*)[5])’:
+../../../../../src/moe.cpp:919:9: error: ‘e0_util_LUT_w0’ was not declared in this scope
+         e0_util_LUT_w0, e0_util_LUT_b0,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:919:9: note: suggested alternative: ‘e0_lut_w0’
+         e0_util_LUT_w0, e0_util_LUT_b0,
+         ^~~~~~~~~~~~~~
+         e0_lut_w0
+../../../../../src/moe.cpp:919:25: error: ‘e0_util_LUT_b0’ was not declared in this scope
+         e0_util_LUT_w0, e0_util_LUT_b0,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:919:25: note: suggested alternative: ‘e0_lut_b0’
+         e0_util_LUT_w0, e0_util_LUT_b0,
+                         ^~~~~~~~~~~~~~
+                         e0_lut_b0
+../../../../../src/moe.cpp:920:9: error: ‘e0_util_LUT_w1’ was not declared in this scope
+         e0_util_LUT_w1, e0_util_LUT_b1,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:920:9: note: suggested alternative: ‘e0_lut_w1’
+         e0_util_LUT_w1, e0_util_LUT_b1,
+         ^~~~~~~~~~~~~~
+         e0_lut_w1
+../../../../../src/moe.cpp:920:25: error: ‘e0_util_LUT_b1’ was not declared in this scope
+         e0_util_LUT_w1, e0_util_LUT_b1,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:920:25: note: suggested alternative: ‘e0_lut_b1’
+         e0_util_LUT_w1, e0_util_LUT_b1,
+                         ^~~~~~~~~~~~~~
+                         e0_lut_b1
+../../../../../src/moe.cpp:921:9: error: ‘e0_util_LUT_w2’ was not declared in this scope
+         e0_util_LUT_w2, e0_util_LUT_b2,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:921:9: note: suggested alternative: ‘e0_lut_w2’
+         e0_util_LUT_w2, e0_util_LUT_b2,
+         ^~~~~~~~~~~~~~
+         e0_lut_w2
+../../../../../src/moe.cpp:921:25: error: ‘e0_util_LUT_b2’ was not declared in this scope
+         e0_util_LUT_w2, e0_util_LUT_b2,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:921:25: note: suggested alternative: ‘e0_lut_b2’
+         e0_util_LUT_w2, e0_util_LUT_b2,
+                         ^~~~~~~~~~~~~~
+                         e0_lut_b2
+../../../../../src/moe.cpp:922:9: error: ‘e0_util_LUT_w3’ was not declared in this scope
+         e0_util_LUT_w3, e0_util_LUT_b3,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:922:9: note: suggested alternative: ‘e0_lut_w3’
+         e0_util_LUT_w3, e0_util_LUT_b3,
+         ^~~~~~~~~~~~~~
+         e0_lut_w3
+../../../../../src/moe.cpp:922:25: error: ‘e0_util_LUT_b3’ was not declared in this scope
+         e0_util_LUT_w3, e0_util_LUT_b3,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:922:25: note: suggested alternative: ‘e0_lut_b3’
+         e0_util_LUT_w3, e0_util_LUT_b3,
+                         ^~~~~~~~~~~~~~
+                         e0_lut_b3
+../../../../../src/moe.cpp:924:9: error: ‘e0_util_FF_w0’ was not declared in this scope
+         e0_util_FF_w0, e0_util_FF_b0,
+         ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:924:9: note: suggested alternative: ‘e0_lut_w0’
+         e0_util_FF_w0, e0_util_FF_b0,
+         ^~~~~~~~~~~~~
+         e0_lut_w0
+../../../../../src/moe.cpp:924:24: error: ‘e0_util_FF_b0’ was not declared in this scope
+         e0_util_FF_w0, e0_util_FF_b0,
+                        ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:924:24: note: suggested alternative: ‘e0_lut_b0’
+         e0_util_FF_w0, e0_util_FF_b0,
+                        ^~~~~~~~~~~~~
+                        e0_lut_b0
+../../../../../src/moe.cpp:925:9: error: ‘e0_util_FF_w1’ was not declared in this scope
+         e0_util_FF_w1, e0_util_FF_b1,
+         ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:925:9: note: suggested alternative: ‘e0_lut_w1’
+         e0_util_FF_w1, e0_util_FF_b1,
+         ^~~~~~~~~~~~~
+         e0_lut_w1
+../../../../../src/moe.cpp:925:24: error: ‘e0_util_FF_b1’ was not declared in this scope
+         e0_util_FF_w1, e0_util_FF_b1,
+                        ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:925:24: note: suggested alternative: ‘e0_lut_b1’
+         e0_util_FF_w1, e0_util_FF_b1,
+                        ^~~~~~~~~~~~~
+                        e0_lut_b1
+../../../../../src/moe.cpp:926:9: error: ‘e0_util_FF_w2’ was not declared in this scope
+         e0_util_FF_w2, e0_util_FF_b2,
+         ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:926:9: note: suggested alternative: ‘e0_lut_w2’
+         e0_util_FF_w2, e0_util_FF_b2,
+         ^~~~~~~~~~~~~
+         e0_lut_w2
+../../../../../src/moe.cpp:926:24: error: ‘e0_util_FF_b2’ was not declared in this scope
+         e0_util_FF_w2, e0_util_FF_b2,
+                        ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:926:24: note: suggested alternative: ‘e0_lut_b2’
+         e0_util_FF_w2, e0_util_FF_b2,
+                        ^~~~~~~~~~~~~
+                        e0_lut_b2
+../../../../../src/moe.cpp:927:9: error: ‘e0_util_FF_w3’ was not declared in this scope
+         e0_util_FF_w3, e0_util_FF_b3,
+         ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:927:9: note: suggested alternative: ‘e0_lut_w3’
+         e0_util_FF_w3, e0_util_FF_b3,
+         ^~~~~~~~~~~~~
+         e0_lut_w3
+../../../../../src/moe.cpp:927:24: error: ‘e0_util_FF_b3’ was not declared in this scope
+         e0_util_FF_w3, e0_util_FF_b3,
+                        ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:927:24: note: suggested alternative: ‘e0_lut_b3’
+         e0_util_FF_w3, e0_util_FF_b3,
+                        ^~~~~~~~~~~~~
+                        e0_lut_b3
+../../../../../src/moe.cpp:929:9: error: ‘e0_util_DSP_w0’ was not declared in this scope
+         e0_util_DSP_w0, e0_util_DSP_b0,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:929:9: note: suggested alternative: ‘e0_lut_w0’
+         e0_util_DSP_w0, e0_util_DSP_b0,
+         ^~~~~~~~~~~~~~
+         e0_lut_w0
+../../../../../src/moe.cpp:929:25: error: ‘e0_util_DSP_b0’ was not declared in this scope
+         e0_util_DSP_w0, e0_util_DSP_b0,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:929:25: note: suggested alternative: ‘e0_lut_b0’
+         e0_util_DSP_w0, e0_util_DSP_b0,
+                         ^~~~~~~~~~~~~~
+                         e0_lut_b0
+../../../../../src/moe.cpp:930:9: error: ‘e0_util_DSP_w1’ was not declared in this scope
+         e0_util_DSP_w1, e0_util_DSP_b1,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:930:9: note: suggested alternative: ‘e0_lut_w1’
+         e0_util_DSP_w1, e0_util_DSP_b1,
+         ^~~~~~~~~~~~~~
+         e0_lut_w1
+../../../../../src/moe.cpp:930:25: error: ‘e0_util_DSP_b1’ was not declared in this scope
+         e0_util_DSP_w1, e0_util_DSP_b1,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:930:25: note: suggested alternative: ‘e0_lut_b1’
+         e0_util_DSP_w1, e0_util_DSP_b1,
+                         ^~~~~~~~~~~~~~
+                         e0_lut_b1
+../../../../../src/moe.cpp:931:9: error: ‘e0_util_DSP_w2’ was not declared in this scope
+         e0_util_DSP_w2, e0_util_DSP_b2,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:931:9: note: suggested alternative: ‘e0_lut_w2’
+         e0_util_DSP_w2, e0_util_DSP_b2,
+         ^~~~~~~~~~~~~~
+         e0_lut_w2
+../../../../../src/moe.cpp:931:25: error: ‘e0_util_DSP_b2’ was not declared in this scope
+         e0_util_DSP_w2, e0_util_DSP_b2,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:931:25: note: suggested alternative: ‘e0_lut_b2’
+         e0_util_DSP_w2, e0_util_DSP_b2,
+                         ^~~~~~~~~~~~~~
+                         e0_lut_b2
+../../../../../src/moe.cpp:932:9: error: ‘e0_util_DSP_w3’ was not declared in this scope
+         e0_util_DSP_w3, e0_util_DSP_b3,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:932:9: note: suggested alternative: ‘e0_lut_w3’
+         e0_util_DSP_w3, e0_util_DSP_b3,
+         ^~~~~~~~~~~~~~
+         e0_lut_w3
+../../../../../src/moe.cpp:932:25: error: ‘e0_util_DSP_b3’ was not declared in this scope
+         e0_util_DSP_w3, e0_util_DSP_b3,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:932:25: note: suggested alternative: ‘e0_lut_b3’
+         e0_util_DSP_w3, e0_util_DSP_b3,
+                         ^~~~~~~~~~~~~~
+                         e0_lut_b3
+../../../../../src/moe.cpp:934:9: error: ‘e0_util_BRAM_w0’ was not declared in this scope
+         e0_util_BRAM_w0, e0_util_BRAM_b0,
+         ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:934:26: error: ‘e0_util_BRAM_b0’ was not declared in this scope
+         e0_util_BRAM_w0, e0_util_BRAM_b0,
+                          ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:935:9: error: ‘e0_util_BRAM_w1’ was not declared in this scope
+         e0_util_BRAM_w1, e0_util_BRAM_b1,
+         ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:935:26: error: ‘e0_util_BRAM_b1’ was not declared in this scope
+         e0_util_BRAM_w1, e0_util_BRAM_b1,
+                          ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:936:9: error: ‘e0_util_BRAM_w2’ was not declared in this scope
+         e0_util_BRAM_w2, e0_util_BRAM_b2,
+         ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:936:26: error: ‘e0_util_BRAM_b2’ was not declared in this scope
+         e0_util_BRAM_w2, e0_util_BRAM_b2,
+                          ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:937:9: error: ‘e0_util_BRAM_w3’ was not declared in this scope
+         e0_util_BRAM_w3, e0_util_BRAM_b3
+         ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:937:26: error: ‘e0_util_BRAM_b3’ was not declared in this scope
+         e0_util_BRAM_w3, e0_util_BRAM_b3
+                          ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:949:9: error: ‘e2_util_LUT_w0’ was not declared in this scope
+         e2_util_LUT_w0, e2_util_LUT_b0,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:949:9: note: suggested alternative: ‘e2_lut_w0’
+         e2_util_LUT_w0, e2_util_LUT_b0,
+         ^~~~~~~~~~~~~~
+         e2_lut_w0
+../../../../../src/moe.cpp:949:25: error: ‘e2_util_LUT_b0’ was not declared in this scope
+         e2_util_LUT_w0, e2_util_LUT_b0,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:949:25: note: suggested alternative: ‘e2_lut_b0’
+         e2_util_LUT_w0, e2_util_LUT_b0,
+                         ^~~~~~~~~~~~~~
+                         e2_lut_b0
+../../../../../src/moe.cpp:950:9: error: ‘e2_util_LUT_w1’ was not declared in this scope
+         e2_util_LUT_w1, e2_util_LUT_b1,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:950:9: note: suggested alternative: ‘e2_lut_w1’
+         e2_util_LUT_w1, e2_util_LUT_b1,
+         ^~~~~~~~~~~~~~
+         e2_lut_w1
+../../../../../src/moe.cpp:950:25: error: ‘e2_util_LUT_b1’ was not declared in this scope
+         e2_util_LUT_w1, e2_util_LUT_b1,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:950:25: note: suggested alternative: ‘e2_lut_b1’
+         e2_util_LUT_w1, e2_util_LUT_b1,
+                         ^~~~~~~~~~~~~~
+                         e2_lut_b1
+../../../../../src/moe.cpp:951:9: error: ‘e2_util_LUT_w2’ was not declared in this scope
+         e2_util_LUT_w2, e2_util_LUT_b2,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:951:9: note: suggested alternative: ‘e2_lut_w2’
+         e2_util_LUT_w2, e2_util_LUT_b2,
+         ^~~~~~~~~~~~~~
+         e2_lut_w2
+../../../../../src/moe.cpp:951:25: error: ‘e2_util_LUT_b2’ was not declared in this scope
+         e2_util_LUT_w2, e2_util_LUT_b2,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:951:25: note: suggested alternative: ‘e2_lut_b2’
+         e2_util_LUT_w2, e2_util_LUT_b2,
+                         ^~~~~~~~~~~~~~
+                         e2_lut_b2
+../../../../../src/moe.cpp:952:9: error: ‘e2_util_LUT_w3’ was not declared in this scope
+         e2_util_LUT_w3, e2_util_LUT_b3,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:952:9: note: suggested alternative: ‘e2_lut_w3’
+         e2_util_LUT_w3, e2_util_LUT_b3,
+         ^~~~~~~~~~~~~~
+         e2_lut_w3
+../../../../../src/moe.cpp:952:25: error: ‘e2_util_LUT_b3’ was not declared in this scope
+         e2_util_LUT_w3, e2_util_LUT_b3,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:952:25: note: suggested alternative: ‘e2_lut_b3’
+         e2_util_LUT_w3, e2_util_LUT_b3,
+                         ^~~~~~~~~~~~~~
+                         e2_lut_b3
+../../../../../src/moe.cpp:954:9: error: ‘e2_util_FF_w0’ was not declared in this scope
+         e2_util_FF_w0, e2_util_FF_b0,
+         ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:954:9: note: suggested alternative: ‘e2_lut_w0’
+         e2_util_FF_w0, e2_util_FF_b0,
+         ^~~~~~~~~~~~~
+         e2_lut_w0
+../../../../../src/moe.cpp:954:24: error: ‘e2_util_FF_b0’ was not declared in this scope
+         e2_util_FF_w0, e2_util_FF_b0,
+                        ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:954:24: note: suggested alternative: ‘e2_lut_b0’
+         e2_util_FF_w0, e2_util_FF_b0,
+                        ^~~~~~~~~~~~~
+                        e2_lut_b0
+../../../../../src/moe.cpp:955:9: error: ‘e2_util_FF_w1’ was not declared in this scope
+         e2_util_FF_w1, e2_util_FF_b1,
+         ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:955:9: note: suggested alternative: ‘e2_lut_w1’
+         e2_util_FF_w1, e2_util_FF_b1,
+         ^~~~~~~~~~~~~
+         e2_lut_w1
+../../../../../src/moe.cpp:955:24: error: ‘e2_util_FF_b1’ was not declared in this scope
+         e2_util_FF_w1, e2_util_FF_b1,
+                        ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:955:24: note: suggested alternative: ‘e2_lut_b1’
+         e2_util_FF_w1, e2_util_FF_b1,
+                        ^~~~~~~~~~~~~
+                        e2_lut_b1
+../../../../../src/moe.cpp:956:9: error: ‘e2_util_FF_w2’ was not declared in this scope
+         e2_util_FF_w2, e2_util_FF_b2,
+         ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:956:9: note: suggested alternative: ‘e2_lut_w2’
+         e2_util_FF_w2, e2_util_FF_b2,
+         ^~~~~~~~~~~~~
+         e2_lut_w2
+../../../../../src/moe.cpp:956:24: error: ‘e2_util_FF_b2’ was not declared in this scope
+         e2_util_FF_w2, e2_util_FF_b2,
+                        ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:956:24: note: suggested alternative: ‘e2_lut_b2’
+         e2_util_FF_w2, e2_util_FF_b2,
+                        ^~~~~~~~~~~~~
+                        e2_lut_b2
+../../../../../src/moe.cpp:957:9: error: ‘e2_util_FF_w3’ was not declared in this scope
+         e2_util_FF_w3, e2_util_FF_b3,
+         ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:957:9: note: suggested alternative: ‘e2_lut_w3’
+         e2_util_FF_w3, e2_util_FF_b3,
+         ^~~~~~~~~~~~~
+         e2_lut_w3
+../../../../../src/moe.cpp:957:24: error: ‘e2_util_FF_b3’ was not declared in this scope
+         e2_util_FF_w3, e2_util_FF_b3,
+                        ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:957:24: note: suggested alternative: ‘e2_lut_b3’
+         e2_util_FF_w3, e2_util_FF_b3,
+                        ^~~~~~~~~~~~~
+                        e2_lut_b3
+../../../../../src/moe.cpp:959:9: error: ‘e2_util_DSP_w0’ was not declared in this scope
+         e2_util_DSP_w0, e2_util_DSP_b0,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:959:9: note: suggested alternative: ‘e2_lut_w0’
+         e2_util_DSP_w0, e2_util_DSP_b0,
+         ^~~~~~~~~~~~~~
+         e2_lut_w0
+../../../../../src/moe.cpp:959:25: error: ‘e2_util_DSP_b0’ was not declared in this scope
+         e2_util_DSP_w0, e2_util_DSP_b0,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:959:25: note: suggested alternative: ‘e2_lut_b0’
+         e2_util_DSP_w0, e2_util_DSP_b0,
+                         ^~~~~~~~~~~~~~
+                         e2_lut_b0
+../../../../../src/moe.cpp:960:9: error: ‘e2_util_DSP_w1’ was not declared in this scope
+         e2_util_DSP_w1, e2_util_DSP_b1,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:960:9: note: suggested alternative: ‘e2_lut_w1’
+         e2_util_DSP_w1, e2_util_DSP_b1,
+         ^~~~~~~~~~~~~~
+         e2_lut_w1
+../../../../../src/moe.cpp:960:25: error: ‘e2_util_DSP_b1’ was not declared in this scope
+         e2_util_DSP_w1, e2_util_DSP_b1,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:960:25: note: suggested alternative: ‘e2_lut_b1’
+         e2_util_DSP_w1, e2_util_DSP_b1,
+                         ^~~~~~~~~~~~~~
+                         e2_lut_b1
+../../../../../src/moe.cpp:961:9: error: ‘e2_util_DSP_w2’ was not declared in this scope
+         e2_util_DSP_w2, e2_util_DSP_b2,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:961:9: note: suggested alternative: ‘e2_lut_w2’
+         e2_util_DSP_w2, e2_util_DSP_b2,
+         ^~~~~~~~~~~~~~
+         e2_lut_w2
+../../../../../src/moe.cpp:961:25: error: ‘e2_util_DSP_b2’ was not declared in this scope
+         e2_util_DSP_w2, e2_util_DSP_b2,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:961:25: note: suggested alternative: ‘e2_lut_b2’
+         e2_util_DSP_w2, e2_util_DSP_b2,
+                         ^~~~~~~~~~~~~~
+                         e2_lut_b2
+../../../../../src/moe.cpp:962:9: error: ‘e2_util_DSP_w3’ was not declared in this scope
+         e2_util_DSP_w3, e2_util_DSP_b3,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:962:9: note: suggested alternative: ‘e2_lut_w3’
+         e2_util_DSP_w3, e2_util_DSP_b3,
+         ^~~~~~~~~~~~~~
+         e2_lut_w3
+../../../../../src/moe.cpp:962:25: error: ‘e2_util_DSP_b3’ was not declared in this scope
+         e2_util_DSP_w3, e2_util_DSP_b3,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:962:25: note: suggested alternative: ‘e2_lut_b3’
+         e2_util_DSP_w3, e2_util_DSP_b3,
+                         ^~~~~~~~~~~~~~
+                         e2_lut_b3
+../../../../../src/moe.cpp:964:9: error: ‘e2_util_BRAM_w0’ was not declared in this scope
+         e2_util_BRAM_w0, e2_util_BRAM_b0,
+         ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:964:26: error: ‘e2_util_BRAM_b0’ was not declared in this scope
+         e2_util_BRAM_w0, e2_util_BRAM_b0,
+                          ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:965:9: error: ‘e2_util_BRAM_w1’ was not declared in this scope
+         e2_util_BRAM_w1, e2_util_BRAM_b1,
+         ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:965:26: error: ‘e2_util_BRAM_b1’ was not declared in this scope
+         e2_util_BRAM_w1, e2_util_BRAM_b1,
+                          ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:966:9: error: ‘e2_util_BRAM_w2’ was not declared in this scope
+         e2_util_BRAM_w2, e2_util_BRAM_b2,
+         ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:966:26: error: ‘e2_util_BRAM_b2’ was not declared in this scope
+         e2_util_BRAM_w2, e2_util_BRAM_b2,
+                          ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:967:9: error: ‘e2_util_BRAM_w3’ was not declared in this scope
+         e2_util_BRAM_w3, e2_util_BRAM_b3
+         ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:967:26: error: ‘e2_util_BRAM_b3’ was not declared in this scope
+         e2_util_BRAM_w3, e2_util_BRAM_b3
+                          ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp: In function ‘void expert_engine_B(const data_t*, data_t (*)[5])’:
+../../../../../src/moe.cpp:998:9: error: ‘e1_util_LUT_w0’ was not declared in this scope
+         e1_util_LUT_w0, e1_util_LUT_b0,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:998:9: note: suggested alternative: ‘e1_lut_w0’
+         e1_util_LUT_w0, e1_util_LUT_b0,
+         ^~~~~~~~~~~~~~
+         e1_lut_w0
+../../../../../src/moe.cpp:998:25: error: ‘e1_util_LUT_b0’ was not declared in this scope
+         e1_util_LUT_w0, e1_util_LUT_b0,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:998:25: note: suggested alternative: ‘e1_lut_b0’
+         e1_util_LUT_w0, e1_util_LUT_b0,
+                         ^~~~~~~~~~~~~~
+                         e1_lut_b0
+../../../../../src/moe.cpp:999:9: error: ‘e1_util_LUT_w1’ was not declared in this scope
+         e1_util_LUT_w1, e1_util_LUT_b1,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:999:9: note: suggested alternative: ‘e1_lut_w1’
+         e1_util_LUT_w1, e1_util_LUT_b1,
+         ^~~~~~~~~~~~~~
+         e1_lut_w1
+../../../../../src/moe.cpp:999:25: error: ‘e1_util_LUT_b1’ was not declared in this scope
+         e1_util_LUT_w1, e1_util_LUT_b1,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:999:25: note: suggested alternative: ‘e1_lut_b1’
+         e1_util_LUT_w1, e1_util_LUT_b1,
+                         ^~~~~~~~~~~~~~
+                         e1_lut_b1
+../../../../../src/moe.cpp:1000:9: error: ‘e1_util_LUT_w2’ was not declared in this scope
+         e1_util_LUT_w2, e1_util_LUT_b2,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1000:9: note: suggested alternative: ‘e1_lut_w2’
+         e1_util_LUT_w2, e1_util_LUT_b2,
+         ^~~~~~~~~~~~~~
+         e1_lut_w2
+../../../../../src/moe.cpp:1000:25: error: ‘e1_util_LUT_b2’ was not declared in this scope
+         e1_util_LUT_w2, e1_util_LUT_b2,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1000:25: note: suggested alternative: ‘e1_lut_b2’
+         e1_util_LUT_w2, e1_util_LUT_b2,
+                         ^~~~~~~~~~~~~~
+                         e1_lut_b2
+../../../../../src/moe.cpp:1001:9: error: ‘e1_util_LUT_w3’ was not declared in this scope
+         e1_util_LUT_w3, e1_util_LUT_b3,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1001:9: note: suggested alternative: ‘e1_lut_w3’
+         e1_util_LUT_w3, e1_util_LUT_b3,
+         ^~~~~~~~~~~~~~
+         e1_lut_w3
+../../../../../src/moe.cpp:1001:25: error: ‘e1_util_LUT_b3’ was not declared in this scope
+         e1_util_LUT_w3, e1_util_LUT_b3,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1001:25: note: suggested alternative: ‘e1_lut_b3’
+         e1_util_LUT_w3, e1_util_LUT_b3,
+                         ^~~~~~~~~~~~~~
+                         e1_lut_b3
+../../../../../src/moe.cpp:1003:9: error: ‘e1_util_FF_w0’ was not declared in this scope
+         e1_util_FF_w0, e1_util_FF_b0,
+         ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:1003:9: note: suggested alternative: ‘e1_lut_w0’
+         e1_util_FF_w0, e1_util_FF_b0,
+         ^~~~~~~~~~~~~
+         e1_lut_w0
+../../../../../src/moe.cpp:1003:24: error: ‘e1_util_FF_b0’ was not declared in this scope
+         e1_util_FF_w0, e1_util_FF_b0,
+                        ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:1003:24: note: suggested alternative: ‘e1_lut_b0’
+         e1_util_FF_w0, e1_util_FF_b0,
+                        ^~~~~~~~~~~~~
+                        e1_lut_b0
+../../../../../src/moe.cpp:1004:9: error: ‘e1_util_FF_w1’ was not declared in this scope
+         e1_util_FF_w1, e1_util_FF_b1,
+         ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:1004:9: note: suggested alternative: ‘e1_lut_w1’
+         e1_util_FF_w1, e1_util_FF_b1,
+         ^~~~~~~~~~~~~
+         e1_lut_w1
+../../../../../src/moe.cpp:1004:24: error: ‘e1_util_FF_b1’ was not declared in this scope
+         e1_util_FF_w1, e1_util_FF_b1,
+                        ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:1004:24: note: suggested alternative: ‘e1_lut_b1’
+         e1_util_FF_w1, e1_util_FF_b1,
+                        ^~~~~~~~~~~~~
+                        e1_lut_b1
+../../../../../src/moe.cpp:1005:9: error: ‘e1_util_FF_w2’ was not declared in this scope
+         e1_util_FF_w2, e1_util_FF_b2,
+         ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:1005:9: note: suggested alternative: ‘e1_lut_w2’
+         e1_util_FF_w2, e1_util_FF_b2,
+         ^~~~~~~~~~~~~
+         e1_lut_w2
+../../../../../src/moe.cpp:1005:24: error: ‘e1_util_FF_b2’ was not declared in this scope
+         e1_util_FF_w2, e1_util_FF_b2,
+                        ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:1005:24: note: suggested alternative: ‘e1_lut_b2’
+         e1_util_FF_w2, e1_util_FF_b2,
+                        ^~~~~~~~~~~~~
+                        e1_lut_b2
+../../../../../src/moe.cpp:1006:9: error: ‘e1_util_FF_w3’ was not declared in this scope
+         e1_util_FF_w3, e1_util_FF_b3,
+         ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:1006:9: note: suggested alternative: ‘e1_lut_w3’
+         e1_util_FF_w3, e1_util_FF_b3,
+         ^~~~~~~~~~~~~
+         e1_lut_w3
+../../../../../src/moe.cpp:1006:24: error: ‘e1_util_FF_b3’ was not declared in this scope
+         e1_util_FF_w3, e1_util_FF_b3,
+                        ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:1006:24: note: suggested alternative: ‘e1_lut_b3’
+         e1_util_FF_w3, e1_util_FF_b3,
+                        ^~~~~~~~~~~~~
+                        e1_lut_b3
+../../../../../src/moe.cpp:1008:9: error: ‘e1_util_DSP_w0’ was not declared in this scope
+         e1_util_DSP_w0, e1_util_DSP_b0,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1008:9: note: suggested alternative: ‘e1_lut_w0’
+         e1_util_DSP_w0, e1_util_DSP_b0,
+         ^~~~~~~~~~~~~~
+         e1_lut_w0
+../../../../../src/moe.cpp:1008:25: error: ‘e1_util_DSP_b0’ was not declared in this scope
+         e1_util_DSP_w0, e1_util_DSP_b0,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1008:25: note: suggested alternative: ‘e1_lut_b0’
+         e1_util_DSP_w0, e1_util_DSP_b0,
+                         ^~~~~~~~~~~~~~
+                         e1_lut_b0
+../../../../../src/moe.cpp:1009:9: error: ‘e1_util_DSP_w1’ was not declared in this scope
+         e1_util_DSP_w1, e1_util_DSP_b1,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1009:9: note: suggested alternative: ‘e1_lut_w1’
+         e1_util_DSP_w1, e1_util_DSP_b1,
+         ^~~~~~~~~~~~~~
+         e1_lut_w1
+../../../../../src/moe.cpp:1009:25: error: ‘e1_util_DSP_b1’ was not declared in this scope
+         e1_util_DSP_w1, e1_util_DSP_b1,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1009:25: note: suggested alternative: ‘e1_lut_b1’
+         e1_util_DSP_w1, e1_util_DSP_b1,
+                         ^~~~~~~~~~~~~~
+                         e1_lut_b1
+../../../../../src/moe.cpp:1010:9: error: ‘e1_util_DSP_w2’ was not declared in this scope
+         e1_util_DSP_w2, e1_util_DSP_b2,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1010:9: note: suggested alternative: ‘e1_lut_w2’
+         e1_util_DSP_w2, e1_util_DSP_b2,
+         ^~~~~~~~~~~~~~
+         e1_lut_w2
+../../../../../src/moe.cpp:1010:25: error: ‘e1_util_DSP_b2’ was not declared in this scope
+         e1_util_DSP_w2, e1_util_DSP_b2,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1010:25: note: suggested alternative: ‘e1_lut_b2’
+         e1_util_DSP_w2, e1_util_DSP_b2,
+                         ^~~~~~~~~~~~~~
+                         e1_lut_b2
+../../../../../src/moe.cpp:1011:9: error: ‘e1_util_DSP_w3’ was not declared in this scope
+         e1_util_DSP_w3, e1_util_DSP_b3,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1011:9: note: suggested alternative: ‘e1_lut_w3’
+         e1_util_DSP_w3, e1_util_DSP_b3,
+         ^~~~~~~~~~~~~~
+         e1_lut_w3
+../../../../../src/moe.cpp:1011:25: error: ‘e1_util_DSP_b3’ was not declared in this scope
+         e1_util_DSP_w3, e1_util_DSP_b3,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1011:25: note: suggested alternative: ‘e1_lut_b3’
+         e1_util_DSP_w3, e1_util_DSP_b3,
+                         ^~~~~~~~~~~~~~
+                         e1_lut_b3
+../../../../../src/moe.cpp:1013:9: error: ‘e1_util_BRAM_w0’ was not declared in this scope
+         e1_util_BRAM_w0, e1_util_BRAM_b0,
+         ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1013:26: error: ‘e1_util_BRAM_b0’ was not declared in this scope
+         e1_util_BRAM_w0, e1_util_BRAM_b0,
+                          ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1014:9: error: ‘e1_util_BRAM_w1’ was not declared in this scope
+         e1_util_BRAM_w1, e1_util_BRAM_b1,
+         ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1014:26: error: ‘e1_util_BRAM_b1’ was not declared in this scope
+         e1_util_BRAM_w1, e1_util_BRAM_b1,
+                          ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1015:9: error: ‘e1_util_BRAM_w2’ was not declared in this scope
+         e1_util_BRAM_w2, e1_util_BRAM_b2,
+         ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1015:26: error: ‘e1_util_BRAM_b2’ was not declared in this scope
+         e1_util_BRAM_w2, e1_util_BRAM_b2,
+                          ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1016:9: error: ‘e1_util_BRAM_w3’ was not declared in this scope
+         e1_util_BRAM_w3, e1_util_BRAM_b3
+         ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1016:26: error: ‘e1_util_BRAM_b3’ was not declared in this scope
+         e1_util_BRAM_w3, e1_util_BRAM_b3
+                          ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1028:9: error: ‘e3_util_LUT_w0’ was not declared in this scope
+         e3_util_LUT_w0, e3_util_LUT_b0,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1028:9: note: suggested alternative: ‘e3_lut_w0’
+         e3_util_LUT_w0, e3_util_LUT_b0,
+         ^~~~~~~~~~~~~~
+         e3_lut_w0
+../../../../../src/moe.cpp:1028:25: error: ‘e3_util_LUT_b0’ was not declared in this scope
+         e3_util_LUT_w0, e3_util_LUT_b0,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1028:25: note: suggested alternative: ‘e3_lut_b0’
+         e3_util_LUT_w0, e3_util_LUT_b0,
+                         ^~~~~~~~~~~~~~
+                         e3_lut_b0
+../../../../../src/moe.cpp:1029:9: error: ‘e3_util_LUT_w1’ was not declared in this scope
+         e3_util_LUT_w1, e3_util_LUT_b1,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1029:9: note: suggested alternative: ‘e3_lut_w1’
+         e3_util_LUT_w1, e3_util_LUT_b1,
+         ^~~~~~~~~~~~~~
+         e3_lut_w1
+../../../../../src/moe.cpp:1029:25: error: ‘e3_util_LUT_b1’ was not declared in this scope
+         e3_util_LUT_w1, e3_util_LUT_b1,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1029:25: note: suggested alternative: ‘e3_lut_b1’
+         e3_util_LUT_w1, e3_util_LUT_b1,
+                         ^~~~~~~~~~~~~~
+                         e3_lut_b1
+../../../../../src/moe.cpp:1030:9: error: ‘e3_util_LUT_w2’ was not declared in this scope
+         e3_util_LUT_w2, e3_util_LUT_b2,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1030:9: note: suggested alternative: ‘e3_lut_w2’
+         e3_util_LUT_w2, e3_util_LUT_b2,
+         ^~~~~~~~~~~~~~
+         e3_lut_w2
+../../../../../src/moe.cpp:1030:25: error: ‘e3_util_LUT_b2’ was not declared in this scope
+         e3_util_LUT_w2, e3_util_LUT_b2,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1030:25: note: suggested alternative: ‘e3_lut_b2’
+         e3_util_LUT_w2, e3_util_LUT_b2,
+                         ^~~~~~~~~~~~~~
+                         e3_lut_b2
+../../../../../src/moe.cpp:1031:9: error: ‘e3_util_LUT_w3’ was not declared in this scope
+         e3_util_LUT_w3, e3_util_LUT_b3,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1031:9: note: suggested alternative: ‘e3_lut_w3’
+         e3_util_LUT_w3, e3_util_LUT_b3,
+         ^~~~~~~~~~~~~~
+         e3_lut_w3
+../../../../../src/moe.cpp:1031:25: error: ‘e3_util_LUT_b3’ was not declared in this scope
+         e3_util_LUT_w3, e3_util_LUT_b3,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1031:25: note: suggested alternative: ‘e3_lut_b3’
+         e3_util_LUT_w3, e3_util_LUT_b3,
+                         ^~~~~~~~~~~~~~
+                         e3_lut_b3
+../../../../../src/moe.cpp:1033:9: error: ‘e3_util_FF_w0’ was not declared in this scope
+         e3_util_FF_w0, e3_util_FF_b0,
+         ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:1033:9: note: suggested alternative: ‘e3_lut_w0’
+         e3_util_FF_w0, e3_util_FF_b0,
+         ^~~~~~~~~~~~~
+         e3_lut_w0
+../../../../../src/moe.cpp:1033:24: error: ‘e3_util_FF_b0’ was not declared in this scope
+         e3_util_FF_w0, e3_util_FF_b0,
+                        ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:1033:24: note: suggested alternative: ‘e3_lut_b0’
+         e3_util_FF_w0, e3_util_FF_b0,
+                        ^~~~~~~~~~~~~
+                        e3_lut_b0
+../../../../../src/moe.cpp:1034:9: error: ‘e3_util_FF_w1’ was not declared in this scope
+         e3_util_FF_w1, e3_util_FF_b1,
+         ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:1034:9: note: suggested alternative: ‘e3_lut_w1’
+         e3_util_FF_w1, e3_util_FF_b1,
+         ^~~~~~~~~~~~~
+         e3_lut_w1
+../../../../../src/moe.cpp:1034:24: error: ‘e3_util_FF_b1’ was not declared in this scope
+         e3_util_FF_w1, e3_util_FF_b1,
+                        ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:1034:24: note: suggested alternative: ‘e3_lut_b1’
+         e3_util_FF_w1, e3_util_FF_b1,
+                        ^~~~~~~~~~~~~
+                        e3_lut_b1
+../../../../../src/moe.cpp:1035:9: error: ‘e3_util_FF_w2’ was not declared in this scope
+         e3_util_FF_w2, e3_util_FF_b2,
+         ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:1035:9: note: suggested alternative: ‘e3_lut_w2’
+         e3_util_FF_w2, e3_util_FF_b2,
+         ^~~~~~~~~~~~~
+         e3_lut_w2
+../../../../../src/moe.cpp:1035:24: error: ‘e3_util_FF_b2’ was not declared in this scope
+         e3_util_FF_w2, e3_util_FF_b2,
+                        ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:1035:24: note: suggested alternative: ‘e3_lut_b2’
+         e3_util_FF_w2, e3_util_FF_b2,
+                        ^~~~~~~~~~~~~
+                        e3_lut_b2
+../../../../../src/moe.cpp:1036:9: error: ‘e3_util_FF_w3’ was not declared in this scope
+         e3_util_FF_w3, e3_util_FF_b3,
+         ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:1036:9: note: suggested alternative: ‘e3_lut_w3’
+         e3_util_FF_w3, e3_util_FF_b3,
+         ^~~~~~~~~~~~~
+         e3_lut_w3
+../../../../../src/moe.cpp:1036:24: error: ‘e3_util_FF_b3’ was not declared in this scope
+         e3_util_FF_w3, e3_util_FF_b3,
+                        ^~~~~~~~~~~~~
+../../../../../src/moe.cpp:1036:24: note: suggested alternative: ‘e3_lut_b3’
+         e3_util_FF_w3, e3_util_FF_b3,
+                        ^~~~~~~~~~~~~
+                        e3_lut_b3
+../../../../../src/moe.cpp:1038:9: error: ‘e3_util_DSP_w0’ was not declared in this scope
+         e3_util_DSP_w0, e3_util_DSP_b0,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1038:9: note: suggested alternative: ‘e3_lut_w0’
+         e3_util_DSP_w0, e3_util_DSP_b0,
+         ^~~~~~~~~~~~~~
+         e3_lut_w0
+../../../../../src/moe.cpp:1038:25: error: ‘e3_util_DSP_b0’ was not declared in this scope
+         e3_util_DSP_w0, e3_util_DSP_b0,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1038:25: note: suggested alternative: ‘e3_lut_b0’
+         e3_util_DSP_w0, e3_util_DSP_b0,
+                         ^~~~~~~~~~~~~~
+                         e3_lut_b0
+../../../../../src/moe.cpp:1039:9: error: ‘e3_util_DSP_w1’ was not declared in this scope
+         e3_util_DSP_w1, e3_util_DSP_b1,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1039:9: note: suggested alternative: ‘e3_lut_w1’
+         e3_util_DSP_w1, e3_util_DSP_b1,
+         ^~~~~~~~~~~~~~
+         e3_lut_w1
+../../../../../src/moe.cpp:1039:25: error: ‘e3_util_DSP_b1’ was not declared in this scope
+         e3_util_DSP_w1, e3_util_DSP_b1,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1039:25: note: suggested alternative: ‘e3_lut_b1’
+         e3_util_DSP_w1, e3_util_DSP_b1,
+                         ^~~~~~~~~~~~~~
+                         e3_lut_b1
+../../../../../src/moe.cpp:1040:9: error: ‘e3_util_DSP_w2’ was not declared in this scope
+         e3_util_DSP_w2, e3_util_DSP_b2,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1040:9: note: suggested alternative: ‘e3_lut_w2’
+         e3_util_DSP_w2, e3_util_DSP_b2,
+         ^~~~~~~~~~~~~~
+         e3_lut_w2
+../../../../../src/moe.cpp:1040:25: error: ‘e3_util_DSP_b2’ was not declared in this scope
+         e3_util_DSP_w2, e3_util_DSP_b2,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1040:25: note: suggested alternative: ‘e3_lut_b2’
+         e3_util_DSP_w2, e3_util_DSP_b2,
+                         ^~~~~~~~~~~~~~
+                         e3_lut_b2
+../../../../../src/moe.cpp:1041:9: error: ‘e3_util_DSP_w3’ was not declared in this scope
+         e3_util_DSP_w3, e3_util_DSP_b3,
+         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1041:9: note: suggested alternative: ‘e3_lut_w3’
+         e3_util_DSP_w3, e3_util_DSP_b3,
+         ^~~~~~~~~~~~~~
+         e3_lut_w3
+../../../../../src/moe.cpp:1041:25: error: ‘e3_util_DSP_b3’ was not declared in this scope
+         e3_util_DSP_w3, e3_util_DSP_b3,
+                         ^~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1041:25: note: suggested alternative: ‘e3_lut_b3’
+         e3_util_DSP_w3, e3_util_DSP_b3,
+                         ^~~~~~~~~~~~~~
+                         e3_lut_b3
+../../../../../src/moe.cpp:1043:9: error: ‘e3_util_BRAM_w0’ was not declared in this scope
+         e3_util_BRAM_w0, e3_util_BRAM_b0,
+         ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1043:26: error: ‘e3_util_BRAM_b0’ was not declared in this scope
+         e3_util_BRAM_w0, e3_util_BRAM_b0,
+                          ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1044:9: error: ‘e3_util_BRAM_w1’ was not declared in this scope
+         e3_util_BRAM_w1, e3_util_BRAM_b1,
+         ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1044:26: error: ‘e3_util_BRAM_b1’ was not declared in this scope
+         e3_util_BRAM_w1, e3_util_BRAM_b1,
+                          ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1045:9: error: ‘e3_util_BRAM_w2’ was not declared in this scope
+         e3_util_BRAM_w2, e3_util_BRAM_b2,
+         ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1045:26: error: ‘e3_util_BRAM_b2’ was not declared in this scope
+         e3_util_BRAM_w2, e3_util_BRAM_b2,
+                          ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1046:9: error: ‘e3_util_BRAM_w3’ was not declared in this scope
+         e3_util_BRAM_w3, e3_util_BRAM_b3
+         ^~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:1046:26: error: ‘e3_util_BRAM_b3’ was not declared in this scope
+         e3_util_BRAM_w3, e3_util_BRAM_b3
+                          ^~~~~~~~~~~~~~~
+make: *** [csim.mk:85: obj/moe.o] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.65 seconds. CPU system time: 0.13 seconds. Elapsed time: 0.78 seconds; current allocated memory: 0.000 MB.
+4
+    while executing
+"source scripts/run_hls.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $tclfile] "
+
+INFO: [HLS 200-112] Total CPU user time: 2.47 seconds. Total CPU system time: 0.34 seconds. Total elapsed time: 3.11 seconds; peak allocated memory: 282.145 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Sun Sep 13 12:48:13 2026...

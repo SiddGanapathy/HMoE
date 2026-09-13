@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished File checks and directory preparation: CPU user time: 0.24 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.28 seconds; current allocated memory: 282.453 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;src/moe.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Source Code Analysis and Preprocessing: CPU user time: 1.24 seconds. CPU system time: 0.68 seconds. Elapsed time: 1.91 seconds; current allocated memory: 285.012 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-777]" key="HLS 200-777" tag="" content="Using interface defaults for &apos;Vivado&apos; flow target." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1995]" key="HLS 200-1995" tag="" content="There were 999 instructions in the design after the &apos;Compile/Link&apos; phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1995]" key="HLS 200-1995" tag="" content="There were 748 instructions in the design after the &apos;Unroll/Inline (step 1)&apos; phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1995]" key="HLS 200-1995" tag="" content="There were 558 instructions in the design after the &apos;Unroll/Inline (step 2)&apos; phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1995]" key="HLS 200-1995" tag="" content="There were 521 instructions in the design after the &apos;Unroll/Inline (step 3)&apos; phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1995]" key="HLS 200-1995" tag="" content="There were 521 instructions in the design after the &apos;Unroll/Inline (step 4)&apos; phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1995]" key="HLS 200-1995" tag="" content="There were 538 instructions in the design after the &apos;Array/Struct (step 1)&apos; phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1995]" key="HLS 200-1995" tag="" content="There were 538 instructions in the design after the &apos;Array/Struct (step 2)&apos; phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1995]" key="HLS 200-1995" tag="" content="There were 538 instructions in the design after the &apos;Array/Struct (step 3)&apos; phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1995]" key="HLS 200-1995" tag="" content="There were 538 instructions in the design after the &apos;Array/Struct (step 4)&apos; phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1995]" key="HLS 200-1995" tag="" content="There were 558 instructions in the design after the &apos;Array/Struct (step 5)&apos; phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1995]" key="HLS 200-1995" tag="" content="There were 538 instructions in the design after the &apos;Performance (step 1)&apos; phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1995]" key="HLS 200-1995" tag="" content="There were 549 instructions in the design after the &apos;Performance (step 2)&apos; phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1995]" key="HLS 200-1995" tag="" content="There were 549 instructions in the design after the &apos;Performance (step 3)&apos; phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1995]" key="HLS 200-1995" tag="" content="There were 549 instructions in the design after the &apos;Performance (step 4)&apos; phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1995]" key="HLS 200-1995" tag="" content="There were 563 instructions in the design after the &apos;HW Transforms (step 1)&apos; phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1995]" key="HLS 200-1995" tag="" content="There were 691 instructions in the design after the &apos;HW Transforms (step 2)&apos; phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/run_4/project/HLS_GraphMoE_Run4/solution1/syn/report/csynth_design_size.rpt" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-131]" key="HLS 214-131" tag="" content="Inlining function &apos;elu(float)&apos; into &apos;expert_engine(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)&apos; (src/moe.cpp:78:17)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-131]" key="HLS 214-131" tag="" content="Inlining function &apos;elu(float)&apos; into &apos;expert_engine(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)&apos; (src/moe.cpp:120:17)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-131]" key="HLS 214-131" tag="" content="Inlining function &apos;elu(float)&apos; into &apos;expert_engine(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)&apos; (src/moe.cpp:99:17)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-376]" key="HLS 214-376" tag="" content="automatically set the pipeline for Loop&lt; VITIS_LOOP_243_3&gt; at src/moe.cpp:243:23" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-376]" key="HLS 214-376" tag="" content="automatically set the pipeline for Loop&lt; VITIS_LOOP_253_4&gt; at src/moe.cpp:253:23" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-376]" key="HLS 214-376" tag="" content="automatically set the pipeline for Loop&lt; VITIS_LOOP_260_5&gt; at src/moe.cpp:260:23" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-376]" key="HLS 214-376" tag="" content="automatically set the pipeline for Loop&lt; VITIS_LOOP_430_8&gt; at src/moe.cpp:430:23" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-291]" key="HLS 214-291" tag="" content="Loop &apos;VITIS_LOOP_434_9&apos; is marked as complete unroll implied by the pipeline pragma (src/moe.cpp:434:27)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-186]" key="HLS 214-186" tag="" content="Unrolling loop &apos;VITIS_LOOP_434_9&apos; (src/moe.cpp:434:27) in function &apos;graph_moe&apos; completely with a factor of 4 (src/moe.cpp:184:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Compiling Optimization and Transform: CPU user time: 2.78 seconds. CPU system time: 0.53 seconds. Elapsed time: 7.31 seconds; current allocated memory: 286.441 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 286.441 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 286.988 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 287.121 MB." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_121" tag="" content="Partitioning array &apos;expert_output&apos; (src/moe.cpp:304) in dimension 1 automatically." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;logits&apos; (src/moe.cpp:218) completely based on array size." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;exp_logits&apos; (src/moe.cpp:250) completely based on array size." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;logits&apos; (src/moe.cpp:218) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;exp_logits&apos; (src/moe.cpp:250) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Loop, function and other optimizations: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 309.832 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-2060]" key="HLS 200-2060" tag="" content="Failed to convert nested loops &apos;VITIS_LOOP_66_1&apos;(src/moe.cpp:66:22) and &apos;VITIS_LOOP_70_2&apos;(src/moe.cpp:70:26) in function &apos;expert_engine&apos; into perfectly nested loops." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-2060]" key="HLS 200-2060" tag="" content="Failed to convert nested loops &apos;VITIS_LOOP_88_3&apos;(src/moe.cpp:88:22) and &apos;VITIS_LOOP_92_4&apos;(src/moe.cpp:92:26) in function &apos;expert_engine&apos; into perfectly nested loops." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-2060]" key="HLS 200-2060" tag="" content="Failed to convert nested loops &apos;VITIS_LOOP_109_5&apos;(src/moe.cpp:109:23) and &apos;VITIS_LOOP_113_6&apos;(src/moe.cpp:113:27) in function &apos;expert_engine&apos; into perfectly nested loops." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 200-960]" key="HLS 200-960" tag="LOOP,VITIS_LATENCY" content="Cannot flatten loop &apos;VITIS_LOOP_220_1&apos; (src/moe.cpp:220:23) in function &apos;graph_moe&apos; the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop." resolution="http://docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=200-960.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-960]" key="HLS 200-960" tag="LOOP,VITIS_LATENCY" content="Cannot flatten loop &apos;VITIS_LOOP_66_1&apos; (src/moe.cpp:66:22) in function &apos;expert_engine&apos; the outer loop is not a perfect loop because there is nontrivial logic in the loop latch." resolution="http://docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=200-960.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-960]" key="HLS 200-960" tag="LOOP,VITIS_LATENCY" content="Cannot flatten loop &apos;VITIS_LOOP_88_3&apos; (src/moe.cpp:88:22) in function &apos;expert_engine&apos; the outer loop is not a perfect loop because there is nontrivial logic in the loop latch." resolution="http://docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=200-960.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-960]" key="HLS 200-960" tag="LOOP,VITIS_LATENCY" content="Cannot flatten loop &apos;VITIS_LOOP_109_5&apos; (src/moe.cpp:109:23) in function &apos;expert_engine&apos; the outer loop is not a perfect loop because there is nontrivial logic in the loop latch." resolution="http://docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=200-960.html"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Architecture Synthesis: CPU user time: 0.11 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.13 seconds; current allocated memory: 399.512 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;graph_moe&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;graph_moe_Pipeline_VITIS_LOOP_224_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;VITIS_LOOP_224_2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop &apos;VITIS_LOOP_224_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.07 seconds; current allocated memory: 400.969 MB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 400.969 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;graph_moe_Pipeline_VITIS_LOOP_243_3&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;VITIS_LOOP_243_3&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop &apos;VITIS_LOOP_243_3&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 401.520 MB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 401.520 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;graph_moe_Pipeline_VITIS_LOOP_253_4&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;VITIS_LOOP_253_4&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop &apos;VITIS_LOOP_253_4&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 401.957 MB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 401.957 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;graph_moe_Pipeline_VITIS_LOOP_260_5&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;VITIS_LOOP_260_5&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop &apos;VITIS_LOOP_260_5&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 402.367 MB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 402.367 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;expert_engine_Pipeline_VITIS_LOOP_70_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;VITIS_LOOP_70_2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop &apos;VITIS_LOOP_70_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 402.719 MB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 402.719 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;expert_engine_Pipeline_VITIS_LOOP_92_4&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;VITIS_LOOP_92_4&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop &apos;VITIS_LOOP_92_4&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 403.008 MB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 403.008 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;expert_engine_Pipeline_VITIS_LOOP_113_6&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;VITIS_LOOP_113_6&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop &apos;VITIS_LOOP_113_6&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 403.367 MB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 403.367 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;expert_engine_Pipeline_VITIS_LOOP_134_7&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;VITIS_LOOP_134_7&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop &apos;VITIS_LOOP_134_7&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 403.711 MB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 403.711 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;expert_engine&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 404.844 MB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 404.844 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;graph_moe_Pipeline_VITIS_LOOP_430_8&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;VITIS_LOOP_430_8&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = NA, Final II = 1, Depth = 11, loop &apos;VITIS_LOOP_430_8&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 405.633 MB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 405.633 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;graph_moe&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 406.648 MB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 406.648 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;graph_moe_Pipeline_VITIS_LOOP_224_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1030]" key="HLS 200-1030" tag="" content="Apply Unified Pipeline Control on module &apos;graph_moe_Pipeline_VITIS_LOOP_224_2&apos; pipeline &apos;VITIS_LOOP_224_2&apos; pipeline type &apos;loop pipeline&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;faddfsub_32ns_32ns_32_2_full_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fmul_32ns_32ns_32_2_max_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;graph_moe_Pipeline_VITIS_LOOP_224_2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 406.672 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;graph_moe_Pipeline_VITIS_LOOP_243_3&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1030]" key="HLS 200-1030" tag="" content="Apply Unified Pipeline Control on module &apos;graph_moe_Pipeline_VITIS_LOOP_243_3&apos; pipeline &apos;VITIS_LOOP_243_3&apos; pipeline type &apos;loop pipeline&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fcmp_32ns_32ns_1_1_no_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;graph_moe_Pipeline_VITIS_LOOP_243_3&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 407.809 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;graph_moe_Pipeline_VITIS_LOOP_253_4&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1030]" key="HLS 200-1030" tag="" content="Apply Unified Pipeline Control on module &apos;graph_moe_Pipeline_VITIS_LOOP_253_4&apos; pipeline &apos;VITIS_LOOP_253_4&apos; pipeline type &apos;loop pipeline&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fadd_32ns_32ns_32_2_full_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;faddfsub_32ns_32ns_32_2_full_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fexp_32ns_32ns_32_4_full_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;mux_4_2_32_1_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;graph_moe_Pipeline_VITIS_LOOP_253_4&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 409.238 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;graph_moe_Pipeline_VITIS_LOOP_260_5&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1030]" key="HLS 200-1030" tag="" content="Apply Unified Pipeline Control on module &apos;graph_moe_Pipeline_VITIS_LOOP_260_5&apos; pipeline &apos;VITIS_LOOP_260_5&apos; pipeline type &apos;loop pipeline&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fdiv_32ns_32ns_32_6_no_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;mux_4_2_32_1_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;graph_moe_Pipeline_VITIS_LOOP_260_5&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 410.480 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;expert_engine_Pipeline_VITIS_LOOP_70_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1030]" key="HLS 200-1030" tag="" content="Apply Unified Pipeline Control on module &apos;expert_engine_Pipeline_VITIS_LOOP_70_2&apos; pipeline &apos;VITIS_LOOP_70_2&apos; pipeline type &apos;loop pipeline&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fadd_32ns_32ns_32_2_full_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fmul_32ns_32ns_32_2_max_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;expert_engine_Pipeline_VITIS_LOOP_70_2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 411.457 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;expert_engine_Pipeline_VITIS_LOOP_92_4&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1030]" key="HLS 200-1030" tag="" content="Apply Unified Pipeline Control on module &apos;expert_engine_Pipeline_VITIS_LOOP_92_4&apos; pipeline &apos;VITIS_LOOP_92_4&apos; pipeline type &apos;loop pipeline&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fadd_32ns_32ns_32_2_full_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fmul_32ns_32ns_32_2_max_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;expert_engine_Pipeline_VITIS_LOOP_92_4&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 412.461 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;expert_engine_Pipeline_VITIS_LOOP_113_6&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1030]" key="HLS 200-1030" tag="" content="Apply Unified Pipeline Control on module &apos;expert_engine_Pipeline_VITIS_LOOP_113_6&apos; pipeline &apos;VITIS_LOOP_113_6&apos; pipeline type &apos;loop pipeline&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fadd_32ns_32ns_32_2_full_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fmul_32ns_32ns_32_2_max_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;expert_engine_Pipeline_VITIS_LOOP_113_6&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 413.461 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;expert_engine_Pipeline_VITIS_LOOP_134_7&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1030]" key="HLS 200-1030" tag="" content="Apply Unified Pipeline Control on module &apos;expert_engine_Pipeline_VITIS_LOOP_134_7&apos; pipeline &apos;VITIS_LOOP_134_7&apos; pipeline type &apos;loop pipeline&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fadd_32ns_32ns_32_2_full_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fmul_32ns_32ns_32_2_max_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;expert_engine_Pipeline_VITIS_LOOP_134_7&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 414.477 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;expert_engine&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fadd_32ns_32ns_32_2_full_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fcmp_32ns_32ns_1_1_no_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fexp_32ns_32ns_32_4_full_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fmul_32ns_32ns_32_2_max_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;expert_engine&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;graph_moe_expert_engine_l1_RAM_AUTO_1R1W&apos; using auto RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;graph_moe_expert_engine_l2_RAM_AUTO_1R1W&apos; using auto RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;graph_moe_expert_engine_l3_RAM_AUTO_1R1W&apos; using auto RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 416.828 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;graph_moe_Pipeline_VITIS_LOOP_430_8&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1030]" key="HLS 200-1030" tag="" content="Apply Unified Pipeline Control on module &apos;graph_moe_Pipeline_VITIS_LOOP_430_8&apos; pipeline &apos;VITIS_LOOP_430_8&apos; pipeline type &apos;loop pipeline&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fadd_32ns_32ns_32_2_full_dsp_1&apos;: 3 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;faddfsub_32ns_32ns_32_2_full_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fmul_32ns_32ns_32_2_max_dsp_1&apos;: 4 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;graph_moe_Pipeline_VITIS_LOOP_430_8&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 420.363 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;graph_moe&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_918" tag="" content="Design contains AXI ports. Reset is fixed to synchronous and active low." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;graph_moe/input_r&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;graph_moe/gate_weight&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;graph_moe/gate_bias&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;graph_moe/w1&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;graph_moe/b1&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;graph_moe/w2&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;graph_moe/b2&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;graph_moe/w3&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;graph_moe/b3&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;graph_moe/w4&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;graph_moe/b4&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;graph_moe/output_r&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;graph_moe/gates&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;graph_moe&apos; to &apos;s_axilite &amp; ap_ctrl_hs&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_851" tag="" content="Bundling port &apos;return&apos; to AXI-Lite port control." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fadd_32ns_32ns_32_2_full_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;faddfsub_32ns_32ns_32_2_full_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fmul_32ns_32ns_32_2_max_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;graph_moe&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;graph_moe_expert_output_0_RAM_AUTO_1R1W&apos; using auto RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 422.949 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Generating all RTL models: CPU user time: 0.23 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.25 seconds; current allocated memory: 427.734 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Updating report files: CPU user time: 0.62 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.64 seconds; current allocated memory: 434.898 MB." resolution=""/>
+	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for graph_moe." resolution=""/>
+	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for graph_moe." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-790]" key="HLS 200-790" tag="LOOP,VITIS_KERNEL" content="**** Loop Constraint Status: All loop constraints were satisfied." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-789]" key="HLS 200-789" tag="THROUGHPUT,VITIS_KERNEL" content="**** Estimated Fmax: 137.27 MHz" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command csynth_design CPU user time: 6.64 seconds. CPU system time: 1.43 seconds. Elapsed time: 12.11 seconds; current allocated memory: 153.195 MB." resolution=""/>
+</Messages>

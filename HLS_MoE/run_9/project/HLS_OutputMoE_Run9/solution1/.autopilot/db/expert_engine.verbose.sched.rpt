@@ -1,0 +1,498 @@
+
+
+================================================================
+== Vitis HLS Report for 'expert_engine'
+================================================================
+* Date:           Sun Sep 13 13:16:47 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        HLS_OutputMoE_Run9
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p_CIV-figd2104-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.028 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    94079|    94079|  0.941 ms|  0.941 ms|  94079|  94079|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 40
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 41 [2/2] (0.00ns)   --->   "%call_ret = call i32 @generic_mlp_head, i32 %input_r, i32 %e0_perf_w0, i32 %e0_perf_b0, i32 %p_ZL10e0_perf_w1_0, i32 %p_ZL10e0_perf_w1_1, i32 %p_ZL10e0_perf_w1_2, i32 %p_ZL10e0_perf_w1_3, i32 %p_ZL10e0_perf_w1_4, i32 %p_ZL10e0_perf_w1_5, i32 %p_ZL10e0_perf_w1_6, i32 %p_ZL10e0_perf_w1_7, i32 %p_ZL10e0_perf_w1_8, i32 %p_ZL10e0_perf_w1_9, i32 %p_ZL10e0_perf_w1_10, i32 %p_ZL10e0_perf_w1_11, i32 %p_ZL10e0_perf_w1_12, i32 %p_ZL10e0_perf_w1_13, i32 %p_ZL10e0_perf_w1_14, i32 %p_ZL10e0_perf_w1_15, i32 %p_ZL10e0_perf_w1_16, i32 %p_ZL10e0_perf_w1_17, i32 %p_ZL10e0_perf_w1_18, i32 %p_ZL10e0_perf_w1_19, i32 %p_ZL10e0_perf_w1_20, i32 %p_ZL10e0_perf_w1_21, i32 %p_ZL10e0_perf_w1_22, i32 %p_ZL10e0_perf_w1_23, i32 %p_ZL10e0_perf_w1_24, i32 %p_ZL10e0_perf_w1_25, i32 %p_ZL10e0_perf_w1_26, i32 %p_ZL10e0_perf_w1_27, i32 %p_ZL10e0_perf_w1_28, i32 %p_ZL10e0_perf_w1_29, i32 %p_ZL10e0_perf_w1_30, i32 %p_ZL10e0_perf_w1_31, i32 %e0_perf_b1, i32 %p_ZL10e0_perf_w2_0, i32 %p_ZL10e0_perf_w2_1, i32 %p_ZL10e0_perf_w2_2, i32 %p_ZL10e0_perf_w2_3, i32 %p_ZL10e0_perf_w2_4, i32 %p_ZL10e0_perf_w2_5, i32 %p_ZL10e0_perf_w2_6, i32 %p_ZL10e0_perf_w2_7, i32 %p_ZL10e0_perf_w2_8, i32 %p_ZL10e0_perf_w2_9, i32 %p_ZL10e0_perf_w2_10, i32 %p_ZL10e0_perf_w2_11, i32 %p_ZL10e0_perf_w2_12, i32 %p_ZL10e0_perf_w2_13, i32 %p_ZL10e0_perf_w2_14, i32 %p_ZL10e0_perf_w2_15, i32 %e0_perf_b2, i32 %e0_perf_w3_0, i32 0.0208809" [src/moe.cpp:841->src/moe.cpp:913]   --->   Operation 41 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.54>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%expert_output_0_addr = getelementptr i32 %expert_output_0, i64 0, i64 0" [src/moe.cpp:941]   --->   Operation 42 'getelementptr' 'expert_output_0_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/2] (0.00ns)   --->   "%call_ret = call i32 @generic_mlp_head, i32 %input_r, i32 %e0_perf_w0, i32 %e0_perf_b0, i32 %p_ZL10e0_perf_w1_0, i32 %p_ZL10e0_perf_w1_1, i32 %p_ZL10e0_perf_w1_2, i32 %p_ZL10e0_perf_w1_3, i32 %p_ZL10e0_perf_w1_4, i32 %p_ZL10e0_perf_w1_5, i32 %p_ZL10e0_perf_w1_6, i32 %p_ZL10e0_perf_w1_7, i32 %p_ZL10e0_perf_w1_8, i32 %p_ZL10e0_perf_w1_9, i32 %p_ZL10e0_perf_w1_10, i32 %p_ZL10e0_perf_w1_11, i32 %p_ZL10e0_perf_w1_12, i32 %p_ZL10e0_perf_w1_13, i32 %p_ZL10e0_perf_w1_14, i32 %p_ZL10e0_perf_w1_15, i32 %p_ZL10e0_perf_w1_16, i32 %p_ZL10e0_perf_w1_17, i32 %p_ZL10e0_perf_w1_18, i32 %p_ZL10e0_perf_w1_19, i32 %p_ZL10e0_perf_w1_20, i32 %p_ZL10e0_perf_w1_21, i32 %p_ZL10e0_perf_w1_22, i32 %p_ZL10e0_perf_w1_23, i32 %p_ZL10e0_perf_w1_24, i32 %p_ZL10e0_perf_w1_25, i32 %p_ZL10e0_perf_w1_26, i32 %p_ZL10e0_perf_w1_27, i32 %p_ZL10e0_perf_w1_28, i32 %p_ZL10e0_perf_w1_29, i32 %p_ZL10e0_perf_w1_30, i32 %p_ZL10e0_perf_w1_31, i32 %e0_perf_b1, i32 %p_ZL10e0_perf_w2_0, i32 %p_ZL10e0_perf_w2_1, i32 %p_ZL10e0_perf_w2_2, i32 %p_ZL10e0_perf_w2_3, i32 %p_ZL10e0_perf_w2_4, i32 %p_ZL10e0_perf_w2_5, i32 %p_ZL10e0_perf_w2_6, i32 %p_ZL10e0_perf_w2_7, i32 %p_ZL10e0_perf_w2_8, i32 %p_ZL10e0_perf_w2_9, i32 %p_ZL10e0_perf_w2_10, i32 %p_ZL10e0_perf_w2_11, i32 %p_ZL10e0_perf_w2_12, i32 %p_ZL10e0_perf_w2_13, i32 %p_ZL10e0_perf_w2_14, i32 %p_ZL10e0_perf_w2_15, i32 %e0_perf_b2, i32 %e0_perf_w3_0, i32 0.0208809" [src/moe.cpp:841->src/moe.cpp:913]   --->   Operation 43 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 44 [1/1] (0.54ns)   --->   "%store_ln841 = store i32 %call_ret, i3 %expert_output_0_addr" [src/moe.cpp:841->src/moe.cpp:913]   --->   Operation 44 'store' 'store_ln841' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 45 [2/2] (0.00ns)   --->   "%call_ret1 = call i32 @generic_mlp_head, i32 %input_r, i32 %e0_lut_w0, i32 %e0_lut_b0, i32 %p_ZL9e0_lut_w1_0, i32 %p_ZL9e0_lut_w1_1, i32 %p_ZL9e0_lut_w1_2, i32 %p_ZL9e0_lut_w1_3, i32 %p_ZL9e0_lut_w1_4, i32 %p_ZL9e0_lut_w1_5, i32 %p_ZL9e0_lut_w1_6, i32 %p_ZL9e0_lut_w1_7, i32 %p_ZL9e0_lut_w1_8, i32 %p_ZL9e0_lut_w1_9, i32 %p_ZL9e0_lut_w1_10, i32 %p_ZL9e0_lut_w1_11, i32 %p_ZL9e0_lut_w1_12, i32 %p_ZL9e0_lut_w1_13, i32 %p_ZL9e0_lut_w1_14, i32 %p_ZL9e0_lut_w1_15, i32 %p_ZL9e0_lut_w1_16, i32 %p_ZL9e0_lut_w1_17, i32 %p_ZL9e0_lut_w1_18, i32 %p_ZL9e0_lut_w1_19, i32 %p_ZL9e0_lut_w1_20, i32 %p_ZL9e0_lut_w1_21, i32 %p_ZL9e0_lut_w1_22, i32 %p_ZL9e0_lut_w1_23, i32 %p_ZL9e0_lut_w1_24, i32 %p_ZL9e0_lut_w1_25, i32 %p_ZL9e0_lut_w1_26, i32 %p_ZL9e0_lut_w1_27, i32 %p_ZL9e0_lut_w1_28, i32 %p_ZL9e0_lut_w1_29, i32 %p_ZL9e0_lut_w1_30, i32 %p_ZL9e0_lut_w1_31, i32 %e0_lut_b1, i32 %p_ZL9e0_lut_w2_0, i32 %p_ZL9e0_lut_w2_1, i32 %p_ZL9e0_lut_w2_2, i32 %p_ZL9e0_lut_w2_3, i32 %p_ZL9e0_lut_w2_4, i32 %p_ZL9e0_lut_w2_5, i32 %p_ZL9e0_lut_w2_6, i32 %p_ZL9e0_lut_w2_7, i32 %p_ZL9e0_lut_w2_8, i32 %p_ZL9e0_lut_w2_9, i32 %p_ZL9e0_lut_w2_10, i32 %p_ZL9e0_lut_w2_11, i32 %p_ZL9e0_lut_w2_12, i32 %p_ZL9e0_lut_w2_13, i32 %p_ZL9e0_lut_w2_14, i32 %p_ZL9e0_lut_w2_15, i32 %e0_lut_b2, i32 %e0_lut_w3_0, i32 0.280556" [src/moe.cpp:850->src/moe.cpp:913]   --->   Operation 45 'call' 'call_ret1' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.54>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%expert_output_0_addr_1 = getelementptr i32 %expert_output_0, i64 0, i64 1" [src/moe.cpp:856->src/moe.cpp:913]   --->   Operation 46 'getelementptr' 'expert_output_0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 47 [1/2] (0.00ns)   --->   "%call_ret1 = call i32 @generic_mlp_head, i32 %input_r, i32 %e0_lut_w0, i32 %e0_lut_b0, i32 %p_ZL9e0_lut_w1_0, i32 %p_ZL9e0_lut_w1_1, i32 %p_ZL9e0_lut_w1_2, i32 %p_ZL9e0_lut_w1_3, i32 %p_ZL9e0_lut_w1_4, i32 %p_ZL9e0_lut_w1_5, i32 %p_ZL9e0_lut_w1_6, i32 %p_ZL9e0_lut_w1_7, i32 %p_ZL9e0_lut_w1_8, i32 %p_ZL9e0_lut_w1_9, i32 %p_ZL9e0_lut_w1_10, i32 %p_ZL9e0_lut_w1_11, i32 %p_ZL9e0_lut_w1_12, i32 %p_ZL9e0_lut_w1_13, i32 %p_ZL9e0_lut_w1_14, i32 %p_ZL9e0_lut_w1_15, i32 %p_ZL9e0_lut_w1_16, i32 %p_ZL9e0_lut_w1_17, i32 %p_ZL9e0_lut_w1_18, i32 %p_ZL9e0_lut_w1_19, i32 %p_ZL9e0_lut_w1_20, i32 %p_ZL9e0_lut_w1_21, i32 %p_ZL9e0_lut_w1_22, i32 %p_ZL9e0_lut_w1_23, i32 %p_ZL9e0_lut_w1_24, i32 %p_ZL9e0_lut_w1_25, i32 %p_ZL9e0_lut_w1_26, i32 %p_ZL9e0_lut_w1_27, i32 %p_ZL9e0_lut_w1_28, i32 %p_ZL9e0_lut_w1_29, i32 %p_ZL9e0_lut_w1_30, i32 %p_ZL9e0_lut_w1_31, i32 %e0_lut_b1, i32 %p_ZL9e0_lut_w2_0, i32 %p_ZL9e0_lut_w2_1, i32 %p_ZL9e0_lut_w2_2, i32 %p_ZL9e0_lut_w2_3, i32 %p_ZL9e0_lut_w2_4, i32 %p_ZL9e0_lut_w2_5, i32 %p_ZL9e0_lut_w2_6, i32 %p_ZL9e0_lut_w2_7, i32 %p_ZL9e0_lut_w2_8, i32 %p_ZL9e0_lut_w2_9, i32 %p_ZL9e0_lut_w2_10, i32 %p_ZL9e0_lut_w2_11, i32 %p_ZL9e0_lut_w2_12, i32 %p_ZL9e0_lut_w2_13, i32 %p_ZL9e0_lut_w2_14, i32 %p_ZL9e0_lut_w2_15, i32 %e0_lut_b2, i32 %e0_lut_w3_0, i32 0.280556" [src/moe.cpp:850->src/moe.cpp:913]   --->   Operation 47 'call' 'call_ret1' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 48 [1/1] (0.54ns)   --->   "%store_ln850 = store i32 %call_ret1, i3 %expert_output_0_addr_1" [src/moe.cpp:850->src/moe.cpp:913]   --->   Operation 48 'store' 'store_ln850' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 49 [2/2] (0.00ns)   --->   "%call_ret2 = call i32 @generic_mlp_head, i32 %input_r, i32 %e0_ff_w0, i32 %e0_ff_b0, i32 %p_ZL8e0_ff_w1_0, i32 %p_ZL8e0_ff_w1_1, i32 %p_ZL8e0_ff_w1_2, i32 %p_ZL8e0_ff_w1_3, i32 %p_ZL8e0_ff_w1_4, i32 %p_ZL8e0_ff_w1_5, i32 %p_ZL8e0_ff_w1_6, i32 %p_ZL8e0_ff_w1_7, i32 %p_ZL8e0_ff_w1_8, i32 %p_ZL8e0_ff_w1_9, i32 %p_ZL8e0_ff_w1_10, i32 %p_ZL8e0_ff_w1_11, i32 %p_ZL8e0_ff_w1_12, i32 %p_ZL8e0_ff_w1_13, i32 %p_ZL8e0_ff_w1_14, i32 %p_ZL8e0_ff_w1_15, i32 %p_ZL8e0_ff_w1_16, i32 %p_ZL8e0_ff_w1_17, i32 %p_ZL8e0_ff_w1_18, i32 %p_ZL8e0_ff_w1_19, i32 %p_ZL8e0_ff_w1_20, i32 %p_ZL8e0_ff_w1_21, i32 %p_ZL8e0_ff_w1_22, i32 %p_ZL8e0_ff_w1_23, i32 %p_ZL8e0_ff_w1_24, i32 %p_ZL8e0_ff_w1_25, i32 %p_ZL8e0_ff_w1_26, i32 %p_ZL8e0_ff_w1_27, i32 %p_ZL8e0_ff_w1_28, i32 %p_ZL8e0_ff_w1_29, i32 %p_ZL8e0_ff_w1_30, i32 %p_ZL8e0_ff_w1_31, i32 %e0_ff_b1, i32 %p_ZL8e0_ff_w2_0, i32 %p_ZL8e0_ff_w2_1, i32 %p_ZL8e0_ff_w2_2, i32 %p_ZL8e0_ff_w2_3, i32 %p_ZL8e0_ff_w2_4, i32 %p_ZL8e0_ff_w2_5, i32 %p_ZL8e0_ff_w2_6, i32 %p_ZL8e0_ff_w2_7, i32 %p_ZL8e0_ff_w2_8, i32 %p_ZL8e0_ff_w2_9, i32 %p_ZL8e0_ff_w2_10, i32 %p_ZL8e0_ff_w2_11, i32 %p_ZL8e0_ff_w2_12, i32 %p_ZL8e0_ff_w2_13, i32 %p_ZL8e0_ff_w2_14, i32 %p_ZL8e0_ff_w2_15, i32 %e0_ff_b2, i32 %e0_ff_w3_0, i32 0.125279" [src/moe.cpp:859->src/moe.cpp:913]   --->   Operation 49 'call' 'call_ret2' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.54>
+ST_6 : Operation 50 [1/1] (0.00ns)   --->   "%expert_output_0_addr_2 = getelementptr i32 %expert_output_0, i64 0, i64 2" [src/moe.cpp:865->src/moe.cpp:913]   --->   Operation 50 'getelementptr' 'expert_output_0_addr_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 51 [1/2] (0.00ns)   --->   "%call_ret2 = call i32 @generic_mlp_head, i32 %input_r, i32 %e0_ff_w0, i32 %e0_ff_b0, i32 %p_ZL8e0_ff_w1_0, i32 %p_ZL8e0_ff_w1_1, i32 %p_ZL8e0_ff_w1_2, i32 %p_ZL8e0_ff_w1_3, i32 %p_ZL8e0_ff_w1_4, i32 %p_ZL8e0_ff_w1_5, i32 %p_ZL8e0_ff_w1_6, i32 %p_ZL8e0_ff_w1_7, i32 %p_ZL8e0_ff_w1_8, i32 %p_ZL8e0_ff_w1_9, i32 %p_ZL8e0_ff_w1_10, i32 %p_ZL8e0_ff_w1_11, i32 %p_ZL8e0_ff_w1_12, i32 %p_ZL8e0_ff_w1_13, i32 %p_ZL8e0_ff_w1_14, i32 %p_ZL8e0_ff_w1_15, i32 %p_ZL8e0_ff_w1_16, i32 %p_ZL8e0_ff_w1_17, i32 %p_ZL8e0_ff_w1_18, i32 %p_ZL8e0_ff_w1_19, i32 %p_ZL8e0_ff_w1_20, i32 %p_ZL8e0_ff_w1_21, i32 %p_ZL8e0_ff_w1_22, i32 %p_ZL8e0_ff_w1_23, i32 %p_ZL8e0_ff_w1_24, i32 %p_ZL8e0_ff_w1_25, i32 %p_ZL8e0_ff_w1_26, i32 %p_ZL8e0_ff_w1_27, i32 %p_ZL8e0_ff_w1_28, i32 %p_ZL8e0_ff_w1_29, i32 %p_ZL8e0_ff_w1_30, i32 %p_ZL8e0_ff_w1_31, i32 %e0_ff_b1, i32 %p_ZL8e0_ff_w2_0, i32 %p_ZL8e0_ff_w2_1, i32 %p_ZL8e0_ff_w2_2, i32 %p_ZL8e0_ff_w2_3, i32 %p_ZL8e0_ff_w2_4, i32 %p_ZL8e0_ff_w2_5, i32 %p_ZL8e0_ff_w2_6, i32 %p_ZL8e0_ff_w2_7, i32 %p_ZL8e0_ff_w2_8, i32 %p_ZL8e0_ff_w2_9, i32 %p_ZL8e0_ff_w2_10, i32 %p_ZL8e0_ff_w2_11, i32 %p_ZL8e0_ff_w2_12, i32 %p_ZL8e0_ff_w2_13, i32 %p_ZL8e0_ff_w2_14, i32 %p_ZL8e0_ff_w2_15, i32 %e0_ff_b2, i32 %e0_ff_w3_0, i32 0.125279" [src/moe.cpp:859->src/moe.cpp:913]   --->   Operation 51 'call' 'call_ret2' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 52 [1/1] (0.54ns)   --->   "%store_ln859 = store i32 %call_ret2, i3 %expert_output_0_addr_2" [src/moe.cpp:859->src/moe.cpp:913]   --->   Operation 52 'store' 'store_ln859' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 53 [2/2] (0.00ns)   --->   "%call_ret3 = call i32 @generic_mlp_head, i32 %input_r, i32 %e0_dsp_w0, i32 %e0_dsp_b0, i32 %p_ZL9e0_dsp_w1_0, i32 %p_ZL9e0_dsp_w1_1, i32 %p_ZL9e0_dsp_w1_2, i32 %p_ZL9e0_dsp_w1_3, i32 %p_ZL9e0_dsp_w1_4, i32 %p_ZL9e0_dsp_w1_5, i32 %p_ZL9e0_dsp_w1_6, i32 %p_ZL9e0_dsp_w1_7, i32 %p_ZL9e0_dsp_w1_8, i32 %p_ZL9e0_dsp_w1_9, i32 %p_ZL9e0_dsp_w1_10, i32 %p_ZL9e0_dsp_w1_11, i32 %p_ZL9e0_dsp_w1_12, i32 %p_ZL9e0_dsp_w1_13, i32 %p_ZL9e0_dsp_w1_14, i32 %p_ZL9e0_dsp_w1_15, i32 %p_ZL9e0_dsp_w1_16, i32 %p_ZL9e0_dsp_w1_17, i32 %p_ZL9e0_dsp_w1_18, i32 %p_ZL9e0_dsp_w1_19, i32 %p_ZL9e0_dsp_w1_20, i32 %p_ZL9e0_dsp_w1_21, i32 %p_ZL9e0_dsp_w1_22, i32 %p_ZL9e0_dsp_w1_23, i32 %p_ZL9e0_dsp_w1_24, i32 %p_ZL9e0_dsp_w1_25, i32 %p_ZL9e0_dsp_w1_26, i32 %p_ZL9e0_dsp_w1_27, i32 %p_ZL9e0_dsp_w1_28, i32 %p_ZL9e0_dsp_w1_29, i32 %p_ZL9e0_dsp_w1_30, i32 %p_ZL9e0_dsp_w1_31, i32 %e0_dsp_b1, i32 %p_ZL9e0_dsp_w2_0, i32 %p_ZL9e0_dsp_w2_1, i32 %p_ZL9e0_dsp_w2_2, i32 %p_ZL9e0_dsp_w2_3, i32 %p_ZL9e0_dsp_w2_4, i32 %p_ZL9e0_dsp_w2_5, i32 %p_ZL9e0_dsp_w2_6, i32 %p_ZL9e0_dsp_w2_7, i32 %p_ZL9e0_dsp_w2_8, i32 %p_ZL9e0_dsp_w2_9, i32 %p_ZL9e0_dsp_w2_10, i32 %p_ZL9e0_dsp_w2_11, i32 %p_ZL9e0_dsp_w2_12, i32 %p_ZL9e0_dsp_w2_13, i32 %p_ZL9e0_dsp_w2_14, i32 %p_ZL9e0_dsp_w2_15, i32 %e0_dsp_b2, i32 %e0_dsp_w3_0, i32 0.0756483" [src/moe.cpp:868->src/moe.cpp:913]   --->   Operation 53 'call' 'call_ret3' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.54>
+ST_8 : Operation 54 [1/1] (0.00ns)   --->   "%expert_output_0_addr_3 = getelementptr i32 %expert_output_0, i64 0, i64 3" [src/moe.cpp:874->src/moe.cpp:913]   --->   Operation 54 'getelementptr' 'expert_output_0_addr_3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 55 [1/2] (0.00ns)   --->   "%call_ret3 = call i32 @generic_mlp_head, i32 %input_r, i32 %e0_dsp_w0, i32 %e0_dsp_b0, i32 %p_ZL9e0_dsp_w1_0, i32 %p_ZL9e0_dsp_w1_1, i32 %p_ZL9e0_dsp_w1_2, i32 %p_ZL9e0_dsp_w1_3, i32 %p_ZL9e0_dsp_w1_4, i32 %p_ZL9e0_dsp_w1_5, i32 %p_ZL9e0_dsp_w1_6, i32 %p_ZL9e0_dsp_w1_7, i32 %p_ZL9e0_dsp_w1_8, i32 %p_ZL9e0_dsp_w1_9, i32 %p_ZL9e0_dsp_w1_10, i32 %p_ZL9e0_dsp_w1_11, i32 %p_ZL9e0_dsp_w1_12, i32 %p_ZL9e0_dsp_w1_13, i32 %p_ZL9e0_dsp_w1_14, i32 %p_ZL9e0_dsp_w1_15, i32 %p_ZL9e0_dsp_w1_16, i32 %p_ZL9e0_dsp_w1_17, i32 %p_ZL9e0_dsp_w1_18, i32 %p_ZL9e0_dsp_w1_19, i32 %p_ZL9e0_dsp_w1_20, i32 %p_ZL9e0_dsp_w1_21, i32 %p_ZL9e0_dsp_w1_22, i32 %p_ZL9e0_dsp_w1_23, i32 %p_ZL9e0_dsp_w1_24, i32 %p_ZL9e0_dsp_w1_25, i32 %p_ZL9e0_dsp_w1_26, i32 %p_ZL9e0_dsp_w1_27, i32 %p_ZL9e0_dsp_w1_28, i32 %p_ZL9e0_dsp_w1_29, i32 %p_ZL9e0_dsp_w1_30, i32 %p_ZL9e0_dsp_w1_31, i32 %e0_dsp_b1, i32 %p_ZL9e0_dsp_w2_0, i32 %p_ZL9e0_dsp_w2_1, i32 %p_ZL9e0_dsp_w2_2, i32 %p_ZL9e0_dsp_w2_3, i32 %p_ZL9e0_dsp_w2_4, i32 %p_ZL9e0_dsp_w2_5, i32 %p_ZL9e0_dsp_w2_6, i32 %p_ZL9e0_dsp_w2_7, i32 %p_ZL9e0_dsp_w2_8, i32 %p_ZL9e0_dsp_w2_9, i32 %p_ZL9e0_dsp_w2_10, i32 %p_ZL9e0_dsp_w2_11, i32 %p_ZL9e0_dsp_w2_12, i32 %p_ZL9e0_dsp_w2_13, i32 %p_ZL9e0_dsp_w2_14, i32 %p_ZL9e0_dsp_w2_15, i32 %e0_dsp_b2, i32 %e0_dsp_w3_0, i32 0.0756483" [src/moe.cpp:868->src/moe.cpp:913]   --->   Operation 55 'call' 'call_ret3' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 56 [1/1] (0.54ns)   --->   "%store_ln868 = store i32 %call_ret3, i3 %expert_output_0_addr_3" [src/moe.cpp:868->src/moe.cpp:913]   --->   Operation 56 'store' 'store_ln868' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 57 [2/2] (0.00ns)   --->   "%call_ret4 = call i32 @generic_mlp_head, i32 %input_r, i32 %e0_bram_w0, i32 %e0_bram_b0, i32 %p_ZL10e0_bram_w1_0, i32 %p_ZL10e0_bram_w1_1, i32 %p_ZL10e0_bram_w1_2, i32 %p_ZL10e0_bram_w1_3, i32 %p_ZL10e0_bram_w1_4, i32 %p_ZL10e0_bram_w1_5, i32 %p_ZL10e0_bram_w1_6, i32 %p_ZL10e0_bram_w1_7, i32 %p_ZL10e0_bram_w1_8, i32 %p_ZL10e0_bram_w1_9, i32 %p_ZL10e0_bram_w1_10, i32 %p_ZL10e0_bram_w1_11, i32 %p_ZL10e0_bram_w1_12, i32 %p_ZL10e0_bram_w1_13, i32 %p_ZL10e0_bram_w1_14, i32 %p_ZL10e0_bram_w1_15, i32 %p_ZL10e0_bram_w1_16, i32 %p_ZL10e0_bram_w1_17, i32 %p_ZL10e0_bram_w1_18, i32 %p_ZL10e0_bram_w1_19, i32 %p_ZL10e0_bram_w1_20, i32 %p_ZL10e0_bram_w1_21, i32 %p_ZL10e0_bram_w1_22, i32 %p_ZL10e0_bram_w1_23, i32 %p_ZL10e0_bram_w1_24, i32 %p_ZL10e0_bram_w1_25, i32 %p_ZL10e0_bram_w1_26, i32 %p_ZL10e0_bram_w1_27, i32 %p_ZL10e0_bram_w1_28, i32 %p_ZL10e0_bram_w1_29, i32 %p_ZL10e0_bram_w1_30, i32 %p_ZL10e0_bram_w1_31, i32 %e0_bram_b1, i32 %p_ZL10e0_bram_w2_0, i32 %p_ZL10e0_bram_w2_1, i32 %p_ZL10e0_bram_w2_2, i32 %p_ZL10e0_bram_w2_3, i32 %p_ZL10e0_bram_w2_4, i32 %p_ZL10e0_bram_w2_5, i32 %p_ZL10e0_bram_w2_6, i32 %p_ZL10e0_bram_w2_7, i32 %p_ZL10e0_bram_w2_8, i32 %p_ZL10e0_bram_w2_9, i32 %p_ZL10e0_bram_w2_10, i32 %p_ZL10e0_bram_w2_11, i32 %p_ZL10e0_bram_w2_12, i32 %p_ZL10e0_bram_w2_13, i32 %p_ZL10e0_bram_w2_14, i32 %p_ZL10e0_bram_w2_15, i32 %e0_bram_b2, i32 %e0_bram_w3_0, i32 0.0797282" [src/moe.cpp:877->src/moe.cpp:913]   --->   Operation 57 'call' 'call_ret4' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.54>
+ST_10 : Operation 58 [1/1] (0.00ns)   --->   "%expert_output_0_addr_4 = getelementptr i32 %expert_output_0, i64 0, i64 4" [src/moe.cpp:883->src/moe.cpp:913]   --->   Operation 58 'getelementptr' 'expert_output_0_addr_4' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 59 [1/2] (0.00ns)   --->   "%call_ret4 = call i32 @generic_mlp_head, i32 %input_r, i32 %e0_bram_w0, i32 %e0_bram_b0, i32 %p_ZL10e0_bram_w1_0, i32 %p_ZL10e0_bram_w1_1, i32 %p_ZL10e0_bram_w1_2, i32 %p_ZL10e0_bram_w1_3, i32 %p_ZL10e0_bram_w1_4, i32 %p_ZL10e0_bram_w1_5, i32 %p_ZL10e0_bram_w1_6, i32 %p_ZL10e0_bram_w1_7, i32 %p_ZL10e0_bram_w1_8, i32 %p_ZL10e0_bram_w1_9, i32 %p_ZL10e0_bram_w1_10, i32 %p_ZL10e0_bram_w1_11, i32 %p_ZL10e0_bram_w1_12, i32 %p_ZL10e0_bram_w1_13, i32 %p_ZL10e0_bram_w1_14, i32 %p_ZL10e0_bram_w1_15, i32 %p_ZL10e0_bram_w1_16, i32 %p_ZL10e0_bram_w1_17, i32 %p_ZL10e0_bram_w1_18, i32 %p_ZL10e0_bram_w1_19, i32 %p_ZL10e0_bram_w1_20, i32 %p_ZL10e0_bram_w1_21, i32 %p_ZL10e0_bram_w1_22, i32 %p_ZL10e0_bram_w1_23, i32 %p_ZL10e0_bram_w1_24, i32 %p_ZL10e0_bram_w1_25, i32 %p_ZL10e0_bram_w1_26, i32 %p_ZL10e0_bram_w1_27, i32 %p_ZL10e0_bram_w1_28, i32 %p_ZL10e0_bram_w1_29, i32 %p_ZL10e0_bram_w1_30, i32 %p_ZL10e0_bram_w1_31, i32 %e0_bram_b1, i32 %p_ZL10e0_bram_w2_0, i32 %p_ZL10e0_bram_w2_1, i32 %p_ZL10e0_bram_w2_2, i32 %p_ZL10e0_bram_w2_3, i32 %p_ZL10e0_bram_w2_4, i32 %p_ZL10e0_bram_w2_5, i32 %p_ZL10e0_bram_w2_6, i32 %p_ZL10e0_bram_w2_7, i32 %p_ZL10e0_bram_w2_8, i32 %p_ZL10e0_bram_w2_9, i32 %p_ZL10e0_bram_w2_10, i32 %p_ZL10e0_bram_w2_11, i32 %p_ZL10e0_bram_w2_12, i32 %p_ZL10e0_bram_w2_13, i32 %p_ZL10e0_bram_w2_14, i32 %p_ZL10e0_bram_w2_15, i32 %e0_bram_b2, i32 %e0_bram_w3_0, i32 0.0797282" [src/moe.cpp:877->src/moe.cpp:913]   --->   Operation 59 'call' 'call_ret4' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 60 [1/1] (0.54ns)   --->   "%store_ln877 = store i32 %call_ret4, i3 %expert_output_0_addr_4" [src/moe.cpp:877->src/moe.cpp:913]   --->   Operation 60 'store' 'store_ln877' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 61 [2/2] (0.00ns)   --->   "%call_ret5 = call i32 @generic_mlp_head, i32 %input_r, i32 %e1_perf_w0, i32 %e1_perf_b0, i32 %p_ZL10e1_perf_w1_0, i32 %p_ZL10e1_perf_w1_1, i32 %p_ZL10e1_perf_w1_2, i32 %p_ZL10e1_perf_w1_3, i32 %p_ZL10e1_perf_w1_4, i32 %p_ZL10e1_perf_w1_5, i32 %p_ZL10e1_perf_w1_6, i32 %p_ZL10e1_perf_w1_7, i32 %p_ZL10e1_perf_w1_8, i32 %p_ZL10e1_perf_w1_9, i32 %p_ZL10e1_perf_w1_10, i32 %p_ZL10e1_perf_w1_11, i32 %p_ZL10e1_perf_w1_12, i32 %p_ZL10e1_perf_w1_13, i32 %p_ZL10e1_perf_w1_14, i32 %p_ZL10e1_perf_w1_15, i32 %p_ZL10e1_perf_w1_16, i32 %p_ZL10e1_perf_w1_17, i32 %p_ZL10e1_perf_w1_18, i32 %p_ZL10e1_perf_w1_19, i32 %p_ZL10e1_perf_w1_20, i32 %p_ZL10e1_perf_w1_21, i32 %p_ZL10e1_perf_w1_22, i32 %p_ZL10e1_perf_w1_23, i32 %p_ZL10e1_perf_w1_24, i32 %p_ZL10e1_perf_w1_25, i32 %p_ZL10e1_perf_w1_26, i32 %p_ZL10e1_perf_w1_27, i32 %p_ZL10e1_perf_w1_28, i32 %p_ZL10e1_perf_w1_29, i32 %p_ZL10e1_perf_w1_30, i32 %p_ZL10e1_perf_w1_31, i32 %e1_perf_b1, i32 %p_ZL10e1_perf_w2_0, i32 %p_ZL10e1_perf_w2_1, i32 %p_ZL10e1_perf_w2_2, i32 %p_ZL10e1_perf_w2_3, i32 %p_ZL10e1_perf_w2_4, i32 %p_ZL10e1_perf_w2_5, i32 %p_ZL10e1_perf_w2_6, i32 %p_ZL10e1_perf_w2_7, i32 %p_ZL10e1_perf_w2_8, i32 %p_ZL10e1_perf_w2_9, i32 %p_ZL10e1_perf_w2_10, i32 %p_ZL10e1_perf_w2_11, i32 %p_ZL10e1_perf_w2_12, i32 %p_ZL10e1_perf_w2_13, i32 %p_ZL10e1_perf_w2_14, i32 %p_ZL10e1_perf_w2_15, i32 %e1_perf_b2, i32 %e1_perf_w3_0, i32 0.0398988" [src/moe.cpp:841->src/moe.cpp:948]   --->   Operation 61 'call' 'call_ret5' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 0.54>
+ST_12 : Operation 62 [1/1] (0.00ns)   --->   "%expert_output_1_addr = getelementptr i32 %expert_output_1, i64 0, i64 0" [src/moe.cpp:941]   --->   Operation 62 'getelementptr' 'expert_output_1_addr' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 63 [1/2] (0.00ns)   --->   "%call_ret5 = call i32 @generic_mlp_head, i32 %input_r, i32 %e1_perf_w0, i32 %e1_perf_b0, i32 %p_ZL10e1_perf_w1_0, i32 %p_ZL10e1_perf_w1_1, i32 %p_ZL10e1_perf_w1_2, i32 %p_ZL10e1_perf_w1_3, i32 %p_ZL10e1_perf_w1_4, i32 %p_ZL10e1_perf_w1_5, i32 %p_ZL10e1_perf_w1_6, i32 %p_ZL10e1_perf_w1_7, i32 %p_ZL10e1_perf_w1_8, i32 %p_ZL10e1_perf_w1_9, i32 %p_ZL10e1_perf_w1_10, i32 %p_ZL10e1_perf_w1_11, i32 %p_ZL10e1_perf_w1_12, i32 %p_ZL10e1_perf_w1_13, i32 %p_ZL10e1_perf_w1_14, i32 %p_ZL10e1_perf_w1_15, i32 %p_ZL10e1_perf_w1_16, i32 %p_ZL10e1_perf_w1_17, i32 %p_ZL10e1_perf_w1_18, i32 %p_ZL10e1_perf_w1_19, i32 %p_ZL10e1_perf_w1_20, i32 %p_ZL10e1_perf_w1_21, i32 %p_ZL10e1_perf_w1_22, i32 %p_ZL10e1_perf_w1_23, i32 %p_ZL10e1_perf_w1_24, i32 %p_ZL10e1_perf_w1_25, i32 %p_ZL10e1_perf_w1_26, i32 %p_ZL10e1_perf_w1_27, i32 %p_ZL10e1_perf_w1_28, i32 %p_ZL10e1_perf_w1_29, i32 %p_ZL10e1_perf_w1_30, i32 %p_ZL10e1_perf_w1_31, i32 %e1_perf_b1, i32 %p_ZL10e1_perf_w2_0, i32 %p_ZL10e1_perf_w2_1, i32 %p_ZL10e1_perf_w2_2, i32 %p_ZL10e1_perf_w2_3, i32 %p_ZL10e1_perf_w2_4, i32 %p_ZL10e1_perf_w2_5, i32 %p_ZL10e1_perf_w2_6, i32 %p_ZL10e1_perf_w2_7, i32 %p_ZL10e1_perf_w2_8, i32 %p_ZL10e1_perf_w2_9, i32 %p_ZL10e1_perf_w2_10, i32 %p_ZL10e1_perf_w2_11, i32 %p_ZL10e1_perf_w2_12, i32 %p_ZL10e1_perf_w2_13, i32 %p_ZL10e1_perf_w2_14, i32 %p_ZL10e1_perf_w2_15, i32 %e1_perf_b2, i32 %e1_perf_w3_0, i32 0.0398988" [src/moe.cpp:841->src/moe.cpp:948]   --->   Operation 63 'call' 'call_ret5' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 64 [1/1] (0.54ns)   --->   "%store_ln841 = store i32 %call_ret5, i3 %expert_output_1_addr" [src/moe.cpp:841->src/moe.cpp:948]   --->   Operation 64 'store' 'store_ln841' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 13 <SV = 12> <Delay = 0.00>
+ST_13 : Operation 65 [2/2] (0.00ns)   --->   "%call_ret6 = call i32 @generic_mlp_head, i32 %input_r, i32 %e1_lut_w0, i32 %e1_lut_b0, i32 %p_ZL9e1_lut_w1_0, i32 %p_ZL9e1_lut_w1_1, i32 %p_ZL9e1_lut_w1_2, i32 %p_ZL9e1_lut_w1_3, i32 %p_ZL9e1_lut_w1_4, i32 %p_ZL9e1_lut_w1_5, i32 %p_ZL9e1_lut_w1_6, i32 %p_ZL9e1_lut_w1_7, i32 %p_ZL9e1_lut_w1_8, i32 %p_ZL9e1_lut_w1_9, i32 %p_ZL9e1_lut_w1_10, i32 %p_ZL9e1_lut_w1_11, i32 %p_ZL9e1_lut_w1_12, i32 %p_ZL9e1_lut_w1_13, i32 %p_ZL9e1_lut_w1_14, i32 %p_ZL9e1_lut_w1_15, i32 %p_ZL9e1_lut_w1_16, i32 %p_ZL9e1_lut_w1_17, i32 %p_ZL9e1_lut_w1_18, i32 %p_ZL9e1_lut_w1_19, i32 %p_ZL9e1_lut_w1_20, i32 %p_ZL9e1_lut_w1_21, i32 %p_ZL9e1_lut_w1_22, i32 %p_ZL9e1_lut_w1_23, i32 %p_ZL9e1_lut_w1_24, i32 %p_ZL9e1_lut_w1_25, i32 %p_ZL9e1_lut_w1_26, i32 %p_ZL9e1_lut_w1_27, i32 %p_ZL9e1_lut_w1_28, i32 %p_ZL9e1_lut_w1_29, i32 %p_ZL9e1_lut_w1_30, i32 %p_ZL9e1_lut_w1_31, i32 %e1_lut_b1, i32 %p_ZL9e1_lut_w2_0, i32 %p_ZL9e1_lut_w2_1, i32 %p_ZL9e1_lut_w2_2, i32 %p_ZL9e1_lut_w2_3, i32 %p_ZL9e1_lut_w2_4, i32 %p_ZL9e1_lut_w2_5, i32 %p_ZL9e1_lut_w2_6, i32 %p_ZL9e1_lut_w2_7, i32 %p_ZL9e1_lut_w2_8, i32 %p_ZL9e1_lut_w2_9, i32 %p_ZL9e1_lut_w2_10, i32 %p_ZL9e1_lut_w2_11, i32 %p_ZL9e1_lut_w2_12, i32 %p_ZL9e1_lut_w2_13, i32 %p_ZL9e1_lut_w2_14, i32 %p_ZL9e1_lut_w2_15, i32 %e1_lut_b2, i32 %e1_lut_w3_0, i32 0.184974" [src/moe.cpp:850->src/moe.cpp:948]   --->   Operation 65 'call' 'call_ret6' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 0.54>
+ST_14 : Operation 66 [1/1] (0.00ns)   --->   "%expert_output_1_addr_1 = getelementptr i32 %expert_output_1, i64 0, i64 1" [src/moe.cpp:856->src/moe.cpp:913]   --->   Operation 66 'getelementptr' 'expert_output_1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 67 [1/2] (0.00ns)   --->   "%call_ret6 = call i32 @generic_mlp_head, i32 %input_r, i32 %e1_lut_w0, i32 %e1_lut_b0, i32 %p_ZL9e1_lut_w1_0, i32 %p_ZL9e1_lut_w1_1, i32 %p_ZL9e1_lut_w1_2, i32 %p_ZL9e1_lut_w1_3, i32 %p_ZL9e1_lut_w1_4, i32 %p_ZL9e1_lut_w1_5, i32 %p_ZL9e1_lut_w1_6, i32 %p_ZL9e1_lut_w1_7, i32 %p_ZL9e1_lut_w1_8, i32 %p_ZL9e1_lut_w1_9, i32 %p_ZL9e1_lut_w1_10, i32 %p_ZL9e1_lut_w1_11, i32 %p_ZL9e1_lut_w1_12, i32 %p_ZL9e1_lut_w1_13, i32 %p_ZL9e1_lut_w1_14, i32 %p_ZL9e1_lut_w1_15, i32 %p_ZL9e1_lut_w1_16, i32 %p_ZL9e1_lut_w1_17, i32 %p_ZL9e1_lut_w1_18, i32 %p_ZL9e1_lut_w1_19, i32 %p_ZL9e1_lut_w1_20, i32 %p_ZL9e1_lut_w1_21, i32 %p_ZL9e1_lut_w1_22, i32 %p_ZL9e1_lut_w1_23, i32 %p_ZL9e1_lut_w1_24, i32 %p_ZL9e1_lut_w1_25, i32 %p_ZL9e1_lut_w1_26, i32 %p_ZL9e1_lut_w1_27, i32 %p_ZL9e1_lut_w1_28, i32 %p_ZL9e1_lut_w1_29, i32 %p_ZL9e1_lut_w1_30, i32 %p_ZL9e1_lut_w1_31, i32 %e1_lut_b1, i32 %p_ZL9e1_lut_w2_0, i32 %p_ZL9e1_lut_w2_1, i32 %p_ZL9e1_lut_w2_2, i32 %p_ZL9e1_lut_w2_3, i32 %p_ZL9e1_lut_w2_4, i32 %p_ZL9e1_lut_w2_5, i32 %p_ZL9e1_lut_w2_6, i32 %p_ZL9e1_lut_w2_7, i32 %p_ZL9e1_lut_w2_8, i32 %p_ZL9e1_lut_w2_9, i32 %p_ZL9e1_lut_w2_10, i32 %p_ZL9e1_lut_w2_11, i32 %p_ZL9e1_lut_w2_12, i32 %p_ZL9e1_lut_w2_13, i32 %p_ZL9e1_lut_w2_14, i32 %p_ZL9e1_lut_w2_15, i32 %e1_lut_b2, i32 %e1_lut_w3_0, i32 0.184974" [src/moe.cpp:850->src/moe.cpp:948]   --->   Operation 67 'call' 'call_ret6' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 68 [1/1] (0.54ns)   --->   "%store_ln850 = store i32 %call_ret6, i3 %expert_output_1_addr_1" [src/moe.cpp:850->src/moe.cpp:948]   --->   Operation 68 'store' 'store_ln850' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 15 <SV = 14> <Delay = 0.00>
+ST_15 : Operation 69 [2/2] (0.00ns)   --->   "%call_ret7 = call i32 @generic_mlp_head, i32 %input_r, i32 %e1_ff_w0, i32 %e1_ff_b0, i32 %p_ZL8e1_ff_w1_0, i32 %p_ZL8e1_ff_w1_1, i32 %p_ZL8e1_ff_w1_2, i32 %p_ZL8e1_ff_w1_3, i32 %p_ZL8e1_ff_w1_4, i32 %p_ZL8e1_ff_w1_5, i32 %p_ZL8e1_ff_w1_6, i32 %p_ZL8e1_ff_w1_7, i32 %p_ZL8e1_ff_w1_8, i32 %p_ZL8e1_ff_w1_9, i32 %p_ZL8e1_ff_w1_10, i32 %p_ZL8e1_ff_w1_11, i32 %p_ZL8e1_ff_w1_12, i32 %p_ZL8e1_ff_w1_13, i32 %p_ZL8e1_ff_w1_14, i32 %p_ZL8e1_ff_w1_15, i32 %p_ZL8e1_ff_w1_16, i32 %p_ZL8e1_ff_w1_17, i32 %p_ZL8e1_ff_w1_18, i32 %p_ZL8e1_ff_w1_19, i32 %p_ZL8e1_ff_w1_20, i32 %p_ZL8e1_ff_w1_21, i32 %p_ZL8e1_ff_w1_22, i32 %p_ZL8e1_ff_w1_23, i32 %p_ZL8e1_ff_w1_24, i32 %p_ZL8e1_ff_w1_25, i32 %p_ZL8e1_ff_w1_26, i32 %p_ZL8e1_ff_w1_27, i32 %p_ZL8e1_ff_w1_28, i32 %p_ZL8e1_ff_w1_29, i32 %p_ZL8e1_ff_w1_30, i32 %p_ZL8e1_ff_w1_31, i32 %e1_ff_b1, i32 %p_ZL8e1_ff_w2_0, i32 %p_ZL8e1_ff_w2_1, i32 %p_ZL8e1_ff_w2_2, i32 %p_ZL8e1_ff_w2_3, i32 %p_ZL8e1_ff_w2_4, i32 %p_ZL8e1_ff_w2_5, i32 %p_ZL8e1_ff_w2_6, i32 %p_ZL8e1_ff_w2_7, i32 %p_ZL8e1_ff_w2_8, i32 %p_ZL8e1_ff_w2_9, i32 %p_ZL8e1_ff_w2_10, i32 %p_ZL8e1_ff_w2_11, i32 %p_ZL8e1_ff_w2_12, i32 %p_ZL8e1_ff_w2_13, i32 %p_ZL8e1_ff_w2_14, i32 %p_ZL8e1_ff_w2_15, i32 %e1_ff_b2, i32 %e1_ff_w3_0, i32 0.0841842" [src/moe.cpp:859->src/moe.cpp:948]   --->   Operation 69 'call' 'call_ret7' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 0.54>
+ST_16 : Operation 70 [1/1] (0.00ns)   --->   "%expert_output_1_addr_2 = getelementptr i32 %expert_output_1, i64 0, i64 2" [src/moe.cpp:865->src/moe.cpp:913]   --->   Operation 70 'getelementptr' 'expert_output_1_addr_2' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 71 [1/2] (0.00ns)   --->   "%call_ret7 = call i32 @generic_mlp_head, i32 %input_r, i32 %e1_ff_w0, i32 %e1_ff_b0, i32 %p_ZL8e1_ff_w1_0, i32 %p_ZL8e1_ff_w1_1, i32 %p_ZL8e1_ff_w1_2, i32 %p_ZL8e1_ff_w1_3, i32 %p_ZL8e1_ff_w1_4, i32 %p_ZL8e1_ff_w1_5, i32 %p_ZL8e1_ff_w1_6, i32 %p_ZL8e1_ff_w1_7, i32 %p_ZL8e1_ff_w1_8, i32 %p_ZL8e1_ff_w1_9, i32 %p_ZL8e1_ff_w1_10, i32 %p_ZL8e1_ff_w1_11, i32 %p_ZL8e1_ff_w1_12, i32 %p_ZL8e1_ff_w1_13, i32 %p_ZL8e1_ff_w1_14, i32 %p_ZL8e1_ff_w1_15, i32 %p_ZL8e1_ff_w1_16, i32 %p_ZL8e1_ff_w1_17, i32 %p_ZL8e1_ff_w1_18, i32 %p_ZL8e1_ff_w1_19, i32 %p_ZL8e1_ff_w1_20, i32 %p_ZL8e1_ff_w1_21, i32 %p_ZL8e1_ff_w1_22, i32 %p_ZL8e1_ff_w1_23, i32 %p_ZL8e1_ff_w1_24, i32 %p_ZL8e1_ff_w1_25, i32 %p_ZL8e1_ff_w1_26, i32 %p_ZL8e1_ff_w1_27, i32 %p_ZL8e1_ff_w1_28, i32 %p_ZL8e1_ff_w1_29, i32 %p_ZL8e1_ff_w1_30, i32 %p_ZL8e1_ff_w1_31, i32 %e1_ff_b1, i32 %p_ZL8e1_ff_w2_0, i32 %p_ZL8e1_ff_w2_1, i32 %p_ZL8e1_ff_w2_2, i32 %p_ZL8e1_ff_w2_3, i32 %p_ZL8e1_ff_w2_4, i32 %p_ZL8e1_ff_w2_5, i32 %p_ZL8e1_ff_w2_6, i32 %p_ZL8e1_ff_w2_7, i32 %p_ZL8e1_ff_w2_8, i32 %p_ZL8e1_ff_w2_9, i32 %p_ZL8e1_ff_w2_10, i32 %p_ZL8e1_ff_w2_11, i32 %p_ZL8e1_ff_w2_12, i32 %p_ZL8e1_ff_w2_13, i32 %p_ZL8e1_ff_w2_14, i32 %p_ZL8e1_ff_w2_15, i32 %e1_ff_b2, i32 %e1_ff_w3_0, i32 0.0841842" [src/moe.cpp:859->src/moe.cpp:948]   --->   Operation 71 'call' 'call_ret7' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 72 [1/1] (0.54ns)   --->   "%store_ln859 = store i32 %call_ret7, i3 %expert_output_1_addr_2" [src/moe.cpp:859->src/moe.cpp:948]   --->   Operation 72 'store' 'store_ln859' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 17 <SV = 16> <Delay = 0.00>
+ST_17 : Operation 73 [2/2] (0.00ns)   --->   "%call_ret8 = call i32 @generic_mlp_head, i32 %input_r, i32 %e1_dsp_w0, i32 %e1_dsp_b0, i32 %p_ZL9e1_dsp_w1_0, i32 %p_ZL9e1_dsp_w1_1, i32 %p_ZL9e1_dsp_w1_2, i32 %p_ZL9e1_dsp_w1_3, i32 %p_ZL9e1_dsp_w1_4, i32 %p_ZL9e1_dsp_w1_5, i32 %p_ZL9e1_dsp_w1_6, i32 %p_ZL9e1_dsp_w1_7, i32 %p_ZL9e1_dsp_w1_8, i32 %p_ZL9e1_dsp_w1_9, i32 %p_ZL9e1_dsp_w1_10, i32 %p_ZL9e1_dsp_w1_11, i32 %p_ZL9e1_dsp_w1_12, i32 %p_ZL9e1_dsp_w1_13, i32 %p_ZL9e1_dsp_w1_14, i32 %p_ZL9e1_dsp_w1_15, i32 %p_ZL9e1_dsp_w1_16, i32 %p_ZL9e1_dsp_w1_17, i32 %p_ZL9e1_dsp_w1_18, i32 %p_ZL9e1_dsp_w1_19, i32 %p_ZL9e1_dsp_w1_20, i32 %p_ZL9e1_dsp_w1_21, i32 %p_ZL9e1_dsp_w1_22, i32 %p_ZL9e1_dsp_w1_23, i32 %p_ZL9e1_dsp_w1_24, i32 %p_ZL9e1_dsp_w1_25, i32 %p_ZL9e1_dsp_w1_26, i32 %p_ZL9e1_dsp_w1_27, i32 %p_ZL9e1_dsp_w1_28, i32 %p_ZL9e1_dsp_w1_29, i32 %p_ZL9e1_dsp_w1_30, i32 %p_ZL9e1_dsp_w1_31, i32 %e1_dsp_b1, i32 %p_ZL9e1_dsp_w2_0, i32 %p_ZL9e1_dsp_w2_1, i32 %p_ZL9e1_dsp_w2_2, i32 %p_ZL9e1_dsp_w2_3, i32 %p_ZL9e1_dsp_w2_4, i32 %p_ZL9e1_dsp_w2_5, i32 %p_ZL9e1_dsp_w2_6, i32 %p_ZL9e1_dsp_w2_7, i32 %p_ZL9e1_dsp_w2_8, i32 %p_ZL9e1_dsp_w2_9, i32 %p_ZL9e1_dsp_w2_10, i32 %p_ZL9e1_dsp_w2_11, i32 %p_ZL9e1_dsp_w2_12, i32 %p_ZL9e1_dsp_w2_13, i32 %p_ZL9e1_dsp_w2_14, i32 %p_ZL9e1_dsp_w2_15, i32 %e1_dsp_b2, i32 %e1_dsp_w3_0, i32 0.142091" [src/moe.cpp:868->src/moe.cpp:948]   --->   Operation 73 'call' 'call_ret8' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 17> <Delay = 0.54>
+ST_18 : Operation 74 [1/1] (0.00ns)   --->   "%expert_output_1_addr_3 = getelementptr i32 %expert_output_1, i64 0, i64 3" [src/moe.cpp:874->src/moe.cpp:913]   --->   Operation 74 'getelementptr' 'expert_output_1_addr_3' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 75 [1/2] (0.00ns)   --->   "%call_ret8 = call i32 @generic_mlp_head, i32 %input_r, i32 %e1_dsp_w0, i32 %e1_dsp_b0, i32 %p_ZL9e1_dsp_w1_0, i32 %p_ZL9e1_dsp_w1_1, i32 %p_ZL9e1_dsp_w1_2, i32 %p_ZL9e1_dsp_w1_3, i32 %p_ZL9e1_dsp_w1_4, i32 %p_ZL9e1_dsp_w1_5, i32 %p_ZL9e1_dsp_w1_6, i32 %p_ZL9e1_dsp_w1_7, i32 %p_ZL9e1_dsp_w1_8, i32 %p_ZL9e1_dsp_w1_9, i32 %p_ZL9e1_dsp_w1_10, i32 %p_ZL9e1_dsp_w1_11, i32 %p_ZL9e1_dsp_w1_12, i32 %p_ZL9e1_dsp_w1_13, i32 %p_ZL9e1_dsp_w1_14, i32 %p_ZL9e1_dsp_w1_15, i32 %p_ZL9e1_dsp_w1_16, i32 %p_ZL9e1_dsp_w1_17, i32 %p_ZL9e1_dsp_w1_18, i32 %p_ZL9e1_dsp_w1_19, i32 %p_ZL9e1_dsp_w1_20, i32 %p_ZL9e1_dsp_w1_21, i32 %p_ZL9e1_dsp_w1_22, i32 %p_ZL9e1_dsp_w1_23, i32 %p_ZL9e1_dsp_w1_24, i32 %p_ZL9e1_dsp_w1_25, i32 %p_ZL9e1_dsp_w1_26, i32 %p_ZL9e1_dsp_w1_27, i32 %p_ZL9e1_dsp_w1_28, i32 %p_ZL9e1_dsp_w1_29, i32 %p_ZL9e1_dsp_w1_30, i32 %p_ZL9e1_dsp_w1_31, i32 %e1_dsp_b1, i32 %p_ZL9e1_dsp_w2_0, i32 %p_ZL9e1_dsp_w2_1, i32 %p_ZL9e1_dsp_w2_2, i32 %p_ZL9e1_dsp_w2_3, i32 %p_ZL9e1_dsp_w2_4, i32 %p_ZL9e1_dsp_w2_5, i32 %p_ZL9e1_dsp_w2_6, i32 %p_ZL9e1_dsp_w2_7, i32 %p_ZL9e1_dsp_w2_8, i32 %p_ZL9e1_dsp_w2_9, i32 %p_ZL9e1_dsp_w2_10, i32 %p_ZL9e1_dsp_w2_11, i32 %p_ZL9e1_dsp_w2_12, i32 %p_ZL9e1_dsp_w2_13, i32 %p_ZL9e1_dsp_w2_14, i32 %p_ZL9e1_dsp_w2_15, i32 %e1_dsp_b2, i32 %e1_dsp_w3_0, i32 0.142091" [src/moe.cpp:868->src/moe.cpp:948]   --->   Operation 75 'call' 'call_ret8' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_18 : Operation 76 [1/1] (0.54ns)   --->   "%store_ln868 = store i32 %call_ret8, i3 %expert_output_1_addr_3" [src/moe.cpp:868->src/moe.cpp:948]   --->   Operation 76 'store' 'store_ln868' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 19 <SV = 18> <Delay = 0.00>
+ST_19 : Operation 77 [2/2] (0.00ns)   --->   "%call_ret9 = call i32 @generic_mlp_head, i32 %input_r, i32 %e1_bram_w0, i32 %e1_bram_b0, i32 %p_ZL10e1_bram_w1_0, i32 %p_ZL10e1_bram_w1_1, i32 %p_ZL10e1_bram_w1_2, i32 %p_ZL10e1_bram_w1_3, i32 %p_ZL10e1_bram_w1_4, i32 %p_ZL10e1_bram_w1_5, i32 %p_ZL10e1_bram_w1_6, i32 %p_ZL10e1_bram_w1_7, i32 %p_ZL10e1_bram_w1_8, i32 %p_ZL10e1_bram_w1_9, i32 %p_ZL10e1_bram_w1_10, i32 %p_ZL10e1_bram_w1_11, i32 %p_ZL10e1_bram_w1_12, i32 %p_ZL10e1_bram_w1_13, i32 %p_ZL10e1_bram_w1_14, i32 %p_ZL10e1_bram_w1_15, i32 %p_ZL10e1_bram_w1_16, i32 %p_ZL10e1_bram_w1_17, i32 %p_ZL10e1_bram_w1_18, i32 %p_ZL10e1_bram_w1_19, i32 %p_ZL10e1_bram_w1_20, i32 %p_ZL10e1_bram_w1_21, i32 %p_ZL10e1_bram_w1_22, i32 %p_ZL10e1_bram_w1_23, i32 %p_ZL10e1_bram_w1_24, i32 %p_ZL10e1_bram_w1_25, i32 %p_ZL10e1_bram_w1_26, i32 %p_ZL10e1_bram_w1_27, i32 %p_ZL10e1_bram_w1_28, i32 %p_ZL10e1_bram_w1_29, i32 %p_ZL10e1_bram_w1_30, i32 %p_ZL10e1_bram_w1_31, i32 %e1_bram_b1, i32 %p_ZL10e1_bram_w2_0, i32 %p_ZL10e1_bram_w2_1, i32 %p_ZL10e1_bram_w2_2, i32 %p_ZL10e1_bram_w2_3, i32 %p_ZL10e1_bram_w2_4, i32 %p_ZL10e1_bram_w2_5, i32 %p_ZL10e1_bram_w2_6, i32 %p_ZL10e1_bram_w2_7, i32 %p_ZL10e1_bram_w2_8, i32 %p_ZL10e1_bram_w2_9, i32 %p_ZL10e1_bram_w2_10, i32 %p_ZL10e1_bram_w2_11, i32 %p_ZL10e1_bram_w2_12, i32 %p_ZL10e1_bram_w2_13, i32 %p_ZL10e1_bram_w2_14, i32 %p_ZL10e1_bram_w2_15, i32 %e1_bram_b2, i32 %e1_bram_w3_0, i32 0.0276323" [src/moe.cpp:877->src/moe.cpp:948]   --->   Operation 77 'call' 'call_ret9' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 0.54>
+ST_20 : Operation 78 [1/1] (0.00ns)   --->   "%expert_output_1_addr_4 = getelementptr i32 %expert_output_1, i64 0, i64 4" [src/moe.cpp:883->src/moe.cpp:913]   --->   Operation 78 'getelementptr' 'expert_output_1_addr_4' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 79 [1/2] (0.00ns)   --->   "%call_ret9 = call i32 @generic_mlp_head, i32 %input_r, i32 %e1_bram_w0, i32 %e1_bram_b0, i32 %p_ZL10e1_bram_w1_0, i32 %p_ZL10e1_bram_w1_1, i32 %p_ZL10e1_bram_w1_2, i32 %p_ZL10e1_bram_w1_3, i32 %p_ZL10e1_bram_w1_4, i32 %p_ZL10e1_bram_w1_5, i32 %p_ZL10e1_bram_w1_6, i32 %p_ZL10e1_bram_w1_7, i32 %p_ZL10e1_bram_w1_8, i32 %p_ZL10e1_bram_w1_9, i32 %p_ZL10e1_bram_w1_10, i32 %p_ZL10e1_bram_w1_11, i32 %p_ZL10e1_bram_w1_12, i32 %p_ZL10e1_bram_w1_13, i32 %p_ZL10e1_bram_w1_14, i32 %p_ZL10e1_bram_w1_15, i32 %p_ZL10e1_bram_w1_16, i32 %p_ZL10e1_bram_w1_17, i32 %p_ZL10e1_bram_w1_18, i32 %p_ZL10e1_bram_w1_19, i32 %p_ZL10e1_bram_w1_20, i32 %p_ZL10e1_bram_w1_21, i32 %p_ZL10e1_bram_w1_22, i32 %p_ZL10e1_bram_w1_23, i32 %p_ZL10e1_bram_w1_24, i32 %p_ZL10e1_bram_w1_25, i32 %p_ZL10e1_bram_w1_26, i32 %p_ZL10e1_bram_w1_27, i32 %p_ZL10e1_bram_w1_28, i32 %p_ZL10e1_bram_w1_29, i32 %p_ZL10e1_bram_w1_30, i32 %p_ZL10e1_bram_w1_31, i32 %e1_bram_b1, i32 %p_ZL10e1_bram_w2_0, i32 %p_ZL10e1_bram_w2_1, i32 %p_ZL10e1_bram_w2_2, i32 %p_ZL10e1_bram_w2_3, i32 %p_ZL10e1_bram_w2_4, i32 %p_ZL10e1_bram_w2_5, i32 %p_ZL10e1_bram_w2_6, i32 %p_ZL10e1_bram_w2_7, i32 %p_ZL10e1_bram_w2_8, i32 %p_ZL10e1_bram_w2_9, i32 %p_ZL10e1_bram_w2_10, i32 %p_ZL10e1_bram_w2_11, i32 %p_ZL10e1_bram_w2_12, i32 %p_ZL10e1_bram_w2_13, i32 %p_ZL10e1_bram_w2_14, i32 %p_ZL10e1_bram_w2_15, i32 %e1_bram_b2, i32 %e1_bram_w3_0, i32 0.0276323" [src/moe.cpp:877->src/moe.cpp:948]   --->   Operation 79 'call' 'call_ret9' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_20 : Operation 80 [1/1] (0.54ns)   --->   "%store_ln877 = store i32 %call_ret9, i3 %expert_output_1_addr_4" [src/moe.cpp:877->src/moe.cpp:948]   --->   Operation 80 'store' 'store_ln877' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 21 <SV = 20> <Delay = 0.00>
+ST_21 : Operation 81 [2/2] (0.00ns)   --->   "%call_ret10 = call i32 @generic_mlp_head, i32 %input_r, i32 %e2_perf_w0, i32 %e2_perf_b0, i32 %p_ZL10e2_perf_w1_0, i32 %p_ZL10e2_perf_w1_1, i32 %p_ZL10e2_perf_w1_2, i32 %p_ZL10e2_perf_w1_3, i32 %p_ZL10e2_perf_w1_4, i32 %p_ZL10e2_perf_w1_5, i32 %p_ZL10e2_perf_w1_6, i32 %p_ZL10e2_perf_w1_7, i32 %p_ZL10e2_perf_w1_8, i32 %p_ZL10e2_perf_w1_9, i32 %p_ZL10e2_perf_w1_10, i32 %p_ZL10e2_perf_w1_11, i32 %p_ZL10e2_perf_w1_12, i32 %p_ZL10e2_perf_w1_13, i32 %p_ZL10e2_perf_w1_14, i32 %p_ZL10e2_perf_w1_15, i32 %p_ZL10e2_perf_w1_16, i32 %p_ZL10e2_perf_w1_17, i32 %p_ZL10e2_perf_w1_18, i32 %p_ZL10e2_perf_w1_19, i32 %p_ZL10e2_perf_w1_20, i32 %p_ZL10e2_perf_w1_21, i32 %p_ZL10e2_perf_w1_22, i32 %p_ZL10e2_perf_w1_23, i32 %p_ZL10e2_perf_w1_24, i32 %p_ZL10e2_perf_w1_25, i32 %p_ZL10e2_perf_w1_26, i32 %p_ZL10e2_perf_w1_27, i32 %p_ZL10e2_perf_w1_28, i32 %p_ZL10e2_perf_w1_29, i32 %p_ZL10e2_perf_w1_30, i32 %p_ZL10e2_perf_w1_31, i32 %e2_perf_b1, i32 %p_ZL10e2_perf_w2_0, i32 %p_ZL10e2_perf_w2_1, i32 %p_ZL10e2_perf_w2_2, i32 %p_ZL10e2_perf_w2_3, i32 %p_ZL10e2_perf_w2_4, i32 %p_ZL10e2_perf_w2_5, i32 %p_ZL10e2_perf_w2_6, i32 %p_ZL10e2_perf_w2_7, i32 %p_ZL10e2_perf_w2_8, i32 %p_ZL10e2_perf_w2_9, i32 %p_ZL10e2_perf_w2_10, i32 %p_ZL10e2_perf_w2_11, i32 %p_ZL10e2_perf_w2_12, i32 %p_ZL10e2_perf_w2_13, i32 %p_ZL10e2_perf_w2_14, i32 %p_ZL10e2_perf_w2_15, i32 %e2_perf_b2, i32 %e2_perf_w3_0, i32 0.0233192" [src/moe.cpp:841->src/moe.cpp:983]   --->   Operation 81 'call' 'call_ret10' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 22 <SV = 21> <Delay = 0.54>
+ST_22 : Operation 82 [1/1] (0.00ns)   --->   "%expert_output_2_addr = getelementptr i32 %expert_output_2, i64 0, i64 0" [src/moe.cpp:941]   --->   Operation 82 'getelementptr' 'expert_output_2_addr' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 83 [1/2] (0.00ns)   --->   "%call_ret10 = call i32 @generic_mlp_head, i32 %input_r, i32 %e2_perf_w0, i32 %e2_perf_b0, i32 %p_ZL10e2_perf_w1_0, i32 %p_ZL10e2_perf_w1_1, i32 %p_ZL10e2_perf_w1_2, i32 %p_ZL10e2_perf_w1_3, i32 %p_ZL10e2_perf_w1_4, i32 %p_ZL10e2_perf_w1_5, i32 %p_ZL10e2_perf_w1_6, i32 %p_ZL10e2_perf_w1_7, i32 %p_ZL10e2_perf_w1_8, i32 %p_ZL10e2_perf_w1_9, i32 %p_ZL10e2_perf_w1_10, i32 %p_ZL10e2_perf_w1_11, i32 %p_ZL10e2_perf_w1_12, i32 %p_ZL10e2_perf_w1_13, i32 %p_ZL10e2_perf_w1_14, i32 %p_ZL10e2_perf_w1_15, i32 %p_ZL10e2_perf_w1_16, i32 %p_ZL10e2_perf_w1_17, i32 %p_ZL10e2_perf_w1_18, i32 %p_ZL10e2_perf_w1_19, i32 %p_ZL10e2_perf_w1_20, i32 %p_ZL10e2_perf_w1_21, i32 %p_ZL10e2_perf_w1_22, i32 %p_ZL10e2_perf_w1_23, i32 %p_ZL10e2_perf_w1_24, i32 %p_ZL10e2_perf_w1_25, i32 %p_ZL10e2_perf_w1_26, i32 %p_ZL10e2_perf_w1_27, i32 %p_ZL10e2_perf_w1_28, i32 %p_ZL10e2_perf_w1_29, i32 %p_ZL10e2_perf_w1_30, i32 %p_ZL10e2_perf_w1_31, i32 %e2_perf_b1, i32 %p_ZL10e2_perf_w2_0, i32 %p_ZL10e2_perf_w2_1, i32 %p_ZL10e2_perf_w2_2, i32 %p_ZL10e2_perf_w2_3, i32 %p_ZL10e2_perf_w2_4, i32 %p_ZL10e2_perf_w2_5, i32 %p_ZL10e2_perf_w2_6, i32 %p_ZL10e2_perf_w2_7, i32 %p_ZL10e2_perf_w2_8, i32 %p_ZL10e2_perf_w2_9, i32 %p_ZL10e2_perf_w2_10, i32 %p_ZL10e2_perf_w2_11, i32 %p_ZL10e2_perf_w2_12, i32 %p_ZL10e2_perf_w2_13, i32 %p_ZL10e2_perf_w2_14, i32 %p_ZL10e2_perf_w2_15, i32 %e2_perf_b2, i32 %e2_perf_w3_0, i32 0.0233192" [src/moe.cpp:841->src/moe.cpp:983]   --->   Operation 83 'call' 'call_ret10' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_22 : Operation 84 [1/1] (0.54ns)   --->   "%store_ln841 = store i32 %call_ret10, i3 %expert_output_2_addr" [src/moe.cpp:841->src/moe.cpp:983]   --->   Operation 84 'store' 'store_ln841' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 23 <SV = 22> <Delay = 0.00>
+ST_23 : Operation 85 [2/2] (0.00ns)   --->   "%call_ret11 = call i32 @generic_mlp_head, i32 %input_r, i32 %e2_lut_w0, i32 %e2_lut_b0, i32 %p_ZL9e2_lut_w1_0, i32 %p_ZL9e2_lut_w1_1, i32 %p_ZL9e2_lut_w1_2, i32 %p_ZL9e2_lut_w1_3, i32 %p_ZL9e2_lut_w1_4, i32 %p_ZL9e2_lut_w1_5, i32 %p_ZL9e2_lut_w1_6, i32 %p_ZL9e2_lut_w1_7, i32 %p_ZL9e2_lut_w1_8, i32 %p_ZL9e2_lut_w1_9, i32 %p_ZL9e2_lut_w1_10, i32 %p_ZL9e2_lut_w1_11, i32 %p_ZL9e2_lut_w1_12, i32 %p_ZL9e2_lut_w1_13, i32 %p_ZL9e2_lut_w1_14, i32 %p_ZL9e2_lut_w1_15, i32 %p_ZL9e2_lut_w1_16, i32 %p_ZL9e2_lut_w1_17, i32 %p_ZL9e2_lut_w1_18, i32 %p_ZL9e2_lut_w1_19, i32 %p_ZL9e2_lut_w1_20, i32 %p_ZL9e2_lut_w1_21, i32 %p_ZL9e2_lut_w1_22, i32 %p_ZL9e2_lut_w1_23, i32 %p_ZL9e2_lut_w1_24, i32 %p_ZL9e2_lut_w1_25, i32 %p_ZL9e2_lut_w1_26, i32 %p_ZL9e2_lut_w1_27, i32 %p_ZL9e2_lut_w1_28, i32 %p_ZL9e2_lut_w1_29, i32 %p_ZL9e2_lut_w1_30, i32 %p_ZL9e2_lut_w1_31, i32 %e2_lut_b1, i32 %p_ZL9e2_lut_w2_0, i32 %p_ZL9e2_lut_w2_1, i32 %p_ZL9e2_lut_w2_2, i32 %p_ZL9e2_lut_w2_3, i32 %p_ZL9e2_lut_w2_4, i32 %p_ZL9e2_lut_w2_5, i32 %p_ZL9e2_lut_w2_6, i32 %p_ZL9e2_lut_w2_7, i32 %p_ZL9e2_lut_w2_8, i32 %p_ZL9e2_lut_w2_9, i32 %p_ZL9e2_lut_w2_10, i32 %p_ZL9e2_lut_w2_11, i32 %p_ZL9e2_lut_w2_12, i32 %p_ZL9e2_lut_w2_13, i32 %p_ZL9e2_lut_w2_14, i32 %p_ZL9e2_lut_w2_15, i32 %e2_lut_b2, i32 %e2_lut_w3_0, i32 0.277877" [src/moe.cpp:850->src/moe.cpp:983]   --->   Operation 85 'call' 'call_ret11' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 24 <SV = 23> <Delay = 0.54>
+ST_24 : Operation 86 [1/1] (0.00ns)   --->   "%expert_output_2_addr_1 = getelementptr i32 %expert_output_2, i64 0, i64 1" [src/moe.cpp:856->src/moe.cpp:913]   --->   Operation 86 'getelementptr' 'expert_output_2_addr_1' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 87 [1/2] (0.00ns)   --->   "%call_ret11 = call i32 @generic_mlp_head, i32 %input_r, i32 %e2_lut_w0, i32 %e2_lut_b0, i32 %p_ZL9e2_lut_w1_0, i32 %p_ZL9e2_lut_w1_1, i32 %p_ZL9e2_lut_w1_2, i32 %p_ZL9e2_lut_w1_3, i32 %p_ZL9e2_lut_w1_4, i32 %p_ZL9e2_lut_w1_5, i32 %p_ZL9e2_lut_w1_6, i32 %p_ZL9e2_lut_w1_7, i32 %p_ZL9e2_lut_w1_8, i32 %p_ZL9e2_lut_w1_9, i32 %p_ZL9e2_lut_w1_10, i32 %p_ZL9e2_lut_w1_11, i32 %p_ZL9e2_lut_w1_12, i32 %p_ZL9e2_lut_w1_13, i32 %p_ZL9e2_lut_w1_14, i32 %p_ZL9e2_lut_w1_15, i32 %p_ZL9e2_lut_w1_16, i32 %p_ZL9e2_lut_w1_17, i32 %p_ZL9e2_lut_w1_18, i32 %p_ZL9e2_lut_w1_19, i32 %p_ZL9e2_lut_w1_20, i32 %p_ZL9e2_lut_w1_21, i32 %p_ZL9e2_lut_w1_22, i32 %p_ZL9e2_lut_w1_23, i32 %p_ZL9e2_lut_w1_24, i32 %p_ZL9e2_lut_w1_25, i32 %p_ZL9e2_lut_w1_26, i32 %p_ZL9e2_lut_w1_27, i32 %p_ZL9e2_lut_w1_28, i32 %p_ZL9e2_lut_w1_29, i32 %p_ZL9e2_lut_w1_30, i32 %p_ZL9e2_lut_w1_31, i32 %e2_lut_b1, i32 %p_ZL9e2_lut_w2_0, i32 %p_ZL9e2_lut_w2_1, i32 %p_ZL9e2_lut_w2_2, i32 %p_ZL9e2_lut_w2_3, i32 %p_ZL9e2_lut_w2_4, i32 %p_ZL9e2_lut_w2_5, i32 %p_ZL9e2_lut_w2_6, i32 %p_ZL9e2_lut_w2_7, i32 %p_ZL9e2_lut_w2_8, i32 %p_ZL9e2_lut_w2_9, i32 %p_ZL9e2_lut_w2_10, i32 %p_ZL9e2_lut_w2_11, i32 %p_ZL9e2_lut_w2_12, i32 %p_ZL9e2_lut_w2_13, i32 %p_ZL9e2_lut_w2_14, i32 %p_ZL9e2_lut_w2_15, i32 %e2_lut_b2, i32 %e2_lut_w3_0, i32 0.277877" [src/moe.cpp:850->src/moe.cpp:983]   --->   Operation 87 'call' 'call_ret11' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 88 [1/1] (0.54ns)   --->   "%store_ln850 = store i32 %call_ret11, i3 %expert_output_2_addr_1" [src/moe.cpp:850->src/moe.cpp:983]   --->   Operation 88 'store' 'store_ln850' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 25 <SV = 24> <Delay = 0.00>
+ST_25 : Operation 89 [2/2] (0.00ns)   --->   "%call_ret12 = call i32 @generic_mlp_head, i32 %input_r, i32 %e2_ff_w0, i32 %e2_ff_b0, i32 %p_ZL8e2_ff_w1_0, i32 %p_ZL8e2_ff_w1_1, i32 %p_ZL8e2_ff_w1_2, i32 %p_ZL8e2_ff_w1_3, i32 %p_ZL8e2_ff_w1_4, i32 %p_ZL8e2_ff_w1_5, i32 %p_ZL8e2_ff_w1_6, i32 %p_ZL8e2_ff_w1_7, i32 %p_ZL8e2_ff_w1_8, i32 %p_ZL8e2_ff_w1_9, i32 %p_ZL8e2_ff_w1_10, i32 %p_ZL8e2_ff_w1_11, i32 %p_ZL8e2_ff_w1_12, i32 %p_ZL8e2_ff_w1_13, i32 %p_ZL8e2_ff_w1_14, i32 %p_ZL8e2_ff_w1_15, i32 %p_ZL8e2_ff_w1_16, i32 %p_ZL8e2_ff_w1_17, i32 %p_ZL8e2_ff_w1_18, i32 %p_ZL8e2_ff_w1_19, i32 %p_ZL8e2_ff_w1_20, i32 %p_ZL8e2_ff_w1_21, i32 %p_ZL8e2_ff_w1_22, i32 %p_ZL8e2_ff_w1_23, i32 %p_ZL8e2_ff_w1_24, i32 %p_ZL8e2_ff_w1_25, i32 %p_ZL8e2_ff_w1_26, i32 %p_ZL8e2_ff_w1_27, i32 %p_ZL8e2_ff_w1_28, i32 %p_ZL8e2_ff_w1_29, i32 %p_ZL8e2_ff_w1_30, i32 %p_ZL8e2_ff_w1_31, i32 %e2_ff_b1, i32 %p_ZL8e2_ff_w2_0, i32 %p_ZL8e2_ff_w2_1, i32 %p_ZL8e2_ff_w2_2, i32 %p_ZL8e2_ff_w2_3, i32 %p_ZL8e2_ff_w2_4, i32 %p_ZL8e2_ff_w2_5, i32 %p_ZL8e2_ff_w2_6, i32 %p_ZL8e2_ff_w2_7, i32 %p_ZL8e2_ff_w2_8, i32 %p_ZL8e2_ff_w2_9, i32 %p_ZL8e2_ff_w2_10, i32 %p_ZL8e2_ff_w2_11, i32 %p_ZL8e2_ff_w2_12, i32 %p_ZL8e2_ff_w2_13, i32 %p_ZL8e2_ff_w2_14, i32 %p_ZL8e2_ff_w2_15, i32 %e2_ff_b2, i32 %e2_ff_w3_0, i32 0.0746453" [src/moe.cpp:859->src/moe.cpp:983]   --->   Operation 89 'call' 'call_ret12' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 26 <SV = 25> <Delay = 0.54>
+ST_26 : Operation 90 [1/1] (0.00ns)   --->   "%expert_output_2_addr_2 = getelementptr i32 %expert_output_2, i64 0, i64 2" [src/moe.cpp:865->src/moe.cpp:913]   --->   Operation 90 'getelementptr' 'expert_output_2_addr_2' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 91 [1/2] (0.00ns)   --->   "%call_ret12 = call i32 @generic_mlp_head, i32 %input_r, i32 %e2_ff_w0, i32 %e2_ff_b0, i32 %p_ZL8e2_ff_w1_0, i32 %p_ZL8e2_ff_w1_1, i32 %p_ZL8e2_ff_w1_2, i32 %p_ZL8e2_ff_w1_3, i32 %p_ZL8e2_ff_w1_4, i32 %p_ZL8e2_ff_w1_5, i32 %p_ZL8e2_ff_w1_6, i32 %p_ZL8e2_ff_w1_7, i32 %p_ZL8e2_ff_w1_8, i32 %p_ZL8e2_ff_w1_9, i32 %p_ZL8e2_ff_w1_10, i32 %p_ZL8e2_ff_w1_11, i32 %p_ZL8e2_ff_w1_12, i32 %p_ZL8e2_ff_w1_13, i32 %p_ZL8e2_ff_w1_14, i32 %p_ZL8e2_ff_w1_15, i32 %p_ZL8e2_ff_w1_16, i32 %p_ZL8e2_ff_w1_17, i32 %p_ZL8e2_ff_w1_18, i32 %p_ZL8e2_ff_w1_19, i32 %p_ZL8e2_ff_w1_20, i32 %p_ZL8e2_ff_w1_21, i32 %p_ZL8e2_ff_w1_22, i32 %p_ZL8e2_ff_w1_23, i32 %p_ZL8e2_ff_w1_24, i32 %p_ZL8e2_ff_w1_25, i32 %p_ZL8e2_ff_w1_26, i32 %p_ZL8e2_ff_w1_27, i32 %p_ZL8e2_ff_w1_28, i32 %p_ZL8e2_ff_w1_29, i32 %p_ZL8e2_ff_w1_30, i32 %p_ZL8e2_ff_w1_31, i32 %e2_ff_b1, i32 %p_ZL8e2_ff_w2_0, i32 %p_ZL8e2_ff_w2_1, i32 %p_ZL8e2_ff_w2_2, i32 %p_ZL8e2_ff_w2_3, i32 %p_ZL8e2_ff_w2_4, i32 %p_ZL8e2_ff_w2_5, i32 %p_ZL8e2_ff_w2_6, i32 %p_ZL8e2_ff_w2_7, i32 %p_ZL8e2_ff_w2_8, i32 %p_ZL8e2_ff_w2_9, i32 %p_ZL8e2_ff_w2_10, i32 %p_ZL8e2_ff_w2_11, i32 %p_ZL8e2_ff_w2_12, i32 %p_ZL8e2_ff_w2_13, i32 %p_ZL8e2_ff_w2_14, i32 %p_ZL8e2_ff_w2_15, i32 %e2_ff_b2, i32 %e2_ff_w3_0, i32 0.0746453" [src/moe.cpp:859->src/moe.cpp:983]   --->   Operation 91 'call' 'call_ret12' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_26 : Operation 92 [1/1] (0.54ns)   --->   "%store_ln859 = store i32 %call_ret12, i3 %expert_output_2_addr_2" [src/moe.cpp:859->src/moe.cpp:983]   --->   Operation 92 'store' 'store_ln859' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 27 <SV = 26> <Delay = 0.00>
+ST_27 : Operation 93 [2/2] (0.00ns)   --->   "%call_ret13 = call i32 @generic_mlp_head, i32 %input_r, i32 %e2_dsp_w0, i32 %e2_dsp_b0, i32 %p_ZL9e2_dsp_w1_0, i32 %p_ZL9e2_dsp_w1_1, i32 %p_ZL9e2_dsp_w1_2, i32 %p_ZL9e2_dsp_w1_3, i32 %p_ZL9e2_dsp_w1_4, i32 %p_ZL9e2_dsp_w1_5, i32 %p_ZL9e2_dsp_w1_6, i32 %p_ZL9e2_dsp_w1_7, i32 %p_ZL9e2_dsp_w1_8, i32 %p_ZL9e2_dsp_w1_9, i32 %p_ZL9e2_dsp_w1_10, i32 %p_ZL9e2_dsp_w1_11, i32 %p_ZL9e2_dsp_w1_12, i32 %p_ZL9e2_dsp_w1_13, i32 %p_ZL9e2_dsp_w1_14, i32 %p_ZL9e2_dsp_w1_15, i32 %p_ZL9e2_dsp_w1_16, i32 %p_ZL9e2_dsp_w1_17, i32 %p_ZL9e2_dsp_w1_18, i32 %p_ZL9e2_dsp_w1_19, i32 %p_ZL9e2_dsp_w1_20, i32 %p_ZL9e2_dsp_w1_21, i32 %p_ZL9e2_dsp_w1_22, i32 %p_ZL9e2_dsp_w1_23, i32 %p_ZL9e2_dsp_w1_24, i32 %p_ZL9e2_dsp_w1_25, i32 %p_ZL9e2_dsp_w1_26, i32 %p_ZL9e2_dsp_w1_27, i32 %p_ZL9e2_dsp_w1_28, i32 %p_ZL9e2_dsp_w1_29, i32 %p_ZL9e2_dsp_w1_30, i32 %p_ZL9e2_dsp_w1_31, i32 %e2_dsp_b1, i32 %p_ZL9e2_dsp_w2_0, i32 %p_ZL9e2_dsp_w2_1, i32 %p_ZL9e2_dsp_w2_2, i32 %p_ZL9e2_dsp_w2_3, i32 %p_ZL9e2_dsp_w2_4, i32 %p_ZL9e2_dsp_w2_5, i32 %p_ZL9e2_dsp_w2_6, i32 %p_ZL9e2_dsp_w2_7, i32 %p_ZL9e2_dsp_w2_8, i32 %p_ZL9e2_dsp_w2_9, i32 %p_ZL9e2_dsp_w2_10, i32 %p_ZL9e2_dsp_w2_11, i32 %p_ZL9e2_dsp_w2_12, i32 %p_ZL9e2_dsp_w2_13, i32 %p_ZL9e2_dsp_w2_14, i32 %p_ZL9e2_dsp_w2_15, i32 %e2_dsp_b2, i32 %e2_dsp_w3_0, i32 0.0583441" [src/moe.cpp:868->src/moe.cpp:983]   --->   Operation 93 'call' 'call_ret13' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 28 <SV = 27> <Delay = 0.54>
+ST_28 : Operation 94 [1/1] (0.00ns)   --->   "%expert_output_2_addr_3 = getelementptr i32 %expert_output_2, i64 0, i64 3" [src/moe.cpp:874->src/moe.cpp:913]   --->   Operation 94 'getelementptr' 'expert_output_2_addr_3' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 95 [1/2] (0.00ns)   --->   "%call_ret13 = call i32 @generic_mlp_head, i32 %input_r, i32 %e2_dsp_w0, i32 %e2_dsp_b0, i32 %p_ZL9e2_dsp_w1_0, i32 %p_ZL9e2_dsp_w1_1, i32 %p_ZL9e2_dsp_w1_2, i32 %p_ZL9e2_dsp_w1_3, i32 %p_ZL9e2_dsp_w1_4, i32 %p_ZL9e2_dsp_w1_5, i32 %p_ZL9e2_dsp_w1_6, i32 %p_ZL9e2_dsp_w1_7, i32 %p_ZL9e2_dsp_w1_8, i32 %p_ZL9e2_dsp_w1_9, i32 %p_ZL9e2_dsp_w1_10, i32 %p_ZL9e2_dsp_w1_11, i32 %p_ZL9e2_dsp_w1_12, i32 %p_ZL9e2_dsp_w1_13, i32 %p_ZL9e2_dsp_w1_14, i32 %p_ZL9e2_dsp_w1_15, i32 %p_ZL9e2_dsp_w1_16, i32 %p_ZL9e2_dsp_w1_17, i32 %p_ZL9e2_dsp_w1_18, i32 %p_ZL9e2_dsp_w1_19, i32 %p_ZL9e2_dsp_w1_20, i32 %p_ZL9e2_dsp_w1_21, i32 %p_ZL9e2_dsp_w1_22, i32 %p_ZL9e2_dsp_w1_23, i32 %p_ZL9e2_dsp_w1_24, i32 %p_ZL9e2_dsp_w1_25, i32 %p_ZL9e2_dsp_w1_26, i32 %p_ZL9e2_dsp_w1_27, i32 %p_ZL9e2_dsp_w1_28, i32 %p_ZL9e2_dsp_w1_29, i32 %p_ZL9e2_dsp_w1_30, i32 %p_ZL9e2_dsp_w1_31, i32 %e2_dsp_b1, i32 %p_ZL9e2_dsp_w2_0, i32 %p_ZL9e2_dsp_w2_1, i32 %p_ZL9e2_dsp_w2_2, i32 %p_ZL9e2_dsp_w2_3, i32 %p_ZL9e2_dsp_w2_4, i32 %p_ZL9e2_dsp_w2_5, i32 %p_ZL9e2_dsp_w2_6, i32 %p_ZL9e2_dsp_w2_7, i32 %p_ZL9e2_dsp_w2_8, i32 %p_ZL9e2_dsp_w2_9, i32 %p_ZL9e2_dsp_w2_10, i32 %p_ZL9e2_dsp_w2_11, i32 %p_ZL9e2_dsp_w2_12, i32 %p_ZL9e2_dsp_w2_13, i32 %p_ZL9e2_dsp_w2_14, i32 %p_ZL9e2_dsp_w2_15, i32 %e2_dsp_b2, i32 %e2_dsp_w3_0, i32 0.0583441" [src/moe.cpp:868->src/moe.cpp:983]   --->   Operation 95 'call' 'call_ret13' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_28 : Operation 96 [1/1] (0.54ns)   --->   "%store_ln868 = store i32 %call_ret13, i3 %expert_output_2_addr_3" [src/moe.cpp:868->src/moe.cpp:983]   --->   Operation 96 'store' 'store_ln868' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 29 <SV = 28> <Delay = 0.00>
+ST_29 : Operation 97 [2/2] (0.00ns)   --->   "%call_ret14 = call i32 @generic_mlp_head, i32 %input_r, i32 %e2_bram_w0, i32 %e2_bram_b0, i32 %p_ZL10e2_bram_w1_0, i32 %p_ZL10e2_bram_w1_1, i32 %p_ZL10e2_bram_w1_2, i32 %p_ZL10e2_bram_w1_3, i32 %p_ZL10e2_bram_w1_4, i32 %p_ZL10e2_bram_w1_5, i32 %p_ZL10e2_bram_w1_6, i32 %p_ZL10e2_bram_w1_7, i32 %p_ZL10e2_bram_w1_8, i32 %p_ZL10e2_bram_w1_9, i32 %p_ZL10e2_bram_w1_10, i32 %p_ZL10e2_bram_w1_11, i32 %p_ZL10e2_bram_w1_12, i32 %p_ZL10e2_bram_w1_13, i32 %p_ZL10e2_bram_w1_14, i32 %p_ZL10e2_bram_w1_15, i32 %p_ZL10e2_bram_w1_16, i32 %p_ZL10e2_bram_w1_17, i32 %p_ZL10e2_bram_w1_18, i32 %p_ZL10e2_bram_w1_19, i32 %p_ZL10e2_bram_w1_20, i32 %p_ZL10e2_bram_w1_21, i32 %p_ZL10e2_bram_w1_22, i32 %p_ZL10e2_bram_w1_23, i32 %p_ZL10e2_bram_w1_24, i32 %p_ZL10e2_bram_w1_25, i32 %p_ZL10e2_bram_w1_26, i32 %p_ZL10e2_bram_w1_27, i32 %p_ZL10e2_bram_w1_28, i32 %p_ZL10e2_bram_w1_29, i32 %p_ZL10e2_bram_w1_30, i32 %p_ZL10e2_bram_w1_31, i32 %e2_bram_b1, i32 %p_ZL10e2_bram_w2_0, i32 %p_ZL10e2_bram_w2_1, i32 %p_ZL10e2_bram_w2_2, i32 %p_ZL10e2_bram_w2_3, i32 %p_ZL10e2_bram_w2_4, i32 %p_ZL10e2_bram_w2_5, i32 %p_ZL10e2_bram_w2_6, i32 %p_ZL10e2_bram_w2_7, i32 %p_ZL10e2_bram_w2_8, i32 %p_ZL10e2_bram_w2_9, i32 %p_ZL10e2_bram_w2_10, i32 %p_ZL10e2_bram_w2_11, i32 %p_ZL10e2_bram_w2_12, i32 %p_ZL10e2_bram_w2_13, i32 %p_ZL10e2_bram_w2_14, i32 %p_ZL10e2_bram_w2_15, i32 %e2_bram_b2, i32 %e2_bram_w3_0, i32 0.096367" [src/moe.cpp:877->src/moe.cpp:983]   --->   Operation 97 'call' 'call_ret14' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 30 <SV = 29> <Delay = 0.54>
+ST_30 : Operation 98 [1/1] (0.00ns)   --->   "%expert_output_2_addr_4 = getelementptr i32 %expert_output_2, i64 0, i64 4" [src/moe.cpp:883->src/moe.cpp:913]   --->   Operation 98 'getelementptr' 'expert_output_2_addr_4' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 99 [1/2] (0.00ns)   --->   "%call_ret14 = call i32 @generic_mlp_head, i32 %input_r, i32 %e2_bram_w0, i32 %e2_bram_b0, i32 %p_ZL10e2_bram_w1_0, i32 %p_ZL10e2_bram_w1_1, i32 %p_ZL10e2_bram_w1_2, i32 %p_ZL10e2_bram_w1_3, i32 %p_ZL10e2_bram_w1_4, i32 %p_ZL10e2_bram_w1_5, i32 %p_ZL10e2_bram_w1_6, i32 %p_ZL10e2_bram_w1_7, i32 %p_ZL10e2_bram_w1_8, i32 %p_ZL10e2_bram_w1_9, i32 %p_ZL10e2_bram_w1_10, i32 %p_ZL10e2_bram_w1_11, i32 %p_ZL10e2_bram_w1_12, i32 %p_ZL10e2_bram_w1_13, i32 %p_ZL10e2_bram_w1_14, i32 %p_ZL10e2_bram_w1_15, i32 %p_ZL10e2_bram_w1_16, i32 %p_ZL10e2_bram_w1_17, i32 %p_ZL10e2_bram_w1_18, i32 %p_ZL10e2_bram_w1_19, i32 %p_ZL10e2_bram_w1_20, i32 %p_ZL10e2_bram_w1_21, i32 %p_ZL10e2_bram_w1_22, i32 %p_ZL10e2_bram_w1_23, i32 %p_ZL10e2_bram_w1_24, i32 %p_ZL10e2_bram_w1_25, i32 %p_ZL10e2_bram_w1_26, i32 %p_ZL10e2_bram_w1_27, i32 %p_ZL10e2_bram_w1_28, i32 %p_ZL10e2_bram_w1_29, i32 %p_ZL10e2_bram_w1_30, i32 %p_ZL10e2_bram_w1_31, i32 %e2_bram_b1, i32 %p_ZL10e2_bram_w2_0, i32 %p_ZL10e2_bram_w2_1, i32 %p_ZL10e2_bram_w2_2, i32 %p_ZL10e2_bram_w2_3, i32 %p_ZL10e2_bram_w2_4, i32 %p_ZL10e2_bram_w2_5, i32 %p_ZL10e2_bram_w2_6, i32 %p_ZL10e2_bram_w2_7, i32 %p_ZL10e2_bram_w2_8, i32 %p_ZL10e2_bram_w2_9, i32 %p_ZL10e2_bram_w2_10, i32 %p_ZL10e2_bram_w2_11, i32 %p_ZL10e2_bram_w2_12, i32 %p_ZL10e2_bram_w2_13, i32 %p_ZL10e2_bram_w2_14, i32 %p_ZL10e2_bram_w2_15, i32 %e2_bram_b2, i32 %e2_bram_w3_0, i32 0.096367" [src/moe.cpp:877->src/moe.cpp:983]   --->   Operation 99 'call' 'call_ret14' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_30 : Operation 100 [1/1] (0.54ns)   --->   "%store_ln877 = store i32 %call_ret14, i3 %expert_output_2_addr_4" [src/moe.cpp:877->src/moe.cpp:983]   --->   Operation 100 'store' 'store_ln877' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 31 <SV = 30> <Delay = 0.00>
+ST_31 : Operation 101 [2/2] (0.00ns)   --->   "%call_ret15 = call i32 @generic_mlp_head, i32 %input_r, i32 %e3_perf_w0, i32 %e3_perf_b0, i32 %p_ZL10e3_perf_w1_0, i32 %p_ZL10e3_perf_w1_1, i32 %p_ZL10e3_perf_w1_2, i32 %p_ZL10e3_perf_w1_3, i32 %p_ZL10e3_perf_w1_4, i32 %p_ZL10e3_perf_w1_5, i32 %p_ZL10e3_perf_w1_6, i32 %p_ZL10e3_perf_w1_7, i32 %p_ZL10e3_perf_w1_8, i32 %p_ZL10e3_perf_w1_9, i32 %p_ZL10e3_perf_w1_10, i32 %p_ZL10e3_perf_w1_11, i32 %p_ZL10e3_perf_w1_12, i32 %p_ZL10e3_perf_w1_13, i32 %p_ZL10e3_perf_w1_14, i32 %p_ZL10e3_perf_w1_15, i32 %p_ZL10e3_perf_w1_16, i32 %p_ZL10e3_perf_w1_17, i32 %p_ZL10e3_perf_w1_18, i32 %p_ZL10e3_perf_w1_19, i32 %p_ZL10e3_perf_w1_20, i32 %p_ZL10e3_perf_w1_21, i32 %p_ZL10e3_perf_w1_22, i32 %p_ZL10e3_perf_w1_23, i32 %p_ZL10e3_perf_w1_24, i32 %p_ZL10e3_perf_w1_25, i32 %p_ZL10e3_perf_w1_26, i32 %p_ZL10e3_perf_w1_27, i32 %p_ZL10e3_perf_w1_28, i32 %p_ZL10e3_perf_w1_29, i32 %p_ZL10e3_perf_w1_30, i32 %p_ZL10e3_perf_w1_31, i32 %e3_perf_b1, i32 %p_ZL10e3_perf_w2_0, i32 %p_ZL10e3_perf_w2_1, i32 %p_ZL10e3_perf_w2_2, i32 %p_ZL10e3_perf_w2_3, i32 %p_ZL10e3_perf_w2_4, i32 %p_ZL10e3_perf_w2_5, i32 %p_ZL10e3_perf_w2_6, i32 %p_ZL10e3_perf_w2_7, i32 %p_ZL10e3_perf_w2_8, i32 %p_ZL10e3_perf_w2_9, i32 %p_ZL10e3_perf_w2_10, i32 %p_ZL10e3_perf_w2_11, i32 %p_ZL10e3_perf_w2_12, i32 %p_ZL10e3_perf_w2_13, i32 %p_ZL10e3_perf_w2_14, i32 %p_ZL10e3_perf_w2_15, i32 %e3_perf_b2, i32 %e3_perf_w3_0, i32 0.0145994" [src/moe.cpp:841->src/moe.cpp:1018]   --->   Operation 101 'call' 'call_ret15' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 32 <SV = 31> <Delay = 0.54>
+ST_32 : Operation 102 [1/1] (0.00ns)   --->   "%expert_output_3_addr = getelementptr i32 %expert_output_3, i64 0, i64 0" [src/moe.cpp:941]   --->   Operation 102 'getelementptr' 'expert_output_3_addr' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 103 [1/2] (0.00ns)   --->   "%call_ret15 = call i32 @generic_mlp_head, i32 %input_r, i32 %e3_perf_w0, i32 %e3_perf_b0, i32 %p_ZL10e3_perf_w1_0, i32 %p_ZL10e3_perf_w1_1, i32 %p_ZL10e3_perf_w1_2, i32 %p_ZL10e3_perf_w1_3, i32 %p_ZL10e3_perf_w1_4, i32 %p_ZL10e3_perf_w1_5, i32 %p_ZL10e3_perf_w1_6, i32 %p_ZL10e3_perf_w1_7, i32 %p_ZL10e3_perf_w1_8, i32 %p_ZL10e3_perf_w1_9, i32 %p_ZL10e3_perf_w1_10, i32 %p_ZL10e3_perf_w1_11, i32 %p_ZL10e3_perf_w1_12, i32 %p_ZL10e3_perf_w1_13, i32 %p_ZL10e3_perf_w1_14, i32 %p_ZL10e3_perf_w1_15, i32 %p_ZL10e3_perf_w1_16, i32 %p_ZL10e3_perf_w1_17, i32 %p_ZL10e3_perf_w1_18, i32 %p_ZL10e3_perf_w1_19, i32 %p_ZL10e3_perf_w1_20, i32 %p_ZL10e3_perf_w1_21, i32 %p_ZL10e3_perf_w1_22, i32 %p_ZL10e3_perf_w1_23, i32 %p_ZL10e3_perf_w1_24, i32 %p_ZL10e3_perf_w1_25, i32 %p_ZL10e3_perf_w1_26, i32 %p_ZL10e3_perf_w1_27, i32 %p_ZL10e3_perf_w1_28, i32 %p_ZL10e3_perf_w1_29, i32 %p_ZL10e3_perf_w1_30, i32 %p_ZL10e3_perf_w1_31, i32 %e3_perf_b1, i32 %p_ZL10e3_perf_w2_0, i32 %p_ZL10e3_perf_w2_1, i32 %p_ZL10e3_perf_w2_2, i32 %p_ZL10e3_perf_w2_3, i32 %p_ZL10e3_perf_w2_4, i32 %p_ZL10e3_perf_w2_5, i32 %p_ZL10e3_perf_w2_6, i32 %p_ZL10e3_perf_w2_7, i32 %p_ZL10e3_perf_w2_8, i32 %p_ZL10e3_perf_w2_9, i32 %p_ZL10e3_perf_w2_10, i32 %p_ZL10e3_perf_w2_11, i32 %p_ZL10e3_perf_w2_12, i32 %p_ZL10e3_perf_w2_13, i32 %p_ZL10e3_perf_w2_14, i32 %p_ZL10e3_perf_w2_15, i32 %e3_perf_b2, i32 %e3_perf_w3_0, i32 0.0145994" [src/moe.cpp:841->src/moe.cpp:1018]   --->   Operation 103 'call' 'call_ret15' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_32 : Operation 104 [1/1] (0.54ns)   --->   "%store_ln841 = store i32 %call_ret15, i3 %expert_output_3_addr" [src/moe.cpp:841->src/moe.cpp:1018]   --->   Operation 104 'store' 'store_ln841' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 33 <SV = 32> <Delay = 0.00>
+ST_33 : Operation 105 [2/2] (0.00ns)   --->   "%call_ret16 = call i32 @generic_mlp_head, i32 %input_r, i32 %e3_lut_w0, i32 %e3_lut_b0, i32 %p_ZL9e3_lut_w1_0, i32 %p_ZL9e3_lut_w1_1, i32 %p_ZL9e3_lut_w1_2, i32 %p_ZL9e3_lut_w1_3, i32 %p_ZL9e3_lut_w1_4, i32 %p_ZL9e3_lut_w1_5, i32 %p_ZL9e3_lut_w1_6, i32 %p_ZL9e3_lut_w1_7, i32 %p_ZL9e3_lut_w1_8, i32 %p_ZL9e3_lut_w1_9, i32 %p_ZL9e3_lut_w1_10, i32 %p_ZL9e3_lut_w1_11, i32 %p_ZL9e3_lut_w1_12, i32 %p_ZL9e3_lut_w1_13, i32 %p_ZL9e3_lut_w1_14, i32 %p_ZL9e3_lut_w1_15, i32 %p_ZL9e3_lut_w1_16, i32 %p_ZL9e3_lut_w1_17, i32 %p_ZL9e3_lut_w1_18, i32 %p_ZL9e3_lut_w1_19, i32 %p_ZL9e3_lut_w1_20, i32 %p_ZL9e3_lut_w1_21, i32 %p_ZL9e3_lut_w1_22, i32 %p_ZL9e3_lut_w1_23, i32 %p_ZL9e3_lut_w1_24, i32 %p_ZL9e3_lut_w1_25, i32 %p_ZL9e3_lut_w1_26, i32 %p_ZL9e3_lut_w1_27, i32 %p_ZL9e3_lut_w1_28, i32 %p_ZL9e3_lut_w1_29, i32 %p_ZL9e3_lut_w1_30, i32 %p_ZL9e3_lut_w1_31, i32 %e3_lut_b1, i32 %p_ZL9e3_lut_w2_0, i32 %p_ZL9e3_lut_w2_1, i32 %p_ZL9e3_lut_w2_2, i32 %p_ZL9e3_lut_w2_3, i32 %p_ZL9e3_lut_w2_4, i32 %p_ZL9e3_lut_w2_5, i32 %p_ZL9e3_lut_w2_6, i32 %p_ZL9e3_lut_w2_7, i32 %p_ZL9e3_lut_w2_8, i32 %p_ZL9e3_lut_w2_9, i32 %p_ZL9e3_lut_w2_10, i32 %p_ZL9e3_lut_w2_11, i32 %p_ZL9e3_lut_w2_12, i32 %p_ZL9e3_lut_w2_13, i32 %p_ZL9e3_lut_w2_14, i32 %p_ZL9e3_lut_w2_15, i32 %e3_lut_b2, i32 %e3_lut_w3_0, i32 0.191574" [src/moe.cpp:850->src/moe.cpp:1018]   --->   Operation 105 'call' 'call_ret16' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 34 <SV = 33> <Delay = 0.54>
+ST_34 : Operation 106 [1/1] (0.00ns)   --->   "%expert_output_3_addr_1 = getelementptr i32 %expert_output_3, i64 0, i64 1" [src/moe.cpp:856->src/moe.cpp:913]   --->   Operation 106 'getelementptr' 'expert_output_3_addr_1' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 107 [1/2] (0.00ns)   --->   "%call_ret16 = call i32 @generic_mlp_head, i32 %input_r, i32 %e3_lut_w0, i32 %e3_lut_b0, i32 %p_ZL9e3_lut_w1_0, i32 %p_ZL9e3_lut_w1_1, i32 %p_ZL9e3_lut_w1_2, i32 %p_ZL9e3_lut_w1_3, i32 %p_ZL9e3_lut_w1_4, i32 %p_ZL9e3_lut_w1_5, i32 %p_ZL9e3_lut_w1_6, i32 %p_ZL9e3_lut_w1_7, i32 %p_ZL9e3_lut_w1_8, i32 %p_ZL9e3_lut_w1_9, i32 %p_ZL9e3_lut_w1_10, i32 %p_ZL9e3_lut_w1_11, i32 %p_ZL9e3_lut_w1_12, i32 %p_ZL9e3_lut_w1_13, i32 %p_ZL9e3_lut_w1_14, i32 %p_ZL9e3_lut_w1_15, i32 %p_ZL9e3_lut_w1_16, i32 %p_ZL9e3_lut_w1_17, i32 %p_ZL9e3_lut_w1_18, i32 %p_ZL9e3_lut_w1_19, i32 %p_ZL9e3_lut_w1_20, i32 %p_ZL9e3_lut_w1_21, i32 %p_ZL9e3_lut_w1_22, i32 %p_ZL9e3_lut_w1_23, i32 %p_ZL9e3_lut_w1_24, i32 %p_ZL9e3_lut_w1_25, i32 %p_ZL9e3_lut_w1_26, i32 %p_ZL9e3_lut_w1_27, i32 %p_ZL9e3_lut_w1_28, i32 %p_ZL9e3_lut_w1_29, i32 %p_ZL9e3_lut_w1_30, i32 %p_ZL9e3_lut_w1_31, i32 %e3_lut_b1, i32 %p_ZL9e3_lut_w2_0, i32 %p_ZL9e3_lut_w2_1, i32 %p_ZL9e3_lut_w2_2, i32 %p_ZL9e3_lut_w2_3, i32 %p_ZL9e3_lut_w2_4, i32 %p_ZL9e3_lut_w2_5, i32 %p_ZL9e3_lut_w2_6, i32 %p_ZL9e3_lut_w2_7, i32 %p_ZL9e3_lut_w2_8, i32 %p_ZL9e3_lut_w2_9, i32 %p_ZL9e3_lut_w2_10, i32 %p_ZL9e3_lut_w2_11, i32 %p_ZL9e3_lut_w2_12, i32 %p_ZL9e3_lut_w2_13, i32 %p_ZL9e3_lut_w2_14, i32 %p_ZL9e3_lut_w2_15, i32 %e3_lut_b2, i32 %e3_lut_w3_0, i32 0.191574" [src/moe.cpp:850->src/moe.cpp:1018]   --->   Operation 107 'call' 'call_ret16' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_34 : Operation 108 [1/1] (0.54ns)   --->   "%store_ln850 = store i32 %call_ret16, i3 %expert_output_3_addr_1" [src/moe.cpp:850->src/moe.cpp:1018]   --->   Operation 108 'store' 'store_ln850' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 35 <SV = 34> <Delay = 0.00>
+ST_35 : Operation 109 [2/2] (0.00ns)   --->   "%call_ret17 = call i32 @generic_mlp_head, i32 %input_r, i32 %e3_ff_w0, i32 %e3_ff_b0, i32 %p_ZL8e3_ff_w1_0, i32 %p_ZL8e3_ff_w1_1, i32 %p_ZL8e3_ff_w1_2, i32 %p_ZL8e3_ff_w1_3, i32 %p_ZL8e3_ff_w1_4, i32 %p_ZL8e3_ff_w1_5, i32 %p_ZL8e3_ff_w1_6, i32 %p_ZL8e3_ff_w1_7, i32 %p_ZL8e3_ff_w1_8, i32 %p_ZL8e3_ff_w1_9, i32 %p_ZL8e3_ff_w1_10, i32 %p_ZL8e3_ff_w1_11, i32 %p_ZL8e3_ff_w1_12, i32 %p_ZL8e3_ff_w1_13, i32 %p_ZL8e3_ff_w1_14, i32 %p_ZL8e3_ff_w1_15, i32 %p_ZL8e3_ff_w1_16, i32 %p_ZL8e3_ff_w1_17, i32 %p_ZL8e3_ff_w1_18, i32 %p_ZL8e3_ff_w1_19, i32 %p_ZL8e3_ff_w1_20, i32 %p_ZL8e3_ff_w1_21, i32 %p_ZL8e3_ff_w1_22, i32 %p_ZL8e3_ff_w1_23, i32 %p_ZL8e3_ff_w1_24, i32 %p_ZL8e3_ff_w1_25, i32 %p_ZL8e3_ff_w1_26, i32 %p_ZL8e3_ff_w1_27, i32 %p_ZL8e3_ff_w1_28, i32 %p_ZL8e3_ff_w1_29, i32 %p_ZL8e3_ff_w1_30, i32 %p_ZL8e3_ff_w1_31, i32 %e3_ff_b1, i32 %p_ZL8e3_ff_w2_0, i32 %p_ZL8e3_ff_w2_1, i32 %p_ZL8e3_ff_w2_2, i32 %p_ZL8e3_ff_w2_3, i32 %p_ZL8e3_ff_w2_4, i32 %p_ZL8e3_ff_w2_5, i32 %p_ZL8e3_ff_w2_6, i32 %p_ZL8e3_ff_w2_7, i32 %p_ZL8e3_ff_w2_8, i32 %p_ZL8e3_ff_w2_9, i32 %p_ZL8e3_ff_w2_10, i32 %p_ZL8e3_ff_w2_11, i32 %p_ZL8e3_ff_w2_12, i32 %p_ZL8e3_ff_w2_13, i32 %p_ZL8e3_ff_w2_14, i32 %p_ZL8e3_ff_w2_15, i32 %e3_ff_b2, i32 %e3_ff_w3_0, i32 0.123116" [src/moe.cpp:859->src/moe.cpp:1018]   --->   Operation 109 'call' 'call_ret17' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 36 <SV = 35> <Delay = 0.54>
+ST_36 : Operation 110 [1/1] (0.00ns)   --->   "%expert_output_3_addr_2 = getelementptr i32 %expert_output_3, i64 0, i64 2" [src/moe.cpp:865->src/moe.cpp:913]   --->   Operation 110 'getelementptr' 'expert_output_3_addr_2' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 111 [1/2] (0.00ns)   --->   "%call_ret17 = call i32 @generic_mlp_head, i32 %input_r, i32 %e3_ff_w0, i32 %e3_ff_b0, i32 %p_ZL8e3_ff_w1_0, i32 %p_ZL8e3_ff_w1_1, i32 %p_ZL8e3_ff_w1_2, i32 %p_ZL8e3_ff_w1_3, i32 %p_ZL8e3_ff_w1_4, i32 %p_ZL8e3_ff_w1_5, i32 %p_ZL8e3_ff_w1_6, i32 %p_ZL8e3_ff_w1_7, i32 %p_ZL8e3_ff_w1_8, i32 %p_ZL8e3_ff_w1_9, i32 %p_ZL8e3_ff_w1_10, i32 %p_ZL8e3_ff_w1_11, i32 %p_ZL8e3_ff_w1_12, i32 %p_ZL8e3_ff_w1_13, i32 %p_ZL8e3_ff_w1_14, i32 %p_ZL8e3_ff_w1_15, i32 %p_ZL8e3_ff_w1_16, i32 %p_ZL8e3_ff_w1_17, i32 %p_ZL8e3_ff_w1_18, i32 %p_ZL8e3_ff_w1_19, i32 %p_ZL8e3_ff_w1_20, i32 %p_ZL8e3_ff_w1_21, i32 %p_ZL8e3_ff_w1_22, i32 %p_ZL8e3_ff_w1_23, i32 %p_ZL8e3_ff_w1_24, i32 %p_ZL8e3_ff_w1_25, i32 %p_ZL8e3_ff_w1_26, i32 %p_ZL8e3_ff_w1_27, i32 %p_ZL8e3_ff_w1_28, i32 %p_ZL8e3_ff_w1_29, i32 %p_ZL8e3_ff_w1_30, i32 %p_ZL8e3_ff_w1_31, i32 %e3_ff_b1, i32 %p_ZL8e3_ff_w2_0, i32 %p_ZL8e3_ff_w2_1, i32 %p_ZL8e3_ff_w2_2, i32 %p_ZL8e3_ff_w2_3, i32 %p_ZL8e3_ff_w2_4, i32 %p_ZL8e3_ff_w2_5, i32 %p_ZL8e3_ff_w2_6, i32 %p_ZL8e3_ff_w2_7, i32 %p_ZL8e3_ff_w2_8, i32 %p_ZL8e3_ff_w2_9, i32 %p_ZL8e3_ff_w2_10, i32 %p_ZL8e3_ff_w2_11, i32 %p_ZL8e3_ff_w2_12, i32 %p_ZL8e3_ff_w2_13, i32 %p_ZL8e3_ff_w2_14, i32 %p_ZL8e3_ff_w2_15, i32 %e3_ff_b2, i32 %e3_ff_w3_0, i32 0.123116" [src/moe.cpp:859->src/moe.cpp:1018]   --->   Operation 111 'call' 'call_ret17' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_36 : Operation 112 [1/1] (0.54ns)   --->   "%store_ln859 = store i32 %call_ret17, i3 %expert_output_3_addr_2" [src/moe.cpp:859->src/moe.cpp:1018]   --->   Operation 112 'store' 'store_ln859' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 37 <SV = 36> <Delay = 0.00>
+ST_37 : Operation 113 [2/2] (0.00ns)   --->   "%call_ret18 = call i32 @generic_mlp_head, i32 %input_r, i32 %e3_dsp_w0, i32 %e3_dsp_b0, i32 %p_ZL9e3_dsp_w1_0, i32 %p_ZL9e3_dsp_w1_1, i32 %p_ZL9e3_dsp_w1_2, i32 %p_ZL9e3_dsp_w1_3, i32 %p_ZL9e3_dsp_w1_4, i32 %p_ZL9e3_dsp_w1_5, i32 %p_ZL9e3_dsp_w1_6, i32 %p_ZL9e3_dsp_w1_7, i32 %p_ZL9e3_dsp_w1_8, i32 %p_ZL9e3_dsp_w1_9, i32 %p_ZL9e3_dsp_w1_10, i32 %p_ZL9e3_dsp_w1_11, i32 %p_ZL9e3_dsp_w1_12, i32 %p_ZL9e3_dsp_w1_13, i32 %p_ZL9e3_dsp_w1_14, i32 %p_ZL9e3_dsp_w1_15, i32 %p_ZL9e3_dsp_w1_16, i32 %p_ZL9e3_dsp_w1_17, i32 %p_ZL9e3_dsp_w1_18, i32 %p_ZL9e3_dsp_w1_19, i32 %p_ZL9e3_dsp_w1_20, i32 %p_ZL9e3_dsp_w1_21, i32 %p_ZL9e3_dsp_w1_22, i32 %p_ZL9e3_dsp_w1_23, i32 %p_ZL9e3_dsp_w1_24, i32 %p_ZL9e3_dsp_w1_25, i32 %p_ZL9e3_dsp_w1_26, i32 %p_ZL9e3_dsp_w1_27, i32 %p_ZL9e3_dsp_w1_28, i32 %p_ZL9e3_dsp_w1_29, i32 %p_ZL9e3_dsp_w1_30, i32 %p_ZL9e3_dsp_w1_31, i32 %e3_dsp_b1, i32 %p_ZL9e3_dsp_w2_0, i32 %p_ZL9e3_dsp_w2_1, i32 %p_ZL9e3_dsp_w2_2, i32 %p_ZL9e3_dsp_w2_3, i32 %p_ZL9e3_dsp_w2_4, i32 %p_ZL9e3_dsp_w2_5, i32 %p_ZL9e3_dsp_w2_6, i32 %p_ZL9e3_dsp_w2_7, i32 %p_ZL9e3_dsp_w2_8, i32 %p_ZL9e3_dsp_w2_9, i32 %p_ZL9e3_dsp_w2_10, i32 %p_ZL9e3_dsp_w2_11, i32 %p_ZL9e3_dsp_w2_12, i32 %p_ZL9e3_dsp_w2_13, i32 %p_ZL9e3_dsp_w2_14, i32 %p_ZL9e3_dsp_w2_15, i32 %e3_dsp_b2, i32 %e3_dsp_w3_0, i32 0.0297402" [src/moe.cpp:868->src/moe.cpp:1018]   --->   Operation 113 'call' 'call_ret18' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 38 <SV = 37> <Delay = 0.54>
+ST_38 : Operation 114 [1/1] (0.00ns)   --->   "%expert_output_3_addr_3 = getelementptr i32 %expert_output_3, i64 0, i64 3" [src/moe.cpp:874->src/moe.cpp:913]   --->   Operation 114 'getelementptr' 'expert_output_3_addr_3' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 115 [1/2] (0.00ns)   --->   "%call_ret18 = call i32 @generic_mlp_head, i32 %input_r, i32 %e3_dsp_w0, i32 %e3_dsp_b0, i32 %p_ZL9e3_dsp_w1_0, i32 %p_ZL9e3_dsp_w1_1, i32 %p_ZL9e3_dsp_w1_2, i32 %p_ZL9e3_dsp_w1_3, i32 %p_ZL9e3_dsp_w1_4, i32 %p_ZL9e3_dsp_w1_5, i32 %p_ZL9e3_dsp_w1_6, i32 %p_ZL9e3_dsp_w1_7, i32 %p_ZL9e3_dsp_w1_8, i32 %p_ZL9e3_dsp_w1_9, i32 %p_ZL9e3_dsp_w1_10, i32 %p_ZL9e3_dsp_w1_11, i32 %p_ZL9e3_dsp_w1_12, i32 %p_ZL9e3_dsp_w1_13, i32 %p_ZL9e3_dsp_w1_14, i32 %p_ZL9e3_dsp_w1_15, i32 %p_ZL9e3_dsp_w1_16, i32 %p_ZL9e3_dsp_w1_17, i32 %p_ZL9e3_dsp_w1_18, i32 %p_ZL9e3_dsp_w1_19, i32 %p_ZL9e3_dsp_w1_20, i32 %p_ZL9e3_dsp_w1_21, i32 %p_ZL9e3_dsp_w1_22, i32 %p_ZL9e3_dsp_w1_23, i32 %p_ZL9e3_dsp_w1_24, i32 %p_ZL9e3_dsp_w1_25, i32 %p_ZL9e3_dsp_w1_26, i32 %p_ZL9e3_dsp_w1_27, i32 %p_ZL9e3_dsp_w1_28, i32 %p_ZL9e3_dsp_w1_29, i32 %p_ZL9e3_dsp_w1_30, i32 %p_ZL9e3_dsp_w1_31, i32 %e3_dsp_b1, i32 %p_ZL9e3_dsp_w2_0, i32 %p_ZL9e3_dsp_w2_1, i32 %p_ZL9e3_dsp_w2_2, i32 %p_ZL9e3_dsp_w2_3, i32 %p_ZL9e3_dsp_w2_4, i32 %p_ZL9e3_dsp_w2_5, i32 %p_ZL9e3_dsp_w2_6, i32 %p_ZL9e3_dsp_w2_7, i32 %p_ZL9e3_dsp_w2_8, i32 %p_ZL9e3_dsp_w2_9, i32 %p_ZL9e3_dsp_w2_10, i32 %p_ZL9e3_dsp_w2_11, i32 %p_ZL9e3_dsp_w2_12, i32 %p_ZL9e3_dsp_w2_13, i32 %p_ZL9e3_dsp_w2_14, i32 %p_ZL9e3_dsp_w2_15, i32 %e3_dsp_b2, i32 %e3_dsp_w3_0, i32 0.0297402" [src/moe.cpp:868->src/moe.cpp:1018]   --->   Operation 115 'call' 'call_ret18' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_38 : Operation 116 [1/1] (0.54ns)   --->   "%store_ln868 = store i32 %call_ret18, i3 %expert_output_3_addr_3" [src/moe.cpp:868->src/moe.cpp:1018]   --->   Operation 116 'store' 'store_ln868' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 39 <SV = 38> <Delay = 0.00>
+ST_39 : Operation 117 [2/2] (0.00ns)   --->   "%call_ret19 = call i32 @generic_mlp_head, i32 %input_r, i32 %e3_bram_w0, i32 %e3_bram_b0, i32 %p_ZL10e3_bram_w1_0, i32 %p_ZL10e3_bram_w1_1, i32 %p_ZL10e3_bram_w1_2, i32 %p_ZL10e3_bram_w1_3, i32 %p_ZL10e3_bram_w1_4, i32 %p_ZL10e3_bram_w1_5, i32 %p_ZL10e3_bram_w1_6, i32 %p_ZL10e3_bram_w1_7, i32 %p_ZL10e3_bram_w1_8, i32 %p_ZL10e3_bram_w1_9, i32 %p_ZL10e3_bram_w1_10, i32 %p_ZL10e3_bram_w1_11, i32 %p_ZL10e3_bram_w1_12, i32 %p_ZL10e3_bram_w1_13, i32 %p_ZL10e3_bram_w1_14, i32 %p_ZL10e3_bram_w1_15, i32 %p_ZL10e3_bram_w1_16, i32 %p_ZL10e3_bram_w1_17, i32 %p_ZL10e3_bram_w1_18, i32 %p_ZL10e3_bram_w1_19, i32 %p_ZL10e3_bram_w1_20, i32 %p_ZL10e3_bram_w1_21, i32 %p_ZL10e3_bram_w1_22, i32 %p_ZL10e3_bram_w1_23, i32 %p_ZL10e3_bram_w1_24, i32 %p_ZL10e3_bram_w1_25, i32 %p_ZL10e3_bram_w1_26, i32 %p_ZL10e3_bram_w1_27, i32 %p_ZL10e3_bram_w1_28, i32 %p_ZL10e3_bram_w1_29, i32 %p_ZL10e3_bram_w1_30, i32 %p_ZL10e3_bram_w1_31, i32 %e3_bram_b1, i32 %p_ZL10e3_bram_w2_0, i32 %p_ZL10e3_bram_w2_1, i32 %p_ZL10e3_bram_w2_2, i32 %p_ZL10e3_bram_w2_3, i32 %p_ZL10e3_bram_w2_4, i32 %p_ZL10e3_bram_w2_5, i32 %p_ZL10e3_bram_w2_6, i32 %p_ZL10e3_bram_w2_7, i32 %p_ZL10e3_bram_w2_8, i32 %p_ZL10e3_bram_w2_9, i32 %p_ZL10e3_bram_w2_10, i32 %p_ZL10e3_bram_w2_11, i32 %p_ZL10e3_bram_w2_12, i32 %p_ZL10e3_bram_w2_13, i32 %p_ZL10e3_bram_w2_14, i32 %p_ZL10e3_bram_w2_15, i32 %e3_bram_b2, i32 %e3_bram_w3_0, i32 0.0702456" [src/moe.cpp:877->src/moe.cpp:1018]   --->   Operation 117 'call' 'call_ret19' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 40 <SV = 39> <Delay = 0.54>
+ST_40 : Operation 118 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %input_r, void @empty_0, i32 0, i32 0, void @empty_1, i32 4294967295, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 118 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 119 [1/1] (0.00ns)   --->   "%expert_output_3_addr_4 = getelementptr i32 %expert_output_3, i64 0, i64 4" [src/moe.cpp:883->src/moe.cpp:913]   --->   Operation 119 'getelementptr' 'expert_output_3_addr_4' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 120 [1/2] (0.00ns)   --->   "%call_ret19 = call i32 @generic_mlp_head, i32 %input_r, i32 %e3_bram_w0, i32 %e3_bram_b0, i32 %p_ZL10e3_bram_w1_0, i32 %p_ZL10e3_bram_w1_1, i32 %p_ZL10e3_bram_w1_2, i32 %p_ZL10e3_bram_w1_3, i32 %p_ZL10e3_bram_w1_4, i32 %p_ZL10e3_bram_w1_5, i32 %p_ZL10e3_bram_w1_6, i32 %p_ZL10e3_bram_w1_7, i32 %p_ZL10e3_bram_w1_8, i32 %p_ZL10e3_bram_w1_9, i32 %p_ZL10e3_bram_w1_10, i32 %p_ZL10e3_bram_w1_11, i32 %p_ZL10e3_bram_w1_12, i32 %p_ZL10e3_bram_w1_13, i32 %p_ZL10e3_bram_w1_14, i32 %p_ZL10e3_bram_w1_15, i32 %p_ZL10e3_bram_w1_16, i32 %p_ZL10e3_bram_w1_17, i32 %p_ZL10e3_bram_w1_18, i32 %p_ZL10e3_bram_w1_19, i32 %p_ZL10e3_bram_w1_20, i32 %p_ZL10e3_bram_w1_21, i32 %p_ZL10e3_bram_w1_22, i32 %p_ZL10e3_bram_w1_23, i32 %p_ZL10e3_bram_w1_24, i32 %p_ZL10e3_bram_w1_25, i32 %p_ZL10e3_bram_w1_26, i32 %p_ZL10e3_bram_w1_27, i32 %p_ZL10e3_bram_w1_28, i32 %p_ZL10e3_bram_w1_29, i32 %p_ZL10e3_bram_w1_30, i32 %p_ZL10e3_bram_w1_31, i32 %e3_bram_b1, i32 %p_ZL10e3_bram_w2_0, i32 %p_ZL10e3_bram_w2_1, i32 %p_ZL10e3_bram_w2_2, i32 %p_ZL10e3_bram_w2_3, i32 %p_ZL10e3_bram_w2_4, i32 %p_ZL10e3_bram_w2_5, i32 %p_ZL10e3_bram_w2_6, i32 %p_ZL10e3_bram_w2_7, i32 %p_ZL10e3_bram_w2_8, i32 %p_ZL10e3_bram_w2_9, i32 %p_ZL10e3_bram_w2_10, i32 %p_ZL10e3_bram_w2_11, i32 %p_ZL10e3_bram_w2_12, i32 %p_ZL10e3_bram_w2_13, i32 %p_ZL10e3_bram_w2_14, i32 %p_ZL10e3_bram_w2_15, i32 %e3_bram_b2, i32 %e3_bram_w3_0, i32 0.0702456" [src/moe.cpp:877->src/moe.cpp:1018]   --->   Operation 120 'call' 'call_ret19' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_40 : Operation 121 [1/1] (0.54ns)   --->   "%store_ln877 = store i32 %call_ret19, i3 %expert_output_3_addr_4" [src/moe.cpp:877->src/moe.cpp:1018]   --->   Operation 121 'store' 'store_ln877' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_40 : Operation 122 [1/1] (0.00ns)   --->   "%ret_ln1048 = ret" [src/moe.cpp:1048]   --->   Operation 122 'ret' 'ret_ln1048' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_0_addr', src/moe.cpp:941) [1067]  (0.000 ns)
+	'store' operation 0 bit ('store_ln841', src/moe.cpp:841->src/moe.cpp:913) of variable 'call_ret', src/moe.cpp:841->src/moe.cpp:913 on array 'expert_output_0' [1072]  (0.542 ns)
+
+ <State 3>: 0.000ns
+The critical path consists of the following:
+
+ <State 4>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_0_addr_1', src/moe.cpp:856->src/moe.cpp:913) [1073]  (0.000 ns)
+	'store' operation 0 bit ('store_ln850', src/moe.cpp:850->src/moe.cpp:913) of variable 'call_ret1', src/moe.cpp:850->src/moe.cpp:913 on array 'expert_output_0' [1078]  (0.542 ns)
+
+ <State 5>: 0.000ns
+The critical path consists of the following:
+
+ <State 6>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_0_addr_2', src/moe.cpp:865->src/moe.cpp:913) [1079]  (0.000 ns)
+	'store' operation 0 bit ('store_ln859', src/moe.cpp:859->src/moe.cpp:913) of variable 'call_ret2', src/moe.cpp:859->src/moe.cpp:913 on array 'expert_output_0' [1084]  (0.542 ns)
+
+ <State 7>: 0.000ns
+The critical path consists of the following:
+
+ <State 8>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_0_addr_3', src/moe.cpp:874->src/moe.cpp:913) [1085]  (0.000 ns)
+	'store' operation 0 bit ('store_ln868', src/moe.cpp:868->src/moe.cpp:913) of variable 'call_ret3', src/moe.cpp:868->src/moe.cpp:913 on array 'expert_output_0' [1090]  (0.542 ns)
+
+ <State 9>: 0.000ns
+The critical path consists of the following:
+
+ <State 10>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_0_addr_4', src/moe.cpp:883->src/moe.cpp:913) [1091]  (0.000 ns)
+	'store' operation 0 bit ('store_ln877', src/moe.cpp:877->src/moe.cpp:913) of variable 'call_ret4', src/moe.cpp:877->src/moe.cpp:913 on array 'expert_output_0' [1096]  (0.542 ns)
+
+ <State 11>: 0.000ns
+The critical path consists of the following:
+
+ <State 12>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_1_addr', src/moe.cpp:941) [1068]  (0.000 ns)
+	'store' operation 0 bit ('store_ln841', src/moe.cpp:841->src/moe.cpp:948) of variable 'call_ret5', src/moe.cpp:841->src/moe.cpp:948 on array 'expert_output_1' [1098]  (0.542 ns)
+
+ <State 13>: 0.000ns
+The critical path consists of the following:
+
+ <State 14>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_1_addr_1', src/moe.cpp:856->src/moe.cpp:913) [1074]  (0.000 ns)
+	'store' operation 0 bit ('store_ln850', src/moe.cpp:850->src/moe.cpp:948) of variable 'call_ret6', src/moe.cpp:850->src/moe.cpp:948 on array 'expert_output_1' [1100]  (0.542 ns)
+
+ <State 15>: 0.000ns
+The critical path consists of the following:
+
+ <State 16>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_1_addr_2', src/moe.cpp:865->src/moe.cpp:913) [1080]  (0.000 ns)
+	'store' operation 0 bit ('store_ln859', src/moe.cpp:859->src/moe.cpp:948) of variable 'call_ret7', src/moe.cpp:859->src/moe.cpp:948 on array 'expert_output_1' [1102]  (0.542 ns)
+
+ <State 17>: 0.000ns
+The critical path consists of the following:
+
+ <State 18>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_1_addr_3', src/moe.cpp:874->src/moe.cpp:913) [1086]  (0.000 ns)
+	'store' operation 0 bit ('store_ln868', src/moe.cpp:868->src/moe.cpp:948) of variable 'call_ret8', src/moe.cpp:868->src/moe.cpp:948 on array 'expert_output_1' [1104]  (0.542 ns)
+
+ <State 19>: 0.000ns
+The critical path consists of the following:
+
+ <State 20>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_1_addr_4', src/moe.cpp:883->src/moe.cpp:913) [1092]  (0.000 ns)
+	'store' operation 0 bit ('store_ln877', src/moe.cpp:877->src/moe.cpp:948) of variable 'call_ret9', src/moe.cpp:877->src/moe.cpp:948 on array 'expert_output_1' [1106]  (0.542 ns)
+
+ <State 21>: 0.000ns
+The critical path consists of the following:
+
+ <State 22>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_2_addr', src/moe.cpp:941) [1069]  (0.000 ns)
+	'store' operation 0 bit ('store_ln841', src/moe.cpp:841->src/moe.cpp:983) of variable 'call_ret10', src/moe.cpp:841->src/moe.cpp:983 on array 'expert_output_2' [1108]  (0.542 ns)
+
+ <State 23>: 0.000ns
+The critical path consists of the following:
+
+ <State 24>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_2_addr_1', src/moe.cpp:856->src/moe.cpp:913) [1075]  (0.000 ns)
+	'store' operation 0 bit ('store_ln850', src/moe.cpp:850->src/moe.cpp:983) of variable 'call_ret11', src/moe.cpp:850->src/moe.cpp:983 on array 'expert_output_2' [1110]  (0.542 ns)
+
+ <State 25>: 0.000ns
+The critical path consists of the following:
+
+ <State 26>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_2_addr_2', src/moe.cpp:865->src/moe.cpp:913) [1081]  (0.000 ns)
+	'store' operation 0 bit ('store_ln859', src/moe.cpp:859->src/moe.cpp:983) of variable 'call_ret12', src/moe.cpp:859->src/moe.cpp:983 on array 'expert_output_2' [1112]  (0.542 ns)
+
+ <State 27>: 0.000ns
+The critical path consists of the following:
+
+ <State 28>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_2_addr_3', src/moe.cpp:874->src/moe.cpp:913) [1087]  (0.000 ns)
+	'store' operation 0 bit ('store_ln868', src/moe.cpp:868->src/moe.cpp:983) of variable 'call_ret13', src/moe.cpp:868->src/moe.cpp:983 on array 'expert_output_2' [1114]  (0.542 ns)
+
+ <State 29>: 0.000ns
+The critical path consists of the following:
+
+ <State 30>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_2_addr_4', src/moe.cpp:883->src/moe.cpp:913) [1093]  (0.000 ns)
+	'store' operation 0 bit ('store_ln877', src/moe.cpp:877->src/moe.cpp:983) of variable 'call_ret14', src/moe.cpp:877->src/moe.cpp:983 on array 'expert_output_2' [1116]  (0.542 ns)
+
+ <State 31>: 0.000ns
+The critical path consists of the following:
+
+ <State 32>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_3_addr', src/moe.cpp:941) [1070]  (0.000 ns)
+	'store' operation 0 bit ('store_ln841', src/moe.cpp:841->src/moe.cpp:1018) of variable 'call_ret15', src/moe.cpp:841->src/moe.cpp:1018 on array 'expert_output_3' [1118]  (0.542 ns)
+
+ <State 33>: 0.000ns
+The critical path consists of the following:
+
+ <State 34>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_3_addr_1', src/moe.cpp:856->src/moe.cpp:913) [1076]  (0.000 ns)
+	'store' operation 0 bit ('store_ln850', src/moe.cpp:850->src/moe.cpp:1018) of variable 'call_ret16', src/moe.cpp:850->src/moe.cpp:1018 on array 'expert_output_3' [1120]  (0.542 ns)
+
+ <State 35>: 0.000ns
+The critical path consists of the following:
+
+ <State 36>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_3_addr_2', src/moe.cpp:865->src/moe.cpp:913) [1082]  (0.000 ns)
+	'store' operation 0 bit ('store_ln859', src/moe.cpp:859->src/moe.cpp:1018) of variable 'call_ret17', src/moe.cpp:859->src/moe.cpp:1018 on array 'expert_output_3' [1122]  (0.542 ns)
+
+ <State 37>: 0.000ns
+The critical path consists of the following:
+
+ <State 38>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_3_addr_3', src/moe.cpp:874->src/moe.cpp:913) [1088]  (0.000 ns)
+	'store' operation 0 bit ('store_ln868', src/moe.cpp:868->src/moe.cpp:1018) of variable 'call_ret18', src/moe.cpp:868->src/moe.cpp:1018 on array 'expert_output_3' [1124]  (0.542 ns)
+
+ <State 39>: 0.000ns
+The critical path consists of the following:
+
+ <State 40>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 3 bit ('expert_output_3_addr_4', src/moe.cpp:883->src/moe.cpp:913) [1094]  (0.000 ns)
+	'store' operation 0 bit ('store_ln877', src/moe.cpp:877->src/moe.cpp:1018) of variable 'call_ret19', src/moe.cpp:877->src/moe.cpp:1018 on array 'expert_output_3' [1126]  (0.542 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,52 @@
+{
+  "0": {
+    "basicblocks": 39,
+    "calls": "3",
+    "file": "moe.cpp",
+    "fileloc": 307,
+    "instructions": 201,
+    "loads": {
+      "L": 10,
+      "T": 7
+    },
+    "name": "graph_moe",
+    "stores": {
+      "L": 2,
+      "T": 2
+    },
+    "total_instructions": 998
+  },
+  "1": {
+    "basicblocks": 97,
+    "calls": "2 2 2 2 2 2",
+    "file": "moe.cpp",
+    "fileloc": 26,
+    "instructions": 347,
+    "loads": {
+      "L": 24
+    },
+    "name": "expert_engine",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 395
+  },
+  "2": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "moe.cpp",
+    "fileloc": 5,
+    "instructions": 8,
+    "name": "elu",
+    "total_instructions": 8
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "1 1",
+    "file": "moe.cpp",
+    "fileloc": 199,
+    "instructions": 7,
+    "name": "run_parallel_engines",
+    "total_instructions": 797
+  }
+}

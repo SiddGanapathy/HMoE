@@ -1,0 +1,171 @@
+
+
+================================================================
+== Vitis HLS Report for 'graph_moe_Pipeline_VITIS_LOOP_143_14'
+================================================================
+* Date:           Sat Sep 12 14:08:54 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        HLS_GraphMoE_Run2
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p_CIV-figd2104-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.409 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       13|       13|  0.130 us|  0.130 us|   13|   13|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_143_14  |       11|       11|         5|          1|          1|     8|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       41|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|        -|        -|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        -|       54|     -|
+|Register             |        -|      -|      142|       32|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|      142|      127|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln143_fu_127_p2   |         +|   0|  0|  12|           4|           1|
+    |add_ln145_fu_142_p2   |         +|   0|  0|  15|           8|           8|
+    |icmp_ln143_fu_121_p2  |      icmp|   0|  0|  12|           4|           5|
+    |ap_enable_pp0         |       xor|   0|  0|   2|           1|           2|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  41|          17|          16|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------+----+-----------+-----+-----------+
+    |              Name              | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                     |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1         |   9|          2|    1|          2|
+    |ap_sig_allocacmp_j_1            |   9|          2|    4|          8|
+    |ap_sig_allocacmp_result_1_load  |   9|          2|   32|         64|
+    |j_fu_50                         |   9|          2|    4|          8|
+    |result_1_fu_46                  |   9|          2|   32|         64|
+    +--------------------------------+----+-----------+-----+-----------+
+    |Total                           |  54|         12|   74|        148|
+    +--------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                         |   1|   0|    1|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg  |   1|   0|    1|          0|
+    |icmp_ln143_reg_191                |   1|   0|    1|          0|
+    |j_fu_50                           |   4|   0|    4|          0|
+    |mul4_reg_215                      |  32|   0|   32|          0|
+    |result_1_fu_46                    |  32|   0|   32|          0|
+    |icmp_ln143_reg_191                |  64|  32|    1|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 142|  32|   79|          0|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+--------------------------------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  |             Source Object            |    C Type    |
++---------------------+-----+-----+------------+--------------------------------------+--------------+
+|ap_clk               |   in|    1|  ap_ctrl_hs|  graph_moe_Pipeline_VITIS_LOOP_143_14|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|  graph_moe_Pipeline_VITIS_LOOP_143_14|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|  graph_moe_Pipeline_VITIS_LOOP_143_14|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|  graph_moe_Pipeline_VITIS_LOOP_143_14|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|  graph_moe_Pipeline_VITIS_LOOP_143_14|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|  graph_moe_Pipeline_VITIS_LOOP_143_14|  return value|
+|grp_fu_1610_p_din0   |  out|   32|  ap_ctrl_hs|  graph_moe_Pipeline_VITIS_LOOP_143_14|  return value|
+|grp_fu_1610_p_din1   |  out|   32|  ap_ctrl_hs|  graph_moe_Pipeline_VITIS_LOOP_143_14|  return value|
+|grp_fu_1610_p_dout0  |   in|   32|  ap_ctrl_hs|  graph_moe_Pipeline_VITIS_LOOP_143_14|  return value|
+|grp_fu_1610_p_ce     |  out|    1|  ap_ctrl_hs|  graph_moe_Pipeline_VITIS_LOOP_143_14|  return value|
+|grp_fu_563_p_din0    |  out|   32|  ap_ctrl_hs|  graph_moe_Pipeline_VITIS_LOOP_143_14|  return value|
+|grp_fu_563_p_din1    |  out|   32|  ap_ctrl_hs|  graph_moe_Pipeline_VITIS_LOOP_143_14|  return value|
+|grp_fu_563_p_opcode  |  out|    1|  ap_ctrl_hs|  graph_moe_Pipeline_VITIS_LOOP_143_14|  return value|
+|grp_fu_563_p_dout0   |   in|   32|  ap_ctrl_hs|  graph_moe_Pipeline_VITIS_LOOP_143_14|  return value|
+|grp_fu_563_p_ce      |  out|    1|  ap_ctrl_hs|  graph_moe_Pipeline_VITIS_LOOP_143_14|  return value|
+|result               |   in|   32|     ap_none|                                result|        scalar|
+|empty                |   in|    8|     ap_none|                                 empty|        scalar|
+|w4_address0          |  out|    8|   ap_memory|                                    w4|         array|
+|w4_ce0               |  out|    1|   ap_memory|                                    w4|         array|
+|w4_q0                |   in|   32|   ap_memory|                                    w4|         array|
+|l3_address0          |  out|    3|   ap_memory|                                    l3|         array|
+|l3_ce0               |  out|    1|   ap_memory|                                    l3|         array|
+|l3_q0                |   in|   32|   ap_memory|                                    l3|         array|
+|result_1_out         |  out|   32|      ap_vld|                          result_1_out|       pointer|
+|result_1_out_ap_vld  |  out|    1|      ap_vld|                          result_1_out|       pointer|
++---------------------+-----+-----+------------+--------------------------------------+--------------+
+

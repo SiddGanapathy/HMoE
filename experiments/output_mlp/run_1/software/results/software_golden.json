@@ -1,0 +1,39 @@
+{
+  "num_samples": 10,
+  "input_dim": 128,
+  "output_shape": [
+    10,
+    1
+  ],
+  "moe_num_experts": 4,
+  "moe_k": 4,
+  "activation": "elu",
+  "mlp_common_lyr": 0,
+  "targets": [
+    "perf",
+    "util-LUT",
+    "util-FF",
+    "util-DSP",
+    "util-BRAM"
+  ],
+  "repository_execution_time_ms": 3.2827359973452985,
+  "output_min": -0.4561077654361725,
+  "output_max": 5.272299766540527,
+  "output_mean": 3.3339171409606934,
+  "output_has_nan": false,
+  "output_has_inf": false,
+  "gates_shape": [
+    10,
+    4
+  ],
+  "first_gates": [
+    0.18246272206306458,
+    0.19873259961605072,
+    0.2316066473722458,
+    0.3871980905532837
+  ],
+  "loss": 0.0001358235313091427,
+  "first_output": [
+    4.0004801750183105
+  ]
+}

@@ -1,0 +1,209 @@
+{
+    "1": {
+        "name": "graph_moe_Pipeline_VITIS_LOOP_243_3",
+        "file": "src\/moe.cpp",
+        "fileloc": "241",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "expert_engine_Pipeline_VITIS_LOOP_134_7",
+        "file": "src\/moe.cpp",
+        "fileloc": "132",
+        "instructions": "33",
+        "total_instructions": "33",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4",
+            "T": "1"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "expert_engine_Pipeline_VITIS_LOOP_70_2",
+        "file": "src\/moe.cpp",
+        "fileloc": "68",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3",
+            "T": "2"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "graph_moe_Pipeline_VITIS_LOOP_260_5",
+        "file": "src\/moe.cpp",
+        "fileloc": "260",
+        "instructions": "26",
+        "total_instructions": "26",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2",
+            "T": "1"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "expert_engine_Pipeline_VITIS_LOOP_113_6",
+        "file": "src\/moe.cpp",
+        "fileloc": "111",
+        "instructions": "33",
+        "total_instructions": "33",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4",
+            "T": "1"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "expert_engine",
+        "file": "src\/moe.cpp",
+        "fileloc": "55",
+        "instructions": "183",
+        "total_instructions": "317",
+        "calls": "3 8 5 2",
+        "basicblocks": "10",
+        "loads": {
+            "L": "7",
+            "T": "4"
+        },
+        "stores": {
+            "L": "9"
+        },
+        "loops": {
+            "L": "3"
+        }
+    },
+    "7": {
+        "name": "graph_moe_Pipeline_VITIS_LOOP_224_2",
+        "file": "src\/moe.cpp",
+        "fileloc": "222",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3",
+            "T": "2"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "expert_engine_Pipeline_VITIS_LOOP_92_4",
+        "file": "src\/moe.cpp",
+        "fileloc": "90",
+        "instructions": "33",
+        "total_instructions": "33",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4",
+            "T": "1"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "graph_moe_Pipeline_VITIS_LOOP_430_8",
+        "file": "src\/moe.cpp",
+        "fileloc": "430",
+        "instructions": "38",
+        "total_instructions": "38",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "2",
+            "T": "1"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "graph_moe",
+        "file": "src\/moe.cpp",
+        "fileloc": "163",
+        "instructions": "146",
+        "total_instructions": "1607",
+        "calls": "1 10 4 7 6 6 9 6 6",
+        "basicblocks": "15",
+        "loads": {
+            "L": "18",
+            "T": "5"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "3"
+        }
+    },
+    "10": {
+        "name": "graph_moe_Pipeline_VITIS_LOOP_253_4",
+        "file": "src\/moe.cpp",
+        "fileloc": "251",
+        "instructions": "50",
+        "total_instructions": "50",
+        "calls": "",
+        "basicblocks": "9",
+        "loads": {
+            "L": "7"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

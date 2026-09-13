@@ -1,0 +1,1395 @@
+{
+  "mean": {
+    "file": "mean.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "std": {
+    "file": "std.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.0.MLP_heads.perf.0.weight": {
+    "file": "experts_0_MLP_heads_perf_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.0.MLP_heads.perf.0.bias": {
+    "file": "experts_0_MLP_heads_perf_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.0.MLP_heads.perf.1.weight": {
+    "file": "experts_0_MLP_heads_perf_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.0.MLP_heads.perf.1.bias": {
+    "file": "experts_0_MLP_heads_perf_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.0.MLP_heads.perf.2.weight": {
+    "file": "experts_0_MLP_heads_perf_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.0.MLP_heads.perf.2.bias": {
+    "file": "experts_0_MLP_heads_perf_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.0.MLP_heads.perf.3.weight": {
+    "file": "experts_0_MLP_heads_perf_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.0.MLP_heads.perf.3.bias": {
+    "file": "experts_0_MLP_heads_perf_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.0.MLP_heads.util-LUT.0.weight": {
+    "file": "experts_0_MLP_heads_util-LUT_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.0.MLP_heads.util-LUT.0.bias": {
+    "file": "experts_0_MLP_heads_util-LUT_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.0.MLP_heads.util-LUT.1.weight": {
+    "file": "experts_0_MLP_heads_util-LUT_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.0.MLP_heads.util-LUT.1.bias": {
+    "file": "experts_0_MLP_heads_util-LUT_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.0.MLP_heads.util-LUT.2.weight": {
+    "file": "experts_0_MLP_heads_util-LUT_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.0.MLP_heads.util-LUT.2.bias": {
+    "file": "experts_0_MLP_heads_util-LUT_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.0.MLP_heads.util-LUT.3.weight": {
+    "file": "experts_0_MLP_heads_util-LUT_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.0.MLP_heads.util-LUT.3.bias": {
+    "file": "experts_0_MLP_heads_util-LUT_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.0.MLP_heads.util-FF.0.weight": {
+    "file": "experts_0_MLP_heads_util-FF_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.0.MLP_heads.util-FF.0.bias": {
+    "file": "experts_0_MLP_heads_util-FF_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.0.MLP_heads.util-FF.1.weight": {
+    "file": "experts_0_MLP_heads_util-FF_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.0.MLP_heads.util-FF.1.bias": {
+    "file": "experts_0_MLP_heads_util-FF_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.0.MLP_heads.util-FF.2.weight": {
+    "file": "experts_0_MLP_heads_util-FF_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.0.MLP_heads.util-FF.2.bias": {
+    "file": "experts_0_MLP_heads_util-FF_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.0.MLP_heads.util-FF.3.weight": {
+    "file": "experts_0_MLP_heads_util-FF_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.0.MLP_heads.util-FF.3.bias": {
+    "file": "experts_0_MLP_heads_util-FF_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.0.MLP_heads.util-DSP.0.weight": {
+    "file": "experts_0_MLP_heads_util-DSP_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.0.MLP_heads.util-DSP.0.bias": {
+    "file": "experts_0_MLP_heads_util-DSP_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.0.MLP_heads.util-DSP.1.weight": {
+    "file": "experts_0_MLP_heads_util-DSP_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.0.MLP_heads.util-DSP.1.bias": {
+    "file": "experts_0_MLP_heads_util-DSP_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.0.MLP_heads.util-DSP.2.weight": {
+    "file": "experts_0_MLP_heads_util-DSP_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.0.MLP_heads.util-DSP.2.bias": {
+    "file": "experts_0_MLP_heads_util-DSP_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.0.MLP_heads.util-DSP.3.weight": {
+    "file": "experts_0_MLP_heads_util-DSP_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.0.MLP_heads.util-DSP.3.bias": {
+    "file": "experts_0_MLP_heads_util-DSP_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.0.MLP_heads.util-BRAM.0.weight": {
+    "file": "experts_0_MLP_heads_util-BRAM_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.0.MLP_heads.util-BRAM.0.bias": {
+    "file": "experts_0_MLP_heads_util-BRAM_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.0.MLP_heads.util-BRAM.1.weight": {
+    "file": "experts_0_MLP_heads_util-BRAM_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.0.MLP_heads.util-BRAM.1.bias": {
+    "file": "experts_0_MLP_heads_util-BRAM_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.0.MLP_heads.util-BRAM.2.weight": {
+    "file": "experts_0_MLP_heads_util-BRAM_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.0.MLP_heads.util-BRAM.2.bias": {
+    "file": "experts_0_MLP_heads_util-BRAM_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.0.MLP_heads.util-BRAM.3.weight": {
+    "file": "experts_0_MLP_heads_util-BRAM_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.0.MLP_heads.util-BRAM.3.bias": {
+    "file": "experts_0_MLP_heads_util-BRAM_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.1.MLP_heads.perf.0.weight": {
+    "file": "experts_1_MLP_heads_perf_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.1.MLP_heads.perf.0.bias": {
+    "file": "experts_1_MLP_heads_perf_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.1.MLP_heads.perf.1.weight": {
+    "file": "experts_1_MLP_heads_perf_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.1.MLP_heads.perf.1.bias": {
+    "file": "experts_1_MLP_heads_perf_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.1.MLP_heads.perf.2.weight": {
+    "file": "experts_1_MLP_heads_perf_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.1.MLP_heads.perf.2.bias": {
+    "file": "experts_1_MLP_heads_perf_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.1.MLP_heads.perf.3.weight": {
+    "file": "experts_1_MLP_heads_perf_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.1.MLP_heads.perf.3.bias": {
+    "file": "experts_1_MLP_heads_perf_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.1.MLP_heads.util-LUT.0.weight": {
+    "file": "experts_1_MLP_heads_util-LUT_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.1.MLP_heads.util-LUT.0.bias": {
+    "file": "experts_1_MLP_heads_util-LUT_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.1.MLP_heads.util-LUT.1.weight": {
+    "file": "experts_1_MLP_heads_util-LUT_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.1.MLP_heads.util-LUT.1.bias": {
+    "file": "experts_1_MLP_heads_util-LUT_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.1.MLP_heads.util-LUT.2.weight": {
+    "file": "experts_1_MLP_heads_util-LUT_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.1.MLP_heads.util-LUT.2.bias": {
+    "file": "experts_1_MLP_heads_util-LUT_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.1.MLP_heads.util-LUT.3.weight": {
+    "file": "experts_1_MLP_heads_util-LUT_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.1.MLP_heads.util-LUT.3.bias": {
+    "file": "experts_1_MLP_heads_util-LUT_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.1.MLP_heads.util-FF.0.weight": {
+    "file": "experts_1_MLP_heads_util-FF_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.1.MLP_heads.util-FF.0.bias": {
+    "file": "experts_1_MLP_heads_util-FF_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.1.MLP_heads.util-FF.1.weight": {
+    "file": "experts_1_MLP_heads_util-FF_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.1.MLP_heads.util-FF.1.bias": {
+    "file": "experts_1_MLP_heads_util-FF_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.1.MLP_heads.util-FF.2.weight": {
+    "file": "experts_1_MLP_heads_util-FF_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.1.MLP_heads.util-FF.2.bias": {
+    "file": "experts_1_MLP_heads_util-FF_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.1.MLP_heads.util-FF.3.weight": {
+    "file": "experts_1_MLP_heads_util-FF_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.1.MLP_heads.util-FF.3.bias": {
+    "file": "experts_1_MLP_heads_util-FF_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.1.MLP_heads.util-DSP.0.weight": {
+    "file": "experts_1_MLP_heads_util-DSP_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.1.MLP_heads.util-DSP.0.bias": {
+    "file": "experts_1_MLP_heads_util-DSP_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.1.MLP_heads.util-DSP.1.weight": {
+    "file": "experts_1_MLP_heads_util-DSP_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.1.MLP_heads.util-DSP.1.bias": {
+    "file": "experts_1_MLP_heads_util-DSP_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.1.MLP_heads.util-DSP.2.weight": {
+    "file": "experts_1_MLP_heads_util-DSP_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.1.MLP_heads.util-DSP.2.bias": {
+    "file": "experts_1_MLP_heads_util-DSP_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.1.MLP_heads.util-DSP.3.weight": {
+    "file": "experts_1_MLP_heads_util-DSP_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.1.MLP_heads.util-DSP.3.bias": {
+    "file": "experts_1_MLP_heads_util-DSP_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.1.MLP_heads.util-BRAM.0.weight": {
+    "file": "experts_1_MLP_heads_util-BRAM_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.1.MLP_heads.util-BRAM.0.bias": {
+    "file": "experts_1_MLP_heads_util-BRAM_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.1.MLP_heads.util-BRAM.1.weight": {
+    "file": "experts_1_MLP_heads_util-BRAM_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.1.MLP_heads.util-BRAM.1.bias": {
+    "file": "experts_1_MLP_heads_util-BRAM_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.1.MLP_heads.util-BRAM.2.weight": {
+    "file": "experts_1_MLP_heads_util-BRAM_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.1.MLP_heads.util-BRAM.2.bias": {
+    "file": "experts_1_MLP_heads_util-BRAM_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.1.MLP_heads.util-BRAM.3.weight": {
+    "file": "experts_1_MLP_heads_util-BRAM_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.1.MLP_heads.util-BRAM.3.bias": {
+    "file": "experts_1_MLP_heads_util-BRAM_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.2.MLP_heads.perf.0.weight": {
+    "file": "experts_2_MLP_heads_perf_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.2.MLP_heads.perf.0.bias": {
+    "file": "experts_2_MLP_heads_perf_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.2.MLP_heads.perf.1.weight": {
+    "file": "experts_2_MLP_heads_perf_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.2.MLP_heads.perf.1.bias": {
+    "file": "experts_2_MLP_heads_perf_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.2.MLP_heads.perf.2.weight": {
+    "file": "experts_2_MLP_heads_perf_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.2.MLP_heads.perf.2.bias": {
+    "file": "experts_2_MLP_heads_perf_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.2.MLP_heads.perf.3.weight": {
+    "file": "experts_2_MLP_heads_perf_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.2.MLP_heads.perf.3.bias": {
+    "file": "experts_2_MLP_heads_perf_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.2.MLP_heads.util-LUT.0.weight": {
+    "file": "experts_2_MLP_heads_util-LUT_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.2.MLP_heads.util-LUT.0.bias": {
+    "file": "experts_2_MLP_heads_util-LUT_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.2.MLP_heads.util-LUT.1.weight": {
+    "file": "experts_2_MLP_heads_util-LUT_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.2.MLP_heads.util-LUT.1.bias": {
+    "file": "experts_2_MLP_heads_util-LUT_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.2.MLP_heads.util-LUT.2.weight": {
+    "file": "experts_2_MLP_heads_util-LUT_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.2.MLP_heads.util-LUT.2.bias": {
+    "file": "experts_2_MLP_heads_util-LUT_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.2.MLP_heads.util-LUT.3.weight": {
+    "file": "experts_2_MLP_heads_util-LUT_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.2.MLP_heads.util-LUT.3.bias": {
+    "file": "experts_2_MLP_heads_util-LUT_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.2.MLP_heads.util-FF.0.weight": {
+    "file": "experts_2_MLP_heads_util-FF_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.2.MLP_heads.util-FF.0.bias": {
+    "file": "experts_2_MLP_heads_util-FF_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.2.MLP_heads.util-FF.1.weight": {
+    "file": "experts_2_MLP_heads_util-FF_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.2.MLP_heads.util-FF.1.bias": {
+    "file": "experts_2_MLP_heads_util-FF_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.2.MLP_heads.util-FF.2.weight": {
+    "file": "experts_2_MLP_heads_util-FF_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.2.MLP_heads.util-FF.2.bias": {
+    "file": "experts_2_MLP_heads_util-FF_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.2.MLP_heads.util-FF.3.weight": {
+    "file": "experts_2_MLP_heads_util-FF_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.2.MLP_heads.util-FF.3.bias": {
+    "file": "experts_2_MLP_heads_util-FF_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.2.MLP_heads.util-DSP.0.weight": {
+    "file": "experts_2_MLP_heads_util-DSP_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.2.MLP_heads.util-DSP.0.bias": {
+    "file": "experts_2_MLP_heads_util-DSP_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.2.MLP_heads.util-DSP.1.weight": {
+    "file": "experts_2_MLP_heads_util-DSP_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.2.MLP_heads.util-DSP.1.bias": {
+    "file": "experts_2_MLP_heads_util-DSP_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.2.MLP_heads.util-DSP.2.weight": {
+    "file": "experts_2_MLP_heads_util-DSP_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.2.MLP_heads.util-DSP.2.bias": {
+    "file": "experts_2_MLP_heads_util-DSP_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.2.MLP_heads.util-DSP.3.weight": {
+    "file": "experts_2_MLP_heads_util-DSP_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.2.MLP_heads.util-DSP.3.bias": {
+    "file": "experts_2_MLP_heads_util-DSP_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.2.MLP_heads.util-BRAM.0.weight": {
+    "file": "experts_2_MLP_heads_util-BRAM_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.2.MLP_heads.util-BRAM.0.bias": {
+    "file": "experts_2_MLP_heads_util-BRAM_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.2.MLP_heads.util-BRAM.1.weight": {
+    "file": "experts_2_MLP_heads_util-BRAM_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.2.MLP_heads.util-BRAM.1.bias": {
+    "file": "experts_2_MLP_heads_util-BRAM_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.2.MLP_heads.util-BRAM.2.weight": {
+    "file": "experts_2_MLP_heads_util-BRAM_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.2.MLP_heads.util-BRAM.2.bias": {
+    "file": "experts_2_MLP_heads_util-BRAM_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.2.MLP_heads.util-BRAM.3.weight": {
+    "file": "experts_2_MLP_heads_util-BRAM_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.2.MLP_heads.util-BRAM.3.bias": {
+    "file": "experts_2_MLP_heads_util-BRAM_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.3.MLP_heads.perf.0.weight": {
+    "file": "experts_3_MLP_heads_perf_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.3.MLP_heads.perf.0.bias": {
+    "file": "experts_3_MLP_heads_perf_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.3.MLP_heads.perf.1.weight": {
+    "file": "experts_3_MLP_heads_perf_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.3.MLP_heads.perf.1.bias": {
+    "file": "experts_3_MLP_heads_perf_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.3.MLP_heads.perf.2.weight": {
+    "file": "experts_3_MLP_heads_perf_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.3.MLP_heads.perf.2.bias": {
+    "file": "experts_3_MLP_heads_perf_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.3.MLP_heads.perf.3.weight": {
+    "file": "experts_3_MLP_heads_perf_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.3.MLP_heads.perf.3.bias": {
+    "file": "experts_3_MLP_heads_perf_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.3.MLP_heads.util-LUT.0.weight": {
+    "file": "experts_3_MLP_heads_util-LUT_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.3.MLP_heads.util-LUT.0.bias": {
+    "file": "experts_3_MLP_heads_util-LUT_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.3.MLP_heads.util-LUT.1.weight": {
+    "file": "experts_3_MLP_heads_util-LUT_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.3.MLP_heads.util-LUT.1.bias": {
+    "file": "experts_3_MLP_heads_util-LUT_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.3.MLP_heads.util-LUT.2.weight": {
+    "file": "experts_3_MLP_heads_util-LUT_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.3.MLP_heads.util-LUT.2.bias": {
+    "file": "experts_3_MLP_heads_util-LUT_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.3.MLP_heads.util-LUT.3.weight": {
+    "file": "experts_3_MLP_heads_util-LUT_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.3.MLP_heads.util-LUT.3.bias": {
+    "file": "experts_3_MLP_heads_util-LUT_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.3.MLP_heads.util-FF.0.weight": {
+    "file": "experts_3_MLP_heads_util-FF_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.3.MLP_heads.util-FF.0.bias": {
+    "file": "experts_3_MLP_heads_util-FF_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.3.MLP_heads.util-FF.1.weight": {
+    "file": "experts_3_MLP_heads_util-FF_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.3.MLP_heads.util-FF.1.bias": {
+    "file": "experts_3_MLP_heads_util-FF_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.3.MLP_heads.util-FF.2.weight": {
+    "file": "experts_3_MLP_heads_util-FF_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.3.MLP_heads.util-FF.2.bias": {
+    "file": "experts_3_MLP_heads_util-FF_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.3.MLP_heads.util-FF.3.weight": {
+    "file": "experts_3_MLP_heads_util-FF_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.3.MLP_heads.util-FF.3.bias": {
+    "file": "experts_3_MLP_heads_util-FF_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.3.MLP_heads.util-DSP.0.weight": {
+    "file": "experts_3_MLP_heads_util-DSP_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.3.MLP_heads.util-DSP.0.bias": {
+    "file": "experts_3_MLP_heads_util-DSP_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.3.MLP_heads.util-DSP.1.weight": {
+    "file": "experts_3_MLP_heads_util-DSP_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.3.MLP_heads.util-DSP.1.bias": {
+    "file": "experts_3_MLP_heads_util-DSP_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.3.MLP_heads.util-DSP.2.weight": {
+    "file": "experts_3_MLP_heads_util-DSP_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.3.MLP_heads.util-DSP.2.bias": {
+    "file": "experts_3_MLP_heads_util-DSP_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.3.MLP_heads.util-DSP.3.weight": {
+    "file": "experts_3_MLP_heads_util-DSP_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.3.MLP_heads.util-DSP.3.bias": {
+    "file": "experts_3_MLP_heads_util-DSP_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "experts.3.MLP_heads.util-BRAM.0.weight": {
+    "file": "experts_3_MLP_heads_util-BRAM_0_weight.txt",
+    "shape": [
+      32,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 4096
+  },
+  "experts.3.MLP_heads.util-BRAM.0.bias": {
+    "file": "experts_3_MLP_heads_util-BRAM_0_bias.txt",
+    "shape": [
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 32
+  },
+  "experts.3.MLP_heads.util-BRAM.1.weight": {
+    "file": "experts_3_MLP_heads_util-BRAM_1_weight.txt",
+    "shape": [
+      16,
+      32
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "experts.3.MLP_heads.util-BRAM.1.bias": {
+    "file": "experts_3_MLP_heads_util-BRAM_1_bias.txt",
+    "shape": [
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 16
+  },
+  "experts.3.MLP_heads.util-BRAM.2.weight": {
+    "file": "experts_3_MLP_heads_util-BRAM_2_weight.txt",
+    "shape": [
+      8,
+      16
+    ],
+    "dtype": "float32",
+    "num_values": 128
+  },
+  "experts.3.MLP_heads.util-BRAM.2.bias": {
+    "file": "experts_3_MLP_heads_util-BRAM_2_bias.txt",
+    "shape": [
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.3.MLP_heads.util-BRAM.3.weight": {
+    "file": "experts_3_MLP_heads_util-BRAM_3_weight.txt",
+    "shape": [
+      1,
+      8
+    ],
+    "dtype": "float32",
+    "num_values": 8
+  },
+  "experts.3.MLP_heads.util-BRAM.3.bias": {
+    "file": "experts_3_MLP_heads_util-BRAM_3_bias.txt",
+    "shape": [
+      1
+    ],
+    "dtype": "float32",
+    "num_values": 1
+  },
+  "w_gate.weight": {
+    "file": "w_gate_weight.txt",
+    "shape": [
+      4,
+      128
+    ],
+    "dtype": "float32",
+    "num_values": 512
+  },
+  "w_gate.bias": {
+    "file": "w_gate_bias.txt",
+    "shape": [
+      4
+    ],
+    "dtype": "float32",
+    "num_values": 4
+  }
+}

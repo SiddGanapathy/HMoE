@@ -1,0 +1,78 @@
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run tcl -f /home/simics/HMoE/HLS_HMoE/run_11/scripts/run_hls.tcl -work_dir /home/simics/HMoE/HLS_HMoE/run_11
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+  **** SW Build 4023990 on Oct 11 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /home/simics/HMoE/Vitis_HLS/2023.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/home/simics/HMoE/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'simics' on host 'cie-n2' (Linux_x86_64 version 6.8.0-138-generic) on Sun Sep 13 20:08:53 IST 2026
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/simics/HMoE/HLS_HMoE/run_11'
+Sourcing Tcl script '/home/simics/HMoE/HLS_HMoE/run_11/scripts/run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project project/HLS_OutputMoE_Run11 
+INFO: [HLS 200-10] Creating and opening project '/home/simics/HMoE/HLS_HMoE/run_11/project/HLS_OutputMoE_Run11'.
+INFO: [HLS 200-1510] Running: set_top output_moe 
+INFO: [HLS 200-1510] Running: add_files src/moe.cpp 
+INFO: [HLS 200-10] Adding design file 'src/moe.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/moe.h 
+INFO: [HLS 200-10] Adding design file 'src/moe.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb/moe_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'tb/moe_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/home/simics/HMoE/HLS_HMoE/run_11/project/HLS_OutputMoE_Run11/solution1'.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcvu13p_CIV-figd2104-3-e 
+INFO: [HLS 200-1611] Setting target device to 'xcvu13p_CIV-figd2104-3-e'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../tb/moe_tb.cpp in debug mode
+   Compiling ../../../../../src/moe.cpp in debug mode
+../../../../../src/moe.cpp: In function ‘void expert_engine_A(const data_t*, data_t (*)[5])’:
+../../../../../src/moe.cpp:910:14: error: cannot convert ‘data_t*’ {aka ‘float*’} to ‘const data_t (*)[128]’ {aka ‘const float (*)[128]’}
+         out[0],
+              ^
+../../../../../src/moe.cpp:793:18: note:   initializing argument 2 of ‘void generic_expert(const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, data_t*)’
+     const data_t perf_w0[H1][INPUT_DIM],
+     ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:935:14: error: cannot convert ‘data_t*’ {aka ‘float*’} to ‘const data_t (*)[128]’ {aka ‘const float (*)[128]’}
+         out[1],
+              ^
+../../../../../src/moe.cpp:793:18: note:   initializing argument 2 of ‘void generic_expert(const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, data_t*)’
+     const data_t perf_w0[H1][INPUT_DIM],
+     ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+../../../../../src/moe.cpp: In function ‘void expert_engine_B(const data_t*, data_t (*)[5])’:
+../../../../../src/moe.cpp:967:14: error: cannot convert ‘data_t*’ {aka ‘float*’} to ‘const data_t (*)[128]’ {aka ‘const float (*)[128]’}
+         out[0],
+              ^
+../../../../../src/moe.cpp:793:18: note:   initializing argument 2 of ‘void generic_expert(const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, data_t*)’
+     const data_t perf_w0[H1][INPUT_DIM],
+     ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+../../../../../src/moe.cpp:992:14: error: cannot convert ‘data_t*’ {aka ‘float*’} to ‘const data_t (*)[128]’ {aka ‘const float (*)[128]’}
+         out[1],
+              ^
+../../../../../src/moe.cpp:793:18: note:   initializing argument 2 of ‘void generic_expert(const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, const data_t (*)[128], const data_t*, const data_t (*)[32], const data_t*, const data_t (*)[16], const data_t*, const data_t (*)[8], const data_t*, data_t*)’
+     const data_t perf_w0[H1][INPUT_DIM],
+     ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+make: *** [csim.mk:85: obj/moe.o] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.53 seconds. CPU system time: 0.15 seconds. Elapsed time: 0.66 seconds; current allocated memory: 0.000 MB.
+4
+    while executing
+"source /home/simics/HMoE/HLS_HMoE/run_11/scripts/run_hls.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $tclfile] "
+
+INFO: [HLS 200-112] Total CPU user time: 2.32 seconds. Total CPU system time: 0.36 seconds. Total elapsed time: 2.6 seconds; peak allocated memory: 257.059 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Sun Sep 13 20:08:55 2026...
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

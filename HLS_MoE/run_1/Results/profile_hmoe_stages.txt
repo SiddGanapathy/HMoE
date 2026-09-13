@@ -1,0 +1,241 @@
+task                       : regression
+subtask                    : train
+plot_dse                   : False
+vis_per_kernel             : False
+force_regen                : True
+min_allowed_latency        : 100.0
+epsilon                    : 0.001
+normalizer                 : 10000000.0
+util_normalizer            : 1
+max_number                 : 10000000000.0
+norm_method                : speedup-log2
+new_speedup                : True
+invalid                    : False
+encode_log                 : False
+v_db                       : v21
+only_common_db             : False
+test_extra                 : False
+only_new_points            : False
+round_num                  : 1
+get_forgetting_examples    : False
+test_kernels               : None
+dse_kernel                 : None
+uid                        : None
+redis_port                 : None
+target_kernel              : None
+all_kernels                : True
+keys_path                  : /share/atefehSZ/RL/original-software-gnn/software-gnn/src/logs/regression_train_whole-machsuite-poly_2022-04-14T17-22-34.633421-MAML-9-seed100-sp-cos
+sample_finetune            : False
+dataset                    : programl
+benchmarks                 : ['machsuite',
+                           :  'poly']
+tag                        : whole-machsuite-poly
+graph_type                 : extended-pseudo-block-connected-hierarchy
+encoder_path               : /home/simics/HMoE/HierarchicalMoE/encoders/general/pragma_as_MLP-encoders.klepto
+SSL                        : False
+encode_edge                : True
+encode_edge_position       : True
+num_layers                 : 6
+num_features               : 153
+edge_dim                   : 335
+no_pragma                  : False
+target                     : ['perf',
+                           :  'util-LUT',
+                           :  'util-FF',
+                           :  'util-DSP',
+                           :  'util-BRAM']
+MLP_common_lyr             : 0
+no_graph                   : False
+only_pragma                : False
+gnn_type                   : transformer
+dropout                    : 0.1
+jkn_mode                   : max
+jkn_enable                 : True
+node_attention             : True
+node_attention_MLP         : False
+separate_P                 : True
+separate_icmp              : False
+separate_T                 : False
+separate_pseudo            : True
+P_use_all_nodes            : True
+pragma_uniform_encoder     : True
+gae_T                      : False
+gae_P                      : False
+gnn_layer_after_MLP        : 1
+pragma_as_MLP              : True
+pragma_as_MLP_list         : ['tile',
+                           :  'pipeline',
+                           :  'parallel']
+pragma_scope               : block
+keep_pragma_attribute      : False
+pragma_order               : parallel_and_merge
+pragma_MLP_hidden_channels : [in_D // 2]
+merge_MLP_hidden_channels  : [in_D // 2]
+model_path                 : None
+ensemble                   : 0
+ensemble_weights           : None
+class_model_path           : None
+feature_extract            : False
+fix_gnn_layer              : 1
+FT_extra                   : False
+finetune                   : False
+train_mode                 : normal
+save_pred_name             : -3mm-moe
+observe_moe_layer          : gnn7
+load_data_to_device        : False
+coreset                    : kmeans
+transfer_k_shot            : 50
+data_loading_path          : 
+use_for_nodes              : False
+moe_num_experts            : 4
+moe_k                      : 4
+moe_lmbda                  : 0.005
+hierarchical_moe_lmbda     : 0.005
+moe_layers                 : ['hierarchy-weighted-hidden']
+hierarchical_moe_component : None
+hierarchical_share_layers  : False
+hierarchical_alternate_train : True
+MAML_num_kernel            : 32
+MAML_train_ratio           : 0.8
+resample                   : False
+val_ratio                  : 0.1
+test_ratio                 : 0.1
+activation                 : elu
+save_model                 : True
+D                          : 64
+lr                         : 0.0005
+weight_decay               : 0.0001
+scheduler                  : cosine
+warmup                     : linear
+random_seed                : 1
+batch_size                 : 32
+loss                       : MSE
+beta                       : 0
+epoch_num                  : 1000
+hierarchical_moe_epoch     : 500
+device                     : cpu
+explorer                   : exhaustive
+dist_parent                : True
+dist_child                 : True
+model_tag                  : test
+prune_util                 : True
+prune_class                : True
+ordered_pids               : ['__PARA__L3',
+                           :  '__PIPE__L2',
+                           :  '__PARA__L1',
+                           :  '__PIPE__L0',
+                           :  '__TILE__L2',
+                           :  '__TILE__L0',
+                           :  '__PARA__L2',
+                           :  '__PIPE__L0']
+print_every_iter           : 100
+plot_pred_points           : True
+select_top10               : True
+user                       : simics
+hostname                   : cie-n2
+ts                         : 2026-09-06T21-26-14.966495
+Logging to /home/simics/HMoE/HierarchicalMoE/src/logs/auto-encoder/iccad/round1-40kernel/pragma_as_MLP/parallel_and_merge/class/post-gnn-3lp-3lm/dropout-0.1-MSE-scheduler-warmup-weight-decay-0.0001-no-mutual-info-PB-edge-attr-True_position-True-6L-SSL-False-gae-T-False-gae-P-False_regression_train_2026-09-06T21-26-14.966495
+/home/simics/HMoE/HierarchicalMoE/.venv/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/simics/HMoE/HierarchicalMoE/.venv/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/simics/HMoE/HierarchicalMoE/save/programl/v21_MLP-True-round1-40kernel-icmp-feb-db-extended-pseudo-block-connected-hierarchy-regression_edge-position-True_norm_with-invalid_False-normalization_speedup-log2_no_pragma_False_tag_whole-machsuite-poly_perfutil-DSPutil-BRAMutil-LUTutil-FF/pretrain_dataset
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Loading dataset...
+9418 graphs in total: 7534 train 941 val 943 test
+/home/simics/HMoE/HierarchicalMoE/src/train.py:184: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  train_loader = DataLoader(li[0], batch_size=batch_size, shuffle=True, pin_memory=False, num_workers=0)
+/home/simics/HMoE/HierarchicalMoE/src/train.py:185: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  val_loader = DataLoader(li[1], batch_size=batch_size, pin_memory=False, num_workers=0)  # TODO: split make sure no seen kernels in val/test
+/home/simics/HMoE/HierarchicalMoE/src/train.py:186: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  test_loader = DataLoader(li[2], batch_size=batch_size, pin_memory=False, num_workers=0)  # TODO
+[0m] INFO: num features for training: 153
+[0m] INFO: size of the edge attribute is 335
+Total graphs : 9418
+Test graphs  : 943
+Node features: 153
+Edge features: 335
+Loaded from /home/simics/HMoE/HierarchicalMoE/save/programl/v21_MLP-True-round1-40kernel-icmp-feb-db-extended-pseudo-block-connected-hierarchy-regression_edge-position-True_norm_with-invalid_False-normalization_speedup-log2_no_pragma_False_tag_whole-machsuite-poly_perfutil-DSPutil-BRAMutil-LUTutil-FF/pretrain_dataset/pragma_dim.klepto
+Pragma dimensions loaded.
+
+Creating HMoE model...
+Checkpoint loaded.
+Experts: ['gnn7', 'pseudo_alone_w/o_gnn7', 'output_mlp']
+
+Batches selected: 5
+
+Running warm-up...
+Warm-up complete.
+
+Running stage profiling...
+
+Batch 1: gnn7                      output =  212.746 ms
+Batch 1: pseudo_alone_w/o_gnn7     output =  137.211 ms
+Batch 1: output_mlp                output =  150.984 ms
+Batch 1: gnn7                      hidden =  202.130 ms
+Batch 1: pseudo_alone_w/o_gnn7     hidden =  138.800 ms
+Batch 1: output_mlp                hidden =  151.835 ms
+Batch 1: hierarchical gate         =    0.183 ms
+Batch 1: weighted combine          =    0.160 ms
+Batch 1: INSTRUMENTED TOTAL        =  994.258 ms
+----------------------------------------------------------------------
+Batch 2: gnn7                      output =  182.258 ms
+Batch 2: pseudo_alone_w/o_gnn7     output =  118.216 ms
+Batch 2: output_mlp                output =  130.030 ms
+Batch 2: gnn7                      hidden =  177.926 ms
+Batch 2: pseudo_alone_w/o_gnn7     hidden =  119.830 ms
+Batch 2: output_mlp                hidden =  129.056 ms
+Batch 2: hierarchical gate         =    0.139 ms
+Batch 2: weighted combine          =    0.107 ms
+Batch 2: INSTRUMENTED TOTAL        =  857.783 ms
+----------------------------------------------------------------------
+Batch 3: gnn7                      output =  207.316 ms
+Batch 3: pseudo_alone_w/o_gnn7     output =  131.529 ms
+Batch 3: output_mlp                output =  147.706 ms
+Batch 3: gnn7                      hidden =  197.274 ms
+Batch 3: pseudo_alone_w/o_gnn7     hidden =  132.060 ms
+Batch 3: output_mlp                hidden =  139.397 ms
+Batch 3: hierarchical gate         =    0.160 ms
+Batch 3: weighted combine          =    0.175 ms
+Batch 3: INSTRUMENTED TOTAL        =  955.837 ms
+----------------------------------------------------------------------
+Batch 4: gnn7                      output =  251.500 ms
+Batch 4: pseudo_alone_w/o_gnn7     output =  156.954 ms
+Batch 4: output_mlp                output =  177.185 ms
+Batch 4: gnn7                      hidden =  237.837 ms
+Batch 4: pseudo_alone_w/o_gnn7     hidden =  156.706 ms
+Batch 4: output_mlp                hidden =  170.301 ms
+Batch 4: hierarchical gate         =    0.143 ms
+Batch 4: weighted combine          =    0.108 ms
+Batch 4: INSTRUMENTED TOTAL        = 1150.955 ms
+----------------------------------------------------------------------
+Batch 5: gnn7                      output =  186.821 ms
+Batch 5: pseudo_alone_w/o_gnn7     output =  123.186 ms
+Batch 5: output_mlp                output =  134.640 ms
+Batch 5: gnn7                      hidden =  201.746 ms
+Batch 5: pseudo_alone_w/o_gnn7     hidden =  136.468 ms
+Batch 5: output_mlp                hidden =  142.707 ms
+Batch 5: hierarchical gate         =    0.133 ms
+Batch 5: weighted combine          =    0.105 ms
+Batch 5: INSTRUMENTED TOTAL        =  926.017 ms
+----------------------------------------------------------------------
+
+
+======================================================================
+HIERARCHICAL MoE STAGE PROFILE
+======================================================================
+expert_0_output                    :    208.128 ms
+expert_1_output                    :    133.419 ms
+expert_2_output                    :    148.109 ms
+expert_0_hidden                    :    203.382 ms
+expert_1_hidden                    :    136.773 ms
+expert_2_hidden                    :    146.659 ms
+hierarchical_gate                  :      0.152 ms
+weighted_combine                   :      0.131 ms
+----------------------------------------------------------------------
+TOTAL INSTRUMENTED                 :    976.970 ms
+======================================================================
+

@@ -1,0 +1,638 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'generic_mlp_head40'" level="0">
+<item name = "Date">Sun Sep 13 20:14:17 2026
+</item>
+<item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
+<item name = "Project">HLS_OutputMoE_Run11</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu13p_CIV-figd2104-3-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.028 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">4702, 4702, 47.020 us, 47.020 us, 4702, 4702, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_generic_mlp_head40_Pipeline_VITIS_LOOP_736_3_fu_483">generic_mlp_head40_Pipeline_VITIS_LOOP_736_3, 89, 89, 0.890 us, 0.890 us, 89, 89, no</column>
+<column name="grp_generic_mlp_head40_Pipeline_VITIS_LOOP_725_2_fu_601">generic_mlp_head40_Pipeline_VITIS_LOOP_725_2, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_generic_mlp_head40_Pipeline_VITIS_LOOP_750_5_fu_613">generic_mlp_head40_Pipeline_VITIS_LOOP_750_5, 49, 49, 0.490 us, 0.490 us, 49, 49, no</column>
+<column name="grp_generic_mlp_head40_Pipeline_VITIS_LOOP_767_7_fu_675">generic_mlp_head40_Pipeline_VITIS_LOOP_767_7, 13, 13, 0.130 us, 0.130 us, 13, 13, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_722_1">4544, 4544, 142, -, -, 32, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 108, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">8, -, 6877, 1300, -</column>
+<column name="Memory">1, -, 0, 0, -</column>
+<column name="Multiplexer">-, -, -, 1894, -</column>
+<column name="Register">-, -, 1162, -, -</column>
+<specialColumn name="Available SLR">1344, 3072, 864000, 432000, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">~0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">5376, 12288, 3456000, 1728000, 1280</specialColumn>
+<specialColumn name="Utilization (%)">~0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="fcmp_32ns_32ns_1_1_no_dsp_1_U3800">fcmp_32ns_32ns_1_1_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="grp_generic_mlp_head40_Pipeline_VITIS_LOOP_725_2_fu_601">generic_mlp_head40_Pipeline_VITIS_LOOP_725_2, 8, 0, 146, 138, 0</column>
+<column name="grp_generic_mlp_head40_Pipeline_VITIS_LOOP_736_3_fu_483">generic_mlp_head40_Pipeline_VITIS_LOOP_736_3, 0, 0, 4192, 600, 0</column>
+<column name="grp_generic_mlp_head40_Pipeline_VITIS_LOOP_750_5_fu_613">generic_mlp_head40_Pipeline_VITIS_LOOP_750_5, 0, 0, 2333, 403, 0</column>
+<column name="grp_generic_mlp_head40_Pipeline_VITIS_LOOP_767_7_fu_675">generic_mlp_head40_Pipeline_VITIS_LOOP_767_7, 0, 0, 206, 159, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="e1_lut_b0_U">generic_mlp_head40_e1_lut_b0_ROM_AUTO_1R, 1, 0, 0, 0, 32, 32, 1, 1024</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln722_fu_723_p2">+, 0, 0, 13, 6, 1</column>
+<column name="and_ln545_fu_909_p2">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln545_24_fu_897_p2">icmp, 0, 0, 30, 23, 1</column>
+<column name="icmp_ln545_fu_891_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="icmp_ln722_fu_717_p2">icmp, 0, 0, 14, 6, 7</column>
+<column name="or_ln545_fu_903_p2">or, 0, 0, 2, 1, 1</column>
+<column name="l1_fu_915_p3">select, 0, 0, 32, 1, 32</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">81, 17, 1, 17</column>
+<column name="grp_fu_1808_ce">26, 5, 1, 5</column>
+<column name="grp_fu_1808_p0">26, 5, 32, 160</column>
+<column name="grp_fu_1808_p1">26, 5, 32, 160</column>
+<column name="grp_fu_1812_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1812_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1812_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1816_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1816_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1816_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1820_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1820_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1820_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1824_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1824_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1824_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1828_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1828_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1828_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1832_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1832_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1832_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1836_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1836_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1836_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1840_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1840_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1840_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1844_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1844_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1844_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1848_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1848_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1848_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1852_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1852_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1852_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1856_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1856_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1856_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1860_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1860_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1860_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1864_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1864_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1864_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1868_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1868_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1868_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1872_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1872_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1872_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1876_ce">9, 2, 1, 2</column>
+<column name="grp_fu_1880_ce">9, 2, 1, 2</column>
+<column name="grp_fu_1884_ce">9, 2, 1, 2</column>
+<column name="grp_fu_1888_ce">9, 2, 1, 2</column>
+<column name="grp_fu_1892_ce">9, 2, 1, 2</column>
+<column name="grp_fu_1896_ce">9, 2, 1, 2</column>
+<column name="grp_fu_1900_ce">9, 2, 1, 2</column>
+<column name="grp_fu_1904_ce">9, 2, 1, 2</column>
+<column name="grp_fu_1908_ce">9, 2, 1, 2</column>
+<column name="grp_fu_1912_ce">9, 2, 1, 2</column>
+<column name="grp_fu_1916_ce">9, 2, 1, 2</column>
+<column name="grp_fu_1920_ce">9, 2, 1, 2</column>
+<column name="grp_fu_1924_ce">9, 2, 1, 2</column>
+<column name="grp_fu_1928_ce">9, 2, 1, 2</column>
+<column name="grp_fu_1932_ce">9, 2, 1, 2</column>
+<column name="grp_fu_1936_ce">9, 2, 1, 2</column>
+<column name="grp_fu_1940_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1940_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1940_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1944_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1944_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1944_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1948_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1948_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1948_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1952_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1952_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1952_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1956_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1956_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1956_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1960_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1960_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1960_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1964_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1964_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1964_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1968_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1968_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1968_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1972_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1972_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1972_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1976_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1976_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1976_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1980_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1980_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1980_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1984_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1984_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1984_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1988_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1988_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1988_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1992_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1992_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1992_p1">14, 3, 32, 96</column>
+<column name="grp_fu_1996_ce">14, 3, 1, 3</column>
+<column name="grp_fu_1996_p0">14, 3, 32, 96</column>
+<column name="grp_fu_1996_p1">14, 3, 32, 96</column>
+<column name="grp_fu_2000_ce">9, 2, 1, 2</column>
+<column name="grp_fu_2004_ce">9, 2, 1, 2</column>
+<column name="grp_fu_2008_ce">9, 2, 1, 2</column>
+<column name="grp_fu_2012_ce">9, 2, 1, 2</column>
+<column name="grp_fu_2016_ce">9, 2, 1, 2</column>
+<column name="grp_fu_2020_ce">9, 2, 1, 2</column>
+<column name="grp_fu_2024_ce">9, 2, 1, 2</column>
+<column name="grp_fu_2028_ce">9, 2, 1, 2</column>
+<column name="grp_fu_2032_ce">9, 2, 1, 2</column>
+<column name="grp_fu_2036_ce">9, 2, 1, 2</column>
+<column name="grp_fu_2040_ce">9, 2, 1, 2</column>
+<column name="grp_fu_2044_ce">9, 2, 1, 2</column>
+<column name="grp_fu_2048_ce">9, 2, 1, 2</column>
+<column name="grp_fu_2052_ce">9, 2, 1, 2</column>
+<column name="grp_fu_2056_ce">9, 2, 1, 2</column>
+<column name="grp_fu_2060_ce">9, 2, 1, 2</column>
+<column name="grp_fu_690_ce">26, 5, 1, 5</column>
+<column name="grp_fu_690_p0">31, 6, 32, 192</column>
+<column name="grp_fu_690_p1">31, 6, 32, 192</column>
+<column name="grp_fu_700_ce">14, 3, 1, 3</column>
+<column name="grp_fu_700_p0">14, 3, 32, 96</column>
+<column name="grp_fu_700_p1">20, 4, 32, 128</column>
+<column name="i_fu_234">9, 2, 6, 12</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="acc_reg_1723">32, 0, 32, 0</column>
+<column name="add_ln722_reg_1548">6, 0, 6, 0</column>
+<column name="ap_CS_fsm">16, 0, 16, 0</column>
+<column name="ap_predicate_pred1323_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1335_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1342_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1349_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1356_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1363_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1370_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1377_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1384_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1391_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1398_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1405_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1412_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1419_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1426_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1433_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1440_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1447_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1454_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1461_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1468_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1475_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1482_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1489_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1496_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1503_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1510_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1517_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1524_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1531_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1538_state10">1, 0, 1, 0</column>
+<column name="ap_predicate_pred1545_state10">1, 0, 1, 0</column>
+<column name="grp_generic_mlp_head40_Pipeline_VITIS_LOOP_725_2_fu_601_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_generic_mlp_head40_Pipeline_VITIS_LOOP_736_3_fu_483_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_generic_mlp_head40_Pipeline_VITIS_LOOP_750_5_fu_613_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_generic_mlp_head40_Pipeline_VITIS_LOOP_767_7_fu_675_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_fu_234">6, 0, 6, 0</column>
+<column name="mux_case_034_fu_238">32, 0, 32, 0</column>
+<column name="mux_case_1074_fu_278">32, 0, 32, 0</column>
+<column name="mux_case_1178_fu_282">32, 0, 32, 0</column>
+<column name="mux_case_1282_fu_286">32, 0, 32, 0</column>
+<column name="mux_case_1386_fu_290">32, 0, 32, 0</column>
+<column name="mux_case_138_fu_242">32, 0, 32, 0</column>
+<column name="mux_case_1490_fu_294">32, 0, 32, 0</column>
+<column name="mux_case_1594_fu_298">32, 0, 32, 0</column>
+<column name="mux_case_1698_fu_302">32, 0, 32, 0</column>
+<column name="mux_case_17102_fu_306">32, 0, 32, 0</column>
+<column name="mux_case_18106_fu_310">32, 0, 32, 0</column>
+<column name="mux_case_19110_fu_314">32, 0, 32, 0</column>
+<column name="mux_case_20114_fu_318">32, 0, 32, 0</column>
+<column name="mux_case_21118_fu_322">32, 0, 32, 0</column>
+<column name="mux_case_22122_fu_326">32, 0, 32, 0</column>
+<column name="mux_case_23126_fu_330">32, 0, 32, 0</column>
+<column name="mux_case_24130_fu_334">32, 0, 32, 0</column>
+<column name="mux_case_242_fu_246">32, 0, 32, 0</column>
+<column name="mux_case_25134_fu_338">32, 0, 32, 0</column>
+<column name="mux_case_26138_fu_342">32, 0, 32, 0</column>
+<column name="mux_case_27142_fu_346">32, 0, 32, 0</column>
+<column name="mux_case_28146_fu_350">32, 0, 32, 0</column>
+<column name="mux_case_29150_fu_354">32, 0, 32, 0</column>
+<column name="mux_case_30154_fu_358">32, 0, 32, 0</column>
+<column name="mux_case_31158_fu_362">32, 0, 32, 0</column>
+<column name="mux_case_346_fu_250">32, 0, 32, 0</column>
+<column name="mux_case_450_fu_254">32, 0, 32, 0</column>
+<column name="mux_case_554_fu_258">32, 0, 32, 0</column>
+<column name="mux_case_658_fu_262">32, 0, 32, 0</column>
+<column name="mux_case_762_fu_266">32, 0, 32, 0</column>
+<column name="mux_case_866_fu_270">32, 0, 32, 0</column>
+<column name="mux_case_970_fu_274">32, 0, 32, 0</column>
+<column name="tmp_3_reg_1731">32, 0, 32, 0</column>
+<column name="tmp_s_reg_1718">5, 0, 12, 7</column>
+<column name="trunc_ln722_reg_1540">5, 0, 5, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="ap_return">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2318_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2318_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2318_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2318_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2322_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2322_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2322_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2322_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2322_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2326_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2326_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2326_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2326_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2326_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2330_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2330_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2330_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2330_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2330_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2334_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2334_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2334_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2334_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2334_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2338_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2338_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2338_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2338_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2338_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2342_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2342_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2342_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2342_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2342_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2346_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2346_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2346_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2346_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2346_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2350_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2350_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2350_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2350_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2350_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2354_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2354_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2354_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2354_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2354_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2358_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2358_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2358_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2358_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2358_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2362_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2362_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2362_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2362_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2362_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2366_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2366_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2366_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2366_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2366_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2370_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2370_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2370_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2370_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2370_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2374_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2374_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2374_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2374_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2374_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2378_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2378_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2378_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2378_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2378_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2382_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2382_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2382_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2382_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2382_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2386_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2386_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2386_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2386_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2386_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2390_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2390_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2390_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2390_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2390_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2394_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2394_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2394_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2394_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2394_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2398_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2398_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2398_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2398_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2398_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2402_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2402_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2402_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2402_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2402_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2406_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2406_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2406_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2406_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2406_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2410_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2410_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2410_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2410_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2410_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2414_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2414_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2414_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2414_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2414_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2418_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2418_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2418_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2418_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2418_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2422_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2422_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2422_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2422_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2422_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2426_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2426_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2426_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2426_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2426_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2430_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2430_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2430_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2430_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2430_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2434_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2434_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2434_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2434_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2434_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2438_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2438_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2438_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2438_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2438_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2442_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2442_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2442_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2442_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2442_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2446_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2446_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2446_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2446_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2446_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2450_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2450_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2450_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2450_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2454_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2454_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2454_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2454_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2458_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2458_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2458_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2458_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2462_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2462_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2462_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2462_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2466_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2466_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2466_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2466_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2470_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2470_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2470_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2470_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2474_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2474_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2474_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2474_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2478_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2478_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2478_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2478_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2482_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2482_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2482_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2482_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2486_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2486_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2486_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2486_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2490_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2490_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2490_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2490_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2494_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2494_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2494_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2494_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2498_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2498_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2498_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2498_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2502_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2502_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2502_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2502_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2506_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2506_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2506_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2506_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2510_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2510_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2510_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2510_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2514_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2514_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2514_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2514_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2518_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2518_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2518_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2518_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2522_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2522_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2522_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2522_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2526_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2526_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2526_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2526_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2530_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2530_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2530_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2530_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2534_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2534_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2534_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2534_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2538_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2538_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2538_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2538_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2542_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2542_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2542_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2542_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2546_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2546_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2546_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2546_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2550_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2550_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2550_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2550_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2554_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2554_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2554_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2554_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2558_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2558_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2558_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2558_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2562_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2562_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2562_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2562_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2566_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2566_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2566_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2566_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2570_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2570_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2570_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2570_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2574_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2574_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2574_p_opcode">out, 2, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2574_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2574_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2578_p_din0">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2578_p_din1">out, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2578_p_dout0">in, 32, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="grp_fu_2578_p_ce">out, 1, ap_ctrl_hs, generic_mlp_head40, return value</column>
+<column name="input_r_address1">out, 7, ap_memory, input_r, array</column>
+<column name="input_r_ce1">out, 1, ap_memory, input_r, array</column>
+<column name="input_r_q1">in, 32, ap_memory, input_r, array</column>
+</table>
+</item>
+</section>
+</profile>

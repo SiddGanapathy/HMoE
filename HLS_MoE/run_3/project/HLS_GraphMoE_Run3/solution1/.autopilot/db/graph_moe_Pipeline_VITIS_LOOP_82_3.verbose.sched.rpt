@@ -1,0 +1,173 @@
+
+
+================================================================
+== Vitis HLS Report for 'graph_moe_Pipeline_VITIS_LOOP_82_3'
+================================================================
+* Date:           Sat Sep 12 16:02:11 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        HLS_GraphMoE_Run3
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p_CIV-figd2104-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.502 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        5|        5|  50.000 ns|  50.000 ns|    5|    5|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_82_3  |        3|        3|         2|          1|          1|     3|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.24>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%max_logit_1 = alloca i32 1" [src/moe.cpp:80]   --->   Operation 5 'alloca' 'max_logit_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%e_1 = alloca i32 1" [src/moe.cpp:82]   --->   Operation 6 'alloca' 'e_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%max_logit_21136_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %max_logit_21136"   --->   Operation 7 'read' 'max_logit_21136_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%max_logit_21228_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %max_logit_21228"   --->   Operation 8 'read' 'max_logit_21228_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%max_logit_21032_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %max_logit_21032"   --->   Operation 9 'read' 'max_logit_21032_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%max_logit_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %max_logit"   --->   Operation 10 'read' 'max_logit_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.36ns)   --->   "%store_ln82 = store i3 1, i3 %e_1" [src/moe.cpp:82]   --->   Operation 11 'store' 'store_ln82' <Predicate = true> <Delay = 0.36>
+ST_1 : Operation 12 [1/1] (0.36ns)   --->   "%store_ln80 = store i32 %max_logit_read, i32 %max_logit_1" [src/moe.cpp:80]   --->   Operation 12 'store' 'store_ln80' <Predicate = true> <Delay = 0.36>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body21"   --->   Operation 13 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%e = load i3 %e_1" [src/moe.cpp:86]   --->   Operation 14 'load' 'e' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.52ns)   --->   "%icmp_ln82 = icmp_eq  i3 %e, i3 4" [src/moe.cpp:82]   --->   Operation 15 'icmp' 'icmp_ln82' <Predicate = true> <Delay = 0.52> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln82 = br i1 %icmp_ln82, void %for.body21.split, void %for.inc42.preheader.exitStub" [src/moe.cpp:82]   --->   Operation 16 'br' 'br_ln82' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%trunc_ln86 = trunc i3 %e" [src/moe.cpp:86]   --->   Operation 17 'trunc' 'trunc_ln86' <Predicate = (!icmp_ln82)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.40ns)   --->   "%icmp_ln86 = icmp_eq  i2 %trunc_ln86, i2 1" [src/moe.cpp:86]   --->   Operation 18 'icmp' 'icmp_ln86' <Predicate = (!icmp_ln82)> <Delay = 0.40> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.40> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns) (grouped into LUT with out node max_logit_2)   --->   "%select_ln86 = select i1 %icmp_ln86, i32 %max_logit_21032_read, i32 %max_logit_21228_read" [src/moe.cpp:86]   --->   Operation 19 'select' 'select_ln86' <Predicate = (!icmp_ln82)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.40ns)   --->   "%icmp_ln86_1 = icmp_eq  i2 %trunc_ln86, i2 2" [src/moe.cpp:86]   --->   Operation 20 'icmp' 'icmp_ln86_1' <Predicate = (!icmp_ln82)> <Delay = 0.40> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.40> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.21ns) (out node of the LUT)   --->   "%max_logit_2 = select i1 %icmp_ln86_1, i32 %max_logit_21136_read, i32 %select_ln86" [src/moe.cpp:86]   --->   Operation 21 'select' 'max_logit_2' <Predicate = (!icmp_ln82)> <Delay = 0.21> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.52ns)   --->   "%add_ln82 = add i3 %e, i3 1" [src/moe.cpp:82]   --->   Operation 22 'add' 'add_ln82' <Predicate = (!icmp_ln82)> <Delay = 0.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.36ns)   --->   "%store_ln82 = store i3 %add_ln82, i3 %e_1" [src/moe.cpp:82]   --->   Operation 23 'store' 'store_ln82' <Predicate = (!icmp_ln82)> <Delay = 0.36>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%max_logit_1_load = load i32 %max_logit_1"   --->   Operation 46 'load' 'max_logit_1_load' <Predicate = (icmp_ln82)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %max_logit_1_out, i32 %max_logit_1_load"   --->   Operation 47 'write' 'write_ln0' <Predicate = (icmp_ln82)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 48 'ret' 'ret_ln0' <Predicate = (icmp_ln82)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 7.50>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%max_logit_1_load_1 = load i32 %max_logit_1" [src/moe.cpp:86]   --->   Operation 24 'load' 'max_logit_1_load_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%specpipeline_ln84 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_3" [src/moe.cpp:84]   --->   Operation 25 'specpipeline' 'specpipeline_ln84' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%speclooptripcount_ln82 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 3, i64 3, i64 3" [src/moe.cpp:82]   --->   Operation 26 'speclooptripcount' 'speclooptripcount_ln82' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%specloopname_ln82 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9" [src/moe.cpp:82]   --->   Operation 27 'specloopname' 'specloopname_ln82' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%bitcast_ln86 = bitcast i32 %max_logit_2" [src/moe.cpp:86]   --->   Operation 28 'bitcast' 'bitcast_ln86' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_s = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln86, i32 23, i32 30" [src/moe.cpp:86]   --->   Operation 29 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%trunc_ln86_1 = trunc i32 %bitcast_ln86" [src/moe.cpp:86]   --->   Operation 30 'trunc' 'trunc_ln86_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%bitcast_ln86_1 = bitcast i32 %max_logit_1_load_1" [src/moe.cpp:86]   --->   Operation 31 'bitcast' 'bitcast_ln86_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_1 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln86_1, i32 23, i32 30" [src/moe.cpp:86]   --->   Operation 32 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%trunc_ln86_2 = trunc i32 %bitcast_ln86_1" [src/moe.cpp:86]   --->   Operation 33 'trunc' 'trunc_ln86_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.65ns)   --->   "%icmp_ln86_2 = icmp_ne  i8 %tmp_s, i8 255" [src/moe.cpp:86]   --->   Operation 34 'icmp' 'icmp_ln86_2' <Predicate = true> <Delay = 0.65> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.75ns)   --->   "%icmp_ln86_3 = icmp_eq  i23 %trunc_ln86_1, i23 0" [src/moe.cpp:86]   --->   Operation 35 'icmp' 'icmp_ln86_3' <Predicate = true> <Delay = 0.75> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 36 [1/1] (0.00ns) (grouped into LUT with out node and_ln86_1)   --->   "%or_ln86 = or i1 %icmp_ln86_3, i1 %icmp_ln86_2" [src/moe.cpp:86]   --->   Operation 36 'or' 'or_ln86' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.11> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.65ns)   --->   "%icmp_ln86_4 = icmp_ne  i8 %tmp_1, i8 255" [src/moe.cpp:86]   --->   Operation 37 'icmp' 'icmp_ln86_4' <Predicate = true> <Delay = 0.65> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 38 [1/1] (0.75ns)   --->   "%icmp_ln86_5 = icmp_eq  i23 %trunc_ln86_2, i23 0" [src/moe.cpp:86]   --->   Operation 38 'icmp' 'icmp_ln86_5' <Predicate = true> <Delay = 0.75> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 39 [1/1] (0.00ns) (grouped into LUT with out node and_ln86_1)   --->   "%or_ln86_1 = or i1 %icmp_ln86_5, i1 %icmp_ln86_4" [src/moe.cpp:86]   --->   Operation 39 'or' 'or_ln86_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.11> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (6.81ns)   --->   "%tmp_2 = fcmp_ogt  i32 %max_logit_2, i32 %max_logit_1_load_1" [src/moe.cpp:86]   --->   Operation 40 'fcmp' 'tmp_2' <Predicate = true> <Delay = 6.81> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 0> <II = 1> <Delay = 6.81> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 41 [1/1] (0.00ns) (grouped into LUT with out node and_ln86_1)   --->   "%and_ln86 = and i1 %tmp_2, i1 %or_ln86" [src/moe.cpp:86]   --->   Operation 41 'and' 'and_ln86' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.11> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 42 [1/1] (0.11ns) (out node of the LUT)   --->   "%and_ln86_1 = and i1 %and_ln86, i1 %or_ln86_1" [src/moe.cpp:86]   --->   Operation 42 'and' 'and_ln86_1' <Predicate = true> <Delay = 0.11> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.11> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 43 [1/1] (0.21ns) (out node of the LUT)   --->   "%max_logit_3 = select i1 %and_ln86_1, i32 %max_logit_2, i32 %max_logit_1_load_1" [src/moe.cpp:86]   --->   Operation 43 'select' 'max_logit_3' <Predicate = true> <Delay = 0.21> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 44 [1/1] (0.36ns)   --->   "%store_ln80 = store i32 %max_logit_3, i32 %max_logit_1" [src/moe.cpp:80]   --->   Operation 44 'store' 'store_ln80' <Predicate = true> <Delay = 0.36>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln82 = br void %for.body21" [src/moe.cpp:82]   --->   Operation 45 'br' 'br_ln82' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.248ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln82', src/moe.cpp:82) of constant 1 on local variable 'e', src/moe.cpp:82 [12]  (0.362 ns)
+	'load' operation 3 bit ('e', src/moe.cpp:86) on local variable 'e', src/moe.cpp:82 [16]  (0.000 ns)
+	'add' operation 3 bit ('add_ln82', src/moe.cpp:82) [45]  (0.524 ns)
+	'store' operation 0 bit ('store_ln82', src/moe.cpp:82) of variable 'add_ln82', src/moe.cpp:82 on local variable 'e', src/moe.cpp:82 [46]  (0.362 ns)
+
+ <State 2>: 7.502ns
+The critical path consists of the following:
+	'load' operation 32 bit ('max_logit_1_load_1', src/moe.cpp:86) on local variable 'max_logit', src/moe.cpp:80 [20]  (0.000 ns)
+	'fcmp' operation 1 bit ('tmp_2', src/moe.cpp:86) [41]  (6.815 ns)
+	'and' operation 1 bit ('and_ln86', src/moe.cpp:86) [42]  (0.000 ns)
+	'and' operation 1 bit ('and_ln86_1', src/moe.cpp:86) [43]  (0.112 ns)
+	'select' operation 32 bit ('max_logit', src/moe.cpp:86) [44]  (0.213 ns)
+	'store' operation 0 bit ('store_ln80', src/moe.cpp:80) of variable 'max_logit', src/moe.cpp:86 on local variable 'max_logit', src/moe.cpp:80 [47]  (0.362 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

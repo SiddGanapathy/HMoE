@@ -1,0 +1,343 @@
+
+
+================================================================
+== Synthesis Summary Report of 'graph_moe'
+================================================================
++ General Information: 
+    * Date:           Sat Sep 12 16:02:23 2026
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        HLS_GraphMoE_Run3
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu13p_CIV-figd2104-3-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+----------+------------+------------+-----+
+    |                   Modules                  |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |         |          |            |            |     |
+    |                   & Loops                  |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |    DSP   |     FF     |     LUT    | URAM|
+    +--------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+----------+------------+------------+-----+
+    |+ graph_moe                                 |  Timing|  -0.20|    54956|  5.496e+05|         -|    54957|     -|        no|  8 (~0%)|  27 (~0%)|  39772 (1%)|  26553 (1%)|    -|
+    | + graph_moe_Pipeline_VITIS_LOOP_82_3       |  Timing|  -0.20|        5|     50.000|         -|        5|     -|        no|        -|         -|    70 (~0%)|   282 (~0%)|    -|
+    |  o VITIS_LOOP_82_3                         |       -|   7.30|        3|     30.000|         2|        1|     3|       yes|        -|         -|           -|           -|    -|
+    | + graph_moe_Pipeline_VITIS_LOOP_93_4       |       -|   0.47|       12|    120.000|         -|       12|     -|        no|        -|         -|   246 (~0%)|   162 (~0%)|    -|
+    |  o VITIS_LOOP_93_4                         |       -|   7.30|       10|    100.000|         8|        1|     4|       yes|        -|         -|           -|           -|    -|
+    | + graph_moe_Pipeline_VITIS_LOOP_102_5      |       -|   0.49|       11|    110.000|         -|       11|     -|        no|        -|         -|    82 (~0%)|    92 (~0%)|    -|
+    |  o VITIS_LOOP_102_5                        |       -|   7.30|        9|     90.000|         7|        1|     4|       yes|        -|         -|           -|           -|    -|
+    | + graph_moe_Pipeline_VITIS_LOOP_312_15     |       -|   0.71|       16|    160.000|         -|       16|     -|        no|        -|   8 (~0%)|   748 (~0%)|   479 (~0%)|    -|
+    |  o VITIS_LOOP_312_15                       |       -|   7.30|       14|    140.000|        11|        1|     5|       yes|        -|         -|           -|           -|    -|
+    | o VITIS_LOOP_61_1                          |       -|   7.30|      548|  5.480e+03|       137|        -|     4|        no|        -|         -|           -|           -|    -|
+    |  + graph_moe_Pipeline_VITIS_LOOP_65_2      |       -|   0.89|      133|  1.330e+03|         -|      133|     -|        no|        -|         -|   146 (~0%)|   135 (~0%)|    -|
+    |   o VITIS_LOOP_65_2                        |       -|   7.30|      131|  1.310e+03|         5|        1|   128|       yes|        -|         -|           -|           -|    -|
+    | o VITIS_LOOP_201_6                         |       -|   7.30|    54354|  5.435e+05|     27177|        -|     2|        no|        -|         -|           -|           -|    -|
+    |  o VITIS_LOOP_210_7                        |       -|   7.30|    13555|  1.356e+05|      2711|        -|     5|        no|        -|         -|           -|           -|    -|
+    |   + graph_moe_Pipeline_VITIS_LOOP_220_8    |       -|   0.01|     2251|  2.251e+04|         -|     2251|     -|        no|        -|         -|  8449 (~0%)|  6367 (~0%)|    -|
+    |    o VITIS_LOOP_220_8                      |      II|   7.30|     2249|  2.249e+04|       266|       64|    32|       yes|        -|         -|           -|           -|    -|
+    |   + graph_moe_Pipeline_VITIS_LOOP_241_10   |       -|   0.48|      315|  3.150e+03|         -|      315|     -|        no|        -|         -|  2446 (~0%)|  1850 (~0%)|    -|
+    |    o VITIS_LOOP_241_10                     |      II|   7.30|      313|  3.130e+03|        74|       16|    16|       yes|        -|         -|           -|           -|    -|
+    |   + graph_moe_Pipeline_VITIS_LOOP_262_12   |       -|   0.48|       99|    990.000|         -|       99|     -|        no|        -|         -|  1477 (~0%)|  1157 (~0%)|    -|
+    |    o VITIS_LOOP_262_12                     |      II|   7.30|       97|    970.000|        42|        8|     8|       yes|        -|         -|           -|           -|    -|
+    |   + graph_moe_Pipeline_VITIS_LOOP_287_14   |       -|   0.89|       13|    130.000|         -|       13|     -|        no|        -|         -|   142 (~0%)|   159 (~0%)|    -|
+    |    o VITIS_LOOP_287_14                     |       -|   7.30|       11|    110.000|         5|        1|     8|       yes|        -|         -|           -|           -|    -|
+    |  o VITIS_LOOP_210_7                        |       -|   7.30|    13555|  1.356e+05|      2711|        -|     5|        no|        -|         -|           -|           -|    -|
+    |   + graph_moe_Pipeline_VITIS_LOOP_220_81   |       -|   0.01|     2251|  2.251e+04|         -|     2251|     -|        no|        -|         -|  8449 (~0%)|  6367 (~0%)|    -|
+    |    o VITIS_LOOP_220_8                      |      II|   7.30|     2249|  2.249e+04|       266|       64|    32|       yes|        -|         -|           -|           -|    -|
+    |   + graph_moe_Pipeline_VITIS_LOOP_241_102  |       -|   0.48|      315|  3.150e+03|         -|      315|     -|        no|        -|         -|  2446 (~0%)|  1850 (~0%)|    -|
+    |    o VITIS_LOOP_241_10                     |      II|   7.30|      313|  3.130e+03|        74|       16|    16|       yes|        -|         -|           -|           -|    -|
+    |   + graph_moe_Pipeline_VITIS_LOOP_262_123  |       -|   0.48|       99|    990.000|         -|       99|     -|        no|        -|         -|  1477 (~0%)|  1157 (~0%)|    -|
+    |    o VITIS_LOOP_262_12                     |      II|   7.30|       97|    970.000|        42|        8|     8|       yes|        -|         -|           -|           -|    -|
+    |   + graph_moe_Pipeline_VITIS_LOOP_287_144  |       -|   0.89|       13|    130.000|         -|       13|     -|        no|        -|         -|   142 (~0%)|   159 (~0%)|    -|
+    |    o VITIS_LOOP_287_14                     |       -|   7.30|       11|    110.000|         5|        1|     8|       yes|        -|         -|           -|           -|    -|
+    +--------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+----------+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+
+| Interface     | Data Width | Address Width |
++---------------+------------+---------------+
+| s_axi_control | 32         | 4             |
++---------------+------------+---------------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AP_MEMORY
++----------------------+-----------+----------+
+| Port                 | Direction | Bitwidth |
++----------------------+-----------+----------+
+| b1_address0          | out       | 10       |
+| b1_q0                | in        | 32       |
+| b2_address0          | out       | 9        |
+| b2_q0                | in        | 32       |
+| b3_address0          | out       | 8        |
+| b3_q0                | in        | 32       |
+| b4_address0          | out       | 5        |
+| b4_q0                | in        | 32       |
+| gate_bias_address0   | out       | 2        |
+| gate_bias_q0         | in        | 32       |
+| gate_weight_address0 | out       | 9        |
+| gate_weight_q0       | in        | 32       |
+| gates_address0       | out       | 2        |
+| gates_address1       | out       | 2        |
+| gates_d0             | out       | 32       |
+| gates_q0             | in        | 32       |
+| gates_q1             | in        | 32       |
+| input_r_address0     | out       | 7        |
+| input_r_address1     | out       | 7        |
+| input_r_q0           | in        | 32       |
+| input_r_q1           | in        | 32       |
+| output_r_address0    | out       | 3        |
+| output_r_d0          | out       | 32       |
+| w1_address0          | out       | 17       |
+| w1_address1          | out       | 17       |
+| w1_q0                | in        | 32       |
+| w1_q1                | in        | 32       |
+| w2_address0          | out       | 14       |
+| w2_address1          | out       | 14       |
+| w2_q0                | in        | 32       |
+| w2_q1                | in        | 32       |
+| w3_address0          | out       | 12       |
+| w3_address1          | out       | 12       |
+| w3_q0                | in        | 32       |
+| w3_q1                | in        | 32       |
+| w4_address0          | out       | 8        |
+| w4_q0                | in        | 32       |
++----------------------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-------------+-----------+---------------+
+| Argument    | Direction | Datatype      |
++-------------+-----------+---------------+
+| input       | in        | float const * |
+| gate_weight | in        | float const * |
+| gate_bias   | in        | float const * |
+| w1          | in        | float const * |
+| b1          | in        | float const * |
+| w2          | in        | float const * |
+| b2          | in        | float const * |
+| w3          | in        | float const * |
+| b3          | in        | float const * |
+| w4          | in        | float const * |
+| b4          | in        | float const * |
+| output      | out       | float*        |
+| gates       | inout     | float*        |
++-------------+-----------+---------------+
+
+* SW-to-HW Mapping
++-------------+----------------------+---------+----------+
+| Argument    | HW Interface         | HW Type | HW Usage |
++-------------+----------------------+---------+----------+
+| input       | input_r_address0     | port    | offset   |
+| input       | input_r_ce0          | port    |          |
+| input       | input_r_q0           | port    |          |
+| input       | input_r_address1     | port    | offset   |
+| input       | input_r_ce1          | port    |          |
+| input       | input_r_q1           | port    |          |
+| gate_weight | gate_weight_address0 | port    | offset   |
+| gate_weight | gate_weight_ce0      | port    |          |
+| gate_weight | gate_weight_q0       | port    |          |
+| gate_bias   | gate_bias_address0   | port    | offset   |
+| gate_bias   | gate_bias_ce0        | port    |          |
+| gate_bias   | gate_bias_q0         | port    |          |
+| w1          | w1_address0          | port    | offset   |
+| w1          | w1_ce0               | port    |          |
+| w1          | w1_q0                | port    |          |
+| w1          | w1_address1          | port    | offset   |
+| w1          | w1_ce1               | port    |          |
+| w1          | w1_q1                | port    |          |
+| b1          | b1_address0          | port    | offset   |
+| b1          | b1_ce0               | port    |          |
+| b1          | b1_q0                | port    |          |
+| w2          | w2_address0          | port    | offset   |
+| w2          | w2_ce0               | port    |          |
+| w2          | w2_q0                | port    |          |
+| w2          | w2_address1          | port    | offset   |
+| w2          | w2_ce1               | port    |          |
+| w2          | w2_q1                | port    |          |
+| b2          | b2_address0          | port    | offset   |
+| b2          | b2_ce0               | port    |          |
+| b2          | b2_q0                | port    |          |
+| w3          | w3_address0          | port    | offset   |
+| w3          | w3_ce0               | port    |          |
+| w3          | w3_q0                | port    |          |
+| w3          | w3_address1          | port    | offset   |
+| w3          | w3_ce1               | port    |          |
+| w3          | w3_q1                | port    |          |
+| b3          | b3_address0          | port    | offset   |
+| b3          | b3_ce0               | port    |          |
+| b3          | b3_q0                | port    |          |
+| w4          | w4_address0          | port    | offset   |
+| w4          | w4_ce0               | port    |          |
+| w4          | w4_q0                | port    |          |
+| b4          | b4_address0          | port    | offset   |
+| b4          | b4_ce0               | port    |          |
+| b4          | b4_q0                | port    |          |
+| output      | output_r_address0    | port    | offset   |
+| output      | output_r_ce0         | port    |          |
+| output      | output_r_we0         | port    |          |
+| output      | output_r_d0          | port    |          |
+| gates       | gates_address0       | port    | offset   |
+| gates       | gates_ce0            | port    |          |
+| gates       | gates_we0            | port    |          |
+| gates       | gates_d0             | port    |          |
+| gates       | gates_q0             | port    |          |
+| gates       | gates_address1       | port    | offset   |
+| gates       | gates_ce1            | port    |          |
+| gates       | gates_q1             | port    |          |
++-------------+----------------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------+-----+--------+-------------+------+---------+---------+
+| Name                                     | DSP | Pragma | Variable    | Op   | Impl    | Latency |
++------------------------------------------+-----+--------+-------------+------+---------+---------+
+| + graph_moe                              | 27  |        |             |      |         |         |
+|   add_ln61_fu_3687_p2                    |     |        | add_ln61    | add  | fabric  | 0       |
+|   add_ln210_fu_4237_p2                   |     |        | add_ln210   | add  | fabric  | 0       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U501     |     |        | add_ln228   | add  | fabric  | 0       |
+|   add_ln210_1_fu_4320_p2                 |     |        | add_ln210_1 | add  | fabric  | 0       |
+|   add_ln228_1_fu_4330_p2                 |     |        | add_ln228_1 | add  | fabric  | 0       |
+|   add_ln201_fu_4344_p2                   |     |        | add_ln201   | add  | fabric  | 0       |
+|  + graph_moe_Pipeline_VITIS_LOOP_82_3    | 0   |        |             |      |         |         |
+|    add_ln82_fu_142_p2                    |     |        | add_ln82    | add  | fabric  | 0       |
+|  + graph_moe_Pipeline_VITIS_LOOP_65_2    | 0   |        |             |      |         |         |
+|    add_ln65_fu_126_p2                    |     |        | add_ln65    | add  | fabric  | 0       |
+|    add_ln69_fu_141_p2                    |     |        | add_ln69    | add  | fabric  | 0       |
+|  + graph_moe_Pipeline_VITIS_LOOP_93_4    | 0   |        |             |      |         |         |
+|    add_ln93_fu_145_p2                    |     |        | add_ln93    | add  | fabric  | 0       |
+|  + graph_moe_Pipeline_VITIS_LOOP_102_5   | 0   |        |             |      |         |         |
+|    add_ln102_fu_81_p2                    |     |        | add_ln102   | add  | fabric  | 0       |
+|    fdiv_32ns_32ns_32_6_no_dsp_1_U27      |     |        | div         | fdiv | fabric  | 5       |
+|  + graph_moe_Pipeline_VITIS_LOOP_220_8   | 0   |        |             |      |         |         |
+|    add_ln220_fu_2531_p2                  |     |        | add_ln220   | add  | fabric  | 0       |
+|    add_ln228_fu_2541_p2                  |     |        | add_ln228   | add  | fabric  | 0       |
+|  + graph_moe_Pipeline_VITIS_LOOP_241_10  | 0   |        |             |      |         |         |
+|    add_ln241_fu_776_p2                   |     |        | add_ln241   | add  | fabric  | 0       |
+|    add_ln249_fu_786_p2                   |     |        | add_ln249   | add  | fabric  | 0       |
+|  + graph_moe_Pipeline_VITIS_LOOP_262_12  | 0   |        |             |      |         |         |
+|    add_ln262_fu_483_p2                   |     |        | add_ln262   | add  | fabric  | 0       |
+|    add_ln270_fu_493_p2                   |     |        | add_ln270   | add  | fabric  | 0       |
+|  + graph_moe_Pipeline_VITIS_LOOP_287_14  | 0   |        |             |      |         |         |
+|    add_ln287_fu_151_p2                   |     |        | add_ln287   | add  | fabric  | 0       |
+|    add_ln291_fu_167_p2                   |     |        | add_ln291   | add  | fabric  | 0       |
+|  + graph_moe_Pipeline_VITIS_LOOP_220_81  | 0   |        |             |      |         |         |
+|    add_ln220_fu_2531_p2                  |     |        | add_ln220   | add  | fabric  | 0       |
+|    add_ln228_fu_2541_p2                  |     |        | add_ln228   | add  | fabric  | 0       |
+|  + graph_moe_Pipeline_VITIS_LOOP_241_102 | 0   |        |             |      |         |         |
+|    add_ln241_fu_776_p2                   |     |        | add_ln241   | add  | fabric  | 0       |
+|    add_ln249_fu_786_p2                   |     |        | add_ln249   | add  | fabric  | 0       |
+|  + graph_moe_Pipeline_VITIS_LOOP_262_123 | 0   |        |             |      |         |         |
+|    add_ln262_fu_483_p2                   |     |        | add_ln262   | add  | fabric  | 0       |
+|    add_ln270_fu_493_p2                   |     |        | add_ln270   | add  | fabric  | 0       |
+|  + graph_moe_Pipeline_VITIS_LOOP_287_144 | 0   |        |             |      |         |         |
+|    add_ln287_fu_151_p2                   |     |        | add_ln287   | add  | fabric  | 0       |
+|    add_ln291_fu_167_p2                   |     |        | add_ln291   | add  | fabric  | 0       |
+|  + graph_moe_Pipeline_VITIS_LOOP_312_15  | 8   |        |             |      |         |         |
+|    add_ln312_fu_196_p2                   |     |        | add_ln312   | add  | fabric  | 0       |
+|    fmul_32ns_32ns_32_2_max_dsp_1_U485    | 3   |        | mul242_2    | fmul | maxdsp  | 1       |
+|    fmul_32ns_32ns_32_2_max_dsp_1_U486    | 3   |        | mul242_3    | fmul | maxdsp  | 1       |
+|    fadd_32ns_32ns_32_2_full_dsp_1_U482   | 2   |        | sum_5       | fadd | fulldsp | 1       |
++------------------------------------------+-----+--------+-------------+------+---------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++---------------------+---------------+-----------+------+------+--------+-----------------+------+---------+------------------+
+| Name                | Usage         | Type      | BRAM | URAM | Pragma | Variable        | Impl | Latency | Bitwidth, Depth, |
+|                     |               |           |      |      |        |                 |      |         | Banks            |
++---------------------+---------------+-----------+------+------+--------+-----------------+------+---------+------------------+
+| + graph_moe         |               |           | 8    | 0    |        |                 |      |         |                  |
+|   control_s_axi_U   | interface     | s_axilite |      |      |        |                 |      |         |                  |
+|   l1_U              | ram_s2p array |           | 2    |      |        | l1              | auto | 1       | 32, 32, 1        |
+|   l1_1_U            | ram_s2p array |           | 2    |      |        | l1_1            | auto | 1       | 32, 32, 1        |
+|   l1_2_U            | ram_s2p array |           | 2    |      |        | l1_2            | auto | 1       | 32, 32, 1        |
+|   l1_3_U            | ram_s2p array |           | 2    |      |        | l1_3            | auto | 1       | 32, 32, 1        |
+|   l2_U              | ram_s2p array |           |      |      |        | l2              | auto | 1       | 32, 16, 1        |
+|   l2_1_U            | ram_s2p array |           |      |      |        | l2_1            | auto | 1       | 32, 16, 1        |
+|   l2_2_U            | ram_s2p array |           |      |      |        | l2_2            | auto | 1       | 32, 16, 1        |
+|   l2_3_U            | ram_s2p array |           |      |      |        | l2_3            | auto | 1       | 32, 16, 1        |
+|   l3_U              | ram_1p array  |           |      |      |        | l3              | auto | 1       | 32, 8, 1         |
+|   l3_1_U            | ram_1p array  |           |      |      |        | l3_1            | auto | 1       | 32, 8, 1         |
+|   l3_2_U            | ram_1p array  |           |      |      |        | l3_2            | auto | 1       | 32, 8, 1         |
+|   l3_3_U            | ram_1p array  |           |      |      |        | l3_3            | auto | 1       | 32, 8, 1         |
+|   expert_output_U   | ram_1p array  |           |      |      |        | expert_output   | auto | 1       | 32, 5, 1         |
+|   expert_output_1_U | ram_1p array  |           |      |      |        | expert_output_1 | auto | 1       | 32, 5, 1         |
+|   expert_output_2_U | ram_1p array  |           |      |      |        | expert_output_2 | auto | 1       | 32, 5, 1         |
+|   expert_output_3_U | ram_1p array  |           |      |      |        | expert_output_3 | auto | 1       | 32, 5, 1         |
++---------------------+---------------+-----------+------+------+--------+-----------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++-----------------+---------------------------------------+---------------------------------------------+------------------------------------------------------+
+| Type            | Options                               | Location                                    | Messages                                             |
++-----------------+---------------------------------------+---------------------------------------------+------------------------------------------------------+
+| array_partition | variable=l1 dim=1 factor=2            | src/moe.cpp:162 in graph_moe, l1            | 'factor' in '#pragma HLS array_partition' is ignored |
+| array_partition | variable=l2 dim=1 factor=2            | src/moe.cpp:163 in graph_moe, l2            | 'factor' in '#pragma HLS array_partition' is ignored |
+| array_partition | variable=l3 dim=1 factor=2            | src/moe.cpp:164 in graph_moe, l3            | 'factor' in '#pragma HLS array_partition' is ignored |
+| array_partition | variable=expert_output dim=1 factor=2 | src/moe.cpp:177 in graph_moe, expert_output | 'factor' in '#pragma HLS array_partition' is ignored |
++-----------------+---------------------------------------+---------------------------------------------+------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------+---------------------------------+------------------------------------------+
+| Type      | Options                         | Location                                 |
++-----------+---------------------------------+------------------------------------------+
+| inline    |                                 | src/moe.cpp:6 in elu                     |
+| interface | mode=ap_memory port=input       | src/moe.cpp:36 in graph_moe, input       |
+| interface | mode=ap_memory port=gate_weight | src/moe.cpp:37 in graph_moe, gate_weight |
+| interface | mode=ap_memory port=gate_bias   | src/moe.cpp:38 in graph_moe, gate_bias   |
+| interface | mode=ap_memory port=w1          | src/moe.cpp:40 in graph_moe, w1          |
+| interface | mode=ap_memory port=b1          | src/moe.cpp:41 in graph_moe, b1          |
+| interface | mode=ap_memory port=w2          | src/moe.cpp:42 in graph_moe, w2          |
+| interface | mode=ap_memory port=b2          | src/moe.cpp:43 in graph_moe, b2          |
+| interface | mode=ap_memory port=w3          | src/moe.cpp:44 in graph_moe, w3          |
+| interface | mode=ap_memory port=b3          | src/moe.cpp:45 in graph_moe, b3          |
+| interface | mode=ap_memory port=w4          | src/moe.cpp:46 in graph_moe, w4          |
+| interface | mode=ap_memory port=b4          | src/moe.cpp:47 in graph_moe, b4          |
+| interface | mode=ap_memory port=output      | src/moe.cpp:49 in graph_moe, output      |
+| interface | mode=ap_memory port=gates       | src/moe.cpp:50 in graph_moe, gates       |
+| interface | mode=s_axilite port=return      | src/moe.cpp:52 in graph_moe, return      |
+| pipeline  | II=1                            | src/moe.cpp:67 in graph_moe              |
+| pipeline  | II=1                            | src/moe.cpp:84 in graph_moe              |
+| pipeline  | II=1                            | src/moe.cpp:95 in graph_moe              |
+| pipeline  | II=1                            | src/moe.cpp:104 in graph_moe             |
+| unroll    | factor=2                        | src/moe.cpp:203 in graph_moe             |
+| pipeline  | II=1                            | src/moe.cpp:222 in graph_moe             |
+| pipeline  | II=1                            | src/moe.cpp:243 in graph_moe             |
+| pipeline  | II=1                            | src/moe.cpp:264 in graph_moe             |
+| pipeline  | II=1                            | src/moe.cpp:289 in graph_moe             |
+| pipeline  | II=1                            | src/moe.cpp:314 in graph_moe             |
++-----------+---------------------------------+------------------------------------------+
+
+

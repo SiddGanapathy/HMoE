@@ -1,0 +1,53 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'expert_engine'" level="0">
+<item name = "Date">Sat Sep 12 20:19:14 2026
+</item>
+<item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
+<item name = "Project">HLS_GraphMoE_Run6</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu13p_CIV-figd2104-3-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.285 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">55402, 55402, 0.554 ms, 0.554 ms, 55402, 55402, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_57_1">27700, 27700, 5540, -, -, 5, no</column>
+<column name=" + VITIS_LOOP_64_2">4544, 4544, 142, -, -, 32, no</column>
+<column name=" + VITIS_LOOP_78_4">736, 736, 46, -, -, 16, no</column>
+<column name=" + VITIS_LOOP_92_6">240, 240, 30, -, -, 8, no</column>
+<column name="- VITIS_LOOP_122_9">27700, 27700, 5540, -, -, 5, no</column>
+<column name=" + VITIS_LOOP_129_10">4544, 4544, 142, -, -, 32, no</column>
+<column name=" + VITIS_LOOP_143_12">736, 736, 46, -, -, 16, no</column>
+<column name=" + VITIS_LOOP_157_14">240, 240, 30, -, -, 8, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

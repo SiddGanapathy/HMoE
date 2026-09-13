@@ -1,0 +1,31 @@
+{
+  "input_dim": 128,
+  "num_experts": 4,
+  "num_objectives": 5,
+  "objectives": [
+    "perf",
+    "util-LUT",
+    "util-FF",
+    "util-DSP",
+    "util-BRAM"
+  ],
+  "hidden_layers": [
+    32,
+    16,
+    8
+  ],
+  "num_samples": 10,
+  "gate_weight_shape": [
+    4,
+    128
+  ],
+  "gate_bias_shape": [
+    4
+  ],
+  "gate_type": "Linear",
+  "routing": "top-k",
+  "k": 4,
+  "softmax": "softmax over selected top-k logits",
+  "checkpoint": "/home/simics/HMoE/HierarchicalMoE/src/logs/auto-encoder/iccad/round1-40kernel/pragma_as_MLP/parallel_and_merge/class/post-gnn-3lp-3lm/dropout-0.1-MSE-scheduler-warmup-weight-decay-0.0001-no-mutual-info-PB-edge-attr-True_position-True-6L-SSL-False-gae-T-False-gae-P-False_regression_train_2026-09-06T04-33-56.349623/run1/500_val_model_state_dict.pth",
+  "output_mlp_prefix": "experts.2.MLPs."
+}

@@ -1,0 +1,111 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="elu" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:41:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="expert_engine_A" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:54:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="expert_engine_A" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:68:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="expert_engine_A" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:82:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="expert_engine_A" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:94:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="expert_engine_A" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:133:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="expert_engine_B" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:146:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="expert_engine_B" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:160:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="expert_engine_B" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:174:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="expert_engine_B" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:186:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="expert_engine_B" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/run_5/scripts/run_hls.tcl:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="graph_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=graph_moe" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:220:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="graph_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_memory port=input" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:221:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="graph_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_memory port=gate_weight" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:222:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="graph_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_memory port=gate_bias" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:224:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="graph_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_memory port=w1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:225:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="graph_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_memory port=b1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:227:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="graph_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_memory port=w2" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:228:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="graph_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_memory port=b2" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:230:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="graph_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_memory port=w3" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:231:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="graph_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_memory port=b3" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:233:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="graph_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_memory port=w4" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:234:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="graph_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_memory port=b4" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:236:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="graph_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_memory port=output" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:237:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="graph_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_memory port=gates" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:239:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="graph_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:254:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="graph_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="src/moe.cpp:58:17" msg_body="Inlining function 'elu(float)' into 'expert_engine_A(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)'">
+        <args Callee="elu(float)" Callee-DebugLoc="File src/moe.cpp Line 9 Column 0" Caller="expert_engine_A(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)" Caller-DebugLoc="File src/moe.cpp Line 40 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="src/moe.cpp:86:17" msg_body="Inlining function 'elu(float)' into 'expert_engine_A(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)'">
+        <args Callee="elu(float)" Callee-DebugLoc="File src/moe.cpp Line 9 Column 0" Caller="expert_engine_A(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)" Caller-DebugLoc="File src/moe.cpp Line 40 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="src/moe.cpp:72:17" msg_body="Inlining function 'elu(float)' into 'expert_engine_A(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)'">
+        <args Callee="elu(float)" Callee-DebugLoc="File src/moe.cpp Line 9 Column 0" Caller="expert_engine_A(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)" Caller-DebugLoc="File src/moe.cpp Line 40 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="src/moe.cpp:150:17" msg_body="Inlining function 'elu(float)' into 'expert_engine_B(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)'">
+        <args Callee="elu(float)" Callee-DebugLoc="File src/moe.cpp Line 9 Column 0" Caller="expert_engine_B(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)" Caller-DebugLoc="File src/moe.cpp Line 132 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="src/moe.cpp:178:17" msg_body="Inlining function 'elu(float)' into 'expert_engine_B(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)'">
+        <args Callee="elu(float)" Callee-DebugLoc="File src/moe.cpp Line 9 Column 0" Caller="expert_engine_B(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)" Caller-DebugLoc="File src/moe.cpp Line 132 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="src/moe.cpp:164:17" msg_body="Inlining function 'elu(float)' into 'expert_engine_B(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)'">
+        <args Callee="elu(float)" Callee-DebugLoc="File src/moe.cpp Line 9 Column 0" Caller="expert_engine_B(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)" Caller-DebugLoc="File src/moe.cpp Line 132 Column 0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="src/moe.cpp:306:11" msg_body="array_partition dim=1 type=complete  variable=expert_output 1 graph_moe src/moe.cpp:306:11 expert_output">
+        <args PragmaFunction="graph_moe" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=expert_output" PragmaType="array_partition" VarName="expert_output" varLoc="src/moe.cpp:306:11"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="src/moe.cpp:306:11" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'expert_output' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="expert_output" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/moe.cpp:306:11" msg_body="Applying array_partition to 'expert_output': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="expert_output"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

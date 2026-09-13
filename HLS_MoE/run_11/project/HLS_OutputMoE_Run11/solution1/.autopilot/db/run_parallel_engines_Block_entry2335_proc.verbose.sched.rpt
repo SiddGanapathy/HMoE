@@ -1,0 +1,184 @@
+
+
+================================================================
+== Vitis HLS Report for 'run_parallel_engines_Block_entry2335_proc'
+================================================================
+* Date:           Sun Sep 13 20:13:40 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        HLS_OutputMoE_Run11
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p_CIV-figd2104-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.062 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        2|        2|  20.000 ns|  20.000 ns|    2|    2|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.06>
+ST_1 : Operation 4 [1/1] (1.52ns)   --->   "%p_read_15 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read5" [src/moe.cpp:1036]   --->   Operation 4 'read' 'p_read_15' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 5 [1/1] (1.52ns)   --->   "%p_read_16 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read4" [src/moe.cpp:1036]   --->   Operation 5 'read' 'p_read_16' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 6 [1/1] (1.52ns)   --->   "%p_read_17 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read3" [src/moe.cpp:1036]   --->   Operation 6 'read' 'p_read_17' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 7 [1/1] (1.52ns)   --->   "%p_read_18 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read2" [src/moe.cpp:1036]   --->   Operation 7 'read' 'p_read_18' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%out_0_addr = getelementptr i32 %out_0, i64 0, i64 0" [src/moe.cpp:1033]   --->   Operation 8 'getelementptr' 'out_0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.54ns)   --->   "%store_ln1033 = store i32 %p_read_18, i3 %out_0_addr" [src/moe.cpp:1033]   --->   Operation 9 'store' 'store_ln1033' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%out_1_addr = getelementptr i32 %out_1, i64 0, i64 0" [src/moe.cpp:1033]   --->   Operation 10 'getelementptr' 'out_1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.54ns)   --->   "%store_ln1034 = store i32 %p_read_17, i3 %out_1_addr" [src/moe.cpp:1034]   --->   Operation 11 'store' 'store_ln1034' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%out_2_addr = getelementptr i32 %out_2, i64 0, i64 0" [src/moe.cpp:1033]   --->   Operation 12 'getelementptr' 'out_2_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.54ns)   --->   "%store_ln1035 = store i32 %p_read_16, i3 %out_2_addr" [src/moe.cpp:1035]   --->   Operation 13 'store' 'store_ln1035' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%out_3_addr = getelementptr i32 %out_3, i64 0, i64 0" [src/moe.cpp:1033]   --->   Operation 14 'getelementptr' 'out_3_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.54ns)   --->   "%store_ln1036 = store i32 %p_read_15, i3 %out_3_addr" [src/moe.cpp:1036]   --->   Operation 15 'store' 'store_ln1036' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 2 <SV = 1> <Delay = 2.06>
+ST_2 : Operation 16 [1/1] (1.52ns)   --->   "%p_read_7 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read13" [src/moe.cpp:1036]   --->   Operation 16 'read' 'p_read_7' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 17 [1/1] (1.52ns)   --->   "%p_read_8 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read12" [src/moe.cpp:1036]   --->   Operation 17 'read' 'p_read_8' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 18 [1/1] (1.52ns)   --->   "%p_read_9 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read11" [src/moe.cpp:1036]   --->   Operation 18 'read' 'p_read_9' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 19 [1/1] (1.52ns)   --->   "%p_read_10 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read10" [src/moe.cpp:1036]   --->   Operation 19 'read' 'p_read_10' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 20 [1/1] (1.52ns)   --->   "%p_read_11 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read9" [src/moe.cpp:1036]   --->   Operation 20 'read' 'p_read_11' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 21 [1/1] (1.52ns)   --->   "%p_read_12 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read8" [src/moe.cpp:1036]   --->   Operation 21 'read' 'p_read_12' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 22 [1/1] (1.52ns)   --->   "%p_read_13 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read7" [src/moe.cpp:1036]   --->   Operation 22 'read' 'p_read_13' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 23 [1/1] (1.52ns)   --->   "%p_read_14 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read6" [src/moe.cpp:1036]   --->   Operation 23 'read' 'p_read_14' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%out_0_addr_1 = getelementptr i32 %out_0, i64 0, i64 1" [src/moe.cpp:1033]   --->   Operation 24 'getelementptr' 'out_0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.54ns)   --->   "%store_ln1033 = store i32 %p_read_14, i3 %out_0_addr_1" [src/moe.cpp:1033]   --->   Operation 25 'store' 'store_ln1033' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%out_1_addr_1 = getelementptr i32 %out_1, i64 0, i64 1" [src/moe.cpp:1033]   --->   Operation 26 'getelementptr' 'out_1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.54ns)   --->   "%store_ln1034 = store i32 %p_read_13, i3 %out_1_addr_1" [src/moe.cpp:1034]   --->   Operation 27 'store' 'store_ln1034' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%out_2_addr_1 = getelementptr i32 %out_2, i64 0, i64 1" [src/moe.cpp:1033]   --->   Operation 28 'getelementptr' 'out_2_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.54ns)   --->   "%store_ln1035 = store i32 %p_read_12, i3 %out_2_addr_1" [src/moe.cpp:1035]   --->   Operation 29 'store' 'store_ln1035' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%out_3_addr_1 = getelementptr i32 %out_3, i64 0, i64 1" [src/moe.cpp:1033]   --->   Operation 30 'getelementptr' 'out_3_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.54ns)   --->   "%store_ln1036 = store i32 %p_read_11, i3 %out_3_addr_1" [src/moe.cpp:1036]   --->   Operation 31 'store' 'store_ln1036' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%out_0_addr_2 = getelementptr i32 %out_0, i64 0, i64 2" [src/moe.cpp:1033]   --->   Operation 32 'getelementptr' 'out_0_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.54ns)   --->   "%store_ln1033 = store i32 %p_read_10, i3 %out_0_addr_2" [src/moe.cpp:1033]   --->   Operation 33 'store' 'store_ln1033' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%out_1_addr_2 = getelementptr i32 %out_1, i64 0, i64 2" [src/moe.cpp:1033]   --->   Operation 34 'getelementptr' 'out_1_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.54ns)   --->   "%store_ln1034 = store i32 %p_read_9, i3 %out_1_addr_2" [src/moe.cpp:1034]   --->   Operation 35 'store' 'store_ln1034' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%out_2_addr_2 = getelementptr i32 %out_2, i64 0, i64 2" [src/moe.cpp:1033]   --->   Operation 36 'getelementptr' 'out_2_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.54ns)   --->   "%store_ln1035 = store i32 %p_read_8, i3 %out_2_addr_2" [src/moe.cpp:1035]   --->   Operation 37 'store' 'store_ln1035' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%out_3_addr_2 = getelementptr i32 %out_3, i64 0, i64 2" [src/moe.cpp:1033]   --->   Operation 38 'getelementptr' 'out_3_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.54ns)   --->   "%store_ln1036 = store i32 %p_read_7, i3 %out_3_addr_2" [src/moe.cpp:1036]   --->   Operation 39 'store' 'store_ln1036' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 3 <SV = 2> <Delay = 2.06>
+ST_3 : Operation 40 [1/1] (1.52ns)   --->   "%p_read_1 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read19" [src/moe.cpp:1036]   --->   Operation 40 'read' 'p_read_1' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_3 : Operation 41 [1/1] (1.52ns)   --->   "%p_read_2 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read18" [src/moe.cpp:1036]   --->   Operation 41 'read' 'p_read_2' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_3 : Operation 42 [1/1] (1.52ns)   --->   "%p_read_3 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read17" [src/moe.cpp:1036]   --->   Operation 42 'read' 'p_read_3' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_3 : Operation 43 [1/1] (1.52ns)   --->   "%p_read_4 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read16" [src/moe.cpp:1036]   --->   Operation 43 'read' 'p_read_4' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_3 : Operation 44 [1/1] (1.52ns)   --->   "%p_read_5 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read15" [src/moe.cpp:1036]   --->   Operation 44 'read' 'p_read_5' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_3 : Operation 45 [1/1] (1.52ns)   --->   "%p_read_6 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read14" [src/moe.cpp:1036]   --->   Operation 45 'read' 'p_read_6' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_3 : Operation 46 [1/1] (1.52ns)   --->   "%p_read_19 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read1" [src/moe.cpp:1036]   --->   Operation 46 'read' 'p_read_19' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_3 : Operation 47 [1/1] (1.52ns)   --->   "%p_read_20 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read" [src/moe.cpp:1036]   --->   Operation 47 'read' 'p_read_20' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%out_0_addr_3 = getelementptr i32 %out_0, i64 0, i64 3" [src/moe.cpp:1033]   --->   Operation 48 'getelementptr' 'out_0_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.54ns)   --->   "%store_ln1033 = store i32 %p_read_6, i3 %out_0_addr_3" [src/moe.cpp:1033]   --->   Operation 49 'store' 'store_ln1033' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%out_1_addr_3 = getelementptr i32 %out_1, i64 0, i64 3" [src/moe.cpp:1033]   --->   Operation 50 'getelementptr' 'out_1_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (0.54ns)   --->   "%store_ln1034 = store i32 %p_read_5, i3 %out_1_addr_3" [src/moe.cpp:1034]   --->   Operation 51 'store' 'store_ln1034' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%out_2_addr_3 = getelementptr i32 %out_2, i64 0, i64 3" [src/moe.cpp:1033]   --->   Operation 52 'getelementptr' 'out_2_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (0.54ns)   --->   "%store_ln1035 = store i32 %p_read_4, i3 %out_2_addr_3" [src/moe.cpp:1035]   --->   Operation 53 'store' 'store_ln1035' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%out_3_addr_3 = getelementptr i32 %out_3, i64 0, i64 3" [src/moe.cpp:1033]   --->   Operation 54 'getelementptr' 'out_3_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.54ns)   --->   "%store_ln1036 = store i32 %p_read_3, i3 %out_3_addr_3" [src/moe.cpp:1036]   --->   Operation 55 'store' 'store_ln1036' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%out_0_addr_4 = getelementptr i32 %out_0, i64 0, i64 4" [src/moe.cpp:1033]   --->   Operation 56 'getelementptr' 'out_0_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 57 [1/1] (0.54ns)   --->   "%store_ln1033 = store i32 %p_read_2, i3 %out_0_addr_4" [src/moe.cpp:1033]   --->   Operation 57 'store' 'store_ln1033' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%out_1_addr_4 = getelementptr i32 %out_1, i64 0, i64 4" [src/moe.cpp:1033]   --->   Operation 58 'getelementptr' 'out_1_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (0.54ns)   --->   "%store_ln1034 = store i32 %p_read_20, i3 %out_1_addr_4" [src/moe.cpp:1034]   --->   Operation 59 'store' 'store_ln1034' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%out_2_addr_4 = getelementptr i32 %out_2, i64 0, i64 4" [src/moe.cpp:1033]   --->   Operation 60 'getelementptr' 'out_2_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 61 [1/1] (0.54ns)   --->   "%store_ln1035 = store i32 %p_read_1, i3 %out_2_addr_4" [src/moe.cpp:1035]   --->   Operation 61 'store' 'store_ln1035' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%out_3_addr_4 = getelementptr i32 %out_3, i64 0, i64 4" [src/moe.cpp:1033]   --->   Operation 62 'getelementptr' 'out_3_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.54ns)   --->   "%store_ln1036 = store i32 %p_read_19, i3 %out_3_addr_4" [src/moe.cpp:1036]   --->   Operation 63 'store' 'store_ln1036' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 64 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 2.062ns
+The critical path consists of the following:
+	wire read operation ('p_read_18', src/moe.cpp:1036) on port 'p_read2' (src/moe.cpp:1036) [42]  (1.520 ns)
+	'store' operation 0 bit ('store_ln1033', src/moe.cpp:1033) of variable 'p_read_18', src/moe.cpp:1036 on array 'out_0' [46]  (0.542 ns)
+
+ <State 2>: 2.062ns
+The critical path consists of the following:
+	wire read operation ('p_read_14', src/moe.cpp:1036) on port 'p_read6' (src/moe.cpp:1036) [38]  (1.520 ns)
+	'store' operation 0 bit ('store_ln1033', src/moe.cpp:1033) of variable 'p_read_14', src/moe.cpp:1036 on array 'out_0' [54]  (0.542 ns)
+
+ <State 3>: 2.062ns
+The critical path consists of the following:
+	wire read operation ('p_read_6', src/moe.cpp:1036) on port 'p_read14' (src/moe.cpp:1036) [30]  (1.520 ns)
+	'store' operation 0 bit ('store_ln1033', src/moe.cpp:1033) of variable 'p_read_6', src/moe.cpp:1036 on array 'out_0' [70]  (0.542 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

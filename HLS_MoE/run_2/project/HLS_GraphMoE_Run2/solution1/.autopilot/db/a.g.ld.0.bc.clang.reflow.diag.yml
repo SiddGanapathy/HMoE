@@ -1,0 +1,108 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/moe.cpp, Line: 113, Column: 25 }
+Function:        _Z9graph_moePKfPA128_S_S0_PA5_A32_S1_PA5_A32_S_PA5_A16_S6_PA5_A16_S_PA5_A8_SC_PA5_A8_S_PA5_A1_SI_PA5_A1_S_PfSR_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'elu(float)'
+    DebugLoc:        { File: src/moe.cpp, Line: 5, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'graph_moe(float const*, float const (*) [128], float const*, float const (*) [5][32][128], float const (*) [5][32], float const (*) [5][16][32], float const (*) [5][16], float const (*) [5][8][16], float const (*) [5][8], float const (*) [5][1][8], float const (*) [5][1], float*, float*)'
+    DebugLoc:        { File: src/moe.cpp, Line: 30, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/moe.cpp, Line: 137, Column: 25 }
+Function:        _Z9graph_moePKfPA128_S_S0_PA5_A32_S1_PA5_A32_S_PA5_A16_S6_PA5_A16_S_PA5_A8_SC_PA5_A8_S_PA5_A1_SI_PA5_A1_S_PfSR_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'elu(float)'
+    DebugLoc:        { File: src/moe.cpp, Line: 5, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'graph_moe(float const*, float const (*) [128], float const*, float const (*) [5][32][128], float const (*) [5][32], float const (*) [5][16][32], float const (*) [5][16], float const (*) [5][8][16], float const (*) [5][8], float const (*) [5][1][8], float const (*) [5][1], float*, float*)'
+    DebugLoc:        { File: src/moe.cpp, Line: 30, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/moe.cpp, Line: 125, Column: 25 }
+Function:        _Z9graph_moePKfPA128_S_S0_PA5_A32_S1_PA5_A32_S_PA5_A16_S6_PA5_A16_S_PA5_A8_SC_PA5_A8_S_PA5_A1_SI_PA5_A1_S_PfSR_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'elu(float)'
+    DebugLoc:        { File: src/moe.cpp, Line: 5, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'graph_moe(float const*, float const (*) [128], float const*, float const (*) [5][32][128], float const (*) [5][32], float const (*) [5][16][32], float const (*) [5][16], float const (*) [5][8][16], float const (*) [5][8], float const (*) [5][1][8], float const (*) [5][1], float*, float*)'
+    DebugLoc:        { File: src/moe.cpp, Line: 30, Column: 0 }
+  - String:          ''''
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_67_3
+  - String:          '> at '
+  - LoopLoc:         'src/moe.cpp:67:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_75_4
+  - String:          '> at '
+  - LoopLoc:         'src/moe.cpp:75:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_80_5
+  - String:          '> at '
+  - LoopLoc:         'src/moe.cpp:80:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_157_15
+  - String:          '> at '
+  - LoopLoc:         'src/moe.cpp:157:24'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/moe.cpp, Line: 161, Column: 28 }
+Function:        _Z9graph_moePKfPA128_S_S0_PA5_A32_S1_PA5_A32_S_PA5_A16_S6_PA5_A16_S_PA5_A8_SC_PA5_A8_S_PA5_A1_SI_PA5_A1_S_PfSR_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_161_16
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/moe.cpp, Line: 30, Column: 0 }
+Function:        _Z9graph_moePKfPA128_S_S0_PA5_A32_S1_PA5_A32_S_PA5_A16_S6_PA5_A16_S_PA5_A8_SC_PA5_A8_S_PA5_A1_SI_PA5_A1_S_PfSR_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_161_16
+  - String:          ''' ('
+  - LoopLoc:         'src/moe.cpp:161:28'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          graph_moe
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...

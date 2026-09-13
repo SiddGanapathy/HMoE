@@ -1,0 +1,2600 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: src/moe.cpp, Line: 709, Column: 0 }
+Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rf
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'elu(float)'
+    DebugLoc:        { File: src/moe.cpp, Line: 544, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'generic_mlp_head(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float&)'
+    DebugLoc:        { File: src/moe.cpp, Line: 709, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: src/moe.cpp, Line: 906, Column: 0 }
+Function:        _ZL13expert_enginePKfPA5_f
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'generic_expert(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float*)'
+    DebugLoc:        { File: src/moe.cpp, Line: 840, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'expert_engine(float const*, float (*) [5])'
+    DebugLoc:        { File: src/moe.cpp, Line: 906, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 710, Column: 12 }
+Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rf
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          l1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 711, Column: 12 }
+Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rf
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          l2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 712, Column: 12 }
+Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rf
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          l3
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 1063, Column: 9 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          logits
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 1060, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          output
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 1060, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          gates
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_725_2
+  - String:          '> at '
+  - LoopLoc:         'src/moe.cpp:725:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_736_3
+  - String:          '> at '
+  - LoopLoc:         'src/moe.cpp:736:23'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_750_5
+  - String:          '> at '
+  - LoopLoc:         'src/moe.cpp:750:23'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_767_7
+  - String:          '> at '
+  - LoopLoc:         'src/moe.cpp:767:23'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_1079_2
+  - String:          '> at '
+  - LoopLoc:         'src/moe.cpp:1079:28'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_1092_3
+  - String:          '> at '
+  - LoopLoc:         'src/moe.cpp:1092:24'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_1099_4
+  - String:          '> at '
+  - LoopLoc:         'src/moe.cpp:1099:24'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_1104_5
+  - String:          '> at '
+  - LoopLoc:         'src/moe.cpp:1104:24'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_1118_6
+  - String:          '> at '
+  - LoopLoc:         'src/moe.cpp:1118:24'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/moe.cpp, Line: 1122, Column: 28 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_1122_7
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/moe.cpp, Line: 753, Column: 27 }
+Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rf
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_753_6
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/moe.cpp, Line: 739, Column: 27 }
+Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rf
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_739_4
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/moe.cpp, Line: 1060, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1122_7
+  - String:          ''' ('
+  - LoopLoc:         'src/moe.cpp:1122:28'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          output_moe
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/moe.cpp, Line: 709, Column: 0 }
+Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rf
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_753_6
+  - String:          ''' ('
+  - LoopLoc:         'src/moe.cpp:753:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          generic_mlp_head
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/moe.cpp, Line: 709, Column: 0 }
+Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rf
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_739_4
+  - String:          ''' ('
+  - LoopLoc:         'src/moe.cpp:739:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          generic_mlp_head
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 142, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL10e0_bram_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:142:0'
+  - String:          ' '
+  - VarName:         e0_bram_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 142, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e0_bram_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 148, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL10e0_bram_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:148:0'
+  - String:          ' '
+  - VarName:         e0_bram_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 148, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e0_bram_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 42, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL10e0_perf_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:42:0'
+  - String:          ' '
+  - VarName:         e0_perf_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 42, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e0_perf_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 48, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL10e0_perf_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:48:0'
+  - String:          ' '
+  - VarName:         e0_perf_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 48, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e0_perf_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 268, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL10e1_bram_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:268:0'
+  - String:          ' '
+  - VarName:         e1_bram_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 268, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e1_bram_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 274, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL10e1_bram_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:274:0'
+  - String:          ' '
+  - VarName:         e1_bram_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 274, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e1_bram_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 168, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL10e1_perf_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:168:0'
+  - String:          ' '
+  - VarName:         e1_perf_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 168, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e1_perf_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 174, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL10e1_perf_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:174:0'
+  - String:          ' '
+  - VarName:         e1_perf_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 174, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e1_perf_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 394, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL10e2_bram_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:394:0'
+  - String:          ' '
+  - VarName:         e2_bram_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 394, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e2_bram_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 400, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL10e2_bram_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:400:0'
+  - String:          ' '
+  - VarName:         e2_bram_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 400, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e2_bram_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 294, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL10e2_perf_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:294:0'
+  - String:          ' '
+  - VarName:         e2_perf_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 294, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e2_perf_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 300, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL10e2_perf_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:300:0'
+  - String:          ' '
+  - VarName:         e2_perf_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 300, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e2_perf_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 520, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL10e3_bram_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:520:0'
+  - String:          ' '
+  - VarName:         e3_bram_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 520, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e3_bram_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 526, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL10e3_bram_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:526:0'
+  - String:          ' '
+  - VarName:         e3_bram_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 526, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e3_bram_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 420, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL10e3_perf_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:420:0'
+  - String:          ' '
+  - VarName:         e3_perf_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 420, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e3_perf_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 426, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL10e3_perf_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:426:0'
+  - String:          ' '
+  - VarName:         e3_perf_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 426, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e3_perf_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 92, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL8e0_ff_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:92:0'
+  - String:          ' '
+  - VarName:         e0_ff_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 92, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e0_ff_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 98, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL8e0_ff_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:98:0'
+  - String:          ' '
+  - VarName:         e0_ff_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 98, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e0_ff_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 218, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL8e1_ff_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:218:0'
+  - String:          ' '
+  - VarName:         e1_ff_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 218, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e1_ff_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 224, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL8e1_ff_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:224:0'
+  - String:          ' '
+  - VarName:         e1_ff_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 224, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e1_ff_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 344, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL8e2_ff_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:344:0'
+  - String:          ' '
+  - VarName:         e2_ff_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 344, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e2_ff_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 350, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL8e2_ff_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:350:0'
+  - String:          ' '
+  - VarName:         e2_ff_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 350, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e2_ff_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 470, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL8e3_ff_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:470:0'
+  - String:          ' '
+  - VarName:         e3_ff_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 470, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e3_ff_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 476, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL8e3_ff_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:476:0'
+  - String:          ' '
+  - VarName:         e3_ff_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 476, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e3_ff_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 117, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL9e0_dsp_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:117:0'
+  - String:          ' '
+  - VarName:         e0_dsp_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 117, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e0_dsp_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 123, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL9e0_dsp_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:123:0'
+  - String:          ' '
+  - VarName:         e0_dsp_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 123, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e0_dsp_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 67, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL9e0_lut_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:67:0'
+  - String:          ' '
+  - VarName:         e0_lut_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 67, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e0_lut_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 73, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL9e0_lut_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:73:0'
+  - String:          ' '
+  - VarName:         e0_lut_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 73, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e0_lut_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 243, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL9e1_dsp_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:243:0'
+  - String:          ' '
+  - VarName:         e1_dsp_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 243, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e1_dsp_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 249, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL9e1_dsp_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:249:0'
+  - String:          ' '
+  - VarName:         e1_dsp_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 249, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e1_dsp_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 193, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL9e1_lut_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:193:0'
+  - String:          ' '
+  - VarName:         e1_lut_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 193, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e1_lut_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 199, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL9e1_lut_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:199:0'
+  - String:          ' '
+  - VarName:         e1_lut_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 199, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e1_lut_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 369, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL9e2_dsp_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:369:0'
+  - String:          ' '
+  - VarName:         e2_dsp_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 369, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e2_dsp_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 375, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL9e2_dsp_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:375:0'
+  - String:          ' '
+  - VarName:         e2_dsp_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 375, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e2_dsp_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 319, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL9e2_lut_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:319:0'
+  - String:          ' '
+  - VarName:         e2_lut_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 319, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e2_lut_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 325, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL9e2_lut_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:325:0'
+  - String:          ' '
+  - VarName:         e2_lut_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 325, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e2_lut_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 495, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL9e3_dsp_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:495:0'
+  - String:          ' '
+  - VarName:         e3_dsp_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 495, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e3_dsp_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 501, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL9e3_dsp_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:501:0'
+  - String:          ' '
+  - VarName:         e3_dsp_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 501, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e3_dsp_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 445, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL9e3_lut_w1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:445:0'
+  - String:          ' '
+  - VarName:         e3_lut_w1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 445, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e3_lut_w1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 451, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL9e3_lut_w2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:451:0'
+  - String:          ' '
+  - VarName:         e3_lut_w2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 451, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            e3_lut_w2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 1065, Column: 12 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=expert_output'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  output_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:1065:12'
+  - String:          ' '
+  - VarName:         expert_output
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 1065, Column: 12 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            expert_output
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 451, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL9e3_lut_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 445, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL9e3_lut_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 501, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL9e3_dsp_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 495, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL9e3_dsp_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 325, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL9e2_lut_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 319, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL9e2_lut_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 375, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL9e2_dsp_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 369, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL9e2_dsp_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 199, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL9e1_lut_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 193, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL9e1_lut_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 249, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL9e1_dsp_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 243, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL9e1_dsp_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 73, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL9e0_lut_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 67, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL9e0_lut_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 123, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL9e0_dsp_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 117, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL9e0_dsp_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 476, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL8e3_ff_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 470, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL8e3_ff_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 350, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL8e2_ff_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 344, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL8e2_ff_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 224, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL8e1_ff_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 218, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL8e1_ff_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 98, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL8e0_ff_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 92, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL8e0_ff_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 426, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL10e3_perf_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 420, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL10e3_perf_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 526, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL10e3_bram_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 520, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL10e3_bram_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 300, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL10e2_perf_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 294, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL10e2_perf_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 400, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL10e2_bram_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 394, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL10e2_bram_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 174, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL10e1_perf_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 168, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL10e1_perf_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 274, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL10e1_bram_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 268, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL10e1_bram_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 48, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL10e0_perf_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 42, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL10e0_perf_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 148, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL10e0_bram_w2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 142, Column: 0 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL10e0_bram_w1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 1065, Column: 12 }
+Function:        _Z10output_moePKfPfS1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          expert_output
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

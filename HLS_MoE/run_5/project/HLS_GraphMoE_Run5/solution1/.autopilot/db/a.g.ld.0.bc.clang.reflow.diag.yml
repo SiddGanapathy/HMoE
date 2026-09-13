@@ -1,0 +1,180 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/moe.cpp, Line: 58, Column: 17 }
+Function:        _ZL15expert_engine_APKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'elu(float)'
+    DebugLoc:        { File: src/moe.cpp, Line: 9, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'expert_engine_A(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)'
+    DebugLoc:        { File: src/moe.cpp, Line: 40, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/moe.cpp, Line: 86, Column: 17 }
+Function:        _ZL15expert_engine_APKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'elu(float)'
+    DebugLoc:        { File: src/moe.cpp, Line: 9, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'expert_engine_A(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)'
+    DebugLoc:        { File: src/moe.cpp, Line: 40, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/moe.cpp, Line: 72, Column: 17 }
+Function:        _ZL15expert_engine_APKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'elu(float)'
+    DebugLoc:        { File: src/moe.cpp, Line: 9, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'expert_engine_A(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)'
+    DebugLoc:        { File: src/moe.cpp, Line: 40, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/moe.cpp, Line: 150, Column: 17 }
+Function:        _ZL15expert_engine_BPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'elu(float)'
+    DebugLoc:        { File: src/moe.cpp, Line: 9, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'expert_engine_B(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)'
+    DebugLoc:        { File: src/moe.cpp, Line: 132, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/moe.cpp, Line: 178, Column: 17 }
+Function:        _ZL15expert_engine_BPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'elu(float)'
+    DebugLoc:        { File: src/moe.cpp, Line: 9, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'expert_engine_B(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)'
+    DebugLoc:        { File: src/moe.cpp, Line: 132, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: src/moe.cpp, Line: 164, Column: 17 }
+Function:        _ZL15expert_engine_BPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'elu(float)'
+    DebugLoc:        { File: src/moe.cpp, Line: 9, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'expert_engine_B(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*)'
+    DebugLoc:        { File: src/moe.cpp, Line: 132, Column: 0 }
+  - String:          ''''
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_268_3
+  - String:          '> at '
+  - LoopLoc:         'src/moe.cpp:268:23'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_277_4
+  - String:          '> at '
+  - LoopLoc:         'src/moe.cpp:277:23'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_283_5
+  - String:          '> at '
+  - LoopLoc:         'src/moe.cpp:283:23'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_396_8
+  - String:          '> at '
+  - LoopLoc:         'src/moe.cpp:396:23'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: src/moe.cpp, Line: 306, Column: 11 }
+Function:        _Z9graph_moePKfPA128_S_S0_PA5_A32_S1_PA5_A32_S_PA5_A16_S6_PA5_A16_S_PA5_A8_SC_PA5_A8_S_PA5_A1_SI_PA5_A1_S_PfSR_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=expert_output'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  graph_moe
+  - String:          ' '
+  - varLoc:          'src/moe.cpp:306:11'
+  - String:          ' '
+  - VarName:         expert_output
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 306, Column: 11 }
+Function:        _Z9graph_moePKfPA128_S_S0_PA5_A32_S1_PA5_A32_S_PA5_A16_S6_PA5_A16_S_PA5_A8_SC_PA5_A8_S_PA5_A1_SI_PA5_A1_S_PfSR_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            expert_output
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/moe.cpp, Line: 306, Column: 11 }
+Function:        _Z9graph_moePKfPA128_S_S0_PA5_A32_S1_PA5_A32_S_PA5_A16_S6_PA5_A16_S_PA5_A8_SC_PA5_A8_S_PA5_A1_SI_PA5_A1_S_PfSR_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          expert_output
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

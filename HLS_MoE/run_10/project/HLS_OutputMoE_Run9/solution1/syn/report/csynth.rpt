@@ -1,0 +1,1302 @@
+
+
+================================================================
+== Synthesis Summary Report of 'output_moe'
+================================================================
++ General Information: 
+    * Date:           Sun Sep 13 13:40:39 2026
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        HLS_OutputMoE_Run9
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu13p_CIV-figd2104-3-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----------+-------------+-------------+-----+
+    |                      Modules                     | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |          |          |             |             |     |
+    |                      & Loops                     | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |    DSP   |      FF     |     LUT     | URAM|
+    +--------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----------+-------------+-------------+-----+
+    |+ output_moe                                      |     -|  0.16|    94675|  9.468e+05|         -|    94676|     -|        no|  181 (3%)|  196 (1%)|   52013 (1%)|   38935 (2%)|    -|
+    | + output_moe_Pipeline_VITIS_LOOP_1092_3          |     -|  0.16|        6|     60.000|         -|        6|     -|        no|         -|         -|    105 (~0%)|    222 (~0%)|    -|
+    |  o VITIS_LOOP_1092_3                             |     -|  7.30|        4|     40.000|         3|        1|     3|       yes|         -|         -|            -|            -|    -|
+    | + expert_engine                                  |     -|  0.27|    94079|  9.408e+05|         -|    94079|     -|        no|  180 (3%)|  169 (1%)|   49165 (1%)|   35412 (2%)|    -|
+    |  + generic_mlp_head                              |     -|  0.27|     4702|  4.702e+04|         -|     4702|     -|        no|         -|  169 (1%)|  16484 (~0%)|  13600 (~0%)|    -|
+    |   + generic_mlp_head_Pipeline_VITIS_LOOP_736_3   |     -|  0.27|       89|    890.000|         -|       89|     -|        no|         -|  80 (~0%)|   8016 (~0%)|   5312 (~0%)|    -|
+    |    o VITIS_LOOP_736_3                            |     -|  7.30|       87|    870.000|        73|        1|    16|       yes|         -|         -|            -|            -|    -|
+    |   + generic_mlp_head_Pipeline_VITIS_LOOP_750_5   |     -|  0.27|       49|    490.000|         -|       49|     -|        no|         -|         -|   1789 (~0%)|    335 (~0%)|    -|
+    |    o VITIS_LOOP_750_5                            |     -|  7.30|       47|    470.000|        41|        1|     8|       yes|         -|         -|            -|            -|    -|
+    |   + generic_mlp_head_Pipeline_VITIS_LOOP_767_7   |     -|  0.89|       13|    130.000|         -|       13|     -|        no|         -|         -|    174 (~0%)|    155 (~0%)|    -|
+    |    o VITIS_LOOP_767_7                            |     -|  7.30|       11|    110.000|         5|        1|     8|       yes|         -|         -|            -|            -|    -|
+    |   o VITIS_LOOP_722_1                             |     -|  7.30|     4544|  4.544e+04|       142|        -|    32|        no|         -|         -|            -|            -|    -|
+    |    + generic_mlp_head_Pipeline_VITIS_LOOP_725_2  |     -|  0.89|      133|  1.330e+03|         -|      133|     -|        no|         -|         -|    146 (~0%)|    138 (~0%)|    -|
+    |     o VITIS_LOOP_725_2                           |     -|  7.30|      131|  1.310e+03|         5|        1|   128|       yes|         -|         -|            -|            -|    -|
+    | + output_moe_Pipeline_VITIS_LOOP_1099_4          |     -|  0.47|       12|    120.000|         -|       12|     -|        no|         -|   7 (~0%)|    385 (~0%)|    899 (~0%)|    -|
+    |  o VITIS_LOOP_1099_4                             |     -|  7.30|       10|    100.000|         8|        1|     4|       yes|         -|         -|            -|            -|    -|
+    | + output_moe_Pipeline_VITIS_LOOP_1108_5          |     -|  2.11|       10|    100.000|         -|       10|     -|        no|         -|         -|    267 (~0%)|    175 (~0%)|    -|
+    |  o VITIS_LOOP_1108_5                             |    II|  7.30|        8|     80.000|         2|        2|     4|       yes|         -|         -|            -|            -|    -|
+    | + output_moe_Pipeline_VITIS_LOOP_1122_6          |     -|  1.25|       16|    160.000|         -|       16|     -|        no|         -|  13 (~0%)|   1120 (~0%)|    822 (~0%)|    -|
+    |  o VITIS_LOOP_1122_6                             |     -|  7.30|       14|    140.000|        11|        1|     5|       yes|         -|         -|            -|            -|    -|
+    | o VITIS_LOOP_1075_1                              |     -|  7.30|      544|  5.440e+03|       136|        -|     4|        no|         -|         -|            -|            -|    -|
+    |  + output_moe_Pipeline_VITIS_LOOP_1079_2         |     -|  0.89|      133|  1.330e+03|         -|      133|     -|        no|   1 (~0%)|         -|    146 (~0%)|    135 (~0%)|    -|
+    |   o VITIS_LOOP_1079_2                            |     -|  7.30|      131|  1.310e+03|         5|        1|   128|       yes|         -|         -|            -|            -|    -|
+    +--------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----------+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++------------------+-----------+----------+
+| Port             | Direction | Bitwidth |
++------------------+-----------+----------+
+| input_r_address0 | out       | 7        |
+| input_r_q0       | in        | 32       |
++------------------+-----------+----------+
+
+* Other Ports
++-----------+---------+-----------+----------+
+| Port      | Mode    | Direction | Bitwidth |
++-----------+---------+-----------+----------+
+| gates_0_i | ap_ovld | in        | 32       |
+| gates_0_o | ap_ovld | out       | 32       |
+| gates_1_i | ap_ovld | in        | 32       |
+| gates_1_o | ap_ovld | out       | 32       |
+| gates_2_i | ap_ovld | in        | 32       |
+| gates_2_o | ap_ovld | out       | 32       |
+| gates_3_i | ap_ovld | in        | 32       |
+| gates_3_o | ap_ovld | out       | 32       |
+| output_0  | ap_vld  | out       | 32       |
+| output_1  | ap_vld  | out       | 32       |
+| output_2  | ap_vld  | out       | 32       |
+| output_3  | ap_vld  | out       | 32       |
+| output_4  | ap_vld  | out       | 32       |
++-----------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------+
+| Argument | Direction | Datatype      |
++----------+-----------+---------------+
+| input    | in        | float const * |
+| output   | out       | float*        |
+| gates    | inout     | float*        |
++----------+-----------+---------------+
+
+* SW-to-HW Mapping
++----------+------------------+---------+----------+
+| Argument | HW Interface     | HW Type | HW Usage |
++----------+------------------+---------+----------+
+| input    | input_r_address0 | port    | offset   |
+| input    | input_r_ce0      | port    |          |
+| input    | input_r_q0       | port    |          |
+| output   | output_0         | port    |          |
+| output   | output_0_ap_vld  | port    |          |
+| output   | output_1         | port    |          |
+| output   | output_1_ap_vld  | port    |          |
+| output   | output_2         | port    |          |
+| output   | output_2_ap_vld  | port    |          |
+| output   | output_3         | port    |          |
+| output   | output_3_ap_vld  | port    |          |
+| output   | output_4         | port    |          |
+| output   | output_4_ap_vld  | port    |          |
+| gates    | gates_0_i        | port    |          |
+| gates    | gates_0_o        | port    |          |
+| gates    | gates_0_o_ap_vld | port    |          |
+| gates    | gates_1_i        | port    |          |
+| gates    | gates_1_o        | port    |          |
+| gates    | gates_1_o_ap_vld | port    |          |
+| gates    | gates_2_i        | port    |          |
+| gates    | gates_2_o        | port    |          |
+| gates    | gates_2_o_ap_vld | port    |          |
+| gates    | gates_3_i        | port    |          |
+| gates    | gates_3_o        | port    |          |
+| gates    | gates_3_o_ap_vld | port    |          |
++----------+------------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------------+-----+--------+-------------+------+---------+---------+
+| Name                                            | DSP | Pragma | Variable    | Op   | Impl    | Latency |
++-------------------------------------------------+-----+--------+-------------+------+---------+---------+
+| + output_moe                                    | 196 |        |             |      |         |         |
+|   add_ln1075_fu_4506_p2                         |     |        | add_ln1075  | add  | fabric  | 0       |
+|   fdiv_32ns_32ns_32_6_no_dsp_1_U1466            |     |        | inv_exp_sum | fdiv | fabric  | 5       |
+|  + output_moe_Pipeline_VITIS_LOOP_1079_2        | 0   |        |             |      |         |         |
+|    add_ln1079_fu_127_p2                         |     |        | add_ln1079  | add  | fabric  | 0       |
+|    add_ln1080_fu_142_p2                         |     |        | add_ln1080  | add  | fabric  | 0       |
+|  + output_moe_Pipeline_VITIS_LOOP_1092_3        | 0   |        |             |      |         |         |
+|    add_ln1092_fu_142_p2                         |     |        | add_ln1092  | add  | fabric  | 0       |
+|  + expert_engine                                | 169 |        |             |      |         |         |
+|   + generic_mlp_head                            | 169 |        |             |      |         |         |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U301         |     |        | add_ln722   | add  | fabric  | 0       |
+|     fexp_32ns_32ns_32_4_full_dsp_1_U292         | 7   |        | tmp_3       | fexp | fulldsp | 3       |
+|     fmul_32ns_32ns_32_2_max_dsp_1_U324          | 2   |        | sub_i       | fadd | fulldsp | 1       |
+|    + generic_mlp_head_Pipeline_VITIS_LOOP_736_3 | 80  |        |             |      |         |         |
+|      add_ln736_fu_1357_p2                       |     |        | add_ln736   | add  | fabric  | 0       |
+|      fmul_32ns_32ns_32_2_max_dsp_1_U100         | 3   |        | mul35_15    | fmul | maxdsp  | 1       |
+|      fmul_32ns_32ns_32_2_max_dsp_1_U101         | 3   |        | mul35_16    | fmul | maxdsp  | 1       |
+|      fadd_32ns_32ns_32_2_full_dsp_1_U68         | 2   |        | acc_57      | fadd | fulldsp | 1       |
+|      fmul_32ns_32ns_32_2_max_dsp_1_U102         | 3   |        | mul35_17    | fmul | maxdsp  | 1       |
+|      fadd_32ns_32ns_32_2_full_dsp_1_U69         | 2   |        | acc_58      | fadd | fulldsp | 1       |
+|      fmul_32ns_32ns_32_2_max_dsp_1_U103         | 3   |        | mul35_18    | fmul | maxdsp  | 1       |
+|      fadd_32ns_32ns_32_2_full_dsp_1_U70         | 2   |        | acc_59      | fadd | fulldsp | 1       |
+|      fmul_32ns_32ns_32_2_max_dsp_1_U104         | 3   |        | mul35_19    | fmul | maxdsp  | 1       |
+|      fadd_32ns_32ns_32_2_full_dsp_1_U71         | 2   |        | acc_60      | fadd | fulldsp | 1       |
+|      fmul_32ns_32ns_32_2_max_dsp_1_U105         | 3   |        | mul35_20    | fmul | maxdsp  | 1       |
+|      fadd_32ns_32ns_32_2_full_dsp_1_U72         | 2   |        | acc_61      | fadd | fulldsp | 1       |
+|      fmul_32ns_32ns_32_2_max_dsp_1_U106         | 3   |        | mul35_21    | fmul | maxdsp  | 1       |
+|      fadd_32ns_32ns_32_2_full_dsp_1_U73         | 2   |        | acc_62      | fadd | fulldsp | 1       |
+|      fmul_32ns_32ns_32_2_max_dsp_1_U107         | 3   |        | mul35_22    | fmul | maxdsp  | 1       |
+|      fadd_32ns_32ns_32_2_full_dsp_1_U74         | 2   |        | acc_63      | fadd | fulldsp | 1       |
+|      fmul_32ns_32ns_32_2_max_dsp_1_U108         | 3   |        | mul35_23    | fmul | maxdsp  | 1       |
+|      fadd_32ns_32ns_32_2_full_dsp_1_U75         | 2   |        | acc_64      | fadd | fulldsp | 1       |
+|      fmul_32ns_32ns_32_2_max_dsp_1_U109         | 3   |        | mul35_24    | fmul | maxdsp  | 1       |
+|      fadd_32ns_32ns_32_2_full_dsp_1_U76         | 2   |        | acc_65      | fadd | fulldsp | 1       |
+|      fmul_32ns_32ns_32_2_max_dsp_1_U110         | 3   |        | mul35_25    | fmul | maxdsp  | 1       |
+|      fadd_32ns_32ns_32_2_full_dsp_1_U77         | 2   |        | acc_66      | fadd | fulldsp | 1       |
+|      fmul_32ns_32ns_32_2_max_dsp_1_U111         | 3   |        | mul35_26    | fmul | maxdsp  | 1       |
+|      fadd_32ns_32ns_32_2_full_dsp_1_U78         | 2   |        | acc_67      | fadd | fulldsp | 1       |
+|      fmul_32ns_32ns_32_2_max_dsp_1_U112         | 3   |        | mul35_27    | fmul | maxdsp  | 1       |
+|      fadd_32ns_32ns_32_2_full_dsp_1_U79         | 2   |        | acc_68      | fadd | fulldsp | 1       |
+|      fmul_32ns_32ns_32_2_max_dsp_1_U113         | 3   |        | mul35_28    | fmul | maxdsp  | 1       |
+|      fadd_32ns_32ns_32_2_full_dsp_1_U80         | 2   |        | acc_69      | fadd | fulldsp | 1       |
+|      fmul_32ns_32ns_32_2_max_dsp_1_U114         | 3   |        | mul35_29    | fmul | maxdsp  | 1       |
+|      fadd_32ns_32ns_32_2_full_dsp_1_U81         | 2   |        | acc_70      | fadd | fulldsp | 1       |
+|      fmul_32ns_32ns_32_2_max_dsp_1_U115         | 3   |        | mul35_30    | fmul | maxdsp  | 1       |
+|      fadd_32ns_32ns_32_2_full_dsp_1_U82         | 2   |        | acc_71      | fadd | fulldsp | 1       |
+|      fadd_32ns_32ns_32_2_full_dsp_1_U83         | 2   |        | sub_i1      | fadd | fulldsp | 1       |
+|    + generic_mlp_head_Pipeline_VITIS_LOOP_725_2 | 0   |        |             |      |         |         |
+|      add_ln725_fu_127_p2                        |     |        | add_ln725   | add  | fabric  | 0       |
+|      add_ln726_fu_142_p2                        |     |        | add_ln726   | add  | fabric  | 0       |
+|    + generic_mlp_head_Pipeline_VITIS_LOOP_750_5 | 0   |        |             |      |         |         |
+|      add_ln750_fu_725_p2                        |     |        | add_ln750   | add  | fabric  | 0       |
+|    + generic_mlp_head_Pipeline_VITIS_LOOP_767_7 | 0   |        |             |      |         |         |
+|      add_ln767_fu_182_p2                        |     |        | add_ln767   | add  | fabric  | 0       |
+|  + output_moe_Pipeline_VITIS_LOOP_1099_4        | 7   |        |             |      |         |         |
+|    add_ln1099_fu_172_p2                         |     |        | add_ln1099  | add  | fabric  | 0       |
+|    fexp_32ns_32ns_32_4_full_dsp_1_U19           | 7   |        | tmp_1       | fexp | fulldsp | 3       |
+|  + output_moe_Pipeline_VITIS_LOOP_1108_5        | 0   |        |             |      |         |         |
+|    add_ln1108_fu_243_p2                         |     |        | add_ln1108  | add  | fabric  | 0       |
+|  + output_moe_Pipeline_VITIS_LOOP_1122_6        | 13  |        |             |      |         |         |
+|    add_ln1122_fu_228_p2                         |     |        | add_ln1122  | add  | fabric  | 0       |
+|    fmul_32ns_32ns_32_2_max_dsp_1_U1450          | 3   |        | mul74_1     | fmul | maxdsp  | 1       |
+|    fmul_32ns_32ns_32_2_max_dsp_1_U1451          | 3   |        | mul74_2     | fmul | maxdsp  | 1       |
+|    fadd_32ns_32ns_32_2_full_dsp_1_U1447         | 2   |        | acc_2       | fadd | fulldsp | 1       |
+|    fmul_32ns_32ns_32_2_max_dsp_1_U1452          | 3   |        | mul74_3     | fmul | maxdsp  | 1       |
+|    fadd_32ns_32ns_32_2_full_dsp_1_U1448         | 2   |        | acc_3       | fadd | fulldsp | 1       |
++-------------------------------------------------+-----+--------+-------------+------+---------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++------------------------------------------+--------------+------+------+------+--------+---------------------+------+---------+------------------+
+| Name                                     | Usage        | Type | BRAM | URAM | Pragma | Variable            | Impl | Latency | Bitwidth, Depth, |
+|                                          |              |      |      |      |        |                     |      |         | Banks            |
++------------------------------------------+--------------+------+------+------+--------+---------------------+------+---------+------------------+
+| + output_moe                             |              |      | 181  | 0    |        |                     |      |         |                  |
+|   expert_output_U                        | ram_1p array |      |      |      |        | expert_output       | auto | 1       | 32, 5, 1         |
+|   expert_output_1_U                      | ram_1p array |      |      |      |        | expert_output_1     | auto | 1       | 32, 5, 1         |
+|   expert_output_2_U                      | ram_1p array |      |      |      |        | expert_output_2     | auto | 1       | 32, 5, 1         |
+|   expert_output_3_U                      | ram_1p array |      |      |      |        | expert_output_3     | auto | 1       | 32, 5, 1         |
+|  + output_moe_Pipeline_VITIS_LOOP_1079_2 |              |      | 1    | 0    |        |                     |      |         |                  |
+|    gate_weight_U                         | rom_1p       |      | 1    |      |        | gate_weight         | auto | 1       | 32, 512, 1       |
+|  + expert_engine                         |              |      | 180  | 0    |        |                     |      |         |                  |
+|    e0_perf_w0_U                          | rom_1p       |      | 8    |      |        | e0_perf_w0          | auto | 1       | 32, 4096, 1      |
+|    e0_perf_b0_U                          | rom_1p       |      | 1    |      |        | e0_perf_b0          | auto | 1       | 32, 32, 1        |
+|    p_ZL10e0_perf_w1_0_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_0  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_1_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_1  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_2_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_2  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_3_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_3  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_4_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_4  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_5_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_5  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_6_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_6  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_7_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_7  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_8_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_8  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_9_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_9  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_10_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_10 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_11_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_11 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_12_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_12 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_13_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_13 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_14_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_14 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_15_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_15 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_16_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_16 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_17_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_17 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_18_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_18 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_19_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_19 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_20_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_20 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_21_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_21 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_22_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_22 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_23_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_23 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_24_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_24 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_25_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_25 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_26_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_26 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_27_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_27 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_28_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_28 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_29_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_29 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_30_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_30 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w1_31_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w1_31 | auto | 1       | 32, 16, 1        |
+|    e0_perf_b1_U                          | rom_1p       |      |      |      |        | e0_perf_b1          | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_perf_w2_0_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w2_0  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_perf_w2_1_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w2_1  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_perf_w2_2_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w2_2  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_perf_w2_3_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w2_3  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_perf_w2_4_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w2_4  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_perf_w2_5_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w2_5  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_perf_w2_6_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w2_6  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_perf_w2_7_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w2_7  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_perf_w2_8_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w2_8  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_perf_w2_9_U                  | rom_1p       |      |      |      |        | p_ZL10e0_perf_w2_9  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_perf_w2_10_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w2_10 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_perf_w2_11_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w2_11 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_perf_w2_12_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w2_12 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_perf_w2_13_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w2_13 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_perf_w2_14_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w2_14 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_perf_w2_15_U                 | rom_1p       |      |      |      |        | p_ZL10e0_perf_w2_15 | auto | 1       | 32, 8, 1         |
+|    e0_perf_b2_U                          | rom_1p       |      |      |      |        | e0_perf_b2          | auto | 1       | 32, 8, 1         |
+|    e0_perf_w3_0_U                        | rom_1p       |      |      |      |        | e0_perf_w3_0        | auto | 1       | 32, 8, 1         |
+|    e0_lut_w0_U                           | rom_1p       |      | 8    |      |        | e0_lut_w0           | auto | 1       | 32, 4096, 1      |
+|    e0_lut_b0_U                           | rom_1p       |      | 1    |      |        | e0_lut_b0           | auto | 1       | 32, 32, 1        |
+|    p_ZL9e0_lut_w1_0_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_0    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_1_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_1    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_2_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_2    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_3_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_3    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_4_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_4    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_5_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_5    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_6_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_6    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_7_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_7    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_8_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_8    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_9_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_9    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_10_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_10   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_11_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_11   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_12_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_12   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_13_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_13   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_14_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_14   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_15_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_15   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_16_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_16   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_17_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_17   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_18_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_18   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_19_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_19   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_20_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_20   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_21_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_21   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_22_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_22   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_23_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_23   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_24_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_24   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_25_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_25   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_26_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_26   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_27_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_27   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_28_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_28   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_29_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_29   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_30_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_30   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w1_31_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w1_31   | auto | 1       | 32, 16, 1        |
+|    e0_lut_b1_U                           | rom_1p       |      |      |      |        | e0_lut_b1           | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_lut_w2_0_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w2_0    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_lut_w2_1_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w2_1    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_lut_w2_2_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w2_2    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_lut_w2_3_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w2_3    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_lut_w2_4_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w2_4    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_lut_w2_5_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w2_5    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_lut_w2_6_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w2_6    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_lut_w2_7_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w2_7    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_lut_w2_8_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w2_8    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_lut_w2_9_U                    | rom_1p       |      |      |      |        | p_ZL9e0_lut_w2_9    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_lut_w2_10_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w2_10   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_lut_w2_11_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w2_11   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_lut_w2_12_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w2_12   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_lut_w2_13_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w2_13   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_lut_w2_14_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w2_14   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_lut_w2_15_U                   | rom_1p       |      |      |      |        | p_ZL9e0_lut_w2_15   | auto | 1       | 32, 8, 1         |
+|    e0_lut_b2_U                           | rom_1p       |      |      |      |        | e0_lut_b2           | auto | 1       | 32, 8, 1         |
+|    e0_lut_w3_0_U                         | rom_1p       |      |      |      |        | e0_lut_w3_0         | auto | 1       | 32, 8, 1         |
+|    e0_ff_w0_U                            | rom_1p       |      | 8    |      |        | e0_ff_w0            | auto | 1       | 32, 4096, 1      |
+|    e0_ff_b0_U                            | rom_1p       |      | 1    |      |        | e0_ff_b0            | auto | 1       | 32, 32, 1        |
+|    p_ZL8e0_ff_w1_0_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_0     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_1_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_1     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_2_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_2     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_3_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_3     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_4_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_4     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_5_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_5     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_6_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_6     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_7_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_7     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_8_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_8     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_9_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_9     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_10_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_10    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_11_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_11    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_12_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_12    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_13_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_13    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_14_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_14    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_15_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_15    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_16_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_16    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_17_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_17    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_18_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_18    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_19_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_19    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_20_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_20    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_21_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_21    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_22_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_22    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_23_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_23    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_24_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_24    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_25_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_25    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_26_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_26    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_27_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_27    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_28_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_28    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_29_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_29    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_30_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_30    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w1_31_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w1_31    | auto | 1       | 32, 16, 1        |
+|    e0_ff_b1_U                            | rom_1p       |      |      |      |        | e0_ff_b1            | auto | 1       | 32, 16, 1        |
+|    p_ZL8e0_ff_w2_0_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w2_0     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e0_ff_w2_1_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w2_1     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e0_ff_w2_2_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w2_2     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e0_ff_w2_3_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w2_3     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e0_ff_w2_4_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w2_4     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e0_ff_w2_5_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w2_5     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e0_ff_w2_6_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w2_6     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e0_ff_w2_7_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w2_7     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e0_ff_w2_8_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w2_8     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e0_ff_w2_9_U                     | rom_1p       |      |      |      |        | p_ZL8e0_ff_w2_9     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e0_ff_w2_10_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w2_10    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e0_ff_w2_11_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w2_11    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e0_ff_w2_12_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w2_12    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e0_ff_w2_13_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w2_13    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e0_ff_w2_14_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w2_14    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e0_ff_w2_15_U                    | rom_1p       |      |      |      |        | p_ZL8e0_ff_w2_15    | auto | 1       | 32, 8, 1         |
+|    e0_ff_b2_U                            | rom_1p       |      |      |      |        | e0_ff_b2            | auto | 1       | 32, 8, 1         |
+|    e0_ff_w3_0_U                          | rom_1p       |      |      |      |        | e0_ff_w3_0          | auto | 1       | 32, 8, 1         |
+|    e0_dsp_w0_U                           | rom_1p       |      | 8    |      |        | e0_dsp_w0           | auto | 1       | 32, 4096, 1      |
+|    e0_dsp_b0_U                           | rom_1p       |      | 1    |      |        | e0_dsp_b0           | auto | 1       | 32, 32, 1        |
+|    p_ZL9e0_dsp_w1_0_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_0    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_1_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_1    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_2_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_2    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_3_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_3    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_4_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_4    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_5_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_5    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_6_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_6    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_7_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_7    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_8_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_8    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_9_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_9    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_10_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_10   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_11_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_11   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_12_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_12   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_13_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_13   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_14_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_14   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_15_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_15   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_16_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_16   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_17_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_17   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_18_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_18   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_19_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_19   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_20_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_20   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_21_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_21   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_22_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_22   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_23_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_23   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_24_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_24   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_25_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_25   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_26_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_26   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_27_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_27   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_28_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_28   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_29_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_29   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_30_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_30   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w1_31_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w1_31   | auto | 1       | 32, 16, 1        |
+|    e0_dsp_b1_U                           | rom_1p       |      |      |      |        | e0_dsp_b1           | auto | 1       | 32, 16, 1        |
+|    p_ZL9e0_dsp_w2_0_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w2_0    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_dsp_w2_1_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w2_1    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_dsp_w2_2_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w2_2    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_dsp_w2_3_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w2_3    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_dsp_w2_4_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w2_4    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_dsp_w2_5_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w2_5    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_dsp_w2_6_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w2_6    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_dsp_w2_7_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w2_7    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_dsp_w2_8_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w2_8    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_dsp_w2_9_U                    | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w2_9    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_dsp_w2_10_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w2_10   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_dsp_w2_11_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w2_11   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_dsp_w2_12_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w2_12   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_dsp_w2_13_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w2_13   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_dsp_w2_14_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w2_14   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e0_dsp_w2_15_U                   | rom_1p       |      |      |      |        | p_ZL9e0_dsp_w2_15   | auto | 1       | 32, 8, 1         |
+|    e0_dsp_b2_U                           | rom_1p       |      |      |      |        | e0_dsp_b2           | auto | 1       | 32, 8, 1         |
+|    e0_dsp_w3_0_U                         | rom_1p       |      |      |      |        | e0_dsp_w3_0         | auto | 1       | 32, 8, 1         |
+|    e0_bram_w0_U                          | rom_1p       |      | 8    |      |        | e0_bram_w0          | auto | 1       | 32, 4096, 1      |
+|    e0_bram_b0_U                          | rom_1p       |      | 1    |      |        | e0_bram_b0          | auto | 1       | 32, 32, 1        |
+|    p_ZL10e0_bram_w1_0_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_0  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_1_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_1  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_2_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_2  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_3_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_3  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_4_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_4  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_5_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_5  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_6_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_6  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_7_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_7  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_8_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_8  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_9_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_9  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_10_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_10 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_11_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_11 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_12_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_12 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_13_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_13 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_14_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_14 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_15_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_15 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_16_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_16 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_17_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_17 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_18_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_18 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_19_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_19 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_20_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_20 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_21_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_21 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_22_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_22 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_23_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_23 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_24_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_24 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_25_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_25 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_26_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_26 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_27_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_27 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_28_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_28 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_29_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_29 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_30_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_30 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w1_31_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w1_31 | auto | 1       | 32, 16, 1        |
+|    e0_bram_b1_U                          | rom_1p       |      |      |      |        | e0_bram_b1          | auto | 1       | 32, 16, 1        |
+|    p_ZL10e0_bram_w2_0_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w2_0  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_bram_w2_1_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w2_1  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_bram_w2_2_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w2_2  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_bram_w2_3_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w2_3  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_bram_w2_4_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w2_4  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_bram_w2_5_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w2_5  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_bram_w2_6_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w2_6  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_bram_w2_7_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w2_7  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_bram_w2_8_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w2_8  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_bram_w2_9_U                  | rom_1p       |      |      |      |        | p_ZL10e0_bram_w2_9  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_bram_w2_10_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w2_10 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_bram_w2_11_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w2_11 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_bram_w2_12_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w2_12 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_bram_w2_13_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w2_13 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_bram_w2_14_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w2_14 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e0_bram_w2_15_U                 | rom_1p       |      |      |      |        | p_ZL10e0_bram_w2_15 | auto | 1       | 32, 8, 1         |
+|    e0_bram_b2_U                          | rom_1p       |      |      |      |        | e0_bram_b2          | auto | 1       | 32, 8, 1         |
+|    e0_bram_w3_0_U                        | rom_1p       |      |      |      |        | e0_bram_w3_0        | auto | 1       | 32, 8, 1         |
+|    e1_perf_w0_U                          | rom_1p       |      | 8    |      |        | e1_perf_w0          | auto | 1       | 32, 4096, 1      |
+|    e1_perf_b0_U                          | rom_1p       |      | 1    |      |        | e1_perf_b0          | auto | 1       | 32, 32, 1        |
+|    p_ZL10e1_perf_w1_0_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_0  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_1_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_1  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_2_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_2  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_3_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_3  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_4_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_4  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_5_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_5  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_6_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_6  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_7_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_7  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_8_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_8  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_9_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_9  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_10_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_10 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_11_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_11 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_12_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_12 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_13_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_13 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_14_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_14 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_15_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_15 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_16_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_16 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_17_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_17 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_18_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_18 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_19_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_19 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_20_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_20 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_21_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_21 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_22_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_22 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_23_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_23 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_24_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_24 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_25_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_25 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_26_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_26 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_27_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_27 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_28_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_28 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_29_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_29 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_30_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_30 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w1_31_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w1_31 | auto | 1       | 32, 16, 1        |
+|    e1_perf_b1_U                          | rom_1p       |      |      |      |        | e1_perf_b1          | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_perf_w2_0_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w2_0  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_perf_w2_1_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w2_1  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_perf_w2_2_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w2_2  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_perf_w2_3_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w2_3  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_perf_w2_4_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w2_4  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_perf_w2_5_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w2_5  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_perf_w2_6_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w2_6  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_perf_w2_7_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w2_7  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_perf_w2_8_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w2_8  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_perf_w2_9_U                  | rom_1p       |      |      |      |        | p_ZL10e1_perf_w2_9  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_perf_w2_10_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w2_10 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_perf_w2_11_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w2_11 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_perf_w2_12_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w2_12 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_perf_w2_13_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w2_13 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_perf_w2_14_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w2_14 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_perf_w2_15_U                 | rom_1p       |      |      |      |        | p_ZL10e1_perf_w2_15 | auto | 1       | 32, 8, 1         |
+|    e1_perf_b2_U                          | rom_1p       |      |      |      |        | e1_perf_b2          | auto | 1       | 32, 8, 1         |
+|    e1_perf_w3_0_U                        | rom_1p       |      |      |      |        | e1_perf_w3_0        | auto | 1       | 32, 8, 1         |
+|    e1_lut_w0_U                           | rom_1p       |      | 8    |      |        | e1_lut_w0           | auto | 1       | 32, 4096, 1      |
+|    e1_lut_b0_U                           | rom_1p       |      | 1    |      |        | e1_lut_b0           | auto | 1       | 32, 32, 1        |
+|    p_ZL9e1_lut_w1_0_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_0    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_1_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_1    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_2_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_2    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_3_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_3    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_4_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_4    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_5_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_5    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_6_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_6    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_7_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_7    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_8_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_8    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_9_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_9    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_10_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_10   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_11_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_11   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_12_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_12   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_13_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_13   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_14_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_14   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_15_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_15   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_16_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_16   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_17_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_17   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_18_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_18   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_19_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_19   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_20_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_20   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_21_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_21   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_22_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_22   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_23_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_23   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_24_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_24   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_25_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_25   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_26_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_26   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_27_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_27   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_28_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_28   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_29_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_29   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_30_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_30   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w1_31_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w1_31   | auto | 1       | 32, 16, 1        |
+|    e1_lut_b1_U                           | rom_1p       |      |      |      |        | e1_lut_b1           | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_lut_w2_0_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w2_0    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_lut_w2_1_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w2_1    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_lut_w2_2_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w2_2    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_lut_w2_3_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w2_3    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_lut_w2_4_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w2_4    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_lut_w2_5_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w2_5    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_lut_w2_6_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w2_6    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_lut_w2_7_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w2_7    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_lut_w2_8_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w2_8    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_lut_w2_9_U                    | rom_1p       |      |      |      |        | p_ZL9e1_lut_w2_9    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_lut_w2_10_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w2_10   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_lut_w2_11_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w2_11   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_lut_w2_12_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w2_12   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_lut_w2_13_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w2_13   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_lut_w2_14_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w2_14   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_lut_w2_15_U                   | rom_1p       |      |      |      |        | p_ZL9e1_lut_w2_15   | auto | 1       | 32, 8, 1         |
+|    e1_lut_b2_U                           | rom_1p       |      |      |      |        | e1_lut_b2           | auto | 1       | 32, 8, 1         |
+|    e1_lut_w3_0_U                         | rom_1p       |      |      |      |        | e1_lut_w3_0         | auto | 1       | 32, 8, 1         |
+|    e1_ff_w0_U                            | rom_1p       |      | 8    |      |        | e1_ff_w0            | auto | 1       | 32, 4096, 1      |
+|    e1_ff_b0_U                            | rom_1p       |      | 1    |      |        | e1_ff_b0            | auto | 1       | 32, 32, 1        |
+|    p_ZL8e1_ff_w1_0_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_0     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_1_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_1     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_2_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_2     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_3_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_3     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_4_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_4     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_5_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_5     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_6_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_6     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_7_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_7     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_8_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_8     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_9_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_9     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_10_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_10    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_11_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_11    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_12_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_12    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_13_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_13    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_14_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_14    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_15_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_15    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_16_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_16    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_17_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_17    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_18_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_18    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_19_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_19    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_20_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_20    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_21_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_21    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_22_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_22    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_23_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_23    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_24_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_24    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_25_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_25    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_26_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_26    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_27_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_27    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_28_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_28    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_29_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_29    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_30_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_30    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w1_31_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w1_31    | auto | 1       | 32, 16, 1        |
+|    e1_ff_b1_U                            | rom_1p       |      |      |      |        | e1_ff_b1            | auto | 1       | 32, 16, 1        |
+|    p_ZL8e1_ff_w2_0_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w2_0     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e1_ff_w2_1_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w2_1     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e1_ff_w2_2_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w2_2     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e1_ff_w2_3_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w2_3     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e1_ff_w2_4_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w2_4     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e1_ff_w2_5_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w2_5     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e1_ff_w2_6_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w2_6     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e1_ff_w2_7_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w2_7     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e1_ff_w2_8_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w2_8     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e1_ff_w2_9_U                     | rom_1p       |      |      |      |        | p_ZL8e1_ff_w2_9     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e1_ff_w2_10_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w2_10    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e1_ff_w2_11_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w2_11    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e1_ff_w2_12_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w2_12    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e1_ff_w2_13_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w2_13    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e1_ff_w2_14_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w2_14    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e1_ff_w2_15_U                    | rom_1p       |      |      |      |        | p_ZL8e1_ff_w2_15    | auto | 1       | 32, 8, 1         |
+|    e1_ff_b2_U                            | rom_1p       |      |      |      |        | e1_ff_b2            | auto | 1       | 32, 8, 1         |
+|    e1_ff_w3_0_U                          | rom_1p       |      |      |      |        | e1_ff_w3_0          | auto | 1       | 32, 8, 1         |
+|    e1_dsp_w0_U                           | rom_1p       |      | 8    |      |        | e1_dsp_w0           | auto | 1       | 32, 4096, 1      |
+|    e1_dsp_b0_U                           | rom_1p       |      | 1    |      |        | e1_dsp_b0           | auto | 1       | 32, 32, 1        |
+|    p_ZL9e1_dsp_w1_0_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_0    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_1_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_1    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_2_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_2    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_3_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_3    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_4_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_4    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_5_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_5    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_6_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_6    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_7_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_7    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_8_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_8    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_9_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_9    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_10_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_10   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_11_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_11   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_12_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_12   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_13_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_13   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_14_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_14   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_15_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_15   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_16_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_16   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_17_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_17   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_18_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_18   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_19_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_19   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_20_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_20   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_21_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_21   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_22_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_22   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_23_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_23   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_24_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_24   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_25_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_25   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_26_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_26   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_27_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_27   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_28_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_28   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_29_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_29   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_30_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_30   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w1_31_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w1_31   | auto | 1       | 32, 16, 1        |
+|    e1_dsp_b1_U                           | rom_1p       |      |      |      |        | e1_dsp_b1           | auto | 1       | 32, 16, 1        |
+|    p_ZL9e1_dsp_w2_0_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w2_0    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_dsp_w2_1_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w2_1    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_dsp_w2_2_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w2_2    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_dsp_w2_3_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w2_3    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_dsp_w2_4_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w2_4    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_dsp_w2_5_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w2_5    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_dsp_w2_6_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w2_6    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_dsp_w2_7_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w2_7    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_dsp_w2_8_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w2_8    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_dsp_w2_9_U                    | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w2_9    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_dsp_w2_10_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w2_10   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_dsp_w2_11_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w2_11   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_dsp_w2_12_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w2_12   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_dsp_w2_13_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w2_13   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_dsp_w2_14_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w2_14   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e1_dsp_w2_15_U                   | rom_1p       |      |      |      |        | p_ZL9e1_dsp_w2_15   | auto | 1       | 32, 8, 1         |
+|    e1_dsp_b2_U                           | rom_1p       |      |      |      |        | e1_dsp_b2           | auto | 1       | 32, 8, 1         |
+|    e1_dsp_w3_0_U                         | rom_1p       |      |      |      |        | e1_dsp_w3_0         | auto | 1       | 32, 8, 1         |
+|    e1_bram_w0_U                          | rom_1p       |      | 8    |      |        | e1_bram_w0          | auto | 1       | 32, 4096, 1      |
+|    e1_bram_b0_U                          | rom_1p       |      | 1    |      |        | e1_bram_b0          | auto | 1       | 32, 32, 1        |
+|    p_ZL10e1_bram_w1_0_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_0  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_1_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_1  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_2_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_2  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_3_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_3  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_4_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_4  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_5_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_5  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_6_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_6  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_7_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_7  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_8_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_8  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_9_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_9  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_10_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_10 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_11_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_11 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_12_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_12 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_13_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_13 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_14_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_14 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_15_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_15 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_16_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_16 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_17_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_17 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_18_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_18 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_19_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_19 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_20_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_20 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_21_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_21 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_22_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_22 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_23_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_23 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_24_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_24 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_25_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_25 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_26_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_26 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_27_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_27 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_28_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_28 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_29_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_29 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_30_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_30 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w1_31_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w1_31 | auto | 1       | 32, 16, 1        |
+|    e1_bram_b1_U                          | rom_1p       |      |      |      |        | e1_bram_b1          | auto | 1       | 32, 16, 1        |
+|    p_ZL10e1_bram_w2_0_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w2_0  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_bram_w2_1_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w2_1  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_bram_w2_2_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w2_2  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_bram_w2_3_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w2_3  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_bram_w2_4_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w2_4  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_bram_w2_5_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w2_5  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_bram_w2_6_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w2_6  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_bram_w2_7_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w2_7  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_bram_w2_8_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w2_8  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_bram_w2_9_U                  | rom_1p       |      |      |      |        | p_ZL10e1_bram_w2_9  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_bram_w2_10_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w2_10 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_bram_w2_11_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w2_11 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_bram_w2_12_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w2_12 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_bram_w2_13_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w2_13 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_bram_w2_14_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w2_14 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e1_bram_w2_15_U                 | rom_1p       |      |      |      |        | p_ZL10e1_bram_w2_15 | auto | 1       | 32, 8, 1         |
+|    e1_bram_b2_U                          | rom_1p       |      |      |      |        | e1_bram_b2          | auto | 1       | 32, 8, 1         |
+|    e1_bram_w3_0_U                        | rom_1p       |      |      |      |        | e1_bram_w3_0        | auto | 1       | 32, 8, 1         |
+|    e2_perf_w0_U                          | rom_1p       |      | 8    |      |        | e2_perf_w0          | auto | 1       | 32, 4096, 1      |
+|    e2_perf_b0_U                          | rom_1p       |      | 1    |      |        | e2_perf_b0          | auto | 1       | 32, 32, 1        |
+|    p_ZL10e2_perf_w1_0_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_0  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_1_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_1  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_2_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_2  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_3_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_3  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_4_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_4  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_5_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_5  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_6_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_6  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_7_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_7  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_8_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_8  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_9_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_9  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_10_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_10 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_11_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_11 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_12_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_12 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_13_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_13 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_14_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_14 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_15_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_15 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_16_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_16 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_17_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_17 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_18_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_18 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_19_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_19 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_20_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_20 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_21_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_21 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_22_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_22 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_23_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_23 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_24_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_24 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_25_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_25 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_26_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_26 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_27_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_27 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_28_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_28 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_29_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_29 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_30_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_30 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w1_31_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w1_31 | auto | 1       | 32, 16, 1        |
+|    e2_perf_b1_U                          | rom_1p       |      |      |      |        | e2_perf_b1          | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_perf_w2_0_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w2_0  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_perf_w2_1_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w2_1  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_perf_w2_2_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w2_2  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_perf_w2_3_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w2_3  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_perf_w2_4_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w2_4  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_perf_w2_5_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w2_5  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_perf_w2_6_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w2_6  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_perf_w2_7_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w2_7  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_perf_w2_8_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w2_8  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_perf_w2_9_U                  | rom_1p       |      |      |      |        | p_ZL10e2_perf_w2_9  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_perf_w2_10_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w2_10 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_perf_w2_11_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w2_11 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_perf_w2_12_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w2_12 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_perf_w2_13_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w2_13 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_perf_w2_14_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w2_14 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_perf_w2_15_U                 | rom_1p       |      |      |      |        | p_ZL10e2_perf_w2_15 | auto | 1       | 32, 8, 1         |
+|    e2_perf_b2_U                          | rom_1p       |      |      |      |        | e2_perf_b2          | auto | 1       | 32, 8, 1         |
+|    e2_perf_w3_0_U                        | rom_1p       |      |      |      |        | e2_perf_w3_0        | auto | 1       | 32, 8, 1         |
+|    e2_lut_w0_U                           | rom_1p       |      | 8    |      |        | e2_lut_w0           | auto | 1       | 32, 4096, 1      |
+|    e2_lut_b0_U                           | rom_1p       |      | 1    |      |        | e2_lut_b0           | auto | 1       | 32, 32, 1        |
+|    p_ZL9e2_lut_w1_0_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_0    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_1_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_1    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_2_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_2    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_3_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_3    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_4_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_4    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_5_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_5    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_6_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_6    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_7_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_7    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_8_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_8    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_9_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_9    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_10_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_10   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_11_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_11   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_12_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_12   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_13_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_13   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_14_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_14   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_15_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_15   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_16_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_16   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_17_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_17   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_18_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_18   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_19_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_19   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_20_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_20   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_21_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_21   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_22_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_22   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_23_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_23   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_24_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_24   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_25_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_25   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_26_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_26   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_27_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_27   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_28_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_28   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_29_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_29   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_30_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_30   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w1_31_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w1_31   | auto | 1       | 32, 16, 1        |
+|    e2_lut_b1_U                           | rom_1p       |      |      |      |        | e2_lut_b1           | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_lut_w2_0_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w2_0    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_lut_w2_1_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w2_1    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_lut_w2_2_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w2_2    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_lut_w2_3_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w2_3    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_lut_w2_4_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w2_4    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_lut_w2_5_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w2_5    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_lut_w2_6_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w2_6    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_lut_w2_7_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w2_7    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_lut_w2_8_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w2_8    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_lut_w2_9_U                    | rom_1p       |      |      |      |        | p_ZL9e2_lut_w2_9    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_lut_w2_10_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w2_10   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_lut_w2_11_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w2_11   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_lut_w2_12_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w2_12   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_lut_w2_13_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w2_13   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_lut_w2_14_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w2_14   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_lut_w2_15_U                   | rom_1p       |      |      |      |        | p_ZL9e2_lut_w2_15   | auto | 1       | 32, 8, 1         |
+|    e2_lut_b2_U                           | rom_1p       |      |      |      |        | e2_lut_b2           | auto | 1       | 32, 8, 1         |
+|    e2_lut_w3_0_U                         | rom_1p       |      |      |      |        | e2_lut_w3_0         | auto | 1       | 32, 8, 1         |
+|    e2_ff_w0_U                            | rom_1p       |      | 8    |      |        | e2_ff_w0            | auto | 1       | 32, 4096, 1      |
+|    e2_ff_b0_U                            | rom_1p       |      | 1    |      |        | e2_ff_b0            | auto | 1       | 32, 32, 1        |
+|    p_ZL8e2_ff_w1_0_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_0     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_1_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_1     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_2_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_2     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_3_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_3     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_4_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_4     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_5_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_5     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_6_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_6     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_7_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_7     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_8_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_8     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_9_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_9     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_10_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_10    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_11_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_11    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_12_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_12    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_13_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_13    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_14_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_14    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_15_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_15    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_16_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_16    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_17_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_17    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_18_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_18    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_19_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_19    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_20_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_20    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_21_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_21    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_22_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_22    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_23_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_23    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_24_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_24    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_25_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_25    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_26_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_26    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_27_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_27    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_28_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_28    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_29_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_29    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_30_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_30    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w1_31_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w1_31    | auto | 1       | 32, 16, 1        |
+|    e2_ff_b1_U                            | rom_1p       |      |      |      |        | e2_ff_b1            | auto | 1       | 32, 16, 1        |
+|    p_ZL8e2_ff_w2_0_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w2_0     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e2_ff_w2_1_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w2_1     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e2_ff_w2_2_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w2_2     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e2_ff_w2_3_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w2_3     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e2_ff_w2_4_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w2_4     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e2_ff_w2_5_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w2_5     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e2_ff_w2_6_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w2_6     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e2_ff_w2_7_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w2_7     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e2_ff_w2_8_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w2_8     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e2_ff_w2_9_U                     | rom_1p       |      |      |      |        | p_ZL8e2_ff_w2_9     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e2_ff_w2_10_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w2_10    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e2_ff_w2_11_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w2_11    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e2_ff_w2_12_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w2_12    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e2_ff_w2_13_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w2_13    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e2_ff_w2_14_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w2_14    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e2_ff_w2_15_U                    | rom_1p       |      |      |      |        | p_ZL8e2_ff_w2_15    | auto | 1       | 32, 8, 1         |
+|    e2_ff_b2_U                            | rom_1p       |      |      |      |        | e2_ff_b2            | auto | 1       | 32, 8, 1         |
+|    e2_ff_w3_0_U                          | rom_1p       |      |      |      |        | e2_ff_w3_0          | auto | 1       | 32, 8, 1         |
+|    e2_dsp_w0_U                           | rom_1p       |      | 8    |      |        | e2_dsp_w0           | auto | 1       | 32, 4096, 1      |
+|    e2_dsp_b0_U                           | rom_1p       |      | 1    |      |        | e2_dsp_b0           | auto | 1       | 32, 32, 1        |
+|    p_ZL9e2_dsp_w1_0_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_0    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_1_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_1    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_2_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_2    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_3_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_3    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_4_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_4    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_5_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_5    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_6_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_6    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_7_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_7    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_8_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_8    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_9_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_9    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_10_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_10   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_11_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_11   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_12_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_12   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_13_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_13   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_14_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_14   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_15_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_15   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_16_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_16   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_17_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_17   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_18_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_18   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_19_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_19   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_20_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_20   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_21_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_21   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_22_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_22   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_23_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_23   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_24_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_24   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_25_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_25   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_26_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_26   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_27_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_27   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_28_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_28   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_29_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_29   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_30_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_30   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w1_31_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w1_31   | auto | 1       | 32, 16, 1        |
+|    e2_dsp_b1_U                           | rom_1p       |      |      |      |        | e2_dsp_b1           | auto | 1       | 32, 16, 1        |
+|    p_ZL9e2_dsp_w2_0_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w2_0    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_dsp_w2_1_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w2_1    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_dsp_w2_2_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w2_2    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_dsp_w2_3_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w2_3    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_dsp_w2_4_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w2_4    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_dsp_w2_5_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w2_5    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_dsp_w2_6_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w2_6    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_dsp_w2_7_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w2_7    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_dsp_w2_8_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w2_8    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_dsp_w2_9_U                    | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w2_9    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_dsp_w2_10_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w2_10   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_dsp_w2_11_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w2_11   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_dsp_w2_12_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w2_12   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_dsp_w2_13_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w2_13   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_dsp_w2_14_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w2_14   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e2_dsp_w2_15_U                   | rom_1p       |      |      |      |        | p_ZL9e2_dsp_w2_15   | auto | 1       | 32, 8, 1         |
+|    e2_dsp_b2_U                           | rom_1p       |      |      |      |        | e2_dsp_b2           | auto | 1       | 32, 8, 1         |
+|    e2_dsp_w3_0_U                         | rom_1p       |      |      |      |        | e2_dsp_w3_0         | auto | 1       | 32, 8, 1         |
+|    e2_bram_w0_U                          | rom_1p       |      | 8    |      |        | e2_bram_w0          | auto | 1       | 32, 4096, 1      |
+|    e2_bram_b0_U                          | rom_1p       |      | 1    |      |        | e2_bram_b0          | auto | 1       | 32, 32, 1        |
+|    p_ZL10e2_bram_w1_0_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_0  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_1_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_1  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_2_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_2  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_3_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_3  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_4_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_4  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_5_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_5  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_6_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_6  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_7_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_7  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_8_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_8  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_9_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_9  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_10_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_10 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_11_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_11 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_12_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_12 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_13_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_13 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_14_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_14 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_15_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_15 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_16_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_16 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_17_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_17 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_18_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_18 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_19_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_19 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_20_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_20 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_21_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_21 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_22_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_22 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_23_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_23 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_24_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_24 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_25_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_25 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_26_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_26 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_27_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_27 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_28_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_28 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_29_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_29 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_30_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_30 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w1_31_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w1_31 | auto | 1       | 32, 16, 1        |
+|    e2_bram_b1_U                          | rom_1p       |      |      |      |        | e2_bram_b1          | auto | 1       | 32, 16, 1        |
+|    p_ZL10e2_bram_w2_0_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w2_0  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_bram_w2_1_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w2_1  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_bram_w2_2_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w2_2  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_bram_w2_3_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w2_3  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_bram_w2_4_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w2_4  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_bram_w2_5_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w2_5  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_bram_w2_6_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w2_6  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_bram_w2_7_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w2_7  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_bram_w2_8_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w2_8  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_bram_w2_9_U                  | rom_1p       |      |      |      |        | p_ZL10e2_bram_w2_9  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_bram_w2_10_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w2_10 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_bram_w2_11_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w2_11 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_bram_w2_12_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w2_12 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_bram_w2_13_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w2_13 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_bram_w2_14_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w2_14 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e2_bram_w2_15_U                 | rom_1p       |      |      |      |        | p_ZL10e2_bram_w2_15 | auto | 1       | 32, 8, 1         |
+|    e2_bram_b2_U                          | rom_1p       |      |      |      |        | e2_bram_b2          | auto | 1       | 32, 8, 1         |
+|    e2_bram_w3_0_U                        | rom_1p       |      |      |      |        | e2_bram_w3_0        | auto | 1       | 32, 8, 1         |
+|    e3_perf_w0_U                          | rom_1p       |      | 8    |      |        | e3_perf_w0          | auto | 1       | 32, 4096, 1      |
+|    e3_perf_b0_U                          | rom_1p       |      | 1    |      |        | e3_perf_b0          | auto | 1       | 32, 32, 1        |
+|    p_ZL10e3_perf_w1_0_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_0  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_1_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_1  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_2_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_2  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_3_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_3  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_4_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_4  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_5_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_5  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_6_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_6  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_7_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_7  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_8_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_8  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_9_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_9  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_10_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_10 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_11_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_11 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_12_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_12 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_13_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_13 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_14_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_14 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_15_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_15 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_16_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_16 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_17_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_17 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_18_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_18 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_19_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_19 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_20_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_20 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_21_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_21 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_22_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_22 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_23_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_23 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_24_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_24 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_25_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_25 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_26_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_26 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_27_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_27 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_28_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_28 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_29_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_29 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_30_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_30 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w1_31_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w1_31 | auto | 1       | 32, 16, 1        |
+|    e3_perf_b1_U                          | rom_1p       |      |      |      |        | e3_perf_b1          | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_perf_w2_0_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w2_0  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_perf_w2_1_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w2_1  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_perf_w2_2_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w2_2  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_perf_w2_3_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w2_3  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_perf_w2_4_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w2_4  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_perf_w2_5_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w2_5  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_perf_w2_6_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w2_6  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_perf_w2_7_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w2_7  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_perf_w2_8_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w2_8  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_perf_w2_9_U                  | rom_1p       |      |      |      |        | p_ZL10e3_perf_w2_9  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_perf_w2_10_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w2_10 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_perf_w2_11_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w2_11 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_perf_w2_12_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w2_12 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_perf_w2_13_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w2_13 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_perf_w2_14_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w2_14 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_perf_w2_15_U                 | rom_1p       |      |      |      |        | p_ZL10e3_perf_w2_15 | auto | 1       | 32, 8, 1         |
+|    e3_perf_b2_U                          | rom_1p       |      |      |      |        | e3_perf_b2          | auto | 1       | 32, 8, 1         |
+|    e3_perf_w3_0_U                        | rom_1p       |      |      |      |        | e3_perf_w3_0        | auto | 1       | 32, 8, 1         |
+|    e3_lut_w0_U                           | rom_1p       |      | 8    |      |        | e3_lut_w0           | auto | 1       | 32, 4096, 1      |
+|    e3_lut_b0_U                           | rom_1p       |      | 1    |      |        | e3_lut_b0           | auto | 1       | 32, 32, 1        |
+|    p_ZL9e3_lut_w1_0_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_0    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_1_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_1    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_2_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_2    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_3_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_3    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_4_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_4    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_5_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_5    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_6_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_6    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_7_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_7    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_8_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_8    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_9_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_9    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_10_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_10   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_11_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_11   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_12_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_12   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_13_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_13   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_14_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_14   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_15_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_15   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_16_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_16   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_17_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_17   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_18_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_18   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_19_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_19   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_20_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_20   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_21_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_21   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_22_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_22   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_23_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_23   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_24_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_24   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_25_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_25   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_26_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_26   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_27_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_27   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_28_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_28   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_29_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_29   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_30_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_30   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w1_31_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w1_31   | auto | 1       | 32, 16, 1        |
+|    e3_lut_b1_U                           | rom_1p       |      |      |      |        | e3_lut_b1           | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_lut_w2_0_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w2_0    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_lut_w2_1_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w2_1    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_lut_w2_2_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w2_2    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_lut_w2_3_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w2_3    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_lut_w2_4_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w2_4    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_lut_w2_5_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w2_5    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_lut_w2_6_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w2_6    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_lut_w2_7_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w2_7    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_lut_w2_8_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w2_8    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_lut_w2_9_U                    | rom_1p       |      |      |      |        | p_ZL9e3_lut_w2_9    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_lut_w2_10_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w2_10   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_lut_w2_11_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w2_11   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_lut_w2_12_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w2_12   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_lut_w2_13_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w2_13   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_lut_w2_14_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w2_14   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_lut_w2_15_U                   | rom_1p       |      |      |      |        | p_ZL9e3_lut_w2_15   | auto | 1       | 32, 8, 1         |
+|    e3_lut_b2_U                           | rom_1p       |      |      |      |        | e3_lut_b2           | auto | 1       | 32, 8, 1         |
+|    e3_lut_w3_0_U                         | rom_1p       |      |      |      |        | e3_lut_w3_0         | auto | 1       | 32, 8, 1         |
+|    e3_ff_w0_U                            | rom_1p       |      | 8    |      |        | e3_ff_w0            | auto | 1       | 32, 4096, 1      |
+|    e3_ff_b0_U                            | rom_1p       |      | 1    |      |        | e3_ff_b0            | auto | 1       | 32, 32, 1        |
+|    p_ZL8e3_ff_w1_0_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_0     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_1_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_1     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_2_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_2     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_3_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_3     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_4_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_4     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_5_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_5     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_6_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_6     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_7_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_7     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_8_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_8     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_9_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_9     | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_10_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_10    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_11_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_11    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_12_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_12    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_13_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_13    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_14_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_14    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_15_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_15    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_16_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_16    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_17_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_17    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_18_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_18    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_19_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_19    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_20_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_20    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_21_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_21    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_22_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_22    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_23_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_23    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_24_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_24    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_25_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_25    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_26_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_26    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_27_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_27    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_28_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_28    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_29_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_29    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_30_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_30    | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w1_31_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w1_31    | auto | 1       | 32, 16, 1        |
+|    e3_ff_b1_U                            | rom_1p       |      |      |      |        | e3_ff_b1            | auto | 1       | 32, 16, 1        |
+|    p_ZL8e3_ff_w2_0_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w2_0     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e3_ff_w2_1_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w2_1     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e3_ff_w2_2_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w2_2     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e3_ff_w2_3_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w2_3     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e3_ff_w2_4_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w2_4     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e3_ff_w2_5_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w2_5     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e3_ff_w2_6_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w2_6     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e3_ff_w2_7_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w2_7     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e3_ff_w2_8_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w2_8     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e3_ff_w2_9_U                     | rom_1p       |      |      |      |        | p_ZL8e3_ff_w2_9     | auto | 1       | 32, 8, 1         |
+|    p_ZL8e3_ff_w2_10_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w2_10    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e3_ff_w2_11_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w2_11    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e3_ff_w2_12_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w2_12    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e3_ff_w2_13_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w2_13    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e3_ff_w2_14_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w2_14    | auto | 1       | 32, 8, 1         |
+|    p_ZL8e3_ff_w2_15_U                    | rom_1p       |      |      |      |        | p_ZL8e3_ff_w2_15    | auto | 1       | 32, 8, 1         |
+|    e3_ff_b2_U                            | rom_1p       |      |      |      |        | e3_ff_b2            | auto | 1       | 32, 8, 1         |
+|    e3_ff_w3_0_U                          | rom_1p       |      |      |      |        | e3_ff_w3_0          | auto | 1       | 32, 8, 1         |
+|    e3_dsp_w0_U                           | rom_1p       |      | 8    |      |        | e3_dsp_w0           | auto | 1       | 32, 4096, 1      |
+|    e3_dsp_b0_U                           | rom_1p       |      | 1    |      |        | e3_dsp_b0           | auto | 1       | 32, 32, 1        |
+|    p_ZL9e3_dsp_w1_0_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_0    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_1_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_1    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_2_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_2    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_3_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_3    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_4_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_4    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_5_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_5    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_6_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_6    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_7_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_7    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_8_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_8    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_9_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_9    | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_10_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_10   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_11_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_11   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_12_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_12   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_13_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_13   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_14_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_14   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_15_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_15   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_16_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_16   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_17_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_17   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_18_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_18   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_19_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_19   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_20_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_20   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_21_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_21   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_22_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_22   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_23_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_23   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_24_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_24   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_25_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_25   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_26_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_26   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_27_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_27   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_28_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_28   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_29_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_29   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_30_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_30   | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w1_31_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w1_31   | auto | 1       | 32, 16, 1        |
+|    e3_dsp_b1_U                           | rom_1p       |      |      |      |        | e3_dsp_b1           | auto | 1       | 32, 16, 1        |
+|    p_ZL9e3_dsp_w2_0_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w2_0    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_dsp_w2_1_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w2_1    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_dsp_w2_2_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w2_2    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_dsp_w2_3_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w2_3    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_dsp_w2_4_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w2_4    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_dsp_w2_5_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w2_5    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_dsp_w2_6_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w2_6    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_dsp_w2_7_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w2_7    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_dsp_w2_8_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w2_8    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_dsp_w2_9_U                    | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w2_9    | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_dsp_w2_10_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w2_10   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_dsp_w2_11_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w2_11   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_dsp_w2_12_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w2_12   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_dsp_w2_13_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w2_13   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_dsp_w2_14_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w2_14   | auto | 1       | 32, 8, 1         |
+|    p_ZL9e3_dsp_w2_15_U                   | rom_1p       |      |      |      |        | p_ZL9e3_dsp_w2_15   | auto | 1       | 32, 8, 1         |
+|    e3_dsp_b2_U                           | rom_1p       |      |      |      |        | e3_dsp_b2           | auto | 1       | 32, 8, 1         |
+|    e3_dsp_w3_0_U                         | rom_1p       |      |      |      |        | e3_dsp_w3_0         | auto | 1       | 32, 8, 1         |
+|    e3_bram_w0_U                          | rom_1p       |      | 8    |      |        | e3_bram_w0          | auto | 1       | 32, 4096, 1      |
+|    e3_bram_b0_U                          | rom_1p       |      | 1    |      |        | e3_bram_b0          | auto | 1       | 32, 32, 1        |
+|    p_ZL10e3_bram_w1_0_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_0  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_1_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_1  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_2_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_2  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_3_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_3  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_4_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_4  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_5_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_5  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_6_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_6  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_7_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_7  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_8_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_8  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_9_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_9  | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_10_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_10 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_11_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_11 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_12_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_12 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_13_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_13 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_14_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_14 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_15_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_15 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_16_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_16 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_17_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_17 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_18_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_18 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_19_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_19 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_20_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_20 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_21_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_21 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_22_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_22 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_23_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_23 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_24_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_24 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_25_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_25 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_26_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_26 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_27_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_27 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_28_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_28 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_29_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_29 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_30_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_30 | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w1_31_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w1_31 | auto | 1       | 32, 16, 1        |
+|    e3_bram_b1_U                          | rom_1p       |      |      |      |        | e3_bram_b1          | auto | 1       | 32, 16, 1        |
+|    p_ZL10e3_bram_w2_0_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w2_0  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_bram_w2_1_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w2_1  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_bram_w2_2_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w2_2  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_bram_w2_3_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w2_3  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_bram_w2_4_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w2_4  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_bram_w2_5_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w2_5  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_bram_w2_6_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w2_6  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_bram_w2_7_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w2_7  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_bram_w2_8_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w2_8  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_bram_w2_9_U                  | rom_1p       |      |      |      |        | p_ZL10e3_bram_w2_9  | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_bram_w2_10_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w2_10 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_bram_w2_11_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w2_11 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_bram_w2_12_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w2_12 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_bram_w2_13_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w2_13 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_bram_w2_14_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w2_14 | auto | 1       | 32, 8, 1         |
+|    p_ZL10e3_bram_w2_15_U                 | rom_1p       |      |      |      |        | p_ZL10e3_bram_w2_15 | auto | 1       | 32, 8, 1         |
+|    e3_bram_b2_U                          | rom_1p       |      |      |      |        | e3_bram_b2          | auto | 1       | 32, 8, 1         |
+|    e3_bram_w3_0_U                        | rom_1p       |      |      |      |        | e3_bram_w3_0        | auto | 1       | 32, 8, 1         |
++------------------------------------------+--------------+------+------+------+--------+---------------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+--------------------------+-----------------------------------------+
+| Type            | Options                  | Location                                |
++-----------------+--------------------------+-----------------------------------------+
+| array_partition | variable=l1 complete     | src/moe.cpp:714 in generic_mlp_head, l1 |
+| array_partition | variable=l2 complete     | src/moe.cpp:715 in generic_mlp_head, l2 |
+| array_partition | variable=l3 complete     | src/moe.cpp:716 in generic_mlp_head, l3 |
+| inline          | off                      | src/moe.cpp:907 in expert_engine        |
+| interface       | ap_ctrl_hs port=return   | src/moe.cpp:1061 in output_moe, return  |
+| array_partition | variable=logits complete | src/moe.cpp:1067 in output_moe, logits  |
+| array_partition | variable=gates complete  | src/moe.cpp:1068 in output_moe, gates   |
+| array_partition | variable=output complete | src/moe.cpp:1069 in output_moe, output  |
++-----------------+--------------------------+-----------------------------------------+
+
+

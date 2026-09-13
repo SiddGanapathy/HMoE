@@ -1,0 +1,43 @@
+{
+  "0": {
+    "basicblocks": 57,
+    "calls": "2 2 2 2",
+    "file": "moe.cpp",
+    "fileloc": 163,
+    "instructions": 323,
+    "loads": {
+      "L": 7,
+      "T": 4
+    },
+    "name": "graph_moe",
+    "stores": {
+      "L": 6,
+      "T": 2
+    },
+    "total_instructions": 999
+  },
+  "1": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "moe.cpp",
+    "fileloc": 8,
+    "instructions": 8,
+    "name": "elu",
+    "total_instructions": 8
+  },
+  "2": {
+    "basicblocks": 43,
+    "calls": "1 1 1",
+    "file": "moe.cpp",
+    "fileloc": 37,
+    "instructions": 145,
+    "loads": {
+      "L": 12
+    },
+    "name": "expert_engine",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 169
+  }
+}

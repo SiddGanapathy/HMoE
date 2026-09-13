@@ -1,0 +1,67 @@
+src/moe.cpp:10:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=elu_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+        ^
+src/moe.cpp:53:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=expert_engine_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE off
+        ^
+src/moe.cpp:72:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=expert_engine_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+src/moe.cpp:94:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=expert_engine_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+src/moe.cpp:115:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=expert_engine_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+src/moe.cpp:136:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=expert_engine_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+/home/simics/HMoE/HLS_HMoE/run_4/scripts/run_hls.tcl:18:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=graph_moe_XLX_SEP_ PragmaOptions=name=graph_moe_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=graph_moe
+        ^
+src/moe.cpp:185:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=graph_moe_XLX_SEP_ PragmaOptions=mode=ap_memory port=input_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=ap_memory port=input
+        ^
+src/moe.cpp:187:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=graph_moe_XLX_SEP_ PragmaOptions=mode=ap_memory port=gate_weight_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=ap_memory port=gate_weight
+        ^
+src/moe.cpp:188:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=graph_moe_XLX_SEP_ PragmaOptions=mode=ap_memory port=gate_bias_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=ap_memory port=gate_bias
+        ^
+src/moe.cpp:190:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=graph_moe_XLX_SEP_ PragmaOptions=mode=ap_memory port=w1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=ap_memory port=w1
+        ^
+src/moe.cpp:191:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=graph_moe_XLX_SEP_ PragmaOptions=mode=ap_memory port=b1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=ap_memory port=b1
+        ^
+src/moe.cpp:193:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=graph_moe_XLX_SEP_ PragmaOptions=mode=ap_memory port=w2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=ap_memory port=w2
+        ^
+src/moe.cpp:194:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=graph_moe_XLX_SEP_ PragmaOptions=mode=ap_memory port=b2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=ap_memory port=b2
+        ^
+src/moe.cpp:196:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=graph_moe_XLX_SEP_ PragmaOptions=mode=ap_memory port=w3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=ap_memory port=w3
+        ^
+src/moe.cpp:197:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=graph_moe_XLX_SEP_ PragmaOptions=mode=ap_memory port=b3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=ap_memory port=b3
+        ^
+src/moe.cpp:199:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=graph_moe_XLX_SEP_ PragmaOptions=mode=ap_memory port=w4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=ap_memory port=w4
+        ^
+src/moe.cpp:200:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=graph_moe_XLX_SEP_ PragmaOptions=mode=ap_memory port=b4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=ap_memory port=b4
+        ^
+src/moe.cpp:202:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=graph_moe_XLX_SEP_ PragmaOptions=mode=ap_memory port=output_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=ap_memory port=output
+        ^
+src/moe.cpp:203:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=graph_moe_XLX_SEP_ PragmaOptions=mode=ap_memory port=gates_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=ap_memory port=gates
+        ^
+src/moe.cpp:205:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=graph_moe_XLX_SEP_ PragmaOptions=mode=s_axilite port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite port=return
+        ^
+src/moe.cpp:226:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=graph_moe_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+22 warnings generated.
