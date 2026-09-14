@@ -1,39 +1,99 @@
 {
-  "num_samples": 10,
-  "input_dim": 128,
-  "output_shape": [
+  "checkpoint": "/home/simics/HMoE/HierarchicalMoE/src/logs/auto-encoder/iccad/round1-40kernel/pragma_as_MLP/parallel_and_merge/class/post-gnn-3lp-3lm/dropout-0.1-MSE-scheduler-warmup-weight-decay-0.0001-no-mutual-info-PB-edge-attr-True_position-True-6L-SSL-False-gae-T-False-gae-P-False_regression_train_2026-09-06T04-33-56.349623/run1/500_val_model_state_dict.pth",
+  "input_file": "/home/simics/HMoE/experiments/output_mlp/run_1/hardware/input/h7.txt",
+  "input_shape": [
     10,
-    1
+    128
   ],
-  "moe_num_experts": 4,
-  "moe_k": 4,
-  "activation": "elu",
-  "mlp_common_lyr": 0,
-  "targets": [
+  "num_experts": 4,
+  "objectives": [
     "perf",
     "util-LUT",
     "util-FF",
     "util-DSP",
     "util-BRAM"
   ],
-  "repository_execution_time_ms": 3.2827359973452985,
-  "output_min": -0.4561077654361725,
-  "output_max": 5.272299766540527,
-  "output_mean": 3.3339171409606934,
-  "output_has_nan": false,
-  "output_has_inf": false,
-  "gates_shape": [
-    10,
-    4
+  "hidden_layers": [
+    32,
+    16,
+    8
   ],
-  "first_gates": [
-    0.18246272206306458,
-    0.19873259961605072,
-    0.2316066473722458,
-    0.3871980905532837
+  "architecture": "128-32-16-8-1",
+  "activation": "ELU",
+  "final_activation": "linear",
+  "gating": "softmax",
+  "k": 4,
+  "execution_time_seconds": 0.021953431889414787,
+  "execution_time_ms": 21.953431889414787,
+  "max_gate_sum_error": 5.960464477539063e-08,
+  "gates_sample_0": [
+    0.18246270716190338,
+    0.19873258471488953,
+    0.2316066324710846,
+    0.3871980607509613
   ],
-  "loss": 0.0001358235313091427,
-  "first_output": [
-    4.0004801750183105
-  ]
+  "expert_outputs_sample_0": [
+    [
+      3.816634178161621,
+      1.6245927810668945,
+      -0.10522520542144775,
+      -8.510235786437988,
+      0.07321195304393768
+    ],
+    [
+      2.567608594894409,
+      -1.833683729171753,
+      -0.7630643248558044,
+      4.253095626831055,
+      0.7414296865463257
+    ],
+    [
+      3.544090986251831,
+      1.8926523923873901,
+      -0.03722033649682999,
+      -26.421186447143555,
+      -0.13273367285728455
+    ],
+    [
+      5.095541954040527,
+      -3.3483827114105225,
+      0.42464345693588257,
+      -7.608925819396973,
+      -0.25282859802246094
+    ]
+  ],
+  "outputs_sample_0": [
+    4.000479698181152,
+    -0.9261215925216675,
+    -0.015044763684272766,
+    -9.773055076599121,
+    0.032067954540252686
+  ],
+  "prediction_statistics": {
+    "perf": {
+      "min": -1.3755946159362793,
+      "max": 5.272299766540527,
+      "mean": 3.2419686317443848
+    },
+    "util-LUT": {
+      "min": -1.728290319442749,
+      "max": -0.0700870156288147,
+      "mean": -0.8718053698539734
+    },
+    "util-FF": {
+      "min": -0.057315826416015625,
+      "max": 0.35878920555114746,
+      "mean": 0.06846395134925842
+    },
+    "util-DSP": {
+      "min": -19.91728973388672,
+      "max": -5.286159515380859,
+      "mean": -11.250616073608398
+    },
+    "util-BRAM": {
+      "min": -0.0007935687899589539,
+      "max": 0.36742913722991943,
+      "mean": 0.0763968750834465
+    }
+  }
 }

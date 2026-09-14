@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'output_moe'
 ================================================================
-* Date:           Sun Sep 13 13:16:58 2026
+* Date:           Mon Sep 14 21:03:20 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        HLS_OutputMoE_Run9
@@ -38,12 +38,12 @@
         |                                                   |                                       |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
         |                      Instance                     |                 Module                |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
         +---------------------------------------------------+---------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
-        |grp_output_moe_Pipeline_VITIS_LOOP_1079_2_fu_2274  |output_moe_Pipeline_VITIS_LOOP_1079_2  |      133|      133|   1.330 us|   1.330 us|    133|    133|       no|
-        |grp_output_moe_Pipeline_VITIS_LOOP_1092_3_fu_2285  |output_moe_Pipeline_VITIS_LOOP_1092_3  |        6|        6|  60.000 ns|  60.000 ns|      6|      6|       no|
+        |grp_output_moe_Pipeline_VITIS_LOOP_1130_2_fu_2274  |output_moe_Pipeline_VITIS_LOOP_1130_2  |      133|      133|   1.330 us|   1.330 us|    133|    133|       no|
+        |grp_output_moe_Pipeline_VITIS_LOOP_1143_3_fu_2285  |output_moe_Pipeline_VITIS_LOOP_1143_3  |        6|        6|  60.000 ns|  60.000 ns|      6|      6|       no|
         |grp_expert_engine_fu_2294                          |expert_engine                          |    94079|    94079|   0.941 ms|   0.941 ms|  94079|  94079|       no|
-        |grp_output_moe_Pipeline_VITIS_LOOP_1099_4_fu_4424  |output_moe_Pipeline_VITIS_LOOP_1099_4  |       12|       12|   0.120 us|   0.120 us|     12|     12|       no|
-        |grp_output_moe_Pipeline_VITIS_LOOP_1104_5_fu_4442  |output_moe_Pipeline_VITIS_LOOP_1104_5  |       26|       26|   0.260 us|   0.260 us|     26|     26|       no|
-        |grp_output_moe_Pipeline_VITIS_LOOP_1118_6_fu_4459  |output_moe_Pipeline_VITIS_LOOP_1118_6  |       16|       16|   0.160 us|   0.160 us|     16|     16|       no|
+        |grp_output_moe_Pipeline_VITIS_LOOP_1150_4_fu_4424  |output_moe_Pipeline_VITIS_LOOP_1150_4  |       12|       12|   0.120 us|   0.120 us|     12|     12|       no|
+        |grp_output_moe_Pipeline_VITIS_LOOP_1155_5_fu_4442  |output_moe_Pipeline_VITIS_LOOP_1155_5  |       26|       26|   0.260 us|   0.260 us|     26|     26|       no|
+        |grp_output_moe_Pipeline_VITIS_LOOP_1169_6_fu_4459  |output_moe_Pipeline_VITIS_LOOP_1169_6  |       16|       16|   0.160 us|   0.160 us|     16|     16|       no|
         +---------------------------------------------------+---------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
 
         * Loop: 
@@ -51,7 +51,7 @@
         |                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +---------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_1075_1  |      544|      544|       136|          -|          -|     4|        no|
+        |- VITIS_LOOP_1126_1  |      544|      544|       136|          -|          -|     4|        no|
         +---------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -91,11 +91,11 @@
     |fadd_32ns_32ns_32_2_full_dsp_1_U1469               |fadd_32ns_32ns_32_2_full_dsp_1         |        0|    2|    177|    233|    0|
     |faddfsub_32ns_32ns_32_2_full_dsp_1_U1468           |faddfsub_32ns_32ns_32_2_full_dsp_1     |        0|    2|    177|    233|    0|
     |fmul_32ns_32ns_32_2_max_dsp_1_U1467                |fmul_32ns_32ns_32_2_max_dsp_1          |        0|    3|    128|     78|    0|
-    |grp_output_moe_Pipeline_VITIS_LOOP_1079_2_fu_2274  |output_moe_Pipeline_VITIS_LOOP_1079_2  |        1|    0|    146|    135|    0|
-    |grp_output_moe_Pipeline_VITIS_LOOP_1092_3_fu_2285  |output_moe_Pipeline_VITIS_LOOP_1092_3  |        0|    0|    105|    222|    0|
-    |grp_output_moe_Pipeline_VITIS_LOOP_1099_4_fu_4424  |output_moe_Pipeline_VITIS_LOOP_1099_4  |        0|    7|    385|    899|    0|
-    |grp_output_moe_Pipeline_VITIS_LOOP_1104_5_fu_4442  |output_moe_Pipeline_VITIS_LOOP_1104_5  |        0|    0|    271|    198|    0|
-    |grp_output_moe_Pipeline_VITIS_LOOP_1118_6_fu_4459  |output_moe_Pipeline_VITIS_LOOP_1118_6  |        0|   13|   1120|    822|    0|
+    |grp_output_moe_Pipeline_VITIS_LOOP_1130_2_fu_2274  |output_moe_Pipeline_VITIS_LOOP_1130_2  |        1|    0|    146|    135|    0|
+    |grp_output_moe_Pipeline_VITIS_LOOP_1143_3_fu_2285  |output_moe_Pipeline_VITIS_LOOP_1143_3  |        0|    0|    105|    222|    0|
+    |grp_output_moe_Pipeline_VITIS_LOOP_1150_4_fu_4424  |output_moe_Pipeline_VITIS_LOOP_1150_4  |        0|    7|    385|    899|    0|
+    |grp_output_moe_Pipeline_VITIS_LOOP_1155_5_fu_4442  |output_moe_Pipeline_VITIS_LOOP_1155_5  |        0|    0|    271|    198|    0|
+    |grp_output_moe_Pipeline_VITIS_LOOP_1169_6_fu_4459  |output_moe_Pipeline_VITIS_LOOP_1169_6  |        0|   13|   1120|    822|    0|
     +---------------------------------------------------+---------------------------------------+---------+-----+-------+-------+-----+
     |Total                                              |                                       |      181|  196|  51674|  38232|    0|
     +---------------------------------------------------+---------------------------------------+---------+-----+-------+-------+-----+
@@ -122,8 +122,8 @@
     +---------------------------------+----------+----+---+----+------------+------------+
     |          Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------------+----------+----+---+----+------------+------------+
-    |add_ln1075_fu_4499_p2            |         +|   0|  0|  10|           3|           1|
-    |icmp_ln1075_fu_4493_p2           |      icmp|   0|  0|  12|           3|           4|
+    |add_ln1126_fu_4499_p2            |         +|   0|  0|  10|           3|           1|
+    |icmp_ln1126_fu_4493_p2           |      icmp|   0|  0|  12|           3|           4|
     |icmp_ln9_1_fu_4528_p2            |      icmp|   0|  0|   9|           2|           1|
     |icmp_ln9_2_fu_4534_p2            |      icmp|   0|  0|  10|           2|           3|
     |icmp_ln9_fu_4514_p2              |      icmp|   0|  0|   9|           2|           1|
@@ -183,21 +183,21 @@
     |                              Name                              | FF | LUT| Bits| Const Bits|
     +----------------------------------------------------------------+----+----+-----+-----------+
     |acc_reg_4720                                                    |  22|   0|   32|         10|
-    |add_ln1075_reg_4710                                             |   3|   0|    3|          0|
+    |add_ln1126_reg_4710                                             |   3|   0|    3|          0|
     |ap_CS_fsm                                                       |  11|   0|   11|          0|
     |e_fu_2210                                                       |   3|   0|    3|          0|
     |empty_fu_2214                                                   |  32|   0|   32|          0|
     |grp_expert_engine_fu_2294_ap_start_reg                          |   1|   0|    1|          0|
-    |grp_output_moe_Pipeline_VITIS_LOOP_1079_2_fu_2274_ap_start_reg  |   1|   0|    1|          0|
-    |grp_output_moe_Pipeline_VITIS_LOOP_1092_3_fu_2285_ap_start_reg  |   1|   0|    1|          0|
-    |grp_output_moe_Pipeline_VITIS_LOOP_1099_4_fu_4424_ap_start_reg  |   1|   0|    1|          0|
-    |grp_output_moe_Pipeline_VITIS_LOOP_1104_5_fu_4442_ap_start_reg  |   1|   0|    1|          0|
-    |grp_output_moe_Pipeline_VITIS_LOOP_1118_6_fu_4459_ap_start_reg  |   1|   0|    1|          0|
+    |grp_output_moe_Pipeline_VITIS_LOOP_1130_2_fu_2274_ap_start_reg  |   1|   0|    1|          0|
+    |grp_output_moe_Pipeline_VITIS_LOOP_1143_3_fu_2285_ap_start_reg  |   1|   0|    1|          0|
+    |grp_output_moe_Pipeline_VITIS_LOOP_1150_4_fu_4424_ap_start_reg  |   1|   0|    1|          0|
+    |grp_output_moe_Pipeline_VITIS_LOOP_1155_5_fu_4442_ap_start_reg  |   1|   0|    1|          0|
+    |grp_output_moe_Pipeline_VITIS_LOOP_1169_6_fu_4459_ap_start_reg  |   1|   0|    1|          0|
     |mux_case_11_fu_2218                                             |  32|   0|   32|          0|
     |mux_case_25_fu_2222                                             |  32|   0|   32|          0|
     |mux_case_310_fu_2226                                            |  32|   0|   32|          0|
     |tmp_6_reg_4715                                                  |   2|   0|    9|          7|
-    |trunc_ln1075_reg_4703                                           |   2|   0|    2|          0|
+    |trunc_ln1126_reg_4703                                           |   2|   0|    2|          0|
     +----------------------------------------------------------------+----+----+-----+-----------+
     |Total                                                           | 177|   0|  194|         17|
     +----------------------------------------------------------------+----+----+-----+-----------+

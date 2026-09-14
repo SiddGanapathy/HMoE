@@ -32,9 +32,9 @@
         <hiertable>
             <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
             <rows>
-                <row id="0" col0="output_moe" col1="moe.cpp:1055" col2="3661" col3="2042" col4="6508" col5="9587" col6="10044">
-                    <row id="1" col0="expert_engine" col1="moe.cpp:901" col2="3517" col3="1961" col4="6361" col5="8481" col6="8882">
-                        <row id="2" col0="generic_expert" col1="moe.cpp:790" col2="3504" col2_disp="3,504 (4 calls)" col3="" col4="" col5="" col6="">
+                <row id="0" col0="output_moe" col1="moe.cpp:1106" col2="3661" col3="2042" col4="6508" col5="9587" col6="10044">
+                    <row id="1" col0="expert_engine" col1="moe.cpp:952" col2="3517" col3="1961" col4="6361" col5="8481" col6="8882">
+                        <row id="2" col0="generic_expert" col1="moe.cpp:831" col2="3504" col2_disp="3,504 (4 calls)" col3="" col4="" col5="" col6="">
                             <row id="3" col0="generic_mlp_head" col1="moe.cpp:692" col2="3460" col2_disp="3,460 (20 calls)" col3="" col4="" col5="" col6="">
                                 <row id="4" col0="elu" col1="moe.cpp:543" col2="480" col2_disp=" 480 (60 calls)" col3="" col4="" col5="" col6=""/>
                             </row>

@@ -36,9 +36,9 @@
 +-----------------------+--------------+------------------+------------------+------------------+------------------+------------------+
 | Function              | Location     | Compile/Link     | Unroll/Inline    | Array/Struct     | Performance      | HW Transforms    |
 +-----------------------+--------------+------------------+------------------+------------------+------------------+------------------+
-| + output_moe          | moe.cpp:1055 | 3,661            | 2,042            | 6,508            | 9,587            | 10,044           |
-|  + expert_engine      | moe.cpp:901  | 3,517            | 1,961            | 6,361            | 8,481            | 8,882            |
-|   + generic_expert    | moe.cpp:790  | 3,504 (4 calls)  |                  |                  |                  |                  |
+| + output_moe          | moe.cpp:1106 | 3,661            | 2,042            | 6,508            | 9,587            | 10,044           |
+|  + expert_engine      | moe.cpp:952  | 3,517            | 1,961            | 6,361            | 8,481            | 8,882            |
+|   + generic_expert    | moe.cpp:831  | 3,504 (4 calls)  |                  |                  |                  |                  |
 |    + generic_mlp_head | moe.cpp:692  | 3,460 (20 calls) |                  |                  |                  |                  |
 |       elu             | moe.cpp:543  |  480 (60 calls)  |                  |                  |                  |                  |
 |     generic_mlp_head  | moe.cpp:692  |                  | 1,920 (20 calls) | 6,320 (20 calls) | 8,440 (20 calls) | 8,840 (20 calls) |

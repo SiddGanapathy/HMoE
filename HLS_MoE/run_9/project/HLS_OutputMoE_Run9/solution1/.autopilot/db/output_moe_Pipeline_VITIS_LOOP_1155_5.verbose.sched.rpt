@@ -1,0 +1,220 @@
+
+
+================================================================
+== Vitis HLS Report for 'output_moe_Pipeline_VITIS_LOOP_1155_5'
+================================================================
+* Date:           Mon Sep 14 21:03:06 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        HLS_OutputMoE_Run9
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p_CIV-figd2104-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.574 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       26|       26|  0.260 us|  0.260 us|   26|   26|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_1155_5  |       24|       24|         6|          6|          1|     4|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 6, depth = 6
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 6, D = 6, States = { 1 2 3 4 5 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 7.57>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%mux_case_0518_phi = alloca i32 1"   --->   Operation 9 'alloca' 'mux_case_0518_phi' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%mux_case_1721_phi = alloca i32 1"   --->   Operation 10 'alloca' 'mux_case_1721_phi' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%mux_case_2824_phi = alloca i32 1"   --->   Operation 11 'alloca' 'mux_case_2824_phi' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%mux_case_3927_phi = alloca i32 1"   --->   Operation 12 'alloca' 'mux_case_3927_phi' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%e = alloca i32 1" [src/moe.cpp:1155]   --->   Operation 13 'alloca' 'e' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%exp_sum_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %exp_sum_reload"   --->   Operation 14 'read' 'exp_sum_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.36ns)   --->   "%store_ln1155 = store i3 0, i3 %e" [src/moe.cpp:1155]   --->   Operation 15 'store' 'store_ln1155' <Predicate = true> <Delay = 0.36>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc54"   --->   Operation 16 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%e_1 = load i3 %e" [src/moe.cpp:1155]   --->   Operation 17 'load' 'e_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.52ns)   --->   "%icmp_ln1155 = icmp_eq  i3 %e_1, i3 4" [src/moe.cpp:1155]   --->   Operation 18 'icmp' 'icmp_ln1155' <Predicate = true> <Delay = 0.52> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.52ns)   --->   "%add_ln1155 = add i3 %e_1, i3 1" [src/moe.cpp:1155]   --->   Operation 19 'add' 'add_ln1155' <Predicate = true> <Delay = 0.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln1155 = br i1 %icmp_ln1155, void %for.inc54.split, void %for.end56.exitStub" [src/moe.cpp:1155]   --->   Operation 20 'br' 'br_ln1155' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%trunc_ln1155 = trunc i3 %e_1" [src/moe.cpp:1155]   --->   Operation 21 'trunc' 'trunc_ln1155' <Predicate = (!icmp_ln1155)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%gates_0_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %gates_0" [src/moe.cpp:1156]   --->   Operation 22 'read' 'gates_0_read' <Predicate = (!icmp_ln1155)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%bitcast_ln1156 = bitcast i32 %gates_0_read" [src/moe.cpp:1156]   --->   Operation 23 'bitcast' 'bitcast_ln1156' <Predicate = (!icmp_ln1155)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%gates_1_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %gates_1" [src/moe.cpp:1156]   --->   Operation 24 'read' 'gates_1_read' <Predicate = (!icmp_ln1155)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%bitcast_ln1156_1 = bitcast i32 %gates_1_read" [src/moe.cpp:1156]   --->   Operation 25 'bitcast' 'bitcast_ln1156_1' <Predicate = (!icmp_ln1155)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%gates_2_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %gates_2" [src/moe.cpp:1156]   --->   Operation 26 'read' 'gates_2_read' <Predicate = (!icmp_ln1155)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%bitcast_ln1156_2 = bitcast i32 %gates_2_read" [src/moe.cpp:1156]   --->   Operation 27 'bitcast' 'bitcast_ln1156_2' <Predicate = (!icmp_ln1155)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%gates_3_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %gates_3" [src/moe.cpp:1156]   --->   Operation 28 'read' 'gates_3_read' <Predicate = (!icmp_ln1155)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%bitcast_ln1156_3 = bitcast i32 %gates_3_read" [src/moe.cpp:1156]   --->   Operation 29 'bitcast' 'bitcast_ln1156_3' <Predicate = (!icmp_ln1155)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.42ns)   --->   "%tmp_2 = sparsemux i32 @_ssdm_op_SparseMux.ap_auto.4f32.f32.i2, i2 0, i32 %bitcast_ln1156, i2 1, i32 %bitcast_ln1156_1, i2 2, i32 %bitcast_ln1156_2, i2 3, i32 %bitcast_ln1156_3, i32 <undef>, i2 %trunc_ln1155" [src/moe.cpp:1156]   --->   Operation 30 'sparsemux' 'tmp_2' <Predicate = (!icmp_ln1155)> <Delay = 0.42> <CoreInst = "SparseMux">   --->   Core 147 'SparseMux' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [6/6] (6.26ns)   --->   "%div = fdiv i32 %tmp_2, i32 %exp_sum_reload_read" [src/moe.cpp:1156]   --->   Operation 31 'fdiv' 'div' <Predicate = (!icmp_ln1155)> <Delay = 6.26> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 5> <II = 1> <Delay = 6.26> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%mux_case_0518_phi_load = load i32 %mux_case_0518_phi"   --->   Operation 60 'load' 'mux_case_0518_phi_load' <Predicate = (icmp_ln1155)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%mux_case_1721_phi_load = load i32 %mux_case_1721_phi"   --->   Operation 61 'load' 'mux_case_1721_phi_load' <Predicate = (icmp_ln1155)> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%mux_case_2824_phi_load = load i32 %mux_case_2824_phi"   --->   Operation 62 'load' 'mux_case_2824_phi_load' <Predicate = (icmp_ln1155)> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%mux_case_3927_phi_load = load i32 %mux_case_3927_phi"   --->   Operation 63 'load' 'mux_case_3927_phi_load' <Predicate = (icmp_ln1155)> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %mux_case_3927_phi_out, i32 %mux_case_3927_phi_load"   --->   Operation 64 'write' 'write_ln0' <Predicate = (icmp_ln1155)> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %mux_case_2824_phi_out, i32 %mux_case_2824_phi_load"   --->   Operation 65 'write' 'write_ln0' <Predicate = (icmp_ln1155)> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %mux_case_1721_phi_out, i32 %mux_case_1721_phi_load"   --->   Operation 66 'write' 'write_ln0' <Predicate = (icmp_ln1155)> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %mux_case_0518_phi_out, i32 %mux_case_0518_phi_load"   --->   Operation 67 'write' 'write_ln0' <Predicate = (icmp_ln1155)> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 68 'ret' 'ret_ln0' <Predicate = (icmp_ln1155)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 6.26>
+ST_2 : Operation 32 [5/6] (6.26ns)   --->   "%div = fdiv i32 %tmp_2, i32 %exp_sum_reload_read" [src/moe.cpp:1156]   --->   Operation 32 'fdiv' 'div' <Predicate = true> <Delay = 6.26> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 5> <II = 1> <Delay = 6.26> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.26>
+ST_3 : Operation 33 [4/6] (6.26ns)   --->   "%div = fdiv i32 %tmp_2, i32 %exp_sum_reload_read" [src/moe.cpp:1156]   --->   Operation 33 'fdiv' 'div' <Predicate = true> <Delay = 6.26> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 5> <II = 1> <Delay = 6.26> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.26>
+ST_4 : Operation 34 [3/6] (6.26ns)   --->   "%div = fdiv i32 %tmp_2, i32 %exp_sum_reload_read" [src/moe.cpp:1156]   --->   Operation 34 'fdiv' 'div' <Predicate = true> <Delay = 6.26> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 5> <II = 1> <Delay = 6.26> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.26>
+ST_5 : Operation 35 [2/6] (6.26ns)   --->   "%div = fdiv i32 %tmp_2, i32 %exp_sum_reload_read" [src/moe.cpp:1156]   --->   Operation 35 'fdiv' 'div' <Predicate = true> <Delay = 6.26> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 5> <II = 1> <Delay = 6.26> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 6.63>
+ST_6 : Operation 36 [1/1] (0.00ns)   --->   "%specpipeline_ln1155 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_1" [src/moe.cpp:1155]   --->   Operation 36 'specpipeline' 'specpipeline_ln1155' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%speclooptripcount_ln1155 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4" [src/moe.cpp:1155]   --->   Operation 37 'speclooptripcount' 'speclooptripcount_ln1155' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%specloopname_ln1155 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12" [src/moe.cpp:1155]   --->   Operation 38 'specloopname' 'specloopname_ln1155' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 39 [1/6] (6.26ns)   --->   "%div = fdiv i32 %tmp_2, i32 %exp_sum_reload_read" [src/moe.cpp:1156]   --->   Operation 39 'fdiv' 'div' <Predicate = true> <Delay = 6.26> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 5> <II = 1> <Delay = 6.26> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%bitcast_ln1156_4 = bitcast i32 %div" [src/moe.cpp:1156]   --->   Operation 40 'bitcast' 'bitcast_ln1156_4' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 41 [1/1] (0.66ns)   --->   "%switch_ln1156 = switch i2 %trunc_ln1155, void %arrayidx513.case.3, i2 0, void %arrayidx513.case.0, i2 1, void %arrayidx513.case.1, i2 2, void %arrayidx513.case.2" [src/moe.cpp:1156]   --->   Operation 41 'switch' 'switch_ln1156' <Predicate = true> <Delay = 0.66>
+ST_6 : Operation 42 [1/1] (0.00ns)   --->   "%write_ln1156 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %gates_2, i32 %bitcast_ln1156_4" [src/moe.cpp:1156]   --->   Operation 42 'write' 'write_ln1156' <Predicate = (trunc_ln1155 == 2)> <Delay = 0.00>
+ST_6 : Operation 43 [1/1] (0.36ns)   --->   "%br_ln1156 = br void %arrayidx513.exit" [src/moe.cpp:1156]   --->   Operation 43 'br' 'br_ln1156' <Predicate = (trunc_ln1155 == 2)> <Delay = 0.36>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%write_ln1156 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %gates_1, i32 %bitcast_ln1156_4" [src/moe.cpp:1156]   --->   Operation 44 'write' 'write_ln1156' <Predicate = (trunc_ln1155 == 1)> <Delay = 0.00>
+ST_6 : Operation 45 [1/1] (0.36ns)   --->   "%br_ln1156 = br void %arrayidx513.exit" [src/moe.cpp:1156]   --->   Operation 45 'br' 'br_ln1156' <Predicate = (trunc_ln1155 == 1)> <Delay = 0.36>
+ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%write_ln1156 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %gates_0, i32 %bitcast_ln1156_4" [src/moe.cpp:1156]   --->   Operation 46 'write' 'write_ln1156' <Predicate = (trunc_ln1155 == 0)> <Delay = 0.00>
+ST_6 : Operation 47 [1/1] (0.36ns)   --->   "%br_ln1156 = br void %arrayidx513.exit" [src/moe.cpp:1156]   --->   Operation 47 'br' 'br_ln1156' <Predicate = (trunc_ln1155 == 0)> <Delay = 0.36>
+ST_6 : Operation 48 [1/1] (0.00ns)   --->   "%write_ln1156 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %gates_3, i32 %bitcast_ln1156_4" [src/moe.cpp:1156]   --->   Operation 48 'write' 'write_ln1156' <Predicate = (trunc_ln1155 == 3)> <Delay = 0.00>
+ST_6 : Operation 49 [1/1] (0.36ns)   --->   "%br_ln1156 = br void %arrayidx513.exit" [src/moe.cpp:1156]   --->   Operation 49 'br' 'br_ln1156' <Predicate = (trunc_ln1155 == 3)> <Delay = 0.36>
+ST_6 : Operation 50 [1/1] (0.00ns)   --->   "%mux_case_3927 = phi i32 %div, void %arrayidx513.case.3, i32 %bitcast_ln1156_3, void %arrayidx513.case.2, i32 %bitcast_ln1156_3, void %arrayidx513.case.1, i32 %bitcast_ln1156_3, void %arrayidx513.case.0" [src/moe.cpp:1156]   --->   Operation 50 'phi' 'mux_case_3927' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%mux_case_2824 = phi i32 %bitcast_ln1156_2, void %arrayidx513.case.3, i32 %div, void %arrayidx513.case.2, i32 %bitcast_ln1156_2, void %arrayidx513.case.1, i32 %bitcast_ln1156_2, void %arrayidx513.case.0" [src/moe.cpp:1156]   --->   Operation 51 'phi' 'mux_case_2824' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 52 [1/1] (0.00ns)   --->   "%mux_case_1721 = phi i32 %bitcast_ln1156_1, void %arrayidx513.case.3, i32 %bitcast_ln1156_1, void %arrayidx513.case.2, i32 %div, void %arrayidx513.case.1, i32 %bitcast_ln1156_1, void %arrayidx513.case.0" [src/moe.cpp:1156]   --->   Operation 52 'phi' 'mux_case_1721' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 53 [1/1] (0.00ns)   --->   "%mux_case_0518 = phi i32 %bitcast_ln1156, void %arrayidx513.case.3, i32 %bitcast_ln1156, void %arrayidx513.case.2, i32 %bitcast_ln1156, void %arrayidx513.case.1, i32 %div, void %arrayidx513.case.0" [src/moe.cpp:1156]   --->   Operation 53 'phi' 'mux_case_0518' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 54 [1/1] (0.36ns)   --->   "%store_ln1155 = store i3 %add_ln1155, i3 %e" [src/moe.cpp:1155]   --->   Operation 54 'store' 'store_ln1155' <Predicate = true> <Delay = 0.36>
+ST_6 : Operation 55 [1/1] (0.00ns)   --->   "%store_ln1156 = store i32 %mux_case_3927, i32 %mux_case_3927_phi" [src/moe.cpp:1156]   --->   Operation 55 'store' 'store_ln1156' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 56 [1/1] (0.00ns)   --->   "%store_ln1156 = store i32 %mux_case_2824, i32 %mux_case_2824_phi" [src/moe.cpp:1156]   --->   Operation 56 'store' 'store_ln1156' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 57 [1/1] (0.00ns)   --->   "%store_ln1156 = store i32 %mux_case_1721, i32 %mux_case_1721_phi" [src/moe.cpp:1156]   --->   Operation 57 'store' 'store_ln1156' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 58 [1/1] (0.00ns)   --->   "%store_ln1156 = store i32 %mux_case_0518, i32 %mux_case_0518_phi" [src/moe.cpp:1156]   --->   Operation 58 'store' 'store_ln1156' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln1155 = br void %for.inc54" [src/moe.cpp:1155]   --->   Operation 59 'br' 'br_ln1155' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 7.574ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln1155', src/moe.cpp:1155) of constant 0 on local variable 'e', src/moe.cpp:1155 [16]  (0.362 ns)
+	'load' operation 3 bit ('e', src/moe.cpp:1155) on local variable 'e', src/moe.cpp:1155 [19]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln1155', src/moe.cpp:1155) [20]  (0.524 ns)
+	wire read operation ('gates_3_read', src/moe.cpp:1156) on port 'gates_3' (src/moe.cpp:1156) [34]  (0.000 ns)
+	'sparsemux' operation 32 bit ('tmp_2', src/moe.cpp:1156) [36]  (0.420 ns)
+	'fdiv' operation 32 bit ('div', src/moe.cpp:1156) [37]  (6.268 ns)
+
+ <State 2>: 6.268ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', src/moe.cpp:1156) [37]  (6.268 ns)
+
+ <State 3>: 6.268ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', src/moe.cpp:1156) [37]  (6.268 ns)
+
+ <State 4>: 6.268ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', src/moe.cpp:1156) [37]  (6.268 ns)
+
+ <State 5>: 6.268ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', src/moe.cpp:1156) [37]  (6.268 ns)
+
+ <State 6>: 6.630ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', src/moe.cpp:1156) [37]  (6.268 ns)
+	multiplexor before 'phi' operation 32 bit ('mux_case_3927', src/moe.cpp:1156) with incoming values : ('bitcast_ln1156_3', src/moe.cpp:1156) ('div', src/moe.cpp:1156) [53]  (0.362 ns)
+	'phi' operation 32 bit ('mux_case_3927', src/moe.cpp:1156) with incoming values : ('bitcast_ln1156_3', src/moe.cpp:1156) ('div', src/moe.cpp:1156) [53]  (0.000 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

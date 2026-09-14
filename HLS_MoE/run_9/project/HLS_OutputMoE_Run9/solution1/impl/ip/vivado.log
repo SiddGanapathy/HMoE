@@ -3,16 +3,16 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sun Sep 13 13:17:43 2026
-# Process ID: 1870217
+# Start of session at: Mon Sep 14 21:04:04 2026
+# Process ID: 2375562
 # Current directory: /home/simics/HMoE/HLS_HMoE/run_9/project/HLS_OutputMoE_Run9/solution1/impl/ip
 # Command line: vivado -notrace -mode batch -source run_ippack.tcl
 # Log file: /home/simics/HMoE/HLS_HMoE/run_9/project/HLS_OutputMoE_Run9/solution1/impl/ip/vivado.log
 # Journal file: /home/simics/HMoE/HLS_HMoE/run_9/project/HLS_OutputMoE_Run9/solution1/impl/ip/vivado.jou
-# Running On: cie-n2, OS: Linux, CPU Frequency: 1899.724 MHz, CPU Physical cores: 6, Host memory: 33506 MB
+# Running On: cie-n2, OS: Linux, CPU Frequency: 1900.448 MHz, CPU Physical cores: 6, Host memory: 33506 MB
 #-----------------------------------------------------------
 source run_ippack.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1342.145 ; gain = 0.023 ; free physical = 7365 ; free virtual = 26490
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1351.723 ; gain = 0.023 ; free physical = 5901 ; free virtual = 26109
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/simics/HMoE/Vivado/2023.2/data/ip'.
@@ -31,4 +31,4 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'output_moe_fmul_3
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/simics/HMoE/Vivado/2023.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Sun Sep 13 13:17:57 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 14 21:04:19 2026...

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'output_moe'" level="0">
-<item name = "Date">Sun Sep 13 13:16:58 2026
+<item name = "Date">Mon Sep 14 21:03:20 2026
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">HLS_OutputMoE_Run9</item>
@@ -31,17 +31,17 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_output_moe_Pipeline_VITIS_LOOP_1079_2_fu_2274">output_moe_Pipeline_VITIS_LOOP_1079_2, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
-<column name="grp_output_moe_Pipeline_VITIS_LOOP_1092_3_fu_2285">output_moe_Pipeline_VITIS_LOOP_1092_3, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_output_moe_Pipeline_VITIS_LOOP_1130_2_fu_2274">output_moe_Pipeline_VITIS_LOOP_1130_2, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_output_moe_Pipeline_VITIS_LOOP_1143_3_fu_2285">output_moe_Pipeline_VITIS_LOOP_1143_3, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
 <column name="grp_expert_engine_fu_2294">expert_engine, 94079, 94079, 0.941 ms, 0.941 ms, 94079, 94079, no</column>
-<column name="grp_output_moe_Pipeline_VITIS_LOOP_1099_4_fu_4424">output_moe_Pipeline_VITIS_LOOP_1099_4, 12, 12, 0.120 us, 0.120 us, 12, 12, no</column>
-<column name="grp_output_moe_Pipeline_VITIS_LOOP_1104_5_fu_4442">output_moe_Pipeline_VITIS_LOOP_1104_5, 26, 26, 0.260 us, 0.260 us, 26, 26, no</column>
-<column name="grp_output_moe_Pipeline_VITIS_LOOP_1118_6_fu_4459">output_moe_Pipeline_VITIS_LOOP_1118_6, 16, 16, 0.160 us, 0.160 us, 16, 16, no</column>
+<column name="grp_output_moe_Pipeline_VITIS_LOOP_1150_4_fu_4424">output_moe_Pipeline_VITIS_LOOP_1150_4, 12, 12, 0.120 us, 0.120 us, 12, 12, no</column>
+<column name="grp_output_moe_Pipeline_VITIS_LOOP_1155_5_fu_4442">output_moe_Pipeline_VITIS_LOOP_1155_5, 26, 26, 0.260 us, 0.260 us, 26, 26, no</column>
+<column name="grp_output_moe_Pipeline_VITIS_LOOP_1169_6_fu_4459">output_moe_Pipeline_VITIS_LOOP_1169_6, 16, 16, 0.160 us, 0.160 us, 16, 16, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_1075_1">544, 544, 136, -, -, 4, no</column>
+<column name="- VITIS_LOOP_1126_1">544, 544, 136, -, -, 4, no</column>
 </table>
 </item>
 </section>
@@ -74,11 +74,11 @@
 <column name="fadd_32ns_32ns_32_2_full_dsp_1_U1469">fadd_32ns_32ns_32_2_full_dsp_1, 0, 2, 177, 233, 0</column>
 <column name="faddfsub_32ns_32ns_32_2_full_dsp_1_U1468">faddfsub_32ns_32ns_32_2_full_dsp_1, 0, 2, 177, 233, 0</column>
 <column name="fmul_32ns_32ns_32_2_max_dsp_1_U1467">fmul_32ns_32ns_32_2_max_dsp_1, 0, 3, 128, 78, 0</column>
-<column name="grp_output_moe_Pipeline_VITIS_LOOP_1079_2_fu_2274">output_moe_Pipeline_VITIS_LOOP_1079_2, 1, 0, 146, 135, 0</column>
-<column name="grp_output_moe_Pipeline_VITIS_LOOP_1092_3_fu_2285">output_moe_Pipeline_VITIS_LOOP_1092_3, 0, 0, 105, 222, 0</column>
-<column name="grp_output_moe_Pipeline_VITIS_LOOP_1099_4_fu_4424">output_moe_Pipeline_VITIS_LOOP_1099_4, 0, 7, 385, 899, 0</column>
-<column name="grp_output_moe_Pipeline_VITIS_LOOP_1104_5_fu_4442">output_moe_Pipeline_VITIS_LOOP_1104_5, 0, 0, 271, 198, 0</column>
-<column name="grp_output_moe_Pipeline_VITIS_LOOP_1118_6_fu_4459">output_moe_Pipeline_VITIS_LOOP_1118_6, 0, 13, 1120, 822, 0</column>
+<column name="grp_output_moe_Pipeline_VITIS_LOOP_1130_2_fu_2274">output_moe_Pipeline_VITIS_LOOP_1130_2, 1, 0, 146, 135, 0</column>
+<column name="grp_output_moe_Pipeline_VITIS_LOOP_1143_3_fu_2285">output_moe_Pipeline_VITIS_LOOP_1143_3, 0, 0, 105, 222, 0</column>
+<column name="grp_output_moe_Pipeline_VITIS_LOOP_1150_4_fu_4424">output_moe_Pipeline_VITIS_LOOP_1150_4, 0, 7, 385, 899, 0</column>
+<column name="grp_output_moe_Pipeline_VITIS_LOOP_1155_5_fu_4442">output_moe_Pipeline_VITIS_LOOP_1155_5, 0, 0, 271, 198, 0</column>
+<column name="grp_output_moe_Pipeline_VITIS_LOOP_1169_6_fu_4459">output_moe_Pipeline_VITIS_LOOP_1169_6, 0, 13, 1120, 822, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -99,8 +99,8 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln1075_fu_4499_p2">+, 0, 0, 10, 3, 1</column>
-<column name="icmp_ln1075_fu_4493_p2">icmp, 0, 0, 12, 3, 4</column>
+<column name="add_ln1126_fu_4499_p2">+, 0, 0, 10, 3, 1</column>
+<column name="icmp_ln1126_fu_4493_p2">icmp, 0, 0, 12, 3, 4</column>
 <column name="icmp_ln9_1_fu_4528_p2">icmp, 0, 0, 9, 2, 1</column>
 <column name="icmp_ln9_2_fu_4534_p2">icmp, 0, 0, 10, 2, 3</column>
 <column name="icmp_ln9_fu_4514_p2">icmp, 0, 0, 9, 2, 1</column>
@@ -152,21 +152,21 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="acc_reg_4720">22, 0, 32, 10</column>
-<column name="add_ln1075_reg_4710">3, 0, 3, 0</column>
+<column name="add_ln1126_reg_4710">3, 0, 3, 0</column>
 <column name="ap_CS_fsm">11, 0, 11, 0</column>
 <column name="e_fu_2210">3, 0, 3, 0</column>
 <column name="empty_fu_2214">32, 0, 32, 0</column>
 <column name="grp_expert_engine_fu_2294_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_output_moe_Pipeline_VITIS_LOOP_1079_2_fu_2274_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_output_moe_Pipeline_VITIS_LOOP_1092_3_fu_2285_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_output_moe_Pipeline_VITIS_LOOP_1099_4_fu_4424_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_output_moe_Pipeline_VITIS_LOOP_1104_5_fu_4442_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_output_moe_Pipeline_VITIS_LOOP_1118_6_fu_4459_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_output_moe_Pipeline_VITIS_LOOP_1130_2_fu_2274_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_output_moe_Pipeline_VITIS_LOOP_1143_3_fu_2285_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_output_moe_Pipeline_VITIS_LOOP_1150_4_fu_4424_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_output_moe_Pipeline_VITIS_LOOP_1155_5_fu_4442_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_output_moe_Pipeline_VITIS_LOOP_1169_6_fu_4459_ap_start_reg">1, 0, 1, 0</column>
 <column name="mux_case_11_fu_2218">32, 0, 32, 0</column>
 <column name="mux_case_25_fu_2222">32, 0, 32, 0</column>
 <column name="mux_case_310_fu_2226">32, 0, 32, 0</column>
 <column name="tmp_6_reg_4715">2, 0, 9, 7</column>
-<column name="trunc_ln1075_reg_4703">2, 0, 2, 0</column>
+<column name="trunc_ln1126_reg_4703">2, 0, 2, 0</column>
 </table>
 </item>
 </section>

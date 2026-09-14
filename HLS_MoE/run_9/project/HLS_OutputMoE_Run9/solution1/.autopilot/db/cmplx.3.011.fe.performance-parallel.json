@@ -1,9 +1,9 @@
 {
   "0": {
     "basicblocks": 33,
-    "calls": "2",
+    "calls": "1",
     "file": "moe.cpp",
-    "fileloc": 1055,
+    "fileloc": 1106,
     "instructions": 139,
     "loads": {
       "G": 2,
@@ -17,6 +17,15 @@
     "total_instructions": 8620
   },
   "1": {
+    "basicblocks": 1,
+    "calls": "2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2",
+    "file": "moe.cpp",
+    "fileloc": 952,
+    "instructions": 41,
+    "name": "expert_engine",
+    "total_instructions": 8481
+  },
+  "2": {
     "basicblocks": 67,
     "calls": "",
     "file": "moe.cpp",
@@ -30,14 +39,5 @@
       "L": 1
     },
     "total_instructions": 422
-  },
-  "2": {
-    "basicblocks": 1,
-    "calls": "1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
-    "file": "moe.cpp",
-    "fileloc": 901,
-    "instructions": 41,
-    "name": "expert_engine",
-    "total_instructions": 8481
   }
 }

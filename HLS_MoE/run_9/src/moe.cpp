@@ -1,6 +1,6 @@
 #include "moe.h"
 #include <cmath>
-
+#include <stdio.h>
 
 // -----------------------------------------------------------------------------
 // Gate parameters
@@ -704,7 +704,8 @@ static void generic_mlp_head(
     const data_t w3[1][H3],
     const data_t b3[1],
 
-    data_t &result
+    data_t &result,
+    int debug
 )
 {
     data_t l1[H1];
@@ -727,6 +728,17 @@ static void generic_mlp_head(
         }
 
         l1[i] = elu(acc);
+
+#ifndef __SYNTHESIS__
+        if (debug) {
+            printf(
+                "DEBUG E0 DSP L0[%d]: pre=%f post=%f\n",
+                i,
+                (double)acc,
+                (double)l1[i]
+            );
+        }
+#endif
     }
 
     // --------------------------------------------------------
@@ -741,6 +753,17 @@ static void generic_mlp_head(
         }
 
         l2[i] = elu(acc);
+
+#ifndef __SYNTHESIS__
+        if (debug) {
+            printf(
+                "DEBUG E0 DSP L1[%d]: pre=%f post=%f\n",
+                i,
+                (double)acc,
+                (double)l2[i]
+            );
+        }
+#endif
     }
 
     // --------------------------------------------------------
@@ -755,11 +778,21 @@ static void generic_mlp_head(
         }
 
         l3[i] = elu(acc);
+
+#ifndef __SYNTHESIS__
+        if (debug) {
+            printf(
+                "DEBUG E0 DSP L2[%d]: pre=%f post=%f\n",
+                i,
+                (double)acc,
+                (double)l3[i]
+            );
+        }
+#endif
     }
 
     // --------------------------------------------------------
     // Layer 3: 8 -> 1
-    // No activation on final layer.
     // --------------------------------------------------------
 
     data_t acc = b3[0];
@@ -769,8 +802,16 @@ static void generic_mlp_head(
     }
 
     result = acc;
-}
 
+#ifndef __SYNTHESIS__
+    if (debug) {
+        printf(
+            "DEBUG E0 DSP L3: output=%f\n",
+            (double)result
+        );
+    }
+#endif
+}
 
 // ------------------------------------------------------------
 // Generic expert
@@ -844,7 +885,8 @@ static void generic_expert(
         perf_w1, perf_b1,
         perf_w2, perf_b2,
         perf_w3, perf_b3,
-        output[0]
+        output[0],
+        0
     );
 
     generic_mlp_head(
@@ -853,7 +895,8 @@ static void generic_expert(
         lut_w1, lut_b1,
         lut_w2, lut_b2,
         lut_w3, lut_b3,
-        output[1]
+        output[1],
+        0
     );
 
     generic_mlp_head(
@@ -862,7 +905,8 @@ static void generic_expert(
         ff_w1, ff_b1,
         ff_w2, ff_b2,
         ff_w3, ff_b3,
-        output[2]
+        output[2],
+        0
     );
 
     generic_mlp_head(
@@ -871,7 +915,8 @@ static void generic_expert(
         dsp_w1, dsp_b1,
         dsp_w2, dsp_b2,
         dsp_w3, dsp_b3,
-        output[3]
+        output[3],
+        1
     );
 
     generic_mlp_head(
@@ -880,8 +925,14 @@ static void generic_expert(
         bram_w1, bram_b1,
         bram_w2, bram_b2,
         bram_w3, bram_b3,
-        output[4]
+        output[4],
+        0
     );
+    
+    #ifndef __SYNTHESIS__
+    printf("DEBUG expert: perf=%f lut=%f ff=%f dsp=%f bram=%f\n",
+           output[0], output[1], output[2], output[3], output[4]);
+#endif
 }
 
 

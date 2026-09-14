@@ -1,36 +1,36 @@
 --- !Passed
 Pass:            reflow-inliner
 Name:            Inline
-DebugLoc:        { File: src/moe.cpp, Line: 709, Column: 0 }
-Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rf
+DebugLoc:        { File: src/moe.cpp, Line: 710, Column: 0 }
+Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rfi
 Args:            
   - String:          'Inlining function '''
   - Callee:          'elu(float)'
     DebugLoc:        { File: src/moe.cpp, Line: 544, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'generic_mlp_head(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float&)'
-    DebugLoc:        { File: src/moe.cpp, Line: 709, Column: 0 }
+  - Caller:          'generic_mlp_head(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float&, int)'
+    DebugLoc:        { File: src/moe.cpp, Line: 710, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            Inline
-DebugLoc:        { File: src/moe.cpp, Line: 906, Column: 0 }
+DebugLoc:        { File: src/moe.cpp, Line: 957, Column: 0 }
 Function:        _ZL13expert_enginePKfPA5_f
 Args:            
   - String:          'Inlining function '''
   - Callee:          'generic_expert(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float*)'
-    DebugLoc:        { File: src/moe.cpp, Line: 840, Column: 0 }
+    DebugLoc:        { File: src/moe.cpp, Line: 881, Column: 0 }
   - String:          ''' into '''
   - Caller:          'expert_engine(float const*, float (*) [5])'
-    DebugLoc:        { File: src/moe.cpp, Line: 906, Column: 0 }
+    DebugLoc:        { File: src/moe.cpp, Line: 957, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/moe.cpp, Line: 710, Column: 12 }
-Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rf
+DebugLoc:        { File: src/moe.cpp, Line: 711, Column: 12 }
+Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rfi
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -47,8 +47,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/moe.cpp, Line: 711, Column: 12 }
-Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rf
+DebugLoc:        { File: src/moe.cpp, Line: 712, Column: 12 }
+Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rfi
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -65,8 +65,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/moe.cpp, Line: 712, Column: 12 }
-Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rf
+DebugLoc:        { File: src/moe.cpp, Line: 713, Column: 12 }
+Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rfi
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -83,7 +83,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/moe.cpp, Line: 1063, Column: 9 }
+DebugLoc:        { File: src/moe.cpp, Line: 1114, Column: 9 }
 Function:        _Z10output_moePKfPfS1_
 Args:            
   - String:          'Applying '
@@ -101,7 +101,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/moe.cpp, Line: 1060, Column: 0 }
+DebugLoc:        { File: src/moe.cpp, Line: 1111, Column: 0 }
 Function:        _Z10output_moePKfPfS1_
 Args:            
   - String:          'Applying '
@@ -119,7 +119,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/moe.cpp, Line: 1060, Column: 0 }
+DebugLoc:        { File: src/moe.cpp, Line: 1111, Column: 0 }
 Function:        _Z10output_moePKfPfS1_
 Args:            
   - String:          'Applying '
@@ -139,9 +139,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_725_2
+  - LoopName:        VITIS_LOOP_726_2
   - String:          '> at '
-  - LoopLoc:         'src/moe.cpp:725:27'
+  - LoopLoc:         'src/moe.cpp:726:27'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -149,9 +149,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_736_3
+  - LoopName:        VITIS_LOOP_748_3
   - String:          '> at '
-  - LoopLoc:         'src/moe.cpp:736:23'
+  - LoopLoc:         'src/moe.cpp:748:23'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -159,9 +159,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_750_5
+  - LoopName:        VITIS_LOOP_773_5
   - String:          '> at '
-  - LoopLoc:         'src/moe.cpp:750:23'
+  - LoopLoc:         'src/moe.cpp:773:23'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -169,9 +169,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_767_7
+  - LoopName:        VITIS_LOOP_800_7
   - String:          '> at '
-  - LoopLoc:         'src/moe.cpp:767:23'
+  - LoopLoc:         'src/moe.cpp:800:23'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -179,9 +179,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_1079_2
+  - LoopName:        VITIS_LOOP_1130_2
   - String:          '> at '
-  - LoopLoc:         'src/moe.cpp:1079:28'
+  - LoopLoc:         'src/moe.cpp:1130:28'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -189,9 +189,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_1092_3
+  - LoopName:        VITIS_LOOP_1143_3
   - String:          '> at '
-  - LoopLoc:         'src/moe.cpp:1092:24'
+  - LoopLoc:         'src/moe.cpp:1143:24'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -199,9 +199,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_1099_4
+  - LoopName:        VITIS_LOOP_1150_4
   - String:          '> at '
-  - LoopLoc:         'src/moe.cpp:1099:24'
+  - LoopLoc:         'src/moe.cpp:1150:24'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -209,9 +209,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_1104_5
+  - LoopName:        VITIS_LOOP_1155_5
   - String:          '> at '
-  - LoopLoc:         'src/moe.cpp:1104:24'
+  - LoopLoc:         'src/moe.cpp:1155:24'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -219,51 +219,51 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_1118_6
+  - LoopName:        VITIS_LOOP_1169_6
   - String:          '> at '
-  - LoopLoc:         'src/moe.cpp:1118:24'
+  - LoopLoc:         'src/moe.cpp:1169:24'
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/moe.cpp, Line: 1122, Column: 28 }
+DebugLoc:        { File: src/moe.cpp, Line: 1173, Column: 28 }
 Function:        _Z10output_moePKfPfS1_
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_1122_7
+  - LoopName:        VITIS_LOOP_1173_7
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/moe.cpp, Line: 753, Column: 27 }
-Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rf
+DebugLoc:        { File: src/moe.cpp, Line: 776, Column: 27 }
+Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rfi
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_753_6
+  - LoopName:        VITIS_LOOP_776_6
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/moe.cpp, Line: 739, Column: 27 }
-Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rf
+DebugLoc:        { File: src/moe.cpp, Line: 751, Column: 27 }
+Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rfi
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_739_4
+  - LoopName:        VITIS_LOOP_751_4
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/moe.cpp, Line: 1060, Column: 0 }
+DebugLoc:        { File: src/moe.cpp, Line: 1111, Column: 0 }
 Function:        _Z10output_moePKfPfS1_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_1122_7
+  - LoopName:        VITIS_LOOP_1173_7
   - String:          ''' ('
-  - LoopLoc:         'src/moe.cpp:1122:28'
+  - LoopLoc:         'src/moe.cpp:1173:28'
   - String:          ') '
   - String:          'in function '''
   - String:          output_moe
@@ -273,13 +273,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/moe.cpp, Line: 709, Column: 0 }
-Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rf
+DebugLoc:        { File: src/moe.cpp, Line: 710, Column: 0 }
+Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rfi
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_753_6
+  - LoopName:        VITIS_LOOP_776_6
   - String:          ''' ('
-  - LoopLoc:         'src/moe.cpp:753:27'
+  - LoopLoc:         'src/moe.cpp:776:27'
   - String:          ') '
   - String:          'in function '''
   - String:          generic_mlp_head
@@ -289,13 +289,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/moe.cpp, Line: 709, Column: 0 }
-Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rf
+DebugLoc:        { File: src/moe.cpp, Line: 710, Column: 0 }
+Function:        _ZL16generic_mlp_headPKfPA128_S_S0_PA32_S_S0_PA16_S_S0_PA8_S_S0_Rfi
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_739_4
+  - LoopName:        VITIS_LOOP_751_4
   - String:          ''' ('
-  - LoopLoc:         'src/moe.cpp:739:27'
+  - LoopLoc:         'src/moe.cpp:751:27'
   - String:          ') '
   - String:          'in function '''
   - String:          generic_mlp_head
@@ -1825,7 +1825,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoParallelPerformanceDrivenVerbosePassed
-DebugLoc:        { File: src/moe.cpp, Line: 1065, Column: 12 }
+DebugLoc:        { File: src/moe.cpp, Line: 1116, Column: 12 }
 Function:        _Z10output_moePKfPfS1_
 Args:            
   - PragmaType:      array_partition
@@ -1836,7 +1836,7 @@ Args:
   - String:          ' '
   - PragmaFunction:  output_moe
   - String:          ' '
-  - varLoc:          'src/moe.cpp:1065:12'
+  - varLoc:          'src/moe.cpp:1116:12'
   - String:          ' '
   - VarName:         expert_output
   - String:          ' '
@@ -1844,7 +1844,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoArrayXform
-DebugLoc:        { File: src/moe.cpp, Line: 1065, Column: 12 }
+DebugLoc:        { File: src/moe.cpp, Line: 1116, Column: 12 }
 Function:        _Z10output_moePKfPfS1_
 Args:            
   - String:          'Inferring pragma '''
@@ -2583,7 +2583,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/moe.cpp, Line: 1065, Column: 12 }
+DebugLoc:        { File: src/moe.cpp, Line: 1116, Column: 12 }
 Function:        _Z10output_moePKfPfS1_
 Args:            
   - String:          'Applying '

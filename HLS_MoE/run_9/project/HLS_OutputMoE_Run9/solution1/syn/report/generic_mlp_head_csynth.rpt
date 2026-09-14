@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'generic_mlp_head'
 ================================================================
-* Date:           Sun Sep 13 13:16:48 2026
+* Date:           Mon Sep 14 21:03:08 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        HLS_OutputMoE_Run9
@@ -38,10 +38,10 @@
         |                                                       |                                            |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
         |                        Instance                       |                   Module                   |   min   |   max   |    min   |    max   | min | max |   Type  |
         +-------------------------------------------------------+--------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
-        |grp_generic_mlp_head_Pipeline_VITIS_LOOP_736_3_fu_487  |generic_mlp_head_Pipeline_VITIS_LOOP_736_3  |       89|       89|  0.890 us|  0.890 us|   89|   89|       no|
-        |grp_generic_mlp_head_Pipeline_VITIS_LOOP_725_2_fu_605  |generic_mlp_head_Pipeline_VITIS_LOOP_725_2  |      133|      133|  1.330 us|  1.330 us|  133|  133|       no|
-        |grp_generic_mlp_head_Pipeline_VITIS_LOOP_750_5_fu_617  |generic_mlp_head_Pipeline_VITIS_LOOP_750_5  |       49|       49|  0.490 us|  0.490 us|   49|   49|       no|
-        |grp_generic_mlp_head_Pipeline_VITIS_LOOP_767_7_fu_679  |generic_mlp_head_Pipeline_VITIS_LOOP_767_7  |       13|       13|  0.130 us|  0.130 us|   13|   13|       no|
+        |grp_generic_mlp_head_Pipeline_VITIS_LOOP_748_3_fu_487  |generic_mlp_head_Pipeline_VITIS_LOOP_748_3  |       89|       89|  0.890 us|  0.890 us|   89|   89|       no|
+        |grp_generic_mlp_head_Pipeline_VITIS_LOOP_726_2_fu_605  |generic_mlp_head_Pipeline_VITIS_LOOP_726_2  |      133|      133|  1.330 us|  1.330 us|  133|  133|       no|
+        |grp_generic_mlp_head_Pipeline_VITIS_LOOP_773_5_fu_617  |generic_mlp_head_Pipeline_VITIS_LOOP_773_5  |       49|       49|  0.490 us|  0.490 us|   49|   49|       no|
+        |grp_generic_mlp_head_Pipeline_VITIS_LOOP_800_7_fu_679  |generic_mlp_head_Pipeline_VITIS_LOOP_800_7  |       13|       13|  0.130 us|  0.130 us|   13|   13|       no|
         +-------------------------------------------------------+--------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
 
         * Loop: 
@@ -49,7 +49,7 @@
         |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_722_1  |     4544|     4544|       142|          -|          -|    32|        no|
+        |- VITIS_LOOP_723_1  |     4544|     4544|       142|          -|          -|    32|        no|
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -120,10 +120,10 @@
     |fmul_32ns_32ns_32_2_max_dsp_1_U323                     |fmul_32ns_32ns_32_2_max_dsp_1               |        0|   3|   128|    78|    0|
     |fmul_32ns_32ns_32_2_max_dsp_1_U324                     |fmul_32ns_32ns_32_2_max_dsp_1               |        0|   3|   128|    78|    0|
     |fmul_32ns_32ns_32_2_max_dsp_1_U325                     |fmul_32ns_32ns_32_2_max_dsp_1               |        0|   3|   128|    78|    0|
-    |grp_generic_mlp_head_Pipeline_VITIS_LOOP_725_2_fu_605  |generic_mlp_head_Pipeline_VITIS_LOOP_725_2  |        0|   0|   146|   138|    0|
-    |grp_generic_mlp_head_Pipeline_VITIS_LOOP_736_3_fu_487  |generic_mlp_head_Pipeline_VITIS_LOOP_736_3  |        0|  80|  8016|  5312|    0|
-    |grp_generic_mlp_head_Pipeline_VITIS_LOOP_750_5_fu_617  |generic_mlp_head_Pipeline_VITIS_LOOP_750_5  |        0|   0|  1789|   335|    0|
-    |grp_generic_mlp_head_Pipeline_VITIS_LOOP_767_7_fu_679  |generic_mlp_head_Pipeline_VITIS_LOOP_767_7  |        0|   0|   174|   155|    0|
+    |grp_generic_mlp_head_Pipeline_VITIS_LOOP_726_2_fu_605  |generic_mlp_head_Pipeline_VITIS_LOOP_726_2  |        0|   0|   146|   138|    0|
+    |grp_generic_mlp_head_Pipeline_VITIS_LOOP_748_3_fu_487  |generic_mlp_head_Pipeline_VITIS_LOOP_748_3  |        0|  80|  8016|  5312|    0|
+    |grp_generic_mlp_head_Pipeline_VITIS_LOOP_773_5_fu_617  |generic_mlp_head_Pipeline_VITIS_LOOP_773_5  |        0|   0|  1789|   335|    0|
+    |grp_generic_mlp_head_Pipeline_VITIS_LOOP_800_7_fu_679  |generic_mlp_head_Pipeline_VITIS_LOOP_800_7  |        0|   0|   174|   155|    0|
     +-------------------------------------------------------+--------------------------------------------+---------+----+------+------+-----+
     |Total                                                  |                                            |        0| 169| 15322| 11886|    0|
     +-------------------------------------------------------+--------------------------------------------+---------+----+------+------+-----+
@@ -141,11 +141,11 @@
     +------------------------+----------+----+---+----+------------+------------+
     |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +------------------------+----------+----+---+----+------------+------------+
-    |add_ln722_fu_728_p2     |         +|   0|  0|  13|           6|           1|
+    |add_ln723_fu_728_p2     |         +|   0|  0|  13|           6|           1|
     |and_ln545_fu_914_p2     |       and|   0|  0|   2|           1|           1|
     |icmp_ln545_2_fu_902_p2  |      icmp|   0|  0|  30|          23|           1|
     |icmp_ln545_fu_896_p2    |      icmp|   0|  0|  15|           8|           2|
-    |icmp_ln722_fu_722_p2    |      icmp|   0|  0|  14|           6|           7|
+    |icmp_ln723_fu_722_p2    |      icmp|   0|  0|  14|           6|           7|
     |or_ln545_fu_908_p2      |        or|   0|  0|   2|           1|           1|
     |l1_fu_920_p3            |    select|   0|  0|  32|           1|          32|
     +------------------------+----------+----+---+----+------------+------------+
@@ -269,7 +269,7 @@
     |                                Name                                | FF | LUT| Bits| Const Bits|
     +--------------------------------------------------------------------+----+----+-----+-----------+
     |acc_reg_1733                                                        |  32|   0|   32|          0|
-    |add_ln722_reg_1558                                                  |   6|   0|    6|          0|
+    |add_ln723_reg_1558                                                  |   6|   0|    6|          0|
     |ap_CS_fsm                                                           |  16|   0|   16|          0|
     |ap_predicate_pred1181_state10                                       |   1|   0|    1|          0|
     |ap_predicate_pred1193_state10                                       |   1|   0|    1|          0|
@@ -303,10 +303,10 @@
     |ap_predicate_pred1389_state10                                       |   1|   0|    1|          0|
     |ap_predicate_pred1396_state10                                       |   1|   0|    1|          0|
     |ap_predicate_pred1403_state10                                       |   1|   0|    1|          0|
-    |grp_generic_mlp_head_Pipeline_VITIS_LOOP_725_2_fu_605_ap_start_reg  |   1|   0|    1|          0|
-    |grp_generic_mlp_head_Pipeline_VITIS_LOOP_736_3_fu_487_ap_start_reg  |   1|   0|    1|          0|
-    |grp_generic_mlp_head_Pipeline_VITIS_LOOP_750_5_fu_617_ap_start_reg  |   1|   0|    1|          0|
-    |grp_generic_mlp_head_Pipeline_VITIS_LOOP_767_7_fu_679_ap_start_reg  |   1|   0|    1|          0|
+    |grp_generic_mlp_head_Pipeline_VITIS_LOOP_726_2_fu_605_ap_start_reg  |   1|   0|    1|          0|
+    |grp_generic_mlp_head_Pipeline_VITIS_LOOP_748_3_fu_487_ap_start_reg  |   1|   0|    1|          0|
+    |grp_generic_mlp_head_Pipeline_VITIS_LOOP_773_5_fu_617_ap_start_reg  |   1|   0|    1|          0|
+    |grp_generic_mlp_head_Pipeline_VITIS_LOOP_800_7_fu_679_ap_start_reg  |   1|   0|    1|          0|
     |i_fu_232                                                            |   6|   0|    6|          0|
     |mux_case_034_fu_236                                                 |  32|   0|   32|          0|
     |mux_case_1074_fu_276                                                |  32|   0|   32|          0|
@@ -342,7 +342,7 @@
     |mux_case_970_fu_272                                                 |  32|   0|   32|          0|
     |tmp_3_reg_1741                                                      |  32|   0|   32|          0|
     |tmp_s_reg_1728                                                      |   5|   0|   12|          7|
-    |trunc_ln722_reg_1550                                                |   5|   0|    5|          0|
+    |trunc_ln723_reg_1550                                                |   5|   0|    5|          0|
     +--------------------------------------------------------------------+----+----+-----+-----------+
     |Total                                                               |1162|   0| 1169|          7|
     +--------------------------------------------------------------------+----+----+-----+-----------+

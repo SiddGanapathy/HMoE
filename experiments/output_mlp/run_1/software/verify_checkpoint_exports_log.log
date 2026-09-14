@@ -1,0 +1,253 @@
+==============================================================================
+LOADING CHECKPOINT
+==============================================================================
+/home/simics/HMoE/HierarchicalMoE/src/logs/auto-encoder/iccad/round1-40kernel/pragma_as_MLP/parallel_and_merge/class/post-gnn-3lp-3lm/dropout-0.1-MSE-scheduler-warmup-weight-decay-0.0001-no-mutual-info-PB-edge-attr-True_position-True-6L-SSL-False-gae-T-False-gae-P-False_regression_train_2026-09-06T04-33-56.349623/run1/500_val_model_state_dict.pth
+
+Correct nested expert mapping:
+  HLS Expert 0 -> experts.2.MLPs.experts.0.MLP_heads
+  HLS Expert 1 -> experts.2.MLPs.experts.1.MLP_heads
+  HLS Expert 2 -> experts.2.MLPs.experts.2.MLP_heads
+  HLS Expert 3 -> experts.2.MLPs.experts.3.MLP_heads
+
+==============================================================================
+VERIFYING CHECKPOINT AGAINST HLS TXT EXPORTS
+==============================================================================
+
+------------------------------------------------------------------------------
+EXPERT 0
+------------------------------------------------------------------------------
+
+  perf
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+  util-LUT
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+  util-FF
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+  util-DSP
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+  util-BRAM
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+------------------------------------------------------------------------------
+EXPERT 1
+------------------------------------------------------------------------------
+
+  perf
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+  util-LUT
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+  util-FF
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+  util-DSP
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+  util-BRAM
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+------------------------------------------------------------------------------
+EXPERT 2
+------------------------------------------------------------------------------
+
+  perf
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+  util-LUT
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+  util-FF
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+  util-DSP
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+  util-BRAM
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+------------------------------------------------------------------------------
+EXPERT 3
+------------------------------------------------------------------------------
+
+  perf
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+  util-LUT
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+  util-FF
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+  util-DSP
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+  util-BRAM
+    L0 weight: PASS ckpt=(32, 128) txt=(4096,) max_diff=0.000e+00
+    L0 bias: PASS ckpt=(32,) txt=(32,) max_diff=0.000e+00
+    L1 weight: PASS ckpt=(16, 32) txt=(512,) max_diff=0.000e+00
+    L1 bias: PASS ckpt=(16,) txt=(16,) max_diff=0.000e+00
+    L2 weight: PASS ckpt=(8, 16) txt=(128,) max_diff=0.000e+00
+    L2 bias: PASS ckpt=(8,) txt=(8,) max_diff=0.000e+00
+    L3 weight: PASS ckpt=(1, 8) txt=(8,) max_diff=0.000e+00
+    L3 bias: PASS ckpt=(1,) txt=() max_diff=0.000e+00
+
+==============================================================================
+VERIFICATION SUMMARY
+==============================================================================
+Expected arrays : 160
+PASS            : 160
+FAIL            : 0
+MISSING         : 0
+
+==============================================================================
+SUCCESS: ALL 160 ARRAYS MATCH
+==============================================================================
+
+Verified:
+  Checkpoint -> nested output-MoE experts
+  Nested experts -> HLS Expert 0..3
+  Checkpoint weights/biases -> TXT exports
+  Flattened TXT shapes -> original tensor shapes
+
+Next step:
+  Regenerate software_golden.npz using the
+  correct nested output-MoE experts.
+

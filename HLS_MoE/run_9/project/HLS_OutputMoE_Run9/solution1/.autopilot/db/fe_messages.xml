@@ -1,72 +1,75 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:714:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="generic_mlp_head" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=l1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="src/moe.cpp:708:9" msg_body="unused parameter 'debug'">
+        <args ClangWarningOption="unused-parameter"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:715:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="generic_mlp_head" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=l2 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="generic_mlp_head" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=l1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:716:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generic_mlp_head" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=l2 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:717:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="generic_mlp_head" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=l3 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:907:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:958:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="expert_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/run_9/scripts/run_hls.tcl:17:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="output_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=output_moe" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:1061:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:1112:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="output_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_hs port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:1067:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:1118:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="output_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=logits complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:1068:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:1119:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="output_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=gates complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:1069:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/moe.cpp:1120:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="output_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=output complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/moe.cpp:709:0" msg_body="Inlining function 'elu(float)' into 'generic_mlp_head(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float&amp;)'">
-        <args Callee="elu(float)" Callee-DebugLoc="File src/moe.cpp Line 544 Column 0" Caller="generic_mlp_head(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float&amp;)" Caller-DebugLoc="File src/moe.cpp Line 709 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/moe.cpp:710:0" msg_body="Inlining function 'elu(float)' into 'generic_mlp_head(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float&amp;, int)'">
+        <args Callee="elu(float)" Callee-DebugLoc="File src/moe.cpp Line 544 Column 0" Caller="generic_mlp_head(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float&amp;, int)" Caller-DebugLoc="File src/moe.cpp Line 710 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/moe.cpp:906:0" msg_body="Inlining function 'generic_expert(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float*)' into 'expert_engine(float const*, float (*) [5])'">
-        <args Callee="generic_expert(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float*)" Callee-DebugLoc="File src/moe.cpp Line 840 Column 0" Caller="expert_engine(float const*, float (*) [5])" Caller-DebugLoc="File src/moe.cpp Line 906 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/moe.cpp:957:0" msg_body="Inlining function 'generic_expert(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float*)' into 'expert_engine(float const*, float (*) [5])'">
+        <args Callee="generic_expert(float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float const (*) [128], float const*, float const (*) [32], float const*, float const (*) [16], float const*, float const (*) [8], float const*, float*)" Callee-DebugLoc="File src/moe.cpp Line 881 Column 0" Caller="expert_engine(float const*, float (*) [5])" Caller-DebugLoc="File src/moe.cpp Line 957 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/moe.cpp:710:12" msg_body="Applying array_partition to 'l1': Complete partitioning on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/moe.cpp:711:12" msg_body="Applying array_partition to 'l1': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="l1"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/moe.cpp:711:12" msg_body="Applying array_partition to 'l2': Complete partitioning on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/moe.cpp:712:12" msg_body="Applying array_partition to 'l2': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="l2"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/moe.cpp:712:12" msg_body="Applying array_partition to 'l3': Complete partitioning on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/moe.cpp:713:12" msg_body="Applying array_partition to 'l3': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="l3"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/moe.cpp:1063:9" msg_body="Applying array_partition to 'logits': Complete partitioning on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/moe.cpp:1114:9" msg_body="Applying array_partition to 'logits': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="logits"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/moe.cpp:1060:0" msg_body="Applying array_partition to 'output': Complete partitioning on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/moe.cpp:1111:0" msg_body="Applying array_partition to 'output': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="output"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/moe.cpp:1060:0" msg_body="Applying array_partition to 'gates': Complete partitioning on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/moe.cpp:1111:0" msg_body="Applying array_partition to 'gates': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="gates"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/moe.cpp:1122:28" msg_body="Loop 'VITIS_LOOP_1122_7' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="VITIS_LOOP_1122_7"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/moe.cpp:1173:28" msg_body="Loop 'VITIS_LOOP_1173_7' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_1173_7"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/moe.cpp:753:27" msg_body="Loop 'VITIS_LOOP_753_6' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="VITIS_LOOP_753_6"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/moe.cpp:776:27" msg_body="Loop 'VITIS_LOOP_776_6' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_776_6"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/moe.cpp:739:27" msg_body="Loop 'VITIS_LOOP_739_4' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="VITIS_LOOP_739_4"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/moe.cpp:751:27" msg_body="Loop 'VITIS_LOOP_751_4' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_751_4"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/moe.cpp:1060:0" msg_body="Unrolling loop 'VITIS_LOOP_1122_7' (src/moe.cpp:1122:28) in function 'output_moe' completely with a factor of 4">
-        <args Factor="4" LoopLoc="src/moe.cpp:1122:28" LoopName="VITIS_LOOP_1122_7"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/moe.cpp:1111:0" msg_body="Unrolling loop 'VITIS_LOOP_1173_7' (src/moe.cpp:1173:28) in function 'output_moe' completely with a factor of 4">
+        <args Factor="4" LoopLoc="src/moe.cpp:1173:28" LoopName="VITIS_LOOP_1173_7"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/moe.cpp:709:0" msg_body="Unrolling loop 'VITIS_LOOP_753_6' (src/moe.cpp:753:27) in function 'generic_mlp_head' completely with a factor of 16">
-        <args Factor="16" LoopLoc="src/moe.cpp:753:27" LoopName="VITIS_LOOP_753_6"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/moe.cpp:710:0" msg_body="Unrolling loop 'VITIS_LOOP_776_6' (src/moe.cpp:776:27) in function 'generic_mlp_head' completely with a factor of 16">
+        <args Factor="16" LoopLoc="src/moe.cpp:776:27" LoopName="VITIS_LOOP_776_6"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/moe.cpp:709:0" msg_body="Unrolling loop 'VITIS_LOOP_739_4' (src/moe.cpp:739:27) in function 'generic_mlp_head' completely with a factor of 32">
-        <args Factor="32" LoopLoc="src/moe.cpp:739:27" LoopName="VITIS_LOOP_739_4"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/moe.cpp:710:0" msg_body="Unrolling loop 'VITIS_LOOP_751_4' (src/moe.cpp:751:27) in function 'generic_mlp_head' completely with a factor of 32">
+        <args Factor="32" LoopLoc="src/moe.cpp:751:27" LoopName="VITIS_LOOP_751_4"/>
     </msg>
     <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="src/moe.cpp:142:0" msg_body="array_partition dim=2 type=complete  variable=_ZL10e0_bram_w1 1 output_moe src/moe.cpp:142:0 e0_bram_w1">
         <args PragmaFunction="output_moe" PragmaIsAuto="1" PragmaOptions="dim=2 type=complete  variable=_ZL10e0_bram_w1" PragmaType="array_partition" VarName="e0_bram_w1" varLoc="src/moe.cpp:142:0"/>
@@ -308,10 +311,10 @@
     <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="src/moe.cpp:451:0" msg_body="Inferring pragma 'array_partition type=complete dim=2' for array 'e3_lut_w2' due to pipeline pragma">
         <args Dim="2" Mode="complete" Name="e3_lut_w2" PragmaType="array_partition"/>
     </msg>
-    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="src/moe.cpp:1065:12" msg_body="array_partition dim=1 type=complete  variable=expert_output 1 output_moe src/moe.cpp:1065:12 expert_output">
-        <args PragmaFunction="output_moe" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=expert_output" PragmaType="array_partition" VarName="expert_output" varLoc="src/moe.cpp:1065:12"/>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="src/moe.cpp:1116:12" msg_body="array_partition dim=1 type=complete  variable=expert_output 1 output_moe src/moe.cpp:1116:12 expert_output">
+        <args PragmaFunction="output_moe" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=expert_output" PragmaType="array_partition" VarName="expert_output" varLoc="src/moe.cpp:1116:12"/>
     </msg>
-    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="src/moe.cpp:1065:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'expert_output' due to pipeline pragma">
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="src/moe.cpp:1116:12" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'expert_output' due to pipeline pragma">
         <args Dim="1" Mode="complete" Name="expert_output" PragmaType="array_partition"/>
     </msg>
     <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/moe.cpp:451:0" msg_body="Applying array_partition to '_ZL9e3_lut_w2': Complete partitioning on dimension 2.">
@@ -434,7 +437,7 @@
     <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/moe.cpp:142:0" msg_body="Applying array_partition to '_ZL10e0_bram_w1': Complete partitioning on dimension 2.">
         <args Dim="2" Mode="Complete" UOName="_ZL10e0_bram_w1"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/moe.cpp:1065:12" msg_body="Applying array_partition to 'expert_output': Complete partitioning on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/moe.cpp:1116:12" msg_body="Applying array_partition to 'expert_output': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="expert_output"/>
     </msg>
 </xilinx:hls_fe_msgs>

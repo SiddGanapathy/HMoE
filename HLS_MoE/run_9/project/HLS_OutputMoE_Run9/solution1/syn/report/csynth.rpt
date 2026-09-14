@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'output_moe'
 ================================================================
 + General Information: 
-    * Date:           Sun Sep 13 13:16:59 2026
+    * Date:           Mon Sep 14 21:03:20 2026
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
     * Project:        HLS_OutputMoE_Run9
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -20,28 +20,28 @@
     |                      & Loops                     |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |    DSP   |      FF     |     LUT     | URAM|
     +--------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+----------+-------------+-------------+-----+
     |+ output_moe                                      |  Timing|  -0.28|    94685|  9.468e+05|         -|    94686|     -|        no|  181 (3%)|  196 (1%)|   51979 (1%)|   38920 (2%)|    -|
-    | + output_moe_Pipeline_VITIS_LOOP_1092_3          |       -|   0.16|        6|     60.000|         -|        6|     -|        no|         -|         -|    105 (~0%)|    222 (~0%)|    -|
-    |  o VITIS_LOOP_1092_3                             |       -|   7.30|        4|     40.000|         3|        1|     3|       yes|         -|         -|            -|            -|    -|
+    | + output_moe_Pipeline_VITIS_LOOP_1143_3          |       -|   0.16|        6|     60.000|         -|        6|     -|        no|         -|         -|    105 (~0%)|    222 (~0%)|    -|
+    |  o VITIS_LOOP_1143_3                             |       -|   7.30|        4|     40.000|         3|        1|     3|       yes|         -|         -|            -|            -|    -|
     | + expert_engine                                  |       -|   0.27|    94079|  9.408e+05|         -|    94079|     -|        no|  180 (3%)|  169 (1%)|   49165 (1%)|   35412 (2%)|    -|
     |  + generic_mlp_head                              |       -|   0.27|     4702|  4.702e+04|         -|     4702|     -|        no|         -|  169 (1%)|  16484 (~0%)|  13600 (~0%)|    -|
-    |   + generic_mlp_head_Pipeline_VITIS_LOOP_736_3   |       -|   0.27|       89|    890.000|         -|       89|     -|        no|         -|  80 (~0%)|   8016 (~0%)|   5312 (~0%)|    -|
-    |    o VITIS_LOOP_736_3                            |       -|   7.30|       87|    870.000|        73|        1|    16|       yes|         -|         -|            -|            -|    -|
-    |   + generic_mlp_head_Pipeline_VITIS_LOOP_750_5   |       -|   0.27|       49|    490.000|         -|       49|     -|        no|         -|         -|   1789 (~0%)|    335 (~0%)|    -|
-    |    o VITIS_LOOP_750_5                            |       -|   7.30|       47|    470.000|        41|        1|     8|       yes|         -|         -|            -|            -|    -|
-    |   + generic_mlp_head_Pipeline_VITIS_LOOP_767_7   |       -|   0.89|       13|    130.000|         -|       13|     -|        no|         -|         -|    174 (~0%)|    155 (~0%)|    -|
-    |    o VITIS_LOOP_767_7                            |       -|   7.30|       11|    110.000|         5|        1|     8|       yes|         -|         -|            -|            -|    -|
-    |   o VITIS_LOOP_722_1                             |       -|   7.30|     4544|  4.544e+04|       142|        -|    32|        no|         -|         -|            -|            -|    -|
-    |    + generic_mlp_head_Pipeline_VITIS_LOOP_725_2  |       -|   0.89|      133|  1.330e+03|         -|      133|     -|        no|         -|         -|    146 (~0%)|    138 (~0%)|    -|
-    |     o VITIS_LOOP_725_2                           |       -|   7.30|      131|  1.310e+03|         5|        1|   128|       yes|         -|         -|            -|            -|    -|
-    | + output_moe_Pipeline_VITIS_LOOP_1099_4          |       -|   0.47|       12|    120.000|         -|       12|     -|        no|         -|   7 (~0%)|    385 (~0%)|    899 (~0%)|    -|
-    |  o VITIS_LOOP_1099_4                             |       -|   7.30|       10|    100.000|         8|        1|     4|       yes|         -|         -|            -|            -|    -|
-    | + output_moe_Pipeline_VITIS_LOOP_1104_5          |  Timing|  -0.28|       26|    260.000|         -|       26|     -|        no|         -|         -|    271 (~0%)|    198 (~0%)|    -|
-    |  o VITIS_LOOP_1104_5                             |      II|   7.30|       24|    240.000|         6|        6|     4|       yes|         -|         -|            -|            -|    -|
-    | + output_moe_Pipeline_VITIS_LOOP_1118_6          |       -|   1.25|       16|    160.000|         -|       16|     -|        no|         -|  13 (~0%)|   1120 (~0%)|    822 (~0%)|    -|
-    |  o VITIS_LOOP_1118_6                             |       -|   7.30|       14|    140.000|        11|        1|     5|       yes|         -|         -|            -|            -|    -|
-    | o VITIS_LOOP_1075_1                              |       -|   7.30|      544|  5.440e+03|       136|        -|     4|        no|         -|         -|            -|            -|    -|
-    |  + output_moe_Pipeline_VITIS_LOOP_1079_2         |       -|   0.89|      133|  1.330e+03|         -|      133|     -|        no|   1 (~0%)|         -|    146 (~0%)|    135 (~0%)|    -|
-    |   o VITIS_LOOP_1079_2                            |       -|   7.30|      131|  1.310e+03|         5|        1|   128|       yes|         -|         -|            -|            -|    -|
+    |   + generic_mlp_head_Pipeline_VITIS_LOOP_748_3   |       -|   0.27|       89|    890.000|         -|       89|     -|        no|         -|  80 (~0%)|   8016 (~0%)|   5312 (~0%)|    -|
+    |    o VITIS_LOOP_748_3                            |       -|   7.30|       87|    870.000|        73|        1|    16|       yes|         -|         -|            -|            -|    -|
+    |   + generic_mlp_head_Pipeline_VITIS_LOOP_773_5   |       -|   0.27|       49|    490.000|         -|       49|     -|        no|         -|         -|   1789 (~0%)|    335 (~0%)|    -|
+    |    o VITIS_LOOP_773_5                            |       -|   7.30|       47|    470.000|        41|        1|     8|       yes|         -|         -|            -|            -|    -|
+    |   + generic_mlp_head_Pipeline_VITIS_LOOP_800_7   |       -|   0.89|       13|    130.000|         -|       13|     -|        no|         -|         -|    174 (~0%)|    155 (~0%)|    -|
+    |    o VITIS_LOOP_800_7                            |       -|   7.30|       11|    110.000|         5|        1|     8|       yes|         -|         -|            -|            -|    -|
+    |   o VITIS_LOOP_723_1                             |       -|   7.30|     4544|  4.544e+04|       142|        -|    32|        no|         -|         -|            -|            -|    -|
+    |    + generic_mlp_head_Pipeline_VITIS_LOOP_726_2  |       -|   0.89|      133|  1.330e+03|         -|      133|     -|        no|         -|         -|    146 (~0%)|    138 (~0%)|    -|
+    |     o VITIS_LOOP_726_2                           |       -|   7.30|      131|  1.310e+03|         5|        1|   128|       yes|         -|         -|            -|            -|    -|
+    | + output_moe_Pipeline_VITIS_LOOP_1150_4          |       -|   0.47|       12|    120.000|         -|       12|     -|        no|         -|   7 (~0%)|    385 (~0%)|    899 (~0%)|    -|
+    |  o VITIS_LOOP_1150_4                             |       -|   7.30|       10|    100.000|         8|        1|     4|       yes|         -|         -|            -|            -|    -|
+    | + output_moe_Pipeline_VITIS_LOOP_1155_5          |  Timing|  -0.28|       26|    260.000|         -|       26|     -|        no|         -|         -|    271 (~0%)|    198 (~0%)|    -|
+    |  o VITIS_LOOP_1155_5                             |      II|   7.30|       24|    240.000|         6|        6|     4|       yes|         -|         -|            -|            -|    -|
+    | + output_moe_Pipeline_VITIS_LOOP_1169_6          |       -|   1.25|       16|    160.000|         -|       16|     -|        no|         -|  13 (~0%)|   1120 (~0%)|    822 (~0%)|    -|
+    |  o VITIS_LOOP_1169_6                             |       -|   7.30|       14|    140.000|        11|        1|     5|       yes|         -|         -|            -|            -|    -|
+    | o VITIS_LOOP_1126_1                              |       -|   7.30|      544|  5.440e+03|       136|        -|     4|        no|         -|         -|            -|            -|    -|
+    |  + output_moe_Pipeline_VITIS_LOOP_1130_2         |       -|   0.89|      133|  1.330e+03|         -|      133|     -|        no|   1 (~0%)|         -|    146 (~0%)|    135 (~0%)|    -|
+    |   o VITIS_LOOP_1130_2                            |       -|   7.30|      131|  1.310e+03|         5|        1|   128|       yes|         -|         -|            -|            -|    -|
     +--------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+----------+-------------+-------------+-----+
 
 
@@ -136,19 +136,19 @@
 | Name                                            | DSP | Pragma | Variable   | Op   | Impl    | Latency |
 +-------------------------------------------------+-----+--------+------------+------+---------+---------+
 | + output_moe                                    | 196 |        |            |      |         |         |
-|   add_ln1075_fu_4499_p2                         |     |        | add_ln1075 | add  | fabric  | 0       |
-|  + output_moe_Pipeline_VITIS_LOOP_1079_2        | 0   |        |            |      |         |         |
-|    add_ln1079_fu_127_p2                         |     |        | add_ln1079 | add  | fabric  | 0       |
-|    add_ln1080_fu_142_p2                         |     |        | add_ln1080 | add  | fabric  | 0       |
-|  + output_moe_Pipeline_VITIS_LOOP_1092_3        | 0   |        |            |      |         |         |
-|    add_ln1092_fu_142_p2                         |     |        | add_ln1092 | add  | fabric  | 0       |
+|   add_ln1126_fu_4499_p2                         |     |        | add_ln1126 | add  | fabric  | 0       |
+|  + output_moe_Pipeline_VITIS_LOOP_1130_2        | 0   |        |            |      |         |         |
+|    add_ln1130_fu_127_p2                         |     |        | add_ln1130 | add  | fabric  | 0       |
+|    add_ln1131_fu_142_p2                         |     |        | add_ln1131 | add  | fabric  | 0       |
+|  + output_moe_Pipeline_VITIS_LOOP_1143_3        | 0   |        |            |      |         |         |
+|    add_ln1143_fu_142_p2                         |     |        | add_ln1143 | add  | fabric  | 0       |
 |  + expert_engine                                | 169 |        |            |      |         |         |
 |   + generic_mlp_head                            | 169 |        |            |      |         |         |
-|     fadd_32ns_32ns_32_2_full_dsp_1_U302         |     |        | add_ln722  | add  | fabric  | 0       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U302         |     |        | add_ln723  | add  | fabric  | 0       |
 |     fexp_32ns_32ns_32_4_full_dsp_1_U293         | 7   |        | tmp_3      | fexp | fulldsp | 3       |
 |     fmul_32ns_32ns_32_2_max_dsp_1_U325          | 2   |        | sub_i      | fadd | fulldsp | 1       |
-|    + generic_mlp_head_Pipeline_VITIS_LOOP_736_3 | 80  |        |            |      |         |         |
-|      add_ln736_fu_1357_p2                       |     |        | add_ln736  | add  | fabric  | 0       |
+|    + generic_mlp_head_Pipeline_VITIS_LOOP_748_3 | 80  |        |            |      |         |         |
+|      add_ln748_fu_1357_p2                       |     |        | add_ln748  | add  | fabric  | 0       |
 |      fmul_32ns_32ns_32_2_max_dsp_1_U101         | 3   |        | mul35_15   | fmul | maxdsp  | 1       |
 |      fmul_32ns_32ns_32_2_max_dsp_1_U102         | 3   |        | mul35_16   | fmul | maxdsp  | 1       |
 |      fadd_32ns_32ns_32_2_full_dsp_1_U69         | 2   |        | acc_57     | fadd | fulldsp | 1       |
@@ -181,21 +181,21 @@
 |      fmul_32ns_32ns_32_2_max_dsp_1_U116         | 3   |        | mul35_30   | fmul | maxdsp  | 1       |
 |      fadd_32ns_32ns_32_2_full_dsp_1_U83         | 2   |        | acc_71     | fadd | fulldsp | 1       |
 |      fadd_32ns_32ns_32_2_full_dsp_1_U84         | 2   |        | sub_i1     | fadd | fulldsp | 1       |
-|    + generic_mlp_head_Pipeline_VITIS_LOOP_725_2 | 0   |        |            |      |         |         |
-|      add_ln725_fu_127_p2                        |     |        | add_ln725  | add  | fabric  | 0       |
-|      add_ln726_fu_142_p2                        |     |        | add_ln726  | add  | fabric  | 0       |
-|    + generic_mlp_head_Pipeline_VITIS_LOOP_750_5 | 0   |        |            |      |         |         |
-|      add_ln750_fu_725_p2                        |     |        | add_ln750  | add  | fabric  | 0       |
-|    + generic_mlp_head_Pipeline_VITIS_LOOP_767_7 | 0   |        |            |      |         |         |
-|      add_ln767_fu_182_p2                        |     |        | add_ln767  | add  | fabric  | 0       |
-|  + output_moe_Pipeline_VITIS_LOOP_1099_4        | 7   |        |            |      |         |         |
-|    add_ln1099_fu_172_p2                         |     |        | add_ln1099 | add  | fabric  | 0       |
+|    + generic_mlp_head_Pipeline_VITIS_LOOP_726_2 | 0   |        |            |      |         |         |
+|      add_ln726_fu_127_p2                        |     |        | add_ln726  | add  | fabric  | 0       |
+|      add_ln727_fu_142_p2                        |     |        | add_ln727  | add  | fabric  | 0       |
+|    + generic_mlp_head_Pipeline_VITIS_LOOP_773_5 | 0   |        |            |      |         |         |
+|      add_ln773_fu_725_p2                        |     |        | add_ln773  | add  | fabric  | 0       |
+|    + generic_mlp_head_Pipeline_VITIS_LOOP_800_7 | 0   |        |            |      |         |         |
+|      add_ln800_fu_182_p2                        |     |        | add_ln800  | add  | fabric  | 0       |
+|  + output_moe_Pipeline_VITIS_LOOP_1150_4        | 7   |        |            |      |         |         |
+|    add_ln1150_fu_172_p2                         |     |        | add_ln1150 | add  | fabric  | 0       |
 |    fexp_32ns_32ns_32_4_full_dsp_1_U19           | 7   |        | tmp_1      | fexp | fulldsp | 3       |
-|  + output_moe_Pipeline_VITIS_LOOP_1104_5        | 0   |        |            |      |         |         |
-|    add_ln1104_fu_243_p2                         |     |        | add_ln1104 | add  | fabric  | 0       |
+|  + output_moe_Pipeline_VITIS_LOOP_1155_5        | 0   |        |            |      |         |         |
+|    add_ln1155_fu_243_p2                         |     |        | add_ln1155 | add  | fabric  | 0       |
 |    fdiv_32ns_32ns_32_6_no_dsp_1_U33             |     |        | div        | fdiv | fabric  | 5       |
-|  + output_moe_Pipeline_VITIS_LOOP_1118_6        | 13  |        |            |      |         |         |
-|    add_ln1118_fu_228_p2                         |     |        | add_ln1118 | add  | fabric  | 0       |
+|  + output_moe_Pipeline_VITIS_LOOP_1169_6        | 13  |        |            |      |         |         |
+|    add_ln1169_fu_228_p2                         |     |        | add_ln1169 | add  | fabric  | 0       |
 |    fmul_32ns_32ns_32_2_max_dsp_1_U1451          | 3   |        | mul73_1    | fmul | maxdsp  | 1       |
 |    fmul_32ns_32ns_32_2_max_dsp_1_U1452          | 3   |        | mul73_2    | fmul | maxdsp  | 1       |
 |    fadd_32ns_32ns_32_2_full_dsp_1_U1448         | 2   |        | acc_2      | fadd | fulldsp | 1       |
@@ -216,7 +216,7 @@
 |   expert_output_1_U                      | ram_1p array |      |      |      |        | expert_output_1     | auto | 1       | 32, 5, 1         |
 |   expert_output_2_U                      | ram_1p array |      |      |      |        | expert_output_2     | auto | 1       | 32, 5, 1         |
 |   expert_output_3_U                      | ram_1p array |      |      |      |        | expert_output_3     | auto | 1       | 32, 5, 1         |
-|  + output_moe_Pipeline_VITIS_LOOP_1079_2 |              |      | 1    | 0    |        |                     |      |         |                  |
+|  + output_moe_Pipeline_VITIS_LOOP_1130_2 |              |      | 1    | 0    |        |                     |      |         |                  |
 |    gate_weight_U                         | rom_1p       |      | 1    |      |        | gate_weight         | auto | 1       | 32, 512, 1       |
 |  + expert_engine                         |              |      | 180  | 0    |        |                     |      |         |                  |
 |    e0_perf_w0_U                          | rom_1p       |      | 8    |      |        | e0_perf_w0          | auto | 1       | 32, 4096, 1      |
@@ -1289,14 +1289,14 @@
 +-----------------+--------------------------+-----------------------------------------+
 | Type            | Options                  | Location                                |
 +-----------------+--------------------------+-----------------------------------------+
-| array_partition | variable=l1 complete     | src/moe.cpp:714 in generic_mlp_head, l1 |
-| array_partition | variable=l2 complete     | src/moe.cpp:715 in generic_mlp_head, l2 |
-| array_partition | variable=l3 complete     | src/moe.cpp:716 in generic_mlp_head, l3 |
-| inline          | off                      | src/moe.cpp:907 in expert_engine        |
-| interface       | ap_ctrl_hs port=return   | src/moe.cpp:1061 in output_moe, return  |
-| array_partition | variable=logits complete | src/moe.cpp:1067 in output_moe, logits  |
-| array_partition | variable=gates complete  | src/moe.cpp:1068 in output_moe, gates   |
-| array_partition | variable=output complete | src/moe.cpp:1069 in output_moe, output  |
+| array_partition | variable=l1 complete     | src/moe.cpp:715 in generic_mlp_head, l1 |
+| array_partition | variable=l2 complete     | src/moe.cpp:716 in generic_mlp_head, l2 |
+| array_partition | variable=l3 complete     | src/moe.cpp:717 in generic_mlp_head, l3 |
+| inline          | off                      | src/moe.cpp:958 in expert_engine        |
+| interface       | ap_ctrl_hs port=return   | src/moe.cpp:1112 in output_moe, return  |
+| array_partition | variable=logits complete | src/moe.cpp:1118 in output_moe, logits  |
+| array_partition | variable=gates complete  | src/moe.cpp:1119 in output_moe, gates   |
+| array_partition | variable=output complete | src/moe.cpp:1120 in output_moe, output  |
 +-----------------+--------------------------+-----------------------------------------+
 
 

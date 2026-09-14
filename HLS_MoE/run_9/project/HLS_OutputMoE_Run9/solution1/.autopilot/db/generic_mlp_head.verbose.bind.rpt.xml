@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'generic_mlp_head'" level="0">
-<item name = "Date">Sun Sep 13 13:16:47 2026
+<item name = "Date">Mon Sep 14 21:03:07 2026
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">HLS_OutputMoE_Run9</item>
@@ -31,15 +31,15 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_generic_mlp_head_Pipeline_VITIS_LOOP_736_3_fu_487">generic_mlp_head_Pipeline_VITIS_LOOP_736_3, 89, 89, 0.890 us, 0.890 us, 89, 89, no</column>
-<column name="grp_generic_mlp_head_Pipeline_VITIS_LOOP_725_2_fu_605">generic_mlp_head_Pipeline_VITIS_LOOP_725_2, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
-<column name="grp_generic_mlp_head_Pipeline_VITIS_LOOP_750_5_fu_617">generic_mlp_head_Pipeline_VITIS_LOOP_750_5, 49, 49, 0.490 us, 0.490 us, 49, 49, no</column>
-<column name="grp_generic_mlp_head_Pipeline_VITIS_LOOP_767_7_fu_679">generic_mlp_head_Pipeline_VITIS_LOOP_767_7, 13, 13, 0.130 us, 0.130 us, 13, 13, no</column>
+<column name="grp_generic_mlp_head_Pipeline_VITIS_LOOP_748_3_fu_487">generic_mlp_head_Pipeline_VITIS_LOOP_748_3, 89, 89, 0.890 us, 0.890 us, 89, 89, no</column>
+<column name="grp_generic_mlp_head_Pipeline_VITIS_LOOP_726_2_fu_605">generic_mlp_head_Pipeline_VITIS_LOOP_726_2, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_generic_mlp_head_Pipeline_VITIS_LOOP_773_5_fu_617">generic_mlp_head_Pipeline_VITIS_LOOP_773_5, 49, 49, 0.490 us, 0.490 us, 49, 49, no</column>
+<column name="grp_generic_mlp_head_Pipeline_VITIS_LOOP_800_7_fu_679">generic_mlp_head_Pipeline_VITIS_LOOP_800_7, 13, 13, 0.130 us, 0.130 us, 13, 13, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_722_1">4544, 4544, 142, -, -, 32, no</column>
+<column name="- VITIS_LOOP_723_1">4544, 4544, 142, -, -, 32, no</column>
 </table>
 </item>
 </section>

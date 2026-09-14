@@ -1,0 +1,164 @@
+/home/simics/HMoE/HierarchicalMoE/.venv/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/simics/HMoE/HierarchicalMoE/.venv/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+==============================================================================
+SOFTWARE GOLDEN - OUTPUT MOE
+==============================================================================
+
+Checkpoint:
+/home/simics/HMoE/HierarchicalMoE/src/logs/auto-encoder/iccad/round1-40kernel/pragma_as_MLP/parallel_and_merge/class/post-gnn-3lp-3lm/dropout-0.1-MSE-scheduler-warmup-weight-decay-0.0001-no-mutual-info-PB-edge-attr-True_position-True-6L-SSL-False-gae-T-False-gae-P-False_regression_train_2026-09-06T04-33-56.349623/run1/500_val_model_state_dict.pth
+
+h7 input:
+/home/simics/HMoE/experiments/output_mlp/run_1/hardware/input/h7.txt
+
+h7 shape: (10, 128)
+
+==============================================================================
+LOADING CHECKPOINT
+==============================================================================
+
+Correct nested output-MoE mapping:
+  HLS Expert 0 -> experts.2.MLPs.experts.0.MLP_heads
+  HLS Expert 1 -> experts.2.MLPs.experts.1.MLP_heads
+  HLS Expert 2 -> experts.2.MLPs.experts.2.MLP_heads
+  HLS Expert 3 -> experts.2.MLPs.experts.3.MLP_heads
+  Gate -> experts.2.MLPs.w_gate
+
+==============================================================================
+BUILDING OUTPUT MOE
+==============================================================================
+Architecture: 128 -> 32 -> 16 -> 8 -> 1
+Experts: 4
+Objectives: perf, util-LUT, util-FF, util-DSP, util-BRAM
+
+Output MoE constructed successfully.
+
+==============================================================================
+RUNNING REPOSITORY OUTPUT MOE
+==============================================================================
+Software execution time: 2.726541 ms
+This is Python execution time, NOT the predicted perf value.
+
+==============================================================================
+INDIVIDUAL EXPERT OUTPUTS
+==============================================================================
+
+Expert 0:
+  perf       =  3.816634178
+  util-LUT   =  1.624592781
+  util-FF    = -0.099878214
+  util-DSP   = -0.999798596
+  util-BRAM  =  0.073211953
+
+Expert 1:
+  perf       =  2.567608595
+  util-LUT   = -0.840176284
+  util-FF    = -0.533764482
+  util-DSP   =  4.253095627
+  util-BRAM  =  0.741429687
+
+Expert 2:
+  perf       =  3.544090986
+  util-LUT   =  1.892652392
+  util-FF    = -0.036536176
+  util-DSP   = -1.000000000
+  util-BRAM  = -0.124301717
+
+Expert 3:
+  perf       =  5.095541954
+  util-LUT   = -0.964858890
+  util-FF    =  0.424643457
+  util-DSP   = -0.999503970
+  util-BRAM  = -0.223399013
+
+==============================================================================
+REPOSITORY VS MANUAL COMBINATION
+==============================================================================
+perf      : max_diff = 0.000000000e+00
+util-LUT  : max_diff = 0.000000000e+00
+util-FF   : max_diff = 0.000000000e+00
+util-DSP  : max_diff = 0.000000000e+00
+util-BRAM : max_diff = 0.000000000e+00
+gates      : max_diff = 0.000000000e+00
+
+==============================================================================
+SAMPLE 0
+==============================================================================
+
+Gates:
+  Expert 0: 0.182462722
+  Expert 1: 0.198732600
+  Expert 2: 0.231606647
+  Expert 3: 0.387198091
+  Sum: 1.000000000
+
+Final predictions:
+  perf      :  4.000480175
+  util-LUT  :  0.194216579
+  util-FF   :  0.031658664
+  util-DSP  :  0.044190079
+  util-BRAM :  0.045415930
+
+Loss: 0.000135823531309
+
+==============================================================================
+PREDICTION STATISTICS
+==============================================================================
+
+perf
+  min  = -0.456107765
+  max  =  5.272299767
+  mean =  3.333917141
+  NaN  = False
+  Inf  = False
+
+util-LUT
+  min  =  0.037518799
+  max  =  0.514728487
+  mean =  0.201286629
+  NaN  = False
+  Inf  = False
+
+util-FF
+  min  = -0.018894896
+  max  =  0.359157145
+  mean =  0.102092370
+  NaN  = False
+  Inf  = False
+
+util-DSP
+  min  = -0.046731472
+  max  =  1.111074924
+  mean =  0.236672014
+  NaN  = False
+  Inf  = False
+
+util-BRAM
+  min  =  0.010202885
+  max  =  0.367429107
+  mean =  0.090783715
+  NaN  = False
+  Inf  = False
+
+HLS comparison files:
+  Gates   : /home/simics/HMoE/HLS_HMoE/run_9/data/golden/gates.txt
+  Outputs : /home/simics/HMoE/HLS_HMoE/run_9/data/golden/outputs.txt
+
+==============================================================================
+SOFTWARE GOLDEN SAVED
+==============================================================================
+
+/home/simics/HMoE/experiments/output_mlp/run_1/software/results/software_golden.npz
+/home/simics/HMoE/experiments/output_mlp/run_1/software/results/software_golden.json
+
+Saved:
+  - h7
+  - 5 final objective predictions
+  - 4 expert outputs × 5 objectives
+  - gates
+  - loss
+  - software execution time
+
+Next step:
+Use this golden to verify the HLS .inc implementation.

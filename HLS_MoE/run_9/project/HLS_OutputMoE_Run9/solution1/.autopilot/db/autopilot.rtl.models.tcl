@@ -1,31 +1,31 @@
 set SynModuleInfo {
-  {SRCNAME output_moe_Pipeline_VITIS_LOOP_1079_2 MODELNAME output_moe_Pipeline_VITIS_LOOP_1079_2 RTLNAME output_moe_output_moe_Pipeline_VITIS_LOOP_1079_2
+  {SRCNAME output_moe_Pipeline_VITIS_LOOP_1130_2 MODELNAME output_moe_Pipeline_VITIS_LOOP_1130_2 RTLNAME output_moe_output_moe_Pipeline_VITIS_LOOP_1130_2
     SUBMODULES {
-      {MODELNAME output_moe_output_moe_Pipeline_VITIS_LOOP_1079_2_gate_weight_ROM_AUTO_1R RTLNAME output_moe_output_moe_Pipeline_VITIS_LOOP_1079_2_gate_weight_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME output_moe_output_moe_Pipeline_VITIS_LOOP_1130_2_gate_weight_ROM_AUTO_1R RTLNAME output_moe_output_moe_Pipeline_VITIS_LOOP_1130_2_gate_weight_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME output_moe_flow_control_loop_pipe_sequential_init RTLNAME output_moe_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME output_moe_flow_control_loop_pipe_sequential_init_U}
     }
   }
-  {SRCNAME output_moe_Pipeline_VITIS_LOOP_1092_3 MODELNAME output_moe_Pipeline_VITIS_LOOP_1092_3 RTLNAME output_moe_output_moe_Pipeline_VITIS_LOOP_1092_3
+  {SRCNAME output_moe_Pipeline_VITIS_LOOP_1143_3 MODELNAME output_moe_Pipeline_VITIS_LOOP_1143_3 RTLNAME output_moe_output_moe_Pipeline_VITIS_LOOP_1143_3
     SUBMODULES {
       {MODELNAME output_moe_fcmp_32ns_32ns_1_1_no_dsp_1 RTLNAME output_moe_fcmp_32ns_32ns_1_1_no_dsp_1 BINDTYPE op TYPE fcmp IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME output_moe_sparsemux_7_2_32_1_1 RTLNAME output_moe_sparsemux_7_2_32_1_1 BINDTYPE op TYPE sparsemux IMPL auto}
     }
   }
-  {SRCNAME output_moe_Pipeline_VITIS_LOOP_1099_4 MODELNAME output_moe_Pipeline_VITIS_LOOP_1099_4 RTLNAME output_moe_output_moe_Pipeline_VITIS_LOOP_1099_4
+  {SRCNAME output_moe_Pipeline_VITIS_LOOP_1150_4 MODELNAME output_moe_Pipeline_VITIS_LOOP_1150_4 RTLNAME output_moe_output_moe_Pipeline_VITIS_LOOP_1150_4
     SUBMODULES {
       {MODELNAME output_moe_fexp_32ns_32ns_32_4_full_dsp_1 RTLNAME output_moe_fexp_32ns_32ns_32_4_full_dsp_1 BINDTYPE op TYPE fexp IMPL fulldsp LATENCY 3 ALLOW_PRAGMA 1}
       {MODELNAME output_moe_sparsemux_9_2_32_1_1 RTLNAME output_moe_sparsemux_9_2_32_1_1 BINDTYPE op TYPE sparsemux IMPL auto}
     }
   }
-  {SRCNAME output_moe_Pipeline_VITIS_LOOP_1104_5 MODELNAME output_moe_Pipeline_VITIS_LOOP_1104_5 RTLNAME output_moe_output_moe_Pipeline_VITIS_LOOP_1104_5
+  {SRCNAME output_moe_Pipeline_VITIS_LOOP_1155_5 MODELNAME output_moe_Pipeline_VITIS_LOOP_1155_5 RTLNAME output_moe_output_moe_Pipeline_VITIS_LOOP_1155_5
     SUBMODULES {
       {MODELNAME output_moe_fdiv_32ns_32ns_32_6_no_dsp_1 RTLNAME output_moe_fdiv_32ns_32ns_32_6_no_dsp_1 BINDTYPE op TYPE fdiv IMPL fabric LATENCY 5 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME generic_mlp_head_Pipeline_VITIS_LOOP_725_2 MODELNAME generic_mlp_head_Pipeline_VITIS_LOOP_725_2 RTLNAME output_moe_generic_mlp_head_Pipeline_VITIS_LOOP_725_2}
-  {SRCNAME generic_mlp_head_Pipeline_VITIS_LOOP_736_3 MODELNAME generic_mlp_head_Pipeline_VITIS_LOOP_736_3 RTLNAME output_moe_generic_mlp_head_Pipeline_VITIS_LOOP_736_3}
-  {SRCNAME generic_mlp_head_Pipeline_VITIS_LOOP_750_5 MODELNAME generic_mlp_head_Pipeline_VITIS_LOOP_750_5 RTLNAME output_moe_generic_mlp_head_Pipeline_VITIS_LOOP_750_5}
-  {SRCNAME generic_mlp_head_Pipeline_VITIS_LOOP_767_7 MODELNAME generic_mlp_head_Pipeline_VITIS_LOOP_767_7 RTLNAME output_moe_generic_mlp_head_Pipeline_VITIS_LOOP_767_7
+  {SRCNAME generic_mlp_head_Pipeline_VITIS_LOOP_726_2 MODELNAME generic_mlp_head_Pipeline_VITIS_LOOP_726_2 RTLNAME output_moe_generic_mlp_head_Pipeline_VITIS_LOOP_726_2}
+  {SRCNAME generic_mlp_head_Pipeline_VITIS_LOOP_748_3 MODELNAME generic_mlp_head_Pipeline_VITIS_LOOP_748_3 RTLNAME output_moe_generic_mlp_head_Pipeline_VITIS_LOOP_748_3}
+  {SRCNAME generic_mlp_head_Pipeline_VITIS_LOOP_773_5 MODELNAME generic_mlp_head_Pipeline_VITIS_LOOP_773_5 RTLNAME output_moe_generic_mlp_head_Pipeline_VITIS_LOOP_773_5}
+  {SRCNAME generic_mlp_head_Pipeline_VITIS_LOOP_800_7 MODELNAME generic_mlp_head_Pipeline_VITIS_LOOP_800_7 RTLNAME output_moe_generic_mlp_head_Pipeline_VITIS_LOOP_800_7
     SUBMODULES {
       {MODELNAME output_moe_sparsemux_17_3_32_1_1 RTLNAME output_moe_sparsemux_17_3_32_1_1 BINDTYPE op TYPE sparsemux IMPL auto}
     }
@@ -1095,7 +1095,7 @@ set SynModuleInfo {
       {MODELNAME output_moe_expert_engine_e3_bram_w3_0_ROM_AUTO_1R RTLNAME output_moe_expert_engine_e3_bram_w3_0_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME output_moe_Pipeline_VITIS_LOOP_1118_6 MODELNAME output_moe_Pipeline_VITIS_LOOP_1118_6 RTLNAME output_moe_output_moe_Pipeline_VITIS_LOOP_1118_6}
+  {SRCNAME output_moe_Pipeline_VITIS_LOOP_1169_6 MODELNAME output_moe_Pipeline_VITIS_LOOP_1169_6 RTLNAME output_moe_output_moe_Pipeline_VITIS_LOOP_1169_6}
   {SRCNAME output_moe MODELNAME output_moe RTLNAME output_moe IS_TOP 1
     SUBMODULES {
       {MODELNAME output_moe_fmul_32ns_32ns_32_2_max_dsp_1 RTLNAME output_moe_fmul_32ns_32ns_32_2_max_dsp_1 BINDTYPE op TYPE fmul IMPL maxdsp LATENCY 1 ALLOW_PRAGMA 1}

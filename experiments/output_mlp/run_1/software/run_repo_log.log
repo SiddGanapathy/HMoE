@@ -1,0 +1,162 @@
+(.venv) simics@cie-n2:~/HMoE/HLS_HMoE/run_9$ python3 ~/HMoE/experiments/output_mlp/run_1/software/run_repo.py
+/home/simics/HMoE/HierarchicalMoE/.venv/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/simics/HMoE/HierarchicalMoE/.venv/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+========================================================================
+Repository-faithful output_mlp MoE software golden generation
+========================================================================
+
+[1] Loading real repository-generated h7 inputs...
+h7 shape     : (10, 128)
+perf shape   : (10,)
+kernel shape : (10,)
+Samples      : 10
+Input dim    : 128
+
+[2] Repository configuration...
+moe_num_experts : 4
+moe_k           : 4
+activation      : elu
+MLP_common_lyr  : 0
+targets         : ['perf', 'util-LUT', 'util-FF', 'util-DSP', 'util-BRAM']
+
+[3] Loading checkpoint...
+Checkpoint parameters: 577
+
+[4] Extracting output_mlp weights...
+Extracted parameters: 164
+
+[5] Building actual repository output_mlp MoE...
+MLP dimensions:
+  128 -> 32 -> 16 -> 8 -> 1
+
+[6] Loading output_mlp weights...
+Missing keys   : 0
+Unexpected keys: 0
+Output-MoE weights loaded successfully.
+
+[7] Preparing repository output_mlp input...
+
+[8] Running individual repository experts...
+
+Expert 0:
+  perf       sample0 =  3.816634178
+  util-LUT   sample0 =  1.624592781
+  util-FF    sample0 = -0.099878214
+  util-DSP   sample0 = -0.999798596
+  util-BRAM  sample0 =  0.073211953
+
+Expert 1:
+  perf       sample0 =  2.567608595
+  util-LUT   sample0 = -0.840176284
+  util-FF    sample0 = -0.533764482
+  util-DSP   sample0 =  4.253095627
+  util-BRAM  sample0 =  0.741429687
+
+Expert 2:
+  perf       sample0 =  3.544090986
+  util-LUT   sample0 =  1.892652392
+  util-FF    sample0 = -0.036536176
+  util-DSP   sample0 = -1.000000000
+  util-BRAM  sample0 = -0.124301717
+
+Expert 3:
+  perf       sample0 =  5.095541954
+  util-LUT   sample0 = -0.964858890
+  util-FF    sample0 =  0.424643457
+  util-DSP   sample0 = -0.999503970
+  util-BRAM  sample0 = -0.223399013
+
+[9] Running actual repository output_mlp MoE...
+Repository MoE execution time: 2.361 ms
+
+Repository MoE return structure:
+result: tuple[3]
+    [0]: dict
+        perf: Tensor shape=(10, 1), dtype=torch.float32
+        util-LUT: Tensor shape=(10, 1), dtype=torch.float32
+        util-FF: Tensor shape=(10, 1), dtype=torch.float32
+        util-DSP: Tensor shape=(10, 1), dtype=torch.float32
+        util-BRAM: Tensor shape=(10, 1), dtype=torch.float32
+    [1]: Tensor shape=(), dtype=torch.float32
+    [2]: Tensor shape=(10, 4), dtype=torch.float32
+
+[10] Extracting all objective predictions...
+perf     : (10, 1)
+util-LUT : (10, 1)
+util-FF  : (10, 1)
+util-DSP : (10, 1)
+util-BRAM: (10, 1)
+
+[11] Extracting gates and loss...
+Gates shape: (10, 4)
+Loss: 0.0001358235313091427
+
+[12] First-sample individual expert outputs
+------------------------------------------------------------------------
+
+Expert 0:
+  perf       =  3.816634178
+  util-LUT   =  1.624592781
+  util-FF    = -0.099878214
+  util-DSP   = -0.999798596
+  util-BRAM  =  0.073211953
+
+Expert 1:
+  perf       =  2.567608595
+  util-LUT   = -0.840176284
+  util-FF    = -0.533764482
+  util-DSP   =  4.253095627
+  util-BRAM  =  0.741429687
+
+Expert 2:
+  perf       =  3.544090986
+  util-LUT   =  1.892652392
+  util-FF    = -0.036536176
+  util-DSP   = -1.000000000
+  util-BRAM  = -0.124301717
+
+Expert 3:
+  perf       =  5.095541954
+  util-LUT   = -0.964858890
+  util-FF    =  0.424643457
+  util-DSP   = -0.999503970
+  util-BRAM  = -0.223399013
+
+[13] Sanity checks...
+perf shape: (10, 1)
+perf min : -0.4561077654361725
+perf max : 5.272299766540527
+perf mean: 3.3339171409606934
+perf NaN : False
+perf Inf : False
+Gate shape: (10, 4)
+Gate row sums: [1.         1.         0.99999994 1.         1.         1.
+ 0.99999994 1.         1.         1.        ]
+
+[14] Saving software golden data...
+Saved: /home/simics/HMoE/experiments/output_mlp/run_1/software/results/software_golden.npz
+
+[15] Saving JSON summary...
+Saved: /home/simics/HMoE/experiments/output_mlp/run_1/software/results/software_golden.json
+
+[16] First sample
+------------------------------------------------------------------------
+Kernel: nw_processed_result
+Perf target: 4.096062660217285
+
+Final MoE predictions:
+  perf     = 4.0004801750183105
+  util-LUT = 0.19421657919883728
+  util-FF  = 0.03165866434574127
+  util-DSP = 0.04419007897377014
+  util-BRAM = 0.045415930449962616
+
+Gates:
+[0.18246272 0.1987326  0.23160665 0.3871981 ]
+
+========================================================================
+SOFTWARE GOLDEN GENERATION COMPLETE
+========================================================================
+
