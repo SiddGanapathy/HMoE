@@ -6,7 +6,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="output_moe_output_moe,hls_ip_2023_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xcvu13p_CIV-figd2104-3-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.140000,HLS_SYN_LAT=47643,HLS_SYN_TPT=none,HLS_SYN_MEM=181,HLS_SYN_DSP=0,HLS_SYN_FF=188993,HLS_SYN_LUT=118864,HLS_VERSION=2023_2}" *)
+(* CORE_GENERATION_INFO="output_moe_output_moe,hls_ip_2023_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xcvu13p_CIV-figd2104-3-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.392212,HLS_SYN_LAT=46379,HLS_SYN_TPT=none,HLS_SYN_MEM=204,HLS_SYN_DSP=0,HLS_SYN_FF=49834,HLS_SYN_LUT=152325,HLS_VERSION=2023_2}" *)
 
 module output_moe (
         ap_clk,
@@ -21,48 +21,65 @@ module output_moe (
         input_r_address1,
         input_r_ce1,
         input_r_q1,
-        output_0,
-        output_0_ap_vld,
-        output_1,
-        output_1_ap_vld,
-        output_2,
-        output_2_ap_vld,
-        output_3,
-        output_3_ap_vld,
-        output_4,
-        output_4_ap_vld,
-        gates_0_i,
-        gates_0_o,
-        gates_0_o_ap_vld,
-        gates_1_i,
-        gates_1_o,
-        gates_1_o_ap_vld,
-        gates_2_i,
-        gates_2_o,
-        gates_2_o_ap_vld,
-        gates_3_i,
-        gates_3_o,
-        gates_3_o_ap_vld
+        output_r_address0,
+        output_r_ce0,
+        output_r_we0,
+        output_r_d0,
+        output_r_address1,
+        output_r_ce1,
+        output_r_we1,
+        output_r_d1,
+        gates_address0,
+        gates_ce0,
+        gates_we0,
+        gates_d0,
+        gates_address1,
+        gates_ce1,
+        gates_we1,
+        gates_d1
 );
 
-parameter    ap_ST_fsm_state1 = 18'd1;
-parameter    ap_ST_fsm_state2 = 18'd2;
-parameter    ap_ST_fsm_state3 = 18'd4;
-parameter    ap_ST_fsm_state4 = 18'd8;
-parameter    ap_ST_fsm_state5 = 18'd16;
-parameter    ap_ST_fsm_state6 = 18'd32;
-parameter    ap_ST_fsm_state7 = 18'd64;
-parameter    ap_ST_fsm_state8 = 18'd128;
-parameter    ap_ST_fsm_state9 = 18'd256;
-parameter    ap_ST_fsm_state10 = 18'd512;
-parameter    ap_ST_fsm_state11 = 18'd1024;
-parameter    ap_ST_fsm_state12 = 18'd2048;
-parameter    ap_ST_fsm_state13 = 18'd4096;
-parameter    ap_ST_fsm_state14 = 18'd8192;
-parameter    ap_ST_fsm_state15 = 18'd16384;
-parameter    ap_ST_fsm_state16 = 18'd32768;
-parameter    ap_ST_fsm_state17 = 18'd65536;
-parameter    ap_ST_fsm_state18 = 18'd131072;
+parameter    ap_ST_fsm_state1 = 41'd1;
+parameter    ap_ST_fsm_state2 = 41'd2;
+parameter    ap_ST_fsm_state3 = 41'd4;
+parameter    ap_ST_fsm_state4 = 41'd8;
+parameter    ap_ST_fsm_state5 = 41'd16;
+parameter    ap_ST_fsm_state6 = 41'd32;
+parameter    ap_ST_fsm_state7 = 41'd64;
+parameter    ap_ST_fsm_state8 = 41'd128;
+parameter    ap_ST_fsm_state9 = 41'd256;
+parameter    ap_ST_fsm_state10 = 41'd512;
+parameter    ap_ST_fsm_state11 = 41'd1024;
+parameter    ap_ST_fsm_state12 = 41'd2048;
+parameter    ap_ST_fsm_state13 = 41'd4096;
+parameter    ap_ST_fsm_state14 = 41'd8192;
+parameter    ap_ST_fsm_state15 = 41'd16384;
+parameter    ap_ST_fsm_state16 = 41'd32768;
+parameter    ap_ST_fsm_state17 = 41'd65536;
+parameter    ap_ST_fsm_state18 = 41'd131072;
+parameter    ap_ST_fsm_state19 = 41'd262144;
+parameter    ap_ST_fsm_state20 = 41'd524288;
+parameter    ap_ST_fsm_state21 = 41'd1048576;
+parameter    ap_ST_fsm_state22 = 41'd2097152;
+parameter    ap_ST_fsm_state23 = 41'd4194304;
+parameter    ap_ST_fsm_state24 = 41'd8388608;
+parameter    ap_ST_fsm_state25 = 41'd16777216;
+parameter    ap_ST_fsm_state26 = 41'd33554432;
+parameter    ap_ST_fsm_state27 = 41'd67108864;
+parameter    ap_ST_fsm_state28 = 41'd134217728;
+parameter    ap_ST_fsm_state29 = 41'd268435456;
+parameter    ap_ST_fsm_state30 = 41'd536870912;
+parameter    ap_ST_fsm_state31 = 41'd1073741824;
+parameter    ap_ST_fsm_state32 = 41'd2147483648;
+parameter    ap_ST_fsm_state33 = 41'd4294967296;
+parameter    ap_ST_fsm_state34 = 41'd8589934592;
+parameter    ap_ST_fsm_state35 = 41'd17179869184;
+parameter    ap_ST_fsm_state36 = 41'd34359738368;
+parameter    ap_ST_fsm_state37 = 41'd68719476736;
+parameter    ap_ST_fsm_state38 = 41'd137438953472;
+parameter    ap_ST_fsm_state39 = 41'd274877906944;
+parameter    ap_ST_fsm_state40 = 41'd549755813888;
+parameter    ap_ST_fsm_state41 = 41'd1099511627776;
 
 input   ap_clk;
 input   ap_rst;
@@ -76,28 +93,22 @@ input  [31:0] input_r_q0;
 output  [6:0] input_r_address1;
 output   input_r_ce1;
 input  [31:0] input_r_q1;
-output  [31:0] output_0;
-output   output_0_ap_vld;
-output  [31:0] output_1;
-output   output_1_ap_vld;
-output  [31:0] output_2;
-output   output_2_ap_vld;
-output  [31:0] output_3;
-output   output_3_ap_vld;
-output  [31:0] output_4;
-output   output_4_ap_vld;
-input  [31:0] gates_0_i;
-output  [31:0] gates_0_o;
-output   gates_0_o_ap_vld;
-input  [31:0] gates_1_i;
-output  [31:0] gates_1_o;
-output   gates_1_o_ap_vld;
-input  [31:0] gates_2_i;
-output  [31:0] gates_2_o;
-output   gates_2_o_ap_vld;
-input  [31:0] gates_3_i;
-output  [31:0] gates_3_o;
-output   gates_3_o_ap_vld;
+output  [2:0] output_r_address0;
+output   output_r_ce0;
+output   output_r_we0;
+output  [31:0] output_r_d0;
+output  [2:0] output_r_address1;
+output   output_r_ce1;
+output   output_r_we1;
+output  [31:0] output_r_d1;
+output  [1:0] gates_address0;
+output   gates_ce0;
+output   gates_we0;
+output  [31:0] gates_d0;
+output  [1:0] gates_address1;
+output   gates_ce1;
+output   gates_we1;
+output  [31:0] gates_d1;
 
 reg ap_done;
 reg ap_idle;
@@ -105,244 +116,331 @@ reg ap_ready;
 reg[6:0] input_r_address0;
 reg input_r_ce0;
 reg input_r_ce1;
-reg[31:0] gates_0_o;
-reg gates_0_o_ap_vld;
-reg[31:0] gates_1_o;
-reg gates_1_o_ap_vld;
-reg[31:0] gates_2_o;
-reg gates_2_o_ap_vld;
-reg[31:0] gates_3_o;
-reg gates_3_o_ap_vld;
+reg[2:0] output_r_address0;
+reg output_r_ce0;
+reg output_r_we0;
+reg[31:0] output_r_d0;
+reg[2:0] output_r_address1;
+reg output_r_ce1;
+reg output_r_we1;
+reg[31:0] output_r_d1;
+reg[1:0] gates_address0;
+reg gates_ce0;
+reg gates_we0;
+reg[31:0] gates_d0;
+reg[1:0] gates_address1;
+reg gates_ce1;
+reg gates_we1;
+reg[31:0] gates_d1;
 
-(* fsm_encoding = "none" *) reg   [17:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [40:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-wire   [1:0] gate_bias_address0;
-reg    gate_bias_ce0;
-wire   [31:0] gate_bias_q0;
-wire   [1:0] trunc_ln1061_fu_4506_p1;
-reg   [1:0] trunc_ln1061_reg_4675;
-wire    ap_CS_fsm_state2;
-wire   [2:0] add_ln1061_fu_4516_p2;
-reg   [2:0] add_ln1061_reg_4683;
-wire   [8:0] tmp_6_fu_4543_p3;
-reg   [8:0] tmp_6_reg_4717;
-wire    ap_CS_fsm_state3;
-reg   [31:0] acc_reg_4722;
-wire   [31:0] grp_fu_4493_p2;
-reg   [31:0] inv_exp_sum_reg_4733;
-wire    ap_CS_fsm_state14;
-reg   [2:0] expert_output_address0;
-reg    expert_output_ce0;
-reg    expert_output_we0;
-wire   [31:0] expert_output_q0;
-reg    expert_output_ce1;
-reg    expert_output_we1;
-reg   [2:0] expert_output_1_address0;
-reg    expert_output_1_ce0;
-reg    expert_output_1_we0;
-wire   [31:0] expert_output_1_q0;
-reg    expert_output_1_ce1;
-reg    expert_output_1_we1;
-reg   [2:0] expert_output_2_address0;
-reg    expert_output_2_ce0;
-reg    expert_output_2_we0;
-wire   [31:0] expert_output_2_q0;
-reg    expert_output_2_ce1;
-reg    expert_output_2_we1;
-reg   [2:0] expert_output_3_address0;
-reg    expert_output_3_ce0;
-reg    expert_output_3_we0;
-wire   [31:0] expert_output_3_q0;
-reg    expert_output_3_ce1;
-reg    expert_output_3_we1;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_ap_start;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_ap_done;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_ap_idle;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_ap_ready;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_max_logit_out;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_max_logit_out_ap_vld;
-wire   [6:0] grp_run_parallel_engines_fu_2294_input_r_address0;
-wire    grp_run_parallel_engines_fu_2294_input_r_ce0;
-wire   [31:0] grp_run_parallel_engines_fu_2294_input_r_d0;
-wire    grp_run_parallel_engines_fu_2294_input_r_we0;
-wire   [6:0] grp_run_parallel_engines_fu_2294_input_r_address1;
-wire    grp_run_parallel_engines_fu_2294_input_r_ce1;
-wire   [31:0] grp_run_parallel_engines_fu_2294_input_r_d1;
-wire    grp_run_parallel_engines_fu_2294_input_r_we1;
-wire   [2:0] grp_run_parallel_engines_fu_2294_out_0_address0;
-wire    grp_run_parallel_engines_fu_2294_out_0_ce0;
-wire   [31:0] grp_run_parallel_engines_fu_2294_out_0_d0;
-wire    grp_run_parallel_engines_fu_2294_out_0_we0;
-wire   [2:0] grp_run_parallel_engines_fu_2294_out_0_address1;
-wire    grp_run_parallel_engines_fu_2294_out_0_ce1;
-wire   [31:0] grp_run_parallel_engines_fu_2294_out_0_d1;
-wire    grp_run_parallel_engines_fu_2294_out_0_we1;
-wire   [2:0] grp_run_parallel_engines_fu_2294_out_1_address0;
-wire    grp_run_parallel_engines_fu_2294_out_1_ce0;
-wire   [31:0] grp_run_parallel_engines_fu_2294_out_1_d0;
-wire    grp_run_parallel_engines_fu_2294_out_1_we0;
-wire   [2:0] grp_run_parallel_engines_fu_2294_out_1_address1;
-wire    grp_run_parallel_engines_fu_2294_out_1_ce1;
-wire   [31:0] grp_run_parallel_engines_fu_2294_out_1_d1;
-wire    grp_run_parallel_engines_fu_2294_out_1_we1;
-wire   [2:0] grp_run_parallel_engines_fu_2294_out_2_address0;
-wire    grp_run_parallel_engines_fu_2294_out_2_ce0;
-wire   [31:0] grp_run_parallel_engines_fu_2294_out_2_d0;
-wire    grp_run_parallel_engines_fu_2294_out_2_we0;
-wire   [2:0] grp_run_parallel_engines_fu_2294_out_2_address1;
-wire    grp_run_parallel_engines_fu_2294_out_2_ce1;
-wire   [31:0] grp_run_parallel_engines_fu_2294_out_2_d1;
-wire    grp_run_parallel_engines_fu_2294_out_2_we1;
-wire   [2:0] grp_run_parallel_engines_fu_2294_out_3_address0;
-wire    grp_run_parallel_engines_fu_2294_out_3_ce0;
-wire   [31:0] grp_run_parallel_engines_fu_2294_out_3_d0;
-wire    grp_run_parallel_engines_fu_2294_out_3_we0;
-wire   [2:0] grp_run_parallel_engines_fu_2294_out_3_address1;
-wire    grp_run_parallel_engines_fu_2294_out_3_ce1;
-wire   [31:0] grp_run_parallel_engines_fu_2294_out_3_d1;
-wire    grp_run_parallel_engines_fu_2294_out_3_we1;
-wire    grp_run_parallel_engines_fu_2294_ap_start;
-wire    grp_run_parallel_engines_fu_2294_ap_done;
-wire    grp_run_parallel_engines_fu_2294_ap_ready;
-wire    grp_run_parallel_engines_fu_2294_ap_idle;
-reg    grp_run_parallel_engines_fu_2294_ap_continue;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_ap_start;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_ap_done;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_ap_idle;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_ap_ready;
-wire   [6:0] grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_input_r_address0;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_input_r_ce0;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_acc_1_out;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_acc_1_out_ap_vld;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4750_p_din0;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4750_p_din1;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4750_p_ce;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4754_p_din0;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4754_p_din1;
-wire   [0:0] grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4754_p_opcode;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4754_p_ce;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_ap_start;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_ap_done;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_ap_idle;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_ap_ready;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_0;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_0_ap_vld;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_3;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_3_ap_vld;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_2;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_2_ap_vld;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_1;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_1_ap_vld;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_exp_sum_out;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_exp_sum_out_ap_vld;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4754_p_din0;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4754_p_din1;
-wire   [0:0] grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4754_p_opcode;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4754_p_ce;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4758_p_din0;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4758_p_din1;
-wire   [1:0] grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4758_p_opcode;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4758_p_ce;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_ap_start;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_ap_done;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_ap_idle;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_ap_ready;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_0_o;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_0_o_ap_vld;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_3_o;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_3_o_ap_vld;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_2_o;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_2_o_ap_vld;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_1_o;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_1_o_ap_vld;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_3927_phi_out;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_3927_phi_out_ap_vld;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_2824_phi_out;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_2824_phi_out_ap_vld;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_1721_phi_out;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_1721_phi_out_ap_vld;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_0518_phi_out;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_0518_phi_out_ap_vld;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_grp_fu_4750_p_din0;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_grp_fu_4750_p_din1;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_grp_fu_4750_p_ce;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_start;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_done;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_idle;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_ready;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_0;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_0_ap_vld;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_4;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_4_ap_vld;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_3;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_3_ap_vld;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_2;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_2_ap_vld;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_1;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_1_ap_vld;
-wire   [2:0] grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_address0;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_ce0;
-wire   [2:0] grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_1_address0;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_1_ce0;
-wire   [2:0] grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_2_address0;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_2_ce0;
-wire   [2:0] grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_3_address0;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_3_ce0;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4754_p_din0;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4754_p_din1;
-wire   [0:0] grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4754_p_opcode;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4754_p_ce;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4758_p_din0;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4758_p_din1;
-wire   [1:0] grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4758_p_opcode;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4758_p_ce;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4750_p_din0;
-wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4750_p_din1;
-wire    grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4750_p_ce;
-reg    grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_ap_start_reg;
-wire   [0:0] icmp_ln1061_fu_4510_p2;
-wire    ap_CS_fsm_state6;
-reg    grp_run_parallel_engines_fu_2294_ap_start_reg;
-wire    ap_sync_grp_run_parallel_engines_fu_2294_ap_ready;
-wire    ap_sync_grp_run_parallel_engines_fu_2294_ap_done;
-reg    ap_block_state6_on_subcall_done;
-reg    ap_sync_reg_grp_run_parallel_engines_fu_2294_ap_ready;
-reg    ap_sync_reg_grp_run_parallel_engines_fu_2294_ap_done;
-reg    grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_ap_start_reg;
-wire    ap_CS_fsm_state4;
-reg    grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_ap_start_reg;
-wire    ap_CS_fsm_state7;
-wire    ap_CS_fsm_state8;
-reg    grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_ap_start_reg;
-wire    ap_CS_fsm_state15;
-wire    ap_CS_fsm_state16;
-reg    grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_start_reg;
+wire   [31:0] grp_fu_483_p2;
+reg   [31:0] reg_558;
+wire    ap_CS_fsm_state11;
 wire    ap_CS_fsm_state17;
-wire    ap_CS_fsm_state18;
-wire   [63:0] zext_ln1061_fu_4522_p1;
-reg   [2:0] e_fu_2208;
-wire    ap_CS_fsm_state5;
-reg   [31:0] empty_fu_2212;
-reg   [31:0] mux_case_11_fu_2216;
-reg   [31:0] mux_case_25_fu_2220;
-reg   [31:0] mux_case_310_fu_2224;
+wire    ap_CS_fsm_state19;
+wire    ap_CS_fsm_state21;
+wire    ap_CS_fsm_state23;
+wire    ap_CS_fsm_state33;
+wire    ap_CS_fsm_state35;
+wire    ap_CS_fsm_state37;
+wire   [31:0] grp_fu_487_p2;
+reg   [31:0] reg_568;
+wire   [31:0] grp_fu_491_p2;
+reg   [31:0] reg_574;
+wire    ap_CS_fsm_state39;
+wire   [31:0] grp_fu_495_p2;
+reg   [31:0] reg_580;
+wire   [31:0] grp_fu_508_p2;
+reg   [31:0] reg_586;
+wire    ap_CS_fsm_state31;
+wire   [31:0] grp_fu_512_p2;
+reg   [31:0] reg_592;
+wire   [31:0] grp_fu_516_p2;
+reg   [31:0] reg_598;
+wire   [31:0] grp_fu_520_p2;
+reg   [31:0] reg_604;
+wire   [31:0] grp_fu_524_p2;
+reg   [31:0] reg_610;
+wire   [31:0] grp_fu_503_p2;
+reg   [31:0] reg_616;
+wire   [0:0] and_ln1018_1_fu_707_p2;
+reg   [0:0] and_ln1018_1_reg_1181;
+wire    ap_CS_fsm_state7;
+wire   [31:0] max_logit_fu_717_p3;
+reg   [31:0] max_logit_reg_1189;
+wire    ap_CS_fsm_state8;
+wire   [0:0] and_ln1018_3_fu_801_p2;
+reg   [0:0] and_ln1018_3_reg_1194;
+wire   [31:0] max_logit_1_fu_811_p3;
+reg   [31:0] max_logit_1_reg_1202;
 wire    ap_CS_fsm_state9;
-wire   [31:0] grp_fu_4750_p2;
-reg   [31:0] grp_fu_4750_p0;
-reg   [31:0] grp_fu_4750_p1;
-reg    grp_fu_4750_ce;
-wire   [31:0] grp_fu_4754_p2;
-reg   [31:0] grp_fu_4754_p0;
-reg   [31:0] grp_fu_4754_p1;
-reg   [1:0] grp_fu_4754_opcode;
-reg    grp_fu_4754_ce;
-wire   [31:0] grp_fu_4758_p2;
-reg   [31:0] grp_fu_4758_p0;
-reg   [31:0] grp_fu_4758_p1;
-reg    grp_fu_4758_ce;
-reg   [17:0] ap_NS_fsm;
+wire   [0:0] grp_fu_544_p2;
+reg   [0:0] tmp_8_reg_1208;
+wire   [31:0] max_logit_2_fu_898_p3;
+wire    ap_CS_fsm_state10;
+wire   [31:0] grp_fu_548_p2;
+reg   [31:0] exp_logits_reg_1221;
+wire    ap_CS_fsm_state15;
+wire   [31:0] grp_fu_553_p2;
+reg   [31:0] exp_logits_1_reg_1227;
+reg   [31:0] exp_logits_2_reg_1233;
+reg   [31:0] exp_logits_3_reg_1239;
+wire   [31:0] grp_fu_528_p2;
+reg   [31:0] div_reg_1245;
+wire    ap_CS_fsm_state29;
+wire   [31:0] grp_fu_532_p2;
+reg   [31:0] div_1_reg_1254;
+wire   [31:0] grp_fu_536_p2;
+reg   [31:0] div_2_reg_1263;
+wire   [31:0] grp_fu_540_p2;
+reg   [31:0] div_3_reg_1273;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_ap_start;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_ap_done;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_ap_idle;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_ap_ready;
+wire   [6:0] grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_input_r_address0;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_input_r_ce0;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_acc_out;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_acc_out_ap_vld;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_483_p_din0;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_483_p_din1;
+wire   [0:0] grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_483_p_opcode;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_483_p_ce;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_508_p_din0;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_508_p_din1;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_508_p_ce;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_ap_start;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_ap_done;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_ap_idle;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_ap_ready;
+wire   [6:0] grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_input_r_address0;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_input_r_ce0;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_acc_2_out;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_acc_2_out_ap_vld;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_483_p_din0;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_483_p_din1;
+wire   [0:0] grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_483_p_opcode;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_483_p_ce;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_508_p_din0;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_508_p_din1;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_508_p_ce;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_ap_start;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_ap_done;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_ap_idle;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_ap_ready;
+wire   [6:0] grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_input_r_address0;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_input_r_ce0;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_acc_4_out;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_acc_4_out_ap_vld;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_483_p_din0;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_483_p_din1;
+wire   [0:0] grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_483_p_opcode;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_483_p_ce;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_508_p_din0;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_508_p_din1;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_508_p_ce;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_ap_start;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_ap_done;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_ap_idle;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_ap_ready;
+wire   [6:0] grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_input_r_address0;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_input_r_ce0;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_acc_26_out;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_acc_26_out_ap_vld;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_483_p_din0;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_483_p_din1;
+wire   [0:0] grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_483_p_opcode;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_483_p_ce;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_508_p_din0;
+wire   [31:0] grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_508_p_din1;
+wire    grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_508_p_ce;
+wire   [6:0] grp_run_parallel_engines_fu_377_input_r_address0;
+wire    grp_run_parallel_engines_fu_377_input_r_ce0;
+wire   [31:0] grp_run_parallel_engines_fu_377_input_r_d0;
+wire    grp_run_parallel_engines_fu_377_input_r_we0;
+wire   [6:0] grp_run_parallel_engines_fu_377_input_r_address1;
+wire    grp_run_parallel_engines_fu_377_input_r_ce1;
+wire   [31:0] grp_run_parallel_engines_fu_377_input_r_d1;
+wire    grp_run_parallel_engines_fu_377_input_r_we1;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_0_0;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_0_1;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_0_2;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_0_3;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_0_4;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_1_0;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_1_1;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_1_2;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_1_3;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_1_4;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_2_0;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_2_1;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_2_2;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_2_3;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_2_4;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_3_0;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_3_1;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_3_2;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_3_3;
+wire   [31:0] grp_run_parallel_engines_fu_377_expert_outputs_3_4;
+wire    grp_run_parallel_engines_fu_377_ap_start;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_0_0_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_1_0_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_2_0_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_3_0_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_0_1_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_1_1_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_2_1_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_3_1_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_0_2_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_1_2_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_2_2_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_3_2_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_0_3_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_1_3_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_2_3_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_3_3_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_0_4_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_1_4_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_2_4_ap_vld;
+wire    grp_run_parallel_engines_fu_377_expert_outputs_3_4_ap_vld;
+wire    grp_run_parallel_engines_fu_377_ap_done;
+wire    grp_run_parallel_engines_fu_377_ap_ready;
+wire    grp_run_parallel_engines_fu_377_ap_idle;
+reg    grp_run_parallel_engines_fu_377_ap_continue;
+reg    grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_ap_start_reg;
+wire    ap_CS_fsm_state2;
+reg    grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_ap_start_reg;
+wire    ap_CS_fsm_state3;
+wire    ap_CS_fsm_state4;
+reg    grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_ap_start_reg;
+wire    ap_CS_fsm_state5;
+wire    ap_CS_fsm_state6;
+reg    grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_ap_start_reg;
+reg    grp_run_parallel_engines_fu_377_ap_start_reg;
+wire    ap_sync_grp_run_parallel_engines_fu_377_ap_ready;
+wire    ap_sync_grp_run_parallel_engines_fu_377_ap_done;
+reg    ap_block_state10_on_subcall_done;
+reg    ap_sync_reg_grp_run_parallel_engines_fu_377_ap_ready;
+reg    ap_sync_reg_grp_run_parallel_engines_fu_377_ap_done;
+reg   [31:0] expert_outputs_fu_162;
+reg   [31:0] expert_outputs_1_fu_166;
+reg   [31:0] expert_outputs_2_fu_170;
+reg   [31:0] expert_outputs_3_fu_174;
+reg   [31:0] expert_outputs_4_fu_178;
+reg   [31:0] expert_outputs_5_fu_182;
+reg   [31:0] expert_outputs_6_fu_186;
+reg   [31:0] expert_outputs_7_fu_190;
+reg   [31:0] expert_outputs_8_fu_194;
+reg   [31:0] expert_outputs_9_fu_198;
+reg   [31:0] expert_outputs_10_fu_202;
+reg   [31:0] expert_outputs_11_fu_206;
+reg   [31:0] expert_outputs_12_fu_210;
+reg   [31:0] expert_outputs_13_fu_214;
+reg   [31:0] expert_outputs_14_fu_218;
+reg   [31:0] expert_outputs_15_fu_222;
+reg   [31:0] expert_outputs_16_fu_226;
+reg   [31:0] expert_outputs_17_fu_230;
+reg   [31:0] expert_outputs_18_fu_234;
+reg   [31:0] expert_outputs_19_fu_238;
+wire    ap_CS_fsm_state30;
+wire    ap_CS_fsm_state40;
+wire    ap_CS_fsm_state41;
+wire    ap_CS_fsm_state32;
+wire    ap_CS_fsm_state34;
+wire    ap_CS_fsm_state36;
+wire   [31:0] bitcast_ln1039_fu_908_p1;
+wire   [31:0] bitcast_ln1039_1_fu_913_p1;
+wire   [31:0] bitcast_ln1039_2_fu_918_p1;
+wire   [31:0] bitcast_ln1039_3_fu_922_p1;
+wire   [31:0] bitcast_ln1071_fu_1006_p1;
+wire   [31:0] bitcast_ln1071_1_fu_1011_p1;
+wire   [31:0] bitcast_ln1071_2_fu_1016_p1;
+wire   [31:0] bitcast_ln1071_3_fu_1021_p1;
+wire   [31:0] bitcast_ln1071_4_fu_1026_p1;
+reg   [31:0] grp_fu_483_p0;
+reg   [31:0] grp_fu_483_p1;
+wire    ap_CS_fsm_state16;
+wire    ap_CS_fsm_state18;
+wire    ap_CS_fsm_state20;
+wire    ap_CS_fsm_state22;
+wire    ap_CS_fsm_state38;
+reg   [31:0] grp_fu_487_p0;
+reg   [31:0] grp_fu_487_p1;
+reg   [31:0] grp_fu_491_p0;
+reg   [31:0] grp_fu_491_p1;
+reg   [31:0] grp_fu_495_p0;
+reg   [31:0] grp_fu_495_p1;
+reg   [31:0] grp_fu_503_p0;
+reg   [31:0] grp_fu_503_p1;
+reg   [31:0] grp_fu_508_p0;
+reg   [31:0] grp_fu_508_p1;
+reg   [31:0] grp_fu_512_p0;
+reg   [31:0] grp_fu_512_p1;
+reg   [31:0] grp_fu_516_p0;
+reg   [31:0] grp_fu_516_p1;
+reg   [31:0] grp_fu_520_p0;
+reg   [31:0] grp_fu_520_p1;
+reg   [31:0] grp_fu_524_p0;
+reg   [31:0] grp_fu_524_p1;
+wire    ap_CS_fsm_state24;
+reg   [31:0] grp_fu_544_p0;
+reg   [31:0] grp_fu_544_p1;
+reg   [31:0] grp_fu_548_p1;
+wire    ap_CS_fsm_state12;
+wire   [31:0] bitcast_ln1018_fu_629_p1;
+wire   [31:0] bitcast_ln1018_1_fu_647_p1;
+wire   [7:0] tmp_fu_633_p4;
+wire   [22:0] trunc_ln1018_fu_643_p1;
+wire   [0:0] icmp_ln1018_1_fu_671_p2;
+wire   [0:0] icmp_ln1018_fu_665_p2;
+wire   [7:0] tmp_1_fu_651_p4;
+wire   [22:0] trunc_ln1018_1_fu_661_p1;
+wire   [0:0] icmp_ln1018_3_fu_689_p2;
+wire   [0:0] icmp_ln1018_2_fu_683_p2;
+wire   [0:0] or_ln1018_fu_677_p2;
+wire   [0:0] or_ln1018_1_fu_695_p2;
+wire   [0:0] and_ln1018_fu_701_p2;
+wire   [31:0] bitcast_ln1018_2_fu_723_p1;
+wire   [31:0] bitcast_ln1018_3_fu_741_p1;
+wire   [7:0] tmp_3_fu_727_p4;
+wire   [22:0] trunc_ln1018_2_fu_737_p1;
+wire   [0:0] icmp_ln1018_5_fu_765_p2;
+wire   [0:0] icmp_ln1018_4_fu_759_p2;
+wire   [7:0] tmp_4_fu_745_p4;
+wire   [22:0] trunc_ln1018_3_fu_755_p1;
+wire   [0:0] icmp_ln1018_7_fu_783_p2;
+wire   [0:0] icmp_ln1018_6_fu_777_p2;
+wire   [0:0] or_ln1018_2_fu_771_p2;
+wire   [0:0] or_ln1018_3_fu_789_p2;
+wire   [0:0] and_ln1018_2_fu_795_p2;
+wire   [31:0] bitcast_ln1018_4_fu_817_p1;
+wire   [31:0] bitcast_ln1018_5_fu_834_p1;
+wire   [7:0] tmp_6_fu_820_p4;
+wire   [22:0] trunc_ln1018_4_fu_830_p1;
+wire   [0:0] icmp_ln1018_9_fu_857_p2;
+wire   [0:0] icmp_ln1018_8_fu_851_p2;
+wire   [7:0] tmp_7_fu_837_p4;
+wire   [22:0] trunc_ln1018_5_fu_847_p1;
+wire   [0:0] icmp_ln1018_11_fu_875_p2;
+wire   [0:0] icmp_ln1018_10_fu_869_p2;
+wire   [0:0] or_ln1018_4_fu_863_p2;
+wire   [0:0] or_ln1018_5_fu_881_p2;
+wire   [0:0] and_ln1018_4_fu_887_p2;
+wire   [0:0] and_ln1018_5_fu_893_p2;
+reg   [1:0] grp_fu_483_opcode;
+reg    grp_fu_483_ce;
+reg   [1:0] grp_fu_487_opcode;
+reg    grp_fu_487_ce;
+reg   [1:0] grp_fu_491_opcode;
+reg    grp_fu_491_ce;
+reg   [1:0] grp_fu_495_opcode;
+reg    grp_fu_495_ce;
+reg    grp_fu_508_ce;
+reg   [40:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
-wire    ap_ST_fsm_state2_blk;
+reg    ap_ST_fsm_state2_blk;
 wire    ap_ST_fsm_state3_blk;
 reg    ap_ST_fsm_state4_blk;
 wire    ap_ST_fsm_state5_blk;
@@ -350,364 +448,202 @@ reg    ap_ST_fsm_state6_blk;
 wire    ap_ST_fsm_state7_blk;
 reg    ap_ST_fsm_state8_blk;
 wire    ap_ST_fsm_state9_blk;
-wire    ap_ST_fsm_state10_blk;
+reg    ap_ST_fsm_state10_blk;
 wire    ap_ST_fsm_state11_blk;
 wire    ap_ST_fsm_state12_blk;
 wire    ap_ST_fsm_state13_blk;
 wire    ap_ST_fsm_state14_blk;
 wire    ap_ST_fsm_state15_blk;
-reg    ap_ST_fsm_state16_blk;
+wire    ap_ST_fsm_state16_blk;
 wire    ap_ST_fsm_state17_blk;
-reg    ap_ST_fsm_state18_blk;
+wire    ap_ST_fsm_state18_blk;
+wire    ap_ST_fsm_state19_blk;
+wire    ap_ST_fsm_state20_blk;
+wire    ap_ST_fsm_state21_blk;
+wire    ap_ST_fsm_state22_blk;
+wire    ap_ST_fsm_state23_blk;
+wire    ap_ST_fsm_state24_blk;
+wire    ap_ST_fsm_state25_blk;
+wire    ap_ST_fsm_state26_blk;
+wire    ap_ST_fsm_state27_blk;
+wire    ap_ST_fsm_state28_blk;
+wire    ap_ST_fsm_state29_blk;
+wire    ap_ST_fsm_state30_blk;
+wire    ap_ST_fsm_state31_blk;
+wire    ap_ST_fsm_state32_blk;
+wire    ap_ST_fsm_state33_blk;
+wire    ap_ST_fsm_state34_blk;
+wire    ap_ST_fsm_state35_blk;
+wire    ap_ST_fsm_state36_blk;
+wire    ap_ST_fsm_state37_blk;
+wire    ap_ST_fsm_state38_blk;
+wire    ap_ST_fsm_state39_blk;
+wire    ap_ST_fsm_state40_blk;
+wire    ap_ST_fsm_state41_blk;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 18'd1;
-#0 grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_ap_start_reg = 1'b0;
-#0 grp_run_parallel_engines_fu_2294_ap_start_reg = 1'b0;
-#0 ap_sync_reg_grp_run_parallel_engines_fu_2294_ap_ready = 1'b0;
-#0 ap_sync_reg_grp_run_parallel_engines_fu_2294_ap_done = 1'b0;
-#0 grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_ap_start_reg = 1'b0;
-#0 grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_ap_start_reg = 1'b0;
-#0 grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_ap_start_reg = 1'b0;
-#0 grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_start_reg = 1'b0;
-#0 e_fu_2208 = 3'd0;
-#0 empty_fu_2212 = 32'd0;
-#0 mux_case_11_fu_2216 = 32'd0;
-#0 mux_case_25_fu_2220 = 32'd0;
-#0 mux_case_310_fu_2224 = 32'd0;
+#0 ap_CS_fsm = 41'd1;
+#0 grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_ap_start_reg = 1'b0;
+#0 grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_ap_start_reg = 1'b0;
+#0 grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_ap_start_reg = 1'b0;
+#0 grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_ap_start_reg = 1'b0;
+#0 grp_run_parallel_engines_fu_377_ap_start_reg = 1'b0;
+#0 ap_sync_reg_grp_run_parallel_engines_fu_377_ap_ready = 1'b0;
+#0 ap_sync_reg_grp_run_parallel_engines_fu_377_ap_done = 1'b0;
 end
 
-output_moe_gate_bias_ROM_AUTO_1R #(
-    .DataWidth( 32 ),
-    .AddressRange( 4 ),
-    .AddressWidth( 2 ))
-gate_bias_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .address0(gate_bias_address0),
-    .ce0(gate_bias_ce0),
-    .q0(gate_bias_q0)
-);
-
-output_moe_expert_output_RAM_AUTO_1R1W #(
-    .DataWidth( 32 ),
-    .AddressRange( 5 ),
-    .AddressWidth( 3 ))
-expert_output_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .address0(expert_output_address0),
-    .ce0(expert_output_ce0),
-    .we0(expert_output_we0),
-    .d0(grp_run_parallel_engines_fu_2294_out_0_d0),
-    .q0(expert_output_q0),
-    .address1(grp_run_parallel_engines_fu_2294_out_0_address1),
-    .ce1(expert_output_ce1),
-    .we1(expert_output_we1),
-    .d1(grp_run_parallel_engines_fu_2294_out_0_d1)
-);
-
-output_moe_expert_output_RAM_AUTO_1R1W #(
-    .DataWidth( 32 ),
-    .AddressRange( 5 ),
-    .AddressWidth( 3 ))
-expert_output_1_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .address0(expert_output_1_address0),
-    .ce0(expert_output_1_ce0),
-    .we0(expert_output_1_we0),
-    .d0(grp_run_parallel_engines_fu_2294_out_1_d0),
-    .q0(expert_output_1_q0),
-    .address1(grp_run_parallel_engines_fu_2294_out_1_address1),
-    .ce1(expert_output_1_ce1),
-    .we1(expert_output_1_we1),
-    .d1(grp_run_parallel_engines_fu_2294_out_1_d1)
-);
-
-output_moe_expert_output_RAM_AUTO_1R1W #(
-    .DataWidth( 32 ),
-    .AddressRange( 5 ),
-    .AddressWidth( 3 ))
-expert_output_2_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .address0(expert_output_2_address0),
-    .ce0(expert_output_2_ce0),
-    .we0(expert_output_2_we0),
-    .d0(grp_run_parallel_engines_fu_2294_out_2_d0),
-    .q0(expert_output_2_q0),
-    .address1(grp_run_parallel_engines_fu_2294_out_2_address1),
-    .ce1(expert_output_2_ce1),
-    .we1(expert_output_2_we1),
-    .d1(grp_run_parallel_engines_fu_2294_out_2_d1)
-);
-
-output_moe_expert_output_RAM_AUTO_1R1W #(
-    .DataWidth( 32 ),
-    .AddressRange( 5 ),
-    .AddressWidth( 3 ))
-expert_output_3_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .address0(expert_output_3_address0),
-    .ce0(expert_output_3_ce0),
-    .we0(expert_output_3_we0),
-    .d0(grp_run_parallel_engines_fu_2294_out_3_d0),
-    .q0(expert_output_3_q0),
-    .address1(grp_run_parallel_engines_fu_2294_out_3_address1),
-    .ce1(expert_output_3_ce1),
-    .we1(expert_output_3_we1),
-    .d1(grp_run_parallel_engines_fu_2294_out_3_d1)
-);
-
-output_moe_output_moe_Pipeline_VITIS_LOOP_1078_3 grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285(
+output_moe_output_moe_Pipeline_VITIS_LOOP_998_2 grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_ap_start),
-    .ap_done(grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_ap_done),
-    .ap_idle(grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_ap_idle),
-    .ap_ready(grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_ap_ready),
-    .empty(empty_fu_2212),
-    .mux_case_11(mux_case_11_fu_2216),
-    .mux_case_25(mux_case_25_fu_2220),
-    .mux_case_310(mux_case_310_fu_2224),
-    .max_logit_out(grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_max_logit_out),
-    .max_logit_out_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_max_logit_out_ap_vld)
+    .ap_start(grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_ap_start),
+    .ap_done(grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_ap_done),
+    .ap_idle(grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_ap_idle),
+    .ap_ready(grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_ap_ready),
+    .input_r_address0(grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_input_r_address0),
+    .input_r_ce0(grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_input_r_ce0),
+    .input_r_q0(input_r_q0),
+    .acc_out(grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_acc_out),
+    .acc_out_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_acc_out_ap_vld),
+    .grp_fu_483_p_din0(grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_483_p_din0),
+    .grp_fu_483_p_din1(grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_483_p_din1),
+    .grp_fu_483_p_opcode(grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_483_p_opcode),
+    .grp_fu_483_p_dout0(grp_fu_483_p2),
+    .grp_fu_483_p_ce(grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_483_p_ce),
+    .grp_fu_508_p_din0(grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_508_p_din0),
+    .grp_fu_508_p_din1(grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_508_p_din1),
+    .grp_fu_508_p_dout0(grp_fu_508_p2),
+    .grp_fu_508_p_ce(grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_508_p_ce)
 );
 
-output_moe_run_parallel_engines grp_run_parallel_engines_fu_2294(
-    .input_r_address0(grp_run_parallel_engines_fu_2294_input_r_address0),
-    .input_r_ce0(grp_run_parallel_engines_fu_2294_input_r_ce0),
-    .input_r_d0(grp_run_parallel_engines_fu_2294_input_r_d0),
+output_moe_output_moe_Pipeline_VITIS_LOOP_998_21 grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .ap_start(grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_ap_start),
+    .ap_done(grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_ap_done),
+    .ap_idle(grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_ap_idle),
+    .ap_ready(grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_ap_ready),
+    .input_r_address0(grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_input_r_address0),
+    .input_r_ce0(grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_input_r_ce0),
     .input_r_q0(input_r_q0),
-    .input_r_we0(grp_run_parallel_engines_fu_2294_input_r_we0),
-    .input_r_address1(grp_run_parallel_engines_fu_2294_input_r_address1),
-    .input_r_ce1(grp_run_parallel_engines_fu_2294_input_r_ce1),
-    .input_r_d1(grp_run_parallel_engines_fu_2294_input_r_d1),
+    .acc_2_out(grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_acc_2_out),
+    .acc_2_out_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_acc_2_out_ap_vld),
+    .grp_fu_483_p_din0(grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_483_p_din0),
+    .grp_fu_483_p_din1(grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_483_p_din1),
+    .grp_fu_483_p_opcode(grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_483_p_opcode),
+    .grp_fu_483_p_dout0(grp_fu_483_p2),
+    .grp_fu_483_p_ce(grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_483_p_ce),
+    .grp_fu_508_p_din0(grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_508_p_din0),
+    .grp_fu_508_p_din1(grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_508_p_din1),
+    .grp_fu_508_p_dout0(grp_fu_508_p2),
+    .grp_fu_508_p_ce(grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_508_p_ce)
+);
+
+output_moe_output_moe_Pipeline_VITIS_LOOP_998_22 grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .ap_start(grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_ap_start),
+    .ap_done(grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_ap_done),
+    .ap_idle(grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_ap_idle),
+    .ap_ready(grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_ap_ready),
+    .input_r_address0(grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_input_r_address0),
+    .input_r_ce0(grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_input_r_ce0),
+    .input_r_q0(input_r_q0),
+    .acc_4_out(grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_acc_4_out),
+    .acc_4_out_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_acc_4_out_ap_vld),
+    .grp_fu_483_p_din0(grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_483_p_din0),
+    .grp_fu_483_p_din1(grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_483_p_din1),
+    .grp_fu_483_p_opcode(grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_483_p_opcode),
+    .grp_fu_483_p_dout0(grp_fu_483_p2),
+    .grp_fu_483_p_ce(grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_483_p_ce),
+    .grp_fu_508_p_din0(grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_508_p_din0),
+    .grp_fu_508_p_din1(grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_508_p_din1),
+    .grp_fu_508_p_dout0(grp_fu_508_p2),
+    .grp_fu_508_p_ce(grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_508_p_ce)
+);
+
+output_moe_output_moe_Pipeline_VITIS_LOOP_998_23 grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .ap_start(grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_ap_start),
+    .ap_done(grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_ap_done),
+    .ap_idle(grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_ap_idle),
+    .ap_ready(grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_ap_ready),
+    .input_r_address0(grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_input_r_address0),
+    .input_r_ce0(grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_input_r_ce0),
+    .input_r_q0(input_r_q0),
+    .acc_26_out(grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_acc_26_out),
+    .acc_26_out_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_acc_26_out_ap_vld),
+    .grp_fu_483_p_din0(grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_483_p_din0),
+    .grp_fu_483_p_din1(grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_483_p_din1),
+    .grp_fu_483_p_opcode(grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_483_p_opcode),
+    .grp_fu_483_p_dout0(grp_fu_483_p2),
+    .grp_fu_483_p_ce(grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_483_p_ce),
+    .grp_fu_508_p_din0(grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_508_p_din0),
+    .grp_fu_508_p_din1(grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_508_p_din1),
+    .grp_fu_508_p_dout0(grp_fu_508_p2),
+    .grp_fu_508_p_ce(grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_508_p_ce)
+);
+
+output_moe_run_parallel_engines grp_run_parallel_engines_fu_377(
+    .input_r_address0(grp_run_parallel_engines_fu_377_input_r_address0),
+    .input_r_ce0(grp_run_parallel_engines_fu_377_input_r_ce0),
+    .input_r_d0(grp_run_parallel_engines_fu_377_input_r_d0),
+    .input_r_q0(input_r_q0),
+    .input_r_we0(grp_run_parallel_engines_fu_377_input_r_we0),
+    .input_r_address1(grp_run_parallel_engines_fu_377_input_r_address1),
+    .input_r_ce1(grp_run_parallel_engines_fu_377_input_r_ce1),
+    .input_r_d1(grp_run_parallel_engines_fu_377_input_r_d1),
     .input_r_q1(input_r_q1),
-    .input_r_we1(grp_run_parallel_engines_fu_2294_input_r_we1),
-    .out_0_address0(grp_run_parallel_engines_fu_2294_out_0_address0),
-    .out_0_ce0(grp_run_parallel_engines_fu_2294_out_0_ce0),
-    .out_0_d0(grp_run_parallel_engines_fu_2294_out_0_d0),
-    .out_0_q0(32'd0),
-    .out_0_we0(grp_run_parallel_engines_fu_2294_out_0_we0),
-    .out_0_address1(grp_run_parallel_engines_fu_2294_out_0_address1),
-    .out_0_ce1(grp_run_parallel_engines_fu_2294_out_0_ce1),
-    .out_0_d1(grp_run_parallel_engines_fu_2294_out_0_d1),
-    .out_0_q1(32'd0),
-    .out_0_we1(grp_run_parallel_engines_fu_2294_out_0_we1),
-    .out_1_address0(grp_run_parallel_engines_fu_2294_out_1_address0),
-    .out_1_ce0(grp_run_parallel_engines_fu_2294_out_1_ce0),
-    .out_1_d0(grp_run_parallel_engines_fu_2294_out_1_d0),
-    .out_1_q0(32'd0),
-    .out_1_we0(grp_run_parallel_engines_fu_2294_out_1_we0),
-    .out_1_address1(grp_run_parallel_engines_fu_2294_out_1_address1),
-    .out_1_ce1(grp_run_parallel_engines_fu_2294_out_1_ce1),
-    .out_1_d1(grp_run_parallel_engines_fu_2294_out_1_d1),
-    .out_1_q1(32'd0),
-    .out_1_we1(grp_run_parallel_engines_fu_2294_out_1_we1),
-    .out_2_address0(grp_run_parallel_engines_fu_2294_out_2_address0),
-    .out_2_ce0(grp_run_parallel_engines_fu_2294_out_2_ce0),
-    .out_2_d0(grp_run_parallel_engines_fu_2294_out_2_d0),
-    .out_2_q0(32'd0),
-    .out_2_we0(grp_run_parallel_engines_fu_2294_out_2_we0),
-    .out_2_address1(grp_run_parallel_engines_fu_2294_out_2_address1),
-    .out_2_ce1(grp_run_parallel_engines_fu_2294_out_2_ce1),
-    .out_2_d1(grp_run_parallel_engines_fu_2294_out_2_d1),
-    .out_2_q1(32'd0),
-    .out_2_we1(grp_run_parallel_engines_fu_2294_out_2_we1),
-    .out_3_address0(grp_run_parallel_engines_fu_2294_out_3_address0),
-    .out_3_ce0(grp_run_parallel_engines_fu_2294_out_3_ce0),
-    .out_3_d0(grp_run_parallel_engines_fu_2294_out_3_d0),
-    .out_3_q0(32'd0),
-    .out_3_we0(grp_run_parallel_engines_fu_2294_out_3_we0),
-    .out_3_address1(grp_run_parallel_engines_fu_2294_out_3_address1),
-    .out_3_ce1(grp_run_parallel_engines_fu_2294_out_3_ce1),
-    .out_3_d1(grp_run_parallel_engines_fu_2294_out_3_d1),
-    .out_3_q1(32'd0),
-    .out_3_we1(grp_run_parallel_engines_fu_2294_out_3_we1),
+    .input_r_we1(grp_run_parallel_engines_fu_377_input_r_we1),
+    .expert_outputs_0_0(grp_run_parallel_engines_fu_377_expert_outputs_0_0),
+    .expert_outputs_0_1(grp_run_parallel_engines_fu_377_expert_outputs_0_1),
+    .expert_outputs_0_2(grp_run_parallel_engines_fu_377_expert_outputs_0_2),
+    .expert_outputs_0_3(grp_run_parallel_engines_fu_377_expert_outputs_0_3),
+    .expert_outputs_0_4(grp_run_parallel_engines_fu_377_expert_outputs_0_4),
+    .expert_outputs_1_0(grp_run_parallel_engines_fu_377_expert_outputs_1_0),
+    .expert_outputs_1_1(grp_run_parallel_engines_fu_377_expert_outputs_1_1),
+    .expert_outputs_1_2(grp_run_parallel_engines_fu_377_expert_outputs_1_2),
+    .expert_outputs_1_3(grp_run_parallel_engines_fu_377_expert_outputs_1_3),
+    .expert_outputs_1_4(grp_run_parallel_engines_fu_377_expert_outputs_1_4),
+    .expert_outputs_2_0(grp_run_parallel_engines_fu_377_expert_outputs_2_0),
+    .expert_outputs_2_1(grp_run_parallel_engines_fu_377_expert_outputs_2_1),
+    .expert_outputs_2_2(grp_run_parallel_engines_fu_377_expert_outputs_2_2),
+    .expert_outputs_2_3(grp_run_parallel_engines_fu_377_expert_outputs_2_3),
+    .expert_outputs_2_4(grp_run_parallel_engines_fu_377_expert_outputs_2_4),
+    .expert_outputs_3_0(grp_run_parallel_engines_fu_377_expert_outputs_3_0),
+    .expert_outputs_3_1(grp_run_parallel_engines_fu_377_expert_outputs_3_1),
+    .expert_outputs_3_2(grp_run_parallel_engines_fu_377_expert_outputs_3_2),
+    .expert_outputs_3_3(grp_run_parallel_engines_fu_377_expert_outputs_3_3),
+    .expert_outputs_3_4(grp_run_parallel_engines_fu_377_expert_outputs_3_4),
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_run_parallel_engines_fu_2294_ap_start),
-    .ap_done(grp_run_parallel_engines_fu_2294_ap_done),
-    .ap_ready(grp_run_parallel_engines_fu_2294_ap_ready),
-    .ap_idle(grp_run_parallel_engines_fu_2294_ap_idle),
-    .ap_continue(grp_run_parallel_engines_fu_2294_ap_continue)
-);
-
-output_moe_output_moe_Pipeline_VITIS_LOOP_1065_2 grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_ap_start),
-    .ap_done(grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_ap_done),
-    .ap_idle(grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_ap_idle),
-    .ap_ready(grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_ap_ready),
-    .acc(acc_reg_4722),
-    .zext_ln1066(tmp_6_reg_4717),
-    .input_r_address0(grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_input_r_address0),
-    .input_r_ce0(grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_input_r_ce0),
-    .input_r_q0(input_r_q0),
-    .acc_1_out(grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_acc_1_out),
-    .acc_1_out_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_acc_1_out_ap_vld),
-    .grp_fu_4750_p_din0(grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4750_p_din0),
-    .grp_fu_4750_p_din1(grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4750_p_din1),
-    .grp_fu_4750_p_dout0(grp_fu_4750_p2),
-    .grp_fu_4750_p_ce(grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4750_p_ce),
-    .grp_fu_4754_p_din0(grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4754_p_din0),
-    .grp_fu_4754_p_din1(grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4754_p_din1),
-    .grp_fu_4754_p_opcode(grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4754_p_opcode),
-    .grp_fu_4754_p_dout0(grp_fu_4754_p2),
-    .grp_fu_4754_p_ce(grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4754_p_ce)
-);
-
-output_moe_output_moe_Pipeline_VITIS_LOOP_1085_4 grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_ap_start),
-    .ap_done(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_ap_done),
-    .ap_idle(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_ap_idle),
-    .ap_ready(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_ap_ready),
-    .gates_0(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_0),
-    .gates_0_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_0_ap_vld),
-    .gates_3(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_3),
-    .gates_3_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_3_ap_vld),
-    .gates_2(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_2),
-    .gates_2_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_2_ap_vld),
-    .gates_1(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_1),
-    .gates_1_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_1_ap_vld),
-    .empty(empty_fu_2212),
-    .mux_case_11(mux_case_11_fu_2216),
-    .mux_case_25(mux_case_25_fu_2220),
-    .mux_case_310(mux_case_310_fu_2224),
-    .max_logit_reload(grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_max_logit_out),
-    .exp_sum_out(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_exp_sum_out),
-    .exp_sum_out_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_exp_sum_out_ap_vld),
-    .grp_fu_4754_p_din0(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4754_p_din0),
-    .grp_fu_4754_p_din1(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4754_p_din1),
-    .grp_fu_4754_p_opcode(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4754_p_opcode),
-    .grp_fu_4754_p_dout0(grp_fu_4754_p2),
-    .grp_fu_4754_p_ce(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4754_p_ce),
-    .grp_fu_4758_p_din0(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4758_p_din0),
-    .grp_fu_4758_p_din1(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4758_p_din1),
-    .grp_fu_4758_p_opcode(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4758_p_opcode),
-    .grp_fu_4758_p_dout0(grp_fu_4758_p2),
-    .grp_fu_4758_p_ce(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4758_p_ce)
-);
-
-output_moe_output_moe_Pipeline_VITIS_LOOP_1094_5 grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_ap_start),
-    .ap_done(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_ap_done),
-    .ap_idle(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_ap_idle),
-    .ap_ready(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_ap_ready),
-    .gates_0_i(gates_0_i),
-    .gates_0_o(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_0_o),
-    .gates_0_o_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_0_o_ap_vld),
-    .gates_3_i(gates_3_i),
-    .gates_3_o(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_3_o),
-    .gates_3_o_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_3_o_ap_vld),
-    .gates_2_i(gates_2_i),
-    .gates_2_o(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_2_o),
-    .gates_2_o_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_2_o_ap_vld),
-    .gates_1_i(gates_1_i),
-    .gates_1_o(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_1_o),
-    .gates_1_o_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_1_o_ap_vld),
-    .inv_exp_sum(inv_exp_sum_reg_4733),
-    .mux_case_3927_phi_out(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_3927_phi_out),
-    .mux_case_3927_phi_out_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_3927_phi_out_ap_vld),
-    .mux_case_2824_phi_out(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_2824_phi_out),
-    .mux_case_2824_phi_out_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_2824_phi_out_ap_vld),
-    .mux_case_1721_phi_out(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_1721_phi_out),
-    .mux_case_1721_phi_out_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_1721_phi_out_ap_vld),
-    .mux_case_0518_phi_out(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_0518_phi_out),
-    .mux_case_0518_phi_out_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_0518_phi_out_ap_vld),
-    .grp_fu_4750_p_din0(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_grp_fu_4750_p_din0),
-    .grp_fu_4750_p_din1(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_grp_fu_4750_p_din1),
-    .grp_fu_4750_p_dout0(grp_fu_4750_p2),
-    .grp_fu_4750_p_ce(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_grp_fu_4750_p_ce)
-);
-
-output_moe_output_moe_Pipeline_VITIS_LOOP_1108_6 grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_start),
-    .ap_done(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_done),
-    .ap_idle(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_idle),
-    .ap_ready(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_ready),
-    .output_0(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_0),
-    .output_0_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_0_ap_vld),
-    .output_4(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_4),
-    .output_4_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_4_ap_vld),
-    .output_3(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_3),
-    .output_3_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_3_ap_vld),
-    .output_2(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_2),
-    .output_2_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_2_ap_vld),
-    .output_1(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_1),
-    .output_1_ap_vld(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_1_ap_vld),
-    .expert_output_address0(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_address0),
-    .expert_output_ce0(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_ce0),
-    .expert_output_q0(expert_output_q0),
-    .expert_output_1_address0(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_1_address0),
-    .expert_output_1_ce0(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_1_ce0),
-    .expert_output_1_q0(expert_output_1_q0),
-    .expert_output_2_address0(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_2_address0),
-    .expert_output_2_ce0(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_2_ce0),
-    .expert_output_2_q0(expert_output_2_q0),
-    .expert_output_3_address0(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_3_address0),
-    .expert_output_3_ce0(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_3_ce0),
-    .expert_output_3_q0(expert_output_3_q0),
-    .mux_case_0518_phi_reload(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_0518_phi_out),
-    .mux_case_1721_phi_reload(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_1721_phi_out),
-    .mux_case_2824_phi_reload(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_2824_phi_out),
-    .mux_case_3927_phi_reload(grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_mux_case_3927_phi_out),
-    .grp_fu_4754_p_din0(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4754_p_din0),
-    .grp_fu_4754_p_din1(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4754_p_din1),
-    .grp_fu_4754_p_opcode(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4754_p_opcode),
-    .grp_fu_4754_p_dout0(grp_fu_4754_p2),
-    .grp_fu_4754_p_ce(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4754_p_ce),
-    .grp_fu_4758_p_din0(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4758_p_din0),
-    .grp_fu_4758_p_din1(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4758_p_din1),
-    .grp_fu_4758_p_opcode(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4758_p_opcode),
-    .grp_fu_4758_p_dout0(grp_fu_4758_p2),
-    .grp_fu_4758_p_ce(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4758_p_ce),
-    .grp_fu_4750_p_din0(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4750_p_din0),
-    .grp_fu_4750_p_din1(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4750_p_din1),
-    .grp_fu_4750_p_dout0(grp_fu_4750_p2),
-    .grp_fu_4750_p_ce(grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4750_p_ce)
-);
-
-output_moe_fdiv_32ns_32ns_32_6_no_dsp_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 6 ),
-    .din0_WIDTH( 32 ),
-    .din1_WIDTH( 32 ),
-    .dout_WIDTH( 32 ))
-fdiv_32ns_32ns_32_6_no_dsp_1_U6545(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .din0(32'd1065353216),
-    .din1(grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_exp_sum_out),
-    .ce(1'b1),
-    .dout(grp_fu_4493_p2)
-);
-
-output_moe_fmul_32ns_32ns_32_2_max_dsp_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 2 ),
-    .din0_WIDTH( 32 ),
-    .din1_WIDTH( 32 ),
-    .dout_WIDTH( 32 ))
-fmul_32ns_32ns_32_2_max_dsp_1_U6546(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .din0(grp_fu_4750_p0),
-    .din1(grp_fu_4750_p1),
-    .ce(grp_fu_4750_ce),
-    .dout(grp_fu_4750_p2)
+    .ap_start(grp_run_parallel_engines_fu_377_ap_start),
+    .expert_outputs_0_0_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_0_0_ap_vld),
+    .expert_outputs_1_0_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_1_0_ap_vld),
+    .expert_outputs_2_0_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_2_0_ap_vld),
+    .expert_outputs_3_0_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_3_0_ap_vld),
+    .expert_outputs_0_1_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_0_1_ap_vld),
+    .expert_outputs_1_1_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_1_1_ap_vld),
+    .expert_outputs_2_1_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_2_1_ap_vld),
+    .expert_outputs_3_1_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_3_1_ap_vld),
+    .expert_outputs_0_2_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_0_2_ap_vld),
+    .expert_outputs_1_2_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_1_2_ap_vld),
+    .expert_outputs_2_2_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_2_2_ap_vld),
+    .expert_outputs_3_2_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_3_2_ap_vld),
+    .expert_outputs_0_3_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_0_3_ap_vld),
+    .expert_outputs_1_3_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_1_3_ap_vld),
+    .expert_outputs_2_3_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_2_3_ap_vld),
+    .expert_outputs_3_3_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_3_3_ap_vld),
+    .expert_outputs_0_4_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_0_4_ap_vld),
+    .expert_outputs_1_4_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_1_4_ap_vld),
+    .expert_outputs_2_4_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_2_4_ap_vld),
+    .expert_outputs_3_4_ap_vld(grp_run_parallel_engines_fu_377_expert_outputs_3_4_ap_vld),
+    .ap_done(grp_run_parallel_engines_fu_377_ap_done),
+    .ap_ready(grp_run_parallel_engines_fu_377_ap_ready),
+    .ap_idle(grp_run_parallel_engines_fu_377_ap_idle),
+    .ap_continue(grp_run_parallel_engines_fu_377_ap_continue)
 );
 
 output_moe_faddfsub_32ns_32ns_32_2_full_dsp_1 #(
@@ -716,14 +652,62 @@ output_moe_faddfsub_32ns_32ns_32_2_full_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-faddfsub_32ns_32ns_32_2_full_dsp_1_U6547(
+faddfsub_32ns_32ns_32_2_full_dsp_1_U796(
     .clk(ap_clk),
     .reset(ap_rst),
-    .din0(grp_fu_4754_p0),
-    .din1(grp_fu_4754_p1),
-    .opcode(grp_fu_4754_opcode),
-    .ce(grp_fu_4754_ce),
-    .dout(grp_fu_4754_p2)
+    .din0(grp_fu_483_p0),
+    .din1(grp_fu_483_p1),
+    .opcode(grp_fu_483_opcode),
+    .ce(grp_fu_483_ce),
+    .dout(grp_fu_483_p2)
+);
+
+output_moe_faddfsub_32ns_32ns_32_2_full_dsp_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 2 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+faddfsub_32ns_32ns_32_2_full_dsp_1_U797(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .din0(grp_fu_487_p0),
+    .din1(grp_fu_487_p1),
+    .opcode(grp_fu_487_opcode),
+    .ce(grp_fu_487_ce),
+    .dout(grp_fu_487_p2)
+);
+
+output_moe_faddfsub_32ns_32ns_32_2_full_dsp_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 2 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+faddfsub_32ns_32ns_32_2_full_dsp_1_U798(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .din0(grp_fu_491_p0),
+    .din1(grp_fu_491_p1),
+    .opcode(grp_fu_491_opcode),
+    .ce(grp_fu_491_ce),
+    .dout(grp_fu_491_p2)
+);
+
+output_moe_faddfsub_32ns_32ns_32_2_full_dsp_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 2 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+faddfsub_32ns_32ns_32_2_full_dsp_1_U799(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .din0(grp_fu_495_p0),
+    .din1(grp_fu_495_p1),
+    .opcode(grp_fu_495_opcode),
+    .ce(grp_fu_495_ce),
+    .dout(grp_fu_495_p2)
 );
 
 output_moe_fadd_32ns_32ns_32_2_full_dsp_1 #(
@@ -732,13 +716,191 @@ output_moe_fadd_32ns_32ns_32_2_full_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fadd_32ns_32ns_32_2_full_dsp_1_U6548(
+fadd_32ns_32ns_32_2_full_dsp_1_U800(
     .clk(ap_clk),
     .reset(ap_rst),
-    .din0(grp_fu_4758_p0),
-    .din1(grp_fu_4758_p1),
-    .ce(grp_fu_4758_ce),
-    .dout(grp_fu_4758_p2)
+    .din0(grp_fu_503_p0),
+    .din1(grp_fu_503_p1),
+    .ce(1'b1),
+    .dout(grp_fu_503_p2)
+);
+
+output_moe_fmul_32ns_32ns_32_2_max_dsp_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 2 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+fmul_32ns_32ns_32_2_max_dsp_1_U801(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .din0(grp_fu_508_p0),
+    .din1(grp_fu_508_p1),
+    .ce(grp_fu_508_ce),
+    .dout(grp_fu_508_p2)
+);
+
+output_moe_fmul_32ns_32ns_32_2_max_dsp_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 2 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+fmul_32ns_32ns_32_2_max_dsp_1_U802(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .din0(grp_fu_512_p0),
+    .din1(grp_fu_512_p1),
+    .ce(1'b1),
+    .dout(grp_fu_512_p2)
+);
+
+output_moe_fmul_32ns_32ns_32_2_max_dsp_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 2 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+fmul_32ns_32ns_32_2_max_dsp_1_U803(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .din0(grp_fu_516_p0),
+    .din1(grp_fu_516_p1),
+    .ce(1'b1),
+    .dout(grp_fu_516_p2)
+);
+
+output_moe_fmul_32ns_32ns_32_2_max_dsp_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 2 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+fmul_32ns_32ns_32_2_max_dsp_1_U804(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .din0(grp_fu_520_p0),
+    .din1(grp_fu_520_p1),
+    .ce(1'b1),
+    .dout(grp_fu_520_p2)
+);
+
+output_moe_fmul_32ns_32ns_32_2_max_dsp_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 2 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+fmul_32ns_32ns_32_2_max_dsp_1_U805(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .din0(grp_fu_524_p0),
+    .din1(grp_fu_524_p1),
+    .ce(1'b1),
+    .dout(grp_fu_524_p2)
+);
+
+output_moe_fdiv_32ns_32ns_32_6_no_dsp_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 6 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+fdiv_32ns_32ns_32_6_no_dsp_1_U806(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .din0(exp_logits_reg_1221),
+    .din1(reg_558),
+    .ce(1'b1),
+    .dout(grp_fu_528_p2)
+);
+
+output_moe_fdiv_32ns_32ns_32_6_no_dsp_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 6 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+fdiv_32ns_32ns_32_6_no_dsp_1_U807(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .din0(exp_logits_1_reg_1227),
+    .din1(reg_558),
+    .ce(1'b1),
+    .dout(grp_fu_532_p2)
+);
+
+output_moe_fdiv_32ns_32ns_32_6_no_dsp_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 6 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+fdiv_32ns_32ns_32_6_no_dsp_1_U808(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .din0(exp_logits_2_reg_1233),
+    .din1(reg_558),
+    .ce(1'b1),
+    .dout(grp_fu_536_p2)
+);
+
+output_moe_fdiv_32ns_32ns_32_6_no_dsp_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 6 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+fdiv_32ns_32ns_32_6_no_dsp_1_U809(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .din0(exp_logits_3_reg_1239),
+    .din1(reg_558),
+    .ce(1'b1),
+    .dout(grp_fu_540_p2)
+);
+
+output_moe_fcmp_32ns_32ns_1_1_no_dsp_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 1 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 1 ))
+fcmp_32ns_32ns_1_1_no_dsp_1_U810(
+    .din0(grp_fu_544_p0),
+    .din1(grp_fu_544_p1),
+    .opcode(5'd2),
+    .dout(grp_fu_544_p2)
+);
+
+output_moe_fexp_32ns_32ns_32_4_full_dsp_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 4 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+fexp_32ns_32ns_32_4_full_dsp_1_U811(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .din0(32'd0),
+    .din1(grp_fu_548_p1),
+    .ce(1'b1),
+    .dout(grp_fu_548_p2)
+);
+
+output_moe_fexp_32ns_32ns_32_4_full_dsp_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 4 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 32 ))
+fexp_32ns_32ns_32_4_full_dsp_1_U812(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .din0(32'd0),
+    .din1(reg_568),
+    .ce(1'b1),
+    .dout(grp_fu_553_p2)
 );
 
 always @ (posedge ap_clk) begin
@@ -751,153 +913,298 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_sync_reg_grp_run_parallel_engines_fu_2294_ap_done <= 1'b0;
+        ap_sync_reg_grp_run_parallel_engines_fu_377_ap_done <= 1'b0;
     end else begin
-        if (((1'b0 == ap_block_state6_on_subcall_done) & (1'b1 == ap_CS_fsm_state6))) begin
-            ap_sync_reg_grp_run_parallel_engines_fu_2294_ap_done <= 1'b0;
-        end else if ((grp_run_parallel_engines_fu_2294_ap_done == 1'b1)) begin
-            ap_sync_reg_grp_run_parallel_engines_fu_2294_ap_done <= 1'b1;
+        if (((1'b0 == ap_block_state10_on_subcall_done) & (1'b1 == ap_CS_fsm_state10))) begin
+            ap_sync_reg_grp_run_parallel_engines_fu_377_ap_done <= 1'b0;
+        end else if ((grp_run_parallel_engines_fu_377_ap_done == 1'b1)) begin
+            ap_sync_reg_grp_run_parallel_engines_fu_377_ap_done <= 1'b1;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_sync_reg_grp_run_parallel_engines_fu_2294_ap_ready <= 1'b0;
+        ap_sync_reg_grp_run_parallel_engines_fu_377_ap_ready <= 1'b0;
     end else begin
-        if (((1'b0 == ap_block_state6_on_subcall_done) & (1'b1 == ap_CS_fsm_state6))) begin
-            ap_sync_reg_grp_run_parallel_engines_fu_2294_ap_ready <= 1'b0;
-        end else if ((grp_run_parallel_engines_fu_2294_ap_ready == 1'b1)) begin
-            ap_sync_reg_grp_run_parallel_engines_fu_2294_ap_ready <= 1'b1;
+        if (((1'b0 == ap_block_state10_on_subcall_done) & (1'b1 == ap_CS_fsm_state10))) begin
+            ap_sync_reg_grp_run_parallel_engines_fu_377_ap_ready <= 1'b0;
+        end else if ((grp_run_parallel_engines_fu_377_ap_ready == 1'b1)) begin
+            ap_sync_reg_grp_run_parallel_engines_fu_377_ap_ready <= 1'b1;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_ap_start_reg <= 1'b0;
+        grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state3)) begin
-            grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_ap_start_reg <= 1'b1;
-        end else if ((grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_ap_ready == 1'b1)) begin
-            grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_ap_start_reg <= 1'b0;
+            grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_ap_start_reg <= 1'b1;
+        end else if ((grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_ap_ready == 1'b1)) begin
+            grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_ap_start_reg <= 1'b0;
+        grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_ap_start_reg <= 1'b0;
     end else begin
-        if (((icmp_ln1061_fu_4510_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
-            grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_ap_start_reg <= 1'b1;
-        end else if ((grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_ap_ready == 1'b1)) begin
-            grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_ap_start_reg <= 1'b0;
+        if ((1'b1 == ap_CS_fsm_state5)) begin
+            grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_ap_start_reg <= 1'b1;
+        end else if ((grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_ap_ready == 1'b1)) begin
+            grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_ap_start_reg <= 1'b0;
+        grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state7)) begin
-            grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_ap_start_reg <= 1'b1;
-        end else if ((grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_ap_ready == 1'b1)) begin
-            grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_ap_start_reg <= 1'b0;
+            grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_ap_start_reg <= 1'b1;
+        end else if ((grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_ap_ready == 1'b1)) begin
+            grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_ap_start_reg <= 1'b0;
+        grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_ap_start_reg <= 1'b0;
     end else begin
-        if ((1'b1 == ap_CS_fsm_state15)) begin
-            grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_ap_start_reg <= 1'b1;
-        end else if ((grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_ap_ready == 1'b1)) begin
-            grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_ap_start_reg <= 1'b0;
+        if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+            grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_ap_start_reg <= 1'b1;
+        end else if ((grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_ap_ready == 1'b1)) begin
+            grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_start_reg <= 1'b0;
+        grp_run_parallel_engines_fu_377_ap_start_reg <= 1'b0;
     end else begin
-        if ((1'b1 == ap_CS_fsm_state17)) begin
-            grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_start_reg <= 1'b1;
-        end else if ((grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_ready == 1'b1)) begin
-            grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_start_reg <= 1'b0;
+        if (((1'b1 == ap_CS_fsm_state9) | ((ap_sync_grp_run_parallel_engines_fu_377_ap_ready == 1'b0) & (1'b1 == ap_CS_fsm_state10)))) begin
+            grp_run_parallel_engines_fu_377_ap_start_reg <= 1'b1;
+        end else if ((grp_run_parallel_engines_fu_377_ap_ready == 1'b1)) begin
+            grp_run_parallel_engines_fu_377_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        grp_run_parallel_engines_fu_2294_ap_start_reg <= 1'b0;
+    if ((1'b1 == ap_CS_fsm_state7)) begin
+        and_ln1018_1_reg_1181 <= and_ln1018_1_fu_707_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        and_ln1018_3_reg_1194 <= and_ln1018_3_fu_801_p2;
+        max_logit_reg_1189 <= max_logit_fu_717_p3;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state29)) begin
+        div_1_reg_1254 <= grp_fu_532_p2;
+        div_2_reg_1263 <= grp_fu_536_p2;
+        div_3_reg_1273 <= grp_fu_540_p2;
+        div_reg_1245 <= grp_fu_528_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state15)) begin
+        exp_logits_1_reg_1227 <= grp_fu_553_p2;
+        exp_logits_reg_1221 <= grp_fu_548_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state19)) begin
+        exp_logits_2_reg_1233 <= grp_fu_548_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state21)) begin
+        exp_logits_3_reg_1239 <= grp_fu_548_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_2_0_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_10_fu_202 <= grp_run_parallel_engines_fu_377_expert_outputs_2_0;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_2_1_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_11_fu_206 <= grp_run_parallel_engines_fu_377_expert_outputs_2_1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_2_2_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_12_fu_210 <= grp_run_parallel_engines_fu_377_expert_outputs_2_2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_2_3_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_13_fu_214 <= grp_run_parallel_engines_fu_377_expert_outputs_2_3;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_2_4_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_14_fu_218 <= grp_run_parallel_engines_fu_377_expert_outputs_2_4;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_3_0_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_15_fu_222 <= grp_run_parallel_engines_fu_377_expert_outputs_3_0;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_3_1_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_16_fu_226 <= grp_run_parallel_engines_fu_377_expert_outputs_3_1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_3_2_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_17_fu_230 <= grp_run_parallel_engines_fu_377_expert_outputs_3_2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_3_3_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_18_fu_234 <= grp_run_parallel_engines_fu_377_expert_outputs_3_3;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_3_4_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_19_fu_238 <= grp_run_parallel_engines_fu_377_expert_outputs_3_4;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_0_1_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_1_fu_166 <= grp_run_parallel_engines_fu_377_expert_outputs_0_1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_0_2_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_2_fu_170 <= grp_run_parallel_engines_fu_377_expert_outputs_0_2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_0_3_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_3_fu_174 <= grp_run_parallel_engines_fu_377_expert_outputs_0_3;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_0_4_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_4_fu_178 <= grp_run_parallel_engines_fu_377_expert_outputs_0_4;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_1_0_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_5_fu_182 <= grp_run_parallel_engines_fu_377_expert_outputs_1_0;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_1_1_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_6_fu_186 <= grp_run_parallel_engines_fu_377_expert_outputs_1_1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_1_2_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_7_fu_190 <= grp_run_parallel_engines_fu_377_expert_outputs_1_2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_1_3_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_8_fu_194 <= grp_run_parallel_engines_fu_377_expert_outputs_1_3;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_1_4_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_9_fu_198 <= grp_run_parallel_engines_fu_377_expert_outputs_1_4;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((grp_run_parallel_engines_fu_377_expert_outputs_0_0_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state10))) begin
+        expert_outputs_fu_162 <= grp_run_parallel_engines_fu_377_expert_outputs_0_0;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state9)) begin
+        max_logit_1_reg_1202 <= max_logit_1_fu_811_p3;
+        tmp_8_reg_1208 <= grp_fu_544_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state21) | (1'b1 == ap_CS_fsm_state19) | (1'b1 == ap_CS_fsm_state17))) begin
+        reg_558 <= grp_fu_483_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state33))) begin
+        reg_568 <= grp_fu_487_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state39) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state33))) begin
+        reg_574 <= grp_fu_491_p2;
+        reg_580 <= grp_fu_495_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_CS_fsm_state31) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state33))) begin
+        reg_586 <= grp_fu_508_p2;
+        reg_592 <= grp_fu_512_p2;
+        reg_598 <= grp_fu_516_p2;
+        reg_604 <= grp_fu_520_p2;
+        reg_610 <= grp_fu_524_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_CS_fsm_state39) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state33))) begin
+        reg_616 <= grp_fu_503_p2;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_block_state10_on_subcall_done)) begin
+        ap_ST_fsm_state10_blk = 1'b1;
     end else begin
-        if ((((ap_sync_grp_run_parallel_engines_fu_2294_ap_ready == 1'b0) & (1'b1 == ap_CS_fsm_state6)) | ((icmp_ln1061_fu_4510_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2)))) begin
-            grp_run_parallel_engines_fu_2294_ap_start_reg <= 1'b1;
-        end else if ((grp_run_parallel_engines_fu_2294_ap_ready == 1'b1)) begin
-            grp_run_parallel_engines_fu_2294_ap_start_reg <= 1'b0;
-        end
+        ap_ST_fsm_state10_blk = 1'b0;
     end
 end
-
-always @ (posedge ap_clk) begin
-    if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        e_fu_2208 <= 3'd0;
-    end else if ((1'b1 == ap_CS_fsm_state5)) begin
-        e_fu_2208 <= add_ln1061_reg_4683;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
-        acc_reg_4722 <= gate_bias_q0;
-        tmp_6_reg_4717[8 : 7] <= tmp_6_fu_4543_p3[8 : 7];
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
-        add_ln1061_reg_4683 <= add_ln1061_fu_4516_p2;
-        trunc_ln1061_reg_4675 <= trunc_ln1061_fu_4506_p1;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((trunc_ln1061_reg_4675 == 2'd0) & (1'b1 == ap_CS_fsm_state5))) begin
-        empty_fu_2212 <= grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_acc_1_out;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state14)) begin
-        inv_exp_sum_reg_4733 <= grp_fu_4493_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((trunc_ln1061_reg_4675 == 2'd1) & (1'b1 == ap_CS_fsm_state5))) begin
-        mux_case_11_fu_2216 <= grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_acc_1_out;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((trunc_ln1061_reg_4675 == 2'd2) & (1'b1 == ap_CS_fsm_state5))) begin
-        mux_case_25_fu_2220 <= grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_acc_1_out;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((trunc_ln1061_reg_4675 == 2'd3) & (1'b1 == ap_CS_fsm_state5))) begin
-        mux_case_310_fu_2224 <= grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_acc_1_out;
-    end
-end
-
-assign ap_ST_fsm_state10_blk = 1'b0;
 
 assign ap_ST_fsm_state11_blk = 1'b0;
 
@@ -909,23 +1216,13 @@ assign ap_ST_fsm_state14_blk = 1'b0;
 
 assign ap_ST_fsm_state15_blk = 1'b0;
 
-always @ (*) begin
-    if ((grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_ap_done == 1'b0)) begin
-        ap_ST_fsm_state16_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state16_blk = 1'b0;
-    end
-end
+assign ap_ST_fsm_state16_blk = 1'b0;
 
 assign ap_ST_fsm_state17_blk = 1'b0;
 
-always @ (*) begin
-    if ((grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_done == 1'b0)) begin
-        ap_ST_fsm_state18_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state18_blk = 1'b0;
-    end
-end
+assign ap_ST_fsm_state18_blk = 1'b0;
+
+assign ap_ST_fsm_state19_blk = 1'b0;
 
 always @ (*) begin
     if ((ap_start == 1'b0)) begin
@@ -935,12 +1232,62 @@ always @ (*) begin
     end
 end
 
-assign ap_ST_fsm_state2_blk = 1'b0;
+assign ap_ST_fsm_state20_blk = 1'b0;
+
+assign ap_ST_fsm_state21_blk = 1'b0;
+
+assign ap_ST_fsm_state22_blk = 1'b0;
+
+assign ap_ST_fsm_state23_blk = 1'b0;
+
+assign ap_ST_fsm_state24_blk = 1'b0;
+
+assign ap_ST_fsm_state25_blk = 1'b0;
+
+assign ap_ST_fsm_state26_blk = 1'b0;
+
+assign ap_ST_fsm_state27_blk = 1'b0;
+
+assign ap_ST_fsm_state28_blk = 1'b0;
+
+assign ap_ST_fsm_state29_blk = 1'b0;
+
+always @ (*) begin
+    if ((grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_ap_done == 1'b0)) begin
+        ap_ST_fsm_state2_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state2_blk = 1'b0;
+    end
+end
+
+assign ap_ST_fsm_state30_blk = 1'b0;
+
+assign ap_ST_fsm_state31_blk = 1'b0;
+
+assign ap_ST_fsm_state32_blk = 1'b0;
+
+assign ap_ST_fsm_state33_blk = 1'b0;
+
+assign ap_ST_fsm_state34_blk = 1'b0;
+
+assign ap_ST_fsm_state35_blk = 1'b0;
+
+assign ap_ST_fsm_state36_blk = 1'b0;
+
+assign ap_ST_fsm_state37_blk = 1'b0;
+
+assign ap_ST_fsm_state38_blk = 1'b0;
+
+assign ap_ST_fsm_state39_blk = 1'b0;
 
 assign ap_ST_fsm_state3_blk = 1'b0;
 
+assign ap_ST_fsm_state40_blk = 1'b0;
+
+assign ap_ST_fsm_state41_blk = 1'b0;
+
 always @ (*) begin
-    if ((grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_ap_done == 1'b0)) begin
+    if ((grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_ap_done == 1'b0)) begin
         ap_ST_fsm_state4_blk = 1'b1;
     end else begin
         ap_ST_fsm_state4_blk = 1'b0;
@@ -950,7 +1297,7 @@ end
 assign ap_ST_fsm_state5_blk = 1'b0;
 
 always @ (*) begin
-    if ((1'b1 == ap_block_state6_on_subcall_done)) begin
+    if ((grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_ap_done == 1'b0)) begin
         ap_ST_fsm_state6_blk = 1'b1;
     end else begin
         ap_ST_fsm_state6_blk = 1'b0;
@@ -960,7 +1307,7 @@ end
 assign ap_ST_fsm_state7_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_ap_done == 1'b0)) begin
+    if ((grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_ap_done == 1'b0)) begin
         ap_ST_fsm_state8_blk = 1'b1;
     end else begin
         ap_ST_fsm_state8_blk = 1'b0;
@@ -970,7 +1317,7 @@ end
 assign ap_ST_fsm_state9_blk = 1'b0;
 
 always @ (*) begin
-    if (((grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state18))) begin
+    if ((1'b1 == ap_CS_fsm_state41)) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -986,7 +1333,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state18))) begin
+    if ((1'b1 == ap_CS_fsm_state41)) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -994,416 +1341,632 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        expert_output_1_address0 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_1_address0;
+    if ((1'b1 == ap_CS_fsm_state30)) begin
+        gates_address0 = 64'd3;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        gates_address0 = 64'd1;
+    end else begin
+        gates_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state30)) begin
+        gates_address1 = 64'd2;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        gates_address1 = 64'd0;
+    end else begin
+        gates_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29))) begin
+        gates_ce0 = 1'b1;
+    end else begin
+        gates_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29))) begin
+        gates_ce1 = 1'b1;
+    end else begin
+        gates_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state30)) begin
+        gates_d0 = bitcast_ln1039_3_fu_922_p1;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        gates_d0 = bitcast_ln1039_1_fu_913_p1;
+    end else begin
+        gates_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state30)) begin
+        gates_d1 = bitcast_ln1039_2_fu_918_p1;
+    end else if ((1'b1 == ap_CS_fsm_state29)) begin
+        gates_d1 = bitcast_ln1039_fu_908_p1;
+    end else begin
+        gates_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29))) begin
+        gates_we0 = 1'b1;
+    end else begin
+        gates_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29))) begin
+        gates_we1 = 1'b1;
+    end else begin
+        gates_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_483_ce = grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_483_p_ce;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_1_address0 = grp_run_parallel_engines_fu_2294_out_1_address0;
+        grp_fu_483_ce = grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_483_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_483_ce = grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_483_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_483_ce = grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_483_p_ce;
+    end else if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state20) | (1'b1 == ap_CS_fsm_state18) | (1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state39) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state21) | (1'b1 == ap_CS_fsm_state19) | (1'b1 == ap_CS_fsm_state17) | (1'b1 == ap_CS_fsm_state38) | ((1'b0 == ap_block_state10_on_subcall_done) & (1'b1 == ap_CS_fsm_state10)))) begin
+        grp_fu_483_ce = 1'b1;
     end else begin
-        expert_output_1_address0 = 'bx;
+        grp_fu_483_ce = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        expert_output_1_ce0 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_1_ce0;
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_483_opcode = grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_483_p_opcode;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_1_ce0 = grp_run_parallel_engines_fu_2294_out_1_ce0;
+        grp_fu_483_opcode = grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_483_p_opcode;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_483_opcode = grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_483_p_opcode;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_483_opcode = grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_483_p_opcode;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_483_opcode = 2'd1;
+    end else if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state20) | (1'b1 == ap_CS_fsm_state18) | (1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state38))) begin
+        grp_fu_483_opcode = 2'd0;
     end else begin
-        expert_output_1_ce0 = 1'b0;
+        grp_fu_483_opcode = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_1_ce1 = grp_run_parallel_engines_fu_2294_out_1_ce1;
-    end else begin
-        expert_output_1_ce1 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_1_we0 = grp_run_parallel_engines_fu_2294_out_1_we0;
-    end else begin
-        expert_output_1_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_1_we1 = grp_run_parallel_engines_fu_2294_out_1_we1;
-    end else begin
-        expert_output_1_we1 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        expert_output_2_address0 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_2_address0;
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_483_p0 = grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_483_p_din0;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_2_address0 = grp_run_parallel_engines_fu_2294_out_2_address0;
-    end else begin
-        expert_output_2_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        expert_output_2_ce0 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_2_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_2_ce0 = grp_run_parallel_engines_fu_2294_out_2_ce0;
-    end else begin
-        expert_output_2_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_2_ce1 = grp_run_parallel_engines_fu_2294_out_2_ce1;
-    end else begin
-        expert_output_2_ce1 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_2_we0 = grp_run_parallel_engines_fu_2294_out_2_we0;
-    end else begin
-        expert_output_2_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_2_we1 = grp_run_parallel_engines_fu_2294_out_2_we1;
-    end else begin
-        expert_output_2_we1 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        expert_output_3_address0 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_3_address0;
-    end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_3_address0 = grp_run_parallel_engines_fu_2294_out_3_address0;
-    end else begin
-        expert_output_3_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        expert_output_3_ce0 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_3_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_3_ce0 = grp_run_parallel_engines_fu_2294_out_3_ce0;
-    end else begin
-        expert_output_3_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_3_ce1 = grp_run_parallel_engines_fu_2294_out_3_ce1;
-    end else begin
-        expert_output_3_ce1 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_3_we0 = grp_run_parallel_engines_fu_2294_out_3_we0;
-    end else begin
-        expert_output_3_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_3_we1 = grp_run_parallel_engines_fu_2294_out_3_we1;
-    end else begin
-        expert_output_3_we1 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        expert_output_address0 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_address0;
-    end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_address0 = grp_run_parallel_engines_fu_2294_out_0_address0;
-    end else begin
-        expert_output_address0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        expert_output_ce0 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_expert_output_ce0;
-    end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_ce0 = grp_run_parallel_engines_fu_2294_out_0_ce0;
-    end else begin
-        expert_output_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_ce1 = grp_run_parallel_engines_fu_2294_out_0_ce1;
-    end else begin
-        expert_output_ce1 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_we0 = grp_run_parallel_engines_fu_2294_out_0_we0;
-    end else begin
-        expert_output_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        expert_output_we1 = grp_run_parallel_engines_fu_2294_out_0_we1;
-    end else begin
-        expert_output_we1 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
-        gate_bias_ce0 = 1'b1;
-    end else begin
-        gate_bias_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_0_o_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state16))) begin
-        gates_0_o = grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_0_o;
-    end else if (((grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_0_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state8))) begin
-        gates_0_o = grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_0;
-    end else begin
-        gates_0_o = gates_0_i;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state16)) begin
-        gates_0_o_ap_vld = grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_0_o_ap_vld;
-    end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        gates_0_o_ap_vld = grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_0_ap_vld;
-    end else begin
-        gates_0_o_ap_vld = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_1_o_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state16))) begin
-        gates_1_o = grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_1_o;
-    end else if (((grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_1_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state8))) begin
-        gates_1_o = grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_1;
-    end else begin
-        gates_1_o = gates_1_i;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state16)) begin
-        gates_1_o_ap_vld = grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_1_o_ap_vld;
-    end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        gates_1_o_ap_vld = grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_1_ap_vld;
-    end else begin
-        gates_1_o_ap_vld = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_2_o_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state16))) begin
-        gates_2_o = grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_2_o;
-    end else if (((grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_2_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state8))) begin
-        gates_2_o = grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_2;
-    end else begin
-        gates_2_o = gates_2_i;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state16)) begin
-        gates_2_o_ap_vld = grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_2_o_ap_vld;
-    end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        gates_2_o_ap_vld = grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_2_ap_vld;
-    end else begin
-        gates_2_o_ap_vld = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_3_o_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state16))) begin
-        gates_3_o = grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_3_o;
-    end else if (((grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_3_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state8))) begin
-        gates_3_o = grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_3;
-    end else begin
-        gates_3_o = gates_3_i;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state16)) begin
-        gates_3_o_ap_vld = grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_gates_3_o_ap_vld;
-    end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        gates_3_o_ap_vld = grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_gates_3_ap_vld;
-    end else begin
-        gates_3_o_ap_vld = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_4750_ce = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4750_p_ce;
+        grp_fu_483_p0 = grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_483_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_483_p0 = grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_483_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_483_p0 = grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_483_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_483_p0 = reg_586;
+    end else if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state20) | (1'b1 == ap_CS_fsm_state18) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state38))) begin
+        grp_fu_483_p0 = reg_558;
     end else if ((1'b1 == ap_CS_fsm_state16)) begin
-        grp_fu_4750_ce = grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_grp_fu_4750_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        grp_fu_4750_ce = grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4750_p_ce;
+        grp_fu_483_p0 = exp_logits_reg_1221;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_483_p0 = grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_acc_out;
     end else begin
-        grp_fu_4750_ce = 1'b1;
+        grp_fu_483_p0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_4750_p0 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4750_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state16)) begin
-        grp_fu_4750_p0 = grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_grp_fu_4750_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        grp_fu_4750_p0 = grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4750_p_din0;
-    end else begin
-        grp_fu_4750_p0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_4750_p1 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4750_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state16)) begin
-        grp_fu_4750_p1 = grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_grp_fu_4750_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        grp_fu_4750_p1 = grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4750_p_din1;
-    end else begin
-        grp_fu_4750_p1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_4754_ce = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4754_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        grp_fu_4754_ce = grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4754_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        grp_fu_4754_ce = grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4754_p_ce;
-    end else begin
-        grp_fu_4754_ce = 1'b1;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_4754_opcode = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4754_p_opcode;
-    end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        grp_fu_4754_opcode = grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4754_p_opcode;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        grp_fu_4754_opcode = grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4754_p_opcode;
-    end else begin
-        grp_fu_4754_opcode = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_4754_p0 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4754_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        grp_fu_4754_p0 = grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4754_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        grp_fu_4754_p0 = grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4754_p_din0;
-    end else begin
-        grp_fu_4754_p0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_4754_p1 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4754_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        grp_fu_4754_p1 = grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4754_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        grp_fu_4754_p1 = grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_grp_fu_4754_p_din1;
-    end else begin
-        grp_fu_4754_p1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_4758_ce = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4758_p_ce;
-    end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        grp_fu_4758_ce = grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4758_p_ce;
-    end else begin
-        grp_fu_4758_ce = 1'b1;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_4758_p0 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4758_p_din0;
-    end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        grp_fu_4758_p0 = grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4758_p_din0;
-    end else begin
-        grp_fu_4758_p0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state18)) begin
-        grp_fu_4758_p1 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_grp_fu_4758_p_din1;
-    end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        grp_fu_4758_p1 = grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_grp_fu_4758_p_din1;
-    end else begin
-        grp_fu_4758_p1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((1'b0 == ap_block_state6_on_subcall_done) & (1'b1 == ap_CS_fsm_state6))) begin
-        grp_run_parallel_engines_fu_2294_ap_continue = 1'b1;
-    end else begin
-        grp_run_parallel_engines_fu_2294_ap_continue = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
-        input_r_address0 = grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_input_r_address0;
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_483_p1 = grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_483_p_din1;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        input_r_address0 = grp_run_parallel_engines_fu_2294_input_r_address0;
+        grp_fu_483_p1 = grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_483_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_483_p1 = grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_483_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_483_p1 = grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_483_p_din1;
+    end else if (((1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state38))) begin
+        grp_fu_483_p1 = reg_586;
+    end else if ((1'b1 == ap_CS_fsm_state22)) begin
+        grp_fu_483_p1 = exp_logits_3_reg_1239;
+    end else if ((1'b1 == ap_CS_fsm_state20)) begin
+        grp_fu_483_p1 = exp_logits_2_reg_1233;
+    end else if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_fu_483_p1 = exp_logits_1_reg_1227;
+    end else if (((1'b1 == ap_CS_fsm_state16) | (1'b1 == ap_CS_fsm_state32))) begin
+        grp_fu_483_p1 = 32'd0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_483_p1 = max_logit_2_fu_898_p3;
+    end else begin
+        grp_fu_483_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state39) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state38) | ((1'b0 == ap_block_state10_on_subcall_done) & (1'b1 == ap_CS_fsm_state10)))) begin
+        grp_fu_487_ce = 1'b1;
+    end else begin
+        grp_fu_487_ce = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_487_opcode = 2'd1;
+    end else if (((1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state38))) begin
+        grp_fu_487_opcode = 2'd0;
+    end else begin
+        grp_fu_487_opcode = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state38))) begin
+        grp_fu_487_p0 = reg_568;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_487_p0 = reg_592;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_487_p0 = grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_acc_2_out;
+    end else begin
+        grp_fu_487_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state38))) begin
+        grp_fu_487_p1 = reg_592;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_487_p1 = 32'd0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_487_p1 = max_logit_2_fu_898_p3;
+    end else begin
+        grp_fu_487_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state39) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state38) | ((1'b0 == ap_block_state10_on_subcall_done) & (1'b1 == ap_CS_fsm_state10)))) begin
+        grp_fu_491_ce = 1'b1;
+    end else begin
+        grp_fu_491_ce = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_491_opcode = 2'd1;
+    end else if (((1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state38))) begin
+        grp_fu_491_opcode = 2'd0;
+    end else begin
+        grp_fu_491_opcode = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state38))) begin
+        grp_fu_491_p0 = reg_574;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_491_p0 = reg_598;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_491_p0 = grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_acc_4_out;
+    end else begin
+        grp_fu_491_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state38))) begin
+        grp_fu_491_p1 = reg_598;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_491_p1 = 32'd0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_491_p1 = max_logit_2_fu_898_p3;
+    end else begin
+        grp_fu_491_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state11) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state39) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state38) | ((1'b0 == ap_block_state10_on_subcall_done) & (1'b1 == ap_CS_fsm_state10)))) begin
+        grp_fu_495_ce = 1'b1;
+    end else begin
+        grp_fu_495_ce = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_495_opcode = 2'd1;
+    end else if (((1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state38))) begin
+        grp_fu_495_opcode = 2'd0;
+    end else begin
+        grp_fu_495_opcode = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state38))) begin
+        grp_fu_495_p0 = reg_580;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_495_p0 = reg_604;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_495_p0 = grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_acc_26_out;
+    end else begin
+        grp_fu_495_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state38))) begin
+        grp_fu_495_p1 = reg_604;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_495_p1 = 32'd0;
+    end else if ((1'b1 == ap_CS_fsm_state10)) begin
+        grp_fu_495_p1 = max_logit_2_fu_898_p3;
+    end else begin
+        grp_fu_495_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state38))) begin
+        grp_fu_503_p0 = reg_616;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_503_p0 = reg_610;
+    end else begin
+        grp_fu_503_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state38))) begin
+        grp_fu_503_p1 = reg_610;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_503_p1 = 32'd0;
+    end else begin
+        grp_fu_503_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_508_ce = grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_508_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_fu_508_ce = grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_508_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_508_ce = grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_508_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_508_ce = grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_508_p_ce;
+    end else begin
+        grp_fu_508_ce = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_508_p0 = grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_508_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_fu_508_p0 = grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_508_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_508_p0 = grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_508_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_508_p0 = grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_508_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state36)) begin
+        grp_fu_508_p0 = div_3_reg_1273;
+    end else if ((1'b1 == ap_CS_fsm_state34)) begin
+        grp_fu_508_p0 = div_2_reg_1263;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_508_p0 = div_1_reg_1254;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        grp_fu_508_p0 = div_reg_1245;
+    end else begin
+        grp_fu_508_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_508_p1 = grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_grp_fu_508_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        grp_fu_508_p1 = grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_grp_fu_508_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_508_p1 = grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_grp_fu_508_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_508_p1 = grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_grp_fu_508_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state36)) begin
+        grp_fu_508_p1 = expert_outputs_15_fu_222;
+    end else if ((1'b1 == ap_CS_fsm_state34)) begin
+        grp_fu_508_p1 = expert_outputs_10_fu_202;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_508_p1 = expert_outputs_5_fu_182;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        grp_fu_508_p1 = expert_outputs_fu_162;
+    end else begin
+        grp_fu_508_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state36)) begin
+        grp_fu_512_p0 = div_3_reg_1273;
+    end else if ((1'b1 == ap_CS_fsm_state34)) begin
+        grp_fu_512_p0 = div_2_reg_1263;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_512_p0 = div_1_reg_1254;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        grp_fu_512_p0 = div_reg_1245;
+    end else begin
+        grp_fu_512_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state36)) begin
+        grp_fu_512_p1 = expert_outputs_16_fu_226;
+    end else if ((1'b1 == ap_CS_fsm_state34)) begin
+        grp_fu_512_p1 = expert_outputs_11_fu_206;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_512_p1 = expert_outputs_6_fu_186;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        grp_fu_512_p1 = expert_outputs_1_fu_166;
+    end else begin
+        grp_fu_512_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state36)) begin
+        grp_fu_516_p0 = div_3_reg_1273;
+    end else if ((1'b1 == ap_CS_fsm_state34)) begin
+        grp_fu_516_p0 = div_2_reg_1263;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_516_p0 = div_1_reg_1254;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        grp_fu_516_p0 = div_reg_1245;
+    end else begin
+        grp_fu_516_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state36)) begin
+        grp_fu_516_p1 = expert_outputs_17_fu_230;
+    end else if ((1'b1 == ap_CS_fsm_state34)) begin
+        grp_fu_516_p1 = expert_outputs_12_fu_210;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_516_p1 = expert_outputs_7_fu_190;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        grp_fu_516_p1 = expert_outputs_2_fu_170;
+    end else begin
+        grp_fu_516_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state36)) begin
+        grp_fu_520_p0 = div_3_reg_1273;
+    end else if ((1'b1 == ap_CS_fsm_state34)) begin
+        grp_fu_520_p0 = div_2_reg_1263;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_520_p0 = div_1_reg_1254;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        grp_fu_520_p0 = div_reg_1245;
+    end else begin
+        grp_fu_520_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state36)) begin
+        grp_fu_520_p1 = expert_outputs_18_fu_234;
+    end else if ((1'b1 == ap_CS_fsm_state34)) begin
+        grp_fu_520_p1 = expert_outputs_13_fu_214;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_520_p1 = expert_outputs_8_fu_194;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        grp_fu_520_p1 = expert_outputs_3_fu_174;
+    end else begin
+        grp_fu_520_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state36)) begin
+        grp_fu_524_p0 = div_3_reg_1273;
+    end else if ((1'b1 == ap_CS_fsm_state34)) begin
+        grp_fu_524_p0 = div_2_reg_1263;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_524_p0 = div_1_reg_1254;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        grp_fu_524_p0 = div_reg_1245;
+    end else begin
+        grp_fu_524_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state36)) begin
+        grp_fu_524_p1 = expert_outputs_19_fu_238;
+    end else if ((1'b1 == ap_CS_fsm_state34)) begin
+        grp_fu_524_p1 = expert_outputs_14_fu_218;
+    end else if ((1'b1 == ap_CS_fsm_state32)) begin
+        grp_fu_524_p1 = expert_outputs_9_fu_198;
+    end else if ((1'b1 == ap_CS_fsm_state30)) begin
+        grp_fu_524_p1 = expert_outputs_4_fu_178;
+    end else begin
+        grp_fu_524_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state9)) begin
+        grp_fu_544_p0 = grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_acc_26_out;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_544_p0 = grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_acc_4_out;
+    end else if ((1'b1 == ap_CS_fsm_state7)) begin
+        grp_fu_544_p0 = grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_acc_2_out;
+    end else begin
+        grp_fu_544_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state9)) begin
+        grp_fu_544_p1 = max_logit_1_fu_811_p3;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_544_p1 = max_logit_fu_717_p3;
+    end else if ((1'b1 == ap_CS_fsm_state7)) begin
+        grp_fu_544_p1 = grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_acc_out;
+    end else begin
+        grp_fu_544_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state18)) begin
+        grp_fu_548_p1 = reg_580;
+    end else if ((1'b1 == ap_CS_fsm_state16)) begin
+        grp_fu_548_p1 = reg_574;
+    end else if ((1'b1 == ap_CS_fsm_state12)) begin
+        grp_fu_548_p1 = reg_558;
+    end else begin
+        grp_fu_548_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_state10_on_subcall_done) & (1'b1 == ap_CS_fsm_state10))) begin
+        grp_run_parallel_engines_fu_377_ap_continue = 1'b1;
+    end else begin
+        grp_run_parallel_engines_fu_377_ap_continue = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        input_r_address0 = grp_run_parallel_engines_fu_377_input_r_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        input_r_address0 = grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_input_r_address0;
+    end else if ((1'b1 == ap_CS_fsm_state6)) begin
+        input_r_address0 = grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_input_r_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        input_r_address0 = grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_input_r_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        input_r_address0 = grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_input_r_address0;
     end else begin
         input_r_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
-        input_r_ce0 = grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_input_r_ce0;
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        input_r_ce0 = grp_run_parallel_engines_fu_377_input_r_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        input_r_ce0 = grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_input_r_ce0;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        input_r_ce0 = grp_run_parallel_engines_fu_2294_input_r_ce0;
+        input_r_ce0 = grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_input_r_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        input_r_ce0 = grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_input_r_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        input_r_ce0 = grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_input_r_ce0;
     end else begin
         input_r_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        input_r_ce1 = grp_run_parallel_engines_fu_2294_input_r_ce1;
+    if ((1'b1 == ap_CS_fsm_state10)) begin
+        input_r_ce1 = grp_run_parallel_engines_fu_377_input_r_ce1;
     end else begin
         input_r_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state41)) begin
+        output_r_address0 = 64'd4;
+    end else if ((1'b1 == ap_CS_fsm_state40)) begin
+        output_r_address0 = 64'd3;
+    end else if ((1'b1 == ap_CS_fsm_state39)) begin
+        output_r_address0 = 64'd1;
+    end else begin
+        output_r_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state40)) begin
+        output_r_address1 = 64'd2;
+    end else if ((1'b1 == ap_CS_fsm_state39)) begin
+        output_r_address1 = 64'd0;
+    end else begin
+        output_r_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state41) | (1'b1 == ap_CS_fsm_state40) | (1'b1 == ap_CS_fsm_state39))) begin
+        output_r_ce0 = 1'b1;
+    end else begin
+        output_r_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state40) | (1'b1 == ap_CS_fsm_state39))) begin
+        output_r_ce1 = 1'b1;
+    end else begin
+        output_r_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state41)) begin
+        output_r_d0 = bitcast_ln1071_4_fu_1026_p1;
+    end else if ((1'b1 == ap_CS_fsm_state40)) begin
+        output_r_d0 = bitcast_ln1071_3_fu_1021_p1;
+    end else if ((1'b1 == ap_CS_fsm_state39)) begin
+        output_r_d0 = bitcast_ln1071_1_fu_1011_p1;
+    end else begin
+        output_r_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state40)) begin
+        output_r_d1 = bitcast_ln1071_2_fu_1016_p1;
+    end else if ((1'b1 == ap_CS_fsm_state39)) begin
+        output_r_d1 = bitcast_ln1071_fu_1006_p1;
+    end else begin
+        output_r_d1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state41) | (1'b1 == ap_CS_fsm_state40) | (1'b1 == ap_CS_fsm_state39))) begin
+        output_r_we0 = 1'b1;
+    end else begin
+        output_r_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state40) | (1'b1 == ap_CS_fsm_state39))) begin
+        output_r_we1 = 1'b1;
+    end else begin
+        output_r_we1 = 1'b0;
     end
 end
 
@@ -1417,27 +1980,27 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((icmp_ln1061_fu_4510_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
-                ap_NS_fsm = ap_ST_fsm_state6;
-            end else begin
+            if (((grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state2;
             end
         end
         ap_ST_fsm_state3 : begin
             ap_NS_fsm = ap_ST_fsm_state4;
         end
         ap_ST_fsm_state4 : begin
-            if (((grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
+            if (((grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
                 ap_NS_fsm = ap_ST_fsm_state5;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end
         end
         ap_ST_fsm_state5 : begin
-            ap_NS_fsm = ap_ST_fsm_state2;
+            ap_NS_fsm = ap_ST_fsm_state6;
         end
         ap_ST_fsm_state6 : begin
-            if (((1'b0 == ap_block_state6_on_subcall_done) & (1'b1 == ap_CS_fsm_state6))) begin
+            if (((grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state6))) begin
                 ap_NS_fsm = ap_ST_fsm_state7;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state6;
@@ -1447,7 +2010,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state8;
         end
         ap_ST_fsm_state8 : begin
-            if (((grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state8))) begin
+            if (((grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state8))) begin
                 ap_NS_fsm = ap_ST_fsm_state9;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state8;
@@ -1457,7 +2020,11 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state10;
         end
         ap_ST_fsm_state10 : begin
-            ap_NS_fsm = ap_ST_fsm_state11;
+            if (((1'b0 == ap_block_state10_on_subcall_done) & (1'b1 == ap_CS_fsm_state10))) begin
+                ap_NS_fsm = ap_ST_fsm_state11;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state10;
+            end
         end
         ap_ST_fsm_state11 : begin
             ap_NS_fsm = ap_ST_fsm_state12;
@@ -1475,21 +2042,82 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state16;
         end
         ap_ST_fsm_state16 : begin
-            if (((grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state16))) begin
-                ap_NS_fsm = ap_ST_fsm_state17;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state16;
-            end
+            ap_NS_fsm = ap_ST_fsm_state17;
         end
         ap_ST_fsm_state17 : begin
             ap_NS_fsm = ap_ST_fsm_state18;
         end
         ap_ST_fsm_state18 : begin
-            if (((grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state18))) begin
-                ap_NS_fsm = ap_ST_fsm_state1;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state18;
-            end
+            ap_NS_fsm = ap_ST_fsm_state19;
+        end
+        ap_ST_fsm_state19 : begin
+            ap_NS_fsm = ap_ST_fsm_state20;
+        end
+        ap_ST_fsm_state20 : begin
+            ap_NS_fsm = ap_ST_fsm_state21;
+        end
+        ap_ST_fsm_state21 : begin
+            ap_NS_fsm = ap_ST_fsm_state22;
+        end
+        ap_ST_fsm_state22 : begin
+            ap_NS_fsm = ap_ST_fsm_state23;
+        end
+        ap_ST_fsm_state23 : begin
+            ap_NS_fsm = ap_ST_fsm_state24;
+        end
+        ap_ST_fsm_state24 : begin
+            ap_NS_fsm = ap_ST_fsm_state25;
+        end
+        ap_ST_fsm_state25 : begin
+            ap_NS_fsm = ap_ST_fsm_state26;
+        end
+        ap_ST_fsm_state26 : begin
+            ap_NS_fsm = ap_ST_fsm_state27;
+        end
+        ap_ST_fsm_state27 : begin
+            ap_NS_fsm = ap_ST_fsm_state28;
+        end
+        ap_ST_fsm_state28 : begin
+            ap_NS_fsm = ap_ST_fsm_state29;
+        end
+        ap_ST_fsm_state29 : begin
+            ap_NS_fsm = ap_ST_fsm_state30;
+        end
+        ap_ST_fsm_state30 : begin
+            ap_NS_fsm = ap_ST_fsm_state31;
+        end
+        ap_ST_fsm_state31 : begin
+            ap_NS_fsm = ap_ST_fsm_state32;
+        end
+        ap_ST_fsm_state32 : begin
+            ap_NS_fsm = ap_ST_fsm_state33;
+        end
+        ap_ST_fsm_state33 : begin
+            ap_NS_fsm = ap_ST_fsm_state34;
+        end
+        ap_ST_fsm_state34 : begin
+            ap_NS_fsm = ap_ST_fsm_state35;
+        end
+        ap_ST_fsm_state35 : begin
+            ap_NS_fsm = ap_ST_fsm_state36;
+        end
+        ap_ST_fsm_state36 : begin
+            ap_NS_fsm = ap_ST_fsm_state37;
+        end
+        ap_ST_fsm_state37 : begin
+            ap_NS_fsm = ap_ST_fsm_state38;
+        end
+        ap_ST_fsm_state38 : begin
+            ap_NS_fsm = ap_ST_fsm_state39;
+        end
+        ap_ST_fsm_state39 : begin
+            ap_NS_fsm = ap_ST_fsm_state40;
+        end
+        ap_ST_fsm_state40 : begin
+            ap_NS_fsm = ap_ST_fsm_state41;
+        end
+        ap_ST_fsm_state41 : begin
+            ap_NS_fsm = ap_ST_fsm_state1;
         end
         default : begin
             ap_NS_fsm = 'bx;
@@ -1497,11 +2125,25 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln1061_fu_4516_p2 = (e_fu_2208 + 3'd1);
+assign and_ln1018_1_fu_707_p2 = (grp_fu_544_p2 & and_ln1018_fu_701_p2);
+
+assign and_ln1018_2_fu_795_p2 = (or_ln1018_3_fu_789_p2 & or_ln1018_2_fu_771_p2);
+
+assign and_ln1018_3_fu_801_p2 = (grp_fu_544_p2 & and_ln1018_2_fu_795_p2);
+
+assign and_ln1018_4_fu_887_p2 = (or_ln1018_5_fu_881_p2 & or_ln1018_4_fu_863_p2);
+
+assign and_ln1018_5_fu_893_p2 = (tmp_8_reg_1208 & and_ln1018_4_fu_887_p2);
+
+assign and_ln1018_fu_701_p2 = (or_ln1018_fu_677_p2 & or_ln1018_1_fu_695_p2);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
-assign ap_CS_fsm_state14 = ap_CS_fsm[32'd13];
+assign ap_CS_fsm_state10 = ap_CS_fsm[32'd9];
+
+assign ap_CS_fsm_state11 = ap_CS_fsm[32'd10];
+
+assign ap_CS_fsm_state12 = ap_CS_fsm[32'd11];
 
 assign ap_CS_fsm_state15 = ap_CS_fsm[32'd14];
 
@@ -1511,11 +2153,49 @@ assign ap_CS_fsm_state17 = ap_CS_fsm[32'd16];
 
 assign ap_CS_fsm_state18 = ap_CS_fsm[32'd17];
 
+assign ap_CS_fsm_state19 = ap_CS_fsm[32'd18];
+
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
+
+assign ap_CS_fsm_state20 = ap_CS_fsm[32'd19];
+
+assign ap_CS_fsm_state21 = ap_CS_fsm[32'd20];
+
+assign ap_CS_fsm_state22 = ap_CS_fsm[32'd21];
+
+assign ap_CS_fsm_state23 = ap_CS_fsm[32'd22];
+
+assign ap_CS_fsm_state24 = ap_CS_fsm[32'd23];
+
+assign ap_CS_fsm_state29 = ap_CS_fsm[32'd28];
 
 assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
+assign ap_CS_fsm_state30 = ap_CS_fsm[32'd29];
+
+assign ap_CS_fsm_state31 = ap_CS_fsm[32'd30];
+
+assign ap_CS_fsm_state32 = ap_CS_fsm[32'd31];
+
+assign ap_CS_fsm_state33 = ap_CS_fsm[32'd32];
+
+assign ap_CS_fsm_state34 = ap_CS_fsm[32'd33];
+
+assign ap_CS_fsm_state35 = ap_CS_fsm[32'd34];
+
+assign ap_CS_fsm_state36 = ap_CS_fsm[32'd35];
+
+assign ap_CS_fsm_state37 = ap_CS_fsm[32'd36];
+
+assign ap_CS_fsm_state38 = ap_CS_fsm[32'd37];
+
+assign ap_CS_fsm_state39 = ap_CS_fsm[32'd38];
+
 assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
+
+assign ap_CS_fsm_state40 = ap_CS_fsm[32'd39];
+
+assign ap_CS_fsm_state41 = ap_CS_fsm[32'd40];
 
 assign ap_CS_fsm_state5 = ap_CS_fsm[32'd4];
 
@@ -1528,60 +2208,120 @@ assign ap_CS_fsm_state8 = ap_CS_fsm[32'd7];
 assign ap_CS_fsm_state9 = ap_CS_fsm[32'd8];
 
 always @ (*) begin
-    ap_block_state6_on_subcall_done = (((ap_sync_grp_run_parallel_engines_fu_2294_ap_ready & ap_sync_grp_run_parallel_engines_fu_2294_ap_done) == 1'b0) | (grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_ap_done == 1'b0));
+    ap_block_state10_on_subcall_done = ((ap_sync_grp_run_parallel_engines_fu_377_ap_ready & ap_sync_grp_run_parallel_engines_fu_377_ap_done) == 1'b0);
 end
 
-assign ap_sync_grp_run_parallel_engines_fu_2294_ap_done = (grp_run_parallel_engines_fu_2294_ap_done | ap_sync_reg_grp_run_parallel_engines_fu_2294_ap_done);
+assign ap_sync_grp_run_parallel_engines_fu_377_ap_done = (grp_run_parallel_engines_fu_377_ap_done | ap_sync_reg_grp_run_parallel_engines_fu_377_ap_done);
 
-assign ap_sync_grp_run_parallel_engines_fu_2294_ap_ready = (grp_run_parallel_engines_fu_2294_ap_ready | ap_sync_reg_grp_run_parallel_engines_fu_2294_ap_ready);
+assign ap_sync_grp_run_parallel_engines_fu_377_ap_ready = (grp_run_parallel_engines_fu_377_ap_ready | ap_sync_reg_grp_run_parallel_engines_fu_377_ap_ready);
 
-assign gate_bias_address0 = zext_ln1061_fu_4522_p1;
+assign bitcast_ln1018_1_fu_647_p1 = grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_acc_out;
 
-assign grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_ap_start = grp_output_moe_Pipeline_VITIS_LOOP_1065_2_fu_4424_ap_start_reg;
+assign bitcast_ln1018_2_fu_723_p1 = grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_acc_4_out;
 
-assign grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_ap_start = grp_output_moe_Pipeline_VITIS_LOOP_1078_3_fu_2285_ap_start_reg;
+assign bitcast_ln1018_3_fu_741_p1 = max_logit_fu_717_p3;
 
-assign grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_ap_start = grp_output_moe_Pipeline_VITIS_LOOP_1085_4_fu_4436_ap_start_reg;
+assign bitcast_ln1018_4_fu_817_p1 = grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_acc_26_out;
 
-assign grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_ap_start = grp_output_moe_Pipeline_VITIS_LOOP_1094_5_fu_4454_ap_start_reg;
+assign bitcast_ln1018_5_fu_834_p1 = max_logit_1_reg_1202;
 
-assign grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_start = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_ap_start_reg;
+assign bitcast_ln1018_fu_629_p1 = grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_acc_2_out;
 
-assign grp_run_parallel_engines_fu_2294_ap_start = grp_run_parallel_engines_fu_2294_ap_start_reg;
+assign bitcast_ln1039_1_fu_913_p1 = grp_fu_532_p2;
 
-assign icmp_ln1061_fu_4510_p2 = ((e_fu_2208 == 3'd4) ? 1'b1 : 1'b0);
+assign bitcast_ln1039_2_fu_918_p1 = div_2_reg_1263;
 
-assign input_r_address1 = grp_run_parallel_engines_fu_2294_input_r_address1;
+assign bitcast_ln1039_3_fu_922_p1 = div_3_reg_1273;
 
-assign output_0 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_0;
+assign bitcast_ln1039_fu_908_p1 = grp_fu_528_p2;
 
-assign output_0_ap_vld = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_0_ap_vld;
+assign bitcast_ln1071_1_fu_1011_p1 = grp_fu_487_p2;
 
-assign output_1 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_1;
+assign bitcast_ln1071_2_fu_1016_p1 = reg_574;
 
-assign output_1_ap_vld = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_1_ap_vld;
+assign bitcast_ln1071_3_fu_1021_p1 = reg_580;
 
-assign output_2 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_2;
+assign bitcast_ln1071_4_fu_1026_p1 = reg_616;
 
-assign output_2_ap_vld = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_2_ap_vld;
+assign bitcast_ln1071_fu_1006_p1 = grp_fu_483_p2;
 
-assign output_3 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_3;
+assign grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_ap_start = grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_ap_start_reg;
 
-assign output_3_ap_vld = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_3_ap_vld;
+assign grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_ap_start = grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_ap_start_reg;
 
-assign output_4 = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_4;
+assign grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_ap_start = grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_ap_start_reg;
 
-assign output_4_ap_vld = grp_output_moe_Pipeline_VITIS_LOOP_1108_6_fu_4471_output_4_ap_vld;
+assign grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_ap_start = grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_ap_start_reg;
 
-assign tmp_6_fu_4543_p3 = {{trunc_ln1061_reg_4675}, {7'd0}};
+assign grp_run_parallel_engines_fu_377_ap_start = grp_run_parallel_engines_fu_377_ap_start_reg;
 
-assign trunc_ln1061_fu_4506_p1 = e_fu_2208[1:0];
+assign icmp_ln1018_10_fu_869_p2 = ((tmp_7_fu_837_p4 != 8'd255) ? 1'b1 : 1'b0);
 
-assign zext_ln1061_fu_4522_p1 = e_fu_2208;
+assign icmp_ln1018_11_fu_875_p2 = ((trunc_ln1018_5_fu_847_p1 == 23'd0) ? 1'b1 : 1'b0);
 
-always @ (posedge ap_clk) begin
-    tmp_6_reg_4717[6:0] <= 7'b0000000;
-end
+assign icmp_ln1018_1_fu_671_p2 = ((trunc_ln1018_fu_643_p1 == 23'd0) ? 1'b1 : 1'b0);
+
+assign icmp_ln1018_2_fu_683_p2 = ((tmp_1_fu_651_p4 != 8'd255) ? 1'b1 : 1'b0);
+
+assign icmp_ln1018_3_fu_689_p2 = ((trunc_ln1018_1_fu_661_p1 == 23'd0) ? 1'b1 : 1'b0);
+
+assign icmp_ln1018_4_fu_759_p2 = ((tmp_3_fu_727_p4 != 8'd255) ? 1'b1 : 1'b0);
+
+assign icmp_ln1018_5_fu_765_p2 = ((trunc_ln1018_2_fu_737_p1 == 23'd0) ? 1'b1 : 1'b0);
+
+assign icmp_ln1018_6_fu_777_p2 = ((tmp_4_fu_745_p4 != 8'd255) ? 1'b1 : 1'b0);
+
+assign icmp_ln1018_7_fu_783_p2 = ((trunc_ln1018_3_fu_755_p1 == 23'd0) ? 1'b1 : 1'b0);
+
+assign icmp_ln1018_8_fu_851_p2 = ((tmp_6_fu_820_p4 != 8'd255) ? 1'b1 : 1'b0);
+
+assign icmp_ln1018_9_fu_857_p2 = ((trunc_ln1018_4_fu_830_p1 == 23'd0) ? 1'b1 : 1'b0);
+
+assign icmp_ln1018_fu_665_p2 = ((tmp_fu_633_p4 != 8'd255) ? 1'b1 : 1'b0);
+
+assign input_r_address1 = grp_run_parallel_engines_fu_377_input_r_address1;
+
+assign max_logit_1_fu_811_p3 = ((and_ln1018_3_reg_1194[0:0] == 1'b1) ? grp_output_moe_Pipeline_VITIS_LOOP_998_22_fu_359_acc_4_out : max_logit_reg_1189);
+
+assign max_logit_2_fu_898_p3 = ((and_ln1018_5_fu_893_p2[0:0] == 1'b1) ? grp_output_moe_Pipeline_VITIS_LOOP_998_23_fu_368_acc_26_out : max_logit_1_reg_1202);
+
+assign max_logit_fu_717_p3 = ((and_ln1018_1_reg_1181[0:0] == 1'b1) ? grp_output_moe_Pipeline_VITIS_LOOP_998_21_fu_350_acc_2_out : grp_output_moe_Pipeline_VITIS_LOOP_998_2_fu_341_acc_out);
+
+assign or_ln1018_1_fu_695_p2 = (icmp_ln1018_3_fu_689_p2 | icmp_ln1018_2_fu_683_p2);
+
+assign or_ln1018_2_fu_771_p2 = (icmp_ln1018_5_fu_765_p2 | icmp_ln1018_4_fu_759_p2);
+
+assign or_ln1018_3_fu_789_p2 = (icmp_ln1018_7_fu_783_p2 | icmp_ln1018_6_fu_777_p2);
+
+assign or_ln1018_4_fu_863_p2 = (icmp_ln1018_9_fu_857_p2 | icmp_ln1018_8_fu_851_p2);
+
+assign or_ln1018_5_fu_881_p2 = (icmp_ln1018_11_fu_875_p2 | icmp_ln1018_10_fu_869_p2);
+
+assign or_ln1018_fu_677_p2 = (icmp_ln1018_fu_665_p2 | icmp_ln1018_1_fu_671_p2);
+
+assign tmp_1_fu_651_p4 = {{bitcast_ln1018_1_fu_647_p1[30:23]}};
+
+assign tmp_3_fu_727_p4 = {{bitcast_ln1018_2_fu_723_p1[30:23]}};
+
+assign tmp_4_fu_745_p4 = {{bitcast_ln1018_3_fu_741_p1[30:23]}};
+
+assign tmp_6_fu_820_p4 = {{bitcast_ln1018_4_fu_817_p1[30:23]}};
+
+assign tmp_7_fu_837_p4 = {{bitcast_ln1018_5_fu_834_p1[30:23]}};
+
+assign tmp_fu_633_p4 = {{bitcast_ln1018_fu_629_p1[30:23]}};
+
+assign trunc_ln1018_1_fu_661_p1 = bitcast_ln1018_1_fu_647_p1[22:0];
+
+assign trunc_ln1018_2_fu_737_p1 = bitcast_ln1018_2_fu_723_p1[22:0];
+
+assign trunc_ln1018_3_fu_755_p1 = bitcast_ln1018_3_fu_741_p1[22:0];
+
+assign trunc_ln1018_4_fu_830_p1 = bitcast_ln1018_4_fu_817_p1[22:0];
+
+assign trunc_ln1018_5_fu_847_p1 = bitcast_ln1018_5_fu_834_p1[22:0];
+
+assign trunc_ln1018_fu_643_p1 = bitcast_ln1018_fu_629_p1[22:0];
 
 
 reg find_df_deadlock = 0;

@@ -19600,70 +19600,7 @@ static data_t elu(data_t x)
 
     return expf(x) - 1.0f;
 }
-
-
-
-
-
-static data_t mlp_head(
-    const data_t input[128],
-
-    const data_t w0[32][128],
-    const data_t b0[32],
-
-    const data_t w1[16][32],
-    const data_t b1[16],
-
-    const data_t w2[8][16],
-    const data_t b2[8],
-
-    const data_t w3[1][8],
-    const data_t b3[1]
-)
-{
-    data_t l1[32];
-    data_t l2[16];
-    data_t l3[8];
-
-
-    VITIS_LOOP_576_1: for (int i = 0; i < 32; i++) {
-        data_t acc = b0[i];
-
-        VITIS_LOOP_579_2: for (int j = 0; j < 128; j++)
-            acc += w0[i][j] * input[j];
-
-        l1[i] = elu(acc);
-    }
-
-
-    VITIS_LOOP_586_3: for (int i = 0; i < 16; i++) {
-        data_t acc = b1[i];
-
-        VITIS_LOOP_589_4: for (int j = 0; j < 32; j++)
-            acc += w1[i][j] * l1[j];
-
-        l2[i] = elu(acc);
-    }
-
-
-    VITIS_LOOP_596_5: for (int i = 0; i < 8; i++) {
-        data_t acc = b2[i];
-
-        VITIS_LOOP_599_6: for (int j = 0; j < 16; j++)
-            acc += w2[i][j] * l2[j];
-
-        l3[i] = elu(acc);
-    }
-
-
-    data_t output = b3[0];
-
-    VITIS_LOOP_608_7: for (int j = 0; j < 8; j++)
-        output += w3[0][j] * l3[j];
-
-    return output;
-}
-# 692 "src/moe.cpp"
+# 562 "src/moe.cpp"
 static void generic_mlp_head(
     const data_t input[128],
 
@@ -19679,26 +19616,51 @@ static void generic_mlp_head(
     const data_t w3[1][8],
     const data_t b3[1],
 
-    data_t &result
-)
+    data_t &result)
 {
-    data_t l1[32];
-    data_t l2[16];
-    data_t l3[8];
+#pragma HLS INLINE
+
+ data_t l0[32];
+    data_t l1[16];
+    data_t l2[8];
 
 #pragma HLS ARRAY_PARTITION variable=l1 complete
 #pragma HLS ARRAY_PARTITION variable=l2 complete
-#pragma HLS ARRAY_PARTITION variable=l3 complete
 
 
 
 
 
- VITIS_LOOP_722_1: for (int i = 0; i < 32; i++) {
-        data_t acc = b0[i];
+ VITIS_LOOP_592_1: for (int i = 0; i < 32; i++)
+    {
+#pragma HLS UNROLL factor=4
 
-        VITIS_LOOP_725_2: for (int j = 0; j < 128; j++) {
-            acc += w0[i][j] * input[j];
+ data_t acc = b0[i];
+
+        VITIS_LOOP_598_2: for (int j = 0; j < 128; j++)
+        {
+#pragma HLS PIPELINE II=1
+ acc += input[j] * w0[i][j];
+        }
+
+        l0[i] = elu(acc);
+    }
+
+
+
+
+
+
+    VITIS_LOOP_612_3: for (int i = 0; i < 16; i++)
+    {
+#pragma HLS UNROLL
+
+ data_t acc = b1[i];
+
+        VITIS_LOOP_618_4: for (int j = 0; j < 32; j++)
+        {
+#pragma HLS UNROLL
+ acc += l0[j] * w1[i][j];
         }
 
         l1[i] = elu(acc);
@@ -19708,11 +19670,17 @@ static void generic_mlp_head(
 
 
 
-    VITIS_LOOP_736_3: for (int i = 0; i < 16; i++) {
-        data_t acc = b1[i];
 
-        VITIS_LOOP_739_4: for (int j = 0; j < 32; j++) {
-            acc += w1[i][j] * l1[j];
+    VITIS_LOOP_632_5: for (int i = 0; i < 8; i++)
+    {
+#pragma HLS UNROLL
+
+ data_t acc = b2[i];
+
+        VITIS_LOOP_638_6: for (int j = 0; j < 16; j++)
+        {
+#pragma HLS UNROLL
+ acc += l1[j] * w2[i][j];
         }
 
         l2[i] = elu(acc);
@@ -19722,32 +19690,21 @@ static void generic_mlp_head(
 
 
 
-    VITIS_LOOP_750_5: for (int i = 0; i < 8; i++) {
-        data_t acc = b2[i];
-
-        VITIS_LOOP_753_6: for (int j = 0; j < 16; j++) {
-            acc += w2[i][j] * l2[j];
-        }
-
-        l3[i] = elu(acc);
-    }
-
-
-
-
-
 
     data_t acc = b3[0];
 
-    VITIS_LOOP_767_7: for (int j = 0; j < 8; j++) {
-        acc += w3[0][j] * l3[j];
+    VITIS_LOOP_654_7: for (int j = 0; j < 8; j++)
+    {
+#pragma HLS UNROLL
+ acc += l2[j] * w3[0][j];
     }
 
     result = acc;
 }
-# 790 "src/moe.cpp"
+# 677 "src/moe.cpp"
 static void generic_expert(
     const data_t input[128],
+    data_t output[5],
 
     const data_t perf_w0[32][128],
     const data_t perf_b0[32],
@@ -19792,19 +19749,17 @@ static void generic_expert(
     const data_t bram_w2[8][16],
     const data_t bram_b2[8],
     const data_t bram_w3[1][8],
-    const data_t bram_b3[1],
-
-    data_t output[5]
-)
+    const data_t bram_b3[1])
 {
-    generic_mlp_head(
+#pragma HLS INLINE
+
+ generic_mlp_head(
         input,
         perf_w0, perf_b0,
         perf_w1, perf_b1,
         perf_w2, perf_b2,
         perf_w3, perf_b3,
-        output[0]
-    );
+        output[0]);
 
     generic_mlp_head(
         input,
@@ -19812,8 +19767,7 @@ static void generic_expert(
         lut_w1, lut_b1,
         lut_w2, lut_b2,
         lut_w3, lut_b3,
-        output[1]
-    );
+        output[1]);
 
     generic_mlp_head(
         input,
@@ -19821,8 +19775,7 @@ static void generic_expert(
         ff_w1, ff_b1,
         ff_w2, ff_b2,
         ff_w3, ff_b3,
-        output[2]
-    );
+        output[2]);
 
     generic_mlp_head(
         input,
@@ -19830,8 +19783,7 @@ static void generic_expert(
         dsp_w1, dsp_b1,
         dsp_w2, dsp_b2,
         dsp_w3, dsp_b3,
-        output[3]
-    );
+        output[3]);
 
     generic_mlp_head(
         input,
@@ -19839,129 +19791,145 @@ static void generic_expert(
         bram_w1, bram_b1,
         bram_w2, bram_b2,
         bram_w3, bram_b3,
-        output[4]
-    );
+        output[4]);
 }
-# 901 "src/moe.cpp"
-static
-void expert_engine_A(
-    const data_t x[128],
-    data_t out[2][5]
-) {
+# 779 "src/moe.cpp"
+static void expert_engine_A(
+    const data_t input[128],
+    data_t out[2][5])
+{
 #pragma HLS INLINE off
 
  generic_expert(
-        x,
+        input,
+        out[0],
+
         e0_perf_w0, e0_perf_b0,
         e0_perf_w1, e0_perf_b1,
         e0_perf_w2, e0_perf_b2,
         e0_perf_w3, e0_perf_b3,
+
         e0_lut_w0, e0_lut_b0,
         e0_lut_w1, e0_lut_b1,
         e0_lut_w2, e0_lut_b2,
         e0_lut_w3, e0_lut_b3,
+
         e0_ff_w0, e0_ff_b0,
         e0_ff_w1, e0_ff_b1,
         e0_ff_w2, e0_ff_b2,
         e0_ff_w3, e0_ff_b3,
+
         e0_dsp_w0, e0_dsp_b0,
         e0_dsp_w1, e0_dsp_b1,
         e0_dsp_w2, e0_dsp_b2,
         e0_dsp_w3, e0_dsp_b3,
+
         e0_bram_w0, e0_bram_b0,
         e0_bram_w1, e0_bram_b1,
         e0_bram_w2, e0_bram_b2,
-        e0_bram_w3, e0_bram_b3,
-        out[0]
-    );
+        e0_bram_w3, e0_bram_b3);
+
 
     generic_expert(
-        x,
+        input,
+        out[1],
+
         e2_perf_w0, e2_perf_b0,
         e2_perf_w1, e2_perf_b1,
         e2_perf_w2, e2_perf_b2,
         e2_perf_w3, e2_perf_b3,
+
         e2_lut_w0, e2_lut_b0,
         e2_lut_w1, e2_lut_b1,
         e2_lut_w2, e2_lut_b2,
         e2_lut_w3, e2_lut_b3,
+
         e2_ff_w0, e2_ff_b0,
         e2_ff_w1, e2_ff_b1,
         e2_ff_w2, e2_ff_b2,
         e2_ff_w3, e2_ff_b3,
+
         e2_dsp_w0, e2_dsp_b0,
         e2_dsp_w1, e2_dsp_b1,
         e2_dsp_w2, e2_dsp_b2,
         e2_dsp_w3, e2_dsp_b3,
+
         e2_bram_w0, e2_bram_b0,
         e2_bram_w1, e2_bram_b1,
         e2_bram_w2, e2_bram_b2,
-        e2_bram_w3, e2_bram_b3,
-        out[1]
-    );
+        e2_bram_w3, e2_bram_b3);
 }
-
-void expert_engine_B(
-    const data_t x[128],
-    data_t out[2][5]
-) {
+# 854 "src/moe.cpp"
+static void expert_engine_B(
+    const data_t input[128],
+    data_t out[2][5])
+{
 #pragma HLS INLINE off
 
  generic_expert(
-        x,
+        input,
+        out[0],
+
         e1_perf_w0, e1_perf_b0,
         e1_perf_w1, e1_perf_b1,
         e1_perf_w2, e1_perf_b2,
         e1_perf_w3, e1_perf_b3,
+
         e1_lut_w0, e1_lut_b0,
         e1_lut_w1, e1_lut_b1,
         e1_lut_w2, e1_lut_b2,
         e1_lut_w3, e1_lut_b3,
+
         e1_ff_w0, e1_ff_b0,
         e1_ff_w1, e1_ff_b1,
         e1_ff_w2, e1_ff_b2,
         e1_ff_w3, e1_ff_b3,
+
         e1_dsp_w0, e1_dsp_b0,
         e1_dsp_w1, e1_dsp_b1,
         e1_dsp_w2, e1_dsp_b2,
         e1_dsp_w3, e1_dsp_b3,
+
         e1_bram_w0, e1_bram_b0,
         e1_bram_w1, e1_bram_b1,
         e1_bram_w2, e1_bram_b2,
-        e1_bram_w3, e1_bram_b3,
-        out[0]
-    );
+        e1_bram_w3, e1_bram_b3);
+
 
     generic_expert(
-        x,
+        input,
+        out[1],
+
         e3_perf_w0, e3_perf_b0,
         e3_perf_w1, e3_perf_b1,
         e3_perf_w2, e3_perf_b2,
         e3_perf_w3, e3_perf_b3,
+
         e3_lut_w0, e3_lut_b0,
         e3_lut_w1, e3_lut_b1,
         e3_lut_w2, e3_lut_b2,
         e3_lut_w3, e3_lut_b3,
+
         e3_ff_w0, e3_ff_b0,
         e3_ff_w1, e3_ff_b1,
         e3_ff_w2, e3_ff_b2,
         e3_ff_w3, e3_ff_b3,
+
         e3_dsp_w0, e3_dsp_b0,
         e3_dsp_w1, e3_dsp_b1,
         e3_dsp_w2, e3_dsp_b2,
         e3_dsp_w3, e3_dsp_b3,
+
         e3_bram_w0, e3_bram_b0,
         e3_bram_w1, e3_bram_b1,
         e3_bram_w2, e3_bram_b2,
-        e3_bram_w3, e3_bram_b3,
-        out[1]
-    );
+        e3_bram_w3, e3_bram_b3);
 }
-
-void run_parallel_engines(
-    const data_t x[128],
-    data_t out[4][5]
-) {
+# 933 "src/moe.cpp"
+static void run_parallel_engines(
+    const data_t input[128],
+    data_t expert_outputs[4][5])
+{
 #pragma HLS DATAFLOW
 
  data_t a_out[2][5];
@@ -19970,96 +19938,117 @@ void run_parallel_engines(
 #pragma HLS ARRAY_PARTITION variable=a_out complete dim=2
 #pragma HLS ARRAY_PARTITION variable=b_out complete dim=2
 
- expert_engine_A(x, a_out);
-    expert_engine_B(x, b_out);
-
-    VITIS_LOOP_1031_1: for (int o = 0; o < 5; o++) {
+ expert_engine_A(input, a_out);
+    expert_engine_B(input, b_out);
+# 955 "src/moe.cpp"
+    VITIS_LOOP_955_1: for (int o = 0; o < 5; o++)
+    {
 #pragma HLS UNROLL
- out[0][o] = a_out[0][o];
-        out[1][o] = b_out[0][o];
-        out[2][o] = a_out[1][o];
-        out[3][o] = b_out[1][o];
+
+ expert_outputs[0][o] = a_out[0][o];
+        expert_outputs[1][o] = b_out[0][o];
+        expert_outputs[2][o] = a_out[1][o];
+        expert_outputs[3][o] = b_out[1][o];
     }
 }
-
-
+# 976 "src/moe.cpp"
 __attribute__((sdx_kernel("output_moe", 0))) void output_moe(
     const data_t input[128],
     data_t output[5],
-    data_t gates[4]
-)
+    data_t gates[4])
 {
-#line 17 "/home/simics/HMoE/HLS_HMoE/run_11/scripts/run_hls.tcl"
+#line 18 "/home/simics/HMoE/HLS_HMoE/run_11/scripts/run_hls.tcl"
 #pragma HLSDIRECTIVE TOP name=output_moe
-# 1046 "src/moe.cpp"
+# 980 "src/moe.cpp"
 
+#pragma HLS INTERFACE ap_none port=input
+#pragma HLS INTERFACE ap_none port=output
+#pragma HLS INTERFACE ap_none port=gates
 #pragma HLS INTERFACE ap_ctrl_hs port=return
 
- data_t logits[4];
-
-    data_t expert_output[4][5];
-
-#pragma HLS ARRAY_PARTITION variable=logits complete
-#pragma HLS ARRAY_PARTITION variable=gates complete
-#pragma HLS ARRAY_PARTITION variable=output complete
 
 
 
 
+ data_t gate_logits[4];
 
- VITIS_LOOP_1061_1: for (int e = 0; e < 4; e++) {
+    VITIS_LOOP_992_1: for (int e = 0; e < 4; e++)
+    {
+#pragma HLS UNROLL
 
-        data_t acc = gate_bias[e];
+ data_t acc = gate_bias[e];
 
-        VITIS_LOOP_1065_2: for (int i = 0; i < 128; i++) {
-            acc += gate_weight[e][i] * input[i];
+        VITIS_LOOP_998_2: for (int i = 0; i < 128; i++)
+        {
+#pragma HLS PIPELINE II=1
+ acc += input[i] * gate_weight[e][i];
         }
 
-        logits[e] = acc;
+        gate_logits[e] = acc;
     }
 
 
 
 
 
-    data_t max_logit = logits[0];
 
-    VITIS_LOOP_1078_3: for (int e = 1; e < 4; e++) {
-        if (logits[e] > max_logit)
-            max_logit = logits[e];
+    data_t max_logit = gate_logits[0];
+
+    VITIS_LOOP_1014_3: for (int e = 1; e < 4; e++)
+    {
+#pragma HLS UNROLL
+
+ if (gate_logits[e] > max_logit)
+            max_logit = gate_logits[e];
     }
 
+
+    data_t exp_logits[4];
     data_t exp_sum = 0.0f;
 
-    VITIS_LOOP_1085_4: for (int e = 0; e < 4; e++) {
-        gates[e] = expf(logits[e] - max_logit);
-        exp_sum += gates[e];
+    VITIS_LOOP_1026_4: for (int e = 0; e < 4; e++)
+    {
+#pragma HLS UNROLL
+
+ exp_logits[e] = expf(gate_logits[e] - max_logit);
+        exp_sum += exp_logits[e];
+    }
+
+
+    VITIS_LOOP_1035_5: for (int e = 0; e < 4; e++)
+    {
+#pragma HLS UNROLL
+
+ gates[e] = exp_logits[e] / exp_sum;
     }
 
 
 
-    data_t inv_exp_sum = 1.0f / exp_sum;
-
-    VITIS_LOOP_1094_5: for (int e = 0; e < 4; e++) {
-        gates[e] = gates[e] * inv_exp_sum;
-    }
 
 
 
+    data_t expert_outputs[4][5];
 
+#pragma HLS ARRAY_PARTITION variable=expert_outputs complete dim=1
+#pragma HLS ARRAY_PARTITION variable=expert_outputs complete dim=2
 
-    run_parallel_engines(input, expert_output);
+ run_parallel_engines(input, expert_outputs);
 
 
 
 
 
-    VITIS_LOOP_1108_6: for (int o = 0; o < 5; o++) {
 
-        data_t acc = 0.0f;
+    VITIS_LOOP_1059_6: for (int o = 0; o < 5; o++)
+    {
+#pragma HLS UNROLL
 
-        VITIS_LOOP_1112_7: for (int e = 0; e < 4; e++) {
-            acc += gates[e] * expert_output[e][o];
+ data_t acc = 0.0f;
+
+        VITIS_LOOP_1065_7: for (int e = 0; e < 4; e++)
+        {
+#pragma HLS UNROLL
+ acc += gates[e] * expert_outputs[e][o];
         }
 
         output[o] = acc;

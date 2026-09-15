@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'run_parallel_engines'" level="0">
-<item name = "Date">Sun Sep 13 20:13:40 2026
+<item name = "Date">Mon Sep 14 23:44:38 2026
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">HLS_OutputMoE_Run11</item>
@@ -24,25 +24,17 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">47043, 47043, 0.470 ms, 0.470 ms, 47040, 47040, dataflow</column>
+<column name="">45807, 45807, 0.458 ms, 0.458 ms, 45806, 45806, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_expert_engine_A_fu_2170">expert_engine_A, 47039, 47039, 0.470 ms, 0.470 ms, 47039, 47039, no</column>
-<column name="grp_expert_engine_B_fu_3236">expert_engine_B, 47039, 47039, 0.470 ms, 0.470 ms, 47039, 47039, no</column>
-<column name="call_ret3_run_parallel_engines_Block_entry2326_proc_fu_4302">run_parallel_engines_Block_entry2326_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
-<column name="call_ret4_run_parallel_engines_Block_entry2327_proc_fu_4308">run_parallel_engines_Block_entry2327_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
-<column name="call_ret5_run_parallel_engines_Block_entry2328_proc_fu_4314">run_parallel_engines_Block_entry2328_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
-<column name="call_ret6_run_parallel_engines_Block_entry2329_proc_fu_4320">run_parallel_engines_Block_entry2329_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
-<column name="call_ret7_run_parallel_engines_Block_entry2330_proc_fu_4326">run_parallel_engines_Block_entry2330_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
-<column name="call_ret8_run_parallel_engines_Block_entry2331_proc_fu_4332">run_parallel_engines_Block_entry2331_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
-<column name="call_ret9_run_parallel_engines_Block_entry2332_proc_fu_4338">run_parallel_engines_Block_entry2332_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
-<column name="call_ret10_run_parallel_engines_Block_entry2333_proc_fu_4344">run_parallel_engines_Block_entry2333_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
-<column name="call_ret_run_parallel_engines_Block_entry2334_proc_fu_4350">run_parallel_engines_Block_entry2334_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
-<column name="grp_run_parallel_engines_Block_entry2335_proc_fu_4356">run_parallel_engines_Block_entry2335_proc, 2, 2, 20.000 ns, 20.000 ns, 2, 2, no</column>
+<column name="grp_expert_engine_A_fu_146">expert_engine_A, 45805, 45805, 0.458 ms, 0.458 ms, 45805, 45805, no</column>
+<column name="grp_expert_engine_B_fu_192">expert_engine_B, 45805, 45805, 0.458 ms, 0.458 ms, 45805, 45805, no</column>
+<column name="call_ret_run_parallel_engines_Block_entry2326_proc_fu_238">run_parallel_engines_Block_entry2326_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="call_ln946_run_parallel_engines_Block_entry2327_proc_fu_252">run_parallel_engines_Block_entry2327_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

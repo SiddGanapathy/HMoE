@@ -2,53 +2,53 @@
     <item name="Total Instructions per Compilation Phase">
         <table>
             <keys size="4">Phase, Step, Instructions, Description</keys>
-            <column name="Compile/Link">,  3731, After all functions are compiled and linked into a single design</column>
+            <column name="Compile/Link">,  3717, After all functions are compiled and linked into a single design</column>
             <column name="">, , </column>
             <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
-            <column name="">(1) unroll,  3068, user unroll pragmas are applied</column>
-            <column name="">(2) simplification,  2418, simplification of applied user unroll pragmas</column>
-            <column name="">(3) inline,  2143, user inline pragmas are applied</column>
-            <column name="">(4) simplification,  2143, simplification of applied user inline pragmas</column>
+            <column name="">(1) unroll, 61089, user unroll pragmas are applied</column>
+            <column name="">(2) simplification, 33848, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline, 33260, user inline pragmas are applied</column>
+            <column name="">(4) simplification, 33260, simplification of applied user inline pragmas</column>
             <column name="">, , </column>
             <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
-            <column name="">(1) array partition,  6878, user array partition pragmas are applied</column>
-            <column name="">(2) simplification,  5464, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
-            <column name="">(3) aggregate/disaggregate ,  5464, user struct aggregate/disaggregate pragmas are applied</column>
-            <column name="">(4) array reshape,  5401, apply array reshape pragmas</column>
-            <column name="">(5) access patterns,  6613, array access pattern optmizations</column>
+            <column name="">(1) array partition, 34220, user array partition pragmas are applied</column>
+            <column name="">(2) simplification, 32440, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate , 32440, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape, 32440, apply array reshape pragmas</column>
+            <column name="">(5) access patterns, 32524, array access pattern optmizations</column>
             <column name="">, , </column>
             <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
-            <column name="">(1) loop simplification,  5361, loop and instruction simplification</column>
-            <column name="">(2) parallelization,  8725, loops are unrolled or pipelined to meet performance targets</column>
-            <column name="">(3) array partition, 34404, arrays are partitioned to meet performance targets</column>
-            <column name="">(4) simplification,  9692, simplification of design after performance transformations</column>
+            <column name="">(1) loop simplification, 32440, loop and instruction simplification</column>
+            <column name="">(2) parallelization, 32440, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition, 32440, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification, 32440, simplification of design after performance transformations</column>
             <column name="">, , </column>
             <column name="HW Transforms">, , After hardware transfomations</column>
-            <column name="">(1) lowering,  9740, initial conversion to HW specific instructions</column>
-            <column name="">(2) optimizations, 10152, high level synthesis optimizations</column>
+            <column name="">(1) lowering, 32535, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations, 32836, high level synthesis optimizations</column>
         </table>
     </item>
     <item name="Instructions per Function for each Compilation Phase">
         <hiertable>
             <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
             <rows>
-                <row id="0" col0="output_moe" col1="moe.cpp:1041" col2="3731" col3="2143" col4="6613" col5="9692" col6="10152">
-                    <row id="4" col0="run_parallel_engines" col1="moe.cpp:1016" col2="3586" col3="2061" col4="6465" col5="8585" col6="8989">
-                        <row id="6" col0="expert_engine_A" col1="moe.cpp:902" col2="1759" col3="981" col4="3181" col5="4241" col6="4442">
-                            <row id="1" col0="generic_expert" col1="moe.cpp:790" col2="1752" col2_disp="1,752 (2 calls)" col3="" col4="" col5="" col6="">
-                                <row id="2" col0="generic_mlp_head" col1="moe.cpp:692" col2="1730" col2_disp="1,730 (10 calls)" col3="" col4="" col5="" col6="">
-                                    <row id="5" col0="elu" col1="moe.cpp:543" col2="240" col2_disp=" 240 (30 calls)" col3="" col4="" col5="" col6=""/>
+                <row id="0" col0="output_moe" col1="moe.cpp:976" col2="3717" col3="33260" col4="32524" col5="32440" col6="32836">
+                    <row id="5" col0="run_parallel_engines" col1="moe.cpp:933" col2="3566" col3="33081" col4="32285" col5="32205" col6="32629">
+                        <row id="3" col0="expert_engine_A" col1="moe.cpp:779" col2="1749" col3="16491" col4="16101" col5="16061" col6="16272">
+                            <row id="6" col0="generic_expert" col1="moe.cpp:677" col2="1742" col2_disp="1,742 (2 calls)" col3="" col4="" col5="" col6="">
+                                <row id="4" col0="generic_mlp_head" col1="moe.cpp:562" col2="1720" col2_disp="1,720 (10 calls)" col3="" col4="" col5="" col6="">
+                                    <row id="2" col0="elu" col1="moe.cpp:543" col2="240" col2_disp=" 240 (30 calls)" col3="" col4="" col5="" col6=""/>
                                 </row>
                             </row>
-                            <row id="2" col0="generic_mlp_head" col1="moe.cpp:692" col2="" col3="960" col3_disp=" 960 (10 calls)" col4="3160" col4_disp="3,160 (10 calls)" col5="4220" col5_disp="4,220 (10 calls)" col6="4420" col6_disp="4,420 (10 calls)"/>
+                            <row id="2" col0="elu" col1="moe.cpp:543" col2="" col3="1400" col3_disp="1,400 (280 calls)" col4="1400" col4_disp="1,400 (280 calls)" col5="1400" col5_disp="1,400 (280 calls)" col6="1400" col6_disp="1,400 (280 calls)"/>
                         </row>
-                        <row id="3" col0="expert_engine_B" col1="moe.cpp:959" col2="1759" col3="981" col4="3181" col5="4241" col6="4442">
-                            <row id="1" col0="generic_expert" col1="moe.cpp:790" col2="1752" col2_disp="1,752 (2 calls)" col3="" col4="" col5="" col6="">
-                                <row id="2" col0="generic_mlp_head" col1="moe.cpp:692" col2="1730" col2_disp="1,730 (10 calls)" col3="" col4="" col5="" col6="">
-                                    <row id="5" col0="elu" col1="moe.cpp:543" col2="240" col2_disp=" 240 (30 calls)" col3="" col4="" col5="" col6=""/>
+                        <row id="1" col0="expert_engine_B" col1="moe.cpp:854" col2="1749" col3="16491" col4="16101" col5="16061" col6="16272">
+                            <row id="6" col0="generic_expert" col1="moe.cpp:677" col2="1742" col2_disp="1,742 (2 calls)" col3="" col4="" col5="" col6="">
+                                <row id="4" col0="generic_mlp_head" col1="moe.cpp:562" col2="1720" col2_disp="1,720 (10 calls)" col3="" col4="" col5="" col6="">
+                                    <row id="2" col0="elu" col1="moe.cpp:543" col2="240" col2_disp=" 240 (30 calls)" col3="" col4="" col5="" col6=""/>
                                 </row>
                             </row>
-                            <row id="2" col0="generic_mlp_head" col1="moe.cpp:692" col2="" col3="960" col3_disp=" 960 (10 calls)" col4="3160" col4_disp="3,160 (10 calls)" col5="4220" col5_disp="4,220 (10 calls)" col6="4420" col6_disp="4,420 (10 calls)"/>
+                            <row id="2" col0="elu" col1="moe.cpp:543" col2="" col3="1400" col3_disp="1,400 (280 calls)" col4="1400" col4_disp="1,400 (280 calls)" col5="1400" col5_disp="1,400 (280 calls)" col6="1400" col6_disp="1,400 (280 calls)"/>
                         </row>
                     </row>
                 </row>

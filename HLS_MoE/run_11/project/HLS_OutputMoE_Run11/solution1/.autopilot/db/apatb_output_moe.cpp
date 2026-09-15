@@ -20,36 +20,15 @@ using namespace std;
 // wrapc file define:
 #define AUTOTB_TVIN_input_r "../tv/cdatafile/c.output_moe.autotvin_input_r.dat"
 #define AUTOTB_TVOUT_input_r "../tv/cdatafile/c.output_moe.autotvout_input_r.dat"
-#define AUTOTB_TVIN_output_0 "../tv/cdatafile/c.output_moe.autotvin_output_0.dat"
-#define AUTOTB_TVOUT_output_0 "../tv/cdatafile/c.output_moe.autotvout_output_0.dat"
-#define AUTOTB_TVIN_output_1 "../tv/cdatafile/c.output_moe.autotvin_output_1.dat"
-#define AUTOTB_TVOUT_output_1 "../tv/cdatafile/c.output_moe.autotvout_output_1.dat"
-#define AUTOTB_TVIN_output_2 "../tv/cdatafile/c.output_moe.autotvin_output_2.dat"
-#define AUTOTB_TVOUT_output_2 "../tv/cdatafile/c.output_moe.autotvout_output_2.dat"
-#define AUTOTB_TVIN_output_3 "../tv/cdatafile/c.output_moe.autotvin_output_3.dat"
-#define AUTOTB_TVOUT_output_3 "../tv/cdatafile/c.output_moe.autotvout_output_3.dat"
-#define AUTOTB_TVIN_output_4 "../tv/cdatafile/c.output_moe.autotvin_output_4.dat"
-#define AUTOTB_TVOUT_output_4 "../tv/cdatafile/c.output_moe.autotvout_output_4.dat"
-#define AUTOTB_TVIN_gates_0 "../tv/cdatafile/c.output_moe.autotvin_gates_0.dat"
-#define AUTOTB_TVOUT_gates_0 "../tv/cdatafile/c.output_moe.autotvout_gates_0.dat"
-#define AUTOTB_TVIN_gates_1 "../tv/cdatafile/c.output_moe.autotvin_gates_1.dat"
-#define AUTOTB_TVOUT_gates_1 "../tv/cdatafile/c.output_moe.autotvout_gates_1.dat"
-#define AUTOTB_TVIN_gates_2 "../tv/cdatafile/c.output_moe.autotvin_gates_2.dat"
-#define AUTOTB_TVOUT_gates_2 "../tv/cdatafile/c.output_moe.autotvout_gates_2.dat"
-#define AUTOTB_TVIN_gates_3 "../tv/cdatafile/c.output_moe.autotvin_gates_3.dat"
-#define AUTOTB_TVOUT_gates_3 "../tv/cdatafile/c.output_moe.autotvout_gates_3.dat"
+#define AUTOTB_TVIN_output_r "../tv/cdatafile/c.output_moe.autotvin_output_r.dat"
+#define AUTOTB_TVOUT_output_r "../tv/cdatafile/c.output_moe.autotvout_output_r.dat"
+#define AUTOTB_TVIN_gates "../tv/cdatafile/c.output_moe.autotvin_gates.dat"
+#define AUTOTB_TVOUT_gates "../tv/cdatafile/c.output_moe.autotvout_gates.dat"
 
 
 // tvout file define:
-#define AUTOTB_TVOUT_PC_output_0 "../tv/rtldatafile/rtl.output_moe.autotvout_output_0.dat"
-#define AUTOTB_TVOUT_PC_output_1 "../tv/rtldatafile/rtl.output_moe.autotvout_output_1.dat"
-#define AUTOTB_TVOUT_PC_output_2 "../tv/rtldatafile/rtl.output_moe.autotvout_output_2.dat"
-#define AUTOTB_TVOUT_PC_output_3 "../tv/rtldatafile/rtl.output_moe.autotvout_output_3.dat"
-#define AUTOTB_TVOUT_PC_output_4 "../tv/rtldatafile/rtl.output_moe.autotvout_output_4.dat"
-#define AUTOTB_TVOUT_PC_gates_0 "../tv/rtldatafile/rtl.output_moe.autotvout_gates_0.dat"
-#define AUTOTB_TVOUT_PC_gates_1 "../tv/rtldatafile/rtl.output_moe.autotvout_gates_1.dat"
-#define AUTOTB_TVOUT_PC_gates_2 "../tv/rtldatafile/rtl.output_moe.autotvout_gates_2.dat"
-#define AUTOTB_TVOUT_PC_gates_3 "../tv/rtldatafile/rtl.output_moe.autotvout_gates_3.dat"
+#define AUTOTB_TVOUT_PC_output_r "../tv/rtldatafile/rtl.output_moe.autotvout_output_r.dat"
+#define AUTOTB_TVOUT_PC_gates "../tv/rtldatafile/rtl.output_moe.autotvout_gates.dat"
 
 
 namespace hls::sim
@@ -1050,123 +1029,15 @@ namespace hls::sim
 
 
 extern "C"
-void output_moe_hw_stub_wrapper(void*, void*, void*, void*, void*, void*, void*, void*, void*, void*);
+void output_moe_hw_stub_wrapper(void*, void*, void*);
 
 extern "C"
-void apatb_output_moe_hw(void* __xlx_apatb_param_input_r, void* __xlx_apatb_param_output_0, void* __xlx_apatb_param_output_1, void* __xlx_apatb_param_output_2, void* __xlx_apatb_param_output_3, void* __xlx_apatb_param_output_4, void* __xlx_apatb_param_gates_0, void* __xlx_apatb_param_gates_1, void* __xlx_apatb_param_gates_2, void* __xlx_apatb_param_gates_3)
+void apatb_output_moe_hw(void* __xlx_apatb_param_input_r, void* __xlx_apatb_param_output_r, void* __xlx_apatb_param_gates)
 {
-  static hls::sim::Register port0 {
-    .name = "output_0",
-    .width = 32,
-#ifdef POST_CHECK
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_0),
-#else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_output_0),
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_output_0),
-#endif
-  };
-  port0.param = __xlx_apatb_param_output_0;
-
-  static hls::sim::Register port1 {
-    .name = "output_1",
-    .width = 32,
-#ifdef POST_CHECK
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_1),
-#else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_output_1),
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_output_1),
-#endif
-  };
-  port1.param = __xlx_apatb_param_output_1;
-
-  static hls::sim::Register port2 {
-    .name = "output_2",
-    .width = 32,
-#ifdef POST_CHECK
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_2),
-#else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_output_2),
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_output_2),
-#endif
-  };
-  port2.param = __xlx_apatb_param_output_2;
-
-  static hls::sim::Register port3 {
-    .name = "output_3",
-    .width = 32,
-#ifdef POST_CHECK
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_3),
-#else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_output_3),
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_output_3),
-#endif
-  };
-  port3.param = __xlx_apatb_param_output_3;
-
-  static hls::sim::Register port4 {
-    .name = "output_4",
-    .width = 32,
-#ifdef POST_CHECK
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_4),
-#else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_output_4),
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_output_4),
-#endif
-  };
-  port4.param = __xlx_apatb_param_output_4;
-
-  static hls::sim::Register port5 {
-    .name = "gates_0",
-    .width = 32,
-#ifdef POST_CHECK
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_gates_0),
-#else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_gates_0),
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_gates_0),
-#endif
-  };
-  port5.param = __xlx_apatb_param_gates_0;
-
-  static hls::sim::Register port6 {
-    .name = "gates_1",
-    .width = 32,
-#ifdef POST_CHECK
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_gates_1),
-#else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_gates_1),
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_gates_1),
-#endif
-  };
-  port6.param = __xlx_apatb_param_gates_1;
-
-  static hls::sim::Register port7 {
-    .name = "gates_2",
-    .width = 32,
-#ifdef POST_CHECK
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_gates_2),
-#else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_gates_2),
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_gates_2),
-#endif
-  };
-  port7.param = __xlx_apatb_param_gates_2;
-
-  static hls::sim::Register port8 {
-    .name = "gates_3",
-    .width = 32,
-#ifdef POST_CHECK
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_gates_3),
-#else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_gates_3),
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_gates_3),
-#endif
-  };
-  port8.param = __xlx_apatb_param_gates_3;
-
 #ifdef USE_BINARY_TV_FILE
-  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port9 {
+  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port0 {
 #else
-  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port9 {
+  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port0 {
 #endif
     .width = 32,
     .asize = 4,
@@ -1182,58 +1053,96 @@ void apatb_output_moe_hw(void* __xlx_apatb_param_input_r, void* __xlx_apatb_para
 #endif
 #endif
   };
-  port9.param = { __xlx_apatb_param_input_r };
-  port9.nbytes = { 512 };
-  port9.offset = {  };
-  port9.hasWrite = { false };
+  port0.param = { __xlx_apatb_param_input_r };
+  port0.nbytes = { 512 };
+  port0.offset = {  };
+  port0.hasWrite = { false };
+
+#ifdef USE_BINARY_TV_FILE
+  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port1 {
+#else
+  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port1 {
+#endif
+    .width = 32,
+    .asize = 4,
+    .hbm = false,
+    .name = { "output_r" },
+#ifdef POST_CHECK
+#ifdef USE_BINARY_TV_FILE
+    .reader = new hls::sim::Input(AUTOTB_TVOUT_PC_output_r),
+#else
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_r),
+#endif
+#else
+#ifdef USE_BINARY_TV_FILE
+    .owriter = new hls::sim::Output(AUTOTB_TVOUT_output_r),
+#else
+    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_output_r),
+#endif
+#ifdef USE_BINARY_TV_FILE
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_output_r),
+#else
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_output_r),
+#endif
+#endif
+  };
+  port1.param = { __xlx_apatb_param_output_r };
+  port1.nbytes = { 20 };
+  port1.offset = {  };
+  port1.hasWrite = { true };
+
+#ifdef USE_BINARY_TV_FILE
+  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port2 {
+#else
+  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port2 {
+#endif
+    .width = 32,
+    .asize = 4,
+    .hbm = false,
+    .name = { "gates" },
+#ifdef POST_CHECK
+#ifdef USE_BINARY_TV_FILE
+    .reader = new hls::sim::Input(AUTOTB_TVOUT_PC_gates),
+#else
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_gates),
+#endif
+#else
+#ifdef USE_BINARY_TV_FILE
+    .owriter = new hls::sim::Output(AUTOTB_TVOUT_gates),
+#else
+    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_gates),
+#endif
+#ifdef USE_BINARY_TV_FILE
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_gates),
+#else
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_gates),
+#endif
+#endif
+  };
+  port2.param = { __xlx_apatb_param_gates };
+  port2.nbytes = { 16 };
+  port2.offset = {  };
+  port2.hasWrite = { true };
 
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
-    check(port0);
     check(port1);
     check(port2);
-    check(port3);
-    check(port4);
-    check(port5);
-    check(port6);
-    check(port7);
-    check(port8);
 #else
     static hls::sim::RefTCL tcl("../tv/cdatafile/ref.tcl");
     CodeState = DUMP_INPUTS;
     dump(port0, port0.iwriter, tcl.AESL_transaction);
     dump(port1, port1.iwriter, tcl.AESL_transaction);
     dump(port2, port2.iwriter, tcl.AESL_transaction);
-    dump(port3, port3.iwriter, tcl.AESL_transaction);
-    dump(port4, port4.iwriter, tcl.AESL_transaction);
-    dump(port5, port5.iwriter, tcl.AESL_transaction);
-    dump(port6, port6.iwriter, tcl.AESL_transaction);
-    dump(port7, port7.iwriter, tcl.AESL_transaction);
-    dump(port8, port8.iwriter, tcl.AESL_transaction);
-    dump(port9, port9.iwriter, tcl.AESL_transaction);
     port0.doTCL(tcl);
     port1.doTCL(tcl);
     port2.doTCL(tcl);
-    port3.doTCL(tcl);
-    port4.doTCL(tcl);
-    port5.doTCL(tcl);
-    port6.doTCL(tcl);
-    port7.doTCL(tcl);
-    port8.doTCL(tcl);
-    port9.doTCL(tcl);
     CodeState = CALL_C_DUT;
-    output_moe_hw_stub_wrapper(__xlx_apatb_param_input_r, __xlx_apatb_param_output_0, __xlx_apatb_param_output_1, __xlx_apatb_param_output_2, __xlx_apatb_param_output_3, __xlx_apatb_param_output_4, __xlx_apatb_param_gates_0, __xlx_apatb_param_gates_1, __xlx_apatb_param_gates_2, __xlx_apatb_param_gates_3);
+    output_moe_hw_stub_wrapper(__xlx_apatb_param_input_r, __xlx_apatb_param_output_r, __xlx_apatb_param_gates);
     CodeState = DUMP_OUTPUTS;
-    dump(port0, port0.owriter, tcl.AESL_transaction);
     dump(port1, port1.owriter, tcl.AESL_transaction);
     dump(port2, port2.owriter, tcl.AESL_transaction);
-    dump(port3, port3.owriter, tcl.AESL_transaction);
-    dump(port4, port4.owriter, tcl.AESL_transaction);
-    dump(port5, port5.owriter, tcl.AESL_transaction);
-    dump(port6, port6.owriter, tcl.AESL_transaction);
-    dump(port7, port7.owriter, tcl.AESL_transaction);
-    dump(port8, port8.owriter, tcl.AESL_transaction);
     tcl.AESL_transaction++;
 #endif
   } catch (const hls::sim::SimException &e) {

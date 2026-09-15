@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'run_parallel_engines'
 ================================================================
-* Date:           Sun Sep 13 20:14:55 2026
+* Date:           Mon Sep 14 23:45:44 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        HLS_OutputMoE_Run11
@@ -29,28 +29,20 @@
     |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
     |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
     +---------+---------+----------+----------+-------+-------+----------+
-    |    47043|    47043|  0.470 ms|  0.470 ms|  47040|  47040|  dataflow|
+    |    45807|    45807|  0.458 ms|  0.458 ms|  45806|  45806|  dataflow|
     +---------+---------+----------+----------+-------+-------+----------+
 
     + Detail: 
         * Instance: 
-        +----------------------------------------------+-------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
-        |                                              |                                           |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
-        |                   Instance                   |                   Module                  |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
-        +----------------------------------------------+-------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
-        |expert_engine_A_U0                            |expert_engine_A                            |    47039|    47039|   0.470 ms|   0.470 ms|  47039|  47039|       no|
-        |expert_engine_B_U0                            |expert_engine_B                            |    47039|    47039|   0.470 ms|   0.470 ms|  47039|  47039|       no|
-        |run_parallel_engines_Block_entry2326_proc_U0  |run_parallel_engines_Block_entry2326_proc  |        0|        0|       0 ns|       0 ns|      0|      0|       no|
-        |run_parallel_engines_Block_entry2327_proc_U0  |run_parallel_engines_Block_entry2327_proc  |        0|        0|       0 ns|       0 ns|      0|      0|       no|
-        |run_parallel_engines_Block_entry2328_proc_U0  |run_parallel_engines_Block_entry2328_proc  |        0|        0|       0 ns|       0 ns|      0|      0|       no|
-        |run_parallel_engines_Block_entry2329_proc_U0  |run_parallel_engines_Block_entry2329_proc  |        0|        0|       0 ns|       0 ns|      0|      0|       no|
-        |run_parallel_engines_Block_entry2330_proc_U0  |run_parallel_engines_Block_entry2330_proc  |        0|        0|       0 ns|       0 ns|      0|      0|       no|
-        |run_parallel_engines_Block_entry2331_proc_U0  |run_parallel_engines_Block_entry2331_proc  |        0|        0|       0 ns|       0 ns|      0|      0|       no|
-        |run_parallel_engines_Block_entry2332_proc_U0  |run_parallel_engines_Block_entry2332_proc  |        0|        0|       0 ns|       0 ns|      0|      0|       no|
-        |run_parallel_engines_Block_entry2333_proc_U0  |run_parallel_engines_Block_entry2333_proc  |        0|        0|       0 ns|       0 ns|      0|      0|       no|
-        |run_parallel_engines_Block_entry2334_proc_U0  |run_parallel_engines_Block_entry2334_proc  |        0|        0|       0 ns|       0 ns|      0|      0|       no|
-        |run_parallel_engines_Block_entry2335_proc_U0  |run_parallel_engines_Block_entry2335_proc  |        2|        2|  20.000 ns|  20.000 ns|      2|      2|       no|
-        +----------------------------------------------+-------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
+        +----------------------------------------------+-------------------------------------------+---------+---------+----------+----------+-------+-------+---------+
+        |                                              |                                           |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+        |                   Instance                   |                   Module                  |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+        +----------------------------------------------+-------------------------------------------+---------+---------+----------+----------+-------+-------+---------+
+        |expert_engine_A_U0                            |expert_engine_A                            |    45805|    45805|  0.458 ms|  0.458 ms|  45805|  45805|       no|
+        |expert_engine_B_U0                            |expert_engine_B                            |    45805|    45805|  0.458 ms|  0.458 ms|  45805|  45805|       no|
+        |run_parallel_engines_Block_entry2326_proc_U0  |run_parallel_engines_Block_entry2326_proc  |        0|        0|      0 ns|      0 ns|      0|      0|       no|
+        |run_parallel_engines_Block_entry2327_proc_U0  |run_parallel_engines_Block_entry2327_proc  |        0|        0|      0 ns|      0 ns|      0|      0|       no|
+        +----------------------------------------------+-------------------------------------------+---------+---------+----------+----------+-------+-------+---------+
 
         * Loop: 
         N/A
@@ -65,22 +57,22 @@
 |         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
 +---------------------+---------+-------+---------+---------+------+
 |DSP                  |        -|      -|        -|        -|     -|
-|Expression           |        -|      -|        0|      206|     -|
-|FIFO                 |        -|      -|     3762|     2546|     -|
-|Instance             |      180|    338|   182170|   112264|     -|
+|Expression           |        -|      -|        0|      142|     -|
+|FIFO                 |        -|      -|     2970|     2010|     -|
+|Instance             |      200|    448|    43112|   144848|     0|
 |Memory               |        -|      -|        -|        -|     -|
-|Multiplexer          |        -|      -|        -|      360|     -|
-|Register             |        -|      -|       40|        -|     -|
+|Multiplexer          |        -|      -|        -|      288|     -|
+|Register             |        -|      -|       32|        -|     -|
 +---------------------+---------+-------+---------+---------+------+
-|Total                |      180|    338|   185972|   115376|     0|
+|Total                |      200|    448|    46114|   147288|     0|
 +---------------------+---------+-------+---------+---------+------+
 |Available SLR        |     1344|   3072|   864000|   432000|   320|
 +---------------------+---------+-------+---------+---------+------+
-|Utilization SLR (%)  |       13|     11|       21|       26|     0|
+|Utilization SLR (%)  |       14|     14|        5|       34|     0|
 +---------------------+---------+-------+---------+---------+------+
 |Available            |     5376|  12288|  3456000|  1728000|  1280|
 +---------------------+---------+-------+---------+---------+------+
-|Utilization (%)      |        3|      2|        5|        6|     0|
+|Utilization (%)      |        3|      3|        1|        8|     0|
 +---------------------+---------+-------+---------+---------+------+
 
 + Detail: 
@@ -88,20 +80,12 @@
     +----------------------------------------------+-------------------------------------------+---------+-----+-------+-------+-----+
     |                   Instance                   |                   Module                  | BRAM_18K| DSP |   FF  |  LUT  | URAM|
     +----------------------------------------------+-------------------------------------------+---------+-----+-------+-------+-----+
-    |expert_engine_A_U0                            |expert_engine_A                            |       90|  169|  90786|  55850|    0|
-    |expert_engine_B_U0                            |expert_engine_B                            |       90|  169|  90786|  55850|    0|
-    |run_parallel_engines_Block_entry2326_proc_U0  |run_parallel_engines_Block_entry2326_proc  |        0|    0|     66|     29|    0|
-    |run_parallel_engines_Block_entry2327_proc_U0  |run_parallel_engines_Block_entry2327_proc  |        0|    0|     66|     29|    0|
-    |run_parallel_engines_Block_entry2328_proc_U0  |run_parallel_engines_Block_entry2328_proc  |        0|    0|     66|     29|    0|
-    |run_parallel_engines_Block_entry2329_proc_U0  |run_parallel_engines_Block_entry2329_proc  |        0|    0|     66|     29|    0|
-    |run_parallel_engines_Block_entry2330_proc_U0  |run_parallel_engines_Block_entry2330_proc  |        0|    0|     66|     29|    0|
-    |run_parallel_engines_Block_entry2331_proc_U0  |run_parallel_engines_Block_entry2331_proc  |        0|    0|     66|     29|    0|
-    |run_parallel_engines_Block_entry2332_proc_U0  |run_parallel_engines_Block_entry2332_proc  |        0|    0|     66|     29|    0|
-    |run_parallel_engines_Block_entry2333_proc_U0  |run_parallel_engines_Block_entry2333_proc  |        0|    0|     66|     29|    0|
-    |run_parallel_engines_Block_entry2334_proc_U0  |run_parallel_engines_Block_entry2334_proc  |        0|    0|     66|     29|    0|
-    |run_parallel_engines_Block_entry2335_proc_U0  |run_parallel_engines_Block_entry2335_proc  |        0|    0|      4|    303|    0|
+    |expert_engine_A_U0                            |expert_engine_A                            |      100|  224|  21074|  72278|    0|
+    |expert_engine_B_U0                            |expert_engine_B                            |      100|  224|  21074|  72278|    0|
+    |run_parallel_engines_Block_entry2326_proc_U0  |run_parallel_engines_Block_entry2326_proc  |        0|    0|    322|    101|    0|
+    |run_parallel_engines_Block_entry2327_proc_U0  |run_parallel_engines_Block_entry2327_proc  |        0|    0|    642|    191|    0|
     +----------------------------------------------+-------------------------------------------+---------+-----+-------+-------+-----+
-    |Total                                         |                                           |      180|  338| 182170| 112264|    0|
+    |Total                                         |                                           |      200|  448|  43112| 144848|    0|
     +----------------------------------------------+-------------------------------------------+---------+-----+-------+-------+-----+
 
     * DSP: 
@@ -134,26 +118,18 @@
     |a_out_1_4_load_loc_channel_U  |        0|  99|   0|    -|     2|   32|       64|
     |a_out_1_U                     |        0|  99|   0|    -|     2|   32|       64|
     |a_out_1_load_loc_channel_U    |        0|  99|   0|    -|     2|   32|       64|
-    |b_out_0_1_U                   |        0|  99|   0|    -|     2|   32|       64|
-    |b_out_0_1_load_loc_channel_U  |        0|  99|   0|    -|     2|   32|       64|
-    |b_out_0_2_U                   |        0|  99|   0|    -|     2|   32|       64|
-    |b_out_0_2_load_loc_channel_U  |        0|  99|   0|    -|     2|   32|       64|
-    |b_out_0_3_U                   |        0|  99|   0|    -|     2|   32|       64|
-    |b_out_0_3_load_loc_channel_U  |        0|  99|   0|    -|     2|   32|       64|
+    |b_out_0_1_U                   |        0|  99|   0|    -|     3|   32|       96|
+    |b_out_0_2_U                   |        0|  99|   0|    -|     3|   32|       96|
+    |b_out_0_3_U                   |        0|  99|   0|    -|     3|   32|       96|
     |b_out_0_4_U                   |        0|  99|   0|    -|     3|   32|       96|
-    |b_out_0_U                     |        0|  99|   0|    -|     2|   32|       64|
-    |b_out_0_load_loc_channel_U    |        0|  99|   0|    -|     2|   32|       64|
-    |b_out_1_1_U                   |        0|  99|   0|    -|     2|   32|       64|
-    |b_out_1_1_load_loc_channel_U  |        0|  99|   0|    -|     2|   32|       64|
-    |b_out_1_2_U                   |        0|  99|   0|    -|     2|   32|       64|
-    |b_out_1_2_load_loc_channel_U  |        0|  99|   0|    -|     2|   32|       64|
-    |b_out_1_3_U                   |        0|  99|   0|    -|     2|   32|       64|
-    |b_out_1_3_load_loc_channel_U  |        0|  99|   0|    -|     2|   32|       64|
+    |b_out_0_U                     |        0|  99|   0|    -|     3|   32|       96|
+    |b_out_1_1_U                   |        0|  99|   0|    -|     3|   32|       96|
+    |b_out_1_2_U                   |        0|  99|   0|    -|     3|   32|       96|
+    |b_out_1_3_U                   |        0|  99|   0|    -|     3|   32|       96|
     |b_out_1_4_U                   |        0|  99|   0|    -|     3|   32|       96|
-    |b_out_1_U                     |        0|  99|   0|    -|     2|   32|       64|
-    |b_out_1_load_loc_channel_U    |        0|  99|   0|    -|     2|   32|       64|
+    |b_out_1_U                     |        0|  99|   0|    -|     3|   32|       96|
     +------------------------------+---------+----+----+-----+------+-----+---------+
-    |Total                         |        0|3762|   0|    0|    78| 1216|     2496|
+    |Total                         |        0|2970|   0|    0|    70|  960|     2240|
     +------------------------------+---------+----+----+-----+------+-----+---------+
 
     * Expression: 
@@ -182,22 +158,14 @@
     |ap_channel_done_a_out_1_load_loc_channel                  |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_b_out_0                                   |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_b_out_0_1                                 |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_b_out_0_1_load_loc_channel                |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_b_out_0_2                                 |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_b_out_0_2_load_loc_channel                |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_b_out_0_3                                 |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_b_out_0_3_load_loc_channel                |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_b_out_0_4                                 |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_b_out_0_load_loc_channel                  |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_b_out_1                                   |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_b_out_1_1                                 |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_b_out_1_1_load_loc_channel                |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_b_out_1_2                                 |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_b_out_1_2_load_loc_channel                |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_b_out_1_3                                 |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_b_out_1_3_load_loc_channel                |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_b_out_1_4                                 |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_b_out_1_load_loc_channel                  |       and|   0|  0|   2|           1|           1|
     |ap_idle                                                   |       and|   0|  0|   2|           1|           1|
     |ap_sync_ready                                             |       and|   0|  0|   2|           1|           1|
     |expert_engine_A_U0_ap_continue                            |       and|   0|  0|   2|           1|           1|
@@ -206,23 +174,7 @@
     |expert_engine_B_U0_ap_start                               |       and|   0|  0|   2|           1|           1|
     |run_parallel_engines_Block_entry2326_proc_U0_ap_continue  |       and|   0|  0|   2|           1|           1|
     |run_parallel_engines_Block_entry2326_proc_U0_ap_start     |       and|   0|  0|   2|           1|           1|
-    |run_parallel_engines_Block_entry2327_proc_U0_ap_continue  |       and|   0|  0|   2|           1|           1|
     |run_parallel_engines_Block_entry2327_proc_U0_ap_start     |       and|   0|  0|   2|           1|           1|
-    |run_parallel_engines_Block_entry2328_proc_U0_ap_continue  |       and|   0|  0|   2|           1|           1|
-    |run_parallel_engines_Block_entry2328_proc_U0_ap_start     |       and|   0|  0|   2|           1|           1|
-    |run_parallel_engines_Block_entry2329_proc_U0_ap_continue  |       and|   0|  0|   2|           1|           1|
-    |run_parallel_engines_Block_entry2329_proc_U0_ap_start     |       and|   0|  0|   2|           1|           1|
-    |run_parallel_engines_Block_entry2330_proc_U0_ap_continue  |       and|   0|  0|   2|           1|           1|
-    |run_parallel_engines_Block_entry2330_proc_U0_ap_start     |       and|   0|  0|   2|           1|           1|
-    |run_parallel_engines_Block_entry2331_proc_U0_ap_continue  |       and|   0|  0|   2|           1|           1|
-    |run_parallel_engines_Block_entry2331_proc_U0_ap_start     |       and|   0|  0|   2|           1|           1|
-    |run_parallel_engines_Block_entry2332_proc_U0_ap_continue  |       and|   0|  0|   2|           1|           1|
-    |run_parallel_engines_Block_entry2332_proc_U0_ap_start     |       and|   0|  0|   2|           1|           1|
-    |run_parallel_engines_Block_entry2333_proc_U0_ap_continue  |       and|   0|  0|   2|           1|           1|
-    |run_parallel_engines_Block_entry2333_proc_U0_ap_start     |       and|   0|  0|   2|           1|           1|
-    |run_parallel_engines_Block_entry2334_proc_U0_ap_continue  |       and|   0|  0|   2|           1|           1|
-    |run_parallel_engines_Block_entry2334_proc_U0_ap_start     |       and|   0|  0|   2|           1|           1|
-    |run_parallel_engines_Block_entry2335_proc_U0_ap_start     |       and|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_a_out_0                             |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_a_out_0_1                           |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_a_out_0_1_load_loc_channel          |        or|   0|  0|   2|           1|           1|
@@ -245,26 +197,18 @@
     |ap_sync_channel_write_a_out_1_load_loc_channel            |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_b_out_0                             |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_b_out_0_1                           |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_b_out_0_1_load_loc_channel          |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_b_out_0_2                           |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_b_out_0_2_load_loc_channel          |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_b_out_0_3                           |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_b_out_0_3_load_loc_channel          |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_b_out_0_4                           |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_b_out_0_load_loc_channel            |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_b_out_1                             |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_b_out_1_1                           |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_b_out_1_1_load_loc_channel          |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_b_out_1_2                           |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_b_out_1_2_load_loc_channel          |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_b_out_1_3                           |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_b_out_1_3_load_loc_channel          |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_b_out_1_4                           |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_b_out_1_load_loc_channel            |        or|   0|  0|   2|           1|           1|
     |ap_sync_expert_engine_A_U0_ap_ready                       |        or|   0|  0|   2|           1|           1|
     |ap_sync_expert_engine_B_U0_ap_ready                       |        or|   0|  0|   2|           1|           1|
     +----------------------------------------------------------+----------+----+---+----+------------+------------+
-    |Total                                                     |          |   0|  0| 206|         103|         103|
+    |Total                                                     |          |   0|  0| 142|          71|          71|
     +----------------------------------------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -293,26 +237,18 @@
     |ap_sync_reg_channel_write_a_out_1_load_loc_channel    |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_b_out_0                     |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_b_out_0_1                   |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_b_out_0_1_load_loc_channel  |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_b_out_0_2                   |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_b_out_0_2_load_loc_channel  |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_b_out_0_3                   |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_b_out_0_3_load_loc_channel  |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_b_out_0_4                   |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_b_out_0_load_loc_channel    |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_b_out_1                     |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_b_out_1_1                   |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_b_out_1_1_load_loc_channel  |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_b_out_1_2                   |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_b_out_1_2_load_loc_channel  |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_b_out_1_3                   |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_b_out_1_3_load_loc_channel  |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_b_out_1_4                   |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_b_out_1_load_loc_channel    |   9|          2|    1|          2|
     |ap_sync_reg_expert_engine_A_U0_ap_ready               |   9|          2|    1|          2|
     |ap_sync_reg_expert_engine_B_U0_ap_ready               |   9|          2|    1|          2|
     +------------------------------------------------------+----+-----------+-----+-----------+
-    |Total                                                 | 360|         80|   40|         80|
+    |Total                                                 | 288|         64|   32|         64|
     +------------------------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -341,26 +277,18 @@
     |ap_sync_reg_channel_write_a_out_1_load_loc_channel    |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_b_out_0                     |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_b_out_0_1                   |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_b_out_0_1_load_loc_channel  |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_b_out_0_2                   |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_b_out_0_2_load_loc_channel  |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_b_out_0_3                   |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_b_out_0_3_load_loc_channel  |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_b_out_0_4                   |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_b_out_0_load_loc_channel    |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_b_out_1                     |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_b_out_1_1                   |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_b_out_1_1_load_loc_channel  |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_b_out_1_2                   |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_b_out_1_2_load_loc_channel  |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_b_out_1_3                   |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_b_out_1_3_load_loc_channel  |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_b_out_1_4                   |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_b_out_1_load_loc_channel    |  1|   0|    1|          0|
     |ap_sync_reg_expert_engine_A_U0_ap_ready               |  1|   0|    1|          0|
     |ap_sync_reg_expert_engine_B_U0_ap_ready               |  1|   0|    1|          0|
     +------------------------------------------------------+---+----+-----+-----------+
-    |Total                                                 | 40|   0|   40|          0|
+    |Total                                                 | 32|   0|   32|          0|
     +------------------------------------------------------+---+----+-----+-----------+
 
 
@@ -369,65 +297,65 @@
 == Interface
 ================================================================
 * Summary: 
-+------------------+-----+-----+------------+----------------------+--------------+
-|     RTL Ports    | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
-+------------------+-----+-----+------------+----------------------+--------------+
-|input_r_address0  |  out|    7|   ap_memory|               input_r|         array|
-|input_r_ce0       |  out|    1|   ap_memory|               input_r|         array|
-|input_r_d0        |  out|   32|   ap_memory|               input_r|         array|
-|input_r_q0        |   in|   32|   ap_memory|               input_r|         array|
-|input_r_we0       |  out|    1|   ap_memory|               input_r|         array|
-|input_r_address1  |  out|    7|   ap_memory|               input_r|         array|
-|input_r_ce1       |  out|    1|   ap_memory|               input_r|         array|
-|input_r_d1        |  out|   32|   ap_memory|               input_r|         array|
-|input_r_q1        |   in|   32|   ap_memory|               input_r|         array|
-|input_r_we1       |  out|    1|   ap_memory|               input_r|         array|
-|out_0_address0    |  out|    3|   ap_memory|                 out_0|         array|
-|out_0_ce0         |  out|    1|   ap_memory|                 out_0|         array|
-|out_0_d0          |  out|   32|   ap_memory|                 out_0|         array|
-|out_0_q0          |   in|   32|   ap_memory|                 out_0|         array|
-|out_0_we0         |  out|    1|   ap_memory|                 out_0|         array|
-|out_0_address1    |  out|    3|   ap_memory|                 out_0|         array|
-|out_0_ce1         |  out|    1|   ap_memory|                 out_0|         array|
-|out_0_d1          |  out|   32|   ap_memory|                 out_0|         array|
-|out_0_q1          |   in|   32|   ap_memory|                 out_0|         array|
-|out_0_we1         |  out|    1|   ap_memory|                 out_0|         array|
-|out_1_address0    |  out|    3|   ap_memory|                 out_1|         array|
-|out_1_ce0         |  out|    1|   ap_memory|                 out_1|         array|
-|out_1_d0          |  out|   32|   ap_memory|                 out_1|         array|
-|out_1_q0          |   in|   32|   ap_memory|                 out_1|         array|
-|out_1_we0         |  out|    1|   ap_memory|                 out_1|         array|
-|out_1_address1    |  out|    3|   ap_memory|                 out_1|         array|
-|out_1_ce1         |  out|    1|   ap_memory|                 out_1|         array|
-|out_1_d1          |  out|   32|   ap_memory|                 out_1|         array|
-|out_1_q1          |   in|   32|   ap_memory|                 out_1|         array|
-|out_1_we1         |  out|    1|   ap_memory|                 out_1|         array|
-|out_2_address0    |  out|    3|   ap_memory|                 out_2|         array|
-|out_2_ce0         |  out|    1|   ap_memory|                 out_2|         array|
-|out_2_d0          |  out|   32|   ap_memory|                 out_2|         array|
-|out_2_q0          |   in|   32|   ap_memory|                 out_2|         array|
-|out_2_we0         |  out|    1|   ap_memory|                 out_2|         array|
-|out_2_address1    |  out|    3|   ap_memory|                 out_2|         array|
-|out_2_ce1         |  out|    1|   ap_memory|                 out_2|         array|
-|out_2_d1          |  out|   32|   ap_memory|                 out_2|         array|
-|out_2_q1          |   in|   32|   ap_memory|                 out_2|         array|
-|out_2_we1         |  out|    1|   ap_memory|                 out_2|         array|
-|out_3_address0    |  out|    3|   ap_memory|                 out_3|         array|
-|out_3_ce0         |  out|    1|   ap_memory|                 out_3|         array|
-|out_3_d0          |  out|   32|   ap_memory|                 out_3|         array|
-|out_3_q0          |   in|   32|   ap_memory|                 out_3|         array|
-|out_3_we0         |  out|    1|   ap_memory|                 out_3|         array|
-|out_3_address1    |  out|    3|   ap_memory|                 out_3|         array|
-|out_3_ce1         |  out|    1|   ap_memory|                 out_3|         array|
-|out_3_d1          |  out|   32|   ap_memory|                 out_3|         array|
-|out_3_q1          |   in|   32|   ap_memory|                 out_3|         array|
-|out_3_we1         |  out|    1|   ap_memory|                 out_3|         array|
-|ap_clk            |   in|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
-|ap_rst            |   in|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
-|ap_start          |   in|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
-|ap_done           |  out|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
-|ap_ready          |  out|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
-|ap_idle           |  out|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
-|ap_continue       |   in|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
-+------------------+-----+-----+------------+----------------------+--------------+
++---------------------------+-----+-----+------------+----------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++---------------------------+-----+-----+------------+----------------------+--------------+
+|input_r_address0           |  out|    7|   ap_memory|               input_r|         array|
+|input_r_ce0                |  out|    1|   ap_memory|               input_r|         array|
+|input_r_d0                 |  out|   32|   ap_memory|               input_r|         array|
+|input_r_q0                 |   in|   32|   ap_memory|               input_r|         array|
+|input_r_we0                |  out|    1|   ap_memory|               input_r|         array|
+|input_r_address1           |  out|    7|   ap_memory|               input_r|         array|
+|input_r_ce1                |  out|    1|   ap_memory|               input_r|         array|
+|input_r_d1                 |  out|   32|   ap_memory|               input_r|         array|
+|input_r_q1                 |   in|   32|   ap_memory|               input_r|         array|
+|input_r_we1                |  out|    1|   ap_memory|               input_r|         array|
+|expert_outputs_0_0         |  out|   32|      ap_vld|    expert_outputs_0_0|       pointer|
+|expert_outputs_0_0_ap_vld  |  out|    1|      ap_vld|    expert_outputs_0_0|       pointer|
+|expert_outputs_0_1         |  out|   32|      ap_vld|    expert_outputs_0_1|       pointer|
+|expert_outputs_0_1_ap_vld  |  out|    1|      ap_vld|    expert_outputs_0_1|       pointer|
+|expert_outputs_0_2         |  out|   32|      ap_vld|    expert_outputs_0_2|       pointer|
+|expert_outputs_0_2_ap_vld  |  out|    1|      ap_vld|    expert_outputs_0_2|       pointer|
+|expert_outputs_0_3         |  out|   32|      ap_vld|    expert_outputs_0_3|       pointer|
+|expert_outputs_0_3_ap_vld  |  out|    1|      ap_vld|    expert_outputs_0_3|       pointer|
+|expert_outputs_0_4         |  out|   32|      ap_vld|    expert_outputs_0_4|       pointer|
+|expert_outputs_0_4_ap_vld  |  out|    1|      ap_vld|    expert_outputs_0_4|       pointer|
+|expert_outputs_1_0         |  out|   32|      ap_vld|    expert_outputs_1_0|       pointer|
+|expert_outputs_1_0_ap_vld  |  out|    1|      ap_vld|    expert_outputs_1_0|       pointer|
+|expert_outputs_1_1         |  out|   32|      ap_vld|    expert_outputs_1_1|       pointer|
+|expert_outputs_1_1_ap_vld  |  out|    1|      ap_vld|    expert_outputs_1_1|       pointer|
+|expert_outputs_1_2         |  out|   32|      ap_vld|    expert_outputs_1_2|       pointer|
+|expert_outputs_1_2_ap_vld  |  out|    1|      ap_vld|    expert_outputs_1_2|       pointer|
+|expert_outputs_1_3         |  out|   32|      ap_vld|    expert_outputs_1_3|       pointer|
+|expert_outputs_1_3_ap_vld  |  out|    1|      ap_vld|    expert_outputs_1_3|       pointer|
+|expert_outputs_1_4         |  out|   32|      ap_vld|    expert_outputs_1_4|       pointer|
+|expert_outputs_1_4_ap_vld  |  out|    1|      ap_vld|    expert_outputs_1_4|       pointer|
+|expert_outputs_2_0         |  out|   32|      ap_vld|    expert_outputs_2_0|       pointer|
+|expert_outputs_2_0_ap_vld  |  out|    1|      ap_vld|    expert_outputs_2_0|       pointer|
+|expert_outputs_2_1         |  out|   32|      ap_vld|    expert_outputs_2_1|       pointer|
+|expert_outputs_2_1_ap_vld  |  out|    1|      ap_vld|    expert_outputs_2_1|       pointer|
+|expert_outputs_2_2         |  out|   32|      ap_vld|    expert_outputs_2_2|       pointer|
+|expert_outputs_2_2_ap_vld  |  out|    1|      ap_vld|    expert_outputs_2_2|       pointer|
+|expert_outputs_2_3         |  out|   32|      ap_vld|    expert_outputs_2_3|       pointer|
+|expert_outputs_2_3_ap_vld  |  out|    1|      ap_vld|    expert_outputs_2_3|       pointer|
+|expert_outputs_2_4         |  out|   32|      ap_vld|    expert_outputs_2_4|       pointer|
+|expert_outputs_2_4_ap_vld  |  out|    1|      ap_vld|    expert_outputs_2_4|       pointer|
+|expert_outputs_3_0         |  out|   32|      ap_vld|    expert_outputs_3_0|       pointer|
+|expert_outputs_3_0_ap_vld  |  out|    1|      ap_vld|    expert_outputs_3_0|       pointer|
+|expert_outputs_3_1         |  out|   32|      ap_vld|    expert_outputs_3_1|       pointer|
+|expert_outputs_3_1_ap_vld  |  out|    1|      ap_vld|    expert_outputs_3_1|       pointer|
+|expert_outputs_3_2         |  out|   32|      ap_vld|    expert_outputs_3_2|       pointer|
+|expert_outputs_3_2_ap_vld  |  out|    1|      ap_vld|    expert_outputs_3_2|       pointer|
+|expert_outputs_3_3         |  out|   32|      ap_vld|    expert_outputs_3_3|       pointer|
+|expert_outputs_3_3_ap_vld  |  out|    1|      ap_vld|    expert_outputs_3_3|       pointer|
+|expert_outputs_3_4         |  out|   32|      ap_vld|    expert_outputs_3_4|       pointer|
+|expert_outputs_3_4_ap_vld  |  out|    1|      ap_vld|    expert_outputs_3_4|       pointer|
+|ap_clk                     |   in|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
+|ap_continue                |   in|    1|  ap_ctrl_hs|  run_parallel_engines|  return value|
++---------------------------+-----+-----+------------+----------------------+--------------+
 

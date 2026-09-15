@@ -1,0 +1,164 @@
+
+
+================================================================
+== Vitis HLS Report for 'elu'
+================================================================
+* Date:           Mon Sep 14 23:41:41 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        HLS_OutputMoE_Run11
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p_CIV-figd2104-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.028 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        5|        5|  50.000 ns|  50.000 ns|    5|    5|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.28>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%x_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %x" [src/moe.cpp:543]   --->   Operation 7 'read' 'x_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [4/4] (6.28ns)   --->   "%tmp = fexp i32 @llvm.exp.f32, i32 %x_read" [src/moe.cpp:548]   --->   Operation 8 'fexp' 'tmp' <Predicate = true> <Delay = 6.28> <CoreInst = "FExp_fulldsp">   --->   Core 23 'FExp_fulldsp' <Latency = 3> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 6.28>
+ST_2 : Operation 9 [3/4] (6.28ns)   --->   "%tmp = fexp i32 @llvm.exp.f32, i32 %x_read" [src/moe.cpp:548]   --->   Operation 9 'fexp' 'tmp' <Predicate = true> <Delay = 6.28> <CoreInst = "FExp_fulldsp">   --->   Core 23 'FExp_fulldsp' <Latency = 3> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.28>
+ST_3 : Operation 10 [2/4] (6.28ns)   --->   "%tmp = fexp i32 @llvm.exp.f32, i32 %x_read" [src/moe.cpp:548]   --->   Operation 10 'fexp' 'tmp' <Predicate = true> <Delay = 6.28> <CoreInst = "FExp_fulldsp">   --->   Core 23 'FExp_fulldsp' <Latency = 3> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.28>
+ST_4 : Operation 11 [1/4] (6.28ns)   --->   "%tmp = fexp i32 @llvm.exp.f32, i32 %x_read" [src/moe.cpp:548]   --->   Operation 11 'fexp' 'tmp' <Predicate = true> <Delay = 6.28> <CoreInst = "FExp_fulldsp">   --->   Core 23 'FExp_fulldsp' <Latency = 3> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.04>
+ST_5 : Operation 12 [2/2] (6.04ns)   --->   "%sub = fadd i32 %tmp, i32 -1" [src/moe.cpp:548]   --->   Operation 12 'fadd' 'sub' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 7.02>
+ST_6 : Operation 13 [1/1] (0.00ns)   --->   "%bitcast_ln545 = bitcast i32 %x_read" [src/moe.cpp:545]   --->   Operation 13 'bitcast' 'bitcast_ln545' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 14 [1/1] (0.00ns)   --->   "%tmp_9 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln545, i32 23, i32 30" [src/moe.cpp:545]   --->   Operation 14 'partselect' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 15 [1/1] (0.00ns)   --->   "%trunc_ln545 = trunc i32 %bitcast_ln545" [src/moe.cpp:545]   --->   Operation 15 'trunc' 'trunc_ln545' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 16 [1/1] (0.65ns)   --->   "%icmp_ln545 = icmp_ne  i8 %tmp_9, i8 255" [src/moe.cpp:545]   --->   Operation 16 'icmp' 'icmp_ln545' <Predicate = true> <Delay = 0.65> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 17 [1/1] (0.75ns)   --->   "%icmp_ln545_1 = icmp_eq  i23 %trunc_ln545, i23 0" [src/moe.cpp:545]   --->   Operation 17 'icmp' 'icmp_ln545_1' <Predicate = true> <Delay = 0.75> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 18 [1/1] (0.00ns) (grouped into LUT with out node select_ln545)   --->   "%or_ln545 = or i1 %icmp_ln545_1, i1 %icmp_ln545" [src/moe.cpp:545]   --->   Operation 18 'or' 'or_ln545' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.11> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 19 [1/1] (6.81ns)   --->   "%tmp_10 = fcmp_oge  i32 %x_read, i32 0" [src/moe.cpp:545]   --->   Operation 19 'fcmp' 'tmp_10' <Predicate = true> <Delay = 6.81> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 0> <II = 1> <Delay = 6.81> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 20 [1/1] (0.00ns) (grouped into LUT with out node select_ln545)   --->   "%and_ln545 = and i1 %or_ln545, i1 %tmp_10" [src/moe.cpp:545]   --->   Operation 20 'and' 'and_ln545' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.11> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 21 [1/2] (6.04ns)   --->   "%sub = fadd i32 %tmp, i32 -1" [src/moe.cpp:548]   --->   Operation 21 'fadd' 'sub' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 22 [1/1] (0.21ns) (out node of the LUT)   --->   "%select_ln545 = select i1 %and_ln545, i32 %x_read, i32 %sub" [src/moe.cpp:545]   --->   Operation 22 'select' 'select_ln545' <Predicate = true> <Delay = 0.21> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 23 [1/1] (0.00ns)   --->   "%ret_ln549 = ret i32 %select_ln545" [src/moe.cpp:549]   --->   Operation 23 'ret' 'ret_ln549' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 6.282ns
+The critical path consists of the following:
+	wire read operation ('x', src/moe.cpp:543) on port 'x' (src/moe.cpp:543) [2]  (0.000 ns)
+	'fexp' operation 32 bit ('tmp', src/moe.cpp:548) [11]  (6.282 ns)
+
+ <State 2>: 6.282ns
+The critical path consists of the following:
+	'fexp' operation 32 bit ('tmp', src/moe.cpp:548) [11]  (6.282 ns)
+
+ <State 3>: 6.282ns
+The critical path consists of the following:
+	'fexp' operation 32 bit ('tmp', src/moe.cpp:548) [11]  (6.282 ns)
+
+ <State 4>: 6.282ns
+The critical path consists of the following:
+	'fexp' operation 32 bit ('tmp', src/moe.cpp:548) [11]  (6.282 ns)
+
+ <State 5>: 6.047ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('sub', src/moe.cpp:548) [12]  (6.047 ns)
+
+ <State 6>: 7.028ns
+The critical path consists of the following:
+	'fcmp' operation 1 bit ('tmp_10', src/moe.cpp:545) [9]  (6.815 ns)
+	'and' operation 1 bit ('and_ln545', src/moe.cpp:545) [10]  (0.000 ns)
+	'select' operation 32 bit ('select_ln545', src/moe.cpp:545) [13]  (0.213 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

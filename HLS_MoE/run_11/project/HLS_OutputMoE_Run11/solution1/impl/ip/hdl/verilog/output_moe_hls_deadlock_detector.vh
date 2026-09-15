@@ -44,107 +44,27 @@
     wire token_clear;
     reg [1:0] origin;
 
-    reg ap_done_reg_0;// for module grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2326_proc_U0
+    reg ap_done_reg_0;// for module grp_run_parallel_engines_fu_377.run_parallel_engines_Block_entry2326_proc_U0
     always @ (negedge dl_reset or posedge dl_clock) begin
         if (~dl_reset) begin
             ap_done_reg_0 <= 'b0;
         end
         else begin
-            ap_done_reg_0 <= grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2326_proc_U0.ap_done & ~grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2326_proc_U0.ap_continue;
+            ap_done_reg_0 <= grp_run_parallel_engines_fu_377.run_parallel_engines_Block_entry2326_proc_U0.ap_done & ~grp_run_parallel_engines_fu_377.run_parallel_engines_Block_entry2326_proc_U0.ap_continue;
         end
     end
 
-    reg ap_done_reg_1;// for module grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2327_proc_U0
+    reg ap_done_reg_1;// for module grp_run_parallel_engines_fu_377.run_parallel_engines_Block_entry2327_proc_U0
     always @ (negedge dl_reset or posedge dl_clock) begin
         if (~dl_reset) begin
             ap_done_reg_1 <= 'b0;
         end
         else begin
-            ap_done_reg_1 <= grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2327_proc_U0.ap_done & ~grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2327_proc_U0.ap_continue;
+            ap_done_reg_1 <= grp_run_parallel_engines_fu_377.run_parallel_engines_Block_entry2327_proc_U0.ap_done & ~grp_run_parallel_engines_fu_377.run_parallel_engines_Block_entry2327_proc_U0.ap_continue;
         end
     end
 
-    reg ap_done_reg_2;// for module grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2328_proc_U0
-    always @ (negedge dl_reset or posedge dl_clock) begin
-        if (~dl_reset) begin
-            ap_done_reg_2 <= 'b0;
-        end
-        else begin
-            ap_done_reg_2 <= grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2328_proc_U0.ap_done & ~grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2328_proc_U0.ap_continue;
-        end
-    end
-
-    reg ap_done_reg_3;// for module grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2329_proc_U0
-    always @ (negedge dl_reset or posedge dl_clock) begin
-        if (~dl_reset) begin
-            ap_done_reg_3 <= 'b0;
-        end
-        else begin
-            ap_done_reg_3 <= grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2329_proc_U0.ap_done & ~grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2329_proc_U0.ap_continue;
-        end
-    end
-
-    reg ap_done_reg_4;// for module grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2330_proc_U0
-    always @ (negedge dl_reset or posedge dl_clock) begin
-        if (~dl_reset) begin
-            ap_done_reg_4 <= 'b0;
-        end
-        else begin
-            ap_done_reg_4 <= grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2330_proc_U0.ap_done & ~grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2330_proc_U0.ap_continue;
-        end
-    end
-
-    reg ap_done_reg_5;// for module grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2331_proc_U0
-    always @ (negedge dl_reset or posedge dl_clock) begin
-        if (~dl_reset) begin
-            ap_done_reg_5 <= 'b0;
-        end
-        else begin
-            ap_done_reg_5 <= grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2331_proc_U0.ap_done & ~grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2331_proc_U0.ap_continue;
-        end
-    end
-
-    reg ap_done_reg_6;// for module grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2332_proc_U0
-    always @ (negedge dl_reset or posedge dl_clock) begin
-        if (~dl_reset) begin
-            ap_done_reg_6 <= 'b0;
-        end
-        else begin
-            ap_done_reg_6 <= grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2332_proc_U0.ap_done & ~grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2332_proc_U0.ap_continue;
-        end
-    end
-
-    reg ap_done_reg_7;// for module grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2333_proc_U0
-    always @ (negedge dl_reset or posedge dl_clock) begin
-        if (~dl_reset) begin
-            ap_done_reg_7 <= 'b0;
-        end
-        else begin
-            ap_done_reg_7 <= grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2333_proc_U0.ap_done & ~grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2333_proc_U0.ap_continue;
-        end
-    end
-
-    reg ap_done_reg_8;// for module grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2334_proc_U0
-    always @ (negedge dl_reset or posedge dl_clock) begin
-        if (~dl_reset) begin
-            ap_done_reg_8 <= 'b0;
-        end
-        else begin
-            ap_done_reg_8 <= grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2334_proc_U0.ap_done & ~grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2334_proc_U0.ap_continue;
-        end
-    end
-
-    reg ap_done_reg_9;// for module grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2335_proc_U0
-    always @ (negedge dl_reset or posedge dl_clock) begin
-        if (~dl_reset) begin
-            ap_done_reg_9 <= 'b0;
-        end
-        else begin
-            ap_done_reg_9 <= grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2335_proc_U0.ap_done & ~grp_run_parallel_engines_fu_2294.run_parallel_engines_Block_entry2335_proc_U0.ap_continue;
-        end
-    end
-
-    // Process: grp_run_parallel_engines_fu_2294.expert_engine_A_U0
+    // Process: grp_run_parallel_engines_fu_377.expert_engine_A_U0
     output_moe_hls_deadlock_detect_unit #(2, 0, 1, 1) output_moe_hls_deadlock_detect_unit_0 (
         .reset(dl_reset),
         .clock(dl_clock),
@@ -164,7 +84,7 @@
     assign proc_0_data_PIPO_blk[0] = 1'b0;
     assign proc_0_start_FIFO_blk[0] = 1'b0;
     assign proc_0_TLF_FIFO_blk[0] = 1'b0;
-    assign proc_0_input_sync_blk[0] = 1'b0 | (grp_run_parallel_engines_fu_2294.ap_sync_expert_engine_A_U0_ap_ready & grp_run_parallel_engines_fu_2294.expert_engine_A_U0.ap_idle & ~grp_run_parallel_engines_fu_2294.ap_sync_expert_engine_B_U0_ap_ready);
+    assign proc_0_input_sync_blk[0] = 1'b0 | (grp_run_parallel_engines_fu_377.ap_sync_expert_engine_A_U0_ap_ready & grp_run_parallel_engines_fu_377.expert_engine_A_U0.ap_idle & ~grp_run_parallel_engines_fu_377.ap_sync_expert_engine_B_U0_ap_ready);
     assign proc_0_output_sync_blk[0] = 1'b0;
     assign proc_dep_vld_vec_0[0] = dl_detect_out ? proc_dep_vld_vec_0_reg[0] : (proc_0_data_FIFO_blk[0] | proc_0_data_PIPO_blk[0] | proc_0_start_FIFO_blk[0] | proc_0_TLF_FIFO_blk[0] | proc_0_input_sync_blk[0] | proc_0_output_sync_blk[0]);
     always @ (negedge dl_reset or posedge dl_clock) begin
@@ -182,7 +102,7 @@
     assign dep_chan_data_0_1 = out_chan_dep_data_0;
     assign token_0_1 = token_out_vec_0[0];
 
-    // Process: grp_run_parallel_engines_fu_2294.expert_engine_B_U0
+    // Process: grp_run_parallel_engines_fu_377.expert_engine_B_U0
     output_moe_hls_deadlock_detect_unit #(2, 1, 1, 1) output_moe_hls_deadlock_detect_unit_1 (
         .reset(dl_reset),
         .clock(dl_clock),
@@ -202,7 +122,7 @@
     assign proc_1_data_PIPO_blk[0] = 1'b0;
     assign proc_1_start_FIFO_blk[0] = 1'b0;
     assign proc_1_TLF_FIFO_blk[0] = 1'b0;
-    assign proc_1_input_sync_blk[0] = 1'b0 | (grp_run_parallel_engines_fu_2294.ap_sync_expert_engine_B_U0_ap_ready & grp_run_parallel_engines_fu_2294.expert_engine_B_U0.ap_idle & ~grp_run_parallel_engines_fu_2294.ap_sync_expert_engine_A_U0_ap_ready);
+    assign proc_1_input_sync_blk[0] = 1'b0 | (grp_run_parallel_engines_fu_377.ap_sync_expert_engine_B_U0_ap_ready & grp_run_parallel_engines_fu_377.expert_engine_B_U0.ap_idle & ~grp_run_parallel_engines_fu_377.ap_sync_expert_engine_A_U0_ap_ready);
     assign proc_1_output_sync_blk[0] = 1'b0;
     assign proc_dep_vld_vec_1[0] = dl_detect_out ? proc_dep_vld_vec_1_reg[0] : (proc_1_data_FIFO_blk[0] | proc_1_data_PIPO_blk[0] | proc_1_start_FIFO_blk[0] | proc_1_TLF_FIFO_blk[0] | proc_1_input_sync_blk[0] | proc_1_output_sync_blk[0]);
     always @ (negedge dl_reset or posedge dl_clock) begin

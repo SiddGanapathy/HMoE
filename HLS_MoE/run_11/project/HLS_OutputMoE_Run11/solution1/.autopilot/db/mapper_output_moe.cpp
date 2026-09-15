@@ -242,8 +242,8 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
-extern "C" void output_moe(Byte<4>*, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *);
-extern "C" void apatb_output_moe_hw(volatile void * __xlx_apatb_param_input_r, volatile void * __xlx_apatb_param_output_0, volatile void * __xlx_apatb_param_output_1, volatile void * __xlx_apatb_param_output_2, volatile void * __xlx_apatb_param_output_3, volatile void * __xlx_apatb_param_output_4, volatile void * __xlx_apatb_param_gates_0, volatile void * __xlx_apatb_param_gates_1, volatile void * __xlx_apatb_param_gates_2, volatile void * __xlx_apatb_param_gates_3) {
+extern "C" void output_moe(Byte<4>*, Byte<4>*, Byte<4>*);
+extern "C" void apatb_output_moe_hw(volatile void * __xlx_apatb_param_input_r, volatile void * __xlx_apatb_param_output_r, volatile void * __xlx_apatb_param_gates) {
 using hls::sim::createStream;
   // Collect __xlx_input_r__tmp_vec
 std::vector<Byte<4>> __xlx_input_r__tmp_vec;
@@ -253,10 +253,34 @@ __xlx_input_r__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_input_r)[i]);
   int __xlx_size_param_input_r = 128;
   int __xlx_offset_param_input_r = 0;
   int __xlx_offset_byte_param_input_r = 0*4;
+  // Collect __xlx_output_r__tmp_vec
+std::vector<Byte<4>> __xlx_output_r__tmp_vec;
+for (size_t i = 0; i < 5; ++i){
+__xlx_output_r__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_output_r)[i]);
+}
+  int __xlx_size_param_output_r = 5;
+  int __xlx_offset_param_output_r = 0;
+  int __xlx_offset_byte_param_output_r = 0*4;
+  // Collect __xlx_gates__tmp_vec
+std::vector<Byte<4>> __xlx_gates__tmp_vec;
+for (size_t i = 0; i < 4; ++i){
+__xlx_gates__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_gates)[i]);
+}
+  int __xlx_size_param_gates = 4;
+  int __xlx_offset_param_gates = 0;
+  int __xlx_offset_byte_param_gates = 0*4;
   // DUT call
-  output_moe(__xlx_input_r__tmp_vec.data(), __xlx_apatb_param_output_0, __xlx_apatb_param_output_1, __xlx_apatb_param_output_2, __xlx_apatb_param_output_3, __xlx_apatb_param_output_4, __xlx_apatb_param_gates_0, __xlx_apatb_param_gates_1, __xlx_apatb_param_gates_2, __xlx_apatb_param_gates_3);
+  output_moe(__xlx_input_r__tmp_vec.data(), __xlx_output_r__tmp_vec.data(), __xlx_gates__tmp_vec.data());
 // print __xlx_apatb_param_input_r
 for (size_t i = 0; i < __xlx_size_param_input_r; ++i) {
 ((Byte<4>*)__xlx_apatb_param_input_r)[i] = __xlx_input_r__tmp_vec[__xlx_offset_param_input_r+i];
+}
+// print __xlx_apatb_param_output_r
+for (size_t i = 0; i < __xlx_size_param_output_r; ++i) {
+((Byte<4>*)__xlx_apatb_param_output_r)[i] = __xlx_output_r__tmp_vec[__xlx_offset_param_output_r+i];
+}
+// print __xlx_apatb_param_gates
+for (size_t i = 0; i < __xlx_size_param_gates; ++i) {
+((Byte<4>*)__xlx_apatb_param_gates)[i] = __xlx_gates__tmp_vec[__xlx_offset_param_gates+i];
 }
 }

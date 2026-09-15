@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'expert_engine_A'" level="0">
-<item name = "Date">Sun Sep 13 20:13:28 2026
+<item name = "Date">Mon Sep 14 23:43:08 2026
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">HLS_OutputMoE_Run11</item>
@@ -24,27 +24,83 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">47039, 47039, 0.470 ms, 0.470 ms, 47039, 47039, no</column>
+<column name="">45805, 45805, 0.458 ms, 0.458 ms, 45805, 45805, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_generic_mlp_head29_fu_1100">generic_mlp_head29, 4702, 4702, 47.020 us, 47.020 us, 4702, 4702, no</column>
-<column name="grp_generic_mlp_head30_fu_1212">generic_mlp_head30, 4702, 4702, 47.020 us, 47.020 us, 4702, 4702, no</column>
-<column name="grp_generic_mlp_head31_fu_1324">generic_mlp_head31, 4702, 4702, 47.020 us, 47.020 us, 4702, 4702, no</column>
-<column name="grp_generic_mlp_head32_fu_1436">generic_mlp_head32, 4702, 4702, 47.020 us, 47.020 us, 4702, 4702, no</column>
-<column name="grp_generic_mlp_head33_fu_1548">generic_mlp_head33, 4702, 4702, 47.020 us, 47.020 us, 4702, 4702, no</column>
-<column name="grp_generic_mlp_head34_fu_1660">generic_mlp_head34, 4702, 4702, 47.020 us, 47.020 us, 4702, 4702, no</column>
-<column name="grp_generic_mlp_head35_fu_1772">generic_mlp_head35, 4702, 4702, 47.020 us, 47.020 us, 4702, 4702, no</column>
-<column name="grp_generic_mlp_head36_fu_1884">generic_mlp_head36, 4702, 4702, 47.020 us, 47.020 us, 4702, 4702, no</column>
-<column name="grp_generic_mlp_head37_fu_1996">generic_mlp_head37, 4702, 4702, 47.020 us, 47.020 us, 4702, 4702, no</column>
-<column name="grp_generic_mlp_head38_fu_2108">generic_mlp_head38, 4702, 4702, 47.020 us, 47.020 us, 4702, 4702, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_2_fu_17192">expert_engine_A_Pipeline_VITIS_LOOP_598_2, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_elu_fu_17204">elu, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_elu_fu_17209">elu, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_elu_fu_17214">elu, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_elu_fu_17219">elu, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_elu_fu_17224">elu, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_elu_fu_17229">elu, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_elu_fu_17234">elu, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_elu_fu_17239">elu, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_elu_fu_17244">elu, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_elu_fu_17249">elu, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_elu_fu_17254">elu, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_elu_fu_17259">elu, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_elu_fu_17264">elu, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_elu_fu_17269">elu, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_elu_fu_17274">elu, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_elu_fu_17279">elu, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_243_fu_17284">expert_engine_A_Pipeline_VITIS_LOOP_598_243, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_244_fu_17296">expert_engine_A_Pipeline_VITIS_LOOP_598_244, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_245_fu_17308">expert_engine_A_Pipeline_VITIS_LOOP_598_245, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_246_fu_17320">expert_engine_A_Pipeline_VITIS_LOOP_598_246, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_247_fu_17332">expert_engine_A_Pipeline_VITIS_LOOP_598_247, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_248_fu_17344">expert_engine_A_Pipeline_VITIS_LOOP_598_248, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_249_fu_17356">expert_engine_A_Pipeline_VITIS_LOOP_598_249, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_250_fu_17368">expert_engine_A_Pipeline_VITIS_LOOP_598_250, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_251_fu_17380">expert_engine_A_Pipeline_VITIS_LOOP_598_251, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_252_fu_17392">expert_engine_A_Pipeline_VITIS_LOOP_598_252, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_253_fu_17404">expert_engine_A_Pipeline_VITIS_LOOP_598_253, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_254_fu_17416">expert_engine_A_Pipeline_VITIS_LOOP_598_254, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_255_fu_17428">expert_engine_A_Pipeline_VITIS_LOOP_598_255, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_256_fu_17440">expert_engine_A_Pipeline_VITIS_LOOP_598_256, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_257_fu_17452">expert_engine_A_Pipeline_VITIS_LOOP_598_257, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_258_fu_17464">expert_engine_A_Pipeline_VITIS_LOOP_598_258, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_259_fu_17476">expert_engine_A_Pipeline_VITIS_LOOP_598_259, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_260_fu_17488">expert_engine_A_Pipeline_VITIS_LOOP_598_260, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_261_fu_17500">expert_engine_A_Pipeline_VITIS_LOOP_598_261, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_262_fu_17512">expert_engine_A_Pipeline_VITIS_LOOP_598_262, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_263_fu_17524">expert_engine_A_Pipeline_VITIS_LOOP_598_263, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_264_fu_17536">expert_engine_A_Pipeline_VITIS_LOOP_598_264, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_265_fu_17548">expert_engine_A_Pipeline_VITIS_LOOP_598_265, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_266_fu_17560">expert_engine_A_Pipeline_VITIS_LOOP_598_266, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_267_fu_17572">expert_engine_A_Pipeline_VITIS_LOOP_598_267, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_268_fu_17584">expert_engine_A_Pipeline_VITIS_LOOP_598_268, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_269_fu_17596">expert_engine_A_Pipeline_VITIS_LOOP_598_269, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_270_fu_17608">expert_engine_A_Pipeline_VITIS_LOOP_598_270, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_271_fu_17620">expert_engine_A_Pipeline_VITIS_LOOP_598_271, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_272_fu_17632">expert_engine_A_Pipeline_VITIS_LOOP_598_272, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_273_fu_17644">expert_engine_A_Pipeline_VITIS_LOOP_598_273, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_274_fu_17656">expert_engine_A_Pipeline_VITIS_LOOP_598_274, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_275_fu_17668">expert_engine_A_Pipeline_VITIS_LOOP_598_275, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_276_fu_17680">expert_engine_A_Pipeline_VITIS_LOOP_598_276, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_277_fu_17692">expert_engine_A_Pipeline_VITIS_LOOP_598_277, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_278_fu_17704">expert_engine_A_Pipeline_VITIS_LOOP_598_278, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_279_fu_17716">expert_engine_A_Pipeline_VITIS_LOOP_598_279, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_280_fu_17728">expert_engine_A_Pipeline_VITIS_LOOP_598_280, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
+<column name="grp_expert_engine_A_Pipeline_VITIS_LOOP_598_281_fu_17740">expert_engine_A_Pipeline_VITIS_LOOP_598_281, 133, 133, 1.330 us, 1.330 us, 133, 133, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
 </table>
 </item>
 </section>

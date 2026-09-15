@@ -1,51 +1,67 @@
 {
   "0": {
-    "basicblocks": 15,
-    "calls": "3",
+    "basicblocks": 9,
+    "calls": "4",
     "file": "moe.cpp",
-    "fileloc": 1041,
-    "instructions": 82,
+    "fileloc": 976,
+    "instructions": 179,
     "loads": {
-      "G": 2,
-      "L": 4,
-      "T": 3
+      "G": 4,
+      "L": 20,
+      "T": 4
     },
     "name": "output_moe",
     "stores": {
-      "L": 1,
-      "T": 3
+      "T": 9
     },
-    "total_instructions": 2143
+    "total_instructions": 33260
   },
   "1": {
-    "basicblocks": 15,
-    "calls": "",
+    "basicblocks": 101,
+    "calls": "2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2",
     "file": "moe.cpp",
-    "fileloc": 692,
-    "instructions": 96,
+    "fileloc": 854,
+    "instructions": 15091,
     "loads": {
-      "L": 12
+      "G": 80,
+      "L": 370
     },
-    "name": "generic_mlp_head",
+    "name": "expert_engine_B",
     "stores": {
-      "L": 4
+      "L": 210
     },
-    "total_instructions": 96
+    "total_instructions": 16491
   },
   "2": {
     "basicblocks": 1,
-    "calls": "1 1 1 1 1 1 1 1 1 1",
+    "calls": "",
     "file": "moe.cpp",
-    "fileloc": 959,
-    "instructions": 21,
-    "name": "expert_engine_B",
-    "total_instructions": 981
+    "fileloc": 543,
+    "instructions": 5,
+    "name": "elu",
+    "total_instructions": 5
   },
   "3": {
-    "basicblocks": 1,
-    "calls": "4 2",
+    "basicblocks": 101,
+    "calls": "2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2",
     "file": "moe.cpp",
-    "fileloc": 1016,
+    "fileloc": 779,
+    "instructions": 15091,
+    "loads": {
+      "G": 80,
+      "L": 370
+    },
+    "name": "expert_engine_A",
+    "stores": {
+      "L": 210
+    },
+    "total_instructions": 16491
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "3 1",
+    "file": "moe.cpp",
+    "fileloc": 933,
     "instructions": 99,
     "loads": {
       "L": 20
@@ -54,15 +70,6 @@
     "stores": {
       "L": 20
     },
-    "total_instructions": 2061
-  },
-  "4": {
-    "basicblocks": 1,
-    "calls": "1 1 1 1 1 1 1 1 1 1",
-    "file": "moe.cpp",
-    "fileloc": 902,
-    "instructions": 21,
-    "name": "expert_engine_A",
-    "total_instructions": 981
+    "total_instructions": 33081
   }
 }

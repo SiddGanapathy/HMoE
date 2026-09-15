@@ -1,8 +1,8 @@
 # This script segment is generated automatically by AutoPilot
 
-set name output_moe_fdiv_32ns_32ns_32_6_no_dsp_1
+set name output_moe_faddfsub_32ns_32ns_32_2_full_dsp_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fdiv} IMPL {fabric} LATENCY 5 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fsub} IMPL {fulldsp} LATENCY 1 ALLOW_PRAGMA 1
 }
 
 
@@ -12,25 +12,9 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set name output_moe_faddfsub_32ns_32ns_32_2_full_dsp_1
+set name output_moe_fdiv_32ns_32ns_32_6_no_dsp_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 1 ALLOW_PRAGMA 1
-}
-
-
-set name output_moe_fadd_32ns_32ns_32_2_full_dsp_1
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 1 ALLOW_PRAGMA 1
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler output_moe_gate_bias_ROM_AUTO_1R BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler output_moe_expert_output_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fdiv} IMPL {fabric} LATENCY 5 ALLOW_PRAGMA 1
 }
 
 
@@ -46,7 +30,7 @@ set axilite_register_dict [dict create]
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 6555 \
+    id 816 \
     name input_r \
     reset_level 1 \
     sync_rst true \
@@ -61,140 +45,43 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 }
 
 
-# Direct connection:
+# XIL_BRAM:
 if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 6556 \
-    name output_0 \
-    type other \
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 817 \
+    name output_r \
+    reset_level 1 \
+    sync_rst true \
     dir O \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_output_0 \
+    corename output_r \
     op interface \
-    ports { output_0 { O 32 vector } output_0_ap_vld { O 1 bit } } \
+    ports { output_r_address0 { O 3 vector } output_r_ce0 { O 1 bit } output_r_we0 { O 1 bit } output_r_d0 { O 32 vector } output_r_address1 { O 3 vector } output_r_ce1 { O 1 bit } output_r_we1 { O 1 bit } output_r_d1 { O 32 vector } } \
 } "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'output_r'"
+}
 }
 
-# Direct connection:
+
+# XIL_BRAM:
 if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 6557 \
-    name output_1 \
-    type other \
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 818 \
+    name gates \
+    reset_level 1 \
+    sync_rst true \
     dir O \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_output_1 \
+    corename gates \
     op interface \
-    ports { output_1 { O 32 vector } output_1_ap_vld { O 1 bit } } \
+    ports { gates_address0 { O 2 vector } gates_ce0 { O 1 bit } gates_we0 { O 1 bit } gates_d0 { O 32 vector } gates_address1 { O 2 vector } gates_ce1 { O 1 bit } gates_we1 { O 1 bit } gates_d1 { O 32 vector } } \
 } "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'gates'"
+}
 }
 
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 6558 \
-    name output_2 \
-    type other \
-    dir O \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_output_2 \
-    op interface \
-    ports { output_2 { O 32 vector } output_2_ap_vld { O 1 bit } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 6559 \
-    name output_3 \
-    type other \
-    dir O \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_output_3 \
-    op interface \
-    ports { output_3 { O 32 vector } output_3_ap_vld { O 1 bit } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 6560 \
-    name output_4 \
-    type other \
-    dir O \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_output_4 \
-    op interface \
-    ports { output_4 { O 32 vector } output_4_ap_vld { O 1 bit } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 6561 \
-    name gates_0 \
-    type other \
-    dir IO \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_gates_0 \
-    op interface \
-    ports { gates_0_i { I 32 vector } gates_0_o { O 32 vector } gates_0_o_ap_vld { O 1 bit } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 6562 \
-    name gates_1 \
-    type other \
-    dir IO \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_gates_1 \
-    op interface \
-    ports { gates_1_i { I 32 vector } gates_1_o { O 32 vector } gates_1_o_ap_vld { O 1 bit } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 6563 \
-    name gates_2 \
-    type other \
-    dir IO \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_gates_2 \
-    op interface \
-    ports { gates_2_i { I 32 vector } gates_2_o { O 32 vector } gates_2_o_ap_vld { O 1 bit } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 6564 \
-    name gates_3 \
-    type other \
-    dir IO \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_gates_3 \
-    op interface \
-    ports { gates_3_i { I 32 vector } gates_3_o { O 32 vector } gates_3_o_ap_vld { O 1 bit } } \
-} "
-}
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {

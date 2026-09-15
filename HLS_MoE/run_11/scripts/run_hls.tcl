@@ -4,6 +4,7 @@ set_top output_moe
 
 add_files src/moe.cpp
 add_files src/moe.h
+
 add_files -tb tb/moe_tb.cpp
 
 open_solution "solution1" -flow_target vivado

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'expert_engine_A'" level="0">
-<item name = "Date">Sun Sep 13 20:13:28 2026
+<item name = "Date">Mon Sep 14 23:42:29 2026
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">HLS_OutputMoE_Run11</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">47039, 47039, 0.470 ms, 0.470 ms, 47039, 47039, no</column>
+<column name="">45805, 45805, 0.458 ms, 0.458 ms, 45805, 45805, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,6 +35,16 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
+<column name="- VITIS_LOOP_592_1">4392, 4392, 549, -, -, 8, no</column>
 </table>
 </item>
 </section>

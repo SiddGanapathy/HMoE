@@ -51,42 +51,42 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_0_U}
+	::AP::rtl_comp_handler output_moe_fifo_w32_d3_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_0_U}
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_1_U}
+	::AP::rtl_comp_handler output_moe_fifo_w32_d3_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_1_U}
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_0_1_U}
+	::AP::rtl_comp_handler output_moe_fifo_w32_d3_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_0_1_U}
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_1_1_U}
+	::AP::rtl_comp_handler output_moe_fifo_w32_d3_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_1_1_U}
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_0_2_U}
+	::AP::rtl_comp_handler output_moe_fifo_w32_d3_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_0_2_U}
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_1_2_U}
+	::AP::rtl_comp_handler output_moe_fifo_w32_d3_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_1_2_U}
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_0_3_U}
+	::AP::rtl_comp_handler output_moe_fifo_w32_d3_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_0_3_U}
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_1_3_U}
+	::AP::rtl_comp_handler output_moe_fifo_w32_d3_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_1_3_U}
 }
 
 
@@ -111,32 +111,12 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_0_load_loc_channel_U}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_1_load_loc_channel_U}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {a_out_0_1_load_loc_channel_U}
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {a_out_1_1_load_loc_channel_U}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_0_1_load_loc_channel_U}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_1_1_load_loc_channel_U}
 }
 
 
@@ -151,32 +131,12 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_0_2_load_loc_channel_U}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_1_2_load_loc_channel_U}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {a_out_0_3_load_loc_channel_U}
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {a_out_1_3_load_loc_channel_U}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_0_3_load_loc_channel_U}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler output_moe_fifo_w32_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {b_out_1_3_load_loc_channel_U}
 }
 
 
@@ -201,7 +161,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 6519 \
+    id 775 \
     name input_r \
     reset_level 1 \
     sync_rst true \
@@ -216,81 +176,305 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 }
 
 
-# XIL_BRAM:
+# Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 6520 \
-    name out_0 \
+eval "cg_default_interface_gen_dc { \
+    id 776 \
+    name expert_outputs_0_0 \
+    type other \
+    dir O \
     reset_level 1 \
     sync_rst true \
-    dir O \
-    corename out_0 \
+    corename dc_expert_outputs_0_0 \
     op interface \
-    ports { out_0_address0 { O 3 vector } out_0_ce0 { O 1 bit } out_0_d0 { O 32 vector } out_0_q0 { I 32 vector } out_0_we0 { O 1 bit } out_0_address1 { O 3 vector } out_0_ce1 { O 1 bit } out_0_d1 { O 32 vector } out_0_q1 { I 32 vector } out_0_we1 { O 1 bit } } \
+    ports { expert_outputs_0_0 { O 32 vector } expert_outputs_0_0_ap_vld { O 1 bit } } \
 } "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_0'"
-}
 }
 
-
-# XIL_BRAM:
+# Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 6521 \
-    name out_1 \
+eval "cg_default_interface_gen_dc { \
+    id 777 \
+    name expert_outputs_0_1 \
+    type other \
+    dir O \
     reset_level 1 \
     sync_rst true \
-    dir O \
-    corename out_1 \
+    corename dc_expert_outputs_0_1 \
     op interface \
-    ports { out_1_address0 { O 3 vector } out_1_ce0 { O 1 bit } out_1_d0 { O 32 vector } out_1_q0 { I 32 vector } out_1_we0 { O 1 bit } out_1_address1 { O 3 vector } out_1_ce1 { O 1 bit } out_1_d1 { O 32 vector } out_1_q1 { I 32 vector } out_1_we1 { O 1 bit } } \
+    ports { expert_outputs_0_1 { O 32 vector } expert_outputs_0_1_ap_vld { O 1 bit } } \
 } "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_1'"
-}
 }
 
-
-# XIL_BRAM:
+# Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 6522 \
-    name out_2 \
+eval "cg_default_interface_gen_dc { \
+    id 778 \
+    name expert_outputs_0_2 \
+    type other \
+    dir O \
     reset_level 1 \
     sync_rst true \
-    dir O \
-    corename out_2 \
+    corename dc_expert_outputs_0_2 \
     op interface \
-    ports { out_2_address0 { O 3 vector } out_2_ce0 { O 1 bit } out_2_d0 { O 32 vector } out_2_q0 { I 32 vector } out_2_we0 { O 1 bit } out_2_address1 { O 3 vector } out_2_ce1 { O 1 bit } out_2_d1 { O 32 vector } out_2_q1 { I 32 vector } out_2_we1 { O 1 bit } } \
+    ports { expert_outputs_0_2 { O 32 vector } expert_outputs_0_2_ap_vld { O 1 bit } } \
 } "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_2'"
-}
 }
 
-
-# XIL_BRAM:
+# Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 6523 \
-    name out_3 \
+eval "cg_default_interface_gen_dc { \
+    id 779 \
+    name expert_outputs_0_3 \
+    type other \
+    dir O \
     reset_level 1 \
     sync_rst true \
-    dir O \
-    corename out_3 \
+    corename dc_expert_outputs_0_3 \
     op interface \
-    ports { out_3_address0 { O 3 vector } out_3_ce0 { O 1 bit } out_3_d0 { O 32 vector } out_3_q0 { I 32 vector } out_3_we0 { O 1 bit } out_3_address1 { O 3 vector } out_3_ce1 { O 1 bit } out_3_d1 { O 32 vector } out_3_q1 { I 32 vector } out_3_we1 { O 1 bit } } \
+    ports { expert_outputs_0_3 { O 32 vector } expert_outputs_0_3_ap_vld { O 1 bit } } \
 } "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_3'"
-}
 }
 
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 780 \
+    name expert_outputs_0_4 \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_expert_outputs_0_4 \
+    op interface \
+    ports { expert_outputs_0_4 { O 32 vector } expert_outputs_0_4_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 781 \
+    name expert_outputs_1_0 \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_expert_outputs_1_0 \
+    op interface \
+    ports { expert_outputs_1_0 { O 32 vector } expert_outputs_1_0_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 782 \
+    name expert_outputs_1_1 \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_expert_outputs_1_1 \
+    op interface \
+    ports { expert_outputs_1_1 { O 32 vector } expert_outputs_1_1_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 783 \
+    name expert_outputs_1_2 \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_expert_outputs_1_2 \
+    op interface \
+    ports { expert_outputs_1_2 { O 32 vector } expert_outputs_1_2_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 784 \
+    name expert_outputs_1_3 \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_expert_outputs_1_3 \
+    op interface \
+    ports { expert_outputs_1_3 { O 32 vector } expert_outputs_1_3_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 785 \
+    name expert_outputs_1_4 \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_expert_outputs_1_4 \
+    op interface \
+    ports { expert_outputs_1_4 { O 32 vector } expert_outputs_1_4_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 786 \
+    name expert_outputs_2_0 \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_expert_outputs_2_0 \
+    op interface \
+    ports { expert_outputs_2_0 { O 32 vector } expert_outputs_2_0_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 787 \
+    name expert_outputs_2_1 \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_expert_outputs_2_1 \
+    op interface \
+    ports { expert_outputs_2_1 { O 32 vector } expert_outputs_2_1_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 788 \
+    name expert_outputs_2_2 \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_expert_outputs_2_2 \
+    op interface \
+    ports { expert_outputs_2_2 { O 32 vector } expert_outputs_2_2_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 789 \
+    name expert_outputs_2_3 \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_expert_outputs_2_3 \
+    op interface \
+    ports { expert_outputs_2_3 { O 32 vector } expert_outputs_2_3_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 790 \
+    name expert_outputs_2_4 \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_expert_outputs_2_4 \
+    op interface \
+    ports { expert_outputs_2_4 { O 32 vector } expert_outputs_2_4_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 791 \
+    name expert_outputs_3_0 \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_expert_outputs_3_0 \
+    op interface \
+    ports { expert_outputs_3_0 { O 32 vector } expert_outputs_3_0_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 792 \
+    name expert_outputs_3_1 \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_expert_outputs_3_1 \
+    op interface \
+    ports { expert_outputs_3_1 { O 32 vector } expert_outputs_3_1_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 793 \
+    name expert_outputs_3_2 \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_expert_outputs_3_2 \
+    op interface \
+    ports { expert_outputs_3_2 { O 32 vector } expert_outputs_3_2_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 794 \
+    name expert_outputs_3_3 \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_expert_outputs_3_3 \
+    op interface \
+    ports { expert_outputs_3_3 { O 32 vector } expert_outputs_3_3_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 795 \
+    name expert_outputs_3_4 \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_expert_outputs_3_4 \
+    op interface \
+    ports { expert_outputs_3_4 { O 32 vector } expert_outputs_3_4_ap_vld { O 1 bit } } \
+} "
+}
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {

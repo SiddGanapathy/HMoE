@@ -16,8 +16,24 @@ module output_moe_run_parallel_engines_Block_entry2326_proc (
         ap_ready,
         p_read,
         p_read1,
+        p_read2,
+        p_read3,
+        p_read4,
+        p_read5,
+        p_read6,
+        p_read7,
+        p_read8,
+        p_read9,
         ap_return_0,
-        ap_return_1
+        ap_return_1,
+        ap_return_2,
+        ap_return_3,
+        ap_return_4,
+        ap_return_5,
+        ap_return_6,
+        ap_return_7,
+        ap_return_8,
+        ap_return_9
 );
 
 parameter    ap_ST_fsm_state1 = 1'd1;
@@ -31,14 +47,38 @@ output   ap_idle;
 output   ap_ready;
 input  [31:0] p_read;
 input  [31:0] p_read1;
+input  [31:0] p_read2;
+input  [31:0] p_read3;
+input  [31:0] p_read4;
+input  [31:0] p_read5;
+input  [31:0] p_read6;
+input  [31:0] p_read7;
+input  [31:0] p_read8;
+input  [31:0] p_read9;
 output  [31:0] ap_return_0;
 output  [31:0] ap_return_1;
+output  [31:0] ap_return_2;
+output  [31:0] ap_return_3;
+output  [31:0] ap_return_4;
+output  [31:0] ap_return_5;
+output  [31:0] ap_return_6;
+output  [31:0] ap_return_7;
+output  [31:0] ap_return_8;
+output  [31:0] ap_return_9;
 
 reg ap_done;
 reg ap_idle;
 reg ap_ready;
 reg[31:0] ap_return_0;
 reg[31:0] ap_return_1;
+reg[31:0] ap_return_2;
+reg[31:0] ap_return_3;
+reg[31:0] ap_return_4;
+reg[31:0] ap_return_5;
+reg[31:0] ap_return_6;
+reg[31:0] ap_return_7;
+reg[31:0] ap_return_8;
+reg[31:0] ap_return_9;
 
 reg    ap_done_reg;
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
@@ -46,6 +86,14 @@ wire    ap_CS_fsm_state1;
 reg    ap_block_state1;
 reg   [31:0] ap_return_0_preg;
 reg   [31:0] ap_return_1_preg;
+reg   [31:0] ap_return_2_preg;
+reg   [31:0] ap_return_3_preg;
+reg   [31:0] ap_return_4_preg;
+reg   [31:0] ap_return_5_preg;
+reg   [31:0] ap_return_6_preg;
+reg   [31:0] ap_return_7_preg;
+reg   [31:0] ap_return_8_preg;
+reg   [31:0] ap_return_9_preg;
 reg   [0:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 wire    ap_ce_reg;
@@ -56,6 +104,14 @@ initial begin
 #0 ap_CS_fsm = 1'd1;
 #0 ap_return_0_preg = 32'd0;
 #0 ap_return_1_preg = 32'd0;
+#0 ap_return_2_preg = 32'd0;
+#0 ap_return_3_preg = 32'd0;
+#0 ap_return_4_preg = 32'd0;
+#0 ap_return_5_preg = 32'd0;
+#0 ap_return_6_preg = 32'd0;
+#0 ap_return_7_preg = 32'd0;
+#0 ap_return_8_preg = 32'd0;
+#0 ap_return_9_preg = 32'd0;
 end
 
 always @ (posedge ap_clk) begin
@@ -94,6 +150,86 @@ always @ (posedge ap_clk) begin
     end else begin
         if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
             ap_return_1_preg <= p_read1;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        ap_return_2_preg <= 32'd0;
+    end else begin
+        if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+            ap_return_2_preg <= p_read2;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        ap_return_3_preg <= 32'd0;
+    end else begin
+        if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+            ap_return_3_preg <= p_read3;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        ap_return_4_preg <= 32'd0;
+    end else begin
+        if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+            ap_return_4_preg <= p_read4;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        ap_return_5_preg <= 32'd0;
+    end else begin
+        if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+            ap_return_5_preg <= p_read5;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        ap_return_6_preg <= 32'd0;
+    end else begin
+        if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+            ap_return_6_preg <= p_read6;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        ap_return_7_preg <= 32'd0;
+    end else begin
+        if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+            ap_return_7_preg <= p_read7;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        ap_return_8_preg <= 32'd0;
+    end else begin
+        if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+            ap_return_8_preg <= p_read8;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        ap_return_9_preg <= 32'd0;
+    end else begin
+        if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+            ap_return_9_preg <= p_read9;
         end
     end
 end
@@ -143,6 +279,70 @@ always @ (*) begin
         ap_return_1 = p_read1;
     end else begin
         ap_return_1 = ap_return_1_preg;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+        ap_return_2 = p_read2;
+    end else begin
+        ap_return_2 = ap_return_2_preg;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+        ap_return_3 = p_read3;
+    end else begin
+        ap_return_3 = ap_return_3_preg;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+        ap_return_4 = p_read4;
+    end else begin
+        ap_return_4 = ap_return_4_preg;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+        ap_return_5 = p_read5;
+    end else begin
+        ap_return_5 = ap_return_5_preg;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+        ap_return_6 = p_read6;
+    end else begin
+        ap_return_6 = ap_return_6_preg;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+        ap_return_7 = p_read7;
+    end else begin
+        ap_return_7 = ap_return_7_preg;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+        ap_return_8 = p_read8;
+    end else begin
+        ap_return_8 = ap_return_8_preg;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_state1) & (1'b1 == ap_CS_fsm_state1))) begin
+        ap_return_9 = p_read9;
+    end else begin
+        ap_return_9 = ap_return_9_preg;
     end
 end
 

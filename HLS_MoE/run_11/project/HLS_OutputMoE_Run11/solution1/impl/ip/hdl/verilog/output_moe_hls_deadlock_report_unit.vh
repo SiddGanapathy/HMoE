@@ -185,16 +185,16 @@
     endfunction
 
     // get the proc path based on dl vector
-    function [624:0] proc_path(input [PROC_NUM - 1:0] dl_vec);
+    function [616:0] proc_path(input [PROC_NUM - 1:0] dl_vec);
         integer index;
         begin
             index = proc_index(dl_vec);
             case (index)
                 0 : begin
-                    proc_path = "output_moe_output_moe.grp_run_parallel_engines_fu_2294.expert_engine_A_U0";
+                    proc_path = "output_moe_output_moe.grp_run_parallel_engines_fu_377.expert_engine_A_U0";
                 end
                 1 : begin
-                    proc_path = "output_moe_output_moe.grp_run_parallel_engines_fu_2294.expert_engine_B_U0";
+                    proc_path = "output_moe_output_moe.grp_run_parallel_engines_fu_377.expert_engine_B_U0";
                 end
                 default : begin
                     proc_path = "unknown";
@@ -214,7 +214,7 @@
     endtask
 
     // print the start of a cycle
-    task print_cycle_start(input reg [624:0] proc_path, input integer cycle_id);
+    task print_cycle_start(input reg [616:0] proc_path, input integer cycle_id);
         begin
             $display("/////////////////////////");
             $display("// Dependence cycle %0d:", cycle_id);
@@ -239,7 +239,7 @@
     endtask
 
     // print one proc component in the cycle
-    task print_cycle_proc_comp(input reg [624:0] proc_path, input integer cycle_comp_id);
+    task print_cycle_proc_comp(input reg [616:0] proc_path, input integer cycle_comp_id);
         begin
             $display("// (%0d): Process: %0s", cycle_comp_id, proc_path);
             $fdisplay(fp, "Dependence_Process_ID %0d", cycle_comp_id);
@@ -259,8 +259,8 @@
                 0 : begin
                     case(index2)
                     1: begin
-                        if (grp_run_parallel_engines_fu_2294.ap_sync_expert_engine_A_U0_ap_ready & grp_run_parallel_engines_fu_2294.expert_engine_A_U0.ap_idle & ~grp_run_parallel_engines_fu_2294.ap_sync_expert_engine_B_U0_ap_ready) begin
-                            $display("//      Blocked by input sync logic with process : 'output_moe_output_moe.grp_run_parallel_engines_fu_2294.expert_engine_B_U0'");
+                        if (grp_run_parallel_engines_fu_377.ap_sync_expert_engine_A_U0_ap_ready & grp_run_parallel_engines_fu_377.expert_engine_A_U0.ap_idle & ~grp_run_parallel_engines_fu_377.ap_sync_expert_engine_B_U0_ap_ready) begin
+                            $display("//      Blocked by input sync logic with process : 'output_moe_output_moe.grp_run_parallel_engines_fu_377.expert_engine_B_U0'");
                         end
                     end
                     endcase
@@ -268,8 +268,8 @@
                 1 : begin
                     case(index2)
                     0: begin
-                        if (grp_run_parallel_engines_fu_2294.ap_sync_expert_engine_B_U0_ap_ready & grp_run_parallel_engines_fu_2294.expert_engine_B_U0.ap_idle & ~grp_run_parallel_engines_fu_2294.ap_sync_expert_engine_A_U0_ap_ready) begin
-                            $display("//      Blocked by input sync logic with process : 'output_moe_output_moe.grp_run_parallel_engines_fu_2294.expert_engine_A_U0'");
+                        if (grp_run_parallel_engines_fu_377.ap_sync_expert_engine_B_U0_ap_ready & grp_run_parallel_engines_fu_377.expert_engine_B_U0.ap_idle & ~grp_run_parallel_engines_fu_377.ap_sync_expert_engine_A_U0_ap_ready) begin
+                            $display("//      Blocked by input sync logic with process : 'output_moe_output_moe.grp_run_parallel_engines_fu_377.expert_engine_A_U0'");
                         end
                     end
                     endcase
