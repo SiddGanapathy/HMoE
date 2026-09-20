@@ -1,0 +1,36 @@
+---
+MainSourceFile:  /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '221:24'
+    FilePath:        /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '222:31'
+    FilePath:        /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '223:31'
+    FilePath:        /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
+    FileOffset:      '224:31'
+    FilePath:        /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-11] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region'
+    FileOffset:      '219:9'
+    FilePath:        /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-11] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region'
+    FileOffset:      '219:9'
+    FilePath:        /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-11] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region'
+    FileOffset:      '219:9'
+    FilePath:        /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-12] There are a total of 5 such instances of non-canonical statements in the dataflow region'
+    FileOffset:      '219:9'
+    FilePath:        /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp
+...

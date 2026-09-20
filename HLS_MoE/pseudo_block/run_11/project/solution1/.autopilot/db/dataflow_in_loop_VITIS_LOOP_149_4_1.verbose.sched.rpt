@@ -1,0 +1,318 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_in_loop_VITIS_LOOP_149_4_1'
+================================================================
+* Date:           Sun Sep 20 21:17:00 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        project
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p_CIV-figd2104-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |      516|      516|  5.160 us|  5.160 us|  339|  339|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 10, States = { 1 2 3 4 5 6 7 8 9 10 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 7.30>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%output_r_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %output_r"   --->   Operation 11 'read' 'output_r_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%gates_out_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %gates_out"   --->   Operation 12 'read' 'gates_out_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%n_1_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %n_1"   --->   Operation 13 'read' 'n_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%b_gate_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %b_gate"   --->   Operation 14 'read' 'b_gate_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%w_gate_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %w_gate"   --->   Operation 15 'read' 'w_gate_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%output_r_c = alloca i64 1"   --->   Operation 16 'alloca' 'output_r_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 6> <FIFO>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%gates_out_c = alloca i64 1"   --->   Operation 17 'alloca' 'gates_out_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 4> <FIFO>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%n_1_c1 = alloca i64 1"   --->   Operation 18 'alloca' 'n_1_c1' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 4> <Depth = 3> <FIFO>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%combined_result = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 19 'alloca' 'combined_result' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%expert_result3 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:216->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 20 'alloca' 'expert_result3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%expert_result2 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:215->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 21 'alloca' 'expert_result2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%expert_result1 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:214->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 22 'alloca' 'expert_result1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%expert_result0 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:213->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 23 'alloca' 'expert_result0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%x3 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:194->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 24 'alloca' 'x3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%x3_1 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:194->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 25 'alloca' 'x3_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%x3_2 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:194->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 26 'alloca' 'x3_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%x3_3 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:194->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 27 'alloca' 'x3_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%x3_4 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:194->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 28 'alloca' 'x3_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%x3_5 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:194->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 29 'alloca' 'x3_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%x3_6 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:194->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 30 'alloca' 'x3_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%x3_7 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:194->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 31 'alloca' 'x3_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%x3_8 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:194->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 32 'alloca' 'x3_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%x3_9 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:194->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 33 'alloca' 'x3_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%x3_10 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:194->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 34 'alloca' 'x3_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%x3_11 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:194->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 35 'alloca' 'x3_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%x3_12 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:194->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 36 'alloca' 'x3_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%x3_13 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:194->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 37 'alloca' 'x3_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%x3_14 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:194->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 38 'alloca' 'x3_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%x3_15 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:194->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 39 'alloca' 'x3_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%x2 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:193->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 40 'alloca' 'x2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%x2_1 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:193->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 41 'alloca' 'x2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%x2_2 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:193->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 42 'alloca' 'x2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%x2_3 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:193->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 43 'alloca' 'x2_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%x2_4 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:193->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 44 'alloca' 'x2_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%x2_5 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:193->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 45 'alloca' 'x2_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%x2_6 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:193->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 46 'alloca' 'x2_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%x2_7 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:193->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 47 'alloca' 'x2_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%x2_8 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:193->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 48 'alloca' 'x2_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%x2_9 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:193->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 49 'alloca' 'x2_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%x2_10 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:193->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 50 'alloca' 'x2_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%x2_11 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:193->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 51 'alloca' 'x2_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%x2_12 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:193->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 52 'alloca' 'x2_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%x2_13 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:193->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 53 'alloca' 'x2_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%x2_14 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:193->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 54 'alloca' 'x2_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%x2_15 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:193->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 55 'alloca' 'x2_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%x1 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:192->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 56 'alloca' 'x1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%x1_1 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:192->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 57 'alloca' 'x1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%x1_2 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:192->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 58 'alloca' 'x1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%x1_3 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:192->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 59 'alloca' 'x1_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%x1_4 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:192->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 60 'alloca' 'x1_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%x1_5 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:192->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 61 'alloca' 'x1_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%x1_6 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:192->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 62 'alloca' 'x1_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%x1_7 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:192->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 63 'alloca' 'x1_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%x1_8 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:192->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 64 'alloca' 'x1_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%x1_9 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:192->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 65 'alloca' 'x1_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%x1_10 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:192->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 66 'alloca' 'x1_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%x1_11 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:192->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 67 'alloca' 'x1_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%x1_12 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:192->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 68 'alloca' 'x1_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%x1_13 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:192->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 69 'alloca' 'x1_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%x1_14 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:192->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 70 'alloca' 'x1_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%x1_15 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:192->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 71 'alloca' 'x1_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%x0 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:191->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 72 'alloca' 'x0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%x0_1 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:191->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 73 'alloca' 'x0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%x0_2 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:191->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 74 'alloca' 'x0_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%x0_3 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:191->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 75 'alloca' 'x0_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%x0_4 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:191->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 76 'alloca' 'x0_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%x0_5 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:191->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 77 'alloca' 'x0_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%x0_6 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:191->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 78 'alloca' 'x0_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%x0_7 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:191->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 79 'alloca' 'x0_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%x0_8 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:191->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 80 'alloca' 'x0_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%x0_9 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:191->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 81 'alloca' 'x0_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%x0_10 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:191->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 82 'alloca' 'x0_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%x0_11 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:191->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 83 'alloca' 'x0_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%x0_12 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:191->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 84 'alloca' 'x0_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%x0_13 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:191->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 85 'alloca' 'x0_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%x0_14 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:191->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 86 'alloca' 'x0_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%x0_15 = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:191->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 87 'alloca' 'x0_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%gates = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:153->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 88 'alloca' 'gates' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%exp_values = alloca i64 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:152->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 89 'alloca' 'exp_values' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 4> <FIFO>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%logits_i_channel = alloca i64 1"   --->   Operation 90 'alloca' 'logits_i_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 4> <FIFO>
+ST_1 : Operation 91 [1/1] (1.52ns)   --->   "%call_ln0 = call void @entry_proc, i64 %gates_out_read, i64 %gates_out_c, i64 %output_r_read, i64 %output_r_c"   --->   Operation 91 'call' 'call_ln0' <Predicate = true> <Delay = 1.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 92 [2/2] (7.30ns)   --->   "%max_logit_loc_i_channel1 = call i32 @dataflow_in_loop_VITIS_LOOP_149_4.1_Loop_VITIS_LOOP_158_5_proc4, i64 %w_gate_read, i32 %gmem1, i64 %b_gate_read, i32 %gmem2, i4 %n_1_read, i32 %input_local, i32 %input_local_1, i32 %input_local_2, i32 %input_local_3, i32 %input_local_4, i32 %input_local_5, i32 %input_local_6, i32 %input_local_7, i32 %input_local_8, i32 %input_local_9, i32 %input_local_10, i32 %input_local_11, i32 %input_local_12, i32 %input_local_13, i32 %input_local_14, i32 %input_local_15, i32 %logits_i_channel, i4 %n_1_c1"   --->   Operation 92 'call' 'max_logit_loc_i_channel1' <Predicate = true> <Delay = 7.30> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 93 [1/2] (0.00ns)   --->   "%max_logit_loc_i_channel1 = call i32 @dataflow_in_loop_VITIS_LOOP_149_4.1_Loop_VITIS_LOOP_158_5_proc4, i64 %w_gate_read, i32 %gmem1, i64 %b_gate_read, i32 %gmem2, i4 %n_1_read, i32 %input_local, i32 %input_local_1, i32 %input_local_2, i32 %input_local_3, i32 %input_local_4, i32 %input_local_5, i32 %input_local_6, i32 %input_local_7, i32 %input_local_8, i32 %input_local_9, i32 %input_local_10, i32 %input_local_11, i32 %input_local_12, i32 %input_local_13, i32 %input_local_14, i32 %input_local_15, i32 %logits_i_channel, i4 %n_1_c1"   --->   Operation 93 'call' 'max_logit_loc_i_channel1' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 3 <SV = 2> <Delay = 1.67>
+ST_3 : Operation 94 [2/2] (1.52ns)   --->   "%exp_sum_loc_i_channel = call i32 @dataflow_in_loop_VITIS_LOOP_149_4.1_Loop_VITIS_LOOP_175_7_proc5, i32 %logits_i_channel, i32 %max_logit_loc_i_channel1, i32 %exp_values"   --->   Operation 94 'call' 'exp_sum_loc_i_channel' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 95 [2/2] (1.67ns)   --->   "%call_ln0 = call void @dataflow_in_loop_VITIS_LOOP_149_4.1_Loop_VITIS_LOOP_201_9_proc7, i32 %x3, i32 %x3_1, i32 %x3_2, i32 %x3_3, i32 %x3_4, i32 %x3_5, i32 %x3_6, i32 %x3_7, i32 %x3_8, i32 %x3_9, i32 %x3_10, i32 %x3_11, i32 %x3_12, i32 %x3_13, i32 %x3_14, i32 %x3_15, i32 %x2, i32 %x2_1, i32 %x2_2, i32 %x2_3, i32 %x2_4, i32 %x2_5, i32 %x2_6, i32 %x2_7, i32 %x2_8, i32 %x2_9, i32 %x2_10, i32 %x2_11, i32 %x2_12, i32 %x2_13, i32 %x2_14, i32 %x2_15, i32 %x1, i32 %x1_1, i32 %x1_2, i32 %x1_3, i32 %x1_4, i32 %x1_5, i32 %x1_6, i32 %x1_7, i32 %x1_8, i32 %x1_9, i32 %x1_10, i32 %x1_11, i32 %x1_12, i32 %x1_13, i32 %x1_14, i32 %x1_15, i32 %x0, i32 %x0_1, i32 %x0_2, i32 %x0_3, i32 %x0_4, i32 %x0_5, i32 %x0_6, i32 %x0_7, i32 %x0_8, i32 %x0_9, i32 %x0_10, i32 %x0_11, i32 %x0_12, i32 %x0_13, i32 %x0_14, i32 %x0_15, i4 %n_1_read, i32 %input_local, i32 %input_local_1, i32 %input_local_2, i32 %input_local_3, i32 %input_local_4, i32 %input_local_5, i32 %input_local_6, i32 %input_local_7, i32 %input_local_8, i32 %input_local_9, i32 %input_local_10, i32 %input_local_11, i32 %input_local_12, i32 %input_local_13, i32 %input_local_14, i32 %input_local_15"   --->   Operation 95 'call' 'call_ln0' <Predicate = true> <Delay = 1.67> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.36>
+ST_4 : Operation 96 [1/2] (0.36ns)   --->   "%exp_sum_loc_i_channel = call i32 @dataflow_in_loop_VITIS_LOOP_149_4.1_Loop_VITIS_LOOP_175_7_proc5, i32 %logits_i_channel, i32 %max_logit_loc_i_channel1, i32 %exp_values"   --->   Operation 96 'call' 'exp_sum_loc_i_channel' <Predicate = true> <Delay = 0.36> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_4 : Operation 97 [1/2] (0.00ns)   --->   "%call_ln0 = call void @dataflow_in_loop_VITIS_LOOP_149_4.1_Loop_VITIS_LOOP_201_9_proc7, i32 %x3, i32 %x3_1, i32 %x3_2, i32 %x3_3, i32 %x3_4, i32 %x3_5, i32 %x3_6, i32 %x3_7, i32 %x3_8, i32 %x3_9, i32 %x3_10, i32 %x3_11, i32 %x3_12, i32 %x3_13, i32 %x3_14, i32 %x3_15, i32 %x2, i32 %x2_1, i32 %x2_2, i32 %x2_3, i32 %x2_4, i32 %x2_5, i32 %x2_6, i32 %x2_7, i32 %x2_8, i32 %x2_9, i32 %x2_10, i32 %x2_11, i32 %x2_12, i32 %x2_13, i32 %x2_14, i32 %x2_15, i32 %x1, i32 %x1_1, i32 %x1_2, i32 %x1_3, i32 %x1_4, i32 %x1_5, i32 %x1_6, i32 %x1_7, i32 %x1_8, i32 %x1_9, i32 %x1_10, i32 %x1_11, i32 %x1_12, i32 %x1_13, i32 %x1_14, i32 %x1_15, i32 %x0, i32 %x0_1, i32 %x0_2, i32 %x0_3, i32 %x0_4, i32 %x0_5, i32 %x0_6, i32 %x0_7, i32 %x0_8, i32 %x0_9, i32 %x0_10, i32 %x0_11, i32 %x0_12, i32 %x0_13, i32 %x0_14, i32 %x0_15, i4 %n_1_read, i32 %input_local, i32 %input_local_1, i32 %input_local_2, i32 %input_local_3, i32 %input_local_4, i32 %input_local_5, i32 %input_local_6, i32 %input_local_7, i32 %input_local_8, i32 %input_local_9, i32 %input_local_10, i32 %input_local_11, i32 %input_local_12, i32 %input_local_13, i32 %input_local_14, i32 %input_local_15"   --->   Operation 97 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 1.52>
+ST_5 : Operation 98 [1/1] (0.00ns)   --->   "%b3_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %b3"   --->   Operation 98 'read' 'b3_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 99 [1/1] (0.00ns)   --->   "%b2_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %b2"   --->   Operation 99 'read' 'b2_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 100 [1/1] (0.00ns)   --->   "%b1_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %b1"   --->   Operation 100 'read' 'b1_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 101 [1/1] (0.00ns)   --->   "%b0_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %b0"   --->   Operation 101 'read' 'b0_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 102 [2/2] (1.52ns)   --->   "%n_1_c_channel = call i4 @dataflow_in_loop_VITIS_LOOP_149_4.1_Loop_VITIS_LOOP_181_8_proc6, i4 %n_1_c1, i64 %gates_out_c, i32 %gmem11, i32 %exp_values, i32 %exp_sum_loc_i_channel, i32 %gates"   --->   Operation 102 'call' 'n_1_c_channel' <Predicate = true> <Delay = 1.52> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 4> <Depth = 2> <FIFO>
+ST_5 : Operation 103 [2/2] (0.00ns)   --->   "%call_ln221 = call void @compute_expert<0>8, i32 %x0_15, i32 %x0_14, i32 %x0_13, i32 %x0_12, i32 %x0_11, i32 %x0_10, i32 %x0_9, i32 %x0_8, i32 %x0_7, i32 %x0_6, i32 %x0_5, i32 %x0_4, i32 %x0_3, i32 %x0_2, i32 %x0_1, i32 %x0, i32 %w0_local, i32 %w0_local_1, i32 %w0_local_2, i32 %w0_local_3, i32 %w0_local_4, i32 %w0_local_5, i32 %w0_local_6, i32 %w0_local_7, i32 %w0_local_8, i32 %w0_local_9, i32 %w0_local_10, i32 %w0_local_11, i32 %w0_local_12, i32 %w0_local_13, i32 %w0_local_14, i32 %w0_local_15, i32 %gmem4, i64 %b0_read, i32 %expert_result0" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:221->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 103 'call' 'call_ln221' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 104 [2/2] (0.00ns)   --->   "%call_ln222 = call void @compute_expert<1>9, i32 %x1_15, i32 %x1_14, i32 %x1_13, i32 %x1_12, i32 %x1_11, i32 %x1_10, i32 %x1_9, i32 %x1_8, i32 %x1_7, i32 %x1_6, i32 %x1_5, i32 %x1_4, i32 %x1_3, i32 %x1_2, i32 %x1_1, i32 %x1, i32 %w1_local, i32 %w1_local_1, i32 %w1_local_2, i32 %w1_local_3, i32 %w1_local_4, i32 %w1_local_5, i32 %w1_local_6, i32 %w1_local_7, i32 %w1_local_8, i32 %w1_local_9, i32 %w1_local_10, i32 %w1_local_11, i32 %w1_local_12, i32 %w1_local_13, i32 %w1_local_14, i32 %w1_local_15, i32 %gmem6, i64 %b1_read, i32 %expert_result1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:222->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 104 'call' 'call_ln222' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 105 [2/2] (0.00ns)   --->   "%call_ln223 = call void @compute_expert<2>10, i32 %x2_15, i32 %x2_14, i32 %x2_13, i32 %x2_12, i32 %x2_11, i32 %x2_10, i32 %x2_9, i32 %x2_8, i32 %x2_7, i32 %x2_6, i32 %x2_5, i32 %x2_4, i32 %x2_3, i32 %x2_2, i32 %x2_1, i32 %x2, i32 %w2_local, i32 %w2_local_1, i32 %w2_local_2, i32 %w2_local_3, i32 %w2_local_4, i32 %w2_local_5, i32 %w2_local_6, i32 %w2_local_7, i32 %w2_local_8, i32 %w2_local_9, i32 %w2_local_10, i32 %w2_local_11, i32 %w2_local_12, i32 %w2_local_13, i32 %w2_local_14, i32 %w2_local_15, i32 %gmem8, i64 %b2_read, i32 %expert_result2" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:223->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 105 'call' 'call_ln223' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 106 [2/2] (0.00ns)   --->   "%call_ln224 = call void @compute_expert<3>11, i32 %x3_15, i32 %x3_14, i32 %x3_13, i32 %x3_12, i32 %x3_11, i32 %x3_10, i32 %x3_9, i32 %x3_8, i32 %x3_7, i32 %x3_6, i32 %x3_5, i32 %x3_4, i32 %x3_3, i32 %x3_2, i32 %x3_1, i32 %x3, i32 %w3_local, i32 %w3_local_1, i32 %w3_local_2, i32 %w3_local_3, i32 %w3_local_4, i32 %w3_local_5, i32 %w3_local_6, i32 %w3_local_7, i32 %w3_local_8, i32 %w3_local_9, i32 %w3_local_10, i32 %w3_local_11, i32 %w3_local_12, i32 %w3_local_13, i32 %w3_local_14, i32 %w3_local_15, i32 %gmem10, i64 %b3_read, i32 %expert_result3" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:224->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 106 'call' 'call_ln224' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 107 [1/2] (0.00ns)   --->   "%n_1_c_channel = call i4 @dataflow_in_loop_VITIS_LOOP_149_4.1_Loop_VITIS_LOOP_181_8_proc6, i4 %n_1_c1, i64 %gates_out_c, i32 %gmem11, i32 %exp_values, i32 %exp_sum_loc_i_channel, i32 %gates"   --->   Operation 107 'call' 'n_1_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.52> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 4> <Depth = 2> <FIFO>
+ST_6 : Operation 108 [1/2] (0.00ns)   --->   "%call_ln221 = call void @compute_expert<0>8, i32 %x0_15, i32 %x0_14, i32 %x0_13, i32 %x0_12, i32 %x0_11, i32 %x0_10, i32 %x0_9, i32 %x0_8, i32 %x0_7, i32 %x0_6, i32 %x0_5, i32 %x0_4, i32 %x0_3, i32 %x0_2, i32 %x0_1, i32 %x0, i32 %w0_local, i32 %w0_local_1, i32 %w0_local_2, i32 %w0_local_3, i32 %w0_local_4, i32 %w0_local_5, i32 %w0_local_6, i32 %w0_local_7, i32 %w0_local_8, i32 %w0_local_9, i32 %w0_local_10, i32 %w0_local_11, i32 %w0_local_12, i32 %w0_local_13, i32 %w0_local_14, i32 %w0_local_15, i32 %gmem4, i64 %b0_read, i32 %expert_result0" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:221->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 108 'call' 'call_ln221' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 109 [1/2] (0.00ns)   --->   "%call_ln222 = call void @compute_expert<1>9, i32 %x1_15, i32 %x1_14, i32 %x1_13, i32 %x1_12, i32 %x1_11, i32 %x1_10, i32 %x1_9, i32 %x1_8, i32 %x1_7, i32 %x1_6, i32 %x1_5, i32 %x1_4, i32 %x1_3, i32 %x1_2, i32 %x1_1, i32 %x1, i32 %w1_local, i32 %w1_local_1, i32 %w1_local_2, i32 %w1_local_3, i32 %w1_local_4, i32 %w1_local_5, i32 %w1_local_6, i32 %w1_local_7, i32 %w1_local_8, i32 %w1_local_9, i32 %w1_local_10, i32 %w1_local_11, i32 %w1_local_12, i32 %w1_local_13, i32 %w1_local_14, i32 %w1_local_15, i32 %gmem6, i64 %b1_read, i32 %expert_result1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:222->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 109 'call' 'call_ln222' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 110 [1/2] (0.00ns)   --->   "%call_ln223 = call void @compute_expert<2>10, i32 %x2_15, i32 %x2_14, i32 %x2_13, i32 %x2_12, i32 %x2_11, i32 %x2_10, i32 %x2_9, i32 %x2_8, i32 %x2_7, i32 %x2_6, i32 %x2_5, i32 %x2_4, i32 %x2_3, i32 %x2_2, i32 %x2_1, i32 %x2, i32 %w2_local, i32 %w2_local_1, i32 %w2_local_2, i32 %w2_local_3, i32 %w2_local_4, i32 %w2_local_5, i32 %w2_local_6, i32 %w2_local_7, i32 %w2_local_8, i32 %w2_local_9, i32 %w2_local_10, i32 %w2_local_11, i32 %w2_local_12, i32 %w2_local_13, i32 %w2_local_14, i32 %w2_local_15, i32 %gmem8, i64 %b2_read, i32 %expert_result2" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:223->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 110 'call' 'call_ln223' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 111 [1/2] (0.00ns)   --->   "%call_ln224 = call void @compute_expert<3>11, i32 %x3_15, i32 %x3_14, i32 %x3_13, i32 %x3_12, i32 %x3_11, i32 %x3_10, i32 %x3_9, i32 %x3_8, i32 %x3_7, i32 %x3_6, i32 %x3_5, i32 %x3_4, i32 %x3_3, i32 %x3_2, i32 %x3_1, i32 %x3, i32 %w3_local, i32 %w3_local_1, i32 %w3_local_2, i32 %w3_local_3, i32 %w3_local_4, i32 %w3_local_5, i32 %w3_local_6, i32 %w3_local_7, i32 %w3_local_8, i32 %w3_local_9, i32 %w3_local_10, i32 %w3_local_11, i32 %w3_local_12, i32 %w3_local_13, i32 %w3_local_14, i32 %w3_local_15, i32 %gmem10, i64 %b3_read, i32 %expert_result3" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:224->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 111 'call' 'call_ln224' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 112 [2/2] (0.00ns)   --->   "%call_ln226 = call void @combine_experts12, i32 %gates, i32 %expert_result0, i32 %expert_result1, i32 %expert_result2, i32 %expert_result3, i32 %combined_result" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:226->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 112 'call' 'call_ln226' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 113 [1/2] (0.00ns)   --->   "%call_ln226 = call void @combine_experts12, i32 %gates, i32 %expert_result0, i32 %expert_result1, i32 %expert_result2, i32 %expert_result3, i32 %combined_result" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:226->/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 113 'call' 'call_ln226' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 1.52>
+ST_9 : Operation 114 [2/2] (1.52ns)   --->   "%call_ln0 = call void @dataflow_in_loop_VITIS_LOOP_149_4.1_Loop_VITIS_LOOP_238_10_proc13, i4 %n_1_c_channel, i64 %output_r_c, i32 %gmem12, i32 %combined_result"   --->   Operation 114 'call' 'call_ln0' <Predicate = true> <Delay = 1.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 115 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i32 %input_local_15, void @p_str"   --->   Operation 115 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 116 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i32 %input_local_14, void @p_str"   --->   Operation 116 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 117 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i32 %input_local_13, void @p_str"   --->   Operation 117 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 118 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i32 %input_local_12, void @p_str"   --->   Operation 118 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 119 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i32 %input_local_11, void @p_str"   --->   Operation 119 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 120 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i32 %input_local_10, void @p_str"   --->   Operation 120 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 121 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i32 %input_local_9, void @p_str"   --->   Operation 121 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 122 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i32 %input_local_8, void @p_str"   --->   Operation 122 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 123 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i32 %input_local_7, void @p_str"   --->   Operation 123 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 124 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i32 %input_local_6, void @p_str"   --->   Operation 124 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 125 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i32 %input_local_5, void @p_str"   --->   Operation 125 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 126 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i32 %input_local_4, void @p_str"   --->   Operation 126 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 127 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i32 %input_local_3, void @p_str"   --->   Operation 127 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 128 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i32 %input_local_2, void @p_str"   --->   Operation 128 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 129 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i32 %input_local_1, void @p_str"   --->   Operation 129 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 130 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i32 %input_local, void @p_str"   --->   Operation 130 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 131 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @output_r_c_str, i32 1, void @p_str, void @p_str, i32 6, i32 0, i64 %output_r_c, i64 %output_r_c"   --->   Operation 131 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 132 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_r_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 132 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 133 [1/1] (0.00ns)   --->   "%empty_120 = specchannel i32 @_ssdm_op_SpecChannel, void @gates_out_c_str, i32 1, void @p_str, void @p_str, i32 4, i32 0, i64 %gates_out_c, i64 %gates_out_c"   --->   Operation 133 'specchannel' 'empty_120' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 134 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gates_out_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 134 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 135 [1/1] (0.00ns)   --->   "%empty_121 = specchannel i32 @_ssdm_op_SpecChannel, void @n_OC_1_c1_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i4 %n_1_c1, i4 %n_1_c1"   --->   Operation 135 'specchannel' 'empty_121' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 136 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i4 %n_1_c1, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 136 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 137 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln0 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_30"   --->   Operation 137 'specdataflowpipeline' 'specdataflowpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 138 [1/1] (0.00ns)   --->   "%empty_122 = specchannel i32 @_ssdm_op_SpecChannel, void @exp_values_OC_i_OC_channel_str, i32 1, void @p_str, void @p_str, i32 4, i32 4, i32 %exp_values, i32 %exp_values"   --->   Operation 138 'specchannel' 'empty_122' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 139 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %exp_values, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 139 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 140 [1/1] (0.00ns)   --->   "%empty_123 = specchannel i32 @_ssdm_op_SpecChannel, void @logits_OC_i_OC_channel_str, i32 1, void @p_str, void @p_str, i32 4, i32 4, i32 %logits_i_channel, i32 %logits_i_channel"   --->   Operation 140 'specchannel' 'empty_123' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 141 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %logits_i_channel, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 141 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 142 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem12, void @empty_16, i32 0, i32 0, void @empty_30, i32 0, i32 0, void @empty_5, void @empty_41, void @empty_30, i32 16, i32 16, i32 16, i32 16, void @empty_30, void @empty_30, i32 4294967295, i32 0"   --->   Operation 142 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 143 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem11, void @empty_16, i32 0, i32 0, void @empty_30, i32 0, i32 0, void @empty_4, void @empty_41, void @empty_30, i32 16, i32 16, i32 16, i32 16, void @empty_30, void @empty_30, i32 4294967295, i32 0"   --->   Operation 143 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 144 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem10, void @empty_16, i32 0, i32 0, void @empty_30, i32 0, i32 0, void @empty_8, void @empty_41, void @empty_30, i32 16, i32 16, i32 16, i32 16, void @empty_30, void @empty_30, i32 4294967295, i32 0"   --->   Operation 144 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 145 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem8, void @empty_16, i32 0, i32 0, void @empty_30, i32 0, i32 0, void @empty_7, void @empty_41, void @empty_30, i32 16, i32 16, i32 16, i32 16, void @empty_30, void @empty_30, i32 4294967295, i32 0"   --->   Operation 145 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 146 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem6, void @empty_16, i32 0, i32 0, void @empty_30, i32 0, i32 0, void @empty_12, void @empty_41, void @empty_30, i32 16, i32 16, i32 16, i32 16, void @empty_30, void @empty_30, i32 4294967295, i32 0"   --->   Operation 146 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 147 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem4, void @empty_16, i32 0, i32 0, void @empty_30, i32 0, i32 0, void @empty, void @empty_41, void @empty_30, i32 16, i32 16, i32 16, i32 16, void @empty_30, void @empty_30, i32 4294967295, i32 0"   --->   Operation 147 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 148 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem2, void @empty_16, i32 0, i32 0, void @empty_30, i32 0, i32 0, void @empty_39, void @empty_41, void @empty_30, i32 16, i32 16, i32 16, i32 16, void @empty_30, void @empty_30, i32 4294967295, i32 0"   --->   Operation 148 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 149 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem1, void @empty_16, i32 0, i32 0, void @empty_30, i32 0, i32 0, void @empty_40, void @empty_41, void @empty_30, i32 16, i32 16, i32 16, i32 16, void @empty_30, void @empty_30, i32 4294967295, i32 0"   --->   Operation 149 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 150 [1/1] (0.00ns)   --->   "%empty_124 = specchannel i32 @_ssdm_op_SpecChannel, void @logits_OC_i_str, i32 1, void @p_str, void @p_str, i32 4, i32 4, i32 %logits_i_channel, i32 %logits_i_channel"   --->   Operation 150 'specchannel' 'empty_124' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 151 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %logits_i_channel, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 151 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 152 [1/1] (0.00ns)   --->   "%empty_125 = specchannel i32 @_ssdm_op_SpecChannel, void @exp_values_OC_i_str, i32 1, void @p_str, void @p_str, i32 4, i32 4, i32 %exp_values, i32 %exp_values"   --->   Operation 152 'specchannel' 'empty_125' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 153 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %exp_values, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 153 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 154 [1/2] (0.00ns)   --->   "%call_ln0 = call void @dataflow_in_loop_VITIS_LOOP_149_4.1_Loop_VITIS_LOOP_238_10_proc13, i4 %n_1_c_channel, i64 %output_r_c, i32 %gmem12, i32 %combined_result"   --->   Operation 154 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 155 [1/1] (0.00ns)   --->   "%ret_ln217 = ret" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:217]   --->   Operation 155 'ret' 'ret_ln217' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 7.300ns
+The critical path consists of the following:
+	wire read operation ('n_1_read') on port 'n_1' [120]  (0.000 ns)
+	'call' operation 32 bit ('max_logit_loc_i_channel1') to 'dataflow_in_loop_VITIS_LOOP_149_4.1_Loop_VITIS_LOOP_158_5_proc4' [218]  (7.300 ns)
+
+ <State 2>: 0.000ns
+The critical path consists of the following:
+
+ <State 3>: 1.674ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln0') to 'dataflow_in_loop_VITIS_LOOP_149_4.1_Loop_VITIS_LOOP_201_9_proc7' [225]  (1.674 ns)
+
+ <State 4>: 0.362ns
+The critical path consists of the following:
+	'call' operation 32 bit ('exp_sum_loc_i_channel') to 'dataflow_in_loop_VITIS_LOOP_149_4.1_Loop_VITIS_LOOP_175_7_proc5' [221]  (0.362 ns)
+
+ <State 5>: 1.520ns
+The critical path consists of the following:
+	'call' operation 4 bit ('n_1_c_channel') to 'dataflow_in_loop_VITIS_LOOP_149_4.1_Loop_VITIS_LOOP_181_8_proc6' [224]  (1.520 ns)
+
+ <State 6>: 0.000ns
+The critical path consists of the following:
+
+ <State 7>: 0.000ns
+The critical path consists of the following:
+
+ <State 8>: 0.000ns
+The critical path consists of the following:
+
+ <State 9>: 1.520ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln0') to 'dataflow_in_loop_VITIS_LOOP_149_4.1_Loop_VITIS_LOOP_238_10_proc13' [231]  (1.520 ns)
+
+ <State 10>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

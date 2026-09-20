@@ -1,0 +1,462 @@
+
+
+================================================================
+== Synthesis Summary Report of 'pseudo_moe'
+================================================================
++ General Information: 
+    * Date:           Sun Sep 20 15:25:55 2026
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        project
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu13p_CIV-figd2104-3-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+----------+-------------+------------+-----+
+    |                  Modules                  |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |         |          |             |            |     |
+    |                  & Loops                  |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |    DSP   |      FF     |     LUT    | URAM|
+    +-------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+----------+-------------+------------+-----+
+    |+ pseudo_moe                               |  Timing|  -6.05|   210439|  2.809e+06|         -|   210440|     -|        no|  85 (1%)|  14 (~0%)|  20030 (~0%)|  21759 (1%)|    -|
+    | o VITIS_LOOP_71_1                         |       -|   7.30|   210430|  2.809e+06|     21043|        -|    10|        no|        -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_73_2    |       -|   0.00|       67|    670.000|         -|       67|     -|        no|        -|         -|     58 (~0%)|    78 (~0%)|    -|
+    |   o VITIS_LOOP_73_2                       |       -|   7.30|       65|    650.000|         3|        1|    64|       yes|        -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_89_4    |       -|   0.47|       12|    120.000|         -|       12|     -|        no|        -|   7 (~0%)|    513 (~0%)|   935 (~0%)|    -|
+    |   o VITIS_LOOP_89_4                       |       -|   7.30|       10|    100.000|         8|        1|     4|       yes|        -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_95_5    |       -|   0.00|       11|    110.000|         -|       11|     -|        no|        -|         -|     48 (~0%)|    91 (~0%)|    -|
+    |   o VITIS_LOOP_95_5                       |       -|   7.30|        9|     90.000|         7|        1|     4|       yes|        -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_100_6   |       -|   0.00|       66|    660.000|         -|       66|     -|        no|        -|         -|     10 (~0%)|    78 (~0%)|    -|
+    |   o VITIS_LOOP_100_6                      |       -|   7.30|       64|    640.000|         2|        1|    64|       yes|        -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_106_7   |       -|   0.00|     4107|  4.107e+04|         -|     4107|     -|        no|        -|         -|    409 (~0%)|  1167 (~0%)|    -|
+    |   o VITIS_LOOP_106_7                      |      II|   7.30|     4105|  4.105e+04|        74|       64|    64|       yes|        -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_110_8   |  Timing|  -6.05|     1026|  1.369e+04|         -|     1026|     -|        no|        -|         -|    155 (~0%)|   300 (~0%)|    -|
+    |   o VITIS_LOOP_110_8                      |      II|   7.30|     1024|  1.367e+04|        17|       16|    64|       yes|        -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_116_9   |       -|   0.00|     4107|  4.107e+04|         -|     4107|     -|        no|        -|         -|    409 (~0%)|  1167 (~0%)|    -|
+    |   o VITIS_LOOP_116_9                      |      II|   7.30|     4105|  4.105e+04|        74|       64|    64|       yes|        -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_120_10  |  Timing|  -6.05|     1026|  1.369e+04|         -|     1026|     -|        no|        -|         -|    155 (~0%)|   300 (~0%)|    -|
+    |   o VITIS_LOOP_120_10                     |      II|   7.30|     1024|  1.367e+04|        17|       16|    64|       yes|        -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_126_11  |       -|   0.00|     4107|  4.107e+04|         -|     4107|     -|        no|        -|         -|    409 (~0%)|  1167 (~0%)|    -|
+    |   o VITIS_LOOP_126_11                     |      II|   7.30|     4105|  4.105e+04|        74|       64|    64|       yes|        -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_130_12  |  Timing|  -6.05|     1026|  1.369e+04|         -|     1026|     -|        no|        -|         -|    155 (~0%)|   300 (~0%)|    -|
+    |   o VITIS_LOOP_130_12                     |      II|   7.30|     1024|  1.367e+04|        17|       16|    64|       yes|        -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_136_13  |       -|   0.00|     4107|  4.107e+04|         -|     4107|     -|        no|        -|         -|    409 (~0%)|  1167 (~0%)|    -|
+    |   o VITIS_LOOP_136_13                     |      II|   7.30|     4105|  4.105e+04|        74|       64|    64|       yes|        -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_140_14  |  Timing|  -6.05|     1026|  1.369e+04|         -|     1026|     -|        no|        -|         -|    155 (~0%)|   300 (~0%)|    -|
+    |   o VITIS_LOOP_140_14                     |      II|   7.30|     1024|  1.367e+04|        17|       16|    64|       yes|        -|         -|            -|           -|    -|
+    |  o VITIS_LOOP_80_3                        |       -|   7.30|      324|  4.324e+03|        81|        -|     4|        no|        -|         -|            -|           -|    -|
+    |   + pseudo_moe_Pipeline_VITIS_LOOP_24_2   |       -|   0.00|       70|    700.000|         -|       70|     -|        no|        -|         -|    375 (~0%)|   298 (~0%)|    -|
+    |    o VITIS_LOOP_24_2                      |      II|   7.30|       68|    680.000|         9|        4|    16|       yes|        -|         -|            -|           -|    -|
+    +-------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+----------+-------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++--------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface    | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|              | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++--------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem1  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem10 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem11 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem12 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem2  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem3  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem4  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem5  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem6  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem7  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem8  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem9  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
++--------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++-----------------+------------+---------------+--------+----------+
+| Interface       | Data Width | Address Width | Offset | Register |
++-----------------+------------+---------------+--------+----------+
+| s_axi_control   | 32         | 4             |        |          |
+| s_axi_control_r | 32         | 8             | 16     | 0        |
++-----------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++-----------------+-------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface       | Register    | Offset | Width | Access | Description                      | Bit Fields                                                           |
++-----------------+-------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control   | CTRL        | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control   | GIER        | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control   | IP_IER      | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control   | IP_ISR      | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control_r | input_r_1   | 0x10   | 32    | W      | Data signal of input_r           |                                                                      |
+| s_axi_control_r | input_r_2   | 0x14   | 32    | W      | Data signal of input_r           |                                                                      |
+| s_axi_control_r | w_gate_1    | 0x1c   | 32    | W      | Data signal of w_gate            |                                                                      |
+| s_axi_control_r | w_gate_2    | 0x20   | 32    | W      | Data signal of w_gate            |                                                                      |
+| s_axi_control_r | b_gate_1    | 0x28   | 32    | W      | Data signal of b_gate            |                                                                      |
+| s_axi_control_r | b_gate_2    | 0x2c   | 32    | W      | Data signal of b_gate            |                                                                      |
+| s_axi_control_r | w0_1        | 0x34   | 32    | W      | Data signal of w0                |                                                                      |
+| s_axi_control_r | w0_2        | 0x38   | 32    | W      | Data signal of w0                |                                                                      |
+| s_axi_control_r | b0_1        | 0x40   | 32    | W      | Data signal of b0                |                                                                      |
+| s_axi_control_r | b0_2        | 0x44   | 32    | W      | Data signal of b0                |                                                                      |
+| s_axi_control_r | w1_1        | 0x4c   | 32    | W      | Data signal of w1                |                                                                      |
+| s_axi_control_r | w1_2        | 0x50   | 32    | W      | Data signal of w1                |                                                                      |
+| s_axi_control_r | b1_1        | 0x58   | 32    | W      | Data signal of b1                |                                                                      |
+| s_axi_control_r | b1_2        | 0x5c   | 32    | W      | Data signal of b1                |                                                                      |
+| s_axi_control_r | w2_1        | 0x64   | 32    | W      | Data signal of w2                |                                                                      |
+| s_axi_control_r | w2_2        | 0x68   | 32    | W      | Data signal of w2                |                                                                      |
+| s_axi_control_r | b2_1        | 0x70   | 32    | W      | Data signal of b2                |                                                                      |
+| s_axi_control_r | b2_2        | 0x74   | 32    | W      | Data signal of b2                |                                                                      |
+| s_axi_control_r | w3_1        | 0x7c   | 32    | W      | Data signal of w3                |                                                                      |
+| s_axi_control_r | w3_2        | 0x80   | 32    | W      | Data signal of w3                |                                                                      |
+| s_axi_control_r | b3_1        | 0x88   | 32    | W      | Data signal of b3                |                                                                      |
+| s_axi_control_r | b3_2        | 0x8c   | 32    | W      | Data signal of b3                |                                                                      |
+| s_axi_control_r | gates_out_1 | 0x94   | 32    | W      | Data signal of gates_out         |                                                                      |
+| s_axi_control_r | gates_out_2 | 0x98   | 32    | W      | Data signal of gates_out         |                                                                      |
+| s_axi_control_r | output_r_1  | 0xa0   | 32    | W      | Data signal of output_r          |                                                                      |
+| s_axi_control_r | output_r_2  | 0xa4   | 32    | W      | Data signal of output_r          |                                                                      |
++-----------------+-------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------+-----------+---------------+
+| Argument  | Direction | Datatype      |
++-----------+-----------+---------------+
+| input     | in        | float const * |
+| w_gate    | in        | float const * |
+| b_gate    | in        | float const * |
+| w0        | in        | float const * |
+| b0        | in        | float const * |
+| w1        | in        | float const * |
+| b1        | in        | float const * |
+| w2        | in        | float const * |
+| b2        | in        | float const * |
+| w3        | in        | float const * |
+| b3        | in        | float const * |
+| gates_out | inout     | float*        |
+| output    | inout     | float*        |
++-----------+-----------+---------------+
+
+* SW-to-HW Mapping
++-----------+-----------------+-----------+----------+---------------------------------------+
+| Argument  | HW Interface    | HW Type   | HW Usage | HW Info                               |
++-----------+-----------------+-----------+----------+---------------------------------------+
+| input     | m_axi_gmem0     | interface |          |                                       |
+| input     | s_axi_control_r | interface | offset   |                                       |
+| w_gate    | m_axi_gmem1     | interface |          |                                       |
+| w_gate    | s_axi_control_r | register  | offset   | name=w_gate_1 offset=0x1c range=32    |
+| w_gate    | s_axi_control_r | register  | offset   | name=w_gate_2 offset=0x20 range=32    |
+| b_gate    | m_axi_gmem2     | interface |          |                                       |
+| b_gate    | s_axi_control_r | register  | offset   | name=b_gate_1 offset=0x28 range=32    |
+| b_gate    | s_axi_control_r | register  | offset   | name=b_gate_2 offset=0x2c range=32    |
+| w0        | m_axi_gmem3     | interface |          |                                       |
+| w0        | s_axi_control_r | register  | offset   | name=w0_1 offset=0x34 range=32        |
+| w0        | s_axi_control_r | register  | offset   | name=w0_2 offset=0x38 range=32        |
+| b0        | m_axi_gmem4     | interface |          |                                       |
+| b0        | s_axi_control_r | register  | offset   | name=b0_1 offset=0x40 range=32        |
+| b0        | s_axi_control_r | register  | offset   | name=b0_2 offset=0x44 range=32        |
+| w1        | m_axi_gmem5     | interface |          |                                       |
+| w1        | s_axi_control_r | register  | offset   | name=w1_1 offset=0x4c range=32        |
+| w1        | s_axi_control_r | register  | offset   | name=w1_2 offset=0x50 range=32        |
+| b1        | m_axi_gmem6     | interface |          |                                       |
+| b1        | s_axi_control_r | register  | offset   | name=b1_1 offset=0x58 range=32        |
+| b1        | s_axi_control_r | register  | offset   | name=b1_2 offset=0x5c range=32        |
+| w2        | m_axi_gmem7     | interface |          |                                       |
+| w2        | s_axi_control_r | register  | offset   | name=w2_1 offset=0x64 range=32        |
+| w2        | s_axi_control_r | register  | offset   | name=w2_2 offset=0x68 range=32        |
+| b2        | m_axi_gmem8     | interface |          |                                       |
+| b2        | s_axi_control_r | register  | offset   | name=b2_1 offset=0x70 range=32        |
+| b2        | s_axi_control_r | register  | offset   | name=b2_2 offset=0x74 range=32        |
+| w3        | m_axi_gmem9     | interface |          |                                       |
+| w3        | s_axi_control_r | register  | offset   | name=w3_1 offset=0x7c range=32        |
+| w3        | s_axi_control_r | register  | offset   | name=w3_2 offset=0x80 range=32        |
+| b3        | m_axi_gmem10    | interface |          |                                       |
+| b3        | s_axi_control_r | register  | offset   | name=b3_1 offset=0x88 range=32        |
+| b3        | s_axi_control_r | register  | offset   | name=b3_2 offset=0x8c range=32        |
+| gates_out | m_axi_gmem11    | interface |          |                                       |
+| gates_out | s_axi_control_r | register  | offset   | name=gates_out_1 offset=0x94 range=32 |
+| gates_out | s_axi_control_r | register  | offset   | name=gates_out_2 offset=0x98 range=32 |
+| output    | m_axi_gmem12    | interface |          |                                       |
+| output    | s_axi_control_r | interface | offset   |                                       |
++-----------+-----------------+-----------+----------+---------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+-------------------+-------------------------------------------------------------------------+
+| HW Interface | Direction | Length | Width | Loop              | Loop Location                                                           |
++--------------+-----------+--------+-------+-------------------+-------------------------------------------------------------------------+
+| m_axi_gmem0  | read      | 640    | 32    | VITIS_LOOP_71_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:71:22  |
+| m_axi_gmem1  | read      | 256    | 32    | VITIS_LOOP_80_3   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:80:26  |
+| m_axi_gmem10 | read      | 64     | 32    | VITIS_LOOP_136_13 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:136:28 |
+| m_axi_gmem11 | write     | 4      | 32    | VITIS_LOOP_95_5   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:95:26  |
+| m_axi_gmem12 | write     | 64     | 32    | VITIS_LOOP_100_6  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:100:27 |
+| m_axi_gmem2  | read      | 4      | 32    | VITIS_LOOP_80_3   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:80:26  |
+| m_axi_gmem3  | read      | 4096   | 32    | VITIS_LOOP_106_7  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:106:27 |
+| m_axi_gmem4  | read      | 64     | 32    | VITIS_LOOP_106_7  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:106:27 |
+| m_axi_gmem5  | read      | 4096   | 32    | VITIS_LOOP_116_9  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:116:27 |
+| m_axi_gmem6  | read      | 64     | 32    | VITIS_LOOP_116_9  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:116:27 |
+| m_axi_gmem7  | read      | 4096   | 32    | VITIS_LOOP_126_11 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:126:28 |
+| m_axi_gmem8  | read      | 64     | 32    | VITIS_LOOP_126_11 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:126:28 |
+| m_axi_gmem9  | read      | 4096   | 32    | VITIS_LOOP_136_13 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:136:28 |
++--------------+-----------+--------+-------+-------------------+-------------------------------------------------------------------------+
+
+* All M_AXI Variable Accesses
++--------------+-----------+-------------------------------------------------------------------------+-----------+--------------+--------+-------------------+-------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable  | Access Location                                                         | Direction | Burst Status | Length | Loop              | Loop Location                                                           | Resolution | Problem                                                                                                 |
++--------------+-----------+-------------------------------------------------------------------------+-----------+--------------+--------+-------------------+-------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| m_axi_gmem0  | input     | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:75:9   | read      | Widen Fail   |        | VITIS_LOOP_73_2   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:73:26  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | input     | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:75:9   | read      | Inferred     | 640    | VITIS_LOOP_71_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:71:22  |            |                                                                                                         |
+| m_axi_gmem1  | w_gate    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:28:33  | read      | Widen Fail   |        | VITIS_LOOP_24_2   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:24:22  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem1  | w_gate    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:28:33  | read      | Fail         |        | VITIS_LOOP_71_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:71:22  | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem1  | w_gate    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:28:33  | read      | Inferred     | 256    | VITIS_LOOP_80_3   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:80:26  |            |                                                                                                         |
+| m_axi_gmem10 | b3        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:138:42 | read      | Widen Fail   |        | VITIS_LOOP_136_13 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:136:28 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem10 | b3        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:138:42 | read      | Fail         |        | VITIS_LOOP_71_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:71:22  | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem10 | b3        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:138:42 | read      | Inferred     | 64     | VITIS_LOOP_136_13 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:136:28 |            |                                                                                                         |
+| m_axi_gmem11 | gates_out | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:97:23  | write     | Widen Fail   |        | VITIS_LOOP_95_5   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:95:26  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem11 | gates_out | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:97:23  | write     | Fail         |        |                   |                                                                         | 214-231    | Access is clobbered by load                                                                             |
+| m_axi_gmem11 | gates_out | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:97:23  | write     | Inferred     | 4      | VITIS_LOOP_95_5   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:95:26  |            |                                                                                                         |
+| m_axi_gmem12 | output    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:102:20 | write     | Widen Fail   |        | VITIS_LOOP_100_6  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:100:27 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem12 | output    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:102:20 | write     | Fail         |        |                   |                                                                         | 214-231    | Access is clobbered by store                                                                            |
+| m_axi_gmem12 | output    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:102:20 | write     | Inferred     | 64     | VITIS_LOOP_100_6  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:100:27 |            |                                                                                                         |
+| m_axi_gmem12 | output    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:112:20 | write     | Fail         |        |                   |                                                                         | 214-231    | Access is clobbered by load                                                                             |
+| m_axi_gmem12 | output    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:112:20 | read      | Fail         |        |                   |                                                                         | 214-231    | Access is clobbered by store                                                                            |
+| m_axi_gmem12 | output    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:122:20 | write     | Fail         |        |                   |                                                                         | 214-231    | Access is clobbered by load                                                                             |
+| m_axi_gmem12 | output    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:122:20 | read      | Fail         |        |                   |                                                                         | 214-231    | Access is clobbered by store                                                                            |
+| m_axi_gmem12 | output    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:132:20 | write     | Fail         |        |                   |                                                                         | 214-231    | Access is clobbered by load                                                                             |
+| m_axi_gmem12 | output    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:132:20 | read      | Fail         |        |                   |                                                                         | 214-231    | Access is clobbered by store                                                                            |
+| m_axi_gmem12 | output    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:142:20 | write     | Fail         |        |                   |                                                                         | 214-231    | Access is clobbered by load                                                                             |
+| m_axi_gmem12 | output    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:142:20 | read      | Fail         |        |                   |                                                                         | 214-231    | Access is clobbered by store                                                                            |
+| m_axi_gmem2  | b_gate    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:81:55  | read      | Widen Fail   |        | VITIS_LOOP_80_3   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:80:26  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem2  | b_gate    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:81:55  | read      | Fail         |        | VITIS_LOOP_71_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:71:22  | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem2  | b_gate    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:81:55  | read      | Inferred     | 4      | VITIS_LOOP_80_3   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:80:26  |            |                                                                                                         |
+| m_axi_gmem3  | w0        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:28:33  | read      | Widen Fail   |        | VITIS_LOOP_106_7  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:106:27 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem3  | w0        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:28:33  | read      | Fail         |        | VITIS_LOOP_71_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:71:22  | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem3  | w0        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:28:33  | read      | Inferred     | 4096   | VITIS_LOOP_106_7  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:106:27 |            |                                                                                                         |
+| m_axi_gmem4  | b0        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:108:42 | read      | Widen Fail   |        | VITIS_LOOP_106_7  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:106:27 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem4  | b0        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:108:42 | read      | Fail         |        | VITIS_LOOP_71_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:71:22  | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem4  | b0        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:108:42 | read      | Inferred     | 64     | VITIS_LOOP_106_7  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:106:27 |            |                                                                                                         |
+| m_axi_gmem5  | w1        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:28:33  | read      | Widen Fail   |        | VITIS_LOOP_116_9  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:116:27 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem5  | w1        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:28:33  | read      | Fail         |        | VITIS_LOOP_71_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:71:22  | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem5  | w1        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:28:33  | read      | Inferred     | 4096   | VITIS_LOOP_116_9  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:116:27 |            |                                                                                                         |
+| m_axi_gmem6  | b1        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:118:42 | read      | Widen Fail   |        | VITIS_LOOP_116_9  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:116:27 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem6  | b1        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:118:42 | read      | Fail         |        | VITIS_LOOP_71_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:71:22  | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem6  | b1        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:118:42 | read      | Inferred     | 64     | VITIS_LOOP_116_9  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:116:27 |            |                                                                                                         |
+| m_axi_gmem7  | w2        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:28:33  | read      | Widen Fail   |        | VITIS_LOOP_126_11 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:126:28 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem7  | w2        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:28:33  | read      | Fail         |        | VITIS_LOOP_71_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:71:22  | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem7  | w2        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:28:33  | read      | Inferred     | 4096   | VITIS_LOOP_126_11 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:126:28 |            |                                                                                                         |
+| m_axi_gmem8  | b2        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:128:42 | read      | Widen Fail   |        | VITIS_LOOP_126_11 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:126:28 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem8  | b2        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:128:42 | read      | Fail         |        | VITIS_LOOP_71_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:71:22  | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem8  | b2        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:128:42 | read      | Inferred     | 64     | VITIS_LOOP_126_11 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:126:28 |            |                                                                                                         |
+| m_axi_gmem9  | w3        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:28:33  | read      | Widen Fail   |        | VITIS_LOOP_136_13 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:136:28 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem9  | w3        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:28:33  | read      | Fail         |        | VITIS_LOOP_71_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:71:22  | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem9  | w3        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:28:33  | read      | Inferred     | 4096   | VITIS_LOOP_136_13 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_2/src/pseudo_moe.cpp:136:28 |            |                                                                                                         |
++--------------+-----------+-------------------------------------------------------------------------+-----------+--------------+--------+-------------------+-------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------+-----+--------+--------------+----------+---------+---------+
+| Name                                      | DSP | Pragma | Variable     | Op       | Impl    | Latency |
++-------------------------------------------+-----+--------+--------------+----------+---------+---------+
+| + pseudo_moe                              | 14  |        |              |          |         |         |
+|   add_ln71_fu_1864_p2                     |     |        | add_ln71     | add      | fabric  | 0       |
+|   add_ln80_fu_1876_p2                     |     |        | add_ln80     | add      | fabric  | 0       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 | 2   |        | sum_1        | fadd     | fulldsp | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 | 2   |        | sum_2        | fadd     | fulldsp | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 | 2   |        | sum_3        | fadd     | fulldsp | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 | 2   |        | logits_0     | fadd     | fulldsp | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | empty_61     | add      | fabric  | 0       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | empty_63     | add      | fabric  | 0       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load       | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_1     | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_2     | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_3     | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_4     | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_5     | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_6     | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_7     | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_8     | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_9     | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_10    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_11    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_12    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_13    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_14    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_15    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_16    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_17    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_18    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_19    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_20    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_21    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_22    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_23    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_24    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_25    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_26    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_27    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_28    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_29    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_30    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_31    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_32    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_33    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_34    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_35    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_36    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_37    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_38    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_39    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_40    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_41    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_42    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_43    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_44    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_45    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_46    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_47    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_48    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_49    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_50    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_51    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_52    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_53    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_54    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_55    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_56    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_57    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_58    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_59    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_60    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_61    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | x_load_62    | ram_1wnr | auto    | 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | x_load_63    | ram_1wnr | auto    | 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | empty_73     | add      | fabric  | 0       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U361 |     |        | empty_78     | add      | fabric  | 0       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U363      |     |        | empty_83     | add      | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_73_2    | 0   |        |              |          |         |         |
+|    add_ln73_fu_94_p2                      |     |        | add_ln73     | add      | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_24_2    | 0   |        |              |          |         |         |
+|    add_ln24_fu_250_p2                     |     |        | add_ln24     | add      | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_89_4    | 7   |        |              |          |         |         |
+|    add_ln89_fu_232_p2                     |     |        | add_ln89     | add      | fabric  | 0       |
+|    fexp_32ns_32ns_32_4_full_dsp_1_U15     | 7   |        | exp_values_1 | fexp     | fulldsp | 3       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_95_5    | 0   |        |              |          |         |         |
+|    add_ln95_fu_131_p2                     |     |        | add_ln95     | add      | fabric  | 0       |
+|    fdiv_32ns_32ns_32_6_no_dsp_1_U33       |     |        | div          | fdiv     | fabric  | 5       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_100_6   | 0   |        |              |          |         |         |
+|    add_ln100_fu_83_p2                     |     |        | add_ln100    | add      | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_106_7   | 0   |        |              |          |         |         |
+|    add_ln106_fu_689_p2                    |     |        | add_ln106    | add      | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_110_8   | 0   |        |              |          |         |         |
+|    add_ln110_fu_156_p2                    |     |        | add_ln110    | add      | fabric  | 0       |
+|    add_ln112_fu_185_p2                    |     |        | add_ln112    | add      | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_116_9   | 0   |        |              |          |         |         |
+|    add_ln116_fu_689_p2                    |     |        | add_ln116    | add      | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_120_10  | 0   |        |              |          |         |         |
+|    add_ln120_fu_156_p2                    |     |        | add_ln120    | add      | fabric  | 0       |
+|    add_ln122_fu_185_p2                    |     |        | add_ln122    | add      | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_126_11  | 0   |        |              |          |         |         |
+|    add_ln126_fu_689_p2                    |     |        | add_ln126    | add      | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_130_12  | 0   |        |              |          |         |         |
+|    add_ln130_fu_156_p2                    |     |        | add_ln130    | add      | fabric  | 0       |
+|    add_ln132_fu_185_p2                    |     |        | add_ln132    | add      | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_136_13  | 0   |        |              |          |         |         |
+|    add_ln136_fu_689_p2                    |     |        | add_ln136    | add      | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_140_14  | 0   |        |              |          |         |         |
+|    add_ln140_fu_156_p2                    |     |        | add_ln140    | add      | fabric  | 0       |
+|    add_ln142_fu_185_p2                    |     |        | add_ln142    | add      | fabric  | 0       |
++-------------------------------------------+-----+--------+--------------+----------+---------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++---------------------+--------------+-----------+------+------+--------+---------------+------+---------+------------------+
+| Name                | Usage        | Type      | BRAM | URAM | Pragma | Variable      | Impl | Latency | Bitwidth, Depth, |
+|                     |              |           |      |      |        |               |      |         | Banks            |
++---------------------+--------------+-----------+------+------+--------+---------------+------+---------+------------------+
+| + pseudo_moe        |              |           | 85   | 0    |        |               |      |         |                  |
+|   control_s_axi_U   | interface    | s_axilite |      |      |        |               |      |         |                  |
+|   control_r_s_axi_U | interface    | s_axilite |      |      |        |               |      |         |                  |
+|   gmem0_m_axi_U     | interface    | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem1_m_axi_U     | interface    | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem10_m_axi_U    | interface    | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem11_m_axi_U    | interface    | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem12_m_axi_U    | interface    | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem2_m_axi_U     | interface    | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem3_m_axi_U     | interface    | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem4_m_axi_U     | interface    | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem5_m_axi_U     | interface    | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem6_m_axi_U     | interface    | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem7_m_axi_U     | interface    | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem8_m_axi_U     | interface    | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem9_m_axi_U     | interface    | m_axi     | 4    |      |        |               |      |         |                  |
+|   x_U               | rom_np array |           | 32   |      |        | x             | auto | 1       | 32, 64, 1        |
+|   expert_result_U   | ram_1p array |           | 2    |      |        | expert_result | auto | 1       | 32, 64, 1        |
++---------------------+--------------+-----------+------+------+--------+---------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+-------------------------------------------------+------------------------------------------------+
+| Type            | Options                                         | Location                                       |
++-----------------+-------------------------------------------------+------------------------------------------------+
+| inline          |                                                 | src/pseudo_moe.cpp:15 in dot64                 |
+| array_partition | variable=partial complete                       | src/pseudo_moe.cpp:17 in dot64, partial        |
+| unroll          |                                                 | src/pseudo_moe.cpp:20 in dot64                 |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:25 in dot64                 |
+| unroll          |                                                 | src/pseudo_moe.cpp:27 in dot64                 |
+| unroll          |                                                 | src/pseudo_moe.cpp:34 in dot64                 |
+| interface       | m_axi port=input offset=slave bundle=gmem0      | src/pseudo_moe.cpp:51 in pseudo_moe, input     |
+| interface       | m_axi port=w_gate offset=slave bundle=gmem1     | src/pseudo_moe.cpp:52 in pseudo_moe, w_gate    |
+| interface       | m_axi port=b_gate offset=slave bundle=gmem2     | src/pseudo_moe.cpp:53 in pseudo_moe, b_gate    |
+| interface       | m_axi port=w0 offset=slave bundle=gmem3         | src/pseudo_moe.cpp:54 in pseudo_moe, w0        |
+| interface       | m_axi port=b0 offset=slave bundle=gmem4         | src/pseudo_moe.cpp:55 in pseudo_moe, b0        |
+| interface       | m_axi port=w1 offset=slave bundle=gmem5         | src/pseudo_moe.cpp:56 in pseudo_moe, w1        |
+| interface       | m_axi port=b1 offset=slave bundle=gmem6         | src/pseudo_moe.cpp:57 in pseudo_moe, b1        |
+| interface       | m_axi port=w2 offset=slave bundle=gmem7         | src/pseudo_moe.cpp:58 in pseudo_moe, w2        |
+| interface       | m_axi port=b2 offset=slave bundle=gmem8         | src/pseudo_moe.cpp:59 in pseudo_moe, b2        |
+| interface       | m_axi port=w3 offset=slave bundle=gmem9         | src/pseudo_moe.cpp:60 in pseudo_moe, w3        |
+| interface       | m_axi port=b3 offset=slave bundle=gmem10        | src/pseudo_moe.cpp:61 in pseudo_moe, b3        |
+| interface       | m_axi port=gates_out offset=slave bundle=gmem11 | src/pseudo_moe.cpp:62 in pseudo_moe, gates_out |
+| interface       | m_axi port=output offset=slave bundle=gmem12    | src/pseudo_moe.cpp:63 in pseudo_moe, output    |
+| interface       | s_axilite port=return bundle=control            | src/pseudo_moe.cpp:64 in pseudo_moe, return    |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:74 in pseudo_moe            |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:90 in pseudo_moe            |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:96 in pseudo_moe            |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:101 in pseudo_moe           |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:107 in pseudo_moe           |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:111 in pseudo_moe           |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:117 in pseudo_moe           |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:121 in pseudo_moe           |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:127 in pseudo_moe           |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:131 in pseudo_moe           |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:137 in pseudo_moe           |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:141 in pseudo_moe           |
++-----------------+-------------------------------------------------+------------------------------------------------+
+
+

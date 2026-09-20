@@ -1,0 +1,96 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_expert" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_expert" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=w_local cyclic factor=8 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:26:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_expert" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:32:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_expert" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=partial complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:36:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_expert" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:42:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_expert" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:45:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_expert" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:54:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_expert" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/scripts/run_hls.tcl:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="pseudo_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=pseudo_moe" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:76:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pseudo_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=input offset=slave bundle=gmem0" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:77:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pseudo_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=w_gate offset=slave bundle=gmem1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:78:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pseudo_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=b_gate offset=slave bundle=gmem2" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:80:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pseudo_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=w0 offset=slave bundle=gmem3" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:81:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pseudo_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=b0 offset=slave bundle=gmem4" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:82:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pseudo_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=w1 offset=slave bundle=gmem5" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:83:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pseudo_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=b1 offset=slave bundle=gmem6" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:84:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pseudo_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=w2 offset=slave bundle=gmem7" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:85:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pseudo_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=b2 offset=slave bundle=gmem8" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:86:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pseudo_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=w3 offset=slave bundle=gmem9" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:87:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pseudo_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=b3 offset=slave bundle=gmem10" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:89:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pseudo_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=gates_out offset=slave bundle=gmem11" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:90:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pseudo_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=output offset=slave bundle=gmem12" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:92:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pseudo_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:99:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pseudo_moe" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:44:19" msg_body="Loop 'VITIS_LOOP_44_5' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_44_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:17:0" msg_body="Unrolling loop 'VITIS_LOOP_35_3' (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:35:19) in function 'compute_expert' completely with a factor of 8">
+        <args Factor="8" LoopLoc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:35:19" LoopName="VITIS_LOOP_35_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:17:0" msg_body="Unrolling loop 'VITIS_LOOP_44_5' (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:44:19) in function 'compute_expert' completely with a factor of 8">
+        <args Factor="8" LoopLoc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:44:19" LoopName="VITIS_LOOP_44_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:17:0" msg_body="Unrolling loop 'VITIS_LOOP_53_6' (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:53:26) in function 'compute_expert' completely with a factor of 8">
+        <args Factor="8" LoopLoc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:53:26" LoopName="VITIS_LOOP_53_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:22:8" msg_body="Applying array_partition to 'w_local': Cyclic partitioning with factor 8 on dimension 1.">
+        <args Dim="1" Factor="8" Mode="Cyclic" UOName="w_local"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:107:31" msg_body="Loop 'VITIS_LOOP_107_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_107_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:75:0" msg_body="Unrolling loop 'VITIS_LOOP_107_3' (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:107:31) in function 'pseudo_moe' completely with a factor of 64">
+        <args Factor="64" LoopLoc="/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:107:31" LoopName="VITIS_LOOP_107_3"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

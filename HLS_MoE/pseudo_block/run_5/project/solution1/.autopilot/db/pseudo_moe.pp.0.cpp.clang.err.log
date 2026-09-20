@@ -1,0 +1,73 @@
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:18:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_expert_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE off
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:23:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_expert_XLX_SEP_ PragmaOptions=variable=w_local cyclic factor=8 dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=w_local cyclic factor=8 dim=1
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:26:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_expert_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:32:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_expert_XLX_SEP_ PragmaOptions=variable=partial complete_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=partial complete
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:36:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_expert_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:42:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_expert_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:45:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_expert_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:54:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_expert_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/scripts/run_hls.tcl:14:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=pseudo_moe_XLX_SEP_ PragmaOptions=name=pseudo_moe_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=pseudo_moe
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:76:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pseudo_moe_XLX_SEP_ PragmaOptions=m_axi port=input offset=slave bundle=gmem0_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=input offset=slave bundle=gmem0
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:77:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pseudo_moe_XLX_SEP_ PragmaOptions=m_axi port=w_gate offset=slave bundle=gmem1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=w_gate offset=slave bundle=gmem1
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:78:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pseudo_moe_XLX_SEP_ PragmaOptions=m_axi port=b_gate offset=slave bundle=gmem2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=b_gate offset=slave bundle=gmem2
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:80:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pseudo_moe_XLX_SEP_ PragmaOptions=m_axi port=w0 offset=slave bundle=gmem3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=w0 offset=slave bundle=gmem3
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:81:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pseudo_moe_XLX_SEP_ PragmaOptions=m_axi port=b0 offset=slave bundle=gmem4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=b0 offset=slave bundle=gmem4
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:82:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pseudo_moe_XLX_SEP_ PragmaOptions=m_axi port=w1 offset=slave bundle=gmem5_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=w1 offset=slave bundle=gmem5
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:83:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pseudo_moe_XLX_SEP_ PragmaOptions=m_axi port=b1 offset=slave bundle=gmem6_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=b1 offset=slave bundle=gmem6
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:84:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pseudo_moe_XLX_SEP_ PragmaOptions=m_axi port=w2 offset=slave bundle=gmem7_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=w2 offset=slave bundle=gmem7
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:85:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pseudo_moe_XLX_SEP_ PragmaOptions=m_axi port=b2 offset=slave bundle=gmem8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=b2 offset=slave bundle=gmem8
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:86:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pseudo_moe_XLX_SEP_ PragmaOptions=m_axi port=w3 offset=slave bundle=gmem9_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=w3 offset=slave bundle=gmem9
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:87:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pseudo_moe_XLX_SEP_ PragmaOptions=m_axi port=b3 offset=slave bundle=gmem10_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=b3 offset=slave bundle=gmem10
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:89:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pseudo_moe_XLX_SEP_ PragmaOptions=m_axi port=gates_out offset=slave bundle=gmem11_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=gates_out offset=slave bundle=gmem11
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:90:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pseudo_moe_XLX_SEP_ PragmaOptions=m_axi port=output offset=slave bundle=gmem12_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=output offset=slave bundle=gmem12
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:92:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pseudo_moe_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=return bundle=control
+        ^
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/src/pseudo_moe.cpp:99:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pseudo_moe_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE off
+        ^
+24 warnings generated.

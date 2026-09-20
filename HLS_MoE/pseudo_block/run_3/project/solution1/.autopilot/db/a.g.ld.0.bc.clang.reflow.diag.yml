@@ -1,0 +1,1577 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 34, Column: 19 }
+Function:        _ZL14compute_expertPKfS0_S0_Pf
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_34_4
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 17, Column: 0 }
+Function:        _ZL14compute_expertPKfS0_S0_Pf
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_25_2
+  - String:          ''' ('
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:25:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_expert
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 17, Column: 0 }
+Function:        _ZL14compute_expertPKfS0_S0_Pf
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_34_4
+  - String:          ''' ('
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:34:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_expert
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 17, Column: 0 }
+Function:        _ZL14compute_expertPKfS0_S0_Pf
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_43_5
+  - String:          ''' ('
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:43:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_expert
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 97, Column: 30 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '64'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_97_3
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:97:30'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 98, Column: 24 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 94, Column: 26 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '256'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        w_gate15seq
+  - ArrayName:       w_gate
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_94_2
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:94:26'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 98, Column: 43 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.12
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 94, Column: 26 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        b_gate16seq
+  - ArrayName:       b_gate
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_94_2
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:94:26'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 95, Column: 25 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_97_3.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 116, Column: 27 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep17seq
+  - ArrayName:       gates_out
+  - String:          ' '
+  - BundleName:      gmem11
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_116_5
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:116:27'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 117, Column: 34 }
+  - OrigDirection:   write
+  - OrigID:          for.inc49.store.8
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 121, Column: 27 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '64'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep18seq
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem12
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_121_6
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:121:27'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 122, Column: 31 }
+  - OrigDirection:   write
+  - OrigID:          for.inc61.store.5
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 97, Column: 30 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 97, Column: 30 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_94_2
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:94:26'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 129, Column: 31 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 129, Column: 31 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 129, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          for.inc83.load.7
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem12
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 129, Column: 31 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 129, Column: 31 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 129, Column: 31 }
+  - OrigDirection:   write
+  - OrigID:          for.inc83.store.9
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem12
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 137, Column: 31 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 137, Column: 31 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 137, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          for.inc107.load.7
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem12
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 137, Column: 31 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 137, Column: 31 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 137, Column: 31 }
+  - OrigDirection:   write
+  - OrigID:          for.inc107.store.9
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem12
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 145, Column: 31 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 145, Column: 31 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 145, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          for.inc131.load.7
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem12
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 145, Column: 31 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 145, Column: 31 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 145, Column: 31 }
+  - OrigDirection:   write
+  - OrigID:          for.inc131.store.9
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem12
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 153, Column: 31 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 153, Column: 31 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 153, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          for.inc155.load.7
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem12
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 153, Column: 31 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 153, Column: 31 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 153, Column: 31 }
+  - OrigDirection:   write
+  - OrigID:          for.inc155.store.9
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem12
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_128_7.load.3
+  - ArrayName:       gates_out
+  - String:          ' '
+  - BundleName:      gmem11
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_88_1
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:88:22'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_136_8.load.3
+  - ArrayName:       gates_out
+  - String:          ' '
+  - BundleName:      gmem11
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_88_1
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:88:22'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_144_9.load.3
+  - ArrayName:       gates_out
+  - String:          ' '
+  - BundleName:      gmem11
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_88_1
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:88:22'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_152_10.load.3
+  - ArrayName:       gates_out
+  - String:          ' '
+  - BundleName:      gmem11
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_88_1
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:88:22'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 94, Column: 26 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 94, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          b_gate16seq
+  - ArrayName:       b_gate
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_88_1
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:88:22'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 94, Column: 26 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 94, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          w_gate15seq
+  - ArrayName:       w_gate
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_88_1
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:88:22'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 116, Column: 27 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 116, Column: 27 }
+  - OrigDirection:   write
+  - OrigID:          scevgep17seq
+  - ArrayName:       gates_out
+  - String:          ' '
+  - BundleName:      gmem11
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 121, Column: 27 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 129, Column: 31 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 121, Column: 27 }
+  - OrigDirection:   write
+  - OrigID:          scevgep18seq
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem12
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 31, Column: 26 }
+Function:        _ZL14compute_expertPKfS0_S0_Pf
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '64'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       x
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_31_3
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:31:26'
+  - String:          ' '
+  - Function:        'compute_expert(float const*, float const*, float const*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 17, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 37, Column: 34 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_34_4.load.17
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 37, Column: 34 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_34_4.load.26
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 37, Column: 34 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_34_4.load.35
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 37, Column: 34 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_34_4.load.44
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 20, Column: 19 }
+Function:        _ZL14compute_expertPKfS0_S0_Pf
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '4096'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        w1seq
+  - ArrayName:       w
+  - String:          ' '
+  - BundleName:      gmem3,gmem5,gmem7,gmem9
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_20_1
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:20:19'
+  - String:          ' '
+  - Function:        'compute_expert(float const*, float const*, float const*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 17, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 37, Column: 41 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_34_4.load.29
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 37, Column: 41 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_34_4.load.38
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 37, Column: 41 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_34_4.load.47
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 37, Column: 41 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_34_4.load.56
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 20, Column: 19 }
+Function:        _ZL14compute_expertPKfS0_S0_Pf
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '64'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        b2seq
+  - ArrayName:       b
+  - String:          ' '
+  - BundleName:      gmem4,gmem6,gmem8,gmem10
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_20_1
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:20:19'
+  - String:          ' '
+  - Function:        'compute_expert(float const*, float const*, float const*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 17, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 42, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_43_5.load.7
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 31, Column: 26 }
+Function:        _ZL14compute_expertPKfS0_S0_Pf
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 31, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       x
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_20_1
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:20:19'
+  - String:          ' '
+  - Function:        'compute_expert(float const*, float const*, float const*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 17, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 121, Column: 27 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 121, Column: 27 }
+  - OrigDirection:   write
+  - OrigID:          scevgep18seq
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem12
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_121_6
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:121:27'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 116, Column: 27 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 116, Column: 27 }
+  - OrigDirection:   write
+  - OrigID:          scevgep17seq
+  - ArrayName:       gates_out
+  - String:          ' '
+  - BundleName:      gmem11
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_116_5
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:116:27'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 97, Column: 30 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 97, Column: 30 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_97_3
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:97:30'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 94, Column: 26 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 94, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          w_gate15seq
+  - ArrayName:       w_gate
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_97_3
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:97:30'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 94, Column: 26 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 94, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          b_gate16seq
+  - ArrayName:       b_gate
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_94_2
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:94:26'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 20, Column: 19 }
+Function:        _ZL14compute_expertPKfS0_S0_Pf
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 20, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          b2seq
+  - ArrayName:       b
+  - String:          ' '
+  - BundleName:      gmem4,gmem6,gmem8,gmem10
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_20_1
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:20:19'
+  - String:          ' '
+  - Function:        'compute_expert(float const*, float const*, float const*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 17, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 31, Column: 26 }
+Function:        _ZL14compute_expertPKfS0_S0_Pf
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 31, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       x
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_31_3
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:31:26'
+  - String:          ' '
+  - Function:        'compute_expert(float const*, float const*, float const*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 17, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 20, Column: 19 }
+Function:        _ZL14compute_expertPKfS0_S0_Pf
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 20, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          w1seq
+  - ArrayName:       w
+  - String:          ' '
+  - BundleName:      gmem3,gmem5,gmem7,gmem9
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_31_3
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:31:26'
+  - String:          ' '
+  - Function:        'compute_expert(float const*, float const*, float const*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 17, Column: 0 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_152_10
+  - String:          '> at '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:152:28'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_144_9
+  - String:          '> at '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:144:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_136_8
+  - String:          '> at '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:136:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_128_7
+  - String:          '> at '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:128:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_121_6
+  - String:          '> at '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:121:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_116_5
+  - String:          '> at '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:116:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_111_4
+  - String:          '> at '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:111:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_94_2
+  - String:          '> at '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:94:26'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 97, Column: 30 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_97_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 65, Column: 0 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_97_3
+  - String:          ''' ('
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:97:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pseudo_moe
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 20, Column: 19 }
+Function:        _ZL14compute_expertPKfS0_S0_Pf.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '4096'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_20_1
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:20:19'
+  - String:          ' '
+  - Function:        'compute_expert(float const*, float const*, float const*, float*) (.1)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 17, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 20, Column: 19 }
+Function:        _ZL14compute_expertPKfS0_S0_Pf.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '4096'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_20_1
+  - String:          '''('
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:20:19'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem3
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 20, Column: 19 }
+Function:        _ZL14compute_expertPKfS0_S0_Pf.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '64'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem4
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_20_1
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:20:19'
+  - String:          ' '
+  - Function:        'compute_expert(float const*, float const*, float const*, float*) (.1)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 17, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 20, Column: 19 }
+Function:        _ZL14compute_expertPKfS0_S0_Pf.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '64'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_20_1
+  - String:          '''('
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:20:19'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem4
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 31, Column: 26 }
+Function:        _ZL14compute_expertPKfS0_S0_Pf.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '64'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_31_3
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:31:26'
+  - String:          ' '
+  - Function:        'compute_expert(float const*, float const*, float const*, float*) (.1)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 17, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 31, Column: 26 }
+Function:        _ZL14compute_expertPKfS0_S0_Pf.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '64'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_31_3
+  - String:          '''('
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:31:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 94, Column: 26 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '256'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_94_2
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:94:26'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 94, Column: 26 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '256'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_94_2
+  - String:          '''('
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:94:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 94, Column: 26 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_94_2
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:94:26'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 94, Column: 26 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_94_2
+  - String:          '''('
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:94:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 97, Column: 30 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '64'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 97, Column: 30 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '64'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 116, Column: 27 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem11
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_116_5
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:116:27'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 116, Column: 27 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_116_5
+  - String:          '''('
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:116:27'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem11
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 121, Column: 27 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '64'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq4
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem12
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_121_6
+  - String:          ' '
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:121:27'
+  - String:          ' '
+  - Function:        'pseudo_moe(float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float const*, float*, float*)'
+    DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                       Line: 65, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp, 
+                   Line: 121, Column: 27 }
+Function:        _Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '64'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_121_6
+  - String:          '''('
+  - LoopLoc:         '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_3/src/pseudo_moe.cpp:121:27'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem12
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

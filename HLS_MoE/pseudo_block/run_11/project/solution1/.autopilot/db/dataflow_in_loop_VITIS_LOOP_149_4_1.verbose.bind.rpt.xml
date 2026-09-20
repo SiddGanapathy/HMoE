@@ -1,0 +1,56 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'dataflow_in_loop_VITIS_LOOP_149_4_1'" level="0">
+<item name = "Date">Sun Sep 20 21:17:00 2026
+</item>
+<item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
+<item name = "Project">project</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu13p_CIV-figd2104-3-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">516, 516, 5.160 us, 5.160 us, 339, 339, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="call_ln0_entry_proc_fu_640">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_dataflow_in_loop_VITIS_LOOP_149_4_1_Loop_VITIS_LOOP_158_5_proc4_fu_650">dataflow_in_loop_VITIS_LOOP_149_4_1_Loop_VITIS_LOOP_158_5_proc4, 338, 338, 3.380 us, 3.380 us, 338, 338, no</column>
+<column name="grp_dataflow_in_loop_VITIS_LOOP_149_4_1_Loop_VITIS_LOOP_175_7_proc5_fu_698">dataflow_in_loop_VITIS_LOOP_149_4_1_Loop_VITIS_LOOP_175_7_proc5, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+<column name="grp_dataflow_in_loop_VITIS_LOOP_149_4_1_Loop_VITIS_LOOP_201_9_proc7_fu_705">dataflow_in_loop_VITIS_LOOP_149_4_1_Loop_VITIS_LOOP_201_9_proc7, 66, 66, 0.660 us, 0.660 us, 66, 66, no</column>
+<column name="grp_dataflow_in_loop_VITIS_LOOP_149_4_1_Loop_VITIS_LOOP_181_8_proc6_fu_806">dataflow_in_loop_VITIS_LOOP_149_4_1_Loop_VITIS_LOOP_181_8_proc6, 18, 18, 0.180 us, 0.180 us, 18, 18, no</column>
+<column name="grp_compute_expert_0_8_fu_817">compute_expert_0_8, 298, 298, 2.980 us, 2.980 us, 298, 298, no</column>
+<column name="grp_compute_expert_1_9_fu_874">compute_expert_1_9, 298, 298, 2.980 us, 2.980 us, 298, 298, no</column>
+<column name="grp_compute_expert_2_10_fu_931">compute_expert_2_10, 298, 298, 2.980 us, 2.980 us, 298, 298, no</column>
+<column name="grp_compute_expert_3_11_fu_988">compute_expert_3_11, 298, 298, 2.980 us, 2.980 us, 298, 298, no</column>
+<column name="grp_combine_experts12_fu_1045">combine_experts12, 76, 76, 0.760 us, 0.760 us, 76, 76, no</column>
+<column name="grp_dataflow_in_loop_VITIS_LOOP_149_4_1_Loop_VITIS_LOOP_238_10_proc13_fu_1055">dataflow_in_loop_VITIS_LOOP_149_4_1_Loop_VITIS_LOOP_238_10_proc13, 73, 73, 0.730 us, 0.730 us, 73, 73, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

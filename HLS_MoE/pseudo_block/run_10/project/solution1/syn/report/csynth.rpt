@@ -1,0 +1,629 @@
+
+
+================================================================
+== Synthesis Summary Report of 'pseudo_moe'
+================================================================
++ General Information: 
+    * Date:           Sun Sep 20 21:00:15 2026
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        project
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu13p_CIV-figd2104-3-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+-----------+-------------+------------+-----+
+    |                                          Modules                                          |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |          |           |             |            |     |
+    |                                          & Loops                                          |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |    DSP    |      FF     |     LUT    | URAM|
+    +-------------------------------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+-----------+-------------+------------+-----+
+    |+ pseudo_moe                                                                               |  Timing|  -1.02|    17197|  1.720e+05|         -|    17198|     -|        no|  156 (2%)|   128 (1%)|   43377 (1%)|  42843 (2%)|    -|
+    | + pseudo_moe_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2                                   |       -|   0.00|      643|  6.430e+03|         -|      643|     -|        no|         -|          -|     58 (~0%)|   153 (~0%)|    -|
+    |  o VITIS_LOOP_104_1_VITIS_LOOP_105_2                                                      |       -|   7.30|      641|  6.410e+03|         3|        1|   640|       yes|         -|          -|            -|           -|    -|
+    | + pseudo_moe_Pipeline_VITIS_LOOP_116_3                                                    |       -|   0.00|     4099|  4.099e+04|         -|     4099|     -|        no|         -|          -|    170 (~0%)|   119 (~0%)|    -|
+    |  o VITIS_LOOP_116_3                                                                       |       -|   7.30|     4097|  4.097e+04|         3|        1|  4096|       yes|         -|          -|            -|           -|    -|
+    | + dataflow_parent_loop_proc                                                               |  Timing|  -1.02|    13086|  1.309e+05|         -|    13086|     -|        no|   8 (~0%)|   128 (1%)|  30543 (~0%)|  28166 (1%)|    -|
+    |  o VITIS_LOOP_129_4                                                                       |       -|   7.30|    13085|  1.308e+05|      1449|        -|    10|        no|         -|          -|            -|           -|    -|
+    |   + dataflow_in_loop_VITIS_LOOP_129_4_1*                                                  |  Timing|  -1.02|     1446|  1.446e+04|         -|     1293|     -|  dataflow|   8 (~0%)|   128 (1%)|  30469 (~0%)|  28130 (1%)|    -|
+    |    + entry_proc                                                                           |       -|   5.78|        0|      0.000|         -|        0|     -|        no|         -|          -|      2 (~0%)|    29 (~0%)|    -|
+    |    + dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_140_5_proc9                      |       -|   0.00|      338|  3.380e+03|         -|      338|     -|        no|         -|    5 (~0%)|   4230 (~0%)|  2562 (~0%)|    -|
+    |     + dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_140_5_proc9_Pipeline_VITIS_L    |       -|   0.00|      328|  3.280e+03|         -|      328|     -|        no|         -|    5 (~0%)|   4077 (~0%)|  2166 (~0%)|    -|
+    |      o VITIS_LOOP_140_5                                                                   |      II|   7.30|      326|  3.260e+03|       135|       64|     4|       yes|         -|          -|            -|           -|    -|
+    |    + dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_157_7_proc10                     |       -|   0.89|       14|    140.000|         -|       14|     -|        no|         -|   11 (~0%)|    845 (~0%)|  1395 (~0%)|    -|
+    |     o VITIS_LOOP_157_7                                                                    |       -|   7.30|       12|    120.000|        10|        1|     4|       yes|         -|          -|            -|           -|    -|
+    |    + dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_163_8_proc11                     |       -|   0.00|       18|    180.000|         -|       18|     -|        no|         -|          -|    320 (~0%)|   284 (~0%)|    -|
+    |     o VITIS_LOOP_163_8                                                                    |       -|   7.30|       16|    160.000|        14|        1|     4|       yes|         -|          -|            -|           -|    -|
+    |    + dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_170_9_proc712                    |  Timing|  -1.02|     1292|  1.292e+04|         -|     1292|     -|        no|   4 (~0%)|  112 (~0%)|  23979 (~0%)|  22946 (1%)|    -|
+    |     + dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_170_9_proc712_Pipeline_VITIS_1  |       -|   5.26|       66|    660.000|         -|       66|     -|        no|         -|          -|      9 (~0%)|    56 (~0%)|    -|
+    |      o VITIS_LOOP_170_9                                                                   |       -|   7.30|       64|    640.000|         1|        1|    64|       yes|         -|          -|            -|           -|    -|
+    |     + compute_expert_0_s                                                                  |       -|   0.00|      302|  3.020e+03|         -|      302|     -|        no|         -|          -|   3929 (~0%)|  2246 (~0%)|    -|
+    |      + compute_expert_0_Pipeline_VITIS_LOOP_20_1_VITIS_LOOP_29_3                          |       -|   0.00|      293|  2.930e+03|         -|      293|     -|        no|         -|          -|   3852 (~0%)|  1614 (~0%)|    -|
+    |       o VITIS_LOOP_20_1_VITIS_LOOP_29_3                                                   |       -|   7.30|      291|  2.910e+03|        37|        1|   256|       yes|         -|          -|            -|           -|    -|
+    |     + compute_expert_1_s                                                                  |       -|   0.00|      302|  3.020e+03|         -|      302|     -|        no|         -|          -|   3929 (~0%)|  2246 (~0%)|    -|
+    |      + compute_expert_1_Pipeline_VITIS_LOOP_20_1_VITIS_LOOP_29_3                          |       -|   0.00|      293|  2.930e+03|         -|      293|     -|        no|         -|          -|   3852 (~0%)|  1614 (~0%)|    -|
+    |       o VITIS_LOOP_20_1_VITIS_LOOP_29_3                                                   |       -|   7.30|      291|  2.910e+03|        37|        1|   256|       yes|         -|          -|            -|           -|    -|
+    |     + compute_expert_2_s                                                                  |       -|   0.00|      302|  3.020e+03|         -|      302|     -|        no|         -|          -|   3929 (~0%)|  2246 (~0%)|    -|
+    |      + compute_expert_2_Pipeline_VITIS_LOOP_20_1_VITIS_LOOP_29_3                          |       -|   0.00|      293|  2.930e+03|         -|      293|     -|        no|         -|          -|   3852 (~0%)|  1614 (~0%)|    -|
+    |       o VITIS_LOOP_20_1_VITIS_LOOP_29_3                                                   |       -|   7.30|      291|  2.910e+03|        37|        1|   256|       yes|         -|          -|            -|           -|    -|
+    |     + compute_expert_3_s                                                                  |       -|   0.00|      302|  3.020e+03|         -|      302|     -|        no|         -|          -|   3929 (~0%)|  2246 (~0%)|    -|
+    |      + compute_expert_3_Pipeline_VITIS_LOOP_20_1_VITIS_LOOP_29_3                          |       -|   0.00|      293|  2.930e+03|         -|      293|     -|        no|         -|          -|   3852 (~0%)|  1614 (~0%)|    -|
+    |       o VITIS_LOOP_20_1_VITIS_LOOP_29_3                                                   |       -|   7.30|      291|  2.910e+03|        37|        1|   256|       yes|         -|          -|            -|           -|    -|
+    |     + dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_170_9_proc712_Pipeline_VITIS    |       -|   0.23|       75|    750.000|         -|       75|     -|        no|         -|          -|    393 (~0%)|   131 (~0%)|    -|
+    |      o VITIS_LOOP_187_10                                                                  |       -|   7.30|       73|    730.000|        11|        1|    64|       yes|         -|          -|            -|           -|    -|
+    |    + dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_196_11_proc13                    |       -|   0.00|       73|    730.000|         -|       73|     -|        no|         -|          -|    197 (~0%)|   235 (~0%)|    -|
+    |     o VITIS_LOOP_196_11                                                                   |       -|   7.30|       71|    710.000|         9|        1|    64|       yes|         -|          -|            -|           -|    -|
+    +-------------------------------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+-----------+-------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++--------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface    | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|              | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++--------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem1  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem10 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem11 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem12 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem2  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem3  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem4  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem5  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem6  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem7  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem8  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem9  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
++--------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++-----------------+------------+---------------+--------+----------+
+| Interface       | Data Width | Address Width | Offset | Register |
++-----------------+------------+---------------+--------+----------+
+| s_axi_control   | 32         | 4             |        |          |
+| s_axi_control_r | 32         | 8             | 16     | 0        |
++-----------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++-----------------+-------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface       | Register    | Offset | Width | Access | Description                      | Bit Fields                                                           |
++-----------------+-------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control   | CTRL        | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control   | GIER        | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control   | IP_IER      | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control   | IP_ISR      | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control_r | input_r_1   | 0x10   | 32    | W      | Data signal of input_r           |                                                                      |
+| s_axi_control_r | input_r_2   | 0x14   | 32    | W      | Data signal of input_r           |                                                                      |
+| s_axi_control_r | w_gate_1    | 0x1c   | 32    | W      | Data signal of w_gate            |                                                                      |
+| s_axi_control_r | w_gate_2    | 0x20   | 32    | W      | Data signal of w_gate            |                                                                      |
+| s_axi_control_r | b_gate_1    | 0x28   | 32    | W      | Data signal of b_gate            |                                                                      |
+| s_axi_control_r | b_gate_2    | 0x2c   | 32    | W      | Data signal of b_gate            |                                                                      |
+| s_axi_control_r | w0_1        | 0x34   | 32    | W      | Data signal of w0                |                                                                      |
+| s_axi_control_r | w0_2        | 0x38   | 32    | W      | Data signal of w0                |                                                                      |
+| s_axi_control_r | b0_1        | 0x40   | 32    | W      | Data signal of b0                |                                                                      |
+| s_axi_control_r | b0_2        | 0x44   | 32    | W      | Data signal of b0                |                                                                      |
+| s_axi_control_r | w1_1        | 0x4c   | 32    | W      | Data signal of w1                |                                                                      |
+| s_axi_control_r | w1_2        | 0x50   | 32    | W      | Data signal of w1                |                                                                      |
+| s_axi_control_r | b1_1        | 0x58   | 32    | W      | Data signal of b1                |                                                                      |
+| s_axi_control_r | b1_2        | 0x5c   | 32    | W      | Data signal of b1                |                                                                      |
+| s_axi_control_r | w2_1        | 0x64   | 32    | W      | Data signal of w2                |                                                                      |
+| s_axi_control_r | w2_2        | 0x68   | 32    | W      | Data signal of w2                |                                                                      |
+| s_axi_control_r | b2_1        | 0x70   | 32    | W      | Data signal of b2                |                                                                      |
+| s_axi_control_r | b2_2        | 0x74   | 32    | W      | Data signal of b2                |                                                                      |
+| s_axi_control_r | w3_1        | 0x7c   | 32    | W      | Data signal of w3                |                                                                      |
+| s_axi_control_r | w3_2        | 0x80   | 32    | W      | Data signal of w3                |                                                                      |
+| s_axi_control_r | b3_1        | 0x88   | 32    | W      | Data signal of b3                |                                                                      |
+| s_axi_control_r | b3_2        | 0x8c   | 32    | W      | Data signal of b3                |                                                                      |
+| s_axi_control_r | gates_out_1 | 0x94   | 32    | W      | Data signal of gates_out         |                                                                      |
+| s_axi_control_r | gates_out_2 | 0x98   | 32    | W      | Data signal of gates_out         |                                                                      |
+| s_axi_control_r | output_r_1  | 0xa0   | 32    | W      | Data signal of output_r          |                                                                      |
+| s_axi_control_r | output_r_2  | 0xa4   | 32    | W      | Data signal of output_r          |                                                                      |
++-----------------+-------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------+-----------+---------------+
+| Argument  | Direction | Datatype      |
++-----------+-----------+---------------+
+| input     | in        | float const * |
+| w_gate    | in        | float const * |
+| b_gate    | in        | float const * |
+| w0        | in        | float const * |
+| b0        | in        | float const * |
+| w1        | in        | float const * |
+| b1        | in        | float const * |
+| w2        | in        | float const * |
+| b2        | in        | float const * |
+| w3        | in        | float const * |
+| b3        | in        | float const * |
+| gates_out | out       | float*        |
+| output    | out       | float*        |
++-----------+-----------+---------------+
+
+* SW-to-HW Mapping
++-----------+-----------------+-----------+----------+---------------------------------------+
+| Argument  | HW Interface    | HW Type   | HW Usage | HW Info                               |
++-----------+-----------------+-----------+----------+---------------------------------------+
+| input     | m_axi_gmem0     | interface |          |                                       |
+| input     | s_axi_control_r | interface | offset   |                                       |
+| w_gate    | m_axi_gmem1     | interface |          |                                       |
+| w_gate    | s_axi_control_r | register  | offset   | name=w_gate_1 offset=0x1c range=32    |
+| w_gate    | s_axi_control_r | register  | offset   | name=w_gate_2 offset=0x20 range=32    |
+| b_gate    | m_axi_gmem2     | interface |          |                                       |
+| b_gate    | s_axi_control_r | register  | offset   | name=b_gate_1 offset=0x28 range=32    |
+| b_gate    | s_axi_control_r | register  | offset   | name=b_gate_2 offset=0x2c range=32    |
+| w0        | m_axi_gmem3     | interface |          |                                       |
+| w0        | s_axi_control_r | register  | offset   | name=w0_1 offset=0x34 range=32        |
+| w0        | s_axi_control_r | register  | offset   | name=w0_2 offset=0x38 range=32        |
+| b0        | m_axi_gmem4     | interface |          |                                       |
+| b0        | s_axi_control_r | register  | offset   | name=b0_1 offset=0x40 range=32        |
+| b0        | s_axi_control_r | register  | offset   | name=b0_2 offset=0x44 range=32        |
+| w1        | m_axi_gmem5     | interface |          |                                       |
+| w1        | s_axi_control_r | register  | offset   | name=w1_1 offset=0x4c range=32        |
+| w1        | s_axi_control_r | register  | offset   | name=w1_2 offset=0x50 range=32        |
+| b1        | m_axi_gmem6     | interface |          |                                       |
+| b1        | s_axi_control_r | register  | offset   | name=b1_1 offset=0x58 range=32        |
+| b1        | s_axi_control_r | register  | offset   | name=b1_2 offset=0x5c range=32        |
+| w2        | m_axi_gmem7     | interface |          |                                       |
+| w2        | s_axi_control_r | register  | offset   | name=w2_1 offset=0x64 range=32        |
+| w2        | s_axi_control_r | register  | offset   | name=w2_2 offset=0x68 range=32        |
+| b2        | m_axi_gmem8     | interface |          |                                       |
+| b2        | s_axi_control_r | register  | offset   | name=b2_1 offset=0x70 range=32        |
+| b2        | s_axi_control_r | register  | offset   | name=b2_2 offset=0x74 range=32        |
+| w3        | m_axi_gmem9     | interface |          |                                       |
+| w3        | s_axi_control_r | register  | offset   | name=w3_1 offset=0x7c range=32        |
+| w3        | s_axi_control_r | register  | offset   | name=w3_2 offset=0x80 range=32        |
+| b3        | m_axi_gmem10    | interface |          |                                       |
+| b3        | s_axi_control_r | register  | offset   | name=b3_1 offset=0x88 range=32        |
+| b3        | s_axi_control_r | register  | offset   | name=b3_2 offset=0x8c range=32        |
+| gates_out | m_axi_gmem11    | interface |          |                                       |
+| gates_out | s_axi_control_r | register  | offset   | name=gates_out_1 offset=0x94 range=32 |
+| gates_out | s_axi_control_r | register  | offset   | name=gates_out_2 offset=0x98 range=32 |
+| output    | m_axi_gmem12    | interface |          |                                       |
+| output    | s_axi_control_r | interface | offset   |                                       |
++-----------+-----------------+-----------+----------+---------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+-------------------+--------------------------------------------------------------------------+
+| HW Interface | Direction | Length | Width | Loop              | Loop Location                                                            |
++--------------+-----------+--------+-------+-------------------+--------------------------------------------------------------------------+
+| m_axi_gmem0  | read      | 640    | 32    | VITIS_LOOP_104_1  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:104:20 |
+| m_axi_gmem1  | read      | 256    | 32    | VITIS_LOOP_140_5  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:140:27 |
+| m_axi_gmem10 | read      | 64     | 32    | VITIS_LOOP_20_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:20:19  |
+| m_axi_gmem11 | write     | 4      | 32    | VITIS_LOOP_163_8  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:163:27 |
+| m_axi_gmem12 | write     | 64     | 32    | VITIS_LOOP_196_11 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:196:28 |
+| m_axi_gmem2  | read      | 4      | 32    | VITIS_LOOP_140_5  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:140:27 |
+| m_axi_gmem3  | read      | 4096   | 32    | VITIS_LOOP_116_3  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:116:23 |
+| m_axi_gmem4  | read      | 64     | 32    | VITIS_LOOP_20_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:20:19  |
+| m_axi_gmem5  | read      | 4096   | 32    | VITIS_LOOP_116_3  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:116:23 |
+| m_axi_gmem6  | read      | 64     | 32    | VITIS_LOOP_20_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:20:19  |
+| m_axi_gmem7  | read      | 4096   | 32    | VITIS_LOOP_116_3  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:116:23 |
+| m_axi_gmem8  | read      | 64     | 32    | VITIS_LOOP_20_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:20:19  |
+| m_axi_gmem9  | read      | 4096   | 32    | VITIS_LOOP_116_3  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:116:23 |
++--------------+-----------+--------+-------+-------------------+--------------------------------------------------------------------------+
+
+* All M_AXI Variable Accesses
++--------------+-----------+--------------------------------------------------------------------------+-----------+--------------+--------+-------------------+--------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable  | Access Location                                                          | Direction | Burst Status | Length | Loop              | Loop Location                                                            | Resolution | Problem                                                                                                 |
++--------------+-----------+--------------------------------------------------------------------------+-----------+--------------+--------+-------------------+--------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| m_axi_gmem0  | input     | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:107:22 | read      | Widen Fail   |        | VITIS_LOOP_105_2  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:105:27 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | input     | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:107:22 | read      | Inferred     | 640    | VITIS_LOOP_104_1  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:104:20 |            |                                                                                                         |
+| m_axi_gmem1  | w_gate    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:144:44 | read      | Widen Fail   |        | VITIS_LOOP_143_6  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:143:31 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem1  | w_gate    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:144:44 | read      | Fail         |        | VITIS_LOOP_129_4  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:129:23 | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem1  | w_gate    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:144:44 | read      | Inferred     | 256    | VITIS_LOOP_140_5  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:140:27 |            |                                                                                                         |
+| m_axi_gmem10 | b         | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:38:21  | read      | Widen Fail   |        | VITIS_LOOP_20_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:20:19  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem10 | b         | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:38:21  | read      | Inferred     | 64     | VITIS_LOOP_20_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:20:19  |            |                                                                                                         |
+| m_axi_gmem11 | gates_out | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:166:34 | write     | Fail         |        | VITIS_LOOP_129_4  |                                                                          |            | Skip burst inference for loop 'VITIS_LOOP_129_4' since access may be exposed into dataflow region       |
+| m_axi_gmem11 | gates_out | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:166:34 | write     | Inferred     | 4      | VITIS_LOOP_163_8  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:163:27 |            |                                                                                                         |
+| m_axi_gmem12 | output    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:198:20 | write     | Fail         |        | VITIS_LOOP_129_4  |                                                                          |            | Skip burst inference for loop 'VITIS_LOOP_129_4' since access may be exposed into dataflow region       |
+| m_axi_gmem12 | output    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:198:20 | write     | Inferred     | 64     | VITIS_LOOP_196_11 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:196:28 |            |                                                                                                         |
+| m_axi_gmem2  | b_gate    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:141:25 | read      | Fail         |        | VITIS_LOOP_129_4  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:129:23 | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem2  | b_gate    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:141:25 | read      | Inferred     | 4      | VITIS_LOOP_140_5  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:140:27 |            |                                                                                                         |
+| m_axi_gmem3  | w0        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:118:16 | read      | Widen Fail   |        | VITIS_LOOP_116_3  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:116:23 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem3  | w0        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:118:16 | read      | Inferred     | 4096   | VITIS_LOOP_116_3  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:116:23 |            |                                                                                                         |
+| m_axi_gmem4  | b         | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:38:21  | read      | Widen Fail   |        | VITIS_LOOP_20_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:20:19  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem4  | b         | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:38:21  | read      | Inferred     | 64     | VITIS_LOOP_20_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:20:19  |            |                                                                                                         |
+| m_axi_gmem5  | w1        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:119:23 | read      | Widen Fail   |        | VITIS_LOOP_116_3  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:116:23 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem5  | w1        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:119:23 | read      | Inferred     | 4096   | VITIS_LOOP_116_3  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:116:23 |            |                                                                                                         |
+| m_axi_gmem6  | b         | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:38:21  | read      | Widen Fail   |        | VITIS_LOOP_20_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:20:19  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem6  | b         | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:38:21  | read      | Inferred     | 64     | VITIS_LOOP_20_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:20:19  |            |                                                                                                         |
+| m_axi_gmem7  | w2        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:120:23 | read      | Widen Fail   |        | VITIS_LOOP_116_3  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:116:23 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem7  | w2        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:120:23 | read      | Inferred     | 4096   | VITIS_LOOP_116_3  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:116:23 |            |                                                                                                         |
+| m_axi_gmem8  | b         | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:38:21  | read      | Widen Fail   |        | VITIS_LOOP_20_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:20:19  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem8  | b         | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:38:21  | read      | Inferred     | 64     | VITIS_LOOP_20_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:20:19  |            |                                                                                                         |
+| m_axi_gmem9  | w3        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:121:23 | read      | Widen Fail   |        | VITIS_LOOP_116_3  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:116:23 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem9  | w3        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:121:23 | read      | Inferred     | 4096   | VITIS_LOOP_116_3  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:116:23 |            |                                                                                                         |
++--------------+-----------+--------------------------------------------------------------------------+-----------+--------------+--------+-------------------+--------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------------------------------------------------------+-----+--------+-------------+------+---------+---------+
+| Name                                                                                     | DSP | Pragma | Variable    | Op   | Impl    | Latency |
++------------------------------------------------------------------------------------------+-----+--------+-------------+------+---------+---------+
+| + pseudo_moe                                                                             | 128 |        |             |      |         |         |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2                                 | 0   |        |             |      |         |         |
+|    add_ln104_1_fu_381_p2                                                                 |     |        | add_ln104_1 | add  | fabric  | 0       |
+|    add_ln104_fu_408_p2                                                                   |     |        | add_ln104   | add  | fabric  | 0       |
+|    add_ln105_fu_478_p2                                                                   |     |        | add_ln105   | add  | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_116_3                                                  | 0   |        |             |      |         |         |
+|    add_ln116_fu_1138_p2                                                                  |     |        | add_ln116   | add  | fabric  | 0       |
+|  + dataflow_parent_loop_proc                                                             | 128 |        |             |      |         |         |
+|   + dataflow_in_loop_VITIS_LOOP_129_4_1                                                  | 128 |        |             |      |         |         |
+|    + dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_140_5_proc9                     | 5   |        |             |      |         |         |
+|     + dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_140_5_proc9_Pipeline_VITIS_L   | 5   |        |             |      |         |         |
+|       add_ln140_fu_934_p2                                                                |     |        | add_ln140   | add  | fabric  | 0       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul         | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_1       | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_1     | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_2       | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_2     | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_3       | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_3     | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_4       | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_4     | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_5       | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_5     | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_6       | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_6     | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_7       | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_7     | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_8       | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_8     | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_9       | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_9     | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_10      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_s     | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_11      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_10    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_12      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_11    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_13      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_12    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_14      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_13    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_15      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_14    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_16      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_15    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_17      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_16    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_18      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_17    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_19      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_18    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_20      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_19    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_21      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_20    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_22      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_21    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_23      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_22    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_24      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_23    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_25      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_24    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_26      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_25    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_27      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_26    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_28      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_27    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_29      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_28    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_30      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_29    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_31      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_30    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_32      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_31    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_33      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_32    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_34      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_33    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_35      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_34    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_36      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_35    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_37      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_36    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_38      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_37    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_39      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_38    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_40      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_39    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_41      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_40    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_42      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_41    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_43      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_42    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_44      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_43    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_45      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_44    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_46      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_45    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_47      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_46    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_48      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_47    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_49      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_48    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_50      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_49    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_51      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_50    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_52      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_51    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_53      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_52    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_54      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_53    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_55      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_54    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_56      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_55    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_57      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_56    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_58      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_57    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_59      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_58    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_60      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_59    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_61      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_60    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_62      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_61    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_63      | fadd | fulldsp | 1       |
+|       fmul_32ns_32ns_32_2_max_dsp_1_U96                                                  | 3   |        | mul59_62    | fmul | maxdsp  | 1       |
+|       fadd_32ns_32ns_32_2_full_dsp_1_U95                                                 | 2   |        | acc_64      | fadd | fulldsp | 1       |
+|    + dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_157_7_proc10                    | 11  |        |             |      |         |         |
+|      add_ln157_fu_109_p2                                                                 |     |        | add_ln157   | add  | fabric  | 0       |
+|      fsub_32ns_32ns_32_2_full_dsp_1_U150                                                 | 2   |        | sub_i       | fsub | fulldsp | 1       |
+|      fexp_32ns_32ns_32_4_full_dsp_1_U152                                                 | 7   |        | tmp_i       | fexp | fulldsp | 3       |
+|      fadd_32ns_32ns_32_2_full_dsp_1_U151                                                 | 2   |        | exp_sum_1   | fadd | fulldsp | 1       |
+|    + dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_163_8_proc11                    | 0   |        |             |      |         |         |
+|      add_ln163_fu_175_p2                                                                 |     |        | add_ln163   | add  | fabric  | 0       |
+|      add_ln129_fu_204_p2                                                                 |     |        | add_ln129   | add  | fabric  | 0       |
+|      fdiv_32ns_32ns_32_6_no_dsp_1_U158                                                   |     |        | div_i_i     | fdiv | fabric  | 5       |
+|    + dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_170_9_proc712                   | 112 |        |             |      |         |         |
+|     + dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_170_9_proc712_Pipeline_VITIS_1 | 0   |        |             |      |         |         |
+|       add_ln170_fu_60_p2                                                                 |     |        | add_ln170   | add  | fabric  | 0       |
+|     + compute_expert_0_s                                                                 | 0   |        |             |      |         |         |
+|      + compute_expert_0_Pipeline_VITIS_LOOP_20_1_VITIS_LOOP_29_3                         | 0   |        |             |      |         |         |
+|        add_ln20_4_fu_1039_p2                                                             |     |        | add_ln20_4  | add  | fabric  | 0       |
+|        add_ln20_fu_1051_p2                                                               |     |        | add_ln20    | add  | fabric  | 0       |
+|        add_ln34_4_fu_1100_p2                                                             |     |        | add_ln34_4  | add  | fabric  | 0       |
+|        add_ln34_fu_1130_p2                                                               |     |        | add_ln34    | add  | fabric  | 0       |
+|        add_ln29_fu_1141_p2                                                               |     |        | add_ln29    | add  | fabric  | 0       |
+|     + compute_expert_1_s                                                                 | 0   |        |             |      |         |         |
+|      + compute_expert_1_Pipeline_VITIS_LOOP_20_1_VITIS_LOOP_29_3                         | 0   |        |             |      |         |         |
+|        add_ln20_3_fu_1039_p2                                                             |     |        | add_ln20_3  | add  | fabric  | 0       |
+|        add_ln20_fu_1051_p2                                                               |     |        | add_ln20    | add  | fabric  | 0       |
+|        add_ln34_3_fu_1100_p2                                                             |     |        | add_ln34_3  | add  | fabric  | 0       |
+|        add_ln34_fu_1130_p2                                                               |     |        | add_ln34    | add  | fabric  | 0       |
+|        add_ln29_fu_1141_p2                                                               |     |        | add_ln29    | add  | fabric  | 0       |
+|     + compute_expert_2_s                                                                 | 0   |        |             |      |         |         |
+|      + compute_expert_2_Pipeline_VITIS_LOOP_20_1_VITIS_LOOP_29_3                         | 0   |        |             |      |         |         |
+|        add_ln20_2_fu_1039_p2                                                             |     |        | add_ln20_2  | add  | fabric  | 0       |
+|        add_ln20_fu_1051_p2                                                               |     |        | add_ln20    | add  | fabric  | 0       |
+|        add_ln34_2_fu_1100_p2                                                             |     |        | add_ln34_2  | add  | fabric  | 0       |
+|        add_ln34_fu_1130_p2                                                               |     |        | add_ln34    | add  | fabric  | 0       |
+|        add_ln29_fu_1141_p2                                                               |     |        | add_ln29    | add  | fabric  | 0       |
+|     + compute_expert_3_s                                                                 | 0   |        |             |      |         |         |
+|      + compute_expert_3_Pipeline_VITIS_LOOP_20_1_VITIS_LOOP_29_3                         | 0   |        |             |      |         |         |
+|        add_ln20_1_fu_1039_p2                                                             |     |        | add_ln20_1  | add  | fabric  | 0       |
+|        add_ln20_fu_1051_p2                                                               |     |        | add_ln20    | add  | fabric  | 0       |
+|        add_ln34_1_fu_1100_p2                                                             |     |        | add_ln34_1  | add  | fabric  | 0       |
+|        add_ln34_fu_1130_p2                                                               |     |        | add_ln34    | add  | fabric  | 0       |
+|        add_ln29_fu_1141_p2                                                               |     |        | add_ln29    | add  | fabric  | 0       |
+|     + dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_170_9_proc712_Pipeline_VITIS   | 0   |        |             |      |         |         |
+|       add_ln187_fu_192_p2                                                                |     |        | add_ln187   | add  | fabric  | 0       |
+|    + dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_196_11_proc13                   | 0   |        |             |      |         |         |
+|      add_ln196_fu_157_p2                                                                 |     |        | add_ln196   | add  | fabric  | 0       |
+|      add_ln129_fu_185_p2                                                                 |     |        | add_ln129   | add  | fabric  | 0       |
++------------------------------------------------------------------------------------------+-----+--------+-------------+------+---------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++------------------------------------------------------------------------+-----------------+-------------+------+------+--------+--------------------------+------+---------+------------------+
+| Name                                                                   | Usage           | Type        | BRAM | URAM | Pragma | Variable                 | Impl | Latency | Bitwidth, Depth, |
+|                                                                        |                 |             |      |      |        |                          |      |         | Banks            |
++------------------------------------------------------------------------+-----------------+-------------+------+------+--------+--------------------------+------+---------+------------------+
+| + pseudo_moe                                                           |                 |             | 156  | 0    |        |                          |      |         |                  |
+|   control_s_axi_U                                                      | interface       | s_axilite   |      |      |        |                          |      |         |                  |
+|   control_r_s_axi_U                                                    | interface       | s_axilite   |      |      |        |                          |      |         |                  |
+|   gmem0_m_axi_U                                                        | interface       | m_axi       | 4    |      |        |                          |      |         |                  |
+|   gmem1_m_axi_U                                                        | interface       | m_axi       | 4    |      |        |                          |      |         |                  |
+|   gmem10_m_axi_U                                                       | interface       | m_axi       | 4    |      |        |                          |      |         |                  |
+|   gmem11_m_axi_U                                                       | interface       | m_axi       | 4    |      |        |                          |      |         |                  |
+|   gmem12_m_axi_U                                                       | interface       | m_axi       | 4    |      |        |                          |      |         |                  |
+|   gmem2_m_axi_U                                                        | interface       | m_axi       | 4    |      |        |                          |      |         |                  |
+|   gmem3_m_axi_U                                                        | interface       | m_axi       | 4    |      |        |                          |      |         |                  |
+|   gmem4_m_axi_U                                                        | interface       | m_axi       | 4    |      |        |                          |      |         |                  |
+|   gmem5_m_axi_U                                                        | interface       | m_axi       | 4    |      |        |                          |      |         |                  |
+|   gmem6_m_axi_U                                                        | interface       | m_axi       | 4    |      |        |                          |      |         |                  |
+|   gmem7_m_axi_U                                                        | interface       | m_axi       | 4    |      |        |                          |      |         |                  |
+|   gmem8_m_axi_U                                                        | interface       | m_axi       | 4    |      |        |                          |      |         |                  |
+|   gmem9_m_axi_U                                                        | interface       | m_axi       | 4    |      |        |                          |      |         |                  |
+|   input_local_U                                                        | rom_np array    |             | 2    |      |        | input_local              | auto | 1       | 32, 40, 1        |
+|   input_local_1_U                                                      | rom_np array    |             | 2    |      |        | input_local_1            | auto | 1       | 32, 40, 1        |
+|   input_local_2_U                                                      | rom_np array    |             | 2    |      |        | input_local_2            | auto | 1       | 32, 40, 1        |
+|   input_local_3_U                                                      | rom_np array    |             | 2    |      |        | input_local_3            | auto | 1       | 32, 40, 1        |
+|   input_local_4_U                                                      | rom_np array    |             | 2    |      |        | input_local_4            | auto | 1       | 32, 40, 1        |
+|   input_local_5_U                                                      | rom_np array    |             | 2    |      |        | input_local_5            | auto | 1       | 32, 40, 1        |
+|   input_local_6_U                                                      | rom_np array    |             | 2    |      |        | input_local_6            | auto | 1       | 32, 40, 1        |
+|   input_local_7_U                                                      | rom_np array    |             | 2    |      |        | input_local_7            | auto | 1       | 32, 40, 1        |
+|   input_local_8_U                                                      | rom_np array    |             | 2    |      |        | input_local_8            | auto | 1       | 32, 40, 1        |
+|   input_local_9_U                                                      | rom_np array    |             | 2    |      |        | input_local_9            | auto | 1       | 32, 40, 1        |
+|   input_local_10_U                                                     | rom_np array    |             | 2    |      |        | input_local_10           | auto | 1       | 32, 40, 1        |
+|   input_local_11_U                                                     | rom_np array    |             | 2    |      |        | input_local_11           | auto | 1       | 32, 40, 1        |
+|   input_local_12_U                                                     | rom_np array    |             | 2    |      |        | input_local_12           | auto | 1       | 32, 40, 1        |
+|   input_local_13_U                                                     | rom_np array    |             | 2    |      |        | input_local_13           | auto | 1       | 32, 40, 1        |
+|   input_local_14_U                                                     | rom_np array    |             | 2    |      |        | input_local_14           | auto | 1       | 32, 40, 1        |
+|   input_local_15_U                                                     | rom_np array    |             | 2    |      |        | input_local_15           | auto | 1       | 32, 40, 1        |
+|   w0_local_U                                                           | ram_1p array    |             | 2    |      |        | w0_local                 | auto | 1       | 32, 256, 1       |
+|   w0_local_1_U                                                         | ram_1p array    |             | 2    |      |        | w0_local_1               | auto | 1       | 32, 256, 1       |
+|   w0_local_2_U                                                         | ram_1p array    |             | 2    |      |        | w0_local_2               | auto | 1       | 32, 256, 1       |
+|   w0_local_3_U                                                         | ram_1p array    |             | 2    |      |        | w0_local_3               | auto | 1       | 32, 256, 1       |
+|   w0_local_4_U                                                         | ram_1p array    |             | 2    |      |        | w0_local_4               | auto | 1       | 32, 256, 1       |
+|   w0_local_5_U                                                         | ram_1p array    |             | 2    |      |        | w0_local_5               | auto | 1       | 32, 256, 1       |
+|   w0_local_6_U                                                         | ram_1p array    |             | 2    |      |        | w0_local_6               | auto | 1       | 32, 256, 1       |
+|   w0_local_7_U                                                         | ram_1p array    |             | 2    |      |        | w0_local_7               | auto | 1       | 32, 256, 1       |
+|   w0_local_8_U                                                         | ram_1p array    |             | 2    |      |        | w0_local_8               | auto | 1       | 32, 256, 1       |
+|   w0_local_9_U                                                         | ram_1p array    |             | 2    |      |        | w0_local_9               | auto | 1       | 32, 256, 1       |
+|   w0_local_10_U                                                        | ram_1p array    |             | 2    |      |        | w0_local_10              | auto | 1       | 32, 256, 1       |
+|   w0_local_11_U                                                        | ram_1p array    |             | 2    |      |        | w0_local_11              | auto | 1       | 32, 256, 1       |
+|   w0_local_12_U                                                        | ram_1p array    |             | 2    |      |        | w0_local_12              | auto | 1       | 32, 256, 1       |
+|   w0_local_13_U                                                        | ram_1p array    |             | 2    |      |        | w0_local_13              | auto | 1       | 32, 256, 1       |
+|   w0_local_14_U                                                        | ram_1p array    |             | 2    |      |        | w0_local_14              | auto | 1       | 32, 256, 1       |
+|   w0_local_15_U                                                        | ram_1p array    |             | 2    |      |        | w0_local_15              | auto | 1       | 32, 256, 1       |
+|   w1_local_U                                                           | ram_1p array    |             | 2    |      |        | w1_local                 | auto | 1       | 32, 256, 1       |
+|   w1_local_1_U                                                         | ram_1p array    |             | 2    |      |        | w1_local_1               | auto | 1       | 32, 256, 1       |
+|   w1_local_2_U                                                         | ram_1p array    |             | 2    |      |        | w1_local_2               | auto | 1       | 32, 256, 1       |
+|   w1_local_3_U                                                         | ram_1p array    |             | 2    |      |        | w1_local_3               | auto | 1       | 32, 256, 1       |
+|   w1_local_4_U                                                         | ram_1p array    |             | 2    |      |        | w1_local_4               | auto | 1       | 32, 256, 1       |
+|   w1_local_5_U                                                         | ram_1p array    |             | 2    |      |        | w1_local_5               | auto | 1       | 32, 256, 1       |
+|   w1_local_6_U                                                         | ram_1p array    |             | 2    |      |        | w1_local_6               | auto | 1       | 32, 256, 1       |
+|   w1_local_7_U                                                         | ram_1p array    |             | 2    |      |        | w1_local_7               | auto | 1       | 32, 256, 1       |
+|   w1_local_8_U                                                         | ram_1p array    |             | 2    |      |        | w1_local_8               | auto | 1       | 32, 256, 1       |
+|   w1_local_9_U                                                         | ram_1p array    |             | 2    |      |        | w1_local_9               | auto | 1       | 32, 256, 1       |
+|   w1_local_10_U                                                        | ram_1p array    |             | 2    |      |        | w1_local_10              | auto | 1       | 32, 256, 1       |
+|   w1_local_11_U                                                        | ram_1p array    |             | 2    |      |        | w1_local_11              | auto | 1       | 32, 256, 1       |
+|   w1_local_12_U                                                        | ram_1p array    |             | 2    |      |        | w1_local_12              | auto | 1       | 32, 256, 1       |
+|   w1_local_13_U                                                        | ram_1p array    |             | 2    |      |        | w1_local_13              | auto | 1       | 32, 256, 1       |
+|   w1_local_14_U                                                        | ram_1p array    |             | 2    |      |        | w1_local_14              | auto | 1       | 32, 256, 1       |
+|   w1_local_15_U                                                        | ram_1p array    |             | 2    |      |        | w1_local_15              | auto | 1       | 32, 256, 1       |
+|   w2_local_U                                                           | ram_1p array    |             | 2    |      |        | w2_local                 | auto | 1       | 32, 256, 1       |
+|   w2_local_1_U                                                         | ram_1p array    |             | 2    |      |        | w2_local_1               | auto | 1       | 32, 256, 1       |
+|   w2_local_2_U                                                         | ram_1p array    |             | 2    |      |        | w2_local_2               | auto | 1       | 32, 256, 1       |
+|   w2_local_3_U                                                         | ram_1p array    |             | 2    |      |        | w2_local_3               | auto | 1       | 32, 256, 1       |
+|   w2_local_4_U                                                         | ram_1p array    |             | 2    |      |        | w2_local_4               | auto | 1       | 32, 256, 1       |
+|   w2_local_5_U                                                         | ram_1p array    |             | 2    |      |        | w2_local_5               | auto | 1       | 32, 256, 1       |
+|   w2_local_6_U                                                         | ram_1p array    |             | 2    |      |        | w2_local_6               | auto | 1       | 32, 256, 1       |
+|   w2_local_7_U                                                         | ram_1p array    |             | 2    |      |        | w2_local_7               | auto | 1       | 32, 256, 1       |
+|   w2_local_8_U                                                         | ram_1p array    |             | 2    |      |        | w2_local_8               | auto | 1       | 32, 256, 1       |
+|   w2_local_9_U                                                         | ram_1p array    |             | 2    |      |        | w2_local_9               | auto | 1       | 32, 256, 1       |
+|   w2_local_10_U                                                        | ram_1p array    |             | 2    |      |        | w2_local_10              | auto | 1       | 32, 256, 1       |
+|   w2_local_11_U                                                        | ram_1p array    |             | 2    |      |        | w2_local_11              | auto | 1       | 32, 256, 1       |
+|   w2_local_12_U                                                        | ram_1p array    |             | 2    |      |        | w2_local_12              | auto | 1       | 32, 256, 1       |
+|   w2_local_13_U                                                        | ram_1p array    |             | 2    |      |        | w2_local_13              | auto | 1       | 32, 256, 1       |
+|   w2_local_14_U                                                        | ram_1p array    |             | 2    |      |        | w2_local_14              | auto | 1       | 32, 256, 1       |
+|   w2_local_15_U                                                        | ram_1p array    |             | 2    |      |        | w2_local_15              | auto | 1       | 32, 256, 1       |
+|   w3_local_U                                                           | ram_1p array    |             | 2    |      |        | w3_local                 | auto | 1       | 32, 256, 1       |
+|   w3_local_1_U                                                         | ram_1p array    |             | 2    |      |        | w3_local_1               | auto | 1       | 32, 256, 1       |
+|   w3_local_2_U                                                         | ram_1p array    |             | 2    |      |        | w3_local_2               | auto | 1       | 32, 256, 1       |
+|   w3_local_3_U                                                         | ram_1p array    |             | 2    |      |        | w3_local_3               | auto | 1       | 32, 256, 1       |
+|   w3_local_4_U                                                         | ram_1p array    |             | 2    |      |        | w3_local_4               | auto | 1       | 32, 256, 1       |
+|   w3_local_5_U                                                         | ram_1p array    |             | 2    |      |        | w3_local_5               | auto | 1       | 32, 256, 1       |
+|   w3_local_6_U                                                         | ram_1p array    |             | 2    |      |        | w3_local_6               | auto | 1       | 32, 256, 1       |
+|   w3_local_7_U                                                         | ram_1p array    |             | 2    |      |        | w3_local_7               | auto | 1       | 32, 256, 1       |
+|   w3_local_8_U                                                         | ram_1p array    |             | 2    |      |        | w3_local_8               | auto | 1       | 32, 256, 1       |
+|   w3_local_9_U                                                         | ram_1p array    |             | 2    |      |        | w3_local_9               | auto | 1       | 32, 256, 1       |
+|   w3_local_10_U                                                        | ram_1p array    |             | 2    |      |        | w3_local_10              | auto | 1       | 32, 256, 1       |
+|   w3_local_11_U                                                        | ram_1p array    |             | 2    |      |        | w3_local_11              | auto | 1       | 32, 256, 1       |
+|   w3_local_12_U                                                        | ram_1p array    |             | 2    |      |        | w3_local_12              | auto | 1       | 32, 256, 1       |
+|   w3_local_13_U                                                        | ram_1p array    |             | 2    |      |        | w3_local_13              | auto | 1       | 32, 256, 1       |
+|   w3_local_14_U                                                        | ram_1p array    |             | 2    |      |        | w3_local_14              | auto | 1       | 32, 256, 1       |
+|   w3_local_15_U                                                        | ram_1p array    |             | 2    |      |        | w3_local_15              | auto | 1       | 32, 256, 1       |
+|  + dataflow_parent_loop_proc                                           |                 |             | 8    | 0    |        |                          |      |         |                  |
+|   + dataflow_in_loop_VITIS_LOOP_129_4_1                                |                 |             | 8    | 0    |        |                          |      |         |                  |
+|     gates_out_c_U                                                      | fifo channel    | scalar prop |      |      |        | gates_out_c              | srl  | 0       | 64, 4, 1         |
+|     output_r_c_U                                                       | fifo channel    | scalar prop |      |      |        | output_r_c               | srl  | 0       | 64, 6, 1         |
+|     logits_i_channel_U                                                 | fifo channel    | stream      |      |      |        | logits_i_channel         | srl  | 0       | 32, 4, 1         |
+|     n_1_c1_U                                                           | fifo channel    | scalar prop |      |      |        | n_1_c1                   | srl  | 0       | 4, 3, 1          |
+|     max_logit_loc_i_channel2_U                                         | fifo channel    | task level  |      |      |        | max_logit_loc_i_channel2 | srl  | 0       | 32, 2, 1         |
+|     exp_values_U                                                       | fifo channel    | stream      |      |      |        | exp_values               | srl  | 0       | 32, 4, 1         |
+|     exp_sum_loc_i_channel_U                                            | fifo channel    | task level  |      |      |        | exp_sum_loc_i_channel    | srl  | 0       | 32, 2, 1         |
+|     gates_U                                                            | fifo channel    | stream      |      |      |        | gates                    | srl  | 0       | 32, 4, 1         |
+|     acc_out_U                                                          | ram_s2p channel | pipo        | 2    |      |        | acc_out                  | auto | 1       | 32, 64, 2        |
+|     n_1_c_channel1_U                                                   | fifo channel    | task level  |      |      |        | n_1_c_channel1           | srl  | 0       | 4, 2, 1          |
+|    + dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_170_9_proc712 |                 |             | 4    | 0    |        |                          |      |         |                  |
+|      expert_result0_U                                                  | ram_1p array    |             | 2    |      |        | expert_result0           | auto | 1       | 32, 64, 1        |
+|      expert_result1_U                                                  | ram_1p array    |             | 2    |      |        | expert_result1           | auto | 1       | 32, 64, 1        |
+|      expert_result2_U                                                  | ram_1p array    |             | 2    |      |        | expert_result2           | auto | 1       | 32, 64, 1        |
+|      expert_result3_U                                                  | ram_1p array    |             | 2    |      |        | expert_result3           | auto | 1       | 32, 64, 1        |
++------------------------------------------------------------------------+-----------------+-------------+------+------+--------+--------------------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++----------+---------+--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type     | Options | Location                             | Messages                                                                                                                                                                           |
++----------+---------+--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dataflow |         | src/pseudo_moe.cpp:180 in pseudo_moe | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+|          |         |                                      | There are a total of 6 such instances of non-canonical statements in the dataflow region                                                                                           |
++----------+---------+--------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+-------------------------------------------------+--------------------------------------------------+
+| Type            | Options                                         | Location                                         |
++-----------------+-------------------------------------------------+--------------------------------------------------+
+| inline          | off                                             | src/pseudo_moe.cpp:18 in compute_expert          |
+| array_partition | variable=partial complete                       | src/pseudo_moe.cpp:22 in compute_expert, partial |
+| unroll          |                                                 | src/pseudo_moe.cpp:25 in compute_expert          |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:30 in compute_expert          |
+| unroll          |                                                 | src/pseudo_moe.cpp:32 in compute_expert          |
+| unroll          |                                                 | src/pseudo_moe.cpp:41 in compute_expert          |
+| interface       | m_axi port=input offset=slave bundle=gmem0      | src/pseudo_moe.cpp:64 in pseudo_moe, input       |
+| interface       | m_axi port=w_gate offset=slave bundle=gmem1     | src/pseudo_moe.cpp:65 in pseudo_moe, w_gate      |
+| interface       | m_axi port=b_gate offset=slave bundle=gmem2     | src/pseudo_moe.cpp:66 in pseudo_moe, b_gate      |
+| interface       | m_axi port=w0 offset=slave bundle=gmem3         | src/pseudo_moe.cpp:68 in pseudo_moe, w0          |
+| interface       | m_axi port=b0 offset=slave bundle=gmem4         | src/pseudo_moe.cpp:69 in pseudo_moe, b0          |
+| interface       | m_axi port=w1 offset=slave bundle=gmem5         | src/pseudo_moe.cpp:70 in pseudo_moe, w1          |
+| interface       | m_axi port=b1 offset=slave bundle=gmem6         | src/pseudo_moe.cpp:71 in pseudo_moe, b1          |
+| interface       | m_axi port=w2 offset=slave bundle=gmem7         | src/pseudo_moe.cpp:72 in pseudo_moe, w2          |
+| interface       | m_axi port=b2 offset=slave bundle=gmem8         | src/pseudo_moe.cpp:73 in pseudo_moe, b2          |
+| interface       | m_axi port=w3 offset=slave bundle=gmem9         | src/pseudo_moe.cpp:74 in pseudo_moe, w3          |
+| interface       | m_axi port=b3 offset=slave bundle=gmem10        | src/pseudo_moe.cpp:75 in pseudo_moe, b3          |
+| interface       | m_axi port=gates_out offset=slave bundle=gmem11 | src/pseudo_moe.cpp:77 in pseudo_moe, gates_out   |
+| interface       | m_axi port=output offset=slave bundle=gmem12    | src/pseudo_moe.cpp:78 in pseudo_moe, output      |
+| interface       | s_axilite port=return bundle=control            | src/pseudo_moe.cpp:80 in pseudo_moe, return      |
+| array_partition | variable=input_local cyclic factor=16 dim=2     | src/pseudo_moe.cpp:93 in pseudo_moe, input_local |
+| array_partition | variable=w0_local cyclic factor=16 dim=1        | src/pseudo_moe.cpp:95 in pseudo_moe, w0_local    |
+| array_partition | variable=w1_local cyclic factor=16 dim=1        | src/pseudo_moe.cpp:96 in pseudo_moe, w1_local    |
+| array_partition | variable=w2_local cyclic factor=16 dim=1        | src/pseudo_moe.cpp:97 in pseudo_moe, w2_local    |
+| array_partition | variable=w3_local cyclic factor=16 dim=1        | src/pseudo_moe.cpp:98 in pseudo_moe, w3_local    |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:106 in pseudo_moe             |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:117 in pseudo_moe             |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:158 in pseudo_moe             |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:164 in pseudo_moe             |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:171 in pseudo_moe             |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:188 in pseudo_moe             |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:197 in pseudo_moe             |
++-----------------+-------------------------------------------------+--------------------------------------------------+
+
+

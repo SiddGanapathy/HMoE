@@ -1,0 +1,249 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_170_9_proc712_Pipeline_VITIS'
+================================================================
+* Date:           Sun Sep 20 21:00:08 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        project
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p_CIV-figd2104-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.072 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       75|       75|  0.750 us|  0.750 us|   75|   75|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_187_10  |       73|       73|        11|          1|          1|    64|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 11
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 11, States = { 1 2 3 4 5 6 7 8 9 10 11 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.38>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%o = alloca i32 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:187]   --->   Operation 14 'alloca' 'o' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%gates_load_3_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %gates_load_3"   --->   Operation 15 'read' 'gates_load_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%gates_load_2_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %gates_load_2"   --->   Operation 16 'read' 'gates_load_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%gates_load_1_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %gates_load_1"   --->   Operation 17 'read' 'gates_load_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%gates_load_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %gates_load"   --->   Operation 18 'read' 'gates_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.36ns)   --->   "%store_ln187 = store i7 0, i7 %o" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:187]   --->   Operation 19 'store' 'store_ln187' <Predicate = true> <Delay = 0.36>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.cond132"   --->   Operation 20 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%o_2 = load i7 %o" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:187]   --->   Operation 21 'load' 'o_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.65ns)   --->   "%icmp_ln187 = icmp_eq  i7 %o_2, i7 64" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:187]   --->   Operation 22 'icmp' 'icmp_ln187' <Predicate = true> <Delay = 0.65> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.65ns)   --->   "%add_ln187 = add i7 %o_2, i7 1" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:187]   --->   Operation 23 'add' 'add_ln187' <Predicate = true> <Delay = 0.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln187 = br i1 %icmp_ln187, void %for.inc158, void %VITIS_LOOP_196_11.exitStub.exitStub" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:187]   --->   Operation 24 'br' 'br_ln187' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%zext_ln187 = zext i7 %o_2" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:187]   --->   Operation 25 'zext' 'zext_ln187' <Predicate = (!icmp_ln187)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%expert_result0_addr = getelementptr i32 %expert_result0, i64 0, i64 %zext_ln187" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189]   --->   Operation 26 'getelementptr' 'expert_result0_addr' <Predicate = (!icmp_ln187)> <Delay = 0.00>
+ST_1 : Operation 27 [2/2] (1.02ns)   --->   "%expert_result0_load = load i6 %expert_result0_addr" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189]   --->   Operation 27 'load' 'expert_result0_load' <Predicate = (!icmp_ln187)> <Delay = 1.02> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.02> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%expert_result1_addr = getelementptr i32 %expert_result1, i64 0, i64 %zext_ln187" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:190]   --->   Operation 28 'getelementptr' 'expert_result1_addr' <Predicate = (!icmp_ln187)> <Delay = 0.00>
+ST_1 : Operation 29 [2/2] (1.02ns)   --->   "%expert_result1_load = load i6 %expert_result1_addr" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:190]   --->   Operation 29 'load' 'expert_result1_load' <Predicate = (!icmp_ln187)> <Delay = 1.02> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.02> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_1 : Operation 30 [1/1] (0.36ns)   --->   "%store_ln187 = store i7 %add_ln187, i7 %o" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:187]   --->   Operation 30 'store' 'store_ln187' <Predicate = (!icmp_ln187)> <Delay = 0.36>
+
+State 2 <SV = 1> <Delay = 4.90>
+ST_2 : Operation 31 [1/2] (1.02ns)   --->   "%expert_result0_load = load i6 %expert_result0_addr" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189]   --->   Operation 31 'load' 'expert_result0_load' <Predicate = true> <Delay = 1.02> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.02> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_2 : Operation 32 [2/2] (3.88ns)   --->   "%mul1 = fmul i32 %gates_load_read, i32 %expert_result0_load" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189]   --->   Operation 32 'fmul' 'mul1' <Predicate = true> <Delay = 3.88> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 3.88> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 33 [1/2] (1.02ns)   --->   "%expert_result1_load = load i6 %expert_result1_addr" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:190]   --->   Operation 33 'load' 'expert_result1_load' <Predicate = true> <Delay = 1.02> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.02> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_2 : Operation 34 [2/2] (3.88ns)   --->   "%mul2 = fmul i32 %gates_load_1_read, i32 %expert_result1_load" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:190]   --->   Operation 34 'fmul' 'mul2' <Predicate = true> <Delay = 3.88> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 3.88> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 3.88>
+ST_3 : Operation 35 [1/2] (3.88ns)   --->   "%mul1 = fmul i32 %gates_load_read, i32 %expert_result0_load" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189]   --->   Operation 35 'fmul' 'mul1' <Predicate = true> <Delay = 3.88> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 3.88> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 36 [1/2] (3.88ns)   --->   "%mul2 = fmul i32 %gates_load_1_read, i32 %expert_result1_load" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:190]   --->   Operation 36 'fmul' 'mul2' <Predicate = true> <Delay = 3.88> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 3.88> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%expert_result2_addr = getelementptr i32 %expert_result2, i64 0, i64 %zext_ln187" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:191]   --->   Operation 37 'getelementptr' 'expert_result2_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [2/2] (1.02ns)   --->   "%expert_result2_load = load i6 %expert_result2_addr" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:191]   --->   Operation 38 'load' 'expert_result2_load' <Predicate = true> <Delay = 1.02> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.02> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 4 <SV = 3> <Delay = 6.04>
+ST_4 : Operation 39 [2/2] (6.04ns)   --->   "%add = fadd i32 %mul1, i32 %mul2" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:190]   --->   Operation 39 'fadd' 'add' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 40 [1/2] (1.02ns)   --->   "%expert_result2_load = load i6 %expert_result2_addr" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:191]   --->   Operation 40 'load' 'expert_result2_load' <Predicate = true> <Delay = 1.02> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.02> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 41 [2/2] (3.88ns)   --->   "%mul3 = fmul i32 %gates_load_2_read, i32 %expert_result2_load" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:191]   --->   Operation 41 'fmul' 'mul3' <Predicate = true> <Delay = 3.88> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 3.88> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.04>
+ST_5 : Operation 42 [1/2] (6.04ns)   --->   "%add = fadd i32 %mul1, i32 %mul2" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:190]   --->   Operation 42 'fadd' 'add' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 43 [1/2] (3.88ns)   --->   "%mul3 = fmul i32 %gates_load_2_read, i32 %expert_result2_load" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:191]   --->   Operation 43 'fmul' 'mul3' <Predicate = true> <Delay = 3.88> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 3.88> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 44 [1/1] (0.00ns)   --->   "%expert_result3_addr = getelementptr i32 %expert_result3, i64 0, i64 %zext_ln187" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:192]   --->   Operation 44 'getelementptr' 'expert_result3_addr' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 45 [2/2] (1.02ns)   --->   "%expert_result3_load = load i6 %expert_result3_addr" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:192]   --->   Operation 45 'load' 'expert_result3_load' <Predicate = true> <Delay = 1.02> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.02> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_5 : Operation 46 [1/1] (0.00ns)   --->   "%acc_out_addr = getelementptr i32 %acc_out, i64 0, i64 %zext_ln187" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189]   --->   Operation 46 'getelementptr' 'acc_out_addr' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 6.04>
+ST_6 : Operation 47 [2/2] (6.04ns)   --->   "%add1 = fadd i32 %add, i32 %mul3" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:191]   --->   Operation 47 'fadd' 'add1' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 48 [1/2] (1.02ns)   --->   "%expert_result3_load = load i6 %expert_result3_addr" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:192]   --->   Operation 48 'load' 'expert_result3_load' <Predicate = true> <Delay = 1.02> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.02> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_6 : Operation 49 [2/2] (3.88ns)   --->   "%mul4 = fmul i32 %gates_load_3_read, i32 %expert_result3_load" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:192]   --->   Operation 49 'fmul' 'mul4' <Predicate = true> <Delay = 3.88> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 3.88> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.04>
+ST_7 : Operation 50 [1/2] (6.04ns)   --->   "%add1 = fadd i32 %add, i32 %mul3" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:191]   --->   Operation 50 'fadd' 'add1' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 51 [1/2] (3.88ns)   --->   "%mul4 = fmul i32 %gates_load_3_read, i32 %expert_result3_load" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:192]   --->   Operation 51 'fmul' 'mul4' <Predicate = true> <Delay = 3.88> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 1> <II = 1> <Delay = 3.88> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.04>
+ST_8 : Operation 52 [2/2] (6.04ns)   --->   "%add2 = fadd i32 %add1, i32 %mul4" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:192]   --->   Operation 52 'fadd' 'add2' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.04>
+ST_9 : Operation 53 [1/2] (6.04ns)   --->   "%add2 = fadd i32 %add1, i32 %mul4" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:192]   --->   Operation 53 'fadd' 'add2' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 54 [2/2] (1.02ns)   --->   "%acc_out_load = load i6 %acc_out_addr" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189]   --->   Operation 54 'load' 'acc_out_load' <Predicate = true> <Delay = 1.02> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.02> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 10 <SV = 9> <Delay = 7.07>
+ST_10 : Operation 55 [1/2] (1.02ns)   --->   "%acc_out_load = load i6 %acc_out_addr" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189]   --->   Operation 55 'load' 'acc_out_load' <Predicate = true> <Delay = 1.02> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.02> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_10 : Operation 56 [2/2] (6.04ns)   --->   "%add3 = fadd i32 %acc_out_load, i32 %add2" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189]   --->   Operation 56 'fadd' 'add3' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 63 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 63 'ret' 'ret_ln0' <Predicate = (icmp_ln187)> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 7.07>
+ST_11 : Operation 57 [1/1] (0.00ns)   --->   "%specpipeline_ln188 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_30" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:188]   --->   Operation 57 'specpipeline' 'specpipeline_ln188' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 58 [1/1] (0.00ns)   --->   "%speclooptripcount_ln189 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 64, i64 64, i64 64" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189]   --->   Operation 58 'speclooptripcount' 'speclooptripcount_ln189' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 59 [1/1] (0.00ns)   --->   "%specloopname_ln187 = specloopname void @_ssdm_op_SpecLoopName, void @empty_34" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:187]   --->   Operation 59 'specloopname' 'specloopname_ln187' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 60 [1/2] (6.04ns)   --->   "%add3 = fadd i32 %acc_out_load, i32 %add2" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189]   --->   Operation 60 'fadd' 'add3' <Predicate = true> <Delay = 6.04> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 1> <II = 1> <Delay = 6.04> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 61 [1/1] (1.02ns)   --->   "%store_ln189 = store i32 %add3, i6 %acc_out_addr" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189]   --->   Operation 61 'store' 'store_ln189' <Predicate = true> <Delay = 1.02> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.02> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_11 : Operation 62 [1/1] (0.00ns)   --->   "%br_ln187 = br void %for.cond132" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:187]   --->   Operation 62 'br' 'br_ln187' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.387ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln187', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:187) of constant 0 on local variable 'o', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:187 [15]  (0.362 ns)
+	'load' operation 7 bit ('o', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:187) on local variable 'o', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:187 [18]  (0.000 ns)
+	'getelementptr' operation 6 bit ('expert_result0_addr', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189) [27]  (0.000 ns)
+	'load' operation 32 bit ('expert_result0_load', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189) on array 'expert_result0' [28]  (1.025 ns)
+
+ <State 2>: 4.906ns
+The critical path consists of the following:
+	'load' operation 32 bit ('expert_result0_load', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189) on array 'expert_result0' [28]  (1.025 ns)
+	'fmul' operation 32 bit ('mul1', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189) [29]  (3.881 ns)
+
+ <State 3>: 3.881ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul1', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189) [29]  (3.881 ns)
+
+ <State 4>: 6.047ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:190) [33]  (6.047 ns)
+
+ <State 5>: 6.047ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:190) [33]  (6.047 ns)
+
+ <State 6>: 6.047ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add1', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:191) [37]  (6.047 ns)
+
+ <State 7>: 6.047ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add1', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:191) [37]  (6.047 ns)
+
+ <State 8>: 6.047ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add2', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:192) [41]  (6.047 ns)
+
+ <State 9>: 6.047ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add2', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:192) [41]  (6.047 ns)
+
+ <State 10>: 7.072ns
+The critical path consists of the following:
+	'load' operation 32 bit ('acc_out_load', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189) on array 'acc_out' [43]  (1.025 ns)
+	'fadd' operation 32 bit ('add3', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189) [44]  (6.047 ns)
+
+ <State 11>: 7.072ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add3', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189) [44]  (6.047 ns)
+	'store' operation 0 bit ('store_ln189', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189) of variable 'add3', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_10/src/pseudo_moe.cpp:189 on array 'acc_out' [45]  (1.025 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

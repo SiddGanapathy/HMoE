@@ -1,0 +1,104 @@
+{
+  "0": {
+    "basicblocks": 44,
+    "calls": "5",
+    "file": "pseudo_moe.cpp",
+    "fileloc": 76,
+    "instructions": 622,
+    "name": "pseudo_moe",
+    "stores": {
+      "L": 80
+    },
+    "total_instructions": 2354
+  },
+  "1": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "pseudo_moe.cpp",
+    "fileloc": 14,
+    "instructions": 147,
+    "loads": {
+      "L": 32
+    },
+    "name": "compute_expert<0>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 147
+  },
+  "2": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "pseudo_moe.cpp",
+    "fileloc": 54,
+    "instructions": 31,
+    "loads": {
+      "L": 8
+    },
+    "name": "combine_experts",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 31
+  },
+  "3": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "pseudo_moe.cpp",
+    "fileloc": 14,
+    "instructions": 147,
+    "loads": {
+      "L": 32
+    },
+    "name": "compute_expert<3>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 147
+  },
+  "4": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "pseudo_moe.cpp",
+    "fileloc": 14,
+    "instructions": 147,
+    "loads": {
+      "L": 32
+    },
+    "name": "compute_expert<2>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 147
+  },
+  "5": {
+    "basicblocks": 33,
+    "calls": "1 6 4 3 2",
+    "file": "pseudo_moe.cpp",
+    "fileloc": 0,
+    "instructions": 1113,
+    "loads": {
+      "L": 83
+    },
+    "name": "_Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1__VITIS_LOOP_158_5",
+    "stores": {
+      "L": 67
+    },
+    "total_instructions": 1732
+  },
+  "6": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "pseudo_moe.cpp",
+    "fileloc": 14,
+    "instructions": 147,
+    "loads": {
+      "L": 32
+    },
+    "name": "compute_expert<1>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 147
+  }
+}

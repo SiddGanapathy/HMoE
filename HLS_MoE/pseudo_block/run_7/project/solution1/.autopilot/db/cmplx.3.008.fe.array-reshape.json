@@ -1,0 +1,34 @@
+{
+  "0": {
+    "basicblocks": 80,
+    "calls": "1 1 1 1",
+    "file": "pseudo_moe.cpp",
+    "fileloc": 50,
+    "instructions": 582,
+    "loads": {
+      "L": 23,
+      "T": 7
+    },
+    "name": "pseudo_moe",
+    "stores": {
+      "L": 48,
+      "T": 2
+    },
+    "total_instructions": 1002
+  },
+  "1": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "pseudo_moe.cpp",
+    "fileloc": 11,
+    "instructions": 105,
+    "loads": {
+      "L": 17
+    },
+    "name": "compute_expert",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 105
+  }
+}

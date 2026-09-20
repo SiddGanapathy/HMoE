@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_170_9_proc712'" level="0">
+<item name = "Date">Sun Sep 20 21:00:08 2026
+</item>
+<item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
+<item name = "Project">project</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu13p_CIV-figd2104-3-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.325 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">1292, 1292, 12.920 us, 12.920 us, 1292, 1292, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_170_9_proc712_Pipeline_VITIS_1_fu_288">dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_170_9_proc712_Pipeline_VITIS_1, 66, 66, 0.660 us, 0.660 us, 66, 66, no</column>
+<column name="grp_compute_expert_0_s_fu_294">compute_expert_0_s, 302, 302, 3.020 us, 3.020 us, 302, 302, no</column>
+<column name="grp_compute_expert_1_s_fu_370">compute_expert_1_s, 302, 302, 3.020 us, 3.020 us, 302, 302, no</column>
+<column name="grp_compute_expert_2_s_fu_444">compute_expert_2_s, 302, 302, 3.020 us, 3.020 us, 302, 302, no</column>
+<column name="grp_compute_expert_3_s_fu_518">compute_expert_3_s, 302, 302, 3.020 us, 3.020 us, 302, 302, no</column>
+<column name="grp_dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_170_9_proc712_Pipeline_VITIS_fu_592">dataflow_in_loop_VITIS_LOOP_129_4_1_Loop_VITIS_LOOP_170_9_proc712_Pipeline_VITIS, 75, 75, 0.750 us, 0.750 us, 75, 75, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

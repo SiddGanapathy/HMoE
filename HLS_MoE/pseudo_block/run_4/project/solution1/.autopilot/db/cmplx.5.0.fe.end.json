@@ -1,0 +1,191 @@
+{
+    "1": {
+        "name": "pseudo_moe_Pipeline_VITIS_LOOP_94_2",
+        "file": "\/home\/simics\/HMoE\/HLS_HMoE\/pseudo_block\/run_4\/src\/pseudo_moe.cpp",
+        "fileloc": "92",
+        "instructions": "468",
+        "total_instructions": "468",
+        "calls": "",
+        "basicblocks": "9",
+        "loads": {
+            "L": "7"
+        },
+        "stores": {
+            "L": "12"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "pseudo_moe_Pipeline_VITIS_LOOP_121_6",
+        "file": "\/home\/simics\/HMoE\/HLS_HMoE\/pseudo_block\/run_4\/src\/pseudo_moe.cpp",
+        "fileloc": "121",
+        "instructions": "19",
+        "total_instructions": "19",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "pseudo_moe_Pipeline_VITIS_LOOP_144_9",
+        "file": "\/home\/simics\/HMoE\/HLS_HMoE\/pseudo_block\/run_4\/src\/pseudo_moe.cpp",
+        "fileloc": "144",
+        "instructions": "37",
+        "total_instructions": "37",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "compute_expert",
+        "file": "pseudo_moe.cpp",
+        "fileloc": "12",
+        "instructions": "21",
+        "total_instructions": "168",
+        "calls": "9",
+        "basicblocks": "1"
+    },
+    "5": {
+        "name": "pseudo_moe_Pipeline_VITIS_LOOP_136_8",
+        "file": "\/home\/simics\/HMoE\/HLS_HMoE\/pseudo_block\/run_4\/src\/pseudo_moe.cpp",
+        "fileloc": "136",
+        "instructions": "37",
+        "total_instructions": "37",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "pseudo_moe_Pipeline_VITIS_LOOP_128_7",
+        "file": "\/home\/simics\/HMoE\/HLS_HMoE\/pseudo_block\/run_4\/src\/pseudo_moe.cpp",
+        "fileloc": "128",
+        "instructions": "37",
+        "total_instructions": "37",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "pseudo_moe_Pipeline_VITIS_LOOP_152_10",
+        "file": "\/home\/simics\/HMoE\/HLS_HMoE\/pseudo_block\/run_4\/src\/pseudo_moe.cpp",
+        "fileloc": "152",
+        "instructions": "37",
+        "total_instructions": "37",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "pseudo_moe_Pipeline_VITIS_LOOP_116_5",
+        "file": "\/home\/simics\/HMoE\/HLS_HMoE\/pseudo_block\/run_4\/src\/pseudo_moe.cpp",
+        "fileloc": "116",
+        "instructions": "28",
+        "total_instructions": "28",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "compute_expert_Pipeline_VITIS_LOOP_20_1_VITIS_LOOP_31_3",
+        "file": "\/home\/simics\/HMoE\/HLS_HMoE\/pseudo_block\/run_4\/src\/pseudo_moe.cpp",
+        "fileloc": "20",
+        "instructions": "147",
+        "total_instructions": "147",
+        "calls": "",
+        "basicblocks": "8",
+        "loads": {
+            "L": "11"
+        },
+        "stores": {
+            "L": "23"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "pseudo_moe",
+        "file": "pseudo_moe.cpp",
+        "fileloc": "52",
+        "instructions": "192",
+        "total_instructions": "1585",
+        "calls": "1 10 8 2 4 6 4 5 4 3 4 7",
+        "basicblocks": "4",
+        "loads": {
+            "L": "19"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "10": {
+        "name": "pseudo_moe_Pipeline_VITIS_LOOP_111_4",
+        "file": "\/home\/simics\/HMoE\/HLS_HMoE\/pseudo_block\/run_4\/src\/pseudo_moe.cpp",
+        "fileloc": "109",
+        "instructions": "58",
+        "total_instructions": "58",
+        "calls": "",
+        "basicblocks": "9",
+        "loads": {
+            "L": "7"
+        },
+        "stores": {
+            "L": "12"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

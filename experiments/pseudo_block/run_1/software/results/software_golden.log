@@ -1,0 +1,72 @@
+============================================================
+Pseudo / Block MoE Software Baseline
+============================================================
+
+Loading dataset...
+9418 graphs in total: 7534 train 941 val 943 test
+[0m] INFO: num features for training: 153
+[0m] INFO: size of the edge attribute is 335
+Total graphs : 9418
+Test graphs  : 943
+Node features: 153
+Edge features: 335
+Loaded from /home/simics/HMoE/HierarchicalMoE/save/programl/v21_MLP-True-round1-40kernel-icmp-feb-db-extended-pseudo-block-connected-hierarchy-regression_edge-position-True_norm_with-invalid_False-normalization_speedup-log2_no_pragma_False_tag_whole-machsuite-poly_perfutil-DSPutil-BRAMutil-LUTutil-FF/pretrain_dataset/pragma_dim.klepto
+Pragma dimensions loaded.
+
+Creating HMoE model...
+Loading checkpoint...
+Checkpoint loaded.
+
+Extracting pseudo-MoE weights...
+Gate weight : (4, 64)
+Gate bias   : (4,)
+Expert 0 weight: (64, 64) bias: (64,)
+Expert 1 weight: (64, 64) bias: (64,)
+Expert 2 weight: (64, 64) bias: (64,)
+Expert 3 weight: (64, 64) bias: (64,)
+
+Generating pseudo-node input...
+All pseudo nodes in first batch: (715, 64)
+Selected pseudo input: (10, 64)
+
+Software warm-up...
+Warm-up complete.
+
+Timing software implementation...
+
+============================================================
+SOFTWARE PSEUDO / BLOCK MoE BASELINE
+============================================================
+Samples            : 10
+Input              : 10 × 64
+Output             : 10 × 64
+Experts            : 4
+Top-k              : 4
+Parameters         : 16,900
+Gate MACs          : 2,560
+Expert MACs        : 163,840
+Total MACs         : 166,400
+
+Mean latency       : 0.000068862 s
+Median latency     : 0.000066848 s
+Minimum latency    : 0.000065840 s
+Throughput         : 145,218.17 samples/s
+
+Mean gates:
+  Expert 0: 0.22869420
+  Expert 1: 0.26437587
+  Expert 2: 0.15723865
+  Expert 3: 0.34969127
+
+Output statistics:
+  Mean : 0.10504571
+  Std  : 1.81722927
+  Min  : -8.46141434
+  Max  : 8.07336426
+
+Golden files saved to:
+/home/simics/HMoE/experiments/pseudo_block/run_1/software/results
+
+Software golden log:
+/home/simics/HMoE/experiments/pseudo_block/run_1/software/results/software_golden.log
+============================================================

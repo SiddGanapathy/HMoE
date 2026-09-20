@@ -1,0 +1,50 @@
+{
+  "component": "pseudo_block_moe",
+  "source": "/home/simics/HMoE/experiments/pseudo_block/run_1/software/results",
+  "num_samples": 10,
+  "input_dim": 64,
+  "num_experts": 4,
+  "top_k": 4,
+  "dtype": "float32",
+  "input_file": "pseudo_input.txt",
+  "expected_gates": "expected/gates.txt",
+  "expected_output": "expected/output.txt",
+  "weights_dir": "weights/",
+  "weight_shapes": {
+    "w_gate": [
+      4,
+      64
+    ],
+    "b_gate": [
+      4
+    ],
+    "expert_0_weight": [
+      64,
+      64
+    ],
+    "expert_0_bias": [
+      64
+    ],
+    "expert_1_weight": [
+      64,
+      64
+    ],
+    "expert_1_bias": [
+      64
+    ],
+    "expert_2_weight": [
+      64,
+      64
+    ],
+    "expert_2_bias": [
+      64
+    ],
+    "expert_3_weight": [
+      64,
+      64
+    ],
+    "expert_3_bias": [
+      64
+    ]
+  }
+}

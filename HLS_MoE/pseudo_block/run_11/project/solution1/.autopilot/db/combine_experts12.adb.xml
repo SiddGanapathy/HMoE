@@ -1,0 +1,380 @@
+<stg><name>combine_experts12</name>
+
+
+<trans_list>
+
+<trans id="20" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="21" from="2" to="3">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="22" from="3" to="4">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="2" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+entry:0 %gates_addr = getelementptr i32 %gates, i64 0, i64 0
+
+]]></Node>
+<StgValue><ssdm name="gates_addr"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec>1 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="32" op_0_bw="2">
+<![CDATA[
+entry:1 %gates_load = load i2 %gates_addr
+
+]]></Node>
+<StgValue><ssdm name="gates_load"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="2" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+entry:2 %gates_addr_1 = getelementptr i32 %gates, i64 0, i64 1
+
+]]></Node>
+<StgValue><ssdm name="gates_addr_1"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="32" op_0_bw="2">
+<![CDATA[
+entry:3 %gates_load_1 = load i2 %gates_addr_1
+
+]]></Node>
+<StgValue><ssdm name="gates_load_1"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="9" st_id="2" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec>1 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="32" op_0_bw="2">
+<![CDATA[
+entry:1 %gates_load = load i2 %gates_addr
+
+]]></Node>
+<StgValue><ssdm name="gates_load"/></StgValue>
+</operation>
+
+<operation id="10" st_id="2" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="32" op_0_bw="2">
+<![CDATA[
+entry:3 %gates_load_1 = load i2 %gates_addr_1
+
+]]></Node>
+<StgValue><ssdm name="gates_load_1"/></StgValue>
+</operation>
+
+<operation id="11" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="2" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+entry:4 %gates_addr_2 = getelementptr i32 %gates, i64 0, i64 2
+
+]]></Node>
+<StgValue><ssdm name="gates_addr_2"/></StgValue>
+</operation>
+
+<operation id="12" st_id="2" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec>1 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="32" op_0_bw="2">
+<![CDATA[
+entry:5 %gates_load_2 = load i2 %gates_addr_2
+
+]]></Node>
+<StgValue><ssdm name="gates_load_2"/></StgValue>
+</operation>
+
+<operation id="13" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="2" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+entry:6 %gates_addr_3 = getelementptr i32 %gates, i64 0, i64 3
+
+]]></Node>
+<StgValue><ssdm name="gates_addr_3"/></StgValue>
+</operation>
+
+<operation id="14" st_id="2" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="32" op_0_bw="2">
+<![CDATA[
+entry:7 %gates_load_3 = load i2 %gates_addr_3
+
+]]></Node>
+<StgValue><ssdm name="gates_load_3"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="15" st_id="3" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec>1 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="32" op_0_bw="2">
+<![CDATA[
+entry:5 %gates_load_2 = load i2 %gates_addr_2
+
+]]></Node>
+<StgValue><ssdm name="gates_load_2"/></StgValue>
+</operation>
+
+<operation id="16" st_id="3" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="32" op_0_bw="2">
+<![CDATA[
+entry:7 %gates_load_3 = load i2 %gates_addr_3
+
+]]></Node>
+<StgValue><ssdm name="gates_load_3"/></StgValue>
+</operation>
+
+<operation id="17" st_id="3" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32">
+<![CDATA[
+entry:8 %call_ln55 = call void @combine_experts12_Pipeline_VITIS_LOOP_64_1, i32 %r0, i32 %gates_load, i32 %r1, i32 %gates_load_1, i32 %r2, i32 %gates_load_2, i32 %r3, i32 %gates_load_3, i32 %result
+
+]]></Node>
+<StgValue><ssdm name="call_ln55"/></StgValue>
+</operation>
+</state>
+
+<state id="4" st_id="4">
+
+<operation id="18" st_id="4" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32">
+<![CDATA[
+entry:8 %call_ln55 = call void @combine_experts12_Pipeline_VITIS_LOOP_64_1, i32 %r0, i32 %gates_load, i32 %r1, i32 %gates_load_1, i32 %r2, i32 %gates_load_2, i32 %r3, i32 %gates_load_3, i32 %result
+
+]]></Node>
+<StgValue><ssdm name="call_ln55"/></StgValue>
+</operation>
+
+<operation id="19" st_id="4" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="0">
+<![CDATA[
+entry:9 %ret_ln71 = ret
+
+]]></Node>
+<StgValue><ssdm name="ret_ln71"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="23" name="gates" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="gates"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="24" name="r0" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="r0"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="25" name="r1" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="r1"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="26" name="r2" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="r2"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="27" name="r3" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="r3"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="28" name="result" dir="1" iftype="1">
+<core>RAM</core><StgValue><ssdm name="result"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="29" from="gates" to="gates_addr" fromId="23" toId="5">
+</dataflow>
+<dataflow id="31" from="StgValue_30" to="gates_addr" fromId="30" toId="5">
+</dataflow>
+<dataflow id="32" from="StgValue_30" to="gates_addr" fromId="30" toId="5">
+</dataflow>
+<dataflow id="33" from="gates_addr" to="gates_load" fromId="5" toId="6">
+</dataflow>
+<dataflow id="34" from="gates" to="gates_addr_1" fromId="23" toId="7">
+</dataflow>
+<dataflow id="35" from="StgValue_30" to="gates_addr_1" fromId="30" toId="7">
+</dataflow>
+<dataflow id="37" from="StgValue_36" to="gates_addr_1" fromId="36" toId="7">
+</dataflow>
+<dataflow id="38" from="gates_addr_1" to="gates_load_1" fromId="7" toId="8">
+</dataflow>
+<dataflow id="39" from="gates_addr" to="gates_load" fromId="5" toId="9">
+</dataflow>
+<dataflow id="40" from="gates_addr_1" to="gates_load_1" fromId="7" toId="10">
+</dataflow>
+<dataflow id="41" from="gates" to="gates_addr_2" fromId="23" toId="11">
+</dataflow>
+<dataflow id="42" from="StgValue_30" to="gates_addr_2" fromId="30" toId="11">
+</dataflow>
+<dataflow id="44" from="StgValue_43" to="gates_addr_2" fromId="43" toId="11">
+</dataflow>
+<dataflow id="45" from="gates_addr_2" to="gates_load_2" fromId="11" toId="12">
+</dataflow>
+<dataflow id="46" from="gates" to="gates_addr_3" fromId="23" toId="13">
+</dataflow>
+<dataflow id="47" from="StgValue_30" to="gates_addr_3" fromId="30" toId="13">
+</dataflow>
+<dataflow id="49" from="StgValue_48" to="gates_addr_3" fromId="48" toId="13">
+</dataflow>
+<dataflow id="50" from="gates_addr_3" to="gates_load_3" fromId="13" toId="14">
+</dataflow>
+<dataflow id="51" from="gates_addr_2" to="gates_load_2" fromId="11" toId="15">
+</dataflow>
+<dataflow id="52" from="gates_addr_3" to="gates_load_3" fromId="13" toId="16">
+</dataflow>
+<dataflow id="54" from="combine_experts12_Pipeline_VITIS_LOOP_64_1" to="call_ln55" fromId="53" toId="17">
+</dataflow>
+<dataflow id="55" from="r0" to="call_ln55" fromId="24" toId="17">
+</dataflow>
+<dataflow id="56" from="gates_load" to="call_ln55" fromId="9" toId="17">
+</dataflow>
+<dataflow id="57" from="r1" to="call_ln55" fromId="25" toId="17">
+</dataflow>
+<dataflow id="58" from="gates_load_1" to="call_ln55" fromId="10" toId="17">
+</dataflow>
+<dataflow id="59" from="r2" to="call_ln55" fromId="26" toId="17">
+</dataflow>
+<dataflow id="60" from="gates_load_2" to="call_ln55" fromId="15" toId="17">
+</dataflow>
+<dataflow id="61" from="r3" to="call_ln55" fromId="27" toId="17">
+</dataflow>
+<dataflow id="62" from="gates_load_3" to="call_ln55" fromId="16" toId="17">
+</dataflow>
+<dataflow id="63" from="result" to="call_ln55" fromId="28" toId="17">
+</dataflow>
+<dataflow id="64" from="combine_experts12_Pipeline_VITIS_LOOP_64_1" to="call_ln55" fromId="53" toId="18">
+</dataflow>
+<dataflow id="65" from="r0" to="call_ln55" fromId="24" toId="18">
+</dataflow>
+<dataflow id="66" from="gates_load" to="call_ln55" fromId="9" toId="18">
+</dataflow>
+<dataflow id="67" from="r1" to="call_ln55" fromId="25" toId="18">
+</dataflow>
+<dataflow id="68" from="gates_load_1" to="call_ln55" fromId="10" toId="18">
+</dataflow>
+<dataflow id="69" from="r2" to="call_ln55" fromId="26" toId="18">
+</dataflow>
+<dataflow id="70" from="gates_load_2" to="call_ln55" fromId="15" toId="18">
+</dataflow>
+<dataflow id="71" from="r3" to="call_ln55" fromId="27" toId="18">
+</dataflow>
+<dataflow id="72" from="gates_load_3" to="call_ln55" fromId="16" toId="18">
+</dataflow>
+<dataflow id="73" from="result" to="call_ln55" fromId="28" toId="18">
+</dataflow>
+</dataflows>
+
+
+</stg>

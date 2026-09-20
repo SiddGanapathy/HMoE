@@ -1,0 +1,80 @@
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6679:2: warning: Added loop label VITIS_LOOP_25_1:   [xilinx-label-all-loops]
+ for (int k = 0; k < D * D; k++) {
+ ^~~
+ VITIS_LOOP_25_1: 
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6679:2: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6684:5: warning: Added loop label VITIS_LOOP_30_2:   [xilinx-label-all-loops]
+    for (int o = 0; o < D; o++) {
+    ^~~
+    VITIS_LOOP_30_2: 
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6684:5: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6689:2: warning: Added loop label VITIS_LOOP_35_3:   [xilinx-label-all-loops]
+ for (int lane = 0; lane < LANES; lane++) {
+ ^~~
+ VITIS_LOOP_35_3: 
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6689:2: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6695:9: warning: Added loop label VITIS_LOOP_41_4:   [xilinx-label-all-loops]
+        for (int g = 0; g < GROUPS; g++) {
+        ^~~
+        VITIS_LOOP_41_4: 
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6695:9: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6698:2: warning: Added loop label VITIS_LOOP_44_5:   [xilinx-label-all-loops]
+ for (int lane = 0; lane < LANES; lane++) {
+ ^~~
+ VITIS_LOOP_44_5: 
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6698:2: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6707:9: warning: Added loop label VITIS_LOOP_53_6:   [xilinx-label-all-loops]
+        for (int lane = 0; lane < LANES; lane++) {
+        ^~~
+        VITIS_LOOP_53_6: 
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6707:9: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6756:5: warning: Added loop label VITIS_LOOP_98_1:   [xilinx-label-all-loops]
+    for (int n = 0; n < N; n++) {
+    ^~~
+    VITIS_LOOP_98_1: 
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6756:5: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6762:9: warning: Added loop label VITIS_LOOP_104_2:   [xilinx-label-all-loops]
+        for (int e = 0; e < E; e++) {
+        ^~~
+        VITIS_LOOP_104_2: 
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6762:9: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6765:13: warning: Added loop label VITIS_LOOP_107_3:   [xilinx-label-all-loops]
+            for (int d = 0; d < D; d++) {
+            ^~~
+            VITIS_LOOP_107_3: 
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6765:13: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6779:9: warning: Added loop label VITIS_LOOP_121_4:   [xilinx-label-all-loops]
+        for (int e = 0; e < E; e++) {
+        ^~~
+        VITIS_LOOP_121_4: 
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6779:9: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6784:9: warning: Added loop label VITIS_LOOP_126_5:   [xilinx-label-all-loops]
+        for (int e = 0; e < E; e++) {
+        ^~~
+        VITIS_LOOP_126_5: 
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6784:9: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6789:9: warning: Added loop label VITIS_LOOP_131_6:   [xilinx-label-all-loops]
+        for (int d = 0; d < D; d++) {
+        ^~~
+        VITIS_LOOP_131_6: 
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6789:9: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6796:9: warning: Added loop label VITIS_LOOP_138_7:   [xilinx-label-all-loops]
+        for (int o = 0; o < D; o++) {
+        ^~~
+        VITIS_LOOP_138_7: 
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6796:9: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6804:9: warning: Added loop label VITIS_LOOP_146_8:   [xilinx-label-all-loops]
+        for (int o = 0; o < D; o++) {
+        ^~~
+        VITIS_LOOP_146_8: 
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6804:9: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6812:9: warning: Added loop label VITIS_LOOP_154_9:   [xilinx-label-all-loops]
+        for (int o = 0; o < D; o++) {
+        ^~~
+        VITIS_LOOP_154_9: 
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6812:9: note: FIX-IT applied suggested code changes
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6820:9: warning: Added loop label VITIS_LOOP_162_10:   [xilinx-label-all-loops]
+        for (int o = 0; o < D; o++) {
+        ^~~
+        VITIS_LOOP_162_10: 
+/home/simics/HMoE/HLS_HMoE/pseudo_block/run_5/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp:6820:9: note: FIX-IT applied suggested code changes

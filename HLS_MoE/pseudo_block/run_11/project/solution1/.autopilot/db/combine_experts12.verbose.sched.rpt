@@ -1,0 +1,143 @@
+
+
+================================================================
+== Vitis HLS Report for 'combine_experts12'
+================================================================
+* Date:           Sun Sep 20 21:17:00 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        project
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu13p_CIV-figd2104-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.072 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       76|       76|  0.760 us|  0.760 us|   76|   76|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.54>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%gates_addr = getelementptr i32 %gates, i64 0, i64 0" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:55]   --->   Operation 5 'getelementptr' 'gates_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [2/2] (0.54ns)   --->   "%gates_load = load i2 %gates_addr" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:55]   --->   Operation 6 'load' 'gates_load' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%gates_addr_1 = getelementptr i32 %gates, i64 0, i64 1"   --->   Operation 7 'getelementptr' 'gates_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [2/2] (0.54ns)   --->   "%gates_load_1 = load i2 %gates_addr_1"   --->   Operation 8 'load' 'gates_load_1' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+
+State 2 <SV = 1> <Delay = 0.54>
+ST_2 : Operation 9 [1/2] (0.54ns)   --->   "%gates_load = load i2 %gates_addr" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:55]   --->   Operation 9 'load' 'gates_load' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 10 [1/2] (0.54ns)   --->   "%gates_load_1 = load i2 %gates_addr_1"   --->   Operation 10 'load' 'gates_load_1' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%gates_addr_2 = getelementptr i32 %gates, i64 0, i64 2"   --->   Operation 11 'getelementptr' 'gates_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [2/2] (0.54ns)   --->   "%gates_load_2 = load i2 %gates_addr_2"   --->   Operation 12 'load' 'gates_load_2' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%gates_addr_3 = getelementptr i32 %gates, i64 0, i64 3"   --->   Operation 13 'getelementptr' 'gates_addr_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [2/2] (0.54ns)   --->   "%gates_load_3 = load i2 %gates_addr_3"   --->   Operation 14 'load' 'gates_load_3' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+
+State 3 <SV = 2> <Delay = 0.54>
+ST_3 : Operation 15 [1/2] (0.54ns)   --->   "%gates_load_2 = load i2 %gates_addr_2"   --->   Operation 15 'load' 'gates_load_2' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 16 [1/2] (0.54ns)   --->   "%gates_load_3 = load i2 %gates_addr_3"   --->   Operation 16 'load' 'gates_load_3' <Predicate = true> <Delay = 0.54> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.54> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 17 [2/2] (0.00ns)   --->   "%call_ln55 = call void @combine_experts12_Pipeline_VITIS_LOOP_64_1, i32 %r0, i32 %gates_load, i32 %r1, i32 %gates_load_1, i32 %r2, i32 %gates_load_2, i32 %r3, i32 %gates_load_3, i32 %result" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:55]   --->   Operation 17 'call' 'call_ln55' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 18 [1/2] (0.00ns)   --->   "%call_ln55 = call void @combine_experts12_Pipeline_VITIS_LOOP_64_1, i32 %r0, i32 %gates_load, i32 %r1, i32 %gates_load_1, i32 %r2, i32 %gates_load_2, i32 %r3, i32 %gates_load_3, i32 %result" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:55]   --->   Operation 18 'call' 'call_ln55' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "%ret_ln71 = ret" [/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:71]   --->   Operation 19 'ret' 'ret_ln71' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 0.542ns
+The critical path consists of the following:
+	'getelementptr' operation 2 bit ('gates_addr', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:55) [7]  (0.000 ns)
+	'load' operation 32 bit ('gates_load', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:55) on array 'gates' [8]  (0.542 ns)
+
+ <State 2>: 0.542ns
+The critical path consists of the following:
+	'load' operation 32 bit ('gates_load', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:55) on array 'gates' [8]  (0.542 ns)
+
+ <State 3>: 0.542ns
+The critical path consists of the following:
+	'load' operation 32 bit ('gates_load_2') on array 'gates' [12]  (0.542 ns)
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

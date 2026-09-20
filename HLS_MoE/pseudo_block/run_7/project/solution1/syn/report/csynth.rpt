@@ -1,0 +1,450 @@
+
+
+================================================================
+== Synthesis Summary Report of 'pseudo_moe'
+================================================================
++ General Information: 
+    * Date:           Sun Sep 20 19:32:36 2026
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        project
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu13p_CIV-figd2104-3-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----------+-------------+------------+-----+
+    |                            Modules                           | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |          |          |             |            |     |
+    |                            & Loops                           | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |    DSP   |      FF     |     LUT    | URAM|
+    +--------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----------+-------------+------------+-----+
+    |+ pseudo_moe                                                  |     -|  0.00|    32925|  3.292e+05|         -|    32926|     -|        no|  103 (1%)|  70 (~0%)|  25357 (~0%)|  24561 (1%)|    -|
+    | + pseudo_moe_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2      |     -|  0.00|      643|  6.430e+03|         -|      643|     -|        no|         -|         -|     58 (~0%)|   153 (~0%)|    -|
+    |  o VITIS_LOOP_104_1_VITIS_LOOP_105_2                         |     -|  7.30|      641|  6.410e+03|         3|        1|   640|       yes|         -|         -|            -|           -|    -|
+    | + pseudo_moe_Pipeline_VITIS_LOOP_115_3                       |     -|  0.00|     4099|  4.099e+04|         -|     4099|     -|        no|         -|         -|     74 (~0%)|    90 (~0%)|    -|
+    |  o VITIS_LOOP_115_3                                          |     -|  7.30|     4097|  4.097e+04|         3|        1|  4096|       yes|         -|         -|            -|           -|    -|
+    | + pseudo_moe_Pipeline_VITIS_LOOP_120_4                       |     -|  0.00|     4099|  4.099e+04|         -|     4099|     -|        no|         -|         -|     74 (~0%)|    90 (~0%)|    -|
+    |  o VITIS_LOOP_120_4                                          |     -|  7.30|     4097|  4.097e+04|         3|        1|  4096|       yes|         -|         -|            -|           -|    -|
+    | + pseudo_moe_Pipeline_VITIS_LOOP_125_5                       |     -|  0.00|     4099|  4.099e+04|         -|     4099|     -|        no|         -|         -|     74 (~0%)|    90 (~0%)|    -|
+    |  o VITIS_LOOP_125_5                                          |     -|  7.30|     4097|  4.097e+04|         3|        1|  4096|       yes|         -|         -|            -|           -|    -|
+    | + pseudo_moe_Pipeline_VITIS_LOOP_130_6                       |     -|  0.00|     4099|  4.099e+04|         -|     4099|     -|        no|         -|         -|     74 (~0%)|    90 (~0%)|    -|
+    |  o VITIS_LOOP_130_6                                          |     -|  7.30|     4097|  4.097e+04|         3|        1|  4096|       yes|         -|         -|            -|           -|    -|
+    | o VITIS_LOOP_139_7                                           |     -|  7.30|    28810|  2.881e+05|      2881|        -|    10|        no|         -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_150_8                      |     -|  0.00|      328|  3.280e+03|         -|      328|     -|        no|         -|         -|   3990 (~0%)|  1914 (~0%)|    -|
+    |   o VITIS_LOOP_150_8                                         |    II|  7.30|      326|  3.260e+03|       135|       64|     4|       yes|         -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_180_12                     |     -|  5.26|       66|    660.000|         -|       66|     -|        no|         -|         -|      9 (~0%)|    56 (~0%)|    -|
+    |   o VITIS_LOOP_180_12                                        |     -|  7.30|       64|    640.000|         1|        1|    64|       yes|         -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_167_10                     |     -|  0.47|       12|    120.000|         -|       12|     -|        no|         -|   9 (~0%)|    690 (~0%)|  1168 (~0%)|    -|
+    |   o VITIS_LOOP_167_10                                        |     -|  7.30|       10|    100.000|         8|        1|     4|       yes|         -|         -|            -|           -|    -|
+    |  + compute_expert                                            |     -|  0.00|      542|  5.420e+03|         -|      542|     -|        no|         -|  56 (~0%)|   5992 (~0%)|  5615 (~0%)|    -|
+    |   + compute_expert_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_29_3  |     -|  0.00|      533|  5.330e+03|         -|      533|     -|        no|         -|  56 (~0%)|   5887 (~0%)|  5415 (~0%)|    -|
+    |    o VITIS_LOOP_19_1_VITIS_LOOP_29_3                         |     -|  7.30|      531|  5.310e+03|        21|        1|   512|       yes|         -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_173_11                     |     -|  0.00|       11|    110.000|         -|       11|     -|        no|         -|         -|    307 (~0%)|   191 (~0%)|    -|
+    |   o VITIS_LOOP_173_11                                        |     -|  7.30|        9|     90.000|         7|        1|     4|       yes|         -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_188_13                     |     -|  0.23|       69|    690.000|         -|       69|     -|        no|         -|         -|    118 (~0%)|    99 (~0%)|    -|
+    |   o VITIS_LOOP_188_13                                        |     -|  7.30|       67|    670.000|         5|        1|    64|       yes|         -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_196_14                     |     -|  0.23|       69|    690.000|         -|       69|     -|        no|         -|         -|    118 (~0%)|    99 (~0%)|    -|
+    |   o VITIS_LOOP_196_14                                        |     -|  7.30|       67|    670.000|         5|        1|    64|       yes|         -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_204_15                     |     -|  0.23|       69|    690.000|         -|       69|     -|        no|         -|         -|    118 (~0%)|    99 (~0%)|    -|
+    |   o VITIS_LOOP_204_15                                        |     -|  7.30|       67|    670.000|         5|        1|    64|       yes|         -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_212_16                     |     -|  0.23|       69|    690.000|         -|       69|     -|        no|         -|         -|    118 (~0%)|    99 (~0%)|    -|
+    |   o VITIS_LOOP_212_16                                        |     -|  7.30|       67|    670.000|         5|        1|    64|       yes|         -|         -|            -|           -|    -|
+    |  + pseudo_moe_Pipeline_VITIS_LOOP_218_17                     |     -|  0.00|       67|    670.000|         -|       67|     -|        no|         -|         -|     44 (~0%)|    78 (~0%)|    -|
+    |   o VITIS_LOOP_218_17                                        |     -|  7.30|       65|    650.000|         3|        1|    64|       yes|         -|         -|            -|           -|    -|
+    +--------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----------+-------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++--------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface    | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|              | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++--------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem1  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem10 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem11 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem12 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem2  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem3  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem4  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem5  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem6  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem7  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem8  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem9  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
++--------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++-----------------+------------+---------------+--------+----------+
+| Interface       | Data Width | Address Width | Offset | Register |
++-----------------+------------+---------------+--------+----------+
+| s_axi_control   | 32         | 4             |        |          |
+| s_axi_control_r | 32         | 8             | 16     | 0        |
++-----------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++-----------------+-------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface       | Register    | Offset | Width | Access | Description                      | Bit Fields                                                           |
++-----------------+-------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control   | CTRL        | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control   | GIER        | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control   | IP_IER      | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control   | IP_ISR      | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control_r | input_r_1   | 0x10   | 32    | W      | Data signal of input_r           |                                                                      |
+| s_axi_control_r | input_r_2   | 0x14   | 32    | W      | Data signal of input_r           |                                                                      |
+| s_axi_control_r | w_gate_1    | 0x1c   | 32    | W      | Data signal of w_gate            |                                                                      |
+| s_axi_control_r | w_gate_2    | 0x20   | 32    | W      | Data signal of w_gate            |                                                                      |
+| s_axi_control_r | b_gate_1    | 0x28   | 32    | W      | Data signal of b_gate            |                                                                      |
+| s_axi_control_r | b_gate_2    | 0x2c   | 32    | W      | Data signal of b_gate            |                                                                      |
+| s_axi_control_r | w0_1        | 0x34   | 32    | W      | Data signal of w0                |                                                                      |
+| s_axi_control_r | w0_2        | 0x38   | 32    | W      | Data signal of w0                |                                                                      |
+| s_axi_control_r | b0_1        | 0x40   | 32    | W      | Data signal of b0                |                                                                      |
+| s_axi_control_r | b0_2        | 0x44   | 32    | W      | Data signal of b0                |                                                                      |
+| s_axi_control_r | w1_1        | 0x4c   | 32    | W      | Data signal of w1                |                                                                      |
+| s_axi_control_r | w1_2        | 0x50   | 32    | W      | Data signal of w1                |                                                                      |
+| s_axi_control_r | b1_1        | 0x58   | 32    | W      | Data signal of b1                |                                                                      |
+| s_axi_control_r | b1_2        | 0x5c   | 32    | W      | Data signal of b1                |                                                                      |
+| s_axi_control_r | w2_1        | 0x64   | 32    | W      | Data signal of w2                |                                                                      |
+| s_axi_control_r | w2_2        | 0x68   | 32    | W      | Data signal of w2                |                                                                      |
+| s_axi_control_r | b2_1        | 0x70   | 32    | W      | Data signal of b2                |                                                                      |
+| s_axi_control_r | b2_2        | 0x74   | 32    | W      | Data signal of b2                |                                                                      |
+| s_axi_control_r | w3_1        | 0x7c   | 32    | W      | Data signal of w3                |                                                                      |
+| s_axi_control_r | w3_2        | 0x80   | 32    | W      | Data signal of w3                |                                                                      |
+| s_axi_control_r | b3_1        | 0x88   | 32    | W      | Data signal of b3                |                                                                      |
+| s_axi_control_r | b3_2        | 0x8c   | 32    | W      | Data signal of b3                |                                                                      |
+| s_axi_control_r | gates_out_1 | 0x94   | 32    | W      | Data signal of gates_out         |                                                                      |
+| s_axi_control_r | gates_out_2 | 0x98   | 32    | W      | Data signal of gates_out         |                                                                      |
+| s_axi_control_r | output_r_1  | 0xa0   | 32    | W      | Data signal of output_r          |                                                                      |
+| s_axi_control_r | output_r_2  | 0xa4   | 32    | W      | Data signal of output_r          |                                                                      |
++-----------------+-------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------+-----------+---------------+
+| Argument  | Direction | Datatype      |
++-----------+-----------+---------------+
+| input     | in        | float const * |
+| w_gate    | in        | float const * |
+| b_gate    | in        | float const * |
+| w0        | in        | float const * |
+| b0        | in        | float const * |
+| w1        | in        | float const * |
+| b1        | in        | float const * |
+| w2        | in        | float const * |
+| b2        | in        | float const * |
+| w3        | in        | float const * |
+| b3        | in        | float const * |
+| gates_out | out       | float*        |
+| output    | out       | float*        |
++-----------+-----------+---------------+
+
+* SW-to-HW Mapping
++-----------+-----------------+-----------+----------+---------------------------------------+
+| Argument  | HW Interface    | HW Type   | HW Usage | HW Info                               |
++-----------+-----------------+-----------+----------+---------------------------------------+
+| input     | m_axi_gmem0     | interface |          |                                       |
+| input     | s_axi_control_r | interface | offset   |                                       |
+| w_gate    | m_axi_gmem1     | interface |          |                                       |
+| w_gate    | s_axi_control_r | register  | offset   | name=w_gate_1 offset=0x1c range=32    |
+| w_gate    | s_axi_control_r | register  | offset   | name=w_gate_2 offset=0x20 range=32    |
+| b_gate    | m_axi_gmem2     | interface |          |                                       |
+| b_gate    | s_axi_control_r | register  | offset   | name=b_gate_1 offset=0x28 range=32    |
+| b_gate    | s_axi_control_r | register  | offset   | name=b_gate_2 offset=0x2c range=32    |
+| w0        | m_axi_gmem3     | interface |          |                                       |
+| w0        | s_axi_control_r | register  | offset   | name=w0_1 offset=0x34 range=32        |
+| w0        | s_axi_control_r | register  | offset   | name=w0_2 offset=0x38 range=32        |
+| b0        | m_axi_gmem4     | interface |          |                                       |
+| b0        | s_axi_control_r | register  | offset   | name=b0_1 offset=0x40 range=32        |
+| b0        | s_axi_control_r | register  | offset   | name=b0_2 offset=0x44 range=32        |
+| w1        | m_axi_gmem5     | interface |          |                                       |
+| w1        | s_axi_control_r | register  | offset   | name=w1_1 offset=0x4c range=32        |
+| w1        | s_axi_control_r | register  | offset   | name=w1_2 offset=0x50 range=32        |
+| b1        | m_axi_gmem6     | interface |          |                                       |
+| b1        | s_axi_control_r | register  | offset   | name=b1_1 offset=0x58 range=32        |
+| b1        | s_axi_control_r | register  | offset   | name=b1_2 offset=0x5c range=32        |
+| w2        | m_axi_gmem7     | interface |          |                                       |
+| w2        | s_axi_control_r | register  | offset   | name=w2_1 offset=0x64 range=32        |
+| w2        | s_axi_control_r | register  | offset   | name=w2_2 offset=0x68 range=32        |
+| b2        | m_axi_gmem8     | interface |          |                                       |
+| b2        | s_axi_control_r | register  | offset   | name=b2_1 offset=0x70 range=32        |
+| b2        | s_axi_control_r | register  | offset   | name=b2_2 offset=0x74 range=32        |
+| w3        | m_axi_gmem9     | interface |          |                                       |
+| w3        | s_axi_control_r | register  | offset   | name=w3_1 offset=0x7c range=32        |
+| w3        | s_axi_control_r | register  | offset   | name=w3_2 offset=0x80 range=32        |
+| b3        | m_axi_gmem10    | interface |          |                                       |
+| b3        | s_axi_control_r | register  | offset   | name=b3_1 offset=0x88 range=32        |
+| b3        | s_axi_control_r | register  | offset   | name=b3_2 offset=0x8c range=32        |
+| gates_out | m_axi_gmem11    | interface |          |                                       |
+| gates_out | s_axi_control_r | register  | offset   | name=gates_out_1 offset=0x94 range=32 |
+| gates_out | s_axi_control_r | register  | offset   | name=gates_out_2 offset=0x98 range=32 |
+| output    | m_axi_gmem12    | interface |          |                                       |
+| output    | s_axi_control_r | interface | offset   |                                       |
++-----------+-----------------+-----------+----------+---------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+------------------+-------------------------------------------------------------------------+
+| HW Interface | Direction | Length | Width | Loop             | Loop Location                                                           |
++--------------+-----------+--------+-------+------------------+-------------------------------------------------------------------------+
+| m_axi_gmem0  | read      | 640    | 32    | VITIS_LOOP_104_1 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:104:20 |
+| m_axi_gmem1  | read      | 256    | 32    | VITIS_LOOP_150_8 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:150:27 |
+| m_axi_gmem11 | write     | 40     | 32    | VITIS_LOOP_139_7 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:139:23 |
+| m_axi_gmem12 | write     | 640    | 32    | VITIS_LOOP_139_7 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:139:23 |
+| m_axi_gmem2  | read      | 4      | 32    | VITIS_LOOP_150_8 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:150:27 |
+| m_axi_gmem3  | read      | 4096   | 32    | VITIS_LOOP_115_3 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:115:23 |
+| m_axi_gmem4  | read      | 64     | 32    | VITIS_LOOP_19_1  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:19:19  |
+| m_axi_gmem5  | read      | 4096   | 32    | VITIS_LOOP_120_4 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:120:23 |
+| m_axi_gmem7  | read      | 4096   | 32    | VITIS_LOOP_125_5 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:125:23 |
+| m_axi_gmem9  | read      | 4096   | 32    | VITIS_LOOP_130_6 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:130:23 |
++--------------+-----------+--------+-------+------------------+-------------------------------------------------------------------------+
+
+* All M_AXI Variable Accesses
++--------------------------------+-----------+-------------------------------------------------------------------------+-----------+--------------+--------+-------------------+-------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| HW Interface                   | Variable  | Access Location                                                         | Direction | Burst Status | Length | Loop              | Loop Location                                                           | Resolution | Problem                                                                                                 |
++--------------------------------+-----------+-------------------------------------------------------------------------+-----------+--------------+--------+-------------------+-------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| m_axi_gmem0                    | input     | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:107:22 | read      | Widen Fail   |        | VITIS_LOOP_105_2  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:105:27 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0                    | input     | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:107:22 | read      | Inferred     | 640    | VITIS_LOOP_104_1  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:104:20 |            |                                                                                                         |
+| m_axi_gmem1                    | w_gate    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:154:44 | read      | Widen Fail   |        | VITIS_LOOP_153_9  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:153:31 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem1                    | w_gate    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:154:44 | read      | Fail         |        | VITIS_LOOP_139_7  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:139:23 | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem1                    | w_gate    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:154:44 | read      | Inferred     | 256    | VITIS_LOOP_150_8  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:150:27 |            |                                                                                                         |
+| m_axi_gmem11                   | gates_out | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:176:34 | write     | Widen Fail   |        | VITIS_LOOP_173_11 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:173:28 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem11                   | gates_out | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:176:34 | write     | Inferred     | 40     | VITIS_LOOP_139_7  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:139:23 |            |                                                                                                         |
+| m_axi_gmem12                   | output    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:220:20 | write     | Widen Fail   |        | VITIS_LOOP_218_17 | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:218:28 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem12                   | output    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:220:20 | write     | Inferred     | 640    | VITIS_LOOP_139_7  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:139:23 |            |                                                                                                         |
+| m_axi_gmem2                    | b_gate    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:151:25 | read      | Widen Fail   |        | VITIS_LOOP_150_8  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:150:27 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem2                    | b_gate    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:151:25 | read      | Fail         |        | VITIS_LOOP_139_7  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:139:23 | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem2                    | b_gate    | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:151:25 | read      | Inferred     | 4      | VITIS_LOOP_150_8  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:150:27 |            |                                                                                                         |
+| m_axi_gmem3                    | w0        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:117:16 | read      | Widen Fail   |        | VITIS_LOOP_115_3  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:115:23 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem3                    | w0        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:117:16 | read      | Inferred     | 4096   | VITIS_LOOP_115_3  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:115:23 |            |                                                                                                         |
+| m_axi_gmem4,gmem6,gmem8,gmem10 | b         | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:39:21  | read      | Widen Fail   |        | VITIS_LOOP_19_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:19:19  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem4,gmem6,gmem8,gmem10 | b         | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:39:21  | read      | Inferred     | 64     | VITIS_LOOP_19_1   | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:19:19  |            |                                                                                                         |
+| m_axi_gmem5                    | w1        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:122:16 | read      | Widen Fail   |        | VITIS_LOOP_120_4  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:120:23 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem5                    | w1        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:122:16 | read      | Inferred     | 4096   | VITIS_LOOP_120_4  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:120:23 |            |                                                                                                         |
+| m_axi_gmem7                    | w2        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:127:16 | read      | Widen Fail   |        | VITIS_LOOP_125_5  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:125:23 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem7                    | w2        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:127:16 | read      | Inferred     | 4096   | VITIS_LOOP_125_5  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:125:23 |            |                                                                                                         |
+| m_axi_gmem9                    | w3        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:132:16 | read      | Widen Fail   |        | VITIS_LOOP_130_6  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:130:23 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem9                    | w3        | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:132:16 | read      | Inferred     | 4096   | VITIS_LOOP_130_6  | /home/simics/HMoE/HLS_HMoE/pseudo_block/run_7/src/pseudo_moe.cpp:130:23 |            |                                                                                                         |
++--------------------------------+-----------+-------------------------------------------------------------------------+-----------+--------------+--------+-------------------+-------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------------------------+-----+--------+--------------+------+---------+---------+
+| Name                                                        | DSP | Pragma | Variable     | Op   | Impl    | Latency |
++-------------------------------------------------------------+-----+--------+--------------+------+---------+---------+
+| + pseudo_moe                                                | 70  |        |              |      |         |         |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U225                   |     |        | add_ln139    | add  | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_104_1_VITIS_LOOP_105_2    | 0   |        |              |      |         |         |
+|    add_ln104_1_fu_249_p2                                    |     |        | add_ln104_1  | add  | fabric  | 0       |
+|    add_ln104_fu_272_p2                                      |     |        | add_ln104    | add  | fabric  | 0       |
+|    add_ln105_fu_345_p2                                      |     |        | add_ln105    | add  | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_115_3                     | 0   |        |              |      |         |         |
+|    add_ln115_fu_219_p2                                      |     |        | add_ln115    | add  | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_120_4                     | 0   |        |              |      |         |         |
+|    add_ln120_fu_219_p2                                      |     |        | add_ln120    | add  | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_125_5                     | 0   |        |              |      |         |         |
+|    add_ln125_fu_219_p2                                      |     |        | add_ln125    | add  | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_130_6                     | 0   |        |              |      |         |         |
+|    add_ln130_fu_219_p2                                      |     |        | add_ln130    | add  | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_150_8                     | 0   |        |              |      |         |         |
+|    add_ln150_fu_1050_p2                                     |     |        | add_ln150    | add  | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_180_12                    | 0   |        |              |      |         |         |
+|    add_ln180_fu_60_p2                                       |     |        | add_ln180    | add  | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_167_10                    | 9   |        |              |      |         |         |
+|    add_ln167_fu_232_p2                                      |     |        | add_ln167    | add  | fabric  | 0       |
+|    fexp_32ns_32ns_32_4_full_dsp_1_U86                       | 7   |        | exp_values_1 | fexp | fulldsp | 3       |
+|    fadd_32ns_32ns_32_2_full_dsp_1_U85                       | 2   |        | exp_sum_1    | fadd | fulldsp | 1       |
+|  + compute_expert                                           | 56  |        |              |      |         |         |
+|   + compute_expert_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_29_3 | 56  |        |              |      |         |         |
+|     add_ln19_1_fu_609_p2                                    |     |        | add_ln19_1   | add  | fabric  | 0       |
+|     add_ln19_fu_621_p2                                      |     |        | add_ln19     | add  | fabric  | 0       |
+|     add_ln35_1_fu_670_p2                                    |     |        | add_ln35_1   | add  | fabric  | 0       |
+|     add_ln35_2_fu_681_p2                                    |     |        | add_ln35_2   | add  | fabric  | 0       |
+|     add_ln35_3_fu_692_p2                                    |     |        | add_ln35_3   | add  | fabric  | 0       |
+|     add_ln35_4_fu_703_p2                                    |     |        | add_ln35_4   | add  | fabric  | 0       |
+|     add_ln35_5_fu_714_p2                                    |     |        | add_ln35_5   | add  | fabric  | 0       |
+|     add_ln35_6_fu_725_p2                                    |     |        | add_ln35_6   | add  | fabric  | 0       |
+|     add_ln35_7_fu_736_p2                                    |     |        | add_ln35_7   | add  | fabric  | 0       |
+|     add_ln35_8_fu_747_p2                                    |     |        | add_ln35_8   | add  | fabric  | 0       |
+|     add_ln35_fu_762_p2                                      |     |        | add_ln35     | add  | fabric  | 0       |
+|     fmul_32ns_32ns_32_2_max_dsp_1_U140                      | 3   |        | mul          | fmul | maxdsp  | 1       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U124                     | 2   |        | add          | fadd | fulldsp | 1       |
+|     fmul_32ns_32ns_32_2_max_dsp_1_U141                      | 3   |        | mul20_1      | fmul | maxdsp  | 1       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U125                     | 2   |        | add23_1      | fadd | fulldsp | 1       |
+|     fmul_32ns_32ns_32_2_max_dsp_1_U142                      | 3   |        | mul20_2      | fmul | maxdsp  | 1       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U127                     | 2   |        | add23_2      | fadd | fulldsp | 1       |
+|     fmul_32ns_32ns_32_2_max_dsp_1_U143                      | 3   |        | mul20_3      | fmul | maxdsp  | 1       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U129                     | 2   |        | add23_3      | fadd | fulldsp | 1       |
+|     fmul_32ns_32ns_32_2_max_dsp_1_U144                      | 3   |        | mul20_4      | fmul | maxdsp  | 1       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U131                     | 2   |        | add23_4      | fadd | fulldsp | 1       |
+|     fmul_32ns_32ns_32_2_max_dsp_1_U145                      | 3   |        | mul20_5      | fmul | maxdsp  | 1       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U133                     | 2   |        | add23_5      | fadd | fulldsp | 1       |
+|     fmul_32ns_32ns_32_2_max_dsp_1_U146                      | 3   |        | mul20_6      | fmul | maxdsp  | 1       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U135                     | 2   |        | add23_6      | fadd | fulldsp | 1       |
+|     fmul_32ns_32ns_32_2_max_dsp_1_U147                      | 3   |        | mul20_7      | fmul | maxdsp  | 1       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U137                     | 2   |        | add23_7      | fadd | fulldsp | 1       |
+|     add_ln29_fu_773_p2                                      |     |        | add_ln29     | add  | fabric  | 0       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U126                     | 2   |        | acc_65       | fadd | fulldsp | 1       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U128                     | 2   |        | acc_66       | fadd | fulldsp | 1       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U130                     | 2   |        | acc_67       | fadd | fulldsp | 1       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U132                     | 2   |        | acc_68       | fadd | fulldsp | 1       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U134                     | 2   |        | acc_69       | fadd | fulldsp | 1       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U136                     | 2   |        | acc_70       | fadd | fulldsp | 1       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U138                     | 2   |        | acc_71       | fadd | fulldsp | 1       |
+|     fadd_32ns_32ns_32_2_full_dsp_1_U139                     | 2   |        | acc_72       | fadd | fulldsp | 1       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_173_11                    | 0   |        |              |      |         |         |
+|    add_ln173_fu_243_p2                                      |     |        | add_ln173    | add  | fabric  | 0       |
+|    fdiv_32ns_32ns_32_6_no_dsp_1_U105                        |     |        | gates_1      | fdiv | fabric  | 5       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_188_13                    | 0   |        |              |      |         |         |
+|    add_ln188_fu_96_p2                                       |     |        | add_ln188    | add  | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_196_14                    | 0   |        |              |      |         |         |
+|    add_ln196_fu_96_p2                                       |     |        | add_ln196    | add  | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_204_15                    | 0   |        |              |      |         |         |
+|    add_ln204_fu_96_p2                                       |     |        | add_ln204    | add  | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_212_16                    | 0   |        |              |      |         |         |
+|    add_ln212_fu_96_p2                                       |     |        | add_ln212    | add  | fabric  | 0       |
+|  + pseudo_moe_Pipeline_VITIS_LOOP_218_17                    | 0   |        |              |      |         |         |
+|    add_ln218_fu_99_p2                                       |     |        | add_ln218    | add  | fabric  | 0       |
++-------------------------------------------------------------+-----+--------+--------------+------+---------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-------------------------------------------+---------------+-----------+------+------+--------+---------------+------+---------+------------------+
+| Name                                      | Usage         | Type      | BRAM | URAM | Pragma | Variable      | Impl | Latency | Bitwidth, Depth, |
+|                                           |               |           |      |      |        |               |      |         | Banks            |
++-------------------------------------------+---------------+-----------+------+------+--------+---------------+------+---------+------------------+
+| + pseudo_moe                              |               |           | 103  | 0    |        |               |      |         |                  |
+|   control_s_axi_U                         | interface     | s_axilite |      |      |        |               |      |         |                  |
+|   control_r_s_axi_U                       | interface     | s_axilite |      |      |        |               |      |         |                  |
+|   gmem0_m_axi_U                           | interface     | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem1_m_axi_U                           | interface     | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem10_m_axi_U                          | interface     | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem11_m_axi_U                          | interface     | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem12_m_axi_U                          | interface     | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem2_m_axi_U                           | interface     | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem3_m_axi_U                           | interface     | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem4_m_axi_U                           | interface     | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem5_m_axi_U                           | interface     | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem6_m_axi_U                           | interface     | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem7_m_axi_U                           | interface     | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem8_m_axi_U                           | interface     | m_axi     | 4    |      |        |               |      |         |                  |
+|   gmem9_m_axi_U                           | interface     | m_axi     | 4    |      |        |               |      |         |                  |
+|   input_local_U                           | rom_np array  |           | 2    |      |        | input_local   | auto | 1       | 32, 80, 1        |
+|   input_local_1_U                         | rom_np array  |           | 2    |      |        | input_local_1 | auto | 1       | 32, 80, 1        |
+|   input_local_2_U                         | rom_np array  |           | 2    |      |        | input_local_2 | auto | 1       | 32, 80, 1        |
+|   input_local_3_U                         | rom_np array  |           | 2    |      |        | input_local_3 | auto | 1       | 32, 80, 1        |
+|   input_local_4_U                         | rom_np array  |           | 2    |      |        | input_local_4 | auto | 1       | 32, 80, 1        |
+|   input_local_5_U                         | rom_np array  |           | 2    |      |        | input_local_5 | auto | 1       | 32, 80, 1        |
+|   input_local_6_U                         | rom_np array  |           | 2    |      |        | input_local_6 | auto | 1       | 32, 80, 1        |
+|   input_local_7_U                         | rom_np array  |           | 2    |      |        | input_local_7 | auto | 1       | 32, 80, 1        |
+|   w0_local_U                              | ram_1p array  |           | 2    |      |        | w0_local      | auto | 1       | 32, 512, 1       |
+|   w0_local_1_U                            | ram_1p array  |           | 2    |      |        | w0_local_1    | auto | 1       | 32, 512, 1       |
+|   w0_local_2_U                            | ram_1p array  |           | 2    |      |        | w0_local_2    | auto | 1       | 32, 512, 1       |
+|   w0_local_3_U                            | ram_1p array  |           | 2    |      |        | w0_local_3    | auto | 1       | 32, 512, 1       |
+|   w0_local_4_U                            | ram_1p array  |           | 2    |      |        | w0_local_4    | auto | 1       | 32, 512, 1       |
+|   w0_local_5_U                            | ram_1p array  |           | 2    |      |        | w0_local_5    | auto | 1       | 32, 512, 1       |
+|   w0_local_6_U                            | ram_1p array  |           | 2    |      |        | w0_local_6    | auto | 1       | 32, 512, 1       |
+|   w0_local_7_U                            | ram_1p array  |           | 2    |      |        | w0_local_7    | auto | 1       | 32, 512, 1       |
+|   w1_local_U                              | ram_1p array  |           | 2    |      |        | w1_local      | auto | 1       | 32, 512, 1       |
+|   w1_local_1_U                            | ram_1p array  |           | 2    |      |        | w1_local_1    | auto | 1       | 32, 512, 1       |
+|   w1_local_2_U                            | ram_1p array  |           | 2    |      |        | w1_local_2    | auto | 1       | 32, 512, 1       |
+|   w1_local_3_U                            | ram_1p array  |           | 2    |      |        | w1_local_3    | auto | 1       | 32, 512, 1       |
+|   w1_local_4_U                            | ram_1p array  |           | 2    |      |        | w1_local_4    | auto | 1       | 32, 512, 1       |
+|   w1_local_5_U                            | ram_1p array  |           | 2    |      |        | w1_local_5    | auto | 1       | 32, 512, 1       |
+|   w1_local_6_U                            | ram_1p array  |           | 2    |      |        | w1_local_6    | auto | 1       | 32, 512, 1       |
+|   w1_local_7_U                            | ram_1p array  |           | 2    |      |        | w1_local_7    | auto | 1       | 32, 512, 1       |
+|   w2_local_U                              | ram_1p array  |           | 2    |      |        | w2_local      | auto | 1       | 32, 512, 1       |
+|   w2_local_1_U                            | ram_1p array  |           | 2    |      |        | w2_local_1    | auto | 1       | 32, 512, 1       |
+|   w2_local_2_U                            | ram_1p array  |           | 2    |      |        | w2_local_2    | auto | 1       | 32, 512, 1       |
+|   w2_local_3_U                            | ram_1p array  |           | 2    |      |        | w2_local_3    | auto | 1       | 32, 512, 1       |
+|   w2_local_4_U                            | ram_1p array  |           | 2    |      |        | w2_local_4    | auto | 1       | 32, 512, 1       |
+|   w2_local_5_U                            | ram_1p array  |           | 2    |      |        | w2_local_5    | auto | 1       | 32, 512, 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U226      | ram_1p array  |           | 2    |      |        | w2_local_6    | auto | 1       | 32, 512, 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U225 | ram_1p array  |           | 2    |      |        | w2_local_7    | auto | 1       | 32, 512, 1       |
+|   w3_local_U                              | ram_1p array  |           | 2    |      |        | w3_local      | auto | 1       | 32, 512, 1       |
+|   w3_local_1_U                            | ram_1p array  |           | 2    |      |        | w3_local_1    | auto | 1       | 32, 512, 1       |
+|   w3_local_2_U                            | ram_1p array  |           | 2    |      |        | w3_local_2    | auto | 1       | 32, 512, 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U226      | ram_1p array  |           | 2    |      |        | w3_local_3    | auto | 1       | 32, 512, 1       |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U225 | ram_1p array  |           | 2    |      |        | w3_local_4    | auto | 1       | 32, 512, 1       |
+|   w3_local_5_U                            | ram_1p array  |           | 2    |      |        | w3_local_5    | auto | 1       | 32, 512, 1       |
+|   w3_local_6_U                            | ram_1p array  |           | 2    |      |        | w3_local_6    | auto | 1       | 32, 512, 1       |
+|   w3_local_7_U                            | ram_1p array  |           | 2    |      |        | w3_local_7    | auto | 1       | 32, 512, 1       |
+|   fmul_32ns_32ns_32_2_max_dsp_1_U226      | ram_1p array  |           | 2    |      |        | expert_result | auto | 1       | 32, 64, 1        |
+|   faddfsub_32ns_32ns_32_2_full_dsp_1_U225 | ram_s2p array |           | 2    |      |        | acc_out       | auto | 1       | 32, 64, 1        |
++-------------------------------------------+---------------+-----------+------+------+--------+---------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+-------------------------------------------------+--------------------------------------------------+
+| Type            | Options                                         | Location                                         |
++-----------------+-------------------------------------------------+--------------------------------------------------+
+| inline          | off                                             | src/pseudo_moe.cpp:17 in compute_expert          |
+| array_partition | variable=partial complete                       | src/pseudo_moe.cpp:21 in compute_expert, partial |
+| unroll          |                                                 | src/pseudo_moe.cpp:24 in compute_expert          |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:30 in compute_expert          |
+| unroll          |                                                 | src/pseudo_moe.cpp:33 in compute_expert          |
+| unroll          |                                                 | src/pseudo_moe.cpp:42 in compute_expert          |
+| interface       | m_axi port=input offset=slave bundle=gmem0      | src/pseudo_moe.cpp:64 in pseudo_moe, input       |
+| interface       | m_axi port=w_gate offset=slave bundle=gmem1     | src/pseudo_moe.cpp:65 in pseudo_moe, w_gate      |
+| interface       | m_axi port=b_gate offset=slave bundle=gmem2     | src/pseudo_moe.cpp:66 in pseudo_moe, b_gate      |
+| interface       | m_axi port=w0 offset=slave bundle=gmem3         | src/pseudo_moe.cpp:68 in pseudo_moe, w0          |
+| interface       | m_axi port=b0 offset=slave bundle=gmem4         | src/pseudo_moe.cpp:69 in pseudo_moe, b0          |
+| interface       | m_axi port=w1 offset=slave bundle=gmem5         | src/pseudo_moe.cpp:70 in pseudo_moe, w1          |
+| interface       | m_axi port=b1 offset=slave bundle=gmem6         | src/pseudo_moe.cpp:71 in pseudo_moe, b1          |
+| interface       | m_axi port=w2 offset=slave bundle=gmem7         | src/pseudo_moe.cpp:72 in pseudo_moe, w2          |
+| interface       | m_axi port=b2 offset=slave bundle=gmem8         | src/pseudo_moe.cpp:73 in pseudo_moe, b2          |
+| interface       | m_axi port=w3 offset=slave bundle=gmem9         | src/pseudo_moe.cpp:74 in pseudo_moe, w3          |
+| interface       | m_axi port=b3 offset=slave bundle=gmem10        | src/pseudo_moe.cpp:75 in pseudo_moe, b3          |
+| interface       | m_axi port=gates_out offset=slave bundle=gmem11 | src/pseudo_moe.cpp:77 in pseudo_moe, gates_out   |
+| interface       | m_axi port=output offset=slave bundle=gmem12    | src/pseudo_moe.cpp:78 in pseudo_moe, output      |
+| interface       | s_axilite port=return bundle=control            | src/pseudo_moe.cpp:80 in pseudo_moe, return      |
+| array_partition | variable=input_local cyclic factor=8 dim=2      | src/pseudo_moe.cpp:93 in pseudo_moe, input_local |
+| array_partition | variable=w0_local cyclic factor=8 dim=1         | src/pseudo_moe.cpp:95 in pseudo_moe, w0_local    |
+| array_partition | variable=w1_local cyclic factor=8 dim=1         | src/pseudo_moe.cpp:96 in pseudo_moe, w1_local    |
+| array_partition | variable=w2_local cyclic factor=8 dim=1         | src/pseudo_moe.cpp:97 in pseudo_moe, w2_local    |
+| array_partition | variable=w3_local cyclic factor=8 dim=1         | src/pseudo_moe.cpp:98 in pseudo_moe, w3_local    |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:106 in pseudo_moe             |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:116 in pseudo_moe             |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:121 in pseudo_moe             |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:126 in pseudo_moe             |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:131 in pseudo_moe             |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:168 in pseudo_moe             |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:174 in pseudo_moe             |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:181 in pseudo_moe             |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:189 in pseudo_moe             |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:197 in pseudo_moe             |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:205 in pseudo_moe             |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:213 in pseudo_moe             |
+| pipeline        | II=1                                            | src/pseudo_moe.cpp:219 in pseudo_moe             |
++-----------------+-------------------------------------------------+--------------------------------------------------+
+
+

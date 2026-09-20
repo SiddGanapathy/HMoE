@@ -1,0 +1,79 @@
+{
+  "0": {
+    "basicblocks": 30,
+    "calls": "1 4 3 2",
+    "file": "pseudo_moe.cpp",
+    "fileloc": 50,
+    "instructions": 279,
+    "loads": {
+      "L": 13,
+      "T": 7
+    },
+    "name": "pseudo_moe",
+    "stores": {
+      "L": 10,
+      "T": 2
+    },
+    "total_instructions": 1327
+  },
+  "1": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "pseudo_moe.cpp",
+    "fileloc": 12,
+    "instructions": 262,
+    "loads": {
+      "L": 33
+    },
+    "name": "compute_expert<0>",
+    "stores": {
+      "L": 33
+    },
+    "total_instructions": 262
+  },
+  "2": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "pseudo_moe.cpp",
+    "fileloc": 12,
+    "instructions": 262,
+    "loads": {
+      "L": 33
+    },
+    "name": "compute_expert<3>",
+    "stores": {
+      "L": 33
+    },
+    "total_instructions": 262
+  },
+  "3": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "pseudo_moe.cpp",
+    "fileloc": 12,
+    "instructions": 262,
+    "loads": {
+      "L": 33
+    },
+    "name": "compute_expert<2>",
+    "stores": {
+      "L": 33
+    },
+    "total_instructions": 262
+  },
+  "4": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "pseudo_moe.cpp",
+    "fileloc": 12,
+    "instructions": 262,
+    "loads": {
+      "L": 33
+    },
+    "name": "compute_expert<1>",
+    "stores": {
+      "L": 33
+    },
+    "total_instructions": 262
+  }
+}

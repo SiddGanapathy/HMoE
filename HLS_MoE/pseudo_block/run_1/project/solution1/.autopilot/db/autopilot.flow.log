@@ -1,0 +1,535 @@
+INFO-FLOW: Workspace /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1 opened at Sun Sep 20 12:38:54 IST 2026
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 0.11 sec.
+Execute     set_part xcvu13p_CIV-figd2104-3-e 
+INFO: [HLS 200-1510] Running: set_part xcvu13p_CIV-figd2104-3-e 
+Execute       create_platform xcvu13p_CIV-figd2104-3-e -board  
+DBG:HLSDevice: Trying to load device library: /home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/simics/HMoE/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xcvu13p_CIV-figd2104-3-e'
+Command       create_platform done; 0.95 sec.
+Execute       source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute         source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xcvu13p_CIV-figd2104-3-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1.04 sec.
+Execute     create_clock -period 10 
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xcvu13p_CIV-figd2104-3-e -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 0.29 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 1.41 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.09 seconds. CPU system time: 0.35 seconds. Elapsed time: 1.41 seconds; current allocated memory: 0.000 MB.
+Execute     csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO-FLOW: Running SLX 'csynth' proc: ::SLX::run_csynth
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.2 seconds; current allocated memory: 282.391 MB.
+Execute         set_directive_top pseudo_moe -name=pseudo_moe 
+Execute         source /home/simics/HMoE/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /home/simics/HMoE/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source /home/simics/HMoE/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO: [HLS 200-10] Analyzing design file '/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp as C++
+Execute         ap_part_info -name xcvu13p_CIV-figd2104-3-e -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+INFO-FLOW: run_clang exec: /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp -foptimization-record-file=/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /home/simics/HMoE/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -insert-hls-directive=/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/all.directive.json -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=10 -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/autopilot -I /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp -hls-platform-db-name=/home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_fast -device-resource-info=BRAM_5376.000000_DSP_12288.000000_FF_3456000.000000_LUT_1728000.000000_SLICE_216000.000000_SLR_4.000000_URAM_1280.000000 -device-name-info=xcvu13p_CIV-figd2104-3-e > /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.cpp.clang.out.log 2> /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.cpp.clang.err.log
+INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
+INFO-FLOW: Source syntax check for synthesis
+INFO-FLOW: run_clang exec: /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp -hls-platform-db-name=/home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_fast -device-resource-info=BRAM_5376.000000_DSP_12288.000000_FF_3456000.000000_LUT_1728000.000000_SLICE_216000.000000_SLR_4.000000_URAM_1280.000000 -device-name-info=xcvu13p_CIV-figd2104-3-e > /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/clang.out.log 2> /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/clang.err.log
+Execute         clang_tidy xilinx-systemc-detector -desc systemc-detector /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/.systemc_flag -fix-errors /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma -desc directive2pragma /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/all.directive.json -fix-errors /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.56 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.6 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute         clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: run_clang exec: /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp.clang-tidy.loop-label.err.log
+Execute           source /home/simics/HMoE/Vitis_HLS/2023.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command         clang_tidy done; 0.39 sec.
+INFO-FLOW: run_clang exec: /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp.xilinx-dataflow-lawyer.err.log
+Execute         ap_part_info -name xcvu13p_CIV-figd2104-3-e -data info 
+INFO-FLOW: compiling source code to llvm bc
+INFO-FLOW: run_clang exec: /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing -hls-emit-hint-scope /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=10 -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/autopilot -I /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.bc -hls-platform-db-name=/home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_fast -device-resource-info=BRAM_5376.000000_DSP_12288.000000_FF_3456000.000000_LUT_1728000.000000_SLICE_216000.000000_SLR_4.000000_URAM_1280.000000 -device-name-info=xcvu13p_CIV-figd2104-3-e > /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp.clang.out.log 2> /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.pp.0.cpp.clang.err.log
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.23 seconds. CPU system time: 0.59 seconds. Elapsed time: 2.28 seconds; current allocated memory: 285.266 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute         run_link_or_opt -out /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.g.bc"  
+INFO-FLOW: run_clang exec: /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.g.bc -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.0.bc > /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log
+INFO-FLOW: 
+Execute         run_link_or_opt -opt -out /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+INFO-FLOW: run_clang exec: /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.1.lower.bc > /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+INFO-FLOW: Linking math bc lib
+Execute         run_link_or_opt -out /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/lib/libhlsm_39.bc /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/lib/libhlsmc++_39.bc 
+INFO-FLOW: run_clang exec: /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/lib/libhlsm_39.bc /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/lib/libhlsmc++_39.bc -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.2.m1.bc > /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log
+INFO-FLOW: 
+Command         run_link_or_opt done; 1.45 sec.
+Execute         run_link_or_opt -opt -out /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=pseudo_moe -reflow-float-conversion 
+INFO-FLOW: run_clang exec: /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=pseudo_moe -reflow-float-conversion -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Command         run_link_or_opt done; 0.53 sec.
+Execute         run_link_or_opt -out /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/lib/libfloatconversion_39.bc 
+INFO-FLOW: run_clang exec: /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/lib/libfloatconversion_39.bc -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.4.m2.bc > /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log
+INFO-FLOW: 
+Execute         run_link_or_opt -opt -out /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=pseudo_moe 
+INFO-FLOW: run_clang exec: /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=pseudo_moe -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Execute         send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute         is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+INFO-FLOW: run_clang (background poll_ms 5000) exec: /home/simics/HMoE/Vitis_HLS/2023.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.0.bc.clang.reflow.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=pseudo_moe -mllvm -hls-db-dir -mllvm /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -enable-fp-thr=0 -mllvm -reflow-bdd-simplify-threshold=1048576 -mllvm -reflow-fanout-threshold=16 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -ftime-report -mllvm -time-passes -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-reserved-saxilite-registers=0 -mllvm -enable-reflow-auto-loop-pipeline -mllvm -reflow-max-unroll-threshold=409600 -mllvm -reflow-assume-no-address-wrap=true -mllvm -reflow-enable-occurrence-inference=true -mllvm -reflow-emit-hint-scope=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_fast -device-resource-info=BRAM_5376.000000_DSP_12288.000000_FF_3456000.000000_LUT_1728000.000000_SLICE_216000.000000_SLR_4.000000_URAM_1280.000000 -device-name-info=xcvu13p_CIV-figd2104-3-e 2> /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.ld.0.bc.clang.reflow.err.log bg_poll_cmd: ::AP::poll_clang_39_closed_source
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 383 Compile/Link /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 383 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 304 Unroll/Inline (step 1) /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 304 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 274 Unroll/Inline (step 2) /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 274 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 256 Unroll/Inline (step 3) /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 256 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 256 Unroll/Inline (step 4) /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 256 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 269 Array/Struct (step 1) /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 269 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 269 Array/Struct (step 2) /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 269 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 269 Array/Struct (step 3) /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 269 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 269 Array/Struct (step 4) /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 269 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 301 Array/Struct (step 5) /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 301 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 284 Performance (step 1) /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 284 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 284 Performance (step 2) /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 284 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 284 Performance (step 3) /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 284 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 284 Performance (step 4) /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 284 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 375 HW Transforms (step 1) /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 375 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt
+Execute         send_msg_by_id INFO @200-1995@%s%s%s 406 HW Transforms (step 2) /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 406 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-115] Multiple burst reads of length 256 and bit width 32 in loop 'VITIS_LOOP_53_2'(/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:68:9) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:53:26)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 32 in loop 'VITIS_LOOP_53_2'(/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:68:9) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:53:26)
+INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 32 in loop 'VITIS_LOOP_58_3'(/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:61:13) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:58:30)
+INFO: [HLS 214-115] Multiple burst writes of length 4 and bit width 32 in loop 'VITIS_LOOP_81_5'(/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:84:9) has been inferred on bundle 'gmem11'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:81:26)
+INFO: [HLS 214-115] Multiple burst writes of length 64 and bit width 32 in loop 'VITIS_LOOP_89_6'(/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:92:9) has been inferred on bundle 'gmem12'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:89:26)
+INFO: [HLS 214-115] Multiple burst reads of length 4096 and bit width 32 in loop 'VITIS_LOOP_97_7'(/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:108:9) has been inferred on bundle 'gmem3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:97:26)
+INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 32 in loop 'VITIS_LOOP_97_7'(/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:108:9) has been inferred on bundle 'gmem4'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:97:26)
+INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 32 in loop 'VITIS_LOOP_102_8'(/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:105:13) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:102:31)
+INFO: [HLS 214-115] Multiple burst reads of length 4096 and bit width 32 in loop 'VITIS_LOOP_119_10'(/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:130:9) has been inferred on bundle 'gmem5'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:119:28)
+INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 32 in loop 'VITIS_LOOP_119_10'(/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:130:9) has been inferred on bundle 'gmem6'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:119:28)
+INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 32 in loop 'VITIS_LOOP_124_11'(/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:127:13) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:124:32)
+INFO: [HLS 214-115] Multiple burst reads of length 4096 and bit width 32 in loop 'VITIS_LOOP_141_13'(/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:152:9) has been inferred on bundle 'gmem7'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:141:28)
+INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 32 in loop 'VITIS_LOOP_141_13'(/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:152:9) has been inferred on bundle 'gmem8'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:141:28)
+INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 32 in loop 'VITIS_LOOP_146_14'(/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:149:13) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:146:32)
+INFO: [HLS 214-115] Multiple burst reads of length 4096 and bit width 32 in loop 'VITIS_LOOP_163_16'(/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:174:9) has been inferred on bundle 'gmem9'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:163:28)
+INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 32 in loop 'VITIS_LOOP_163_16'(/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:174:9) has been inferred on bundle 'gmem10'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:163:28)
+INFO: [HLS 214-115] Multiple burst reads of length 64 and bit width 32 in loop 'VITIS_LOOP_168_17'(/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:171:13) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:168:32)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.2 seconds. CPU system time: 0.47 seconds. Elapsed time: 7.98 seconds; current allocated memory: 288.773 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 288.773 MB.
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top pseudo_moe -deadargelim -mem2reg -instcombine -dce -presyn-prepare -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.0.bc -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 289.703 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.1.bc -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 289.797 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.g.1.bc to /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -scalar-stream -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -clean-array-spec -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.o.1.bc -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-102] Automatically partitioning small array 'logits' (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:40) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'exp_values' (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:41) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'logits' (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:40) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'exp_values' (/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:41) in dimension 1 completely.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 313.797 MB.
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg-lite -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg-lite -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -inst-simplify -inst-rectify -instcombine -adce -deadargelim -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -mem2reg -instcombine -gvn -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg-lite -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg-lite -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg-lite -loop-simplify -mergereturn -inst-simplify -inst-rectify -globaldce -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dce -dump-loop-dep-to-ir -check-all-ssdm -dump-complexity-metric -cdfg-build /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.o.2.bc -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Execute             auto_get_db
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 313.797 MB.
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 0.29 sec.
+Command       elaborate done; 10.55 sec.
+Execute       ap_eval exec zip -j /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'pseudo_moe' ...
+Execute         ap_set_top_model pseudo_moe 
+Execute         get_model_list pseudo_moe -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model pseudo_moe 
+Execute         get_model_list pseudo_moe -filter all-wo-channel 
+INFO-FLOW: Model list for configure: pseudo_moe
+INFO-FLOW: Configuring Module : pseudo_moe ...
+Execute         set_default_model pseudo_moe 
+Execute         apply_spec_resource_limit pseudo_moe 
+INFO-FLOW: Model list for preprocess: pseudo_moe
+INFO-FLOW: Preprocessing Module: pseudo_moe ...
+Execute         set_default_model pseudo_moe 
+Execute         cdfg_preprocess -model pseudo_moe 
+Execute         rtl_gen_preprocess pseudo_moe 
+INFO-FLOW: Model list for synthesis: pseudo_moe
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pseudo_moe' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model pseudo_moe 
+Execute         schedule -model pseudo_moe 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.24 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 315.199 MB.
+Execute         syn_report -verbosereport -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.verbose.sched.rpt 
+Execute           list_part -family xcvu13p_CIV-figd2104-3-e 
+Execute             ap_family_info -name xcvu13p_CIV-figd2104-3-e -data names 
+Execute             ap_part_info -quiet -name xcvu13p_CIV-figd2104-3-e -data family 
+Execute         db_write -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.sched.adb -f 
+INFO-FLOW: Finish scheduling pseudo_moe.
+Execute         set_default_model pseudo_moe 
+Execute         bind -model pseudo_moe 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 315.199 MB.
+Execute         syn_report -verbosereport -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.verbose.bind.rpt 
+Execute           list_part -family xcvu13p_CIV-figd2104-3-e 
+Execute             ap_family_info -name xcvu13p_CIV-figd2104-3-e -data names 
+Execute             ap_part_info -quiet -name xcvu13p_CIV-figd2104-3-e -data family 
+Execute         db_write -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.bind.adb -f 
+INFO-FLOW: Finish binding pseudo_moe.
+Execute         get_model_list pseudo_moe -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess pseudo_moe 
+INFO-FLOW: Model list for RTL generation: pseudo_moe
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pseudo_moe' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model pseudo_moe -top_prefix  -sub_prefix pseudo_moe_ -mg_file /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/gmem2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/gmem3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/gmem4' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/gmem5' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/gmem6' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/gmem7' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/gmem8' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/gmem9' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/gmem10' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/gmem11' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/gmem12' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/input_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/w_gate' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/b_gate' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/w0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/b0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/w1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/b1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/w2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/b2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/w3' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/b3' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/gates_out' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pseudo_moe/output_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'pseudo_moe' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Bundling port 'input_r', 'w_gate', 'b_gate', 'w0', 'b0', 'w1', 'b1', 'w2', 'b2', 'w3', 'b3', 'gates_out' and 'output_r' to AXI-Lite port control_r.
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_2_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_1_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_4_2_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pseudo_moe'.
+INFO: [RTMG 210-278] Implementing memory 'pseudo_moe_expert_result_RAM_AUTO_1R1W' using auto RAMs.
+Command         create_rtl_model done; 0.31 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.3 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.39 seconds; current allocated memory: 321.273 MB.
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.rtl_wrap.cfg.tcl 
+Execute         gen_rtl pseudo_moe -istop -style xilinx -f -lang vhdl -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/vhdl/pseudo_moe 
+Command         gen_rtl done; 0.14 sec.
+Execute         gen_rtl pseudo_moe -istop -style xilinx -f -lang vlog -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/verilog/pseudo_moe 
+Execute         syn_report -csynth -model pseudo_moe -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/pseudo_moe_csynth.rpt 
+Execute           list_part -family xcvu13p_CIV-figd2104-3-e 
+Execute             ap_family_info -name xcvu13p_CIV-figd2104-3-e -data names 
+Execute             ap_part_info -quiet -name xcvu13p_CIV-figd2104-3-e -data family 
+Execute         syn_report -rtlxml -model pseudo_moe -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/pseudo_moe_csynth.xml 
+Execute           list_part -family xcvu13p_CIV-figd2104-3-e 
+Execute             ap_family_info -name xcvu13p_CIV-figd2104-3-e -data names 
+Execute             ap_part_info -quiet -name xcvu13p_CIV-figd2104-3-e -data family 
+Execute         syn_report -verbosereport -model pseudo_moe -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.verbose.rpt 
+Execute           list_part -family xcvu13p_CIV-figd2104-3-e 
+Execute             ap_family_info -name xcvu13p_CIV-figd2104-3-e -data names 
+Execute             ap_part_info -quiet -name xcvu13p_CIV-figd2104-3-e -data family 
+Execute         db_write -model pseudo_moe -f -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.adb 
+Execute         db_write -model pseudo_moe -bindview -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info pseudo_moe -p /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe 
+Execute         export_constraint_db -f -tool general -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.constraint.tcl 
+Execute         syn_report -designview -model pseudo_moe -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.design.xml 
+Execute         syn_report -csynthDesign -model pseudo_moe -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth.rpt -MHOut /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/kernel_module_hierarchy.tcl 
+Execute           list_part -family xcvu13p_CIV-figd2104-3-e 
+Execute             ap_family_info -name xcvu13p_CIV-figd2104-3-e -data names 
+Execute             ap_part_info -quiet -name xcvu13p_CIV-figd2104-3-e -data family 
+Execute         syn_report -wcfg -model pseudo_moe -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe_dataflow_ana.wcfg 
+Execute         syn_report -protoinst -model pseudo_moe -o /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.protoinst 
+Execute         sc_get_clocks pseudo_moe 
+Execute         sc_get_portdomain pseudo_moe 
+INFO-FLOW: Model list for RTL component generation: pseudo_moe
+INFO-FLOW: Handling components in module [pseudo_moe] ... 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.compgen.tcl 
+INFO-FLOW: Found component pseudo_moe_faddfsub_32ns_32ns_32_2_full_dsp_1.
+INFO-FLOW: Append model pseudo_moe_faddfsub_32ns_32ns_32_2_full_dsp_1
+INFO-FLOW: Found component pseudo_moe_fmul_32ns_32ns_32_2_max_dsp_1.
+INFO-FLOW: Append model pseudo_moe_fmul_32ns_32ns_32_2_max_dsp_1
+INFO-FLOW: Found component pseudo_moe_fdiv_32ns_32ns_32_6_no_dsp_1.
+INFO-FLOW: Append model pseudo_moe_fdiv_32ns_32ns_32_6_no_dsp_1
+INFO-FLOW: Found component pseudo_moe_fcmp_32ns_32ns_1_1_no_dsp_1.
+INFO-FLOW: Append model pseudo_moe_fcmp_32ns_32ns_1_1_no_dsp_1
+INFO-FLOW: Found component pseudo_moe_fexp_32ns_32ns_32_4_full_dsp_1.
+INFO-FLOW: Append model pseudo_moe_fexp_32ns_32ns_32_4_full_dsp_1
+INFO-FLOW: Found component pseudo_moe_mux_4_2_32_1_1.
+INFO-FLOW: Append model pseudo_moe_mux_4_2_32_1_1
+INFO-FLOW: Found component pseudo_moe_expert_result_RAM_AUTO_1R1W.
+INFO-FLOW: Append model pseudo_moe_expert_result_RAM_AUTO_1R1W
+INFO-FLOW: Found component pseudo_moe_gmem0_m_axi.
+INFO-FLOW: Append model pseudo_moe_gmem0_m_axi
+INFO-FLOW: Found component pseudo_moe_gmem1_m_axi.
+INFO-FLOW: Append model pseudo_moe_gmem1_m_axi
+INFO-FLOW: Found component pseudo_moe_gmem2_m_axi.
+INFO-FLOW: Append model pseudo_moe_gmem2_m_axi
+INFO-FLOW: Found component pseudo_moe_gmem3_m_axi.
+INFO-FLOW: Append model pseudo_moe_gmem3_m_axi
+INFO-FLOW: Found component pseudo_moe_gmem4_m_axi.
+INFO-FLOW: Append model pseudo_moe_gmem4_m_axi
+INFO-FLOW: Found component pseudo_moe_gmem5_m_axi.
+INFO-FLOW: Append model pseudo_moe_gmem5_m_axi
+INFO-FLOW: Found component pseudo_moe_gmem6_m_axi.
+INFO-FLOW: Append model pseudo_moe_gmem6_m_axi
+INFO-FLOW: Found component pseudo_moe_gmem7_m_axi.
+INFO-FLOW: Append model pseudo_moe_gmem7_m_axi
+INFO-FLOW: Found component pseudo_moe_gmem8_m_axi.
+INFO-FLOW: Append model pseudo_moe_gmem8_m_axi
+INFO-FLOW: Found component pseudo_moe_gmem9_m_axi.
+INFO-FLOW: Append model pseudo_moe_gmem9_m_axi
+INFO-FLOW: Found component pseudo_moe_gmem10_m_axi.
+INFO-FLOW: Append model pseudo_moe_gmem10_m_axi
+INFO-FLOW: Found component pseudo_moe_gmem11_m_axi.
+INFO-FLOW: Append model pseudo_moe_gmem11_m_axi
+INFO-FLOW: Found component pseudo_moe_gmem12_m_axi.
+INFO-FLOW: Append model pseudo_moe_gmem12_m_axi
+INFO-FLOW: Found component pseudo_moe_control_s_axi.
+INFO-FLOW: Append model pseudo_moe_control_s_axi
+INFO-FLOW: Found component pseudo_moe_control_r_s_axi.
+INFO-FLOW: Append model pseudo_moe_control_r_s_axi
+INFO-FLOW: Append model pseudo_moe
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: pseudo_moe_faddfsub_32ns_32ns_32_2_full_dsp_1 pseudo_moe_fmul_32ns_32ns_32_2_max_dsp_1 pseudo_moe_fdiv_32ns_32ns_32_6_no_dsp_1 pseudo_moe_fcmp_32ns_32ns_1_1_no_dsp_1 pseudo_moe_fexp_32ns_32ns_32_4_full_dsp_1 pseudo_moe_mux_4_2_32_1_1 pseudo_moe_expert_result_RAM_AUTO_1R1W pseudo_moe_gmem0_m_axi pseudo_moe_gmem1_m_axi pseudo_moe_gmem2_m_axi pseudo_moe_gmem3_m_axi pseudo_moe_gmem4_m_axi pseudo_moe_gmem5_m_axi pseudo_moe_gmem6_m_axi pseudo_moe_gmem7_m_axi pseudo_moe_gmem8_m_axi pseudo_moe_gmem9_m_axi pseudo_moe_gmem10_m_axi pseudo_moe_gmem11_m_axi pseudo_moe_gmem12_m_axi pseudo_moe_control_s_axi pseudo_moe_control_r_s_axi pseudo_moe
+INFO-FLOW: Generating /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model pseudo_moe_faddfsub_32ns_32ns_32_2_full_dsp_1
+INFO-FLOW: To file: write model pseudo_moe_fmul_32ns_32ns_32_2_max_dsp_1
+INFO-FLOW: To file: write model pseudo_moe_fdiv_32ns_32ns_32_6_no_dsp_1
+INFO-FLOW: To file: write model pseudo_moe_fcmp_32ns_32ns_1_1_no_dsp_1
+INFO-FLOW: To file: write model pseudo_moe_fexp_32ns_32ns_32_4_full_dsp_1
+INFO-FLOW: To file: write model pseudo_moe_mux_4_2_32_1_1
+INFO-FLOW: To file: write model pseudo_moe_expert_result_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model pseudo_moe_gmem0_m_axi
+INFO-FLOW: To file: write model pseudo_moe_gmem1_m_axi
+INFO-FLOW: To file: write model pseudo_moe_gmem2_m_axi
+INFO-FLOW: To file: write model pseudo_moe_gmem3_m_axi
+INFO-FLOW: To file: write model pseudo_moe_gmem4_m_axi
+INFO-FLOW: To file: write model pseudo_moe_gmem5_m_axi
+INFO-FLOW: To file: write model pseudo_moe_gmem6_m_axi
+INFO-FLOW: To file: write model pseudo_moe_gmem7_m_axi
+INFO-FLOW: To file: write model pseudo_moe_gmem8_m_axi
+INFO-FLOW: To file: write model pseudo_moe_gmem9_m_axi
+INFO-FLOW: To file: write model pseudo_moe_gmem10_m_axi
+INFO-FLOW: To file: write model pseudo_moe_gmem11_m_axi
+INFO-FLOW: To file: write model pseudo_moe_gmem12_m_axi
+INFO-FLOW: To file: write model pseudo_moe_control_s_axi
+INFO-FLOW: To file: write model pseudo_moe_control_r_s_axi
+INFO-FLOW: To file: write model pseudo_moe
+INFO-FLOW: Generating /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/global.setting.tcl
+Execute         source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/generic/autopilot/common.gen 
+Execute           source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/generic/autopilot/op.gen 
+Execute         source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/simics/HMoE/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/vhdl' dstVlogDir='/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/vlog' tclDir='/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db' modelList='pseudo_moe_faddfsub_32ns_32ns_32_2_full_dsp_1
+pseudo_moe_fmul_32ns_32ns_32_2_max_dsp_1
+pseudo_moe_fdiv_32ns_32ns_32_6_no_dsp_1
+pseudo_moe_fcmp_32ns_32ns_1_1_no_dsp_1
+pseudo_moe_fexp_32ns_32ns_32_4_full_dsp_1
+pseudo_moe_mux_4_2_32_1_1
+pseudo_moe_expert_result_RAM_AUTO_1R1W
+pseudo_moe_gmem0_m_axi
+pseudo_moe_gmem1_m_axi
+pseudo_moe_gmem2_m_axi
+pseudo_moe_gmem3_m_axi
+pseudo_moe_gmem4_m_axi
+pseudo_moe_gmem5_m_axi
+pseudo_moe_gmem6_m_axi
+pseudo_moe_gmem7_m_axi
+pseudo_moe_gmem8_m_axi
+pseudo_moe_gmem9_m_axi
+pseudo_moe_gmem10_m_axi
+pseudo_moe_gmem11_m_axi
+pseudo_moe_gmem12_m_axi
+pseudo_moe_control_s_axi
+pseudo_moe_control_r_s_axi
+pseudo_moe
+' expOnly='0'
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcvu13p_CIV-figd2104-3-e -data names -quiet 
+Execute         ap_part_info -name xcvu13p_CIV-figd2104-3-e -data info -quiet 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.compgen.tcl 
+Execute           ap_part_info -name xcvu13p_CIV-figd2104-3-e -data names -quiet 
+Execute           ap_part_info -name xcvu13p_CIV-figd2104-3-e -data info -quiet 
+Execute           source ./control.slave.tcl 
+Execute           source ./control.slave.tcl 
+Execute           source ./control_r.slave.tcl 
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.56 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.6 seconds; current allocated memory: 331.074 MB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='pseudo_moe_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+INFO-FLOW: Done: create_csynth_xml config info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=/home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='pseudo_moe_faddfsub_32ns_32ns_32_2_full_dsp_1
+pseudo_moe_fmul_32ns_32ns_32_2_max_dsp_1
+pseudo_moe_fdiv_32ns_32ns_32_6_no_dsp_1
+pseudo_moe_fcmp_32ns_32ns_1_1_no_dsp_1
+pseudo_moe_fexp_32ns_32ns_32_4_full_dsp_1
+pseudo_moe_mux_4_2_32_1_1
+pseudo_moe_expert_result_RAM_AUTO_1R1W
+pseudo_moe_gmem0_m_axi
+pseudo_moe_gmem1_m_axi
+pseudo_moe_gmem2_m_axi
+pseudo_moe_gmem3_m_axi
+pseudo_moe_gmem4_m_axi
+pseudo_moe_gmem5_m_axi
+pseudo_moe_gmem6_m_axi
+pseudo_moe_gmem7_m_axi
+pseudo_moe_gmem8_m_axi
+pseudo_moe_gmem9_m_axi
+pseudo_moe_gmem10_m_axi
+pseudo_moe_gmem11_m_axi
+pseudo_moe_gmem12_m_axi
+pseudo_moe_control_s_axi
+pseudo_moe_control_r_s_axi
+pseudo_moe
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/top-io-be.tcl 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.tbgen.tcl 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.compgen.dataonly.tcl 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.compgen.dataonly.tcl 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.compgen.dataonly.tcl 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.compgen.dataonly.tcl 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.rtl_wrap.cfg.tcl 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.compgen.dataonly.tcl 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.tbgen.tcl 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcvu13p_CIV-figd2104-3-e -data names -quiet 
+Execute         ap_part_info -name xcvu13p_CIV-figd2104-3-e -data info -quiet 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/pseudo_moe.constraint.tcl 
+Execute         sc_get_clocks pseudo_moe 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/impl/misc/pseudo_moe_faddfsub_32ns_32ns_32_2_full_dsp_1_ip.tcl 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/impl/misc/pseudo_moe_fcmp_32ns_32ns_1_1_no_dsp_1_ip.tcl 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/impl/misc/pseudo_moe_fdiv_32ns_32ns_32_6_no_dsp_1_ip.tcl 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/impl/misc/pseudo_moe_fexp_32ns_32ns_32_4_full_dsp_1_ip.tcl 
+Execute         source /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/project/solution1/impl/misc/pseudo_moe_fmul_32ns_32ns_32_2_max_dsp_1_ip.tcl 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME control_s_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE s_axilite STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME control_r_s_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME control_r DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE s_axilite STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem0_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem0 DSP 0 BRAM 4 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem1_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem1 DSP 0 BRAM 4 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem10_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem10 DSP 0 BRAM 4 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem11_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem11 DSP 0 BRAM 4 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem12_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem12 DSP 0 BRAM 4 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem2_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem2 DSP 0 BRAM 4 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem3_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem3 DSP 0 BRAM 4 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem4_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem4 DSP 0 BRAM 4 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem5_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem5 DSP 0 BRAM 4 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem6_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem6 DSP 0 BRAM 4 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem7_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem7 DSP 0 BRAM 4 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem8_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem8 DSP 0 BRAM 4 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem9_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem9 DSP 0 BRAM 4 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }}} report_dict {TOPINST pseudo_moe MODULE2INSTS {pseudo_moe pseudo_moe} INST2MODULE {pseudo_moe pseudo_moe} INSTDATA {pseudo_moe {DEPTH 1 CHILDREN {}}} MODULEDATA {pseudo_moe {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME expert_result_U SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:42 VARIABLE expert_result LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 STORAGESUBTYPE {} STORAGESIZE {32 64 1} STORAGEUSAGE {ram_1p array} DISPNAME {bind_storage ram_1p}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln45_fu_1290_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:45 VARIABLE add_ln45 LOOP VITIS_LOOP_45_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_fu_1306_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:45 VARIABLE empty LOOP VITIS_LOOP_45_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_fu_1337_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:53 VARIABLE add_ln53 LOOP VITIS_LOOP_53_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln58_fu_1352_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:58 VARIABLE add_ln58 LOOP VITIS_LOOP_58_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:60 VARIABLE mul LOOP VITIS_LOOP_58_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 1 OPTYPE fadd PRAGMA {} RTLNAME faddfsub_32ns_32ns_32_2_full_dsp_1_U1 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:60 VARIABLE acc_2 LOOP VITIS_LOOP_58_3 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln75_fu_1489_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:75 VARIABLE add_ln75 LOOP VITIS_LOOP_75_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 1 OPTYPE fadd PRAGMA {} RTLNAME faddfsub_32ns_32ns_32_2_full_dsp_1_U1 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:77 VARIABLE sub LOOP VITIS_LOOP_75_4 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fexp PRAGMA {} RTLNAME fexp_32ns_32ns_32_4_full_dsp_1_U5 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:77 VARIABLE exp_values_0 LOOP VITIS_LOOP_75_4 BUNDLEDNAME {} DSP 7 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fexp}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 1 OPTYPE fadd PRAGMA {} RTLNAME faddfsub_32ns_32ns_32_2_full_dsp_1_U1 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:78 VARIABLE exp_sum_1 LOOP VITIS_LOOP_75_4 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_62_fu_1537_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:45 VARIABLE empty_62 LOOP VITIS_LOOP_45_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln81_fu_1588_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:81 VARIABLE add_ln81 LOOP VITIS_LOOP_81_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 5 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_6_no_dsp_1_U3 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:83 VARIABLE div LOOP VITIS_LOOP_81_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_64_fu_1625_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:45 VARIABLE empty_64 LOOP VITIS_LOOP_45_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln89_fu_1659_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:89 VARIABLE add_ln89 LOOP VITIS_LOOP_89_6 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln97_fu_1671_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:97 VARIABLE add_ln97 LOOP VITIS_LOOP_97_7 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_fu_1690_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:102 VARIABLE add_ln102 LOOP VITIS_LOOP_102_8 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:104 VARIABLE mul2 LOOP VITIS_LOOP_102_8 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 1 OPTYPE fadd PRAGMA {} RTLNAME faddfsub_32ns_32ns_32_2_full_dsp_1_U1 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:104 VARIABLE acc_5 LOOP VITIS_LOOP_102_8 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln110_fu_1715_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:110 VARIABLE add_ln110 LOOP VITIS_LOOP_110_9 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:113 VARIABLE mul1 LOOP VITIS_LOOP_110_9 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln112_fu_1743_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:112 VARIABLE add_ln112 LOOP VITIS_LOOP_110_9 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 1 OPTYPE fadd PRAGMA {} RTLNAME faddfsub_32ns_32ns_32_2_full_dsp_1_U1 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:112 VARIABLE add LOOP VITIS_LOOP_110_9 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln119_fu_1783_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:119 VARIABLE add_ln119 LOOP VITIS_LOOP_119_10 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln124_fu_1836_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:124 VARIABLE add_ln124 LOOP VITIS_LOOP_124_11 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:126 VARIABLE mul4 LOOP VITIS_LOOP_124_11 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 1 OPTYPE fadd PRAGMA {} RTLNAME faddfsub_32ns_32ns_32_2_full_dsp_1_U1 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:126 VARIABLE acc_8 LOOP VITIS_LOOP_124_11 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_76_fu_1798_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:45 VARIABLE empty_76 LOOP VITIS_LOOP_45_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln132_fu_1861_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:132 VARIABLE add_ln132 LOOP VITIS_LOOP_132_12 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:135 VARIABLE mul3 LOOP VITIS_LOOP_132_12 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln134_fu_1889_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:134 VARIABLE add_ln134 LOOP VITIS_LOOP_132_12 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 1 OPTYPE fadd PRAGMA {} RTLNAME faddfsub_32ns_32ns_32_2_full_dsp_1_U1 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:134 VARIABLE add2 LOOP VITIS_LOOP_132_12 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln141_fu_1929_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:141 VARIABLE add_ln141 LOOP VITIS_LOOP_141_13 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln146_fu_1982_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:146 VARIABLE add_ln146 LOOP VITIS_LOOP_146_14 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:148 VARIABLE mul6 LOOP VITIS_LOOP_146_14 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 1 OPTYPE fadd PRAGMA {} RTLNAME faddfsub_32ns_32ns_32_2_full_dsp_1_U1 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:148 VARIABLE acc_11 LOOP VITIS_LOOP_146_14 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_82_fu_1944_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:45 VARIABLE empty_82 LOOP VITIS_LOOP_45_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln154_fu_2007_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:154 VARIABLE add_ln154 LOOP VITIS_LOOP_154_15 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:157 VARIABLE mul5 LOOP VITIS_LOOP_154_15 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln156_fu_2035_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:156 VARIABLE add_ln156 LOOP VITIS_LOOP_154_15 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 1 OPTYPE fadd PRAGMA {} RTLNAME faddfsub_32ns_32ns_32_2_full_dsp_1_U1 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:156 VARIABLE add4 LOOP VITIS_LOOP_154_15 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln163_fu_2075_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:163 VARIABLE add_ln163 LOOP VITIS_LOOP_163_16 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln168_fu_2128_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:168 VARIABLE add_ln168 LOOP VITIS_LOOP_168_17 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:170 VARIABLE mul8 LOOP VITIS_LOOP_168_17 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 1 OPTYPE fadd PRAGMA {} RTLNAME faddfsub_32ns_32ns_32_2_full_dsp_1_U1 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:170 VARIABLE acc_14 LOOP VITIS_LOOP_168_17 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_88_fu_2090_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:45 VARIABLE empty_88 LOOP VITIS_LOOP_45_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln176_fu_2153_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:176 VARIABLE add_ln176 LOOP VITIS_LOOP_176_18 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:179 VARIABLE mul7 LOOP VITIS_LOOP_176_18 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln178_fu_2181_p2 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:178 VARIABLE add_ln178 LOOP VITIS_LOOP_176_18 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 1 OPTYPE fadd PRAGMA {} RTLNAME faddfsub_32ns_32ns_32_2_full_dsp_1_U1 SOURCE /home/simics/HMoE/HLS_HMoE/pseudo_block/run_1/src/pseudo_moe.cpp:178 VARIABLE add6 LOOP VITIS_LOOP_176_18 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op fadd}}} AREA {DSP 12 BRAM 53 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+Execute         send_msg_by_id INFO @200-1603@%s  and missed bursts 
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3.84 seconds. CPU system time: 0.02 seconds. Elapsed time: 3.87 seconds; current allocated memory: 347.016 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for pseudo_moe.
+INFO: [VLOG 209-307] Generating Verilog RTL for pseudo_moe.
+Execute         syn_report -model pseudo_moe -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+Command       autosyn done; 5.23 sec.
+Command     csynth_design done; 16 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 9.94 seconds. CPU system time: 1.19 seconds. Elapsed time: 16 seconds; current allocated memory: 64.785 MB.
+Execute     cleanup_all 

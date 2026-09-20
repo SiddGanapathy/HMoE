@@ -1,0 +1,26 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x7a0015842520]
+/lib/x86_64-linux-gnu/libc.so.6(+0x19d8bd) [0x7a001599d8bd]
+/home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hls_support.so(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*)+0x14) [0x7a0022437aa4]
+/home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libxv_common.so(+0x34d74e) [0x7a002174d74e]
+/home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libxv_common.so(ComMsgMgrImpl::getMsgFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)+0x93) [0x7a0021890743]
+/home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libxv_common.so(ComMsgMgrImpl::getMsgEntry(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool, ComMsgMgr::MsgMask, int, bool)+0x4a) [0x7a002189089a]
+/home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libxv_common.so(ComMsgMgrInstanceImpl::ComMsgMgrInstanceImpl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, ComMsgMgr::MsgMask, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)+0x159) [0x7a00218df5c9]
+/home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libxv_common.so(ComMsgMgrInstance::ComMsgMgrInstance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, ComMsgMgr::MsgMask, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)+0x4c) [0x7a0021c76f4c]
+/home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libxv_common.so(ComMsgMgr::sendMsgString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, ComMsgMgr::MsgMask, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)+0x19) [0x7a0021d20b69]
+/home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libxv_commontasks.so(+0x4d630a) [0x7a00114d630a]
+/home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libxv_commontasks.so(driver::detail::init(bool, bool, bool)+0x14) [0x7a00114d7654]
+/home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libxv_commontasks.so(+0x463323) [0x7a0011463323]
+/home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libxv_commontasks.so(+0x46531f) [0x7a001146531f]
+/home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libxv_common.so(+0x960a4f) [0x7a0021d60a4f]
+/home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libtcl8.5.so(+0x3356f) [0x7a001d03356f]
+/home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libtcl8.5.so(Tcl_EvalObjv+0x32) [0x7a001d0336a2]
+/home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libtcl8.5.so(TclEvalObjEx+0x322) [0x7a001d0354c2]
+/home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libxv_commonmain.so(+0xed12) [0x7a00223c5d12]
+/home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libtcl8.5.so(Tcl_Main+0x1d0) [0x7a001d0a02f0]
+/home/simics/HMoE/Vitis_HLS/2023.2/lib/lnx64.o/libxv_common.so(+0x61cbeb) [0x7a0021a1cbeb]
+/lib/x86_64-linux-gnu/libc.so.6(+0x94a83) [0x7a0015894a83]
+/lib/x86_64-linux-gnu/libc.so.6(+0x1268e0) [0x7a00159268e0]
