@@ -24,7 +24,7 @@ static const string WEIGHTS_DIR = BASE + "weights/";
 static const string EXPECTED_DIR = BASE + "expected/";
 
 static const string OUTPUT_DIR =
-    "/home/simics/HMoE/HLS_HMoE/pseudo_block/run_8/results/csim/";
+    "/home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/results/csim/";
 
 void pseudo_moe(
     const float input[N * D],

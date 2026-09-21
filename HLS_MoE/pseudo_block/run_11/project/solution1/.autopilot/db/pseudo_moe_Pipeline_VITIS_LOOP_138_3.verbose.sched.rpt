@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'pseudo_moe_Pipeline_VITIS_LOOP_138_3'
 ================================================================
-* Date:           Sun Sep 20 21:16:58 2026
+* Date:           Mon Sep 21 08:00:10 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        project
@@ -300,8 +300,8 @@ The critical path consists of the following:
 
  <State 3>: 1.025ns
 The critical path consists of the following:
-	'getelementptr' operation 8 bit ('w0_local_10_addr', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:140) [120]  (0.000 ns)
-	'store' operation 0 bit ('store_ln140', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:140) of variable 'bitcast_ln140', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:140 on array 'w0_local_10' [206]  (1.025 ns)
+	'getelementptr' operation 8 bit ('w0_local_4_addr', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:140) [114]  (0.000 ns)
+	'store' operation 0 bit ('store_ln140', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:140) of variable 'bitcast_ln140', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:140 on array 'w0_local_4' [242]  (1.025 ns)
 
 
 ============================================================

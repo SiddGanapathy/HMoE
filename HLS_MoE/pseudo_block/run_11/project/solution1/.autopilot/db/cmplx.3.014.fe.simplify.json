@@ -1,7 +1,7 @@
 {
   "0": {
     "basicblocks": 44,
-    "calls": "5",
+    "calls": "1",
     "file": "pseudo_moe.cpp",
     "fileloc": 76,
     "instructions": 622,
@@ -12,36 +12,21 @@
     "total_instructions": 2354
   },
   "1": {
-    "basicblocks": 5,
-    "calls": "",
+    "basicblocks": 33,
+    "calls": "4 5 6 2 3",
     "file": "pseudo_moe.cpp",
-    "fileloc": 14,
-    "instructions": 147,
+    "fileloc": 0,
+    "instructions": 1113,
     "loads": {
-      "L": 32
+      "L": 83
     },
-    "name": "compute_expert<0>",
+    "name": "_Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1__VITIS_LOOP_158_5",
     "stores": {
-      "L": 1
+      "L": 67
     },
-    "total_instructions": 147
+    "total_instructions": 1732
   },
   "2": {
-    "basicblocks": 3,
-    "calls": "",
-    "file": "pseudo_moe.cpp",
-    "fileloc": 54,
-    "instructions": 31,
-    "loads": {
-      "L": 8
-    },
-    "name": "combine_experts",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 31
-  },
-  "3": {
     "basicblocks": 5,
     "calls": "",
     "file": "pseudo_moe.cpp",
@@ -56,6 +41,21 @@
     },
     "total_instructions": 147
   },
+  "3": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "pseudo_moe.cpp",
+    "fileloc": 54,
+    "instructions": 31,
+    "loads": {
+      "L": 8
+    },
+    "name": "combine_experts",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 31
+  },
   "4": {
     "basicblocks": 5,
     "calls": "",
@@ -65,26 +65,26 @@
     "loads": {
       "L": 32
     },
-    "name": "compute_expert<2>",
+    "name": "compute_expert<0>",
     "stores": {
       "L": 1
     },
     "total_instructions": 147
   },
   "5": {
-    "basicblocks": 33,
-    "calls": "1 6 4 3 2",
+    "basicblocks": 5,
+    "calls": "",
     "file": "pseudo_moe.cpp",
-    "fileloc": 0,
-    "instructions": 1113,
+    "fileloc": 14,
+    "instructions": 147,
     "loads": {
-      "L": 83
+      "L": 32
     },
-    "name": "_Z10pseudo_moePKfS0_S0_S0_S0_S0_S0_S0_S0_S0_S0_PfS1__VITIS_LOOP_158_5",
+    "name": "compute_expert<1>",
     "stores": {
-      "L": 67
+      "L": 1
     },
-    "total_instructions": 1732
+    "total_instructions": 147
   },
   "6": {
     "basicblocks": 5,
@@ -95,7 +95,7 @@
     "loads": {
       "L": 32
     },
-    "name": "compute_expert<1>",
+    "name": "compute_expert<2>",
     "stores": {
       "L": 1
     },

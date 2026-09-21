@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dataflow_in_loop_VITIS_LOOP_149_4_1_Loop_VITIS_LOOP_201_9_proc7'
 ================================================================
-* Date:           Sun Sep 20 21:16:59 2026
+* Date:           Mon Sep 21 08:00:12 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        project
@@ -353,7 +353,7 @@ The critical path consists of the following:
 The critical path consists of the following:
 	'load' operation 32 bit ('input_local_0_load', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:203) on array 'input_local_0' [150]  (1.025 ns)
 	'sparsemux' operation 32 bit ('tmp_1', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:203) [166]  (0.456 ns)
-	'store' operation 0 bit ('store_ln203', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:203) of variable 'tmp_1', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:203 on array 'x0_6' [263]  (0.542 ns)
+	'store' operation 0 bit ('store_ln203', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:203) of variable 'tmp_1', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:203 on array 'x0_3_76' [299]  (0.542 ns)
 
 
 ============================================================

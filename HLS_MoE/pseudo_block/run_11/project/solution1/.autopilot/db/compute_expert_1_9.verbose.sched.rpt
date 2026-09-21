@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'compute_expert_1_9'
 ================================================================
-* Date:           Sun Sep 20 21:16:59 2026
+* Date:           Mon Sep 21 08:00:12 2026
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        project
@@ -546,7 +546,7 @@ Target clock period: 10.000ns, clock uncertainty: 2.700ns.
 The critical path consists of the following:
 	'store' operation 0 bit ('store_ln0') of constant 0 on local variable 'indvar_flatten' [57]  (0.362 ns)
 	'load' operation 9 bit ('indvar_flatten_load', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:22) on local variable 'indvar_flatten' [79]  (0.000 ns)
-	'add' operation 9 bit ('add_ln22_3', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:22) [81]  (0.659 ns)
+	'icmp' operation 1 bit ('icmp_ln22', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:22) [80]  (0.659 ns)
 	'store' operation 0 bit ('store_ln22', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:22) of variable 'add_ln22_3', /home/simics/HMoE/HLS_HMoE/pseudo_block/run_11/src/pseudo_moe.cpp:22 on local variable 'indvar_flatten' [262]  (0.362 ns)
 
  <State 2>: 7.300ns
